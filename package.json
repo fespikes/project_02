@@ -6,6 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "lint": "ng lint",
+    "lint:fix": "ng lint --fix --type-check",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,7 +24,9 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "normalize.css": "^7.0.0",
     "rxjs": "^5.1.0",
+    "tslint-eslint-rules": "^4.1.1",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
