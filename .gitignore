@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/src/i18n
 
 # dependencies
 /node_modules
