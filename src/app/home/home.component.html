@@ -5,7 +5,7 @@
         <img tdcImgSrc="logo.png">
       </div>
       <nav>
-        <a href="###" i18n>云产品</a>
+        <a (click)="product()"  i18n>云产品</a>
         <a href="###" i18n>业务方案</a>
         <a href="###" i18n>在线支持</a>
         <a href="###" i18n>管理中心</a>
@@ -74,9 +74,12 @@
         </div>
       </div>
     </div>
-    <a i18n href="###" class="cheek">
+    <div tdcBgImgUrl="bg.jpg">
+       <a i18n href="###"  class="cheek">
       查看星环公司令人激动的所有产品功能
     </a>
+    </div>
+
   </div>
   <div class="page-three">
     <header>
@@ -107,7 +110,7 @@
       <div class="goods">
         <div class="svg">
           <img tdcImgSrc="Slipstream.png">
-          
+
         </div>
         <h5>Apache Kafka</h5>
         <p i18n>消息中间件</p>
