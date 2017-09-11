@@ -1,0 +1,40 @@
+<div class="slick-slider">
+  <!-- Content -->
+  <div class="slick-list" [class.none]="loading || empty" [class.hidden]="rendering" #slickList>
+    <div class="slick-track" [style.transform]="transform" #slickTrack>
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+  <!-- Placehodler -->
+  <div *ngIf="!loading && empty" class="slick-no-content">
+      {{'TUI.TABLE.NO_CONTENT' | translate}}
+  </div>
+  <div *ngIf="loading" class="slick-loading">
+    <svg tccIcon="loading" class="tcc-rotate"></svg>
+  </div>
+
+  <!-- Nagivation -->
+  <ul class="slick-dots" *ngIf="showDots && needNagivation">
+    <li
+      [class.slick-active]="content.isActive" 
+      *ngFor="let content of slideContents; let i=index" 
+      (click)="setActive(i, content)"
+    >
+    </li>
+  </ul>
+  <div 
+    class="slick-nav slick-nav-next" 
+    *ngIf="showNav && canNavigateNext" 
+    (click)="navigateNext()"
+  >
+    <svg tccIcon="angle-right" size="lg"></svg>
+  </div>
+  <div
+    class="slick-nav slick-nav-prev"
+    *ngIf="showNav && canNavigatePrev"
+    (click)="navigatePrev()"
+  >
+    <svg tccIcon="angle-left" size="lg"></svg>
+  </div>
+</div>

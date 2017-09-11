@@ -1,0 +1,8 @@
+<div class="tcc-submenu-header" [ngClass]="{'space-between': backUrl}">
+   <a [routerLink]="backUrl" *ngIf="backUrl">
+    <svg class="angle-left" tccIcon="angle-up"></svg>
+  </a>
+  <svg (click)="toggle()" tccIcon="menu-collapse" class="tcc-submenu-toggle"></svg>
+</div>
+
+<ng-content></ng-content>

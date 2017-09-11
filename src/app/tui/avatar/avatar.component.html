@@ -1,0 +1,5 @@
+<div class="tcc-avatar-container">
+  <svg class="tcc-avatar-icon" [tccIcon]="icon" *ngIf="icon && hasIcon"></svg>
+  <img [tccImgSrc]="src" *ngIf="src && isSrcExist" (error)="imgError($event)"/>
+  <span class="tcc-avatar-string" #textEl [ngStyle]="textStyles" *ngIf="text && hasText">{{text}}</span>
+</div>

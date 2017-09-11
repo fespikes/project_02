@@ -1,0 +1,13 @@
+<div class="tcc-tab-head">
+  <div
+    class="tcc-tab-item"
+    *ngFor="let pane of panes; let index = index"
+    [class.active]="index === selectedIndex"
+    (click)="selectPane(pane, index, false)"
+  >
+    {{pane.tccTabPane | tccDefault | translate}}
+  </div>
+</div>
+<div class="tcc-tab-body">
+  <ng-content></ng-content>
+</div>

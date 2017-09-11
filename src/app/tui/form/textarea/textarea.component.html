@@ -1,0 +1,13 @@
+<textarea
+  placeholder="{{parsedPlaceholder | translate}}"
+  [(ngModel)]="value"
+  [ngClass]="{invalid: (invalid | async)}"
+  [disabled]="disabled"
+  [rows]="rows"
+></textarea>
+<tcc-form-error
+  *ngIf="model.touched && (invalid | async)"
+  [validationResults]="failures | async"
+  [errorMsgs]="errorMsgs"
+>
+</tcc-form-error>

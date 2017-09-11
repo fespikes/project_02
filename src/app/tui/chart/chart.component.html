@@ -1,0 +1,7 @@
+<ng-content *ngIf="!loading && !empty"></ng-content>
+<div *ngIf="!loading && empty" class="tcc-chart-no-content-slogan">
+  {{'TUI.CHART.NO_DATA' | translate}}
+</div>
+<div *ngIf="loading" class="tcc-chart-loading">
+  <svg tccIcon="loading" size="lg" class="tcc-rotate"></svg>
+</div>

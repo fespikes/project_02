@@ -1,0 +1,11 @@
+<input
+  type="hidden"
+  [ngModel]="value"
+>
+<ng-content></ng-content>
+<tcc-form-error
+  *ngIf="dirty && (invalid | async)"
+  [validationResults]="failures | async"
+  [errorMsgs]="errorMsgs"
+>
+</tcc-form-error>

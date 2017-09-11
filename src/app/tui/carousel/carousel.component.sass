@@ -1,0 +1,71 @@
+@import '../../styles/util'
+
+\:host
+  position: relative
+  display: block
+
+  &.loading
+    @include flex-xy-center
+    height: 100%
+
+.slick-list
+  overflow: hidden
+  transform: translateZ(0)
+
+  &.none
+    display: none
+
+  &.hidden
+    visibility: hidden
+
+  .slick-track
+    @include flex-align(center, flex-start)
+    height: 100%
+    transition: all .5s ease
+
+.slick-no-content
+  flex: 1
+  text-align: center
+  padding: 2rem 0
+
+.slick-dots
+  @include flex-xy-center
+  position: absolute
+  bottom: -1rem
+  width: 100%
+
+  li
+    height: 0.5rem
+    width: 2rem
+    margin: 0 0.25rem
+    border: 1px solid $brand-primary
+    border-radius: 0.25rem
+    opacity: 0.5
+    cursor: pointer
+
+    &:hover
+      background: $brand-primary
+
+    &.slick-active
+      background: $brand-primary
+      opacity: 1
+
+.slick-nav
+  @include flex-xy-center
+  position: absolute
+  top: 0
+  height: 100%
+  cursor: pointer
+  opacity: 0.5
+
+  &:hover
+    opacity: 0.8
+
+  svg
+    transform: scale(1, 2)
+
+.slick-nav-next
+  right: -1.5rem
+
+.slick-nav-prev
+  left: -1.5rem

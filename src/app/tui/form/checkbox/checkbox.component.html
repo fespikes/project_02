@@ -1,0 +1,14 @@
+<label class="input-checkbox">
+  <input
+    type="checkbox"
+    [(ngModel)]="value"
+    [ngClass]="{invalid: (invalid | async)}"
+    [disabled]="disabled"
+  >
+  <ng-content></ng-content>
+</label>
+<tcc-form-error
+  *ngIf="model.touched && (invalid | async)"
+  [validationResults]="failures | async"
+>
+</tcc-form-error>

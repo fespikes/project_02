@@ -1,0 +1,4 @@
+<div *ngIf="input && input.errors && input.touched">
+  <div [hidden]="!input.errors.required" class="input-message-error">{{'TUI.FORM.REQUIRED' | translate}}</div>
+  <div [hidden]="!input.errors.email" class="input-message-error">{{'TUI.FORM.EMAIL_FORMAT_ERROR' | translate}}</div>
+</div>

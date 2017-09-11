@@ -1,0 +1,11 @@
+<div class="tcc-select-head" (click)="onHeadClick()">
+  <div class="tcc-select-label" *ngIf="label">{{label | translate}}</div>
+  <div class="tcc-select-placeholder" *ngIf="!label">{{placeholder | translate}}</div>
+  <svg tccIcon="angle-down" color="default" size="sm"></svg>
+</div>
+<div class="tcc-select-options" *ngIf="optionsOpen && count">
+  <ng-content></ng-content>
+</div>
+<div class="tcc-select-no-options" *ngIf="optionsOpen && !count">
+  <div class="tcc-select-option">{{'TUI.SELECT.NO_OPTIONS' | translate}}</div>
+</div>

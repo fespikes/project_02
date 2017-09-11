@@ -1,0 +1,152 @@
+$submenu-normal-width: 14.375rem
+$submenu-collapsed-width: 6rem
+$item-active-color: #305ab5
+$embeded-color: #f2f3f7
+
+@mixin clickable-item()
+  @include flex-align(center, flex-start)
+  font-size: 1rem
+  height: 3.5rem
+  text-decoration: none
+  cursor: pointer
+
+  .item-name
+    color: #818183
+    margin-left: 15px
+
+.tcc-submenu
+  flex-shrink: 0
+  width: $submenu-normal-width
+  border-right: 1px solid #e4e7ee
+  // overflow: hidden
+  transition: width 0.6s ease
+  background-color: #fff
+  display: inline-block
+
+  &-toggle
+    transition: transform 0.6s linear
+
+  &-collapsed
+    width: $submenu-collapsed-width
+
+    .tcc-submenu-toggle
+      transform: rotate(180deg)
+
+.tcc-submenu-header
+  @include flex-align(center, flex-end)
+  height: 32px
+  background-color: $embeded-color
+  padding: 0 0.6rem
+
+  > a
+    line-height: 0
+    cursor: pointer
+
+  svg
+    fill: #2f57b1
+    cursor: pointer
+
+  .angle-left
+    transform: rotate(-90deg)
+
+  &.space-between
+    justify-content: space-between
+
+// 用于 submenu list
+.tcc-submenu-body
+  background-color: #FFF
+  padding: 10px 0px
+
+  .content
+    overflow-y: auto
+    max-height: calc(90vh - 6rem)
+
+  dt
+    @include text-ellipsis()
+    font-size: 1rem
+    padding-left: 1.5rem
+    margin-bottom: 1.5rem
+    white-space: nowrap
+
+  dd
+    margin-left: 0
+    overflow: hidden
+    text-overflow: clip
+    white-space: nowrap
+
+    > a
+      @include clickable-item()
+      position: relative
+      padding-left: 1.5rem
+      width: $submenu-normal-width
+
+      .tcc-avatar
+        transition: none
+        background: $cornflowerblue
+
+      svg
+        fill: #b9c1cf
+        transition: width 0.4s ease, height 0.4s ease
+
+      &.active
+        background: $item-active-color
+        color: white
+
+        .item-name
+          color: white
+
+        svg
+          fill: white
+
+      .angle-down
+        position: absolute
+        right: 1rem
+        transform: rotate(180deg)
+        transition: transform 0.3s linear
+
+      &.open
+        .angle-down
+          transform: rotate(0deg)
+
+// 用于 submenu list collapsed
+.tcc-submenu-body-collapsed
+  .content
+    overflow: visible
+  dt
+    padding: 0 0.25rem
+    text-align: center
+
+  dd
+    position: relative
+    overflow: visible
+    > a
+      padding: 1.5rem
+      width: 5.93rem
+      transition: width 0.6s ease
+
+      .item-icon
+        width: 2rem
+        height: 2rem
+
+      .item-name
+        display: none
+
+      .angle-down
+        display: none
+
+    .show-dropdown
+      display: block !important
+
+.tcc-submenu-children
+  background: $embeded-color
+
+  > a
+    @include clickable-item()
+    padding-left: 2.5rem
+    font-size: 14px
+
+    &.active
+      border-right: 3px solid $item-active-color
+
+      span
+        color: $item-active-color

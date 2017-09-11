@@ -1,0 +1,14 @@
+<!--背景-->
+<div class="tcc-modal-backdrop" (click)="close()"></div>
+
+<!--对话框-->
+<div class="tcc-modal-dialog" [attr.size]="size">
+  <!--标题-->
+  <div class="tcc-modal-title" *ngIf="title">
+    <div class="title">
+      {{title | translate}}
+    </div>
+    <svg tccIcon="cross" class="close" (click)="close()" size="sm"></svg>
+  </div>
+  <div #modalBody></div>
+</div>

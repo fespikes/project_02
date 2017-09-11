@@ -1,0 +1,177 @@
+// normal input
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+  @include input-radius-box()
+  height: $input-height
+
+textarea
+  @include input-radius-box()
+  resize: none
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+// special input
+.input-checkbox,
+.input-radio
+  height: $input-height
+  display: inline-flex
+  align-items: center
+
+  input[type="radio"],
+  input[type="checkbox"]
+    margin-right: 4px
+
+input[type="radio"]
+  -webkit-appearance: none
+  width: $input-base-size
+  height: $input-base-size
+  border-radius: 50%
+  padding: 3px
+  border: 1px solid $input-border-color
+  background: #fafafc
+
+  &:checked
+    padding: 0
+    border-width: 4px
+    border-color: $input-checked-color
+
+input[type="checkbox"]
+  vertical-align: middle
+  margin-right: 0.25rem
+  -webkit-appearance: none
+  width: $input-base-size
+  height: $input-base-size
+  border: 1px solid $input-border-color
+  border-radius: 3px
+  background: #fafafc
+
+  &:checked
+    border-color: $input-checked-color
+    background-color: $input-checked-color
+    background-size: 10px
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+DQogIDxwb2x5Z29uIHN0eWxlPSJmaWxsOndoaXRlIiBwb2ludHM9IjEyLjMsMjcuNiAwLjcsMTYuMiA0LjcsMTIuMiAxMi4zLDE5LjggMjcuNyw0LjQgMzEuMyw4LjcgIi8+DQo8L3N2Zz4NCg==')
+    background-repeat: no-repeat
+    background-position: center
+
+.input-message-error
+  color: red
+
+// 有addon的表单需要在右侧留出40px的padding，为addon留出位置
+.tcc-form[addon]
+  padding-right: 2.5rem
+
+.tcc-form-item
+  // 为addon定位
+  position: relative
+  display: flex
+  margin-bottom: $input-base-size
+  font-size: $input-base-size
+
+  > label
+    flex: 0 1 auto
+    padding-top: 9px  // (32px - 14px) / 2
+    text-align: right
+    padding-right: 1rem
+    @include text-ellipsis()
+
+    span
+      color: #cc5f61
+
+  &-body
+    flex: 1
+
+  &-text
+    padding-top: 9px
+
+.tcc-form-item-addon
+  margin-left: .75rem
+  position: absolute
+  top: 50%
+  left: 100%
+  transform: translateY(-50%)
+
+.tcc-input-group
+  display: flex
+  position: relative
+
+  input
+    flex-grow: 1
+
+    &:not(:first-child)
+      padding-left: 2rem
+
+    &:not(:last-child)
+      padding-right: 2rem
+
+  .tcc-icon
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+    &:first-child
+      left: .5rem
+
+    &:last-child
+      right: .5rem
+
+.tcc-input
+  display: inline-block
+
+input[type="text"]:disabled,
+input[type="number"]:disabled,
+input[type="password"]:disabled,
+input[type="email"]:disabled,
+textarea:disabled
+  color: $input-disabled-color
+
+input[type="checkbox"]:checked:disabled
+  border-color: $input-disabled-color
+  background-color: $input-disabled-color
+
+input[type="radio"]:checked:disabled
+  border-color: $input-disabled-color
+
+input:foucs
+  border-color: #ccc
+
+.tcc-textarea
+  display: inline-block
+
+  textarea
+    width: 100%
+
+.tcc-radio-btn-group
+  display: flex
+
+  .tcc-radio-item
+
+    &:not(:last-child) .input-radio
+      border-right: none
+
+    &:nth-child(2) .input-radio
+      border-radius: 0.25rem 0 0 0.25rem
+
+    &:last-child .input-radio
+      border-radius: 0 0.25rem 0.25rem 0
+
+    .input-radio
+      display: inline-flex
+      align-items: center
+      padding: 0.5rem 2rem
+      border: 1px solid $brand-default
+      cursor: pointer
+
+      input[type="radio"]
+        display: none
+
+    &.selected
+
+      .input-radio
+        color: #FFF
+        background: $brand-primary
+        border-color: $brand-primary

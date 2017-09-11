@@ -4,32 +4,67 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
-import { SharedModule } from './shared/shared.module';
-import { HomeModule } from './home/home.module';
+import { TuiModule, TccModalService } from './tui';
 import { AppRoutingModule } from './app-routing.module';
-import { ProductModule } from './product/product.module';
 import { AppComponent } from './app.component';
-import { ProductLayoutComponent } from "./product/product-layout/product-layout.component";
+
+import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './components/home/home.module';
+import { ProductsModule } from './components/products/products.module';
+import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
+
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoginComponent } from './components/login/login.component';
+
+import { NavTopComponent } from './components/nav-top/nav-top.component';
+import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
+
+import {
+  I18nModule,
+  TranslateService,
+  TranslateResolver,
+  TranslateToken,
+  I18nLangService,
+} from './i18n';
+
+import { ModulesComponent } from './components/modules/modules.component';
+import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
+import { ManagementCenterComponent } from './components/management-center/management-center.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    
+    LoginComponent,
+    
+    NavTopComponent,
+    NavBottomComponent,
+
+    PageNotFoundComponent,
+
+    ModulesComponent,
+
+    DocumentsSupportComponent,
+
+    ManagementCenterComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    TuiModule,
     SharedModule,
+
     HomeModule,
-    AppRoutingModule,
-    ProductModule,
-    RouterModule.forRoot([
-      {
-        path: 'product',
-      component: ProductLayoutComponent
-    }
-    ])
+    ProductsModule,
+    BusinessScenarioModule,
+
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    I18nLangService,
+    TranslateService,
+    TccModalService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

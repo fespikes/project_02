@@ -1,0 +1,34 @@
+<div>
+  {{ 'TUI.PAGINATION.SHOW_ROW_COUNT' | translate }}
+</div>
+<tcc-select [(ngModel)]="pageSize" (ngModelChange)="pageSizeChange()">
+  <tcc-select-option *ngFor="let size of sizes" [value]="size">{{size}}</tcc-select-option>
+</tcc-select>
+<div class="page-nodes">
+  <div *ngFor="let page of pages">
+    <div *ngIf="!isOmit(page)" class="page-node" [class.active]="currentPage === page" (click)="goPage(page)">
+      {{ page }}
+    </div>
+    <div *ngIf="isOmit(page)" class="page-omit">
+      <strong></strong><strong></strong><strong></strong>
+    </div>
+  </div>
+</div>
+<div>
+  {{ 'TUI.PAGINATION.GO_TO' | translate }}
+</div>
+<input type="number" [(ngModel)]="searchPage" (keyup.enter)="goPage(searchPage)">
+<div>
+  {{ 'TUI.PAGINATION.GO_TO_PAGE' | translate }}
+</div>
+<button tccBtn="default" size="sm" tccBtnOutline (click)="goPage(searchPage)">
+  {{ 'TUI.PAGINATION.CONFIRM' | translate }}
+</button>
+<div class="tcc-btn-group">
+  <button tccBtn="default" tccBtnOutline (click)="prev()">
+    <svg tccIcon="angle-left" color="default" size="sm"></svg>
+  </button>
+  <button tccBtn="default" tccBtnOutline (click)="next()">
+    <svg tccIcon="angle-right" color="default" size="sm"></svg>
+  </button>
+</div>

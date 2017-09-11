@@ -1,0 +1,44 @@
+@import '../../styles/util'
+
+@mixin tcc-avatar-size($size, $icon-size)
+  width: $size
+  height: $size
+  line-height: $size
+  border-radius: $size / 2
+
+  & > *
+    line-height: $size
+
+  .tcc-avatar-icon
+    width: $icon-size
+    height: $icon-size
+
+\:host
+  display: inline-block
+  text-align: center
+  background: $bg-main
+  color: #FFF
+  white-space: nowrap
+  position: relative
+  overflow: hidden
+
+  &.tcc-avatar-sm
+      @include tcc-avatar-size(1.5rem, 0.75rem)
+
+  &.tcc-avatar-md
+    @include tcc-avatar-size(2.5rem, 1.5rem)
+
+  &.tcc-avatar-lg
+    @include tcc-avatar-size(3.5rem, 2.5rem)
+
+  .tcc-avatar-container
+    @include flex-xy-center
+    width: 100%
+    height: 100%
+
+    & > img
+      width: 100%
+      height: 100%
+
+    .tcc-avatar-icon
+      fill: #FFF

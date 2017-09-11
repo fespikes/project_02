@@ -1,0 +1,60 @@
+@import '../../styles/util'
+
+\:host
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  min-width: 800px
+  color: #8c99ac
+  font-size: 14px
+
+  > div:not(:last-child), > button, > input, > .tcc-select
+    margin-right: 10px
+
+\:host /deep/
+  .tcc-select,
+  input
+    width: 60px
+
+.tcc-btn
+  height: 2rem
+  color: #8c99ac
+
+.tcc-btn-group
+  .tcc-btn
+    padding: 7px
+
+.page-nodes
+  display: flex
+  align-items: center
+
+.page-node
+  @include flex-xy-center
+  width: 1.75rem
+  height: 1.75rem
+  cursor: pointer
+  margin-right: 2px
+
+  &.active, &:hover
+    color: white
+    border-radius: 4px
+    background: #305ab5
+
+.page-omit
+  strong
+    display: inline-block
+    vertical-align: middle
+    width: 0.25rem
+    height: 0.25rem
+    background: #8c99ac
+    border-radius: 2px
+
+  strong
+    &:not(:last-child)
+      margin-right: 5px
+
+    &:first-child
+      margin-left: 10px
+
+    &:last-child
+      margin-right: 10px

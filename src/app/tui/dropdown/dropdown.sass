@@ -1,0 +1,160 @@
+@mixin dropdown-caret-down($border-color, $background-color)
+  &:before,
+  &:after,
+    bottom: 100%
+
+  &:before
+    left: calc(50% - 11px)
+    border-color: transparent transparent $border-color transparent
+    border-width: 11px
+
+  &:after
+    left: calc(50% - 10px)
+    border-color: transparent transparent $background-color transparent
+    border-width: 10px
+
+@mixin dropdown-caret-up($border-color, $background-color)
+  &:before,
+  &:after,
+    top: 100%
+
+  &:before
+    left: calc(50% - 11px)
+    border-color: $border-color transparent transparent transparent
+    border-width: 11px
+
+  &:after
+    left: calc(50% - 10px)
+    border-color: $background-color transparent transparent transparent
+    border-width: 10px
+
+@mixin no-dropdown-caret()
+  &:before,
+  &:after,
+    top: 100%
+
+  &:before
+    left: calc(50% - 11px)
+    border-color: transparent transparent transparent transparent
+    border-width: 11px
+
+  &:after
+    left: calc(50% - 10px)
+    border-color: transparent transparent transparent transparent
+    border-width: 10px
+
+.tcc-dropdown
+  position: absolute
+  margin-top: .5rem
+  left: 50%
+  transform: translateX(-50%)
+  border: 1px solid $brand-primary
+  border-radius: .25rem
+  background-color: #fff
+  z-index: 1
+
+  &-trigger
+    cursor: pointer
+
+  &-title
+    display: block
+    padding: 1rem
+    cursor: default
+    font-weight: bold
+    white-space: nowrap
+
+  &-item
+    display: block
+    padding: .5rem 1rem
+    cursor: pointer
+    transition: background-color .2s
+    font-size: $font-md
+    white-space: nowrap
+
+    &:first-child
+      border-top-left-radius: .25rem
+      border-top-right-radius: .25rem
+
+    &:last-child
+      border-bottom-left-radius: .25rem
+      border-bottom-right-radius: .25rem
+
+    &:hover,
+    &.active
+      background-color: $ghostwhite
+
+    a
+      text-decoration: none
+
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: calc(50% - 10px)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 10px
+
+  // 下方样式
+  &[tcc-dropdown-pos="down"]
+    &[tcc-dropdown-skin="default"]
+      @include dropdown-caret-down($brand-primary, #fff)
+
+    &[tcc-dropdown-skin="grey"]
+      @include dropdown-caret-down($grey, $grey)
+
+  // 上方样式
+  &[tcc-dropdown-pos="up"]
+    &[tcc-dropdown-skin="default"]
+      @include dropdown-caret-up($brand-primary, #fff)
+
+    &[tcc-dropdown-skin="grey"]
+      @include dropdown-caret-up($grey, $grey)
+
+  // 灰色样式
+  &[tcc-dropdown-skin="grey"]
+    background-color: $grey
+    opacity: 0.8
+    color: white
+    border-color: $grey
+    bottom: calc(100% + .5rem)
+    margin-bottom: .25rem
+    top: auto
+
+    .tcc-dropdown-item
+      padding: .15rem .4rem
+
+      &:hover
+        background-color: $darkgrey
+
+  // 用于submenu item children
+  &[tcc-dropdown-skin="submenu"]
+    @include no-dropdown-caret()
+    left: 9.86rem
+    top: -20%
+    border: 1px solid white
+    border-radius: 0
+
+    .tcc-dropdown-item
+      width: 7.5rem
+      text-align: center
+
+      &:active
+        outline: none
+
+      &:focus
+        outline: none
+
+      &.active
+        border-right: 2px solid $brand-primary
+
+        span
+          color: $brand-primary
+
+      &:first-child
+        border-radius: 0
+
+      &:last-child
+        border-radius: 0

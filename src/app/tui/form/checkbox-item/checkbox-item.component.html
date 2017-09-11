@@ -1,0 +1,10 @@
+<label class="input-checkbox">
+  <input
+    type="checkbox"
+    [(ngModel)]="value"
+    (ngModelChange)="updateCheckboxGroupValue()"
+    [ngClass]="{invalid: (invalid | async)}"
+    [disabled]="checkboxGroup.disabled"
+  >
+  <ng-content></ng-content>
+</label>

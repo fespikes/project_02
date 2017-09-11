@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let result of validationResults">
+    {{ result | tccFormError: errorMsgs | translate}}
+  </li>
+</ul>

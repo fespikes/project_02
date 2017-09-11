@@ -1,0 +1,36 @@
+<dl class="tcc-submenu-body" [class.tcc-submenu-body-collapsed]="isCollapsed()">
+  <dt>{{menuTitle | translate}}</dt>
+  <div class="content">
+    <dd *ngFor="let item of items">
+      <a (click)="clickItem(item)" [class.active]="isActive(item)" [class.open]="item.childrenOpen">
+        <tcc-avatar *ngIf="!item.icon && isCollapsed()" [text]="getAvatar(item)" size="md"></tcc-avatar>
+        <svg *ngIf="item.icon" tccIcon="{{item.icon}}" class="item-icon"></svg>
+        <span class="item-name">{{item.name | translate}}</span>
+        <svg *ngIf="showToggle(item)" class="angle-down" tccIcon="angle-up"></svg>
+      </a>
+      <div *ngIf="item.children && item.childrenOpen && !isCollapsed()" class="tcc-submenu-children">
+        <a
+          *ngFor="let child of item.children"
+          [routerLink]="child.url"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          <span class="item-name">{{child.name | translate}}</span>
+        </a>
+      </div>
+      <tcc-dropdown
+        #childrenDropdown
+        [class.show-dropdown]="item.children && item.childrenOpen && isCollapsed()"
+        tccDropdownSkin="submenu">
+        <tcc-dropdown-item
+          *ngFor="let child of item.children"
+          [routerLink]="child.url"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          <span>{{child.name | translate}}</span>
+        </tcc-dropdown-item>
+      </tcc-dropdown>
+    </dd>
+  </div>
+</dl>

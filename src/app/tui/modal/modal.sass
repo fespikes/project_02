@@ -1,0 +1,82 @@
+@keyframes modalSlideInDown
+  from
+    transform: translate3d(0, -100%, 0)
+    visibility: visible
+
+  to
+    transform: translate3d(0, 0, 0)
+
+body.tcc-modal-open
+  overflow: hidden
+
+  .tcc-root
+    display: block
+    filter: blur(4px)
+
+.tcc-modal,
+.tcc-modal-backdrop
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.tcc-modal
+  overflow: auto
+  padding-top: 4rem
+  padding-bottom: 4rem
+
+  // 注意：如果对话框高度超过视窗高度，fixed定位的backdrop会遮挡住滚动条
+  &-backdrop
+    background-color: transparentize(black, .6)
+
+  &-dialog
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    padding: 1rem
+    background-color: #fff
+    border-radius: .25rem
+    animation: modalSlideInDown .3s
+
+    &[size="sm"]
+      width: 24rem
+      min-height: 13rem
+
+    &[size="md"]
+      width: 32rem
+      min-height: 18rem
+
+    &[size="lg"]
+      width: 48rem
+      min-height: 26rem
+
+  &-title
+    display: flex
+    margin-bottom: 1rem
+    @include flex-xy-center
+    color: $text-default
+
+    .title
+      flex: 1
+      @include text-ellipsis
+      padding-left: .5rem
+      border-left: 3px solid $brand-primary
+      font-weight: bold
+
+    .close
+      cursor: pointer
+      transition: fill .2s
+      font-weight: bold
+      font-size: 1.5rem
+      fill: #c4c9ce
+
+      &:hover
+        fill: $brand-danger
+
+  &-foot
+    @include flex-xy-center
+    margin-top: 2rem
+
+    button:not(:last-child)
+      margin-right: 1rem

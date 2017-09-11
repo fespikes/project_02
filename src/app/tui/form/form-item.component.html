@@ -1,0 +1,6 @@
+<label class="form-label" [style.flex]="_labelFlex" [title]="label | translate">
+  <span *ngIf="required">*</span>{{label | translate}}
+</label>
+<div class="tcc-form-item-body" [style.flex]="_inputFlex">
+  <ng-content></ng-content>
+</div>

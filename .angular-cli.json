@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "tdc",
       "styles": [
-        "styles.sass"
+        "app/styles/index.sass"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

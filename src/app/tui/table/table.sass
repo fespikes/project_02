@@ -1,0 +1,134 @@
+.tcc-table
+  display: block
+  font-size: 0.875rem
+
+  &-head,
+  &-row
+    border-bottom: 1px solid $table-border-color
+
+  &-head
+    display: flex
+    background-color: $table-head-bg
+    border-top: 1px solid $table-border-color
+    color: $text-mute
+
+  &-row
+    display: flex
+    background: #fff
+    color: $text-default
+
+    &:hover
+      background: #ebf2f8
+
+    &.active
+      background: #ebf2f8
+      border-left: 2px solid #3b88ce
+
+  // 单元格
+  &-head > div,
+  &-row > div,
+  &-row > .tcc-table-cell,
+  // 行头的checkbox
+  &-select-column,
+    padding: 0.5rem 0.75rem
+    line-height: 1.5rem
+
+  .tcc-table-select-column
+    width: 2rem
+
+  &-head,
+  &-row
+    .tcc-table-select-column
+      display: none
+
+      .input-checkbox
+        height: 1rem
+
+  &-no-content-slogan
+    text-align: center
+    padding: 2rem 0
+    flex: 1
+
+  &.loading
+    position: relative
+
+    // 只有当前表格中还没有数据的时候，才指定最小高度
+    &.empty
+      min-height: 10rem
+
+    > *:not(.tcc-table-loading)
+      filter: blur(2px)
+
+    .tcc-table-loading
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      @include flex-xy-center
+
+      > .tcc-icon
+        fill: $brand-primary
+
+
+.tcc-table-tree
+
+  &.tcc-table
+    padding-left: 5rem
+
+  .tcc-table
+
+    &-head
+      position: relative
+      border-top: none
+      background: #FFF
+      color: $brand-secondary
+
+      > div
+        padding: 0.5rem 0.75rem
+
+      &:after
+        position: absolute
+        top: 0
+        left: -2.5rem
+        content: ""
+        height: 3.75rem
+        border-left: 3px dotted $border-mute
+
+    &-row
+      position: relative
+      border: none
+
+      &:last-child:after
+        height: 0
+
+      &:hover
+        background: #FFF
+
+      > div
+        padding: 0.5rem 0.75rem
+
+      &:after
+        position: absolute
+        top: 1.25rem
+        left: -2.5rem
+        content: ""
+        height: 100%
+        width: 2rem
+        border-left: 3px dotted $border-mute
+        border-top: 3px dotted $border-mute
+
+  &-no-data
+    position: relative
+    padding-left: 5.75rem
+    line-height: 2.5rem
+
+    &:after
+      position: absolute
+      top: 0
+      left: 2.5rem
+      content: ""
+      height: 1.5rem
+      width: 2rem
+      border-left: 3px dotted $border-mute
+      border-bottom: 3px dotted $border-mute
