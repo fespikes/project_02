@@ -2,15 +2,16 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { SubmenuItem } from '../../tui';
 
 @Component({
-  selector: 'tdc-compute',
+  selector: 'tdc-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.sass']
 })
 export class ProductsComponent implements OnInit {
   
-  @HostBinding('class.submenu-layout') layout = true;
+  @HostBinding('class.tdc-products-box') layout = true;
+
   private routePrefix = '';
-  menuTitle = 'mockProductsMenuTitle';
+  menuTitle = '云产品';
   // menuItems: SubmenuItem[] = [
   menuItems = [
 		{

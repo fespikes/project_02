@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'tdc-data-warehouse',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-warehouse.component.sass']
 })
 export class DataWarehouseComponent implements OnInit {
+
+  @HostBinding('class.data-warehouse-box') layout = true;
 
   constructor() { }
 
