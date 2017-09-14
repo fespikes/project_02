@@ -12,21 +12,31 @@ $h60: 60px
   width: 100%
   height: $h60
   display: block
-  background: #000
+  background: #090e11
   overflow: auto
   font-size: $f16
+  font-weight: 500
 
   
   .top-nav-ul
     li
       float: left
       height: 60px
+      width: 140px
+      display: inline-block
       a 
         display: inline-block
-        width: 200px
+        width: 80px
         text-align: center
         color: #fff
         line-height: $h60
+        margin: 0 auto
+
+        &:hover, &.active
+          height: 57px
+          color: #2481e3
+          border-bottom: 3px #2481e3 solid
+          margin-bottom: -3px
 
       .logo
         height: 60px

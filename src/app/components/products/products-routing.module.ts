@@ -13,13 +13,24 @@ import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.compo
 
 // import { DataWarehouseModule } from './data-warehouse/data-warehouse.module';
 
-//test S:
 import { FunctionalitiesComponent } from './data-warehouse/functionalities/functionalities.component';
 import { AdvantagesComponent } from './data-warehouse/advantages/advantages.component';
 import { ScenariosComponent } from './data-warehouse/scenarios/scenarios.component';
+  import { MultiTenancyPlatformComponent } from './data-warehouse/scenarios/multi-tenancy-platform/multi-tenancy-platform.component';
+  import { BuildDataWarehouseComponent } from './data-warehouse/scenarios/build-data-warehouse/build-data-warehouse.component';
+  import { DataLakeComponent } from './data-warehouse/scenarios/data-lake/data-lake.component';
+  import { DataGovernancePlatformComponent } from './data-warehouse/scenarios/data-governance-platform/data-governance-platform.component';
+
 import { ComponentIntroComponent } from './data-warehouse/component-intro/component-intro.component';
+  import { TdhPlatformProductsComponent } from './data-warehouse/component-intro/tdh-platform-products/tdh-platform-products.component';
+  import { TdhDevKitsComponent } from './data-warehouse/component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { OperationDevToolsComponent } from './data-warehouse/component-intro/operation-dev-tools/operation-dev-tools.component';
+
+
+
 import { ExpenseExplanationComponent } from './data-warehouse/expense-explanation/expense-explanation.component';
-//test E
+
+
 
 const productRoutes: Routes = [
   {
@@ -38,8 +49,35 @@ const productRoutes: Routes = [
                 children: [
                   { path: 'functionalities', component: FunctionalitiesComponent },
                   { path: 'advantages', component: AdvantagesComponent },
-                  { path: 'scenarios', component: ScenariosComponent },
-                  { path: 'component-intro', component: ComponentIntroComponent },
+                  { 
+                    path: 'scenarios', 
+                    component: ScenariosComponent,
+                    children: [
+                      {
+                        path: '',
+                        children: [//enterprise-class
+                          { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
+                          { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
+                          { path: 'data-lake', component: DataLakeComponent },
+                          { path: 'data-governance-platform', component: DataGovernancePlatformComponent }
+                        ]
+                      }
+                    ],
+                  },
+                  { 
+                    path: 'component-intro', 
+                    component: ComponentIntroComponent,
+                    children: [
+                      {
+                        path: '',
+                        children: [
+                          { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
+                          { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
+                          { path: 'operation-dev-tools', component: OperationDevToolsComponent }
+                        ]
+                      }
+                    ]
+                  },
                   { path: 'expense-explanation', component: ExpenseExplanationComponent }
                 ]
               }

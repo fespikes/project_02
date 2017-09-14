@@ -15,13 +15,11 @@ import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.compo
 
 import { DataWarehouseModule } from './data-warehouse/data-warehouse.module';
 
-//test S:
 import { FunctionalitiesComponent } from './data-warehouse/functionalities/functionalities.component';
 import { AdvantagesComponent } from './data-warehouse/advantages/advantages.component';
 import { ScenariosComponent } from './data-warehouse/scenarios/scenarios.component';
 import { ComponentIntroComponent } from './data-warehouse/component-intro/component-intro.component';
 import { ExpenseExplanationComponent } from './data-warehouse/expense-explanation/expense-explanation.component';
-//test E
 
 
 @NgModule({
@@ -42,13 +40,11 @@ import { ExpenseExplanationComponent } from './data-warehouse/expense-explanatio
   	RealtimeComputationComponent,
   	AnalysisMiningComponent,
 
-  	//test S：
     FunctionalitiesComponent,
     AdvantagesComponent,
     ScenariosComponent,
     ComponentIntroComponent,
     ExpenseExplanationComponent
-    //test E：
   ],
   providers: [
     TccModalService,
