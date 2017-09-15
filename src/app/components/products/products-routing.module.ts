@@ -41,12 +41,11 @@ const productRoutes: Routes = [
         path: '',
         children: [
           { path: 'data-warehouse', component: DataWarehouseComponent,
-
-          ////////
             children: [
               {
                 path: '',
                 children: [
+
                   { path: 'functionalities', component: FunctionalitiesComponent },
                   { path: 'advantages', component: AdvantagesComponent },
                   { 
@@ -59,7 +58,8 @@ const productRoutes: Routes = [
                           { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
                           { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
                           { path: 'data-lake', component: DataLakeComponent },
-                          { path: 'data-governance-platform', component: DataGovernancePlatformComponent }
+                          { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
+                          // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
                         ]
                       }
                     ],
@@ -78,12 +78,11 @@ const productRoutes: Routes = [
                       }
                     ]
                   },
-                  { path: 'expense-explanation', component: ExpenseExplanationComponent }
+                  { path: 'expense-explanation', component: ExpenseExplanationComponent },
+                  // { path: '', redirectTo: '/functionalities', pathMatch: 'full' }
                 ]
               }
             ]
-            //////
-
            },
           { path: 'data-mart', component: DataMartComponent },
           { path: 'info-retrieval', component: InfoRetrievalComponent },

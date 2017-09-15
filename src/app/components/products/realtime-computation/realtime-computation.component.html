@@ -1,3 +1,28 @@
-<p>
-  realtime-computation works!
-</p>
+
+
+
+
+<div class="details-banner">
+	<div class="slogans">
+		<h3 class="title">实时计算</h3>
+		<p>
+		云上的流处理分析平台，可对流数据进行实时采集和实时处理。帮助企业构建实时数据仓库，开发如传感器数据分析，异常状态检测，风险分析，在线反欺诈等多种在线实时应用，实现对流式信息的充分利用。
+		</p>
+	</div>
+	<div class="adv-image"></div>
+</div>
+
+<div class="tab-box">
+	<ul>
+		<li><a routerLink="./functionalities" routerLinkActive="active" class="">产品功能</a></li>
+		<li><a routerLink="./advantages" routerLinkActive="active">产品优势</a></li>
+		<li><a routerLink="./scenarios" routerLinkActive="active">应用场景</a></li>
+		<li><a routerLink="./component-intro/tdh-platform-products" routerLinkActive="active">组件介绍</a></li>
+		<!-- 
+			<li><a routerLink="./expense-explanation" routerLinkActive="active">费用说明</a></li> 
+			-->
+	</ul>
+	<div class="tab-sub">
+		<router-outlet></router-outlet>
+	</div>
+</div>
