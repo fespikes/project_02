@@ -20,7 +20,11 @@ import { AdvantagesComponent } from './data-warehouse/advantages/advantages.comp
 import { ScenariosComponent } from './data-warehouse/scenarios/scenarios.component';
 import { ComponentIntroComponent } from './data-warehouse/component-intro/component-intro.component';
 import { ExpenseExplanationComponent } from './data-warehouse/expense-explanation/expense-explanation.component';
-
+import { BannerDirective } from './data-mart/product-banner/banner.directive';
+import { ProductBannerComponent } from './data-mart/product-banner/product-banner.component';
+import { BannerComponent } from './data-mart/product-banner/banner/banner.component';
+import { ProductTabsComponent } from './data-mart/product-tabs/product-tabs.component';
+import { DataMartService } from './data-mart/data-mart.service';
 
 @NgModule({
   imports: [
@@ -44,10 +48,16 @@ import { ExpenseExplanationComponent } from './data-warehouse/expense-explanatio
     AdvantagesComponent,
     ScenariosComponent,
     ComponentIntroComponent,
-    ExpenseExplanationComponent
+    ExpenseExplanationComponent,
+    BannerDirective,
+    ProductBannerComponent,
+    BannerComponent,
+    ProductTabsComponent,
   ],
   providers: [
     TccModalService,
-  ]
+    DataMartService
+  ],
+  entryComponents: [ BannerComponent ]
 })
 export class ProductsModule { }

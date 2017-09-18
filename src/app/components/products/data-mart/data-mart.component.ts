@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, ViewChild, ComponentFactoryResolver } from '@angular/core';
+
+import { BannerDirective } from './product-banner/banner.directive';
+import { ProductBannerComponent } from './product-banner/product-banner.component';
+import { BannerInterface } from './product-banner/banner-interface';
+import { DataMartService } from './data-mart.service';
 
 @Component({
   selector: 'tdc-data-mart',
@@ -7,9 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataMartComponent implements OnInit {
 
-  constructor() { }
+	productDetails: any;
+
+	constructor(private dataMartService: DataMartService) {
+
+	}
 
   ngOnInit() {
+  	this.productDetails = this.dataMartService.getProductDetails();
+  }
+
+  ngOnDestroy() {
   }
 
 }

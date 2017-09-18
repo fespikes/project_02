@@ -90,9 +90,9 @@ const productRoutes: Routes = [
           { path: 'relational-database', component: RelationalDatabaseComponent },
           { path: 'deep-learning', component: DeepLearningComponent },
           { path: 'realtime-computation', component: RealtimeComputationComponent },
-          { path: 'analysis-mining', component: AnalysisMiningComponent },
+          { path: 'analysis-mining', component: AnalysisMiningComponent }
 
-          { path: '', component: DataWarehouseComponent }
+          // ,{ path: '', redirectTo: '/data-warehouse', pathMatch: 'full' }
         ]
       }
     ]
