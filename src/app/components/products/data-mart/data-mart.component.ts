@@ -10,6 +10,7 @@ export class DataMartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  	
   }
 
 }

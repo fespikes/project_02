@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './components/home/home.module';
 import { ProductsModule } from './components/products/products.module';
-import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
+import { BusinessScenarioComponent } from './components/business-scenario/business-scenario.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
@@ -39,6 +39,7 @@ import { ManagementCenterComponent } from './components/management-center/manage
     
     NavTopComponent,
     NavBottomComponent,
+    BusinessScenarioComponent,
 
     PageNotFoundComponent,
 
@@ -56,7 +57,6 @@ import { ManagementCenterComponent } from './components/management-center/manage
 
     HomeModule,
     ProductsModule,
-    BusinessScenarioModule,
 
     AppRoutingModule
   ],
