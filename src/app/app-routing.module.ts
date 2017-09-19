@@ -23,10 +23,10 @@ const routes: Routes = [
     path: 'modules',
     component: ModulesComponent
   },
-  {
-    path: 'business-scenario',
-    component: BusinessScenarioComponent
-  },
+  // {
+  //   path: 'business-scenario',
+  //   component: BusinessScenarioComponent
+  // },
   {
     path: 'documents-support',
     component: DocumentsSupportComponent

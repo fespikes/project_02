@@ -1,3 +1,5 @@
+@mixin background($image, $type:jpg, $bgColor:#fff)
+	background: #{$bgColor} url(../../images/scenarios/#{$image}.#{$type}) no-repeat left top
 
 .business-scenario-banner
 	height: 400px
@@ -27,7 +29,8 @@
 
 	h4
 		font-size: 1.6rem
-		padding-left: 10px
+		margin: 0
+		padding: 21.28px 10px
 		position: relative
 
 		&:before
@@ -36,7 +39,7 @@
 			height: 16px
 			position: absolute
 			left: 0
-			top: 0
+			top: 21.28px
 			background: #2481e3
 
 .scenarios-ul
@@ -48,28 +51,40 @@
 		display: inline-block
 		width: 308px
 		margin-bottom: 30px
+		background: #fff no-repeat
+
+		&.relational-database
+			@include background(relational-database)
+		&.realtime-computation
+			@include background(realtime-computation)
+		&.info-retrieval
+			@include background(info-retrieval)
+		&.deep-learning
+			@include background(deep-learning)
+		&.data-warehou
+			@include background(data-warehou)
+		&.analysis-mining
+			@include background(analysis-mining)
+		&.data-mart
+			@include background(data-mart)
+		&.others
+			@include background(others)
 
 		a
-		display: inline-block
+		display: block
 		position: relative
-		height: 276px
+		//height: 276px
 		width: 308px
-		line-height: 476px
-		background: #ddd
-		font-size: 16px
+		padding-top: 230px
+		padding-bottom: 24px
+		line-height: 1
+		font-size: 1.6rem
 		text-align: center
-		border: 1px red solid
-		&:hover
-			background: rgba(233, 222, 222, .3)
+		color: #000
+		background-color: transparent
 
-		&:after
-			content: ''
-			display: block
-			width: 100%
-			height: 76px
-			position: absolute
-			bottom: 0
-			background: rgba(33, 22, 22, .3)
+		&:hover
+			box-shadow: 0 0 10px #999
 
 		&:hover:after
 			content: ''
@@ -78,7 +93,6 @@
 			height: 76px
 			position: absolute
 			bottom: 0
-			background: rgba(343, 22, 22, .7)
 
 
 
