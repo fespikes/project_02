@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { RouterModule }   from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { TuiModule, TccModalService } from './tui';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './components/home/home.module';
+import { ModulesModule } from './components/modules/modules.module';
 import { ProductsModule } from './components/products/products.module';
 import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
 
@@ -27,25 +28,17 @@ import {
   I18nLangService,
 } from './i18n';
 
-import { ModulesComponent } from './components/modules/modules.component';
 import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
     LoginComponent,
-    
     NavTopComponent,
     NavBottomComponent,
-
     PageNotFoundComponent,
-
-    ModulesComponent,
-
     DocumentsSupportComponent,
-
     ManagementCenterComponent,
   ],
   imports: [
@@ -57,13 +50,14 @@ import { ManagementCenterComponent } from './components/management-center/manage
     HomeModule,
     ProductsModule,
     BusinessScenarioModule,
+    ModulesModule,
 
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     I18nLangService,
     TranslateService,
-    TccModalService
+    TccModalService,
   ],
   bootstrap: [AppComponent],
 })

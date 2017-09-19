@@ -1,0 +1,25 @@
+<div class="title">
+    <!-- <span>{{'USER.PERMISSION_LIST' | translate}}</span> -->
+    <span>云产品组件</span>
+  </div>
+    
+<div *ngFor="let type of permissionType">
+  <div class="perm-type" (click)="togglePerms(type)">
+    <span class="type-name">{{type.alias}}</span>
+    <svg tccIcon="angle-up" size="md" [class.expanded]="type.expanded"></svg>
+  </div>
+  <div class="perm-list" [class.expanded]="type.expanded">
+    <a
+      *ngFor="let perm of groupedPermissions[type.value]"
+      [routerLink]="perm.url"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
+      (click)="selectPerm(perm, type.value)"
+      [class.selected]="perm.selected"
+      class="perm-list-item"
+    >
+      <span>{{perm.actionAlias}}</span>
+    </a>
+  </div>
+</div>
+    
