@@ -13,37 +13,37 @@ import {
 })
 
 export class ModuleListComponent implements OnInit {
-  @Input() groupedPermissions: any[];
-  @Input() permissionType: any[];
-  @Output() onPermChange = new EventEmitter();
+  @Input() moduleItems: any[];
+  @Input() moduleTypes: any[];
+  @Output() onModuleChange = new EventEmitter();
   constructor() { }
   ngOnInit() {
-    console.log(this.permissionType);
-    console.log(this.groupedPermissions);
+    console.log(this.moduleTypes);
+    console.log(this.moduleItems);
   }
 
-  togglePerms(permType) {
-    permType.expanded = !permType.expanded;
-    if (permType.expanded) {
-      this.permissionType.map((type) => {
-        if (permType.value !== type.value) {
-        type.expanded = false;
+  toggleModules(moduleType) {
+    moduleType.expanded = !moduleType.expanded;
+    if (moduleType.expanded) {
+      this.moduleTypes.map((type) => {
+        if (moduleType.value !== type.value) {
+          type.expanded = false;
         }
       });
     }
   }
 
-  selectPerm(perm, permType) {
-    if (!perm.selected) {
-      perm.selected = true;
-      this.permissionType.map((type) => {
-        this.groupedPermissions[type.value].map((groupedPerm) => {
-          if (perm.permName !== groupedPerm.permName) {
-            groupedPerm.selected = false;
+  selectModule(module, moduleType) {
+    if (!module.selected) {
+      module.selected = true;
+      this.moduleTypes.map((type) => {
+        this.moduleItems[type.value].map((item) => {
+          if (module.name !== item.name) {
+            item.selected = false;
           }
         });
       });
-      this.onPermChange.emit(perm);
+      this.onModuleChange.emit(module);
     }
   }
 }

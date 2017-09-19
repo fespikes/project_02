@@ -14,12 +14,14 @@ import { SlipsteamComponent } from './product/slipsteam/slipsteam.component';
 import { SophonComponent } from './product/sophon/sophon.component';
 
 import { ModuleListComponent } from './module-list/module-list.component';
-//import { TreeComponent } from '../../tui/tree/tree.component';
+
+import { TuiModule } from '../../tui/tui.module';
 
 @NgModule({
   imports: [
     CommonModule,
     ModulesRoutingModule,
+    TuiModule,
   ],
   declarations: [
     ModulesComponent,
@@ -32,7 +34,6 @@ import { ModuleListComponent } from './module-list/module-list.component';
     SlipsteamComponent,
     SophonComponent,
     ModuleListComponent,
-    //TreeComponent,
   ],
 })
 export class ModulesModule { }

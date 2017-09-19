@@ -7,7 +7,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class ModulesComponent implements OnInit {
 
-  permissionType = [{
+  moduleTypes = [{
     'alias': '云产品组件',
     'value': 'cloudProductComponent',
   }, {
@@ -17,29 +17,37 @@ export class ModulesComponent implements OnInit {
     'alias': '运维和开发工具',
     'value': 'operationDevelopTool',
   }];
-  groupedPermissions = {
+  moduleItems = {
     'cloudProductComponent': [{
-        'actionAlias': 'inceptor',
+        'name': 'inceptor',
+        'actionAlias': 'Inceptor',
         'url': 'product/inceptor',
       }, {
+        'name': 'slipsteam',
         'actionAlias': 'Slipsteam',
         'url': 'product/slipsteam',
       }, {
+        'name': 'discover',
         'actionAlias': 'Discover',
         'url': 'product/discover',
       }, {
+        'name': 'hyperbase',
         'actionAlias': 'Hyperbase',
         'url': 'product/hyperbase',
       }, {
+        'name': 'search',
         'actionAlias': 'Search',
         'url': 'product/search',
       }, {
+        'name': 'sophon',
         'actionAlias': 'Sophon',
         'url': 'product/sophon',
       }, {
+        'name': 'guardian',
         'actionAlias': 'Guardian',
         'url': 'product/guardian',
       }, {
+        'name': 'hadoop',
         'actionAlias': 'Hadoop',
         'url': 'product/hadoop',
       },
@@ -87,7 +95,7 @@ export class ModulesComponent implements OnInit {
 
   }
 
-  onPermChange(perm) {
-    console.log('perm=', perm);
+  onModuleChange(module) {
+    console.log('module=', module);
   }
 }
