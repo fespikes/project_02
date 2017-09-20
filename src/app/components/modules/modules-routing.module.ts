@@ -10,7 +10,9 @@ import { SearchComponent } from './product/search/search.component';
 import { SlipsteamComponent } from './product/slipsteam/slipsteam.component';
 import { SophonComponent } from './product/sophon/sophon.component';
 
-import { ModulesComponent } from './modules.component'
+import { ModulesComponent } from './modules.component';
+
+import { TranslateDeactivator, TranslateResolver, TranslateToken } from '../../i18n';
 
 const routes: Routes = [
     {

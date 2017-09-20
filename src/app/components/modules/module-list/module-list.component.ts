@@ -18,8 +18,6 @@ export class ModuleListComponent implements OnInit {
   @Output() onModuleChange = new EventEmitter();
   constructor() { }
   ngOnInit() {
-    console.log(this.moduleTypes);
-    console.log(this.moduleItems);
   }
 
   toggleModules(moduleType) {

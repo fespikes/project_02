@@ -1,1 +1,25 @@
-<div>inceptor...</div>
+<div class="tdc-modules-content-layout">
+  <div class="content-layout-banner">
+    <img tccImgSrc="modules/inceptor-logo.png"/>
+    <div>
+      <div>Inceptor 分析型数据库</div>
+      <div>Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和 数据集市的构建。</div>
+    </div>
+  </div>
+  <div class="content-layout-tab">
+    <tcc-tab>
+      <product-introduce
+        *tccTabPane="'产品介绍'"
+        [introduceItems]="introduceItems"
+      ></product-introduce>
+      <product-advantage
+        *tccTabPane="'产品优势'"
+        [advantageItems]="advantageItems"
+      ></product-advantage>
+      <product-scenarios
+        *tccTabPane="'应用场景'"
+        [scenariosItems]="scenariosItems"
+      ></product-scenarios>
+    </tcc-tab>
+  </div>
+</div>
