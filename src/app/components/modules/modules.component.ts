@@ -8,13 +8,13 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 export class ModulesComponent implements OnInit {
 
   moduleTypes = [{
-    'alias': '云产品组件',
+    'alias': 'MODULES.TDH_PLATFORM_PRODUCT',
     'value': 'cloudProductComponent',
   }, {
-    'alias': 'TDH开发套件',
+    'alias': 'MODULES.TDH_DEVELOP_SUITE',
     'value': 'TDHDevelopSuite',
   }, {
-    'alias': '运维和开发工具',
+    'alias': 'MODULES.OPERATION_ADD_DEVELOP_TOOL',
     'value': 'operationDevelopTool',
   }];
   moduleItems = {

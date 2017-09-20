@@ -1,12 +1,11 @@
 <div class="title">
-    <span>云产品组件</span>
-    <!--<span>{{'CLOUD_PRODUCT_COMPONENT' | translate}}</span>-->
+    <span>{{'MODULES.CLOUD_PRODUCT_COMPONENT' | translate}}</span>
   </div>
 
 <div *ngFor="let type of moduleTypes">
   <div class="module-type" (click)="toggleModules(type)">
     <svg tccIcon="angle-up" size="md" [class.expanded]="type.expanded"></svg>
-    <span class="type-name">{{type.alias}}</span>
+    <span class="type-name">{{type.alias | translate}}</span>
   </div>
   <div class="module-list" [class.expanded]="type.expanded">
     <a

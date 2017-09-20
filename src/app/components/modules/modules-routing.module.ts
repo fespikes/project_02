@@ -57,10 +57,25 @@ const routes: Routes = [
 
   @NgModule({
     imports: [
-      RouterModule.forChild(routes),
+      RouterModule.forChild([
+        {
+          path: '',
+          resolve: [TranslateResolver],
+          canDeactivate: [TranslateDeactivator],
+          children: routes,
+        },
+      ]),
     ],
     exports: [
       RouterModule,
+    ],
+    providers: [
+      TranslateResolver,
+      TranslateDeactivator,
+      {
+        provide: TranslateToken,
+        useValue: 'modules',
+      },
     ],
   })
   export class ModulesRoutingModule {
