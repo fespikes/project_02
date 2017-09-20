@@ -1,16 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DiscoverComponent } from './product/discover/discover.component';
-import { GuardianComponent } from './product/guardian/guardian.component';
-import { HadoopComponent } from './product/hadoop/hadoop.component';
-import { HyperbaseComponent } from './product/hyperbase/hyperbase.componnet';
-import { InceptorComponent } from './product/inceptor/inceptor.component';
-import { SearchComponent } from './product/search/search.component';
-import { SlipsteamComponent } from './product/slipsteam/slipsteam.component';
-import { SophonComponent } from './product/sophon/sophon.component';
-
 import { ModulesComponent } from './modules.component';
+import { ProductComponent } from './product/product.component';
 
 import { TranslateDeactivator, TranslateResolver, TranslateToken } from '../../i18n';
 
@@ -21,35 +13,35 @@ const routes: Routes = [
       children: [
         {
           path: 'product/inceptor',
-          component: InceptorComponent,
+          component: ProductComponent,
         },
         {
           path: 'product/slipsteam',
-          component: SlipsteamComponent,
+          component: ProductComponent,
         },
         {
           path: 'product/discover',
-          component: DiscoverComponent,
+          component: ProductComponent,
         },
         {
           path: 'product/hyperbase',
-          component: HyperbaseComponent,
+          component: ProductComponent,
         },
         {
           path: 'product/search',
-          component: SearchComponent,
+          component: ProductComponent,
         },
         {
           path: 'product/sophon',
-          component: SophonComponent,
+          component: ProductComponent,
         },
         {
           path: 'product/guardian',
-          component: GuardianComponent,
+          component: ProductComponent,
         },
         {
           path: 'product/hadoop',
-          component: HadoopComponent,
+          component: ProductComponent,
         },
       ]
     },

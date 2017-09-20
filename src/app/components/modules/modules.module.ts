@@ -4,23 +4,22 @@ import { CommonModule } from '@angular/common';
 import { ModulesComponent } from './modules.component';
 import { ModulesRoutingModule } from './modules-routing.module';
 
-import { DiscoverComponent } from './product/discover/discover.component';
-import { GuardianComponent } from './product/guardian/guardian.component';
-import { HadoopComponent } from './product/hadoop/hadoop.component';
-import { HyperbaseComponent } from './product/hyperbase/hyperbase.componnet';
-import { InceptorComponent } from './product/inceptor/inceptor.component';
-import { SearchComponent } from './product/search/search.component';
-import { SlipsteamComponent } from './product/slipsteam/slipsteam.component';
-import { SophonComponent } from './product/sophon/sophon.component';
-
+import { ProductComponent } from './product/product.component';
 import { ModuleListComponent } from './module-list/module-list.component';
 import { ProductIntroduceComponent } from './product-introduce/product-introduce.component';
 import { ProductAdvantageComponent } from './product-advantage/product-advantage.component';
 import { ProductScenariosComponent } from './product-scenarios/product-scenarios.component';
+import { RealTimeCollectionComponent } from './product-scenarios/scenarios-tab/real-time-collection/real-time-collection.component';
+import { RealTimeMonitoringComponent } from './product-scenarios/scenarios-tab/real-time-monitoring/real-time-monitoring.component';
+import { RiskPredictComponent } from './product-scenarios/scenarios-tab/risk-predict/risk-predict.component';
 
 import { TuiModule } from '../../tui/tui.module';
 import { I18nModule } from '../../i18n';
 import { SharedModule } from '../../shared';
+
+import { ProductContentService } from './services/product-content.service';
+import { ProductBannerService } from './services/product-banner.service';
+import { ProductUtilService } from './services/product-util.service';
 
 @NgModule({
   imports: [
@@ -32,18 +31,19 @@ import { SharedModule } from '../../shared';
   ],
   declarations: [
     ModulesComponent,
-    DiscoverComponent,
-    GuardianComponent,
-    HadoopComponent,
-    HyperbaseComponent,
-    InceptorComponent,
-    SearchComponent,
-    SlipsteamComponent,
-    SophonComponent,
     ModuleListComponent,
+    ProductComponent,
     ProductIntroduceComponent,
     ProductAdvantageComponent,
     ProductScenariosComponent,
+    RealTimeCollectionComponent,
+    RealTimeMonitoringComponent,
+    RiskPredictComponent,
+  ],
+  providers: [
+    ProductContentService,
+    ProductBannerService,
+    ProductUtilService,
   ],
 })
 export class ModulesModule { }

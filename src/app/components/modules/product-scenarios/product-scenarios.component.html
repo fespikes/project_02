@@ -1,3 +1,25 @@
-<ul>
-  <li *ngFor="let item of scenariosItems">{{item | translate}}</li>
-</ul>
+<div class="scenarios-layout" *ngIf="!scenariosIncludeTab">
+  <ul>
+    <li *ngFor="let item of scenariosItems">{{item | translate}}</li>
+  </ul>
+  <img
+    tccImgSrc="modules/inceptor-scenarios.png"
+    *ngIf="!scenariosIncludeImg"
+  />
+</div>
+<div *ngIf="scenariosIncludeTab">
+  <tcc-tab>
+    <risk-predict
+      *tccTabPane="'在线风险预测'"
+    ></risk-predict>
+    <real-time-monitoring
+      *tccTabPane="'IoT实时监控、告警、预测'"
+    ></real-time-monitoring>
+    <real-time-collection
+      *tccTabPane="'交通流量实时采集与分析'"
+    ></real-time-collection>
+  </tcc-tab>
+</div>
+
+
+

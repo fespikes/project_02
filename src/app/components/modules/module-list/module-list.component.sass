@@ -37,6 +37,7 @@
       width: 2rem
       height: 2rem
       fill: $brandblue
+      margin-right: 0.5rem
       transition: transform 0.4s
 
       &.expanded
@@ -44,7 +45,7 @@
 
   .module-list
     background-color: $ghostwhite
-    max-height: 0rem
+    max-height: 0
     visibility: hidden
     opacity: 0
     transition: all 0.5s cubic-bezier(0, 1, 0, 1)
@@ -60,12 +61,13 @@
       display: flex
       align-items: center
       height: 3.75rem
-      padding: 0 1rem 0 1.875rem
+      padding: 0 1rem 0 3.875rem
       border-right: 3px solid $ghostwhite
       color: $text-dark
       user-select: none
       cursor: default
-      font-size: 0.875rem
+      font-size: 1rem
+      text-decoration: none
       transition: all .4s
 
       &.selected

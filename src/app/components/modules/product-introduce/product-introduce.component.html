@@ -1,6 +1,4 @@
-<div class="product-introduce-layout">
-  <img tccImgSrc="modules/inceptor-product.png"/>
-  <ul class="product-introduce-content">
-    <li *ngFor="let item of introduceItems">{{item}}</li>
-  </ul>
-</div>
+<img tccImgSrc="modules/inceptor-product.png"/>
+<ul class="product-introduce-content">
+  <li *ngFor="let item of introduceItems">{{item | translate}}</li>
+</ul>
