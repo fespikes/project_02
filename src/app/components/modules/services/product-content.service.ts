@@ -18,7 +18,12 @@ export class ProductContentService {
         break;
       case 'slipsteam':
         introduceItems = [
-
+          'MODULES.SLIPSTEAM.INTRODUCE_1',
+          'MODULES.SLIPSTEAM.INTRODUCE_2',
+          'MODULES.SLIPSTEAM.INTRODUCE_3',
+          'MODULES.SLIPSTEAM.INTRODUCE_4',
+          'MODULES.SLIPSTEAM.INTRODUCE_5',
+          'MODULES.SLIPSTEAM.INTRODUCE_6'
         ];
         break;
       case 'discover':
@@ -58,7 +63,11 @@ export class ProductContentService {
         break;
       case 'slipsteam':
         advantageItems = [
-
+          'MODULES.SLIPSTEAM.ADVANTAGE_1',
+          'MODULES.SLIPSTEAM.ADVANTAGE_2',
+          'MODULES.SLIPSTEAM.ADVANTAGE_3',
+          'MODULES.SLIPSTEAM.ADVANTAGE_4',
+          'MODULES.SLIPSTEAM.ADVANTAGE_5'
         ];
         break;
       case 'discover':
@@ -100,7 +109,9 @@ export class ProductContentService {
         break;
       case 'slipsteam':
         scenariosItems = [
-
+          'MODULES.SLIPSTEAM.SCENARIOS_1',
+          'MODULES.SLIPSTEAM.SCENARIOS_2',
+          'MODULES.SLIPSTEAM.SCENARIOS_3'
         ];
         break;
       case 'discover':
@@ -124,11 +135,5 @@ export class ProductContentService {
         break;
     }
     return scenariosItems;
-  }
-
-  getModuleType(url): string {
-    let array = url.split('/');
-    let type = array[array.length - 1];
-    return type;
   }
 }

@@ -14,9 +14,7 @@ import { ProductUtilService } from '../services/product-util.service';
 })
 export class ProductComponent implements OnInit {
 
-  logoUrl = '';
-  title = '';
-  subTitle = '';
+  bannerInfo = {};
 
   introduceItems = [];
   advantageItems = [];
@@ -33,8 +31,10 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(window.location.hash);
     let moduleType = this.productUtilService.getModuleType(window.location.hash);
+
+    this.bannerInfo = this.productBannerService.getModuleBannerInfo(moduleType);
+
     this.introduceItems = this.productContentService.getProductIntroduce(moduleType);
     this.advantageItems = this.productContentService.getProductAdvantage(moduleType);
     this.scenariosItems = this.productContentService.getProductScenarios(moduleType);

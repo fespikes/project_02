@@ -11,6 +11,8 @@
       "LOGO_URL":"modules/inceptor-logo.png",
       "TITLE":"Inceptor 分析型数据库",
       "SUB_TITLE":"Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和 数据集市的构建。",
+      "INTRODUCE_IMG_URL":"modules/inceptor-introduce.png",
+      "SCENARIOS_IMG_URL":"modules/inceptor-scenarios.png",
       "INTRODUCE_1":"Inceptor是一款用于批量处理及分析的数据库。它支持SQL 2003标准、Oracle PL/SQL以及DB2 SQL PL，对Oracle、DB2以及Teradata 都有很好的方言支持，是Hadoop领域对SQL标准支持最完善的产品。",
       "INTRODUCE_2":"Inceptor的另一大优势是对ACID的支持，从而可以满足用户对数据处理中一致性和可靠性保障的需求。",
       "INTRODUCE_3":"此外，Inceptor拥有极为优异的大数据分析性能，比Apache Hadoop处理速度快10倍以上，比 MPP处理速度快5倍以上，在TPC-DS和TPC-H基准测试中也胜于其他Hadoop和MPP产品。",
@@ -25,9 +27,34 @@
       "SCENARIOS_4":"•数据质量管理。"
     },
     "SLIPSTEAM":{
-
+      "LOGO_URL":"modules/slipsteam-logo.png",
+      "TITLE":"Slipstream 实时计算引擎",
+      "SUB_TITLE":"Slipstream是提供实时计算的产品，被广泛用于交通运输和物联网行业。",
+      "INTRODUCE_IMG_URL":"modules/slipsteam-introduce.png",
+      "ADVANTAGE_IMG_URL":"modules/slipsteam-advantage.png",
+      "SCENARIOS_TAB_RISK_IMG_URL":"modules/slipsteam-scenarios-tab-risk.png",
+      "SCENARIOS_TAB_MONITORING_IMG_URL":"",
+      "SCENARIOS_TAB_COLLECTION_IMG_URL":"",
+      "INTRODUCE_1":"Slipstream是提供实时计算的产品，被广泛用于交通运输和物联网行业。",
+      "INTRODUCE_2":"和其他解决方案相比，Slipstream有几个突出的技术优势:",
+      "INTRODUCE_3":"•完整的SQL支持使得实时业务开发过程更加简便;",
+      "INTRODUCE_4":"•基于事件驱动的计算引擎可将延迟时间缩减到5毫秒，仅为Spark Streaming引擎的延时的1/100;",
+      "INTRODUCE_5":"Slipstream支持复杂事件处理能力(CEP)，因此用户可以基于Slipstream用SQL语言开发比较复杂的在线流计算业务，如在线反欺诈应用等。",
+      "INTRODUCE_6":"Slipstream还提供完善的高可用性(HA)和Exactly-Once语义，而这些都是使实时应用稳定、可靠的保障。",
+      "ADVANTAGE_1":"•完整的SQL支持；",
+      "ADVANTAGE_2":"•同时适应低延迟和高吞吐两种业务场景；",
+      "ADVANTAGE_3":"•支持复杂事件处理；",
+      "ADVANTAGE_4":"•提供完善的高可用性（HA）和Exactly-Once语义。",
+      "ADVANTAGE_5":"与其他产品的对比：",
+      "SCENARIOS_1":"•在线风险预测；",
+      "SCENARIOS_2":"•loT实时监控、告警、预测；",
+      "SCENARIOS_3":"•交通流量实时采集与分析。"
     },
     "DISCOVER":{
+      "LOGO_URL":"modules/discover-logo.png",
+      "TITLE":"Discover 数据挖掘",
+      "SUB_TITLE":"Discover是分布式机器学习平台，它包含了丰富的分布式算法库，内置了多个行业应用模块，提供多类接口，以帮助数据工程师和科学家开发自己的数据挖掘算法。",
+      "INTRODUCE_IMG_URL":"modules/discover-introduce.png",
       "INTRODUCE_1":"Discover是分布式机器学习平台。",
       "INTRODUCE_2":"它包含了丰富的分布式算法库，还内置了多个行业应用模块，例如金融反欺诈、文本挖掘算法库等。",
       "INTRODUCE_3":"Discover提供了R语言、Python和SQL接口，以帮助数据科学家开发自己的数据挖掘算法。",
@@ -43,19 +70,29 @@
       "SCENARIOS_3":"•金融风险控制和欺诈检测。"
     },
     "HYPERBASE":{
-
+      "LOGO_URL":"modules/hyperbase-logo.png",
+      "TITLE":"Hyperbase 快速检索和非结构化数据处理",
+      "SUB_TITLE":"Hyperbase是以Apache HBase为基础，融合了多项创新技术的NoSQL数据库。"
     },
     "SEARCH":{
-
+      "LOGO_URL":"modules/search-logo.png",
+      "TITLE":"Search 全文检索",
+      "SUB_TITLE":"Search用于在企业内部构建大数据搜索引擎。"
     },
     "SOPHON":{
-
+      "LOGO_URL":"modules/sophon-logo.png",
+      "TITLE":"Sophon 深度学习和交互式数据挖掘",
+      "SUB_TITLE":"Sophon是整合了Tensorflow和MxNet的深度学习框架，并且与Hadoop实现了很好的融合。"
     },
     "GUARDIAN":{
-
+      "LOGO_URL":"modules/guardian-logo.png",
+      "TITLE":"Guardian 安全、权限和资源管控",
+      "SUB_TITLE":"Guardian为TDH提供集中的安全和资源管理服务"
     },
     "HADOOP":{
-
+      "LOGO_URL":"modules/hadoop-logo.png",
+      "TITLE":"Transwarp's Distribution for Apache Hadoop 分布式系统基础架构",
+      "SUB_TITLE":"Transwarp's Distribution for Apache Hadoop基于Apache Hadoop 2.7.2开发，以Hadoop Distributed File System (HDFS) 为文件系统，以YARN为资源管理平台。"
     }
   }
 }
