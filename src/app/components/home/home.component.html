@@ -16,50 +16,53 @@
       <li></li>
     </ul>
   </div>
+  <!--E: home-banner-->
 
   <div class="cloud-products">
-    <h3>星环云产品</h3>
+    <h3 class="middle-title">星环云产品</h3>
     <ul class="products">
       <li>
-        <img class="thumbnail" />
+        <div class="thumbnail"></div>
         <h4>关系数据库</h4>
-        <p >构建企业内部的关系数据库服务，可用于处理数据量在500GB以内的OLTP业务。支持复杂的SQL查询，提供高稳定、可扩展、强一致的数据处理服务。</p>
+        <p class="desc">构建企业内部的关系数据库服务，可用于处理数据量在500GB以内的OLTP业务。支持复杂的SQL查询，提供高稳定、可扩展、强一致的数据处理服务。</p>
         <a href="">查看详情</a>
       </li>
 
       <li class="current">
-        <img class="thumbnail" />
+        <div class="thumbnail data-mart"></div>
         <h4>数据集市</h4>
         <h5>产品功能</h5>
-        <ul>
+        <ul class="details">
           <li>面向业务的数据整合</li>
           <li>强大的SQL支持</li>
           <li>交互式OLAP分析</li>
           <li>高效的开发和运维工具</li>
         </ul>
-        <a href="">查看详情</a>
+        <a class="blue-button" href="">查看详情</a>
       </li>
 
       <li>
-        <img class="thumbnail" />
+        <div class="thumbnail info-retrieval"></div>
         <h4>信息检索</h4>
-        <p >为企业构建一站式内部搜索平台和信息检索服务，提供PB级别的高速全文检索，实现毫秒级的响应速度，高并发支持，字段精确和模糊检索以及快速统计功能。</p>
+        <p class="desc">为企业构建一站式内部搜索平台和信息检索服务，提供PB级别的高速全文检索，实现毫秒级的响应速度，高并发支持，字段精确和模糊检索以及快速统计功能。</p>
         <a href="">查看详情</a>
       </li>
     </ul>
+    <a class="arrow left"></a>
+    <a class="arrow right"></a>
   </div>
-
+  <!--E: cloud-products-->
 
   <div class="hot-modules">
-    <h3 class="bold">热门组件</h3>
+    <h3 class="middle-title">热门组件</h3>
     <!--S: details-->
     <div class="details">
       <div class="left">
         <h3>Discover数据挖掘</h3>
         <p>Discover是分布式机器学习平台，它包含了丰富的分布式算法库，内置了多个行业应用模块，提供多类接口，以帮助数据工程师和科学家开发自己的数据挖掘算法。</p>
 
-        <h3 class="bold">应用场景</h3>
-        <ul>
+        <h4 class="bold">应用场景</h4>
+        <ul class="cases">
           <li>刻画用户画像，进行智能推荐，实现精准营销；</li>
           <li>用户流失预警；</li>
           <li>金融风险控制和欺诈检测。</li>
@@ -67,9 +70,7 @@
       </div>
 
       <div class="right"></div>
-    </div>
-    <!--E: details-->
-
+    </div><!--E: details-->
     <div class="bar-modules">
       <ul>
         <li>
@@ -78,7 +79,29 @@
           <p class="desc">分析型数据库</p>
         </li>
         <li>
-
+          <span class="thumbnail-small"></span>
+          <h4 class="title">Hyperbase</h4>
+          <p class="desc">快速检索和非结构化数据处理</p>
+        </li>
+        <li>
+          <span class="thumbnail-small"></span>
+          <h4 class="title">Slipstream</h4>
+          <p class="desc">实时计算引擎</p>
+        </li>
+        <li>
+          <span class="thumbnail-small"></span>
+          <h4 class="title">Search</h4>
+          <p class="desc">全文检索</p>
+        </li>
+        <li>
+          <span class="thumbnail-small"></span>
+          <h4 class="title">Discover</h4>
+          <p class="desc">数据挖掘</p>
+        </li>
+        <li>
+          <span class="thumbnail-small"></span>
+          <h4 class="title">Sophon</h4>
+          <p class="desc">深度学习和交互式数据挖掘</p>
         </li>
       </ul>
       <a class="arrow left"></a>
@@ -86,12 +109,104 @@
     </div>
     <!--E: bar-modules-->
   </div>
+  <!--E: hot-modules-->
+
+  <div class="video-tutorial">
+    <h3 class="bold">视频教程</h3>
+    <ul class="videos">
+      <li>
+        <span class="thumbnail cloud-data"></span>
+        <input type="button" class="arrow" />
+        <h5>云产品的安装和使用</h5>
+      </li>
+      <li>
+        <span class="thumbnail cloud-data"></span>
+        <input type="button" class="arrow" />
+        <h5>云产品实例管理</h5>
+      </li>
+      <li>
+        <span class="thumbnail cloud-data"></span>
+        <input type="button" class="arrow" />
+        <h5>项目管理</h5>
+      </li>
+      <li>
+        <span class="thumbnail cloud-data"></span>
+        <input type="button" class="arrow" />
+        <h5>用户与权限管理</h5>
+      </li>
+      <li>
+        <span class="thumbnail cloud-data"></span>
+        <input type="button" class="arrow" />
+        <h5>......</h5>
+      </li>
+    </ul>
+    <a class="arrow left"></a>
+    <a class="arrow right"></a>
+  </div>
+  <!--E: video-tutorial-->
+
   <div class="business-scenario">
-    <h3 class="bold">业务方案</h3>
-    
+    <h3 class="middle-title">星环业务方案</h3>
+    <div>
+      <ul class="scenarios">
+        <li class="scenario-0">
+          <h4>关系数据库</h4>
+          <p>text placeholdertext placeholdertext placeholdertext placeholdertext placeholder</p>
+          <button>查看详情</button>
+        </li>
+        <li class="scenario-1">
+          <h4>实时计算</h4>
+          <p>text placeholdertext placeholdertext placeholder</p>
+          <button>查看详情</button>
+        </li>
+        <li class="scenario-2">
+          <h4>信息检索</h4>
+          <p>text placeholdertext placeholdertext placeholder</p>
+          <button>查看详情</button>
+        </li>
+      </ul>
+      <a class="arrow left"></a>
+      <a class="arrow right"></a>
+    </div>
   </div>
   <!--E: business-scenario-->
 
+  <div class="status-update">
+    <h3 class="middle-title">最新动态</h3>
+    <ul class="news-list">
+      <li>
+        <a class="news-a news-0">
+          <h3><span>【深度】</span> Hadoop性能调优案例分享</h3>
+          <div class="date">2017-09-23</div>
+        </a>
+      </li>
+      <li>
+        <a class="news-a news-1">
+          <h3><span>【巨能聊】</span>Hadoop性能调优案例分享</h3>
+          <div class="date">2017-09-23</div>
+        </a>
+      </li>
+      <li>
+        <a class="news-a news-2">
+          <h3><span>【巨能聊】</span>Hadoop性能调优案例分享</h3>
+          <div class="date">2017-09-23</div>
+        </a>
+      </li>
+<!--       <li>
+        <a class="news-a">
+          <h3><span>【深度】</span>Hadoop性能调优案例分享</h3>
+          <div class="date">2017-09-23</div>
+        </a>
+      </li> -->
+    </ul>
+  </div>
+  <!--E: status-update-->
+
+  <div class="start-trip">
+    <h3 class="middle-title">开始你的云上大数据之旅</h3>
+    <button (click)="goToAdmin">进入管理中心</button>
+  </div>
+  <!--E: start-trip-->
 </div>
 
 
