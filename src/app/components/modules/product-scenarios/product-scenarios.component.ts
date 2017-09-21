@@ -10,9 +10,8 @@ import { RiskPredictComponent } from './scenarios-tab/risk-predict/risk-predict.
   styleUrls: ['./product-scenarios.component.sass'],
 })
 export class ProductScenariosComponent implements OnInit {
-  @Input() scenariosItems: any[];
-  @Input() scenariosIncludeImg: boolean;
-  @Input() scenariosIncludeTab: boolean;
+  @Input() productScenarios: Object;
+  @Input() scenariosIncludeImgTab: Object;
   constructor() { }
 
   ngOnInit() {

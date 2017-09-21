@@ -1,9 +1,19 @@
-<div class="advantage-tab-title">
+<div class="product-tab-title">
   <span>{{'MODULES.PRODUCT_ADVANTAGE' | translate}}</span>
 </div>
-<div class="advantage-tab-content">
+<div class="product-tab-content">
   <ul>
-    <li *ngFor="let item of advantageItems">{{item | translate}}</li>
+    <li
+      *ngFor="let item of productAdvantage.items"
+      [ngClass]="{'chapter':item.chapter, 'paragraph':item.paragraph, 'indent':item.indent}"
+    >
+      {{item.content | translate}}
+    </li>
   </ul>
+  <img
+    *ngIf="advantageIncludeImg"
+    tccImgSrc="{{productAdvantage.img.url | translate}}"
+    [ngStyle]="{'width': productAdvantage.img.width, 'height':productAdvantage.img.height}"
+  />
 </div>
 

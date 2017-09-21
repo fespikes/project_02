@@ -6,10 +6,8 @@ import { Component, OnInit, HostBinding, Input } from '@angular/core';
   styleUrls: ['./real-time-monitoring.component.sass'],
 })
 export class RealTimeMonitoringComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
-
   }
 }

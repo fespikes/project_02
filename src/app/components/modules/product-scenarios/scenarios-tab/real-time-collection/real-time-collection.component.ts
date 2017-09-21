@@ -6,10 +6,8 @@ import { Component, OnInit, HostBinding, Input } from '@angular/core';
   styleUrls: ['./real-time-collection.component.sass'],
 })
 export class RealTimeCollectionComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
-
   }
 }

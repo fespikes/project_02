@@ -17,11 +17,11 @@ export class ProductComponent implements OnInit {
   bannerInfo = {};
 
   productIntroduce = {};
-  advantageItems = [];
-  scenariosItems = [];
+  productAdvantage = {};
+  productScenarios = {};
 
-  scenariosIncludeImg = false;
-  scenariosIncludeTab = false;
+  advantageIncludeImg = false;
+  scenariosIncludeImgTab = {};
 
   constructor(
     private productContentService: ProductContentService,
@@ -36,10 +36,10 @@ export class ProductComponent implements OnInit {
     this.bannerInfo = this.productBannerService.getModuleBannerInfo(moduleType);
 
     this.productIntroduce = this.productContentService.getProductIntroduce(moduleType);
-    this.advantageItems = this.productContentService.getProductAdvantage(moduleType);
-    this.scenariosItems = this.productContentService.getProductScenarios(moduleType);
+    this.productAdvantage = this.productContentService.getProductAdvantage(moduleType);
+    this.productScenarios = this.productContentService.getProductScenarios(moduleType);
 
-    this.scenariosIncludeImg = this.productUtilService.scenariosIncludeImg(moduleType);
-    this.scenariosIncludeTab = this.productUtilService.scenariosIncludeTab(moduleType);
+    this.advantageIncludeImg = this.productUtilService.advantageIncludeImg(moduleType);
+    this.scenariosIncludeImgTab = this.productUtilService.scenariosIncludeImgTab(moduleType);
   }
 }

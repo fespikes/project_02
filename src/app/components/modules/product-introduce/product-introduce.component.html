@@ -1,12 +1,15 @@
-<div class="introduce-tab-title">
+<div class="product-tab-title">
   <span>{{'MODULES.PRODUCT_FUNCTION' | translate}}</span>
 </div>
-<div class="introduce-tab-content">
-  <img tccImgSrc="{{productIntroduce.INTRODUCE_IMG_URL | translate}}"/>
+<div class="product-tab-content">
+  <img
+    tccImgSrc="{{productIntroduce.img.url | translate}}"
+    [ngStyle]="{'width': productIntroduce.img.width, 'height':productIntroduce.img.height}"
+  />
   <ul>
     <li
       *ngFor="let item of productIntroduce.items"
-      [ngClass]="{'paragraph':item.paragraph, 'indent':item.indent}"
+      [ngClass]="{'chapter':item.chapter, 'paragraph':item.paragraph, 'indent':item.indent}"
     >
       {{item.content | translate}}
     </li>

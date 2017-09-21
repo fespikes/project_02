@@ -11,26 +11,33 @@ export class ProductContentService {
     switch (moduleName) {
       case 'inceptor':
         productIntroduce = {
-          'INTRODUCE_IMG_URL': 'MODULES.INCEPTOR.INTRODUCE_IMG_URL',
-          'SCENARIOS_IMG_URL': 'MODULES.INCEPTOR.SCENARIOS_IMG_URL',
+          'img': {
+            'url': 'MODULES.INCEPTOR.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '270px'
+          },
           'items': [
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content': 'MODULES.INCEPTOR.INTRODUCE_1',
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content': 'MODULES.INCEPTOR.INTRODUCE_2',
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content': 'MODULES.INCEPTOR.INTRODUCE_3',
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content': 'MODULES.INCEPTOR.INTRODUCE_4',
             }
@@ -39,31 +46,39 @@ export class ProductContentService {
         break;
       case 'slipsteam':
         productIntroduce = {
-          'INTRODUCE_IMG_URL':'MODULES.SLIPSTEAM.INTRODUCE_IMG_URL',
-          'ADVANTAGE_IMG_URL':'MODULES.SLIPSTEAM.ADVANTAGE_IMG_URL',
+          'img': {
+            'url': 'MODULES.SLIPSTEAM.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '270px'
+          },
           'items':[
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content':'MODULES.SLIPSTEAM.INTRODUCE_1'
             },
             {
-              'paragraph': false,
+              'chapter': false,
+              'paragraph': true,
               'indent': true,
               'content':'MODULES.SLIPSTEAM.INTRODUCE_2'
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': true,
               'content':'MODULES.SLIPSTEAM.INTRODUCE_3'
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content':'MODULES.SLIPSTEAM.INTRODUCE_4'
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content':'MODULES.SLIPSTEAM.INTRODUCE_5'
             }
@@ -72,25 +87,33 @@ export class ProductContentService {
         break;
       case 'discover':
         productIntroduce = {
-          'INTRODUCE_IMG_URL': 'MODULES.DISCOVER.INTRODUCE_IMG_URL',
+          'img': {
+            'url': 'MODULES.DISCOVER.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
           'items': [
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content': 'MODULES.DISCOVER.INTRODUCE_1'
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content': 'MODULES.DISCOVER.INTRODUCE_2'
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content': 'MODULES.DISCOVER.INTRODUCE_3'
             },
             {
-              'paragraph': true,
+              'chapter': true,
+              'paragraph': false,
               'indent': false,
               'content': 'MODULES.DISCOVER.INTRODUCE_4'
             }
@@ -113,35 +136,121 @@ export class ProductContentService {
     return productIntroduce;
   }
 
-  getProductAdvantage(moduleName): any[] {
-    let advantageItems = [];
+  getProductAdvantage(moduleName): Object {
+    let productAdvantage = {};
     switch (moduleName) {
       case 'inceptor':
-        advantageItems = [
-          'MODULES.INCEPTOR.ADVANTAGE_1',
-          'MODULES.INCEPTOR.ADVANTAGE_2',
-          'MODULES.INCEPTOR.ADVANTAGE_3',
-          'MODULES.INCEPTOR.ADVANTAGE_4'
-        ];
+        productAdvantage = {
+          'items':[
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.INCEPTOR.ADVANTAGE_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.INCEPTOR.ADVANTAGE_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.INCEPTOR.ADVANTAGE_3'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.INCEPTOR.ADVANTAGE_4'
+            }
+          ]
+        };
         break;
       case 'slipsteam':
-        advantageItems = [
-          'MODULES.SLIPSTEAM.ADVANTAGE_1',
-          'MODULES.SLIPSTEAM.ADVANTAGE_2',
-          'MODULES.SLIPSTEAM.ADVANTAGE_3',
-          'MODULES.SLIPSTEAM.ADVANTAGE_4',
-          'MODULES.SLIPSTEAM.ADVANTAGE_5'
-        ];
+        productAdvantage = {
+          'img': {
+            'url': 'MODULES.SLIPSTEAM.ADVANTAGE_IMG_URL',
+            'width': '700px',
+            'height': '300px'
+          },
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_3'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_4'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_5'
+            }
+          ]
+        };
         break;
       case 'discover':
-        advantageItems = [
-          'MODULES.DISCOVER.ADVANTAGE_1',
-          'MODULES.DISCOVER.ADVANTAGE_2',
-          'MODULES.DISCOVER.ADVANTAGE_3',
-          'MODULES.DISCOVER.ADVANTAGE_4',
-          'MODULES.DISCOVER.ADVANTAGE_5',
-          'MODULES.DISCOVER.ADVANTAGE_6'
-        ];
+        productAdvantage = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.ADVANTAGE_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.ADVANTAGE_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.ADVANTAGE_3'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.ADVANTAGE_4'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.ADVANTAGE_5'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.ADVANTAGE_6'
+            }
+          ]
+        };
         break;
       case 'hyperbase':
         break;
@@ -156,33 +265,94 @@ export class ProductContentService {
       default:
         break;
     }
-    return advantageItems;
+    return productAdvantage;
   }
 
-  getProductScenarios(moduleName): any[] {
-    let scenariosItems = [];
+  getProductScenarios(moduleName): Object {
+    let productScenarios = {};
     switch (moduleName) {
       case 'inceptor':
-        scenariosItems = [
-          'MODULES.INCEPTOR.SCENARIOS_1',
-          'MODULES.INCEPTOR.SCENARIOS_2',
-          'MODULES.INCEPTOR.SCENARIOS_3',
-          'MODULES.INCEPTOR.SCENARIOS_4'
-        ];
+        productScenarios = {
+          'img': {
+            'url': 'MODULES.INCEPTOR.SCENARIOS_IMG_URL',
+            'width': '700px',
+            'height': '400px'
+          },
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.INCEPTOR.SCENARIOS_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.INCEPTOR.SCENARIOS_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.INCEPTOR.SCENARIOS_3'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.INCEPTOR.SCENARIOS_4'
+            }
+          ]
+        };
         break;
       case 'slipsteam':
-        scenariosItems = [
-          'MODULES.SLIPSTEAM.SCENARIOS_1',
-          'MODULES.SLIPSTEAM.SCENARIOS_2',
-          'MODULES.SLIPSTEAM.SCENARIOS_3'
-        ];
+        productScenarios = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SLIPSTEAM.SCENARIOS_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SLIPSTEAM.SCENARIOS_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SLIPSTEAM.SCENARIOS_3'
+            }
+          ]
+        };
         break;
       case 'discover':
-        scenariosItems = [
-          'MODULES.DISCOVER.SCENARIOS_1',
-          'MODULES.DISCOVER.SCENARIOS_2',
-          'MODULES.DISCOVER.SCENARIOS_3'
-        ];
+        productScenarios = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.SCENARIOS_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.SCENARIOS_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.DISCOVER.SCENARIOS_3'
+            }
+          ]
+        };
         break;
       case 'hyperbase':
         break;
@@ -197,6 +367,6 @@ export class ProductContentService {
       default:
         break;
     }
-    return scenariosItems;
+    return productScenarios;
   }
 }

@@ -12,27 +12,32 @@ export class ProductUtilService {
     return type;
   }
 
-  scenariosIncludeImg(moduleType): boolean {
+  advantageIncludeImg(moduleType): boolean {
     let includeImg = false;
     switch (moduleType) {
       case 'inceptor':
-        includeImg = true;
+        includeImg = false;
         break;
       case 'slipsteam':
-        includeImg = false;
+        includeImg = true;
         break;
       case 'discover':
         includeImg = false;
         break;
       case 'hyperbase':
+        includeImg = false;
         break;
       case 'search':
+        includeImg = false;
         break;
       case 'sophon':
+        includeImg = true;
         break;
       case 'guardian':
+        includeImg = false;
         break;
       case 'hadoop':
+        includeImg = false;
         break;
       default:
         break;
@@ -40,31 +45,60 @@ export class ProductUtilService {
     return includeImg;
   }
 
-  scenariosIncludeTab(moduleType): boolean {
-    let includeTab = false;
+  scenariosIncludeImgTab(moduleType): Object {
+    let includeImgTab = {};
     switch (moduleType) {
       case 'inceptor':
-        includeTab = false;
+        includeImgTab = {
+          'tab': false,
+          'img': true
+        };
         break;
       case 'slipsteam':
-        includeTab = true;
+        includeImgTab = {
+          'tab': true,
+          'img': false
+        };
         break;
       case 'discover':
-        includeTab = false;
+        includeImgTab = {
+          'tab': false,
+          'img': false
+        };
         break;
       case 'hyperbase':
+        includeImgTab = {
+          'tab': false,
+          'img': false
+        };
         break;
       case 'search':
+        includeImgTab = {
+          'tab': false,
+          'img': false
+        };
         break;
       case 'sophon':
+        includeImgTab = {
+          'tab': false,
+          'img': false
+        };
         break;
       case 'guardian':
+        includeImgTab = {
+          'tab': false,
+          'img': false
+        };
         break;
       case 'hadoop':
+        includeImgTab = {
+          'tab': false,
+          'img': false
+        };
         break;
       default:
         break;
     }
-    return includeTab;
+    return includeImgTab;
   }
 }

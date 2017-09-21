@@ -14,13 +14,13 @@
       ></product-introduce>
       <product-advantage
         *tccTabPane="'产品优势'"
-        [advantageItems]="advantageItems"
+        [advantageIncludeImg]="advantageIncludeImg"
+        [productAdvantage]="productAdvantage"
       ></product-advantage>
       <product-scenarios
         *tccTabPane="'应用场景'"
-        [scenariosItems]="scenariosItems"
-        [scenariosIncludeImg]="scenariosIncludeImg"
-        [scenariosIncludeTab]="scenariosIncludeTab"
+        [productScenarios]="productScenarios"
+        [scenariosIncludeImgTab]="scenariosIncludeImgTab"
       ></product-scenarios>
     </tcc-tab>
   </div>
