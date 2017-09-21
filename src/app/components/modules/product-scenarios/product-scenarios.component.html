@@ -1,4 +1,7 @@
-<div class="scenarios-layout" *ngIf="!scenariosIncludeTab">
+<div class="scenarios-tab-title">
+  <span>{{'MODULES.PRODUCT_SCENARIOS' | translate}}</span>
+</div>
+<div class="scenarios-tab-content" *ngIf="!scenariosIncludeTab">
   <ul>
     <li *ngFor="let item of scenariosItems">{{item | translate}}</li>
   </ul>

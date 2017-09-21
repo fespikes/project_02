@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
 
   bannerInfo = {};
 
-  introduceItems = [];
+  productIntroduce = {};
   advantageItems = [];
   scenariosItems = [];
 
@@ -35,7 +35,7 @@ export class ProductComponent implements OnInit {
 
     this.bannerInfo = this.productBannerService.getModuleBannerInfo(moduleType);
 
-    this.introduceItems = this.productContentService.getProductIntroduce(moduleType);
+    this.productIntroduce = this.productContentService.getProductIntroduce(moduleType);
     this.advantageItems = this.productContentService.getProductAdvantage(moduleType);
     this.scenariosItems = this.productContentService.getProductScenarios(moduleType);
 

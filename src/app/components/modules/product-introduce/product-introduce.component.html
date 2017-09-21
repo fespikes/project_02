@@ -1,4 +1,15 @@
-<img tccImgSrc="modules/inceptor-introduce.png"/>
-<ul class="product-introduce-content">
-  <li *ngFor="let item of introduceItems">{{item | translate}}</li>
-</ul>
+<div class="introduce-tab-title">
+  <span>{{'MODULES.PRODUCT_FUNCTION' | translate}}</span>
+</div>
+<div class="introduce-tab-content">
+  <img tccImgSrc="{{productIntroduce.INTRODUCE_IMG_URL | translate}}"/>
+  <ul>
+    <li
+      *ngFor="let item of productIntroduce.items"
+      [ngClass]="{'paragraph':item.paragraph, 'indent':item.indent}"
+    >
+      {{item.content | translate}}
+    </li>
+  </ul>
+</div>
+

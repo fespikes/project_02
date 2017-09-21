@@ -1,7 +1,8 @@
 @import '../../../styles/util'
 
-\:host
+\:host /deep/
   flex: 1
+  background-color: #F3F4F8
   .tdc-modules-content-layout
     flex: 1
 
@@ -19,4 +20,12 @@
       font-size: 3.2rem
       font-weight: bold
       margin: 2rem 0
+
+  .content-layout-tab
+    margin-top: 3rem
+    .tcc-tab-item
+      background-color: transparent
+      &.active
+        color: #2481e3
+        border-bottom: 2px solid #00305a !important
 
