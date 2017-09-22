@@ -24,6 +24,9 @@ $h60: 60px
       height: 60px
       width: 140px
       display: inline-block
+      &:first-child
+        width: 245px
+
       a 
         display: inline-block
         width: 80px
@@ -31,7 +34,6 @@ $h60: 60px
         color: #fff
         line-height: $h60
         margin: 0 auto
-
         &:hover, &.active
           height: 57px
           color: #2481e3
@@ -39,8 +41,13 @@ $h60: 60px
           margin-bottom: -3px
 
       .logo
-        height: 60px
-        background: #ddd
+        width: 200px
+        height: 55px
+        overflow: hidden
+        text-indent: 200px
+        background: transparent url(/assets/images/icons.png) no-repeat 43px 12px
+        &:hover
+          border: 0
 
       .manage-center
         display: inline-block
