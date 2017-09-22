@@ -2,7 +2,7 @@
 @mixin background($image, $type:jpg, $bgColor:#fff, $left:left, $top:top)
   background: #{$bgColor} url(/assets/images/home/#{$image}.#{$type}) no-repeat #{$left} #{$top}
 
-div, h1, h2, h3, h4, h5, h6, ul, li, span 
+div, h1, h2, h3, h4, h5, h6, ul, li, span, p 
   padding: 0
   margin: 0
 
@@ -34,11 +34,11 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span
   margin-top: -30px
   cursor: pointer
   &:before
-    margin-top: 16px
+    margin-top: -13px
 
 .arrow.left
   position: absolute
-  left: 50px
+  left: 35px
   top: 50%
 
   &:before
@@ -49,9 +49,12 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span
     border-bottom: 2px #009aff solid
     border-left: 2px #009aff solid
     transform: rotate(45deg)
+    position: absolute
+    left: 15px
+    top: 50%
 .arrow.right
   position: absolute
-  right: 50px
+  right: 35px
   top: 50%
 
   &:before
@@ -62,7 +65,9 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span
     border-right: 2px #009aff solid
     border-top: 2px #009aff solid
     transform: rotate(45deg)
-
+    position: absolute
+    right: 15px
+    top: 50%
 .blue-button, a.blue-button
   display: inline-block
   width: 130px
@@ -168,9 +173,9 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span
 
       .desc
         font-size: 1.2rem
-        line-height: 1.5
+        line-height: 1.8
         padding: 0 20px
-        height: 90px
+        height: 110px
         overflow: auto
         //TODO: reduce the text when too much
         color: #ababab
@@ -225,6 +230,7 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span
 
       .blue-button
         margin: 0 auto
+        color: #fff
 
   .arrow
     margin-top: -80px
@@ -295,7 +301,7 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span
 
 
   .right
-    width: 635px
+    width: 624px
     height: 370px
     margin-top: 70px
     @include background(hot-module-data-mining, png, transparent)
@@ -306,15 +312,56 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span
   height: 220px
   margin-left: -100px
   margin-right: -100px
-  border: 1px red solid
   overflow: hidden
   position: relative
+  background: #fff
 
+  ul
+    width: 1110px
+    height: 200px
+    margin: 0 auto
+
+  li
+    float: left
+    display: inline-block
+    width: 160px
+    height: 195px
+    margin-left: 30px
+    &:first-child
+      margin-left: 0
+    
+    a
+      display: inline-block
+      width: 100%
+      height: 100%
+      background: #fff
+      text-align: center
+
+      .thumbnail-small
+        display: inline-block
+        width: 100%
+        height: 110px
+      &:hover
+        box-shadow: 0 0 20px #ead6d6
+
+      .title
+        font-size: 1.6rem
+      p
+        font-size: 1.2rem
+        color: #afb4b8
+
+  li.current
+
+    a
+      box-shadow: 0 0 20px #ead6d6
+
+      .thumbnail-small
 
 //E: .hot-modules
 
 .business-scenario
   height: 700px
+  position: relative
   @include background(business-scenario-bg)
 
 
@@ -366,8 +413,71 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span
       background: #1878c9
       color: #fff
 
-
 //E:.business-scenario
+
+.video-tutorial
+  height: 780px
+  position: relative
+  background: #f3f6fa
+  
+  h3
+    color: #000
+    &:after
+      border-bottom: 2px #000 solid
+
+  .arrow
+    top: 440px
+  ul.videos
+    padding-top: 64px
+    width: 1170px
+    margin: 0 auto
+
+    li, a
+      display: inline-block
+      width: 370px
+      height: 495px
+
+    li
+      margin-left: 26px
+      &:first-child
+        margin-left: 0
+
+    a
+      background: #fff
+
+      .thumbnail
+        display: inline-block
+        height: 320px
+        width: 100%
+        //TODO: remove below background placeholder
+      .video-data
+        @include background(video-data, png, transparent, center, center)
+      .video-db
+        @include background(video-db, png, transparent, center, center)
+      .video-code
+        @include background(video-code, png, transparent, center, center)
+
+      h5
+        padding-bottom: 32px
+        margin: 0
+        font-size: 2.2rem
+        text-align: center
+
+      p
+        margin: 0 60px
+        line-height: 20px
+        color: #b0b0b0
+
+    a:hover
+      //box-shadow: 
+
+
+
+//370 493   30
+
+
+
+//E: .video-tutorial
 
 .status-update
   height: 580px
