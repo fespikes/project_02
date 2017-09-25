@@ -1,7 +1,7 @@
 import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[product-banner]'
+  selector: '[banner-host]'
 })
 export class BannerDirective {
 

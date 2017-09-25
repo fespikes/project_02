@@ -8,7 +8,7 @@ import { DataMartService } from './data-mart.service';
 @Component({
   selector: 'tdc-data-mart',
   templateUrl: './data-mart.component.html',
-  styleUrls: ['./data-mart.component.sass']
+  styleUrls: ['./data-mart.common.sass', './data-mart.component.sass']
 })
 export class DataMartComponent implements OnInit {
 
@@ -19,7 +19,8 @@ export class DataMartComponent implements OnInit {
 	}
 
   ngOnInit() {
-  	this.productDetails = this.dataMartService.getProductDetails();
+  	const productDetails = this.dataMartService.getProductDetails();
+  	this.productDetails = productDetails;
   }
 
   ngOnDestroy() {

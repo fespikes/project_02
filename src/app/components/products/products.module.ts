@@ -49,9 +49,11 @@ import { DataMartService } from './data-mart/data-mart.service';
     ScenariosComponent,
     ComponentIntroComponent,
     ExpenseExplanationComponent,
+    
     BannerDirective,
     ProductBannerComponent,
     BannerComponent,
+    
     ProductTabsComponent,
   ],
   providers: [

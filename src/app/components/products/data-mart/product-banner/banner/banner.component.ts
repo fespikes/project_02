@@ -1,17 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BannerInterface } from '../banner-interface';
 
 @Component({
   selector: 'tdc-banner',
   templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.sass']
+  styleUrls: ['../../data-mart.common.sass', './banner.component.sass']
 })
-export class BannerComponent implements BannerInterface, OnInit {
+export class BannerComponent implements BannerInterface {
 
 	@Input() data: any;
-
-	ngOnInit() {
-		console.log(this.data);
-	}
 
 }
