@@ -33,6 +33,7 @@ import { DocumentsSupportComponent } from './components/documents-support/docume
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
 
 import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
+import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 
 
 @NgModule({
@@ -52,6 +53,8 @@ import { BusinessScenarioModule } from './components/business-scenario/business-
     DocumentsSupportComponent,
 
     ManagementCenterComponent,
+
+    LatestNewsComponent,
 
     // ScenarioComponent,
   ],
