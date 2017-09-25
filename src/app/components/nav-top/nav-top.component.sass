@@ -13,9 +13,9 @@ $h60: 60px
   height: $h60
   display: block
   background: #090e11
-  overflow: auto
   font-size: $f16
   font-weight: 500
+  position: relative
 
   
   .top-nav-ul
@@ -62,10 +62,16 @@ $h60: 60px
   .top-nav-sub-items
     width: 100%
     height: 300px
-    display: none
-    overflow-y: auto
-    left: 20%
     background: green
+    position: absolute
+    top: 60px 
+    left: 0
+    z-index: 100
+    display: none
+
+    ul
+
+      li
 
 
 
