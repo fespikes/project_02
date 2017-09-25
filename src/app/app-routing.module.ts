@@ -15,14 +15,6 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  // {
-  //   path: 'products',
-  //   component: ProductsComponent
-  // },
-  {
-    path: 'modules',
-    component: ModulesComponent
-  },
   {
     path: 'business-scenario',
     component: BusinessScenarioComponent
@@ -35,17 +27,6 @@ const routes: Routes = [
     path: 'management-center',
     component: ManagementCenterComponent
   },
-/*
-  {
-    path: 'admin',
-    loadChildren: 'app/admin/admin.module#AdminModule',
-    canLoad: [AuthGuard]
-  },
-  {
-    path: 'crisis-center',
-    loadChildren: 'app/crisis-center/crisis-center.module#CrisisCenterModule',
-    data: { preload: true }
-  },*/
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

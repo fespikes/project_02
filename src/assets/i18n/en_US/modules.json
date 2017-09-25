@@ -1,0 +1,49 @@
+{
+  "MODULES": {
+    "CLOUD_PRODUCT_COMPONENT":"Cloud Product Component",
+    "TDH_PLATFORM_PRODUCT":"TDH Platfrom Product",
+    "TDH_DEVELOP_SUITE":"TDH DEVELOP SUITE",
+    "OPERATION_ADD_DEVELOP_TOOL":"OPERATION AND DEVELOP TOOL",
+    "PRODUCT_FUNCTION":"Product Function",
+    "PRODUCT_ADVANTAGE":"Product Advantage",
+    "PRODUCT_SCENARIOS":"Application Scenarios",
+    "INCEPTOR":{
+      "LOGO_URL":"",
+      "TITLE":"",
+      "SUB_TITLE":"",
+      "INTRODUCE_1":"",
+      "INTRODUCE_2":"",
+      "INTRODUCE_3":"",
+      "INTRODUCE_4":"",
+      "ADVANTAGE_1":"",
+      "ADVANTAGE_2":"",
+      "ADVANTAGE_3":"",
+      "ADVANTAGE_4":"",
+      "SCENARIOS_1":"",
+      "SCENARIOS_2":"",
+      "SCENARIOS_3":"",
+      "SCENARIOS_4":""
+    },
+    "SLIPSTEAM":{
+
+    },
+    "DISCOVER":{
+
+    },
+    "HYPERBASE":{
+
+    },
+    "SEARCH":{
+
+    },
+    "SOPHON":{
+
+    },
+    "GUARDIAN":{
+
+    },
+    "HADOOP":{
+
+    }
+  }
+}
