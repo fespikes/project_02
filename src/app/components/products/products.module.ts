@@ -25,6 +25,7 @@ import { ProductBannerComponent } from './data-mart/product-banner/product-banne
 import { BannerComponent } from './data-mart/product-banner/banner/banner.component';
 import { DataMartService } from './data-mart/data-mart.service';
 import { ProductTabComponent } from './data-mart/product-tab/product-tab.component';
+import { ProductTabDirective } from './data-mart/product-tab/product-tab.directive';
 
 @NgModule({
   imports: [
@@ -54,6 +55,7 @@ import { ProductTabComponent } from './data-mart/product-tab/product-tab.compone
     ProductBannerComponent,
     BannerComponent,
     ProductTabComponent,
+    ProductTabDirective,
     
   ],
   providers: [

@@ -35,6 +35,7 @@ import { ManagementCenterComponent } from './components/management-center/manage
 import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
 
 import { BannerComponent } from './components/products/data-mart/product-banner/banner/banner.component';
+import { ProductTabDirective } from './components/product/product-tab/product-tab.directive';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,8 @@ import { BannerComponent } from './components/products/data-mart/product-banner/
     DocumentsSupportComponent,
 
     ManagementCenterComponent,
+
+    ProductTabDirective,
 
     // ScenarioComponent,
   ],
