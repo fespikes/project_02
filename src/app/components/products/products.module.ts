@@ -23,8 +23,8 @@ import { ExpenseExplanationComponent } from './data-warehouse/expense-explanatio
 import { BannerDirective } from './data-mart/product-banner/banner.directive';
 import { ProductBannerComponent } from './data-mart/product-banner/product-banner.component';
 import { BannerComponent } from './data-mart/product-banner/banner/banner.component';
-import { ProductTabsComponent } from './data-mart/product-tabs/product-tabs.component';
 import { DataMartService } from './data-mart/data-mart.service';
+import { ProductTabComponent } from './data-mart/product-tab/product-tab.component';
 
 @NgModule({
   imports: [
@@ -53,8 +53,8 @@ import { DataMartService } from './data-mart/data-mart.service';
     BannerDirective,
     ProductBannerComponent,
     BannerComponent,
+    ProductTabComponent,
     
-    ProductTabsComponent,
   ],
   providers: [
     TccModalService,

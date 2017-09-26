@@ -11,12 +11,12 @@ import { BannerComponent } from './banner/banner.component';
 })
 export class ProductBannerComponent implements  OnInit {
 
+  productDetail: any;
+  
   @Input()
   set productDetails(productDetails: any) {
     this.productDetail = productDetails && productDetails.banner && productDetails;
   }
-
-  productDetail: any;
 
   //用来告诉Angular该把动态组件插入到什么位置
   @ViewChild(BannerDirective) bannerHost: BannerDirective;
