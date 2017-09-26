@@ -26,6 +26,7 @@ import { BannerComponent } from './data-mart/product-banner/banner/banner.compon
 import { DataMartService } from './data-mart/data-mart.service';
 import { ProductTabComponent } from './data-mart/product-tab/product-tab.component';
 import { ProductTabDirective } from './data-mart/product-tab/product-tab.directive';
+import { TabsComponent } from './data-mart/product-tab/tabs/tabs.component';
 
 @NgModule({
   imports: [
@@ -56,12 +57,13 @@ import { ProductTabDirective } from './data-mart/product-tab/product-tab.directi
     BannerComponent,
     ProductTabComponent,
     ProductTabDirective,
+    TabsComponent,
     
   ],
   providers: [
     TccModalService,
     DataMartService
   ],
-  entryComponents: [ BannerComponent ]
+  entryComponents: [ BannerComponent, TabsComponent ]
 })
 export class ProductsModule { }
