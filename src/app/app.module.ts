@@ -20,6 +20,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NavTopComponent } from './components/nav-top/nav-top.component';
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
 
+import { LatestNewsModule } from './components/latest-news/latest-news.module';
+
 import {
   I18nModule,
   TranslateService,
@@ -53,9 +55,6 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     DocumentsSupportComponent,
 
     ManagementCenterComponent,
-
-    LatestNewsComponent,
-
     // ScenarioComponent,
   ],
   imports: [
@@ -68,6 +67,7 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
 
     ProductsModule,
     BusinessScenarioModule,
+    LatestNewsModule,
 
     AppRoutingModule
   ],

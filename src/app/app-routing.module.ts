@@ -38,10 +38,10 @@ const routes: Routes = [
     path: 'management-center',
     component: ManagementCenterComponent
   },
-  {
-    path: 'latest-news',
-    component: LatestNewsComponent
-  },
+  // {
+  //   path: 'latest-news',
+  //   component: LatestNewsComponent
+  // },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
