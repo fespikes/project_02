@@ -1,22 +1,29 @@
 @import '../../../styles/util'
 
 \:host /deep/
-  flex: 1
+  display: block
+  margin-left: 200px
   background-color: #F3F4F8
   .tdc-modules-content-layout
-    flex: 1
+    width: 100%
 
   .content-layout-banner
     background-color: #00305a
-    height: 20rem
+    height: 40rem
     width: 100%
-    display: flex
-    > img
-      margin: auto 5rem
-    > div > div
+    font-size: 0
+    padding: 12rem 10rem
+    .banner-text, .banner-img
+      width: 50%
+      height: 100%
+      display: inline-block
+    .banner-img
+      text-align: center
+    .banner-text span
       color: #fff
       font-size: $font-lg
-    > div > div:first-child
+      display: block
+    .banner-text span:first-child
       font-size: 3.2rem
       font-weight: bold
       margin: 2rem 0
@@ -25,6 +32,7 @@
     margin-top: 3rem
     .tcc-tab-item
       background-color: transparent
+      border-bottom: 2px solid transparent !important
       &.active
         color: #2481e3
         border-bottom: 2px solid #00305a !important
@@ -36,16 +44,26 @@
     border-left: 5px solid #2481e3
     font-weight: bold
     padding-left: 1rem
-    margin: 2rem auto 0 2rem
+    margin: 2.8rem auto 0 2rem
 
   .product-tab-content
-    display: flex
-    margin: 2rem
+    margin: 2rem 2rem 4rem 2rem
     border-radius: 4px
     background-color: #fff
+    font-size: 0
+    overflow: hidden
     > img, > ul
       padding: 2rem
-    > div
+      font-size: $font-lg
+    > img
+      float: left
+      display: inline-block
+      padding: 6rem 3rem 6rem 4rem
+    > ul
+      padding: 6rem 4rem 100rem 3rem
+      margin-bottom: -100rem
+      li:last-child
+        padding-bottom: 5rem
 
   .chapter
     margin-bottom: 2rem

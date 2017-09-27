@@ -1,9 +1,11 @@
 <div class="tdc-modules-content-layout">
   <div class="content-layout-banner">
-    <img tccImgSrc="{{bannerInfo.logoUrl | translate}}"/>
-    <div>
-      <div>{{bannerInfo.title | translate}}</div>
-      <div>{{bannerInfo.subTitle | translate}}</div>
+    <div class="banner-text">
+      <span>{{bannerInfo.title | translate}}</span>
+      <span>{{bannerInfo.subTitle | translate}}</span>
+    </div>
+    <div class="banner-img">
+      <img tccImgSrc="{{bannerInfo.logoUrl | translate}}"/>
     </div>
   </div>
   <div class="content-layout-tab">
@@ -11,19 +13,11 @@
       <product-introduce
         *tccTabPane="'产品介绍'"
         [productIntroduce]="productIntroduce"
-        [introduceIncludeImg]="introduceIncludeImg"
       ></product-introduce>
       <product-advantage
         *tccTabPane="'产品优势'"
-        [moduleType]="moduleType"
         [productAdvantage]="productAdvantage"
-        [advantageIncludeImgTable]="advantageIncludeImgTable"
       ></product-advantage>
-      <product-scenarios
-        *tccTabPane="'应用场景'"
-        [productScenarios]="productScenarios"
-        [scenariosIncludeImgTab]="scenariosIncludeImgTab"
-      ></product-scenarios>
     </tcc-tab>
   </div>
 </div>

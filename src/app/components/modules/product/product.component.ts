@@ -14,16 +14,10 @@ import { ProductUtilService } from '../services/product-util.service';
 })
 export class ProductComponent implements OnInit {
 
-  moduleType = '';
   bannerInfo = {};
 
   productIntroduce = {};
   productAdvantage = {};
-  productScenarios = {};
-
-  introduceIncludeImg = false;
-  advantageIncludeImgTable = {};
-  scenariosIncludeImgTab = {};
 
   constructor(
     private productContentService: ProductContentService,
@@ -33,15 +27,11 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.moduleType = this.productUtilService.getModuleType(window.location.hash);
-    this.bannerInfo = this.productBannerService.getModuleBannerInfo(this.moduleType);
+    let moduleType = this.productUtilService.getModuleType(window.location.hash);
 
-    this.productIntroduce = this.productContentService.getProductIntroduce(this.moduleType);
-    this.productAdvantage = this.productContentService.getProductAdvantage(this.moduleType);
-    this.productScenarios = this.productContentService.getProductScenarios(this.moduleType);
+    this.bannerInfo = this.productBannerService.getModuleBannerInfo(moduleType);
 
-    this.introduceIncludeImg = this.productUtilService.introduceIncludeImg(this.moduleType);
-    this.advantageIncludeImgTable = this.productUtilService.advantageIncludeImgTable(this.moduleType);
-    this.scenariosIncludeImgTab = this.productUtilService.scenariosIncludeImgTab(this.moduleType);
+    this.productIntroduce = this.productContentService.getProductIntroduce(moduleType);
+    this.productAdvantage = this.productContentService.getProductAdvantage(moduleType);
   }
 }

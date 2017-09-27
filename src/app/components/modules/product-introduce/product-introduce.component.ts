@@ -7,7 +7,6 @@ import { Component, OnInit, HostBinding, Input } from '@angular/core';
 })
 export class ProductIntroduceComponent implements OnInit {
   @Input() productIntroduce: Object;
-  @Input() introduceIncludeImg: boolean;
   constructor() { }
 
   ngOnInit() {

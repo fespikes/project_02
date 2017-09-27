@@ -10,16 +10,5 @@
       {{item.content | translate}}
     </li>
   </ul>
-  <img
-    *ngIf="advantageIncludeImgTable.img"
-    tccImgSrc="{{productAdvantage.img.url | translate}}"
-    [ngStyle]="{'width': productAdvantage.img.width, 'height':productAdvantage.img.height}"
-  />
-  <div *ngIf="advantageIncludeImgTable.table">
-    <module-table
-      [columns]="columns"
-      [rows]="rows"
-    ></module-table>
-  </div>
 </div>
 

@@ -1,20 +1,17 @@
 @import '../../../styles/util'
 
 \:host
-  display: flex
-  flex-direction: column
-  flex-shrink: 0
-  width: 20rem
+
+  width: 100%
   height: 100vh
   overflow: auto
+  display: inline-block
   background-color: white
   border-right: 1px solid #e4e7ee
 
   .title
-    display: flex
-    align-items: center
-    flex-shrink: 0
     height: 6rem
+    line-height: 6rem
     width: 100%
     padding-left: 2rem
     padding-bottom: 0
@@ -24,9 +21,8 @@
     background: #2481e3
 
   .module-type
-    display: flex
-    align-items: center
     height: 3.75rem
+    line-height: 3.75rem
     padding: 0 1rem 0 1.875rem
     border-bottom: 1px solid #e4e7ee
     color: $text-dark
@@ -58,15 +54,15 @@
       transition: all 1s ease-in-out
 
     &-item
-      display: flex
-      align-items: center
       height: 3.75rem
+      line-height: 3.75rem
+      display: block
       padding: 0 1rem 0 3.875rem
       border-right: 3px solid $ghostwhite
       color: $text-dark
       user-select: none
       cursor: default
-      font-size: 1rem
+      font-size: 1.2rem
       text-decoration: none
       transition: all .4s
 
