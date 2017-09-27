@@ -11,14 +11,14 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './components/home/home.module';
 import { ProductsModule } from './components/products/products.module';
-import { BusinessScenarioComponent } from './components/business-scenario/business-scenario.component';
-import { ScenarioComponent } from './components/business-scenario/scenario/scenario.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { NavTopComponent } from './components/nav-top/nav-top.component';
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
+
+import { LatestNewsModule } from './components/latest-news/latest-news.module';
 
 import {
   I18nModule,
@@ -34,8 +34,6 @@ import { ManagementCenterComponent } from './components/management-center/manage
 
 import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
 
-import { BannerComponent } from './components/products/data-mart/product-banner/banner/banner.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +42,6 @@ import { BannerComponent } from './components/products/data-mart/product-banner/
     
     NavTopComponent,
     NavBottomComponent,
-    // BusinessScenarioComponent,
 
     PageNotFoundComponent,
 
@@ -53,7 +50,6 @@ import { BannerComponent } from './components/products/data-mart/product-banner/
     DocumentsSupportComponent,
 
     ManagementCenterComponent
-    
   ],
   imports: [
     BrowserModule,
@@ -65,6 +61,7 @@ import { BannerComponent } from './components/products/data-mart/product-banner/
 
     ProductsModule,
     BusinessScenarioModule,
+    LatestNewsModule,
 
     AppRoutingModule
   ],
