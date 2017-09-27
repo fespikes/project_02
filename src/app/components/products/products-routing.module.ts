@@ -12,8 +12,9 @@ import { RealtimeComputationComponent } from './realtime-computation/realtime-co
 import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.component';
 
 // import { DataWarehouseModule } from './data-warehouse/data-warehouse.module';
-
+//deprecated
 import { FunctionalitiesComponent } from './data-warehouse/functionalities/functionalities.component';
+
 import { AdvantagesComponent } from './data-warehouse/advantages/advantages.component';
 import { ScenariosComponent } from './data-warehouse/scenarios/scenarios.component';
   import { MultiTenancyPlatformComponent } from './data-warehouse/scenarios/multi-tenancy-platform/multi-tenancy-platform.component';
@@ -30,7 +31,8 @@ import { ComponentIntroComponent } from './data-warehouse/component-intro/compon
 
 import { ExpenseExplanationComponent } from './data-warehouse/expense-explanation/expense-explanation.component';
 
-
+import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-functionalities/data-mart-functionalities.component';
+import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
 
 const productRoutes: Routes = [
   {
@@ -42,53 +44,200 @@ const productRoutes: Routes = [
         children: [
           { path: 'data-warehouse', component: DataWarehouseComponent,
             children: [
-              {
-                path: '',
-                children: [
 
-                  { path: 'functionalities', component: FunctionalitiesComponent },
-                  { path: 'advantages', component: AdvantagesComponent },
-                  { 
-                    path: 'scenarios', 
-                    component: ScenariosComponent,
-                    children: [
-                      {
-                        path: '',
-                        children: [//enterprise-class
-                          { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
-                          { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
-                          { path: 'data-lake', component: DataLakeComponent },
-                          { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
-                          // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
-                        ]
-                      }
-                    ],
-                  },
-                  { 
-                    path: 'component-intro', 
-                    component: ComponentIntroComponent,
-                    children: [
-                      {
-                        path: '',
-                        children: [
-                          { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
-                          { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
-                          { path: 'operation-dev-tools', component: OperationDevToolsComponent }
-                        ]
-                      }
+              { path: 'functionalities', component: FunctionalitiesComponent },
+              { path: 'advantages', component: AdvantagesComponent },
+              {
+                path: 'scenarios', 
+                component: ScenariosComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [//enterprise-class
+                      { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
+                      { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
+                      { path: 'data-lake', component: DataLakeComponent },
+                      { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
+                      // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
                     ]
-                  },
-                  { path: 'expense-explanation', component: ExpenseExplanationComponent },
-                  // { path: '', redirectTo: '/functionalities', pathMatch: 'full' }
+                  }
+                ],
+              },
+              {
+                path: 'component-intro', 
+                component: ComponentIntroComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [
+                      { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
+                      { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
+                      { path: 'operation-dev-tools', component: OperationDevToolsComponent }
+                    ]
+                  }
                 ]
-              }
+              },
+              { path: 'expense-explanation', component: ExpenseExplanationComponent },
+              //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
             ]
            },
-          { path: 'data-mart', component: DataMartComponent },
-          { path: 'info-retrieval', component: InfoRetrievalComponent },
+          { path: 'data-mart', component: DataMartComponent,
+            children: [
+
+              { path: 'functionalities', component: DataMartFunctionalitiesComponent },
+              { path: 'advantages', component: DataMartAdvantagesComponent },
+              {
+                path: 'scenarios', 
+                component: ScenariosComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [//enterprise-class
+                      { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
+                      { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
+                      { path: 'data-lake', component: DataLakeComponent },
+                      { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
+                      // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
+                    ]
+                  }
+                ],
+              },
+              {
+                path: 'component-intro', 
+                component: ComponentIntroComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [
+                      { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
+                      { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
+                      { path: 'operation-dev-tools', component: OperationDevToolsComponent }
+                    ]
+                  }
+                ]
+              },
+              { path: 'expense-explanation', component: ExpenseExplanationComponent },
+              //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
+            ]
+          },
+          { path: 'info-retrieval', component: InfoRetrievalComponent,
+            children: [
+
+              { path: 'functionalities', component: FunctionalitiesComponent },
+              { path: 'advantages', component: AdvantagesComponent },
+              {
+                path: 'scenarios', 
+                component: ScenariosComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [//enterprise-class
+                      { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
+                      { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
+                      { path: 'data-lake', component: DataLakeComponent },
+                      { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
+                      // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
+                    ]
+                  }
+                ],
+              },
+              {
+                path: 'component-intro', 
+                component: ComponentIntroComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [
+                      { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
+                      { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
+                      { path: 'operation-dev-tools', component: OperationDevToolsComponent }
+                    ]
+                  }
+                ]
+              },
+              { path: 'expense-explanation', component: ExpenseExplanationComponent },
+              //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
+            ]
+          },
           
-          { path: 'relational-database', component: RelationalDatabaseComponent },
-          { path: 'deep-learning', component: DeepLearningComponent },
+          { path: 'relational-database', component: RelationalDatabaseComponent,
+            children: [
+
+              { path: 'functionalities', component: FunctionalitiesComponent },
+              { path: 'advantages', component: AdvantagesComponent },
+              {
+                path: 'scenarios', 
+                component: ScenariosComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [//enterprise-class
+                      { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
+                      { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
+                      { path: 'data-lake', component: DataLakeComponent },
+                      { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
+                      // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
+                    ]
+                  }
+                ],
+              },
+              {
+                path: 'component-intro', 
+                component: ComponentIntroComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [
+                      { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
+                      { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
+                      { path: 'operation-dev-tools', component: OperationDevToolsComponent }
+                    ]
+                  }
+                ]
+              },
+              { path: 'expense-explanation', component: ExpenseExplanationComponent },
+              //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
+            ]
+          },
+          { path: 'deep-learning', component: DeepLearningComponent,
+            children: [
+
+              { path: 'functionalities', component: FunctionalitiesComponent },
+              { path: 'advantages', component: AdvantagesComponent },
+              {
+                path: 'scenarios', 
+                component: ScenariosComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [//enterprise-class
+                      { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
+                      { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
+                      { path: 'data-lake', component: DataLakeComponent },
+                      { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
+                      // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
+                    ]
+                  }
+                ],
+              },
+              {
+                path: 'component-intro', 
+                component: ComponentIntroComponent,
+                children: [
+                  {
+                    path: '',
+                    children: [
+                      { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
+                      { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
+                      { path: 'operation-dev-tools', component: OperationDevToolsComponent }
+                    ]
+                  }
+                ]
+              },
+              { path: 'expense-explanation', component: ExpenseExplanationComponent },
+              //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
+            ]
+          },
           { path: 'realtime-computation', component: RealtimeComputationComponent },
           { path: 'analysis-mining', component: AnalysisMiningComponent }
 

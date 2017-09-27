@@ -27,6 +27,15 @@ import { DataMartService } from './data-mart/data-mart.service';
 import { ProductTabComponent } from './data-mart/product-tab/product-tab.component';
 import { ProductTabDirective } from './data-mart/product-tab/product-tab.directive';
 import { TabsComponent } from './data-mart/product-tab/tabs/tabs.component';
+import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-functionalities/data-mart-functionalities.component';
+
+import { FunctionalitiesComponent as TheFunctionalitiesComponent } from './common/components/functionalities/functionalities/functionalities.component';
+import { AdvantagesComponent as TheAdvantagesComponent } from './common/components/advantages/advantages/advantages.component';
+
+//to be confirmed
+import { FunctionalitiesDirective } from './common/components/functionalities/functionalities.directive';
+import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
+import { AdvantagesDirective } from './common/components/advantages/advantages.directive';
 
 @NgModule({
   imports: [
@@ -58,12 +67,20 @@ import { TabsComponent } from './data-mart/product-tab/tabs/tabs.component';
     ProductTabComponent,
     ProductTabDirective,
     TabsComponent,
-    
+    DataMartFunctionalitiesComponent,
+    FunctionalitiesDirective,
+
+    TheFunctionalitiesComponent,
+    TheAdvantagesComponent,
+
+    DataMartAdvantagesComponent,
+
+    AdvantagesDirective
   ],
   providers: [
     TccModalService,
     DataMartService
   ],
-  entryComponents: [ BannerComponent, TabsComponent ]
+  entryComponents: [ BannerComponent, TabsComponent, TheFunctionalitiesComponent, TheAdvantagesComponent ]
 })
 export class ProductsModule { }
