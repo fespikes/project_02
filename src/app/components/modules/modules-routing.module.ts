@@ -16,7 +16,7 @@ const routes: Routes = [
           component: ProductComponent,
         },
         {
-          path: 'product/slipsteam',
+          path: 'product/slipstream',
           component: ProductComponent,
         },
         {
@@ -43,6 +43,58 @@ const routes: Routes = [
           path: 'product/hadoop',
           component: ProductComponent,
         },
+        {
+          path: 'suite/pilot',
+          component: ProductComponent,
+        },
+        {
+          path: 'suite/workflow',
+          component: ProductComponent,
+        },
+        {
+          path: 'suite/transporter',
+          component: ProductComponent,
+        },
+        {
+          path: 'suite/governor',
+          component: ProductComponent,
+        },
+        {
+          path: 'suite/rubik',
+          component: ProductComponent,
+        },
+        {
+          path: 'tool/waterdrop',
+          component: ProductComponent,
+        },
+        {
+          path: 'tool/txsql',
+          component: ProductComponent,
+        },
+        {
+          path: 'tool/prometheus',
+          component: ProductComponent,
+        },
+        {
+          path: 'tool/kafka',
+          component: ProductComponent,
+        },
+        {
+          path: 'tool/zeppelin',
+          component: ProductComponent,
+        },
+        {
+          path: 'tool/midas',
+          component: ProductComponent,
+        },
+        {
+          path: 'tool/terminal',
+          component: ProductComponent,
+        },
+        {
+          path: 'tool/redis',
+          component: ProductComponent,
+        }
       ]
     },
   ];

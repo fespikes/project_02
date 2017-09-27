@@ -3,6 +3,7 @@
 </div>
 <div class="product-tab-content">
   <img
+    *ngIf="introduceIncludeImg"
     tccImgSrc="{{productIntroduce.img.url | translate}}"
     [ngStyle]="{'width': productIntroduce.img.width, 'height':productIntroduce.img.height}"
   />

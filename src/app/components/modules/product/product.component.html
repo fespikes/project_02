@@ -11,11 +11,13 @@
       <product-introduce
         *tccTabPane="'产品介绍'"
         [productIntroduce]="productIntroduce"
+        [introduceIncludeImg]="introduceIncludeImg"
       ></product-introduce>
       <product-advantage
         *tccTabPane="'产品优势'"
-        [advantageIncludeImg]="advantageIncludeImg"
+        [moduleType]="moduleType"
         [productAdvantage]="productAdvantage"
+        [advantageIncludeImgTable]="advantageIncludeImgTable"
       ></product-advantage>
       <product-scenarios
         *tccTabPane="'应用场景'"

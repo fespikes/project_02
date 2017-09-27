@@ -44,10 +44,10 @@ export class ProductContentService {
           ]
         };
         break;
-      case 'slipsteam':
+      case 'slipstream':
         productIntroduce = {
           'img': {
-            'url': 'MODULES.SLIPSTEAM.INTRODUCE_IMG_URL',
+            'url': 'MODULES.SLIPSTREAM.INTRODUCE_IMG_URL',
             'width': '410px',
             'height': '270px'
           },
@@ -56,31 +56,31 @@ export class ProductContentService {
               'chapter': true,
               'paragraph': false,
               'indent': false,
-              'content':'MODULES.SLIPSTEAM.INTRODUCE_1'
+              'content':'MODULES.SLIPSTREAM.INTRODUCE_1'
             },
             {
               'chapter': false,
               'paragraph': true,
               'indent': true,
-              'content':'MODULES.SLIPSTEAM.INTRODUCE_2'
+              'content':'MODULES.SLIPSTREAM.INTRODUCE_2'
             },
             {
               'chapter': true,
               'paragraph': false,
               'indent': true,
-              'content':'MODULES.SLIPSTEAM.INTRODUCE_3'
+              'content':'MODULES.SLIPSTREAM.INTRODUCE_3'
             },
             {
               'chapter': true,
               'paragraph': false,
               'indent': false,
-              'content':'MODULES.SLIPSTEAM.INTRODUCE_4'
+              'content':'MODULES.SLIPSTREAM.INTRODUCE_4'
             },
             {
               'chapter': true,
               'paragraph': false,
               'indent': false,
-              'content':'MODULES.SLIPSTEAM.INTRODUCE_5'
+              'content':'MODULES.SLIPSTREAM.INTRODUCE_5'
             }
           ]
         };
@@ -121,14 +121,304 @@ export class ProductContentService {
         };
         break;
       case 'hyperbase':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.HYPERBASE.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': [
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.INTRODUCE_1'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.INTRODUCE_2'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.INTRODUCE_3'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.INTRODUCE_4'
+            }
+          ]
+        };
         break;
       case 'search':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.SEARCH.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': [
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.SEARCH.INTRODUCE_1'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.SEARCH.INTRODUCE_2'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.SEARCH.INTRODUCE_3'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.SEARCH.INTRODUCE_4'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.SEARCH.INTRODUCE_5'
+            }
+          ]
+        };
         break;
       case 'sophon':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.SOPHON.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': [
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.SOPHON.INTRODUCE_1'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.SOPHON.INTRODUCE_2'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.SOPHON.INTRODUCE_3'
+            }
+          ]
+        };
         break;
       case 'guardian':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.GUARDIAN.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': [
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.GUARDIAN.INTRODUCE_1'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.GUARDIAN.INTRODUCE_2'
+            }
+          ]
+        };
         break;
       case 'hadoop':
+        productIntroduce = {
+          'items': [
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HADOOP.INTRODUCE_1'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HADOOP.INTRODUCE_2'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HADOOP.INTRODUCE_3'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': true,
+              'content': 'MODULES.HADOOP.INTRODUCE_4'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': true,
+              'content': 'MODULES.HADOOP.INTRODUCE_5'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': true,
+              'content': 'MODULES.HADOOP.INTRODUCE_6'
+            }
+          ]
+        };
+        break;
+      case 'pilot':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.PILOT.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'wrokflow':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.WORKFLOW.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'transporter':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.TRANSPORTER.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'governor':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.GOVERNOR.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'rubik':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.RUBIK.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'waterdrop':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.WATERDROP.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'txsql':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.TXSQL.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'prometheus':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.PROMETHEUS.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'kafka':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.KAFKA.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'zeppelin':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.ZEPPELIN.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'midas':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.MIDAS.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'terminal':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.TERMINAL.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
+        break;
+      case 'redis':
+        productIntroduce = {
+          'img': {
+            'url': 'MODULES.REDIS.INTRODUCE_IMG_URL',
+            'width': '410px',
+            'height': '330px'
+          },
+          'items': []
+        };
         break;
       default:
         break;
@@ -169,10 +459,10 @@ export class ProductContentService {
           ]
         };
         break;
-      case 'slipsteam':
+      case 'slipstream':
         productAdvantage = {
           'img': {
-            'url': 'MODULES.SLIPSTEAM.ADVANTAGE_IMG_URL',
+            'url': 'MODULES.SLIPSTREAM.ADVANTAGE_IMG_URL',
             'width': '700px',
             'height': '300px'
           },
@@ -181,31 +471,31 @@ export class ProductContentService {
               'chapter': false,
               'paragraph': true,
               'indent': false,
-              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_1'
+              'content': 'MODULES.SLIPSTREAM.ADVANTAGE_1'
             },
             {
               'chapter': false,
               'paragraph': true,
               'indent': false,
-              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_2'
+              'content': 'MODULES.SLIPSTREAM.ADVANTAGE_2'
             },
             {
               'chapter': false,
               'paragraph': true,
               'indent': false,
-              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_3'
+              'content': 'MODULES.SLIPSTREAM.ADVANTAGE_3'
             },
             {
               'chapter': false,
               'paragraph': true,
               'indent': false,
-              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_4'
+              'content': 'MODULES.SLIPSTREAM.ADVANTAGE_4'
             },
             {
               'chapter': false,
               'paragraph': true,
               'indent': false,
-              'content': 'MODULES.SLIPSTEAM.ADVANTAGE_5'
+              'content': 'MODULES.SLIPSTREAM.ADVANTAGE_5'
             }
           ]
         };
@@ -253,14 +543,260 @@ export class ProductContentService {
         };
         break;
       case 'hyperbase':
+        productAdvantage = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_3'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_4'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_5'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_6'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_7'
+            }
+          ]
+        };
         break;
       case 'search':
+        productAdvantage = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_3'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_4'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.ADVANTAGE_5'
+            }
+          ]
+        };
         break;
       case 'sophon':
+        productAdvantage = {
+          'img': {
+            'url': 'MODULES.SOPHON.ADVANTAGE_IMG_URL',
+            'width': '700px',
+            'height': '300px'
+          },
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SOPHON.ADVANTAGE_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SOPHON.ADVANTAGE_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SOPHON.ADVANTAGE_3'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SOPHON.ADVANTAGE_4'
+            }
+          ]
+        };
         break;
       case 'guardian':
+        productAdvantage = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.GUARDIAN.ADVANTAGE_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.GUARDIAN.ADVANTAGE_2'
+            }
+          ]
+        };
         break;
       case 'hadoop':
+        productAdvantage = {
+          'items': [
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HADOOP.ADVANTAGE_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HADOOP.ADVANTAGE_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HADOOP.ADVANTAGE_3'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HADOOP.ADVANTAGE_4'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HADOOP.ADVANTAGE_5'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HADOOP.ADVANTAGE_6'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HADOOP.ADVANTAGE_7'
+            },
+            {
+              'chapter': true,
+              'paragraph': false,
+              'indent': false,
+              'content': 'MODULES.HADOOP.ADVANTAGE_8'
+            }
+          ]
+        };
+        break;
+      case 'pilot':
+        productAdvantage = {
+
+        };
+        break;
+      case 'wrokflow':
+        productAdvantage = {
+
+        };
+        break;
+      case 'transporter':
+        productAdvantage = {
+
+        };
+        break;
+      case 'governor':
+        productAdvantage = {
+
+        };
+        break;
+      case 'rubik':
+        productAdvantage = {
+
+        };
+        break;
+      case 'waterdrop':
+        productAdvantage = {
+
+        };
+        break;
+      case 'txsql':
+        productAdvantage = {
+
+        };
+        break;
+      case 'prometheus':
+        productAdvantage = {
+
+        };
+        break;
+      case 'kafka':
+        productAdvantage = {
+
+        };
+        break;
+      case 'zeppelin':
+        productAdvantage = {
+
+        };
+        break;
+      case 'midas':
+        productAdvantage = {
+
+        };
+        break;
+      case 'terminal':
+        productAdvantage = {
+
+        };
+        break;
+      case 'redis':
+        productAdvantage = {
+
+        };
         break;
       default:
         break;
@@ -306,26 +842,26 @@ export class ProductContentService {
           ]
         };
         break;
-      case 'slipsteam':
+      case 'slipstream':
         productScenarios = {
           'items': [
             {
               'chapter': false,
               'paragraph': true,
               'indent': false,
-              'content': 'MODULES.SLIPSTEAM.SCENARIOS_1'
+              'content': 'MODULES.SLIPSTREAM.SCENARIOS_1'
             },
             {
               'chapter': false,
               'paragraph': true,
               'indent': false,
-              'content': 'MODULES.SLIPSTEAM.SCENARIOS_2'
+              'content': 'MODULES.SLIPSTREAM.SCENARIOS_2'
             },
             {
               'chapter': false,
               'paragraph': true,
               'indent': false,
-              'content': 'MODULES.SLIPSTEAM.SCENARIOS_3'
+              'content': 'MODULES.SLIPSTREAM.SCENARIOS_3'
             }
           ]
         };
@@ -355,14 +891,177 @@ export class ProductContentService {
         };
         break;
       case 'hyperbase':
+        productScenarios = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.SCENARIOS_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.SCENARIOS_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HYPERBASE.SCENARIOS_3'
+            }
+          ]
+        };
         break;
       case 'search':
+        productScenarios = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SEARCH.SCENARIOS_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SEARCH.SCENARIOS_2'
+            }
+          ]
+        };
         break;
       case 'sophon':
+        productScenarios = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SEARCH.SCENARIOS_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.SEARCH.SCENARIOS_2'
+            }
+          ]
+        };
         break;
       case 'guardian':
+        productScenarios = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.GUARDIAN.SCENARIOS_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.GUARDIAN.SCENARIOS_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.GUARDIAN.SCENARIOS_3'
+            }
+          ]
+        };
         break;
       case 'hadoop':
+        productScenarios = {
+          'items': [
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HADOOP.SCENARIOS_1'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HADOOP.SCENARIOS_2'
+            },
+            {
+              'chapter': false,
+              'paragraph': true,
+              'indent': false,
+              'content': 'MODULES.HADOOP.SCENARIOS_3'
+            }
+          ]
+        };
+        break;
+      case 'pilot':
+        productScenarios = {
+
+        };
+        break;
+      case 'wrokflow':
+        productScenarios = {
+
+        };
+        break;
+      case 'transporter':
+        productScenarios = {
+
+        };
+        break;
+      case 'governor':
+        productScenarios = {
+
+        };
+        break;
+      case 'rubik':
+        productScenarios = {
+
+        };
+        break;
+      case 'waterdrop':
+        productScenarios = {
+
+        };
+        break;
+      case 'txsql':
+        productScenarios = {
+
+        };
+        break;
+      case 'prometheus':
+        productScenarios = {
+
+        };
+        break;
+      case 'kafka':
+        productScenarios = {
+
+        };
+        break;
+      case 'zeppelin':
+        productScenarios = {
+
+        };
+        break;
+      case 'midas':
+        productScenarios = {
+
+        };
+        break;
+      case 'terminal':
+        productScenarios = {
+
+        };
+        break;
+      case 'redis':
+        productScenarios = {
+
+        };
         break;
       default:
         break;

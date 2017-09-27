@@ -6,6 +6,7 @@ import { ModulesRoutingModule } from './modules-routing.module';
 
 import { ProductComponent } from './product/product.component';
 import { ModuleListComponent } from './module-list/module-list.component';
+import { ModuleTableComponent } from './module-table/module-table.component';
 import { ProductIntroduceComponent } from './product-introduce/product-introduce.component';
 import { ProductAdvantageComponent } from './product-advantage/product-advantage.component';
 import { ProductScenariosComponent } from './product-scenarios/product-scenarios.component';
@@ -32,6 +33,7 @@ import { ProductUtilService } from './services/product-util.service';
   declarations: [
     ModulesComponent,
     ModuleListComponent,
+    ModuleTableComponent,
     ProductComponent,
     ProductIntroduceComponent,
     ProductAdvantageComponent,

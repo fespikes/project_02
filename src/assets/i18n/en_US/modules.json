@@ -1,9 +1,9 @@
 {
   "MODULES": {
     "CLOUD_PRODUCT_COMPONENT":"Cloud Product Component",
-    "TDH_PLATFORM_PRODUCT":"TDH Platfrom Product",
-    "TDH_DEVELOP_SUITE":"TDH DEVELOP SUITE",
-    "OPERATION_ADD_DEVELOP_TOOL":"OPERATION AND DEVELOP TOOL",
+    "TDH_PLATFORM_PRODUCT":"TDH Platform Product",
+    "TDH_DEVELOP_SUITE":"TDH Develop Suite",
+    "OPERATION_ADD_DEVELOP_TOOL":"Operation And Develop Tool",
     "PRODUCT_FUNCTION":"Product Function",
     "PRODUCT_ADVANTAGE":"Product Advantage",
     "PRODUCT_SCENARIOS":"Application Scenarios",
@@ -24,7 +24,7 @@
       "SCENARIOS_3":"",
       "SCENARIOS_4":""
     },
-    "SLIPSTEAM":{
+    "SLIPSTREAM":{
 
     },
     "DISCOVER":{

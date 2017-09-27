@@ -23,9 +23,9 @@ export class ModulesComponent implements OnInit {
         'actionAlias': 'Inceptor',
         'url': 'product/inceptor',
       }, {
-        'name': 'slipsteam',
-        'actionAlias': 'Slipsteam',
-        'url': 'product/slipsteam',
+        'name': 'slipstream',
+        'actionAlias': 'Slipstream',
+        'url': 'product/slipstream',
       }, {
         'name': 'discover',
         'actionAlias': 'Discover',
@@ -53,35 +53,59 @@ export class ModulesComponent implements OnInit {
       },
     ],
     'TDHDevelopSuite': [{
+        'name': 'pilot',
         'actionAlias': 'Pilot',
+        'url': 'suite/pilot'
       }, {
+        'name': 'workflow',
         'actionAlias': 'Workflow',
+        'url': 'suite/workflow'
       }, {
+        'name': 'transporter',
         'actionAlias': 'Transporter',
+        'url': 'suite/transporter'
       }, {
+        'name': 'governor',
         'actionAlias': 'Governor',
+        'url': 'suite/governor'
       }, {
+        'name': 'rubik',
         'actionAlias': 'Rubik',
+        'url': 'suite/rubik'
       },
     ],
     'operationDevelopTool': [{
+        'name': 'waterdrop',
         'actionAlias': 'Waterdrop',
+        'url': 'tool/waterdrop'
       }, {
+        'name': 'txsql',
         'actionAlias': 'TxSQL',
+        'url': 'tool/txsql'
       }, {
-        'actionAlias': 'ELK',
-      }, {
+        'name': 'prometheus',
         'actionAlias': 'Prometheus',
+        'url': 'tool/prometheus'
       }, {
-      'actionAlias': 'Kafka',
+        'name': 'kafka',
+        'actionAlias': 'Kafka',
+        'url': 'tool/kafka'
       }, {
+        'name': 'zeppelin',
         'actionAlias': 'Zeppelin',
+        'url': 'tool/zeppelin'
       }, {
+        'name': 'midas',
         'actionAlias': 'Midas',
+        'url': 'tool/midas'
       }, {
+        'name': 'terminal',
         'actionAlias': 'Terminal',
+        'url': 'tool/terminal'
       }, {
+        'name': 'redis',
         'actionAlias': 'Redis',
+        'url': 'tool/redis'
       },
     ],
   };

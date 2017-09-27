@@ -26,15 +26,15 @@
       "SCENARIOS_3":"•离线批处理；",
       "SCENARIOS_4":"•数据质量管理。"
     },
-    "SLIPSTEAM":{
-      "LOGO_URL":"modules/slipsteam-logo.png",
+    "SLIPSTREAM":{
+      "LOGO_URL":"modules/slipstream-logo.png",
       "TITLE":"Slipstream 实时计算引擎",
       "SUB_TITLE":"Slipstream是提供实时计算的产品，被广泛用于交通运输和物联网行业。",
-      "INTRODUCE_IMG_URL":"modules/slipsteam-introduce.png",
-      "ADVANTAGE_IMG_URL":"modules/slipsteam-advantage.png",
-      "SCENARIOS_TAB_RISK_IMG_URL":"modules/slipsteam-scenarios-tab-risk.png",
-      "SCENARIOS_TAB_MONITORING_IMG_URL":"modules/slipsteam-scenarios-tab-monitoring.png",
-      "SCENARIOS_TAB_COLLECTION_IMG_URL":"modules/slipsteam-scenarios-tab-collection.png",
+      "INTRODUCE_IMG_URL":"modules/slipstream-introduce.png",
+      "ADVANTAGE_IMG_URL":"modules/slipstream-advantage.png",
+      "SCENARIOS_TAB_RISK_IMG_URL":"modules/slipstream-scenarios-tab-risk.png",
+      "SCENARIOS_TAB_MONITORING_IMG_URL":"modules/slipstream-scenarios-tab-monitoring.png",
+      "SCENARIOS_TAB_COLLECTION_IMG_URL":"modules/slipstream-scenarios-tab-collection.png",
       "INTRODUCE_1":"Slipstream是提供实时计算的产品，被广泛用于交通运输和物联网行业。和其他解决方案相比，Slipstream有几个突出的技术优势:",
       "INTRODUCE_2":"•完整的SQL支持使得实时业务开发过程更加简便;",
       "INTRODUCE_3":"•基于事件驱动的计算引擎可将延迟时间缩减到5毫秒，仅为Spark Streaming引擎的延时的1/100;",
@@ -47,7 +47,28 @@
       "ADVANTAGE_5":"与其他产品的对比：",
       "SCENARIOS_1":"•在线风险预测；",
       "SCENARIOS_2":"•loT实时监控、告警、预测；",
-      "SCENARIOS_3":"•交通流量实时采集与分析。"
+      "SCENARIOS_3":"•交通流量实时采集与分析。",
+      "TABLE":{
+        "STORM":"Storm",
+        "SPARK_STREAMING":"Spark Streaming",
+        "APACHE_FLINK":"Apache Flink",
+        "SLIPSTREAM":"Slipstream",
+        "REAL_TIME":"实时性",
+        "USABILITY":"易用性",
+        "WINDOW_SUPPORT":"窗口支持",
+        "COMPLEX_ANALYSIS":"多流、流与表的复杂分析",
+        "HIGH_USABILITY":"高可用性",
+        "SECURITY":"安全性",
+        "RESOURCE_ISOLATION":"应用资源隔离",
+        "EVENT_PROCESSING":"复杂事件处理(CEP)",
+        "MACHINE_LEARNING":"流式机器学习",
+        "API_SQL":"API/类SQL",
+        "PL_SQL":"ANSI SQL 2003 PL/SQL",
+        "SIMPLE_SUPPORT":"简单支持",
+        "TEN_MS":"10ms",
+        "FIVE_HUNDRED_MS":"500ms",
+        "LESS_THAN_TEN_MS":"<10ms"
+      }
     },
     "DISCOVER":{
       "LOGO_URL":"modules/discover-logo.png",
@@ -71,27 +92,189 @@
     "HYPERBASE":{
       "LOGO_URL":"modules/hyperbase-logo.png",
       "TITLE":"Hyperbase 快速检索和非结构化数据处理",
-      "SUB_TITLE":"Hyperbase是以Apache HBase为基础，融合了多项创新技术的NoSQL数据库。"
+      "SUB_TITLE":"Hyperbase是以Apache HBase为基础，融合了多项创新技术的NoSQL数据库。",
+      "INTRODUCE_IMG_URL":"modules/hyperbase-introduce.png",
+      "INTRODUCE_1":"Hyperbase是以Apache HBase为基础，融合了多项创新技术的NoSQL数据库:",
+      "INTRODUCE_2":"它采用了和Inceptor同样的SQL引擎，允许开发者们直接 用SQL构建复杂应用;",
+      "INTRODUCE_3":"支持全局索引和次级索引，实现高速的非主键查询;",
+      "INTRODUCE_4":"提供原生的JSON/BSON格式支持以及对象存储(Object Store) 技术，极大地简化了非结构化数据处理。",
+      "ADVANTAGE_1":"•完善的SQL支持，方便业务开发；",
+      "ADVANTAGE_2":"•超高的并发支持，可以支撑高并发的业务；",
+      "ADVANTAGE_3":"•支持多种索引 global + local + high-dimensional；",
+      "ADVANTAGE_4":"•结合Inceptor进行秒级高效分析；",
+      "ADVANTAGE_5":"•非结构化数据的完善支持；",
+      "ADVANTAGE_6":"•自动利用索引加速数据检索，无需指定索引；",
+      "ADVANTAGE_7":"•支持高速的数据入库。",
+      "SCENARIOS_1":"•高并发的查询业务；",
+      "SCENARIOS_2":"•非结构化数据的存储和检索；",
+      "SCENARIOS_3":"•高速数据入库。"
     },
     "SEARCH":{
       "LOGO_URL":"modules/search-logo.png",
       "TITLE":"Search 全文检索",
-      "SUB_TITLE":"Search用于在企业内部构建大数据搜索引擎。"
+      "SUB_TITLE":"Search用于在企业内部构建大数据搜索引擎。",
+      "INTRODUCE_IMG_URL":"modules/search-introduce.png",
+      "INTRODUCE_1":"Search用于在企业内部构建大数据搜索引擎。",
+      "INTRODUCE_2":"它能够在PB数据量级上实现秒级延迟的搜索功能;",
+      "INTRODUCE_3":"在开发接口方面，Search提供了完整 的SQL语法支持并提供了搜索语法SQL扩展，通过和Inceptor优化器有效结合，使开发者无需了解底层架构就可以开发出高效的搜索引擎。",
+      "INTRODUCE_4":"Search创新的使用了堆外内存管理技术来提高系统的健壮性，避免了GC问题对系统的影响。",
+      "INTRODUCE_5":"此外，Search还支持混合存储，通过 将热数据存储在SSD上来提升查询速度。",
+      "ADVANTAGE_1":"•SQL引擎和搜索引擎融合；",
+      "ADVANTAGE_2":"•计算紧贴数据和索引，亚秒级在线分析；",
+      "ADVANTAGE_3":"•冷热数据分级存储，毫秒级实时关键字检索；",
+      "ADVANTAGE_4":"•企业级数据访问控制，稳定可靠；",
+      "ADVANTAGE_5":"•堆外内存管理，可扩展至PB级别。",
+      "SCENARIOS_1":"•大规模搜索引擎；",
+      "SCENARIOS_2":"•海量数据的聚合分析。"
     },
     "SOPHON":{
       "LOGO_URL":"modules/sophon-logo.png",
       "TITLE":"Sophon 深度学习和交互式数据挖掘",
-      "SUB_TITLE":"Sophon是整合了Tensorflow和MxNet的深度学习框架，并且与Hadoop实现了很好的融合。"
+      "SUB_TITLE":"Sophon是整合了Tensorflow和MxNet的深度学习框架，并且与Hadoop实现了很好的融合。",
+      "INTRODUCE_IMG_URL":"modules/sophon-introduce.png",
+      "ADVANTAGE_IMG_URL":"modules/sophon-advantage.png",
+      "INTRODUCE_1":"Sophon是整合了Tensorflow和MxNet的深度学习框架，并且与Hadoop实现很好的融合，帮助数据科学家方便的构建DNN或者CNN，使用更大的数据做模型训练，提高算法的精准度。",
+      "INTRODUCE_2":"Sophon提供可视化前端Midas，用户可以直接使用拖拽的页面来生成机器学习的模型以及便捷的执行参数调优工作。",
+      "INTRODUCE_3":"Sophon提供了一百多种机器学习的算子，可以满足大部分的机器学习开发需求。",
+      "ADVANTAGE_1":"•提供了可视化可视化界面工具Midas；",
+      "ADVANTAGE_2":"•使用分布式执行器；",
+      "ADVANTAGE_3":"•整合了深度学习框架Tensorflow。",
+      "ADVANTAGE_4":"•与其他产品的对比：",
+      "SCENARIOS_1":"•大规模搜索引擎；",
+      "SCENARIOS_2":"•海量数据的聚合分析。",
+      "TABLE":{
+        "FUNCTION":"功能",
+        "TRANSWARP":"Transwarp",
+        "ASTER":"Aster",
+        "SAS":"SAS",
+        "SPSS":"SPSS",
+        "ANALYSIS":"分析",
+        "DISTRIBUTED_ENGINE":"分布式引擎",
+        "LANGUAGE_SUPPORT":"Java/R/Python语言支持",
+        "GRAPHICAL_TOOLS":"图形化工具",
+        "DISTRIBUTED_ALGORITHM":"分布式算法",
+        "TEXT_MINING":"文本挖掘",
+        "MACHINE_LEARNING":"流式机器学习",
+        "DEEP_LEARNING":"深度学习",
+        "MODEL_COLLABORATION":"模型协作",
+        "INDUSTRY_TEMPLATES":"定制行业模板",
+        "SPARK":"Spark",
+        "HADOOP":"Hadoop",
+        "SUPPORT":"支持",
+        "SUPPORT_NOT":"不支持",
+        "SUPPORT_PARTIAL":"部分支持",
+        "SUPPORT_FINITE":"有限支持",
+        "DEEP_INTEGRATION":"深度整合",
+        "ANALYSIS_DISTRIBUTED_ENGINE":"spark速度非常快",
+        "ANALYSIS_LANGUAGE_SUPPORT":"更强的扩展性和自定义算法的能力",
+        "ANALYSIS_GRAPHICAL_TOOLS":"极大地降低数据挖掘门槛",
+        "ANALYSIS_DISTRIBUTED_ALGORITHM":"100多个分布式算法",
+        "ANALYSIS_TEXT_MINING":"非结构化数据的分析和挖掘已经广泛使用",
+        "ANALYSIS_MACHINE_LEARNING":"流式机器学习开始普及",
+        "ANALYSIS_DEEP_LEARNING":"整合TensorFlow和MXNet",
+        "ANALYSIS_MODEL_COLLABORATION":"计算资源的共享",
+        "ANALYSIS_INDUSTRY_TEMPLATES":"快速部署行业应用"
+      }
     },
     "GUARDIAN":{
       "LOGO_URL":"modules/guardian-logo.png",
       "TITLE":"Guardian 安全、权限和资源管控",
-      "SUB_TITLE":"Guardian为TDH提供集中的安全和资源管理服务"
+      "SUB_TITLE":"Guardian为TDH提供集中的安全和资源管理服务",
+      "INTRODUCE_IMG_URL":"modules/guardian-introduce.png",
+      "INTRODUCE_1":"Guardian为TDH提供集中的安全和资源管理服务。它支持LDAP和Kerberos，保护Hadoop集群免受恶意攻击和安全威胁，而且还可以对资源做细粒度的ACL控制。",
+      "INTRODUCE_2":"多租户资源管理模块可以按照租户的方式管理资源，并通过一个图形化工具为用户提供权限配置以及资源配置接口。",
+      "ADVANTAGE_1":"•借助Kerberos实现数据加密，或通过LDAP实现身份验证；",
+      "ADVANTAGE_2":"•实现了租户级别的资源管理，提供对HDFS和所有数据库对象的细粒度访问控制。",
+      "SCENARIOS_1":"•用户|组|角色的设置于管理；",
+      "SCENARIOS_2":"•进行租户权限的管理；",
+      "SCENARIOS_3":"•服务资源的分配与管理。"
     },
     "HADOOP":{
       "LOGO_URL":"modules/hadoop-logo.png",
       "TITLE":"Transwarp's Distribution for Apache Hadoop 分布式系统基础架构",
-      "SUB_TITLE":"Transwarp's Distribution for Apache Hadoop基于Apache Hadoop 2.7.2开发，以Hadoop Distributed File System (HDFS) 为文件系统，以YARN为资源管理平台。"
+      "SUB_TITLE":"Transwarp's Distribution for Apache Hadoop基于Apache Hadoop 2.7.2开发，以Hadoop Distributed File System (HDFS) 为文件系统，以YARN为资源管理平台。",
+      "INTRODUCE_1":"Transwarp's Distribution for Apache Hadoop 是由Transwarp 基于Apache Hadoop 2.7.2开发，以HDFS为文件系统，以YARN为资源管理平台。Transwarp对各组件性能都进行了优化，以提升安全性、稳定性，从而提供7×24小时的不间断服务。",
+      "INTRODUCE_2":"Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。",
+      "INTRODUCE_3":"YARN是一种新的 Hadoop 资源管理器，它是一个通用资源管理系统，可为上层应用提供统一的资源管理和调度，它的引入为集群在利用率、资源统一管理和数据共享等方面带来了巨大好处。其中：",
+      "INTRODUCE_4":"•ResourceManager 将各个资源部分（计算、内存、带宽等）精心安排给基础NodeManager（YARN 的每节点代理）。ResourceManager 还与 ApplicationMaster 一起分配资源，与 NodeManager 一起启动和监视它们的基础应用程序。",
+      "INTRODUCE_5":"•ApplicationMaster 管理一个在 YARN 内运行的应用程序的每个实例。ApplicationMaster 负责协调来自 ResourceManager 的资源，并通过 NodeManager 监视容器的执行和资源使用（CPU、内存等的资源分配）。",
+      "INTRODUCE_6":"•NodeManager 管理一个 YARN 集群中的每个节点。NodeManager 提供针对集群中每个节点的服务，从监督对一个容器的终生管理到监视资源和跟踪节点健康。",
+      "ADVANTAGE_1":"•安全、稳定，可提供7x24小时的不间断服务；",
+      "ADVANTAGE_2":"HDFS",
+      "ADVANTAGE_3":"•高度容错的分布式文件系统；",
+      "ADVANTAGE_4":"•提供高吞吐量应用程序数据访问功能；",
+      "ADVANTAGE_5":"YARN",
+      "ADVANTAGE_6":"•提高集群的利用率；",
+      "ADVANTAGE_7":"•资源的统一管理；",
+      "ADVANTAGE_8":"•数据共享。",
+      "SCENARIOS_1":"•一体化大数据分析平台的构建；",
+      "SCENARIOS_2":"•企业逻辑型数据仓库的构建；",
+      "SCENARIOS_3":"•用于数据湖建设。"
+    },
+    "PILOT":{
+      "LOGO_URL":"modules/pilot-logo.png",
+      "TITLE":"Pilot 报表工具",
+      "SUB_TITLE":"Pilot是轻量的在线报表工具。"
+    },
+    "WORKFLOW":{
+      "LOGO_URL":"modules/workflow-logo.png",
+      "TITLE":"Workflow 调度流",
+      "SUB_TITLE":"Workflow是一个图形化的工作流设计、调试、调度和分析的服务平台。"
+    },
+    "TRANSPORTER":{
+      "LOGO_URL":"modules/transporter-logo.png",
+      "TITLE":"Transporter 数据流",
+      "SUB_TITLE":"Transporter是一款用于设计和创建ETL任务的可视化工具。"
+    },
+    "GOVERNOR":{
+      "LOGO_URL":"modules/governor-logo.png",
+      "TITLE":"Governor 元数据管理工具",
+      "SUB_TITLE":"Governor是TDH中的元数据管理和数据治理工具。"
+    },
+    "RUBIK":{
+      "LOGO_URL":"modules/rubik-logo.png",
+      "TITLE":"Rubik OLAP    Cube设计工具",
+      "SUB_TITLE":"Rubik是一款用于设计OLAP Cube的可视化工具。"
+    },
+    "WATERDROP":{
+      "LOGO_URL":"modules/waterdrop-logo.png",
+      "TITLE":"Waterdrop SQL开发工具",
+      "SUB_TITLE":"Waterdrop是TDH中的SQL IDE工具。"
+    },
+    "TXSQL":{
+      "LOGO_URL":"modules/txsql-logo.png",
+      "TITLE":"TxSQL 关系数据库",
+      "SUB_TITLE":"TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群"
+    },
+    "PROMETHEUS":{
+      "LOGO_URL":"modules/prometheus-logo.png",
+      "TITLE":"Prometheus  Metrics监控",
+      "SUB_TITLE":"Prometheus是开源的监控和告警系统。"
+    },
+    "KAFKA":{
+      "LOGO_URL":"modules/kafka-logo.png",
+      "TITLE":"Transwarp's Distribution for Apache Kafka 消息中间件",
+      "SUB_TITLE":"Transwarp's Distribution for Apache Kafka 是一种分布式的基于发布/订阅的消息系统，在Apache Kafka 1.0的基础上添加了大量安全特性。"
+    },
+    "ZEPPELIN":{
+      "LOGO_URL":"modules/zeppelin-logo.png",
+      "TITLE":"Transwarp's Distribution for Apache Zeppelin  Notebook IDE",
+      "SUB_TITLE":"Transwarp's Distribution for Apache Zeppelin 是一个基于web的图形化Notebook，用于交互式的数据分析。"
+    },
+    "MIDAS":{
+      "LOGO_URL":"modules/midas-logo.png",
+      "TITLE":"Midas 机器学习分析工具",
+      "SUB_TITLE":"Midas是一个图形化的交互式数据挖掘和分析的客户端。"
+    },
+    "TERMINAL":{
+      "LOGO_URL":"modules/terminal-logo.png",
+      "TITLE":"Terminal  Docker命令行工具",
+      "SUB_TITLE":"Terminal 是集群上服务用命令行指令操作的入口。"
+    },
+    "REDIS":{
+      "LOGO_URL":"modules/redis-logo.png",
+      "TITLE":"Redis 内存K-V数据库",
+      "SUB_TITLE":"Redis是基于内存的数据存储，可以被用作数据库、缓存或者消息转发器。"
     }
   }
 }
