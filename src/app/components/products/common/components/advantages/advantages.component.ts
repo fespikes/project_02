@@ -3,7 +3,6 @@ import { AdvantagesDirective } from './advantages.directive';
 import { AdvantagesComponent as TheComponent } from './advantages/advantages.component';
 
 @Component({
-  selector: 'tdc-advantages',
   templateUrl: './advantages.component.html',
   styleUrls: ['./advantages.component.sass']
 })

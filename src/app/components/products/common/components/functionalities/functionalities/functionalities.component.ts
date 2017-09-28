@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Functionalities } from '../../../interfaces/functionalities';
 
 @Component({
-  selector: 'tdc-functionalities',
   templateUrl: './functionalities.component.html',
   styleUrls: ['./functionalities.component.sass']
 })

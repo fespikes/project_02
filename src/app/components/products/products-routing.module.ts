@@ -33,6 +33,7 @@ import { ExpenseExplanationComponent } from './data-warehouse/expense-explanatio
 
 import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-functionalities/data-mart-functionalities.component';
 import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
+import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
 
 const productRoutes: Routes = [
   {
@@ -88,7 +89,7 @@ const productRoutes: Routes = [
               { path: 'advantages', component: DataMartAdvantagesComponent },
               {
                 path: 'scenarios', 
-                component: ScenariosComponent,
+                component: DataMartScenariosComponent,
                 children: [
                   {
                     path: '',

@@ -31,11 +31,14 @@ import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-function
 
 import { FunctionalitiesComponent as TheFunctionalitiesComponent } from './common/components/functionalities/functionalities/functionalities.component';
 import { AdvantagesComponent as TheAdvantagesComponent } from './common/components/advantages/advantages/advantages.component';
+import { ScenariosComponent as TheScenariosComponent } from './common/components/scenarios/scenarios/scenarios.component';
 
 //to be confirmed
 import { FunctionalitiesDirective } from './common/components/functionalities/functionalities.directive';
 import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
 import { AdvantagesDirective } from './common/components/advantages/advantages.directive';
+import { ScenariosDirective } from './common/components/scenarios/scenarios.directive';
+import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
 
 @NgModule({
   imports: [
@@ -72,15 +75,26 @@ import { AdvantagesDirective } from './common/components/advantages/advantages.d
 
     TheFunctionalitiesComponent,
     TheAdvantagesComponent,
+    TheScenariosComponent,
 
     DataMartAdvantagesComponent,
 
-    AdvantagesDirective
+    AdvantagesDirective,
+
+    ScenariosDirective,
+
+    DataMartScenariosComponent
   ],
   providers: [
     TccModalService,
     DataMartService
   ],
-  entryComponents: [ BannerComponent, TabsComponent, TheFunctionalitiesComponent, TheAdvantagesComponent ]
+  entryComponents: [
+    BannerComponent,
+    TabsComponent,
+    TheFunctionalitiesComponent,
+    TheAdvantagesComponent,
+    TheScenariosComponent
+   ]
 })
 export class ProductsModule { }

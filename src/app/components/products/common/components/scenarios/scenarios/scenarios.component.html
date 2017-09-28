@@ -1,3 +1,14 @@
-<p>
-  scenarios works!
-</p>
+
+<h3 class="sub-title">应用场景</h3>
+
+<div class="scenarios-tab-box">
+	<ul>
+		<li *ngFor="let tab of data.tabs; let i=index">
+			<a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a>
+		</li>
+	</ul>
+	<div class="scenarios-content">
+		<!-- TODO: no design and prototype here -->
+		<router-outlet></router-outlet>
+	</div>
+</div>

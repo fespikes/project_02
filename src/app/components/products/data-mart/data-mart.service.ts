@@ -93,6 +93,31 @@ export class DataMartService {
             text: '受到Guardian的全面保护，为租户提供可靠地认证机制，防范安全漏洞和攻击，实现资源管理和行级列级的权限控制，在云环境下保护用户隐私和信息安全。'
           }
         ]
+      },
+      scenarios: {
+        title: '应用场景',
+        tabs: [
+        {
+          text: '企业级多租户大数据平台',
+          link: './multi-tenancy-platform'
+        },
+        {
+          text: '企业级数据仓库建设',
+          link: './build-data-warehouse'
+        },
+        {
+          text: '企业级数据湖',
+          link: './data-lake'
+        },
+        {
+          text: '企业级数据治理平台',
+          link: './data-governance-platform'
+        },
+        /*{
+          text: '费用说明',
+          link: './expense-explanation'
+        }*/
+      ]
       }
       
   	}

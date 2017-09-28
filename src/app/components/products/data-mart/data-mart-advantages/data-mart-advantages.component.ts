@@ -3,7 +3,6 @@ import { AdvantagesComponent } from '../../common/components/advantages/advantag
 import { DataMartService } from '../data-mart.service';
 
 @Component({
-  selector: 'tdc-data-mart-advantages',
   templateUrl: '../../common/components/advantages/advantages.component.html',
   styleUrls: ['./data-mart-advantages.component.sass']
 })

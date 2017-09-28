@@ -1,15 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core';
+import { ScenariosDirective } from './scenarios.directive';
+import { ScenariosComponent as TheComponent } from './scenarios/scenarios.component';
 
 @Component({
-  selector: 'tdc-scenarios',
   templateUrl: './scenarios.component.html',
   styleUrls: ['./scenarios.component.sass']
 })
-export class ScenariosComponent implements OnInit {
+export class ScenariosComponent implements AfterViewInit {
 
-  constructor() { }
+	@ViewChild(ScenariosDirective) scenarios: ScenariosDirective;
 
-  ngOnInit() {
+	protected data:any;
+
+  constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
+
+  ngAfterViewInit() {
+		setTimeout( _ => this.loadComponent(), 1);
+  }
+
+  loadComponent() {
+    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
+
+    let viewContainerRef = this.scenarios.viewContainerRef;
+    viewContainerRef.clear();
+
+    let componentRef = viewContainerRef.createComponent(componentFactory);
+    (<TheComponent>componentRef.instance).data = this.data;
+
   }
 
 }
