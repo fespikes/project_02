@@ -94,6 +94,10 @@ const routes: Routes = [
         {
           path: 'tool/redis',
           component: ProductComponent,
+        },
+        {
+          path: '**',
+          redirectTo: 'product/inceptor'
         }
       ]
     },

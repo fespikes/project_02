@@ -5,7 +5,12 @@
   <ul>
     <li
       *ngFor="let item of productAdvantage.items"
-      [ngClass]="{'chapter':item.chapter, 'paragraph':item.paragraph, 'indent':item.indent}"
+      [ngClass]="{
+        'chapter':item.chapter,
+        'paragraph':item.paragraph,
+        'indent':item.indent,
+        'title':item.title
+      }"
     >
       {{item.content | translate}}
     </li>

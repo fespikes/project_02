@@ -12,17 +12,21 @@
     height: 40rem
     width: 100%
     font-size: 0
-    padding: 12rem 10rem
+    padding: 0 10rem
     .banner-text, .banner-img
       width: 50%
-      height: 100%
+      vertical-align: top
       display: inline-block
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
     .banner-img
       text-align: center
     .banner-text span
       color: #fff
       font-size: $font-lg
       display: block
+      text-align: justify
     .banner-text span:first-child
       font-size: 3.2rem
       font-weight: bold
@@ -58,12 +62,14 @@
     > img
       float: left
       display: inline-block
-      padding: 6rem 3rem 6rem 4rem
+      padding: 6rem 2rem 6rem 4rem
     > ul
-      padding: 6rem 4rem 100rem 3rem
+      padding: 6rem 4rem 100rem 4rem
       margin-bottom: -100rem
-      li:last-child
-        padding-bottom: 5rem
+      li
+        text-align: justify
+        &:last-child
+          padding-bottom: 5rem
 
   .chapter
     margin-bottom: 2rem
@@ -73,4 +79,8 @@
 
   .indent
     padding-left: 1rem
+
+  .title
+    color: #515151
+    font-weight: bold
 

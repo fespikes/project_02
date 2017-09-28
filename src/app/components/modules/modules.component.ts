@@ -6,10 +6,12 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   styleUrls: ['./modules.component.sass'],
 })
 export class ModulesComponent implements OnInit {
+  backUrl = '../';
 
   moduleTypes = [{
     'alias': 'MODULES.TDH_PLATFORM_PRODUCT',
     'value': 'cloudProductComponent',
+    'expanded': true
   }, {
     'alias': 'MODULES.TDH_DEVELOP_SUITE',
     'value': 'TDHDevelopSuite',
@@ -22,6 +24,7 @@ export class ModulesComponent implements OnInit {
         'name': 'inceptor',
         'actionAlias': 'Inceptor',
         'url': 'product/inceptor',
+        'selected': true,
       }, {
         'name': 'slipstream',
         'actionAlias': 'Slipstream',
