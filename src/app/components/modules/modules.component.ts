@@ -112,14 +112,9 @@ export class ModulesComponent implements OnInit {
       },
     ],
   };
-  backUrl = '../';
   constructor() { }
 
   ngOnInit() {
-  }
-
-  onTabChange() {
-
   }
 
   onModuleChange(module) {
