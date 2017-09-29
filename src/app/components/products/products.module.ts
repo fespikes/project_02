@@ -32,6 +32,7 @@ import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-function
 import { FunctionalitiesComponent as TheFunctionalitiesComponent } from './common/components/functionalities/functionalities/functionalities.component';
 import { AdvantagesComponent as TheAdvantagesComponent } from './common/components/advantages/advantages/advantages.component';
 import { ScenariosComponent as TheScenariosComponent } from './common/components/scenarios/scenarios/scenarios.component';
+import { ComponentIntroComponent as TheComponentIntroComponent } from './common/components/component-intro/component-intro/component-intro.component';
 
 //to be confirmed
 import { FunctionalitiesDirective } from './common/components/functionalities/functionalities.directive';
@@ -39,6 +40,8 @@ import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/da
 import { AdvantagesDirective } from './common/components/advantages/advantages.directive';
 import { ScenariosDirective } from './common/components/scenarios/scenarios.directive';
 import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
+import { DataMartComponentIntroComponent } from './data-mart/data-mart-component-intro/data-mart-component-intro.component';
+import { ComponentIntroDirective } from './common/components/component-intro/component-intro.directive';
 
 @NgModule({
   imports: [
@@ -76,6 +79,7 @@ import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data
     TheFunctionalitiesComponent,
     TheAdvantagesComponent,
     TheScenariosComponent,
+    TheComponentIntroComponent,
 
     DataMartAdvantagesComponent,
 
@@ -83,7 +87,11 @@ import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data
 
     ScenariosDirective,
 
-    DataMartScenariosComponent
+    DataMartScenariosComponent,
+
+    DataMartComponentIntroComponent,
+
+    ComponentIntroDirective
   ],
   providers: [
     TccModalService,
@@ -94,7 +102,8 @@ import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data
     TabsComponent,
     TheFunctionalitiesComponent,
     TheAdvantagesComponent,
-    TheScenariosComponent
+    TheScenariosComponent,
+    TheComponentIntroComponent
    ]
 })
 export class ProductsModule { }

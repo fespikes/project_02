@@ -22,6 +22,7 @@ import { ScenariosComponent } from './data-warehouse/scenarios/scenarios.compone
   import { DataLakeComponent } from './data-warehouse/scenarios/data-lake/data-lake.component';
   import { DataGovernancePlatformComponent } from './data-warehouse/scenarios/data-governance-platform/data-governance-platform.component';
 
+//deprecated
 import { ComponentIntroComponent } from './data-warehouse/component-intro/component-intro.component';
   import { TdhPlatformProductsComponent } from './data-warehouse/component-intro/tdh-platform-products/tdh-platform-products.component';
   import { TdhDevKitsComponent } from './data-warehouse/component-intro/tdh-dev-kits/tdh-dev-kits.component';
@@ -34,6 +35,7 @@ import { ExpenseExplanationComponent } from './data-warehouse/expense-explanatio
 import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-functionalities/data-mart-functionalities.component';
 import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
 import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
+import { DataMartComponentIntroComponent } from './data-mart/data-mart-component-intro/data-mart-component-intro.component';
 
 const productRoutes: Routes = [
   {
@@ -105,7 +107,7 @@ const productRoutes: Routes = [
               },
               {
                 path: 'component-intro', 
-                component: ComponentIntroComponent,
+                component: DataMartComponentIntroComponent,
                 children: [
                   {
                     path: '',

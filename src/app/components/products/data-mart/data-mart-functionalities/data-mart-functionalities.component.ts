@@ -27,7 +27,6 @@ export class DataMartFunctionalitiesComponent extends FunctionalitiesComponent /
 
   ngAfterViewInit() {
   	setTimeout( _ => this.loadComponent(), 1);
-  	console.log( 'fuck you here:', this.el.nativeElement )
   }
   // ngOnDestroy() { }
 }

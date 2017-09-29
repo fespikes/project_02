@@ -97,28 +97,45 @@ export class DataMartService {
       scenarios: {
         title: '应用场景',
         tabs: [
-        {
-          text: '企业级多租户大数据平台',
-          link: './multi-tenancy-platform'
-        },
-        {
-          text: '企业级数据仓库建设',
-          link: './build-data-warehouse'
-        },
-        {
-          text: '企业级数据湖',
-          link: './data-lake'
-        },
-        {
-          text: '企业级数据治理平台',
-          link: './data-governance-platform'
-        },
-        /*{
-          text: '费用说明',
-          link: './expense-explanation'
-        }*/
-      ]
-      }
+          {
+            text: '企业级多租户大数据平台',
+            link: './multi-tenancy-platform'
+          },
+          {
+            text: '企业级数据仓库建设',
+            link: './build-data-warehouse'
+          },
+          {
+            text: '企业级数据湖',
+            link: './data-lake'
+          },
+          {
+            text: '企业级数据治理平台',
+            link: './data-governance-platform'
+          },
+          /*{
+            text: '费用说明',
+            link: './expense-explanation'
+          }*/
+        ]
+      },
+      componentIntro: {
+        title: '组件介绍',
+        tabs: [
+          {
+            text: 'TDH平台产品',
+            link: './tdh-platform-products'
+          },
+          {
+            text: 'TDH开发套件',
+            link: './tdh-dev-kits'
+          },
+          {
+            text: '运维和开发工具',
+            link: './operation-dev-tools'
+          }
+        ]
+      },
       
   	}
   }
