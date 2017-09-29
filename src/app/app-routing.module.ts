@@ -10,10 +10,17 @@ import { BusinessScenarioComponent } from './components/business-scenario/busine
 import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
 
+import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+
+
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'modules',
+    component: ModulesComponent
   },
   {
     path: 'business-scenario',
@@ -26,6 +33,10 @@ const routes: Routes = [
   {
     path: 'management-center',
     component: ManagementCenterComponent
+  },
+  {
+    path: 'latest-news',
+    component: LatestNewsComponent
   },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }

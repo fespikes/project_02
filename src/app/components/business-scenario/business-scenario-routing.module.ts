@@ -1,40 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+
+import { ScenarioComponent } from './scenario/scenario.component';
 import { BusinessScenarioComponent } from './business-scenario.component';
 
-const businessRoutes: Routes = [
-
-  // { path: 'business-scenario', component: BusinessScenarioComponent },
-  // { path: 'business-scenario/:id', component: BusinessScenarioComponent }
-/*  {
-    path: '',
+const scenarioRoutes:Routes = [
+  {
+    path: 'business-scenario',
     component: BusinessScenarioComponent,
-    children: [
+/*    children: [
       {
-        path: '',
-        children: [
-          { path: 'relational-database', component: RelationalDatabaseComponent },
-          { path: 'realtime-computation', component: RealtimeComputationComponent },
-          { path: 'info-retrieval', component: InfoRetrievalComponent },
-          { path: 'deep-learning', component: DeepLearningComponent },
-          { path: 'data-warehouse', component: DataWarehouseComponent }，
-          { path: 'data-analysis-dig', component: DataWarehouseComponent }，
-          { path: 'data-mart', component: DataMartComponent },
-          { path: 'others', component: DataMartComponent }
-          // { path: '', component: DataWarehouseComponent }
-        ]
+        path: ':token',
+        component: ''
       }
-    ]
-  }*/
+    ]*/
+  },
+  {
+    path: 'business-scenario/:token',
+    component: ScenarioComponent
+  }
 ];
+
 
 @NgModule({
   imports: [
-    CommonModule,
-    RouterModule.forChild(businessRoutes)
+    // CommonModule,
+    RouterModule.forChild(scenarioRoutes)
   ],
-  declarations: [
+  exports: [
   	RouterModule
   ]
 })

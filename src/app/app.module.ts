@@ -12,13 +12,14 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './components/home/home.module';
 import { ModulesModule } from './components/modules/modules.module';
 import { ProductsModule } from './components/products/products.module';
-import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { NavTopComponent } from './components/nav-top/nav-top.component';
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
+
+import { LatestNewsModule } from './components/latest-news/latest-news.module';
 
 import {
   I18nModule,
@@ -31,6 +32,8 @@ import {
 import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
 
+import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,7 @@ import { ManagementCenterComponent } from './components/management-center/manage
     NavBottomComponent,
     PageNotFoundComponent,
     DocumentsSupportComponent,
-    ManagementCenterComponent,
+    ManagementCenterComponent
   ],
   imports: [
     BrowserModule,
@@ -48,8 +51,10 @@ import { ManagementCenterComponent } from './components/management-center/manage
     SharedModule,
 
     HomeModule,
+
     ProductsModule,
     BusinessScenarioModule,
+    LatestNewsModule,
     ModulesModule,
 
     AppRoutingModule,
@@ -59,6 +64,6 @@ import { ManagementCenterComponent } from './components/management-center/manage
     TranslateService,
     TccModalService,
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

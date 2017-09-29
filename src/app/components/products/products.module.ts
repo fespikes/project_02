@@ -15,14 +15,30 @@ import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.compo
 
 import { DataWarehouseModule } from './data-warehouse/data-warehouse.module';
 
-//test S:
 import { FunctionalitiesComponent } from './data-warehouse/functionalities/functionalities.component';
 import { AdvantagesComponent } from './data-warehouse/advantages/advantages.component';
 import { ScenariosComponent } from './data-warehouse/scenarios/scenarios.component';
 import { ComponentIntroComponent } from './data-warehouse/component-intro/component-intro.component';
 import { ExpenseExplanationComponent } from './data-warehouse/expense-explanation/expense-explanation.component';
-//test E
+import { BannerDirective } from './data-mart/product-banner/banner.directive';
+import { ProductBannerComponent } from './data-mart/product-banner/product-banner.component';
+import { BannerComponent } from './data-mart/product-banner/banner/banner.component';
+import { DataMartService } from './data-mart/data-mart.service';
+import { ProductTabComponent } from './data-mart/product-tab/product-tab.component';
+import { ProductTabDirective } from './data-mart/product-tab/product-tab.directive';
+import { TabsComponent } from './data-mart/product-tab/tabs/tabs.component';
+import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-functionalities/data-mart-functionalities.component';
 
+import { FunctionalitiesComponent as TheFunctionalitiesComponent } from './common/components/functionalities/functionalities/functionalities.component';
+import { AdvantagesComponent as TheAdvantagesComponent } from './common/components/advantages/advantages/advantages.component';
+import { ScenariosComponent as TheScenariosComponent } from './common/components/scenarios/scenarios/scenarios.component';
+
+//to be confirmed
+import { FunctionalitiesDirective } from './common/components/functionalities/functionalities.directive';
+import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
+import { AdvantagesDirective } from './common/components/advantages/advantages.directive';
+import { ScenariosDirective } from './common/components/scenarios/scenarios.directive';
+import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
 
 @NgModule({
   imports: [
@@ -42,16 +58,43 @@ import { ExpenseExplanationComponent } from './data-warehouse/expense-explanatio
   	RealtimeComputationComponent,
   	AnalysisMiningComponent,
 
-  	//test S：
     FunctionalitiesComponent,
     AdvantagesComponent,
     ScenariosComponent,
     ComponentIntroComponent,
-    ExpenseExplanationComponent
-    //test E：
+    ExpenseExplanationComponent,
+    
+    BannerDirective,
+    ProductBannerComponent,
+    BannerComponent,
+    ProductTabComponent,
+    ProductTabDirective,
+    TabsComponent,
+    DataMartFunctionalitiesComponent,
+    FunctionalitiesDirective,
+
+    TheFunctionalitiesComponent,
+    TheAdvantagesComponent,
+    TheScenariosComponent,
+
+    DataMartAdvantagesComponent,
+
+    AdvantagesDirective,
+
+    ScenariosDirective,
+
+    DataMartScenariosComponent
   ],
   providers: [
     TccModalService,
-  ]
+    DataMartService
+  ],
+  entryComponents: [
+    BannerComponent,
+    TabsComponent,
+    TheFunctionalitiesComponent,
+    TheAdvantagesComponent,
+    TheScenariosComponent
+   ]
 })
 export class ProductsModule { }
