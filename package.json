@@ -10,7 +10,6 @@
     "lint": "ng lint",
     "lint:fix": "ng lint --fix --type-check",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,

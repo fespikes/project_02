@@ -1,0 +1,59 @@
+@import '../../../styles/util'
+
+\:host /deep/
+  flex: 1
+  background-color: #F3F4F8
+  .tdc-modules-content-layout
+    flex: 1
+
+  .content-layout-banner
+    background-color: #00305a
+    height: 20rem
+    width: 100%
+    display: flex
+    > img
+      margin: auto 5rem
+    > div > div
+      color: #fff
+      font-size: $font-lg
+    > div > div:first-child
+      font-size: 3.2rem
+      font-weight: bold
+      margin: 2rem 0
+
+  .content-layout-tab
+    margin-top: 3rem
+    .tcc-tab-item
+      background-color: transparent
+      &.active
+        color: #2481e3
+        border-bottom: 2px solid #00305a !important
+
+  .product-tab-title span
+    font-size: 1.6rem
+    color: #354052
+    display: inline-block
+    border-left: 5px solid #2481e3
+    font-weight: bold
+    padding-left: 1rem
+    margin: 2rem auto 0 2rem
+
+  .product-tab-content
+    display: flex
+    margin: 2rem
+    border-radius: 4px
+    background-color: #fff
+    > img
+      padding: 2rem
+    > ul
+      padding: 2rem
+
+  .chapter
+    margin-bottom: 2rem
+
+  .paragraph
+    margin-bottom: 1rem
+
+  .indent
+    padding-left: 1rem
+

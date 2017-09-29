@@ -1,7 +1,13 @@
-<p> modules works!</p>
-<tcc-submenu >
-  <tcc-submenu-list [menuTitle]="menuTitle" [items]="menuItems"></tcc-submenu-list>
-</tcc-submenu>
-
+<div>
+  <div class="slide-back">
+    <svg tccIcon="angle-left" size="md"></svg>
+    <svg tccIcon="menu-collapse" size="md" class="tcc-submenu-toggle"></svg>
+  </div>
+  <module-list
+    [moduleItems]="moduleItems"
+    [moduleTypes]="moduleTypes"
+    (onMoudleChange)="onModuleChange($event)"
+  ></module-list>
+</div>
 <router-outlet></router-outlet>
 

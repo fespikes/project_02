@@ -1,0 +1,23 @@
+<div class="title">
+    <span>{{'MODULES.CLOUD_PRODUCT_COMPONENT' | translate}}</span>
+  </div>
+
+<div *ngFor="let type of moduleTypes">
+  <div class="module-type" (click)="toggleModules(type)">
+    <svg tccIcon="angle-up" size="md" [class.expanded]="type.expanded"></svg>
+    <span class="type-name">{{type.alias | translate}}</span>
+  </div>
+  <div class="module-list" [class.expanded]="type.expanded">
+    <a
+      *ngFor="let module of moduleItems[type.value]"
+      [routerLink]="module.url"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
+      (click)="selectModule(module, type.value)"
+      [class.selected]="module.selected"
+      class="module-list-item"
+    >
+      <span>{{module.actionAlias}}</span>
+    </a>
+  </div>
+</div>

@@ -18,18 +18,14 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  // {
-  //   path: 'products',
-  //   component: ProductsComponent
-  // },
   {
     path: 'modules',
     component: ModulesComponent
   },
-  // {
-  //   path: 'business-scenario',
-  //   component: BusinessScenarioComponent
-  // },
+  {
+    path: 'business-scenario',
+    component: BusinessScenarioComponent
+  },
   {
     path: 'documents-support',
     component: DocumentsSupportComponent
@@ -38,10 +34,10 @@ const routes: Routes = [
     path: 'management-center',
     component: ManagementCenterComponent
   },
-  // {
-  //   path: 'latest-news',
-  //   component: LatestNewsComponent
-  // },
+  {
+    path: 'latest-news',
+    component: LatestNewsComponent
+  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

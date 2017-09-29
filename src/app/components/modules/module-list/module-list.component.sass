@@ -1,0 +1,76 @@
+@import '../../../styles/util'
+
+\:host
+  display: flex
+  flex-direction: column
+  flex-shrink: 0
+  width: 20rem
+  height: 100vh
+  overflow: auto
+  background-color: white
+  border-right: 1px solid #e4e7ee
+
+  .title
+    display: flex
+    align-items: center
+    flex-shrink: 0
+    height: 6rem
+    width: 100%
+    padding-left: 2rem
+    padding-bottom: 0
+    border-bottom: 1px solid #e4e7ee
+    font-weight: bold
+    color: #fff
+    background: #2481e3
+
+  .module-type
+    display: flex
+    align-items: center
+    height: 3.75rem
+    padding: 0 1rem 0 1.875rem
+    border-bottom: 1px solid #e4e7ee
+    color: $text-dark
+    user-select: none
+    cursor: default
+
+    svg
+      width: 2rem
+      height: 2rem
+      fill: $brandblue
+      margin-right: 0.5rem
+      transition: transform 0.4s
+
+      &.expanded
+        transform: rotate(180deg)
+
+  .module-list
+    background-color: $ghostwhite
+    max-height: 0
+    visibility: hidden
+    opacity: 0
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1)
+    overflow: hidden
+
+    &.expanded
+      max-height: 125rem
+      opacity: 1
+      visibility: visible
+      transition: all 1s ease-in-out
+
+    &-item
+      display: flex
+      align-items: center
+      height: 3.75rem
+      padding: 0 1rem 0 3.875rem
+      border-right: 3px solid $ghostwhite
+      color: $text-dark
+      user-select: none
+      cursor: default
+      font-size: 1rem
+      text-decoration: none
+      transition: all .4s
+
+      &.selected
+        background-color: $lightgrey
+        border-color: $brandblue
+        color: $brandblue
