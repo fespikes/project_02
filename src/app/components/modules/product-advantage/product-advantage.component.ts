@@ -7,9 +7,10 @@ import { Component, OnInit, HostBinding, Input } from '@angular/core';
 })
 export class ProductAdvantageComponent implements OnInit {
   @Input() productAdvantage: Object;
-  @Input() advantageIncludeImg: boolean;
+
   constructor() { }
 
   ngOnInit() {
+
   }
 }

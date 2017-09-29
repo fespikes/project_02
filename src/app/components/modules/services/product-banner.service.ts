@@ -16,11 +16,11 @@ export class ProductBannerService {
           'logoUrl': 'MODULES.INCEPTOR.LOGO_URL'
         };
         break;
-      case 'slipsteam':
+      case 'slipstream':
         bannerInfo = {
-          'title': 'MODULES.SLIPSTEAM.TITLE',
-          'subTitle': 'MODULES.SLIPSTEAM.SUB_TITLE',
-          'logoUrl': 'MODULES.SLIPSTEAM.LOGO_URL'
+          'title': 'MODULES.SLIPSTREAM.TITLE',
+          'subTitle': 'MODULES.SLIPSTREAM.SUB_TITLE',
+          'logoUrl': 'MODULES.SLIPSTREAM.LOGO_URL'
         };
         break;
       case 'discover':
@@ -63,6 +63,97 @@ export class ProductBannerService {
           'title': 'MODULES.HADOOP.TITLE',
           'subTitle': 'MODULES.HADOOP.SUB_TITLE',
           'logoUrl': 'MODULES.HADOOP.LOGO_URL'
+        };
+        break;
+      case 'pilot':
+        bannerInfo = {
+          'title': 'MODULES.PILOT.TITLE',
+          'subTitle': 'MODULES.PILOT.SUB_TITLE',
+          'logoUrl': 'MODULES.PILOT.LOGO_URL'
+        };
+        break;
+      case 'workflow':
+        bannerInfo = {
+          'title': 'MODULES.WORKFLOW.TITLE',
+          'subTitle': 'MODULES.WORKFLOW.SUB_TITLE',
+          'logoUrl': 'MODULES.WORKFLOW.LOGO_URL'
+        };
+        break;
+      case 'transporter':
+        bannerInfo = {
+          'title': 'MODULES.TRANSPORTER.TITLE',
+          'subTitle': 'MODULES.TRANSPORTER.SUB_TITLE',
+          'logoUrl': 'MODULES.TRANSPORTER.LOGO_URL'
+        };
+        break;
+      case 'governor':
+        bannerInfo = {
+          'title': 'MODULES.GOVERNOR.TITLE',
+          'subTitle': 'MODULES.GOVERNOR.SUB_TITLE',
+          'logoUrl': 'MODULES.GOVERNOR.LOGO_URL'
+        };
+        break;
+      case 'rubik':
+        bannerInfo = {
+          'title': 'MODULES.RUBIK.TITLE',
+          'subTitle': 'MODULES.RUBIK.SUB_TITLE',
+          'logoUrl': 'MODULES.RUBIK.LOGO_URL'
+        };
+        break;
+      case 'waterdrop':
+        bannerInfo = {
+          'title': 'MODULES.WATERDROP.TITLE',
+          'subTitle': 'MODULES.WATERDROP.SUB_TITLE',
+          'logoUrl': 'MODULES.WATERDROP.LOGO_URL'
+        };
+        break;
+      case 'txsql':
+        bannerInfo = {
+          'title': 'MODULES.TXSQL.TITLE',
+          'subTitle': 'MODULES.TXSQL.SUB_TITLE',
+          'logoUrl': 'MODULES.TXSQL.LOGO_URL'
+        };
+        break;
+      case 'prometheus':
+        bannerInfo = {
+          'title': 'MODULES.PROMETHEUS.TITLE',
+          'subTitle': 'MODULES.PROMETHEUS.SUB_TITLE',
+          'logoUrl': 'MODULES.PROMETHEUS.LOGO_URL'
+        };
+        break;
+      case 'kafka':
+        bannerInfo = {
+          'title': 'MODULES.KAFKA.TITLE',
+          'subTitle': 'MODULES.KAFKA.SUB_TITLE',
+          'logoUrl': 'MODULES.KAFKA.LOGO_URL'
+        };
+        break;
+      case 'zeppelin':
+        bannerInfo = {
+          'title': 'MODULES.ZEPPELIN.TITLE',
+          'subTitle': 'MODULES.ZEPPELIN.SUB_TITLE',
+          'logoUrl': 'MODULES.ZEPPELIN.LOGO_URL'
+        };
+        break;
+      case 'midas':
+        bannerInfo = {
+          'title': 'MODULES.MIDAS.TITLE',
+          'subTitle': 'MODULES.MIDAS.SUB_TITLE',
+          'logoUrl': 'MODULES.MIDAS.LOGO_URL'
+        };
+        break;
+      case 'terminal':
+        bannerInfo = {
+          'title': 'MODULES.TERMINAL.TITLE',
+          'subTitle': 'MODULES.TERMINAL.SUB_TITLE',
+          'logoUrl': 'MODULES.TERMINAL.LOGO_URL'
+        };
+        break;
+      case 'redis':
+        bannerInfo = {
+          'title': 'MODULES.REDIS.TITLE',
+          'subTitle': 'MODULES.REDIS.SUB_TITLE',
+          'logoUrl': 'MODULES.REDIS.LOGO_URL'
         };
         break;
       default:

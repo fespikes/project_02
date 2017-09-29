@@ -1,13 +1,22 @@
 @import '../../styles/util'
 
 \:host
-  display: flex
+  .panel-left
+    position: absolute
+    width: 20rem
   .slide-back
+    width: 100%
     height: 3rem
     padding: 0 0.5rem
-    display: flex
-    justify-content: space-between
-    align-items: center
     svg
       fill: #305ab5
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
+    svg:first-child
+      float: left
+    svg:last-child
+      float: right
+
+
 

@@ -5,15 +5,15 @@
   <ul>
     <li
       *ngFor="let item of productAdvantage.items"
-      [ngClass]="{'chapter':item.chapter, 'paragraph':item.paragraph, 'indent':item.indent}"
+      [ngClass]="{
+        'chapter':item.chapter,
+        'paragraph':item.paragraph,
+        'indent':item.indent,
+        'title':item.title
+      }"
     >
       {{item.content | translate}}
     </li>
   </ul>
-  <img
-    *ngIf="advantageIncludeImg"
-    tccImgSrc="{{productAdvantage.img.url | translate}}"
-    [ngStyle]="{'width': productAdvantage.img.width, 'height':productAdvantage.img.height}"
-  />
 </div>
 
