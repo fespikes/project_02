@@ -18,10 +18,6 @@ export class ProductComponent implements OnInit {
 
   productIntroduce = {};
   productAdvantage = {};
-  productScenarios = {};
-
-  advantageIncludeImg = false;
-  scenariosIncludeImgTab = {};
 
   constructor(
     private productContentService: ProductContentService,
@@ -37,9 +33,5 @@ export class ProductComponent implements OnInit {
 
     this.productIntroduce = this.productContentService.getProductIntroduce(moduleType);
     this.productAdvantage = this.productContentService.getProductAdvantage(moduleType);
-    this.productScenarios = this.productContentService.getProductScenarios(moduleType);
-
-    this.advantageIncludeImg = this.productUtilService.advantageIncludeImg(moduleType);
-    this.scenariosIncludeImgTab = this.productUtilService.scenariosIncludeImgTab(moduleType);
   }
 }
