@@ -24,7 +24,7 @@ export class DataMartService {
         },
         {
           text: '应用场景',
-          link: './scenarios'
+          link: './scenarios/multi-tenancy-platform'
         },
         {
           text: '组件介绍',
