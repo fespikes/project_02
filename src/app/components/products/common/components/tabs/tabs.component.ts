@@ -1,14 +1,16 @@
 import { Component, AfterViewInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core';
-import { BannerDirective } from './banner.directive';
-import { BannerComponent as TheComponent } from './banner/banner.component';
+import { TabsDirective } from './tabs.directive';
+import { TabsComponent as TheComponent } from './tabs/tabs.component';
 
 @Component({
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.sass']
+  templateUrl: './tabs.component.html',
+  styleUrls: ['./tabs.component.sass']
 })
-export class BannerComponent implements AfterViewInit {
+export class TabsComponent implements AfterViewInit {
 
-	@ViewChild(BannerDirective) banner: BannerDirective;
+
+	@ViewChild(TabsDirective) tabs: TabsDirective;
+  
 	protected data:any;
 
   constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
@@ -20,11 +22,11 @@ export class BannerComponent implements AfterViewInit {
   loadComponent() {
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
 
-    let viewContainerRef = this.banner.viewContainerRef;
+    let viewContainerRef = this.tabs.viewContainerRef;
     viewContainerRef.clear();
 
     let componentRef = viewContainerRef.createComponent(componentFactory);
-    (<TheComponent>componentRef.instance).data = this.data;
+    (<TheComponent>componentRef.instance).tabs = this.data;
 
   }
 

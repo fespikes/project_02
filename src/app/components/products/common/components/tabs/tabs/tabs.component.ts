@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'tdc-tabs',
@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
 
-	@Input()
-	tabs: any;
+	public tabs: any;
 
   constructor() { }
 

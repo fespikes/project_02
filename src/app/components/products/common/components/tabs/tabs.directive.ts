@@ -1,9 +1,9 @@
 import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[banner-host]'
+  selector: '[tabs]'
 })
-export class BannerDirective {
+export class TabsDirective {
 
   constructor(public viewContainerRef: ViewContainerRef) { }
 
