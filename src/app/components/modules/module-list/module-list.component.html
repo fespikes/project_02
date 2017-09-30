@@ -4,7 +4,7 @@
 
 <div *ngFor="let type of moduleTypes">
   <div class="module-type" (click)="toggleModules(type)">
-    <svg tccIcon="angle-up" size="md" [class.expanded]="type.expanded"></svg>
+    <svg tccIcon="angle-up" size="sm" [class.expanded]="type.expanded"></svg>
     <span class="type-name">{{type.alias | translate}}</span>
   </div>
   <div class="module-list" [class.expanded]="type.expanded">
@@ -17,6 +17,7 @@
       [class.selected]="module.selected"
       class="module-list-item"
     >
+      <svg tccIcon="{{module.icon}}" size="sm"></svg>
       <span>{{module.actionAlias}}</span>
     </a>
   </div>
