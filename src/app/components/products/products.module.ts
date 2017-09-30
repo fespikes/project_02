@@ -31,6 +31,8 @@ import { ScenariosComponent as TheScenariosComponent } from './common/components
 import { ComponentIntroComponent as TheComponentIntroComponent } from './common/components/component-intro/component-intro/component-intro.component';
 import { BannerComponent as TheBannerComponent } from './common/components/banner/banner/banner.component';
 import { TabsComponent as TheTabsComponent } from './common/components/tabs/tabs/tabs.component';
+import { ComponentIntroChildComponent as TheComponentIntroChildComponent } from './common/components/component-intro-child/component-intro-child/component-intro-child.component';
+import { ScenariosChildComponent as TheScenariosChildComponent } from './common/components/scenarios-child/scenarios-child/scenarios-child.component';
 
 //to be confirmed
 import { FunctionalitiesDirective } from './common/components/functionalities/functionalities.directive';
@@ -46,6 +48,11 @@ import { TabsComponent } from './common/components/tabs/tabs.component';
 import { BannerDirective } from './common/components/banner/banner.directive';
 import { TabsDirective } from './common/components/tabs/tabs.directive';
 import { DataMartTabsComponent } from './data-mart/data-mart-tabs/data-mart-tabs.component';
+import { ScenariosChildComponent } from './common/components/scenarios-child/scenarios-child.component';
+import { ComponentIntroChildComponent } from './common/components/component-intro-child/component-intro-child.component';
+import { ScenariosChildDirective } from './common/components/scenarios-child/scenarios-child.directive';
+import { ComponentIntroChildDirective } from './common/components/component-intro-child/component-intro-child.directive';
+
 
 @NgModule({
   imports: [
@@ -82,6 +89,9 @@ import { DataMartTabsComponent } from './data-mart/data-mart-tabs/data-mart-tabs
     TheBannerComponent,
     TheTabsComponent,
 
+    TheComponentIntroChildComponent,
+    TheScenariosChildComponent,
+
     DataMartAdvantagesComponent,
     AdvantagesDirective,
     ScenariosDirective,
@@ -92,7 +102,11 @@ import { DataMartTabsComponent } from './data-mart/data-mart-tabs/data-mart-tabs
     BannerComponent,
     BannerDirective,
     TabsDirective,
-    DataMartTabsComponent
+    DataMartTabsComponent,
+    ScenariosChildComponent,
+    ComponentIntroChildComponent,
+    ScenariosChildDirective,
+    ComponentIntroChildDirective
   ],
   providers: [
     TccModalService,
@@ -105,6 +119,8 @@ import { DataMartTabsComponent } from './data-mart/data-mart-tabs/data-mart-tabs
     TheAdvantagesComponent,
     TheScenariosComponent,
     TheComponentIntroComponent,
+    TheComponentIntroChildComponent,
+    TheScenariosChildComponent
    ]
 })
 export class ProductsModule { }
