@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { BusinessScenarioService } from '../business-scenario.service';
-import { Scenario } from './Scenario';
+import { Scenario } from './scenario';
 
 import 'rxjs/add/operator/switchMap';
 
