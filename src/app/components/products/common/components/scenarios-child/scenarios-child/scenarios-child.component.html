@@ -1,3 +1,17 @@
-<p>
-  scenarios-child works!
-</p>
+
+<!-- <div class="details-box text"> -->
+<div class="details-box"
+	[ngClass]="{'details-box': true, 'text': !data.image}"
+>
+	<ul class="text-list">
+		<li [ngStyle]="{'width': 970-data.image.width + 'px'}">
+			<p>{{data.text}}</p>
+		</li>
+	</ul>
+	<div *ngIf="data.hasImage"
+		class="img multi-tenancy-platform"
+		[ngStyle]="{'background-image':'url(' + data.image.src + ')',
+								'width': data.image.width +'px',
+								'height': + data.image.height +'px'}">
+	</div>
+</div>

@@ -24,7 +24,7 @@ export class DataMartService {
         },
         {
           text: '应用场景',
-          link: './scenarios/multi-tenancy-platform'
+          link: './scenarios/self-analysis-platform'
         },
         {
           text: '组件介绍',
@@ -98,26 +98,48 @@ export class DataMartService {
         title: '应用场景',
         tabs: [
           {
-            text: '企业级多租户大数据平台',
-            link: './multi-tenancy-platform'
+            text: '数据自助分析平台',
+            link: './self-analysis-platform'
           },
           {
-            text: '企业级数据仓库建设',
-            link: './build-data-warehouse'
+            text: '营销分析系统',
+            link: './marketing-analysis-system'
           },
           {
-            text: '企业级数据湖',
-            link: './data-lake'
-          },
-          {
-            text: '企业级数据治理平台',
-            link: './data-governance-platform'
-          },
-          /*{
-            text: '费用说明',
-            link: './expense-explanation'
-          }*/
-        ]
+            text: '客户服务管理',
+            link: './customer-service-managing'
+          }
+        ],
+        selfAnalysisPlatform: {
+          text: '规模较大分支机构较多的企业，可以利用TDH-DM将总部至基层的数据按照主题整合于集市，打造自助式的查询平台。基层部门的业务人员在平台上自主的实现快速查询，不再需要寻求总部和技术人员的帮助构建报表，节省了等待审批、数据提取和技术支持的时间开销。打破企业层级对数据流动的限制，迎合专业群体的特殊需求，促进基层部门的业务和总体经营发展。',
+          image: {
+            src: '/assets/images/products/scenarios/data-mart/self-analysis-platform.png',
+            style: {
+              width: '810',
+              height: '394'
+            }
+          }
+        },
+        marketingAnalysisSystem: {
+          text: '根据交易 数据的含义和关系，开发OLAP业务应用，对销售状况做多维度分析。在规模高至亿级别的数据中进行关联汇总，通过不断改变维度和度量，分析并整理数据分布，发现模式变化，探索趋势。发掘内外因素对销售效果产生的影响，制定恰当并具有特色的营销方式，提升管理经营水平。',
+          image: {
+            src: '/assets/images/products/scenarios/data-mart/marketing-analysis-system.png',
+            style: {
+              width: '728',
+              height: '429'
+            }
+          }
+        },
+        customerServiceManaging: {
+          text: '根据交易 数据的含义和关系，开发OLAP业务应用，对销售状况做多维度分析。在规模高至亿级别的数据中进行关联汇总，通过不断改变维度和度量，分析并整理数据分布，发现模式变化，探索趋势。发掘内外因素对销售效果产生的影响，制定恰当并具有特色的营销方式，提升管理经营水平。',
+          image: {
+            src: '/assets/images/products/scenarios/data-mart/csm.png',
+            style: {
+              width: '900',
+              height: '322'
+            }
+          }
+        }
       },
       componentIntro: {
         title: '组件介绍',

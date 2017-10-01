@@ -20,11 +20,5 @@ export class DataMartAdvantagesComponent extends AdvantagesComponent {
   	const productDetails = this.dataMartService.getProductDetails();
   	this.data = productDetails.advantages;
 
-  	console.log( 'this.functionalities.viewContainerRef:', this.advantages.viewContainerRef );
   }
-
-  ngAfterViewInit() {//to be confirmed
-  	setTimeout( _ => this.loadComponent(), 1);
-  }
-
 }

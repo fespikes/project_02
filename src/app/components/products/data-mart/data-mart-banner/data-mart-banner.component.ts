@@ -8,15 +8,7 @@ import { BannerComponent } from '../../common/components/banner/banner.component
   // styleUrls: ['./data-mart-banner.component.sass']
 })
 export class DataMartBannerComponent extends BannerComponent implements OnInit{
-
-/*  constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private dataMartService: DataMartService
-	) {
-  	super(componentFactoryResolver);
-  }
-*/
-
+  
   @Input()
   productDetails:any;
 

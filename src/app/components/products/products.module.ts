@@ -52,6 +52,9 @@ import { ScenariosChildComponent } from './common/components/scenarios-child/sce
 import { ComponentIntroChildComponent } from './common/components/component-intro-child/component-intro-child.component';
 import { ScenariosChildDirective } from './common/components/scenarios-child/scenarios-child.directive';
 import { ComponentIntroChildDirective } from './common/components/component-intro-child/component-intro-child.directive';
+import { SelfAnalysisPlatformComponent } from './data-mart/data-mart-scenarios/self-analysis-platform/self-analysis-platform.component';
+import { MarketingAnalysisSystemComponent } from './data-mart/data-mart-scenarios/marketing-analysis-system/marketing-analysis-system.component';
+import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenarios/customer-service-managing/customer-service-managing.component';
 
 
 @NgModule({
@@ -89,8 +92,8 @@ import { ComponentIntroChildDirective } from './common/components/component-intr
     TheBannerComponent,
     TheTabsComponent,
 
-    TheComponentIntroChildComponent,
     TheScenariosChildComponent,
+    TheComponentIntroChildComponent,
 
     DataMartAdvantagesComponent,
     AdvantagesDirective,
@@ -106,7 +109,10 @@ import { ComponentIntroChildDirective } from './common/components/component-intr
     ScenariosChildComponent,
     ComponentIntroChildComponent,
     ScenariosChildDirective,
-    ComponentIntroChildDirective
+    ComponentIntroChildDirective,
+    SelfAnalysisPlatformComponent,
+    MarketingAnalysisSystemComponent,
+    CustomerServiceManagingComponent
   ],
   providers: [
     TccModalService,
@@ -119,8 +125,8 @@ import { ComponentIntroChildDirective } from './common/components/component-intr
     TheAdvantagesComponent,
     TheScenariosComponent,
     TheComponentIntroComponent,
-    TheComponentIntroChildComponent,
-    TheScenariosChildComponent
+    TheScenariosChildComponent,
+    TheComponentIntroChildComponent
    ]
 })
 export class ProductsModule { }

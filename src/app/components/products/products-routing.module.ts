@@ -35,6 +35,10 @@ import { ExpenseExplanationComponent } from './data-warehouse/expense-explanatio
 import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-functionalities/data-mart-functionalities.component';
 import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
 import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
+  import { SelfAnalysisPlatformComponent } from './data-mart/data-mart-scenarios/self-analysis-platform/self-analysis-platform.component';
+  import { MarketingAnalysisSystemComponent } from './data-mart/data-mart-scenarios/marketing-analysis-system/marketing-analysis-system.component';
+  import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenarios/customer-service-managing/customer-service-managing.component';
+
 import { DataMartComponentIntroComponent } from './data-mart/data-mart-component-intro/data-mart-component-intro.component';
 
 const productRoutes: Routes = [
@@ -90,19 +94,17 @@ const productRoutes: Routes = [
               { path: 'functionalities', component: DataMartFunctionalitiesComponent },
               { path: 'advantages', component: DataMartAdvantagesComponent },
               {
-                path: 'scenarios', 
+                path: 'scenarios',
                 component: DataMartScenariosComponent,
                 children: [
                   {
                     path: '',
                     children: [//enterprise-class
-                      { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
-                      { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
-                      { path: 'data-lake', component: DataLakeComponent },
-                      { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
-                      // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
+                      { path: 'self-analysis-platform', component: SelfAnalysisPlatformComponent },
+                      { path: 'marketing-analysis-system', component: MarketingAnalysisSystemComponent },
+                      { path: 'customer-service-managing', component: CustomerServiceManagingComponent },
                     ]
-                  }
+                  },
                 ],
               },
               {
