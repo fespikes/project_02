@@ -1,12 +1,20 @@
 <div class="tdc-modules-content-layout">
   <div class="content-layout-banner">
-    <div class="banner-text">
-      <span>{{bannerInfo.title | translate}}</span>
-      <span>{{bannerInfo.subTitle | translate}}</span>
+    <!--<div class="banner-text">-->
+      <!--<span>{{bannerInfo.title | translate}}</span>-->
+      <!--<span>{{bannerInfo.subTitle | translate}}</span>-->
+    <!--</div>-->
+    <!--<div class="banner-img">-->
+      <!--<img tccImgSrc="{{bannerInfo.logoUrl}}"/>-->
+    <!--</div>-->
+    <div class="slogans">
+      <h3 class="title">{{bannerInfo.title | translate}}</h3>
+      <p>{{bannerInfo.subTitle | translate}}</p>
     </div>
-    <div class="banner-img">
-      <img tccImgSrc="{{bannerInfo.logoUrl | translate}}"/>
-    </div>
+    <div
+      class="adv-image"
+      [ngStyle]="{'background': 'url(' + bannerInfo.logoUrl + ')'}"
+    ></div>
   </div>
   <div class="content-layout-tab">
     <tcc-tab>

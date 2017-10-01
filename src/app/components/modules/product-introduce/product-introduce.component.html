@@ -16,7 +16,8 @@
         'title':item.title
       }"
     >
-      {{item.content | translate}}
+      <span class="title" *ngIf="item.title">{{item.content | translate}}</span>
+      <span *ngIf="!item.title">{{item.content | translate}}</span>
     </li>
   </ul>
 </div>

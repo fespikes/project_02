@@ -1,7 +1,7 @@
 
 $blue: #2481e3
 
-.details-banner
+@mixin product-banner
   height: 400px
   display: flex
   justify-content: space-evenly
@@ -12,8 +12,8 @@ $blue: #2481e3
     height: 100%
     width: 630px
     padding-left: 100px
-    
-    h3, h4 
+
+    h3, h4
       color: #fff
 
     h3.title
@@ -28,7 +28,7 @@ $blue: #2481e3
     p
       font-size: 1.4rem
       color: #fff
-      line-height: 1.6;
+      line-height: 1.6
 
   .adv-image
     display: inline-block
@@ -37,124 +37,4 @@ $blue: #2481e3
     position: relative
     top: 30px
 
-
-.tab-box
-  width: 100%
-  border: 1px #ddd solid
-  background: #f3f5f8
-  ul//deprecated , must remove after abstracted cloud products
-    display: flex
-    flex-direction: row
-    justify-content: flex-start
-    border-bottom: 1px #d3d9e5 solid
-    margin: 0 20px
-
-    li
-    font-size: 1.4rem
-
-    a
-      display: inline-block
-      padding: 36px 20px 10px
-
-      &:hover, &.active
-        color: #2481e3
-        font-weight: 600
-        border-bottom: 2px #2481e3 solid
-        margin-bottom: -2px
-        cursor: pointer
-
-.tabsUl
-  display: flex
-  flex-direction: row
-  justify-content: flex-start
-  border-bottom: 1px #d3d9e5 solid
-  margin: 0 20px
-
-  li
-  font-size: 1.4rem
-
-  a
-    display: inline-block
-    padding: 36px 20px 10px
-
-    &:hover, &.active
-      color: #2481e3
-      font-weight: 600
-      border-bottom: 2px #2481e3 solid
-      margin-bottom: -2px
-      cursor: pointer
-
-
-
-.tab-sub
-  padding: 0 20px
-
-h3.sub-title
-  font-size: 1.6rem
-  margin: 0
-  padding: 40px 0 16px 10px
-  &:before
-    content: ""
-    display: inline-block
-    width: 4px
-    height: 16px
-    position: relative
-    top: 3px
-    right: 8px
-    background: $blue
-
-
-.details-box
-  padding: 60px 50px
-  display: flex
-  justify-content: space-evenly
-  align-items: flex-start
-  flex-wrap: nowrap
-  background: #fff
-
-  .diagram
-    padding: 400px 400px 21px 70px
-    display: inline-block
-
-  .text-list
-
-    li
-      padding-left: 80px
-      padding-right: 30px
-      position: relative
-      line-height: 2rem
-      font-size: 1.2rem
-      margin-bottom: 20px
-      
-      p
-        margin-top: 0
-        margin-bottom: 10px
-        font-size: 1.2rem
-        font-weight: 300
-
-      h5
-        margin-top: 0
-        margin-bottom: 10px
-        font-size: 1.4rem
-
-    li:before
-      content: ''
-      display: inline-block
-      width: 6px
-      height: 6px
-      position: absolute
-      left: 60px
-      top: 7px
-      border-radius: 3px
-      background: #2481e3
-
-.details-box.text
-  padding: 46px 50px
-
-  .text-list
-    li
-      padding-left: 0
-      width: 100%
-
-      &:before
-        left: -20px
+@mixin product-tab

@@ -5,6 +5,7 @@
   <ul>
     <li
       *ngFor="let item of productAdvantage.items"
+      [ngStyle]="{'padding-left': 0}"
       [ngClass]="{
         'chapter':item.chapter,
         'paragraph':item.paragraph,
@@ -12,7 +13,8 @@
         'title':item.title
       }"
     >
-      {{item.content | translate}}
+      <span class="title" *ngIf="item.title">{{item.content | translate}}</span>
+      <span *ngIf="!item.title">{{item.content | translate}}</span>
     </li>
   </ul>
 </div>

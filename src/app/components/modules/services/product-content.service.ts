@@ -13,8 +13,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.INCEPTOR.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -94,8 +94,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.SLIPSTREAM.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items':[
             {
@@ -182,8 +182,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.DISCOVER.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -223,8 +223,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.HYPERBASE.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -262,8 +262,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.SEARCH.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -329,8 +329,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.SOPHON.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -417,8 +417,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.GUARDIAN.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -519,8 +519,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.HADOOP.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -566,8 +566,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.PILOT.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -675,8 +675,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.WORKFLOW.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -784,8 +784,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.TRANSPORTER.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -865,8 +865,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.GOVERNOR.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -939,8 +939,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.RUBIK.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': [
             {
@@ -1027,8 +1027,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.WATERDROP.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': []
         };
@@ -1037,8 +1037,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.TXSQL.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': []
         };
@@ -1047,8 +1047,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.PROMETHEUS.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': []
         };
@@ -1057,8 +1057,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.KAFKA.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': []
         };
@@ -1067,8 +1067,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.ZEPPELIN.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': []
         };
@@ -1077,8 +1077,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.MIDAS.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': []
         };
@@ -1087,8 +1087,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.TERMINAL.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': []
         };
@@ -1097,8 +1097,8 @@ export class ProductContentService {
         productIntroduce = {
           'img': {
             'url': 'MODULES.REDIS.INTRODUCE_IMG_URL',
-            'width': '530px',
-            'height': '440px'
+            'width': '460px',
+            'height': '410px'
           },
           'items': []
         };
