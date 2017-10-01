@@ -1,23 +1,22 @@
 import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
-import { AdvantagesComponent } from '../../common/components/advantages/advantages.component'
+import { ComponentIntroComponent } from '../../common/components/component-intro/component-intro.component';
 import { DataMartService } from '../data-mart.service';
 
 @Component({
-  templateUrl: '../../common/components/advantages/advantages.component.html',
+  templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
-export class DataMartAdvantagesComponent extends AdvantagesComponent {
+export class DataMartComponentIntroComponent extends ComponentIntroComponent {
 
   constructor(
   	componentFactoryResolver: ComponentFactoryResolver,
-  	private dataMartService: DataMartService,
-  	private el: ElementRef 
+  	private dataMartService: DataMartService
 	) {
   	super(componentFactoryResolver);
   }
 
   ngOnInit() {
   	const productDetails = this.dataMartService.getProductDetails();
-  	this.data = productDetails.advantages;
-
+  	this.data = productDetails.componentIntro;
   }
+
 }

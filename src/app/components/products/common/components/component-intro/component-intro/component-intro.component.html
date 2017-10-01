@@ -1,13 +1,12 @@
-
 <h3 class="sub-title">{{data.title}}</h3>
 
-<div class="scenarios-tab-box">
+<div class="component-intro-tab-box">
 	<ul>
-		<li *ngFor="let tab of data.tabs; let i=index">
+		<li *ngFor="let tab of data.tabs">
 			<a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a>
 		</li>
 	</ul>
-	<div class="scenarios-content">
+	<div class="component-intro-content">
 		<!-- TODO: no design and prototype here -->
 		<router-outlet></router-outlet>
 	</div>

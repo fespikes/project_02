@@ -1,17 +1,15 @@
 import { Component, AfterViewInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core';
-import { ComponentIntroDirective } from './component-intro.directive';
-import { ComponentIntroComponent as TheComponent } from './component-intro/component-intro.component';
+import { BannerDirective } from './banner.directive';
+import { BannerComponent as TheComponent } from './banner/banner.component';
 
 @Component({
-  templateUrl: './component-intro.component.html',
-  styleUrls: ['./component-intro.component.sass']
+  templateUrl: './banner.component.html',
+  styleUrls: ['./banner.component.sass']
 })
-export class ComponentIntroComponent implements AfterViewInit {
+export class BannerComponent implements AfterViewInit {
 
-	protected data: any;
-
-  @ViewChild(ComponentIntroDirective)
-  componentIntro: ComponentIntroDirective;
+	@ViewChild(BannerDirective) banner: BannerDirective;
+	protected data:any;
 
   constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
 
@@ -22,7 +20,7 @@ export class ComponentIntroComponent implements AfterViewInit {
   loadComponent() {
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
 
-    let viewContainerRef = this.componentIntro.viewContainerRef;
+    let viewContainerRef = this.banner.viewContainerRef;
     viewContainerRef.clear();
 
     let componentRef = viewContainerRef.createComponent(componentFactory);

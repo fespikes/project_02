@@ -7,7 +7,6 @@ import { Advantages } from '../../../interfaces/advantages';
 })
 export class AdvantagesComponent implements Advantages {
 
-  @Input()
   data: any;
 
 }
