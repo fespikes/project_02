@@ -22,13 +22,11 @@ import { ScenariosComponent } from './data-warehouse/scenarios/scenarios.compone
   import { DataLakeComponent } from './data-warehouse/scenarios/data-lake/data-lake.component';
   import { DataGovernancePlatformComponent } from './data-warehouse/scenarios/data-governance-platform/data-governance-platform.component';
 
-//deprecated
+//deprecated, remove after abstraction
 import { ComponentIntroComponent } from './data-warehouse/component-intro/component-intro.component';
   import { TdhPlatformProductsComponent } from './data-warehouse/component-intro/tdh-platform-products/tdh-platform-products.component';
   import { TdhDevKitsComponent } from './data-warehouse/component-intro/tdh-dev-kits/tdh-dev-kits.component';
   import { OperationDevToolsComponent } from './data-warehouse/component-intro/operation-dev-tools/operation-dev-tools.component';
-
-
 
 import { ExpenseExplanationComponent } from './data-warehouse/expense-explanation/expense-explanation.component';
 
@@ -40,6 +38,9 @@ import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data
   import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenarios/customer-service-managing/customer-service-managing.component';
 
 import { DataMartComponentIntroComponent } from './data-mart/data-mart-component-intro/data-mart-component-intro.component';
+  import { TdhPlatformProductsComponent as DataMartTdhPlatformProductsComponent } from './data-mart/data-mart-component-intro/tdh-platform-products/tdh-platform-products.component';
+  import { TdhDevKitsComponent as DataMartTdhDevKitsComponent } from './data-mart/data-mart-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { OperationDevToolsComponent as DataMartOperationDevToolsComponent } from './data-mart/data-mart-component-intro/operation-dev-tools/operation-dev-tools.component';
 
 const productRoutes: Routes = [
   {
@@ -114,9 +115,9 @@ const productRoutes: Routes = [
                   {
                     path: '',
                     children: [
-                      { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
-                      { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
-                      { path: 'operation-dev-tools', component: OperationDevToolsComponent }
+                      { path: 'tdh-platform-products', component: DataMartTdhPlatformProductsComponent },
+                      { path: 'tdh-dev-kits', component: DataMartTdhDevKitsComponent },
+                      { path: 'operation-dev-tools', component: DataMartOperationDevToolsComponent }
                     ]
                   }
                 ]

@@ -4,7 +4,6 @@ import { DataMartService } from '../data-mart.service';
 
 @Component({
   templateUrl: '../../common/components/scenarios/scenarios.component.html',
-  styleUrls: ['./data-mart-scenarios.component.sass']
 })
 export class DataMartScenariosComponent extends ScenariosComponent{
 

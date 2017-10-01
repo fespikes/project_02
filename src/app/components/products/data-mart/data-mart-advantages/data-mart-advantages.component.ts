@@ -4,7 +4,6 @@ import { DataMartService } from '../data-mart.service';
 
 @Component({
   templateUrl: '../../common/components/advantages/advantages.component.html',
-  styleUrls: ['./data-mart-advantages.component.sass']
 })
 export class DataMartAdvantagesComponent extends AdvantagesComponent {
 

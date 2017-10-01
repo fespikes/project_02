@@ -38,26 +38,23 @@ export class DataMartService {
       functionalities: {
         title: '产品功能',
         diagram: '/assets/images/diagram/data-mart.png',
+        //TODO: image style abstraction
         content: [
           {
-            title: '强大的SQL支持', 
-            text: '完整支持SQL标准2003，兼容包括Oracle、DB2、Teradata多种方言，以及存储过程和事务语义。同时其内部引擎提供语句深度优化能力，确保业务极速运行。'
+            title: '面向业务的数据整合', 
+            text: '数据集市TDH-DM服务于企业部门或工作组，抽取来自数据仓库的子集，设计、开发、管理特定主题的数据集市，用于某部门或者某些特殊分析目的。通过系统性的数据整合，避免数据孤岛问题。'
           },
           {
-            title: '异构数据互通',
-            text: '轻松实现异构数据互通，无需等待迁移，就可以整合并处理来源于不同系统的数据，是实现企业级数据仓库和数据湖的坚实基础。'
+            title: '强大的SQL支持',
+            text: '完整支持SQL标准2003，兼容包括Oracle、DB2、Teradata多种方言，灵活的实现各种OLAP分析业务。同时其内部引擎具有深度优化语句的能力，确保语句极速运行。'
           },
           {
-            title: '混合负载支持',
-            text: '实现灵活的SLA Scheduler，按照用户或负载提供SLA，采用更细粒度的调度算法，动态适配队列拓扑。从而根据当前环境的资源情况，智能的进行调度，有效应对多租户下的资源管理场景。'
+            title: '交互式OLAP分析',
+            text: '采用专为OLAP定制研发的存储引擎Holodesk，实现交互式OLAP分析。TDH-DM通过列式缓存技术和过滤下沉技术，允许灵活的指定聚合字段，无需进行Cube预计算，也可以实时返回计算结果。'
           },
           {
-            title: '分布式事务保障',
-            text: '提供可序列化快照隔离，保障事务在分布式系统下正常运转，高吞吐的事务机制，确保数据强一致，高可用的事务保证。'
-          },
-          {
-            title: '非结构化数据处理',
-            text: '提供对非结构化或者半结构化数据的存储、检索、分析能力，具有影像分析、文本数据挖掘分析等功能，利用种类更广泛的数据资源实现信息的发现与挖掘。'
+            title: '高效的开发和运维工具',
+            text: 'TDH-DM内置可视化Cube设计工具Rubik，支持星型和雪花模型，提供从Cube设计到持久化的完整过程，同时通过Cube共享以及消息通知实现高效协同合作。TDH-DM对接可视化报表工具，以视觉方式进行数据分析，同时还提供指标监控和日志管理工具，对异常状态提供报警，简化运维。'
           }
         ]
       },
@@ -156,7 +153,46 @@ export class DataMartService {
             text: '运维和开发工具',
             link: './operation-dev-tools'
           }
-        ]
+        ],
+        tdhPlatformProducts: [{
+          title: 'Inceptor',
+          text: 'Inceptor是一款用于批量处理及分析的数据库。它支持SQL 2003标准、Oracle PL/SQL以及DB2 SQL PL，对Oracle、DB2以及Teradata 都有很好的方言支持，是Hadoop领域对SQL标准支持最完善的产品。',
+          link: ''  //TODO: the link goto incepter introduction
+        },{
+          title: 'Guardian',
+          text: 'Guardian为TDH提供集中的安全和资源管理服务。它支持LDAP和Kerberos，保护Hadoop集群免受恶意攻击和安全威胁，而且还可以对资源做细粒度的ACL控制。多租户资源管理模块可以按照租户的方式管理资源，并通过一个图形化工具为用户提供权限配置以及资源配置接口。',
+          link: ''  //TODO: the link goto incepter introduction
+        },{
+          title: 'Hadoop',
+          text: 'Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。',
+          link: ''  //TODO: the link goto incepter introduction
+        }],
+        tdhDevKits: [{
+          title: 'Workflow',
+          text: 'Workflow是一个图形化的工作流设计、调试、调度和分析的服务平台，它支持Shell、SQL、JDBC、HTTP等任务类型，也可以写自定 义Java任务。它还提供丰富的分析能力，如依赖关系、执行历史、甘特图等，可以帮助用户诊断工作流的执行状况。',
+          link: ''  //TODO: the link goto incepter introduction
+        },{
+          title: 'Rubik',
+          text: 'Rubik是一款用于设计OLAP Cube的可视化工具，所建Cube可以实例化于HDFS或Holodesk。Rubik支持雪花模型和星形模型两种Cube 设计模型，并支持多种格式的数据源(包括HDFS和远程RDBMS)。实验显示，在数据立方体的加速下，分析查询的速度可提高10倍。 Rubik通过可视化方式提供服务，使数据分析师得到更友好的交互体验。',
+          link: ''  //TODO: the link goto incepter introduction
+        },{
+          title: 'Pilot',
+          text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
+          link: ''  //TODO: the link goto incepter introduction
+        }],
+        operationDevTools: [{
+          title: 'Milano',
+          text: 'Milano是一个日志收集分析和展示平台，为运维人员提供基于日志问题的定位和分析工具。它具有五个功能组件：logstash、kafka、elasticsearch、kibana、flink，分别用来帮助用户实现日志收集、传输、存储、展示和分析这五项功能。',
+          link: ''  //TODO: the link goto incepter introduction
+        },{
+          title: 'Terminal',
+          text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
+          link: ''  //TODO: the link goto incepter introduction
+        },{
+          title: 'Prometheus',
+          text: 'Prometheus是开源的监控和告警系统，以Metrics监控为主，通过pull mode完成时间序列数据的收集。主要包括的组件有：负责时间序列数据存储和抓取的Prometheus Server，Alertmanager，Push gateway，以及各类exporter。',
+          link: ''  //TODO: the link goto incepter introduction
+        }]
       },
       
   	}

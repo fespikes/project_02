@@ -39,8 +39,13 @@ import { FunctionalitiesDirective } from './common/components/functionalities/fu
 import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
 import { AdvantagesDirective } from './common/components/advantages/advantages.directive';
 import { ScenariosDirective } from './common/components/scenarios/scenarios.directive';
+
 import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
 import { DataMartComponentIntroComponent } from './data-mart/data-mart-component-intro/data-mart-component-intro.component';
+  import { TdhPlatformProductsComponent } from './data-mart/data-mart-component-intro/tdh-platform-products/tdh-platform-products.component';
+  import { TdhDevKitsComponent } from './data-mart/data-mart-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { OperationDevToolsComponent } from './data-mart/data-mart-component-intro/operation-dev-tools/operation-dev-tools.component';
+
 import { ComponentIntroDirective } from './common/components/component-intro/component-intro.directive';
 import { DataMartBannerComponent } from './data-mart/data-mart-banner/data-mart-banner.component';
 import { BannerComponent } from './common/components/banner/banner.component';
@@ -55,6 +60,7 @@ import { ComponentIntroChildDirective } from './common/components/component-intr
 import { SelfAnalysisPlatformComponent } from './data-mart/data-mart-scenarios/self-analysis-platform/self-analysis-platform.component';
 import { MarketingAnalysisSystemComponent } from './data-mart/data-mart-scenarios/marketing-analysis-system/marketing-analysis-system.component';
 import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenarios/customer-service-managing/customer-service-managing.component';
+
 
 
 @NgModule({
@@ -112,7 +118,10 @@ import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenario
     ComponentIntroChildDirective,
     SelfAnalysisPlatformComponent,
     MarketingAnalysisSystemComponent,
-    CustomerServiceManagingComponent
+    CustomerServiceManagingComponent,
+    TdhPlatformProductsComponent,
+    TdhDevKitsComponent,
+    OperationDevToolsComponent
   ],
   providers: [
     TccModalService,

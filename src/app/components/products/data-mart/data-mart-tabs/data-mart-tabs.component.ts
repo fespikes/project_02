@@ -4,7 +4,6 @@ import { TabsComponent } from '../../common/components/tabs/tabs.component';
 @Component({
   selector: 'data-mart-tabs',
   templateUrl: '../../common/components/tabs/tabs.component.html',
-  styleUrls: ['./data-mart-tabs.component.sass']
 })
 export class DataMartTabsComponent extends TabsComponent implements OnInit {
 

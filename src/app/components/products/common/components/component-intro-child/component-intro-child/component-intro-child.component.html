@@ -1,3 +1,23 @@
-<p>
-  component-intro-child works!
-</p>
+<div class="tdh-platform-products intro-table">
+<!-- 	<div class="row">
+		<span class="title">Milano</span>
+		<span class="ctn">
+		Milano是一个日志收集分析和展示平台，为运维人员提供基于日志问题的定位和分析工具。它具有五个功能组件：logstash、kafka、elasticsearch、kibana、flink，分别用来帮助用户实现日志收集、传输、存储、展示和分析这五项功能。
+		</span>
+		<span class="anchor">
+			<a class="more">了解更多&nbsp;→</a>
+		</span>
+	</div> -->
+	<div
+		class="row"
+		*ngFor="let obj of data"
+	>
+		<span class="title">{{obj.title}}</span>
+		<span class="ctn">{{obj.text}}</span>
+		<span class="anchor">
+			<a
+				routerLink="{{obj.link}}" routerLinkActive="active"
+				class="more">了解更多&nbsp;→</a>
+		</span>
+	</div>
+</div>

@@ -6,7 +6,7 @@ import { DataMartService } from '../data-mart.service';
 
 @Component({
   templateUrl: '../../common/components/functionalities/functionalities.component.html',
-  styleUrls: ['./data-mart-functionalities.component.sass']
+  //TODO: style abstraction in common of the image
 })
 export class DataMartFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */{
 
