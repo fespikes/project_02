@@ -1,0 +1,57 @@
+@import "../../../styles/util"
+.docs-search
+  min-height: calc(100vh - 223px)
+  background-color: $tdcCommonBgColor
+
+@include clearfix
+
+//.search-panel
+.panel-left
+  float: left
+  width: 25rem
+  background-color: #fff
+  border-top-right-radius: 0.4rem
+  .filter, .tree, .operation
+    padding: 0 0 0 2rem
+  .filter
+    width: 100%
+    height: 6rem
+    border-bottom: 1px solid $tdcCommonGrey
+    span
+      position: relative
+      top: 3.5rem
+  .tree
+    min-height: calc(100vh - 33.3rem)
+
+  .operation
+    height: 8rem
+    line-height: 8rem
+    button
+      height: 3rem
+      width: 10rem
+      background-color: $tdcCommonBlue
+      border-radius: 0.4rem
+      border: none
+      color: #fff
+    button:first-child
+      margin-right: 1rem
+
+.panel-right
+  margin: 0 2rem 0 27rem
+  padding: 3rem 2rem 1rem 2rem
+  background-color: #fff
+  border-radius: 0.4rem
+  .search
+    .search-field
+      height: 3rem
+      border: 1px solid $tdcCommonGrey
+    .search-btn
+      height: 3rem
+
+
+
+
+
+
+
+

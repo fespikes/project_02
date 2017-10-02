@@ -1,0 +1,33 @@
+<div class="docs-search">
+  <div class="search-crumb">
+    <document-breadcrumb
+      [crumbItems]="crumbItems"
+    ></document-breadcrumb>
+  </div>
+  <div class="search-panel clearfix">
+    <div class="panel-left">
+      <div class="filter">
+        <span>{{'DOCUMENTS.SEARCH_FILTER' | translate}}</span>
+      </div>
+      <div class="tree">
+
+      </div>
+      <div class="operation">
+        <button>{{'DOCUMENTS.EXPAND_ALL' | translate}}</button>
+        <button>{{'DOCUMENTS.COLLAPSE_ALL' | translate}}</button>
+      </div>
+    </div>
+    <div class="panel-right">
+      <docs-search
+        (onDocumentSearch)="documentSearch($event)"
+        [filterSearch]=true
+      ></docs-search>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </div>
+</div>

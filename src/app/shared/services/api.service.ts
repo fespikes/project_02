@@ -1,13 +1,13 @@
 import * as path from 'path';
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { Headers, Http, Response, URLSearchParams } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
-export class TccApiService {
+export class TdcApiService {
   constructor(private http: Http) {}
 
   private get headers(): Headers {
@@ -19,7 +19,8 @@ export class TccApiService {
 
   // 请求前缀
   private makeUrl(url) {
-    return url;
+    console.log(path.join('v2/', url));
+    return path.join('v2/', url);
   }
 
   private formatErrors(error: any) {
@@ -32,10 +33,21 @@ export class TccApiService {
     return Observable.throw(data);
   }
 
-  get(path: string, params: URLSearchParams = new URLSearchParams()): Observable<any> {
-    return this.http.get(this.makeUrl(path), { headers: this.headers, search: params })
-    .catch(this.formatErrors)
-    .map((res: Response) => res.json());
+  //get(path: string, params: URLSearchParams = new URLSearchParams()): Observable<any> {
+  //  return this.http.get(this.makeUrl(path), { headers: this.headers, search: params })
+  //  .catch(this.formatErrors)
+  //  .map((res: Response) => {
+  //    console.log('res.json=', res.json());
+  //    res.json()
+  //  });
+  //}
+
+  get(path: string) {
+    this.http.get(path).map(
+      res => res.json()
+    ).subscribe(result => {
+      console.log('result=', result);
+    });
   }
 
   put(path: string, body: Object = {}): Observable<any> {

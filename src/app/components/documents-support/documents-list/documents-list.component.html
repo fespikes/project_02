@@ -1,0 +1,18 @@
+<div class="docs-list">
+  <div class="docs-crumb">
+    <document-breadcrumb
+      [crumbItems]="crumbItems"
+    ></document-breadcrumb>
+  </div>
+  <div class="docs-tab">
+    <tdc-tab
+      [tabItems]="tabItems"
+      (onTabChange)="onTabChange($event)"
+    ></tdc-tab>
+  </div>
+  <div class="docs-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

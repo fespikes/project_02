@@ -1,0 +1,14 @@
+<div
+  class="search"
+  [ngClass]="{'filter-search': filterSearch}"
+>
+  <input
+    class="search-field"
+    placeholder="{{'DOCUMENTS.SEARCH_PLACEHOLDER' | translate}}" />
+  <button
+    (click)="documentSearch()"
+    class="search-btn"
+  >
+    {{'DOCUMENTS.SEARCH' | translate}}
+  </button>
+</div>
