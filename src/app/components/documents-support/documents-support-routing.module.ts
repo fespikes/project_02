@@ -10,7 +10,7 @@ import { ProductDocumentComponent } from './documents-list/product-document/prod
 import { NormalIssuesComponent } from './documents-list/normal-issues/normal-issues.component';
 import { FreshGuidesComponent } from './documents-list/fresh-guides/fresh-guides.component';
 
-import { TranslateDeactivator, TranslateResolver, TranslateToken } from '../../i18n';
+import { TranslateDeactivator, TranslateResolver, TranslateToken } from '../../i18n/index';
 
 const routes: Routes = [
   {
@@ -44,7 +44,8 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'docs-detail',
+    path: 'docs-detail/:category/:version/:document/:section',
+    //path: 'docs-detail',
     component: DocumentsDetailComponent
   }
 ];
@@ -68,7 +69,7 @@ const routes: Routes = [
     TranslateDeactivator,
     {
       provide: TranslateToken,
-      useValue: 'documents',
+      useValue: 'modules',
     },
   ],
 })

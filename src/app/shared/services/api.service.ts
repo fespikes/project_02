@@ -33,21 +33,10 @@ export class TdcApiService {
     return Observable.throw(data);
   }
 
-  //get(path: string, params: URLSearchParams = new URLSearchParams()): Observable<any> {
-  //  return this.http.get(this.makeUrl(path), { headers: this.headers, search: params })
-  //  .catch(this.formatErrors)
-  //  .map((res: Response) => {
-  //    console.log('res.json=', res.json());
-  //    res.json()
-  //  });
-  //}
-
-  get(path: string) {
-    this.http.get(path).map(
-      res => res.json()
-    ).subscribe(result => {
-      console.log('result=', result);
-    });
+  get(path: string, params: URLSearchParams = new URLSearchParams()): Observable<any> {
+    return this.http.get(this.makeUrl(path), { headers: this.headers, search: params })
+      .catch(this.formatErrors)
+      .map((res: Response) => res.json());
   }
 
   put(path: string, body: Object = {}): Observable<any> {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { SearchComponent } from './search/search.component';
+import { SearchComponent } from './common/search/search.component';
 
 @Component({
   selector: 'tdc-documents-support',

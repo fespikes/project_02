@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DocumentsSupportRoutingModule } from './documents-support-routing.module';
 
@@ -10,13 +11,14 @@ import { DocumentsListComponent } from './documents-list/documents-list.componen
 import { ProductDocumentComponent } from './documents-list/product-document/product-document.component';
 import { NormalIssuesComponent } from './documents-list/normal-issues/normal-issues.component';
 import { FreshGuidesComponent } from './documents-list/fresh-guides/fresh-guides.component';
+import { ProductListComponent } from './documents-list/product-document/product-list/product-list.component';
 
 import { TabComponent } from '../common/components/tab/tab.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-import { SearchComponent } from './search/search.component';
+import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
+import { SearchComponent } from './common/search/search.component';
 
 import { DocumentUtilService } from './services/document.util.service';
-import { DocumentSearchService } from './services/document.search.service';
+import { DocumentAPIService } from './services/document.api.service';
 import { TdcApiService } from '../../shared/services/api.service';
 
 import { TuiModule } from '../../tui/tui.module';
@@ -26,6 +28,8 @@ import { SharedModule } from '../../shared';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     DocumentsSupportRoutingModule,
     TuiModule,
     I18nModule,
@@ -39,6 +43,7 @@ import { SharedModule } from '../../shared';
     ProductDocumentComponent,
     NormalIssuesComponent,
     FreshGuidesComponent,
+    ProductListComponent,
     TabComponent,
     SearchComponent,
     BreadcrumbComponent
@@ -46,7 +51,7 @@ import { SharedModule } from '../../shared';
   providers: [
     TdcApiService,
     DocumentUtilService,
-    DocumentSearchService
+    DocumentAPIService
   ]
 })
 export class DocumentsSupportModule { }

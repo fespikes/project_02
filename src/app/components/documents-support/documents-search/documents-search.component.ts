@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
-import { SearchComponent } from '../search/search.component';
+import { BreadcrumbComponent } from '../common/breadcrumb/breadcrumb.component';
+import { SearchComponent } from '../common/search/search.component';
 
 import { DocumentUtilService } from '../services/document.util.service';
-import { DocumentSearchService } from '../services/document.search.service';
+import { DocumentAPIService } from '../services/document.api.service';
 
 @Component({
   templateUrl: './documents-search.component.html',
@@ -15,27 +15,27 @@ export class DocumentsSearchComponent implements OnInit {
   crumbItems = [];
   constructor(
     private documentUtilService: DocumentUtilService,
-    private documentSearchService: DocumentSearchService
+    private documentAPIService: DocumentAPIService
   ) {
 
   }
 
   ngOnInit() {
     let docsType = this.documentUtilService.getDocsType(window.location.hash);
-    this.crumbItems = this.documentUtilService.getDocsCrumb(docsType);
+    this.crumbItems = this.documentUtilService.getDocsCrumb(docsType, '');
 
     //this.getDocsFolder().substribe();
   }
 
-  documentSearch() {
-    console.log('document search...');
-    //return this.documentSearchService.searchDocs().map(
-    //  result => {
-    //    console.log('result==', result);
-    //  }
-    //);
-    this.documentSearchService.searchDocs();
-  }
+  //documentSearch() {
+  //  console.log('document search...');
+  //  return this.documentSearchService.searchDocs().map(
+  //    result => {
+  //      console.log('result==', result);
+  //    }
+  //  );
+  //  this.documentSearchService.searchDocs();
+  //}
 
   //getDocsFolder() {
   //  return this.documentSearchService.getDocsFolder().map(

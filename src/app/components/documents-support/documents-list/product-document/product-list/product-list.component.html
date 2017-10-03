@@ -1,0 +1,33 @@
+<div
+  *ngFor="let docsItem of docsFolderList"
+  class="doc-type"
+>
+  <div class="doc-title clearfix">
+    <div class="title-name">
+      <span></span>
+      <span>{{docsItem.name}}</span>
+    </div>
+    <tcc-select
+      name="tccSelect"
+      key="name"
+      [(ngModel)]="docsItem.currentVersion"
+      (ngModelChange)="filterDocByVersion(docsItem)"
+    >
+      <tcc-select-option
+        *ngFor="let option of docsItem.versionList"
+        [value]="option"
+      >
+        {{option.name}}
+      </tcc-select-option>
+    </tcc-select>
+  </div>
+  <div class="doc-list">
+    <div
+      class="doc-item"
+      (click)="viewDocDetail(docsItem, doc)"
+      *ngFor="let doc of docsItem.docsCollection[docsItem.currentVersion.name]"
+    >
+      {{doc.name}}
+    </div>
+  </div>
+</div>

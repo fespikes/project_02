@@ -15,7 +15,7 @@ export class DocumentUtilService {
     return array[array.length - 1];
   }
 
-  getDocsCrumb(type): any[] {
+  getDocsCrumb(type, alias): any[] {
     let crumbItems = [];
     switch (type) {
       case 'products':
@@ -78,10 +78,52 @@ export class DocumentUtilService {
           }
         ];
         break;
+      case 'docs-detail':
+        crumbItems = [
+          {
+            name: 'documentSupport',
+            alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
+            url: '../../../../../documents-support'
+          },
+          {
+            name: 'productDocument',
+            alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
+            url: '../../../../../documents-support/docs/products'
+          },
+          {
+            name: 'documentDetail',
+            alias: alias,
+            url: '../index',
+            last: true
+          }
+        ];
+        break;
       default:
         break;
     }
     return crumbItems;
   }
 
+  addDocsVersions(data): any[] {
+    data.map(category => {
+      let versionList = [];
+      let docsCollection = {};
+      category.sub.map(version => {
+        versionList.push({name: version.name});
+        docsCollection[version.name] = this.addDocsCollection(version.sub);
+      });
+      category.versionList = versionList;
+      category.docsCollection = docsCollection;
+      category.currentVersion = category.sub[0];
+    });
+    return data;
+  }
+
+  addDocsCollection(data): any[] {
+    let docList = [];
+    data.map(doc => {
+      docList.push(doc);
+    });
+    return docList;
+  }
 }

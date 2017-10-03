@@ -1,5 +1,10 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 
+import { BreadcrumbComponent } from '../common/breadcrumb/breadcrumb.component';
+
+import { DocumentAPIService } from '../services/document.api.service';
+import { DocumentUtilService } from '../services/document.util.service';
+
 @Component({
   selector: 'tdc-documents-detail',
   templateUrl: './documents-detail.component.html',
@@ -7,11 +12,31 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 
 export class DocumentsDetailComponent implements OnInit {
-  constructor() {
+  docDetail = {};
+  crumbItems = [];
+
+  constructor(
+    private documentAPIService: DocumentAPIService,
+    private documentUtilService: DocumentUtilService
+  ) {
 
   }
 
   ngOnInit() {
+    this.crumbItems = this.documentUtilService.getDocsCrumb(
+      'docs-detail',
+      'inceptor'
+    );
+    this.getDocDetail();
+    console.log('this.tabItems=', this.crumbItems);
+  }
 
+  getDocDetail() {
+    this.documentAPIService.getDocDetail().subscribe(
+      result => {
+        console.log('result=', result);
+        this.docDetail = result;
+      }
+    );
   }
 }

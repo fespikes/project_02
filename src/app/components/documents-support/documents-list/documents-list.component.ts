@@ -1,9 +1,10 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 
 import { TabComponent } from '../../common/components/tab/tab.component';
-import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../common/breadcrumb/breadcrumb.component';
 
 import { DocumentUtilService } from '../services/document.util.service';
+import { DocumentAPIService } from '../services/document.api.service';
 
 @Component({
   selector: 'tdc-documents-list',
@@ -14,14 +15,18 @@ import { DocumentUtilService } from '../services/document.util.service';
 export class DocumentsListComponent implements OnInit {
   crumbItems = [];
   tabItems = [];
-  constructor(private documentUtilService: DocumentUtilService) {
+  //tileDocsFolderList = [];
+  constructor(
+    private documentUtilService: DocumentUtilService,
+    private documentAPIService: DocumentAPIService
+  ) {
 
   }
 
   ngOnInit() {
 
     let docsType = this.documentUtilService.getDocsType(window.location.hash);
-    this.crumbItems = this.documentUtilService.getDocsCrumb(docsType);
+    this.crumbItems = this.documentUtilService.getDocsCrumb(docsType, '');
 
     this.tabItems = [
       {
@@ -44,11 +49,19 @@ export class DocumentsListComponent implements OnInit {
       }
     ];
 
-    console.log('this.crumbItems=', this.crumbItems);
-    console.log('this.tabItems=', this.tabItems);
+    //this.getDocsFolder();
   }
 
+  //getDocsFolder() {
+  //  this.documentSearchService.getTileDocs().subscribe(
+  //    result => {
+  //      console.log('result=', result);
+  //      this.tileDocsFolderList = result;
+  //    }
+  //  );
+  //}
+
   onTabChange(type) {
-    this.crumbItems = this.documentUtilService.getDocsCrumb(type);
+    this.crumbItems = this.documentUtilService.getDocsCrumb(type, '');
   }
 }

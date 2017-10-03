@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ProductListComponent } from './product-list/product-list.component';
+
+import { DocumentAPIService } from '../../services/document.api.service';
+import { DocumentUtilService } from '../../services/document.util.service';
+
 @Component({
   selector: 'tdc-product-document',
   templateUrl: './product-document.component.html',
@@ -7,11 +12,27 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ProductDocumentComponent implements OnInit {
-  constructor() {
+  docsFolderList = [];
+
+  constructor(
+    private documentAPIService: DocumentAPIService,
+    private documentUtilService: DocumentUtilService
+  ) {
 
   }
 
   ngOnInit() {
+    this.getDocsFolder();
 
+  }
+
+  getDocsFolder() {
+    this.documentAPIService.getTileDocs().subscribe(
+      result => {
+        console.log('result=', result);
+        this.docsFolderList = this.documentUtilService.addDocsVersions(result);
+        console.log('this.docsFolderList=', this.docsFolderList);
+      }
+    );
   }
 }

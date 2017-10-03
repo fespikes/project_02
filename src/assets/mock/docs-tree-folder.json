@@ -1,0 +1,54 @@
+[
+  {
+    "name":"OBJ",
+    "sub":[
+      {
+        "name":"Product Document",
+        "sub":[]
+      },
+      {
+        "name":"Normal Issue",
+        "sub":[]
+      },
+      {
+        "name":"Fresh Guide",
+        "sub":[]
+      }
+    ]
+  },
+  {
+    "name":"Component",
+    "sub":[
+      {
+        "name":"Inceptor",
+        "sub":[
+          {
+            "name":"TDH 5.0",
+            "sub":[]
+          },
+          {
+            "name":"TDH 4.8",
+            "sub":[]
+          }
+        ]
+      },
+      {
+        "name":"Discover",
+        "sub":[
+          {
+            "name":"InceptorManual",
+            "sub":[
+
+            ]
+          },
+          {
+            "name":"InstallManual",
+            "sub":[
+
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
