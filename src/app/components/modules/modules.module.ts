@@ -9,10 +9,6 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import { ModuleTableComponent } from './module-table/module-table.component';
 import { ProductIntroduceComponent } from './product-introduce/product-introduce.component';
 import { ProductAdvantageComponent } from './product-advantage/product-advantage.component';
-import { ProductScenariosComponent } from './product-scenarios/product-scenarios.component';
-import { RealTimeCollectionComponent } from './product-scenarios/scenarios-tab/real-time-collection/real-time-collection.component';
-import { RealTimeMonitoringComponent } from './product-scenarios/scenarios-tab/real-time-monitoring/real-time-monitoring.component';
-import { RiskPredictComponent } from './product-scenarios/scenarios-tab/risk-predict/risk-predict.component';
 
 import { TuiModule } from '../../tui/tui.module';
 import { I18nModule } from '../../i18n';
@@ -37,10 +33,6 @@ import { ProductUtilService } from './services/product-util.service';
     ProductComponent,
     ProductIntroduceComponent,
     ProductAdvantageComponent,
-    ProductScenariosComponent,
-    RealTimeCollectionComponent,
-    RealTimeMonitoringComponent,
-    RiskPredictComponent,
   ],
   providers: [
     ProductContentService,
