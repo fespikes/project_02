@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiModule, TccModalService } from '../../tui';
+import { TdcModule } from '../common/components/tdc.module';
 
 import { ProductsRoutingModule } from './products-routing.module';
 
@@ -67,6 +68,7 @@ import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenario
   imports: [
     CommonModule,
     TuiModule,
+    TdcModule,
     DataWarehouseModule,
     ProductsRoutingModule
   ],
@@ -86,7 +88,7 @@ import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenario
     ScenariosComponent,
     ComponentIntroComponent,
     ExpenseExplanationComponent,
-    
+
     TabsComponent,
     DataMartFunctionalitiesComponent,
     FunctionalitiesDirective,

@@ -15,7 +15,18 @@ import { ProductUtilService } from '../services/product-util.service';
 export class ProductComponent implements OnInit {
 
   bannerInfo = {};
-  tabItems = [];
+  tabItems = [
+    {
+      name: 'introduce',
+      alias: '产品介绍',
+      url: './introduce'
+    },
+    {
+      name: 'advantage',
+      alias: '产品优势',
+      url: './advantage'
+    }
+  ];
 
   constructor(
     private productContentService: ProductContentService,
@@ -27,19 +38,6 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     let moduleType = this.productUtilService.getModuleType(window.location.hash);
     this.bannerInfo = this.productBannerService.getModuleBannerInfo(moduleType);
-
-    this.tabItems = [
-      {
-        name: 'introduce',
-        alias: '产品介绍',
-        url: './introduce'
-      },
-      {
-        name: 'advantage',
-        alias: '产品优势',
-        url: './advantage'
-      }
-    ];
   }
 
   onTabChange() {
