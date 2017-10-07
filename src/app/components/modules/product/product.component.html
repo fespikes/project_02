@@ -17,15 +17,11 @@
     ></div>
   </div>
   <div class="content-layout-tab">
-    <tcc-tab>
-      <product-introduce
-        *tccTabPane="'产品介绍'"
-        [productIntroduce]="productIntroduce"
-      ></product-introduce>
-      <product-advantage
-        *tccTabPane="'产品优势'"
-        [productAdvantage]="productAdvantage"
-      ></product-advantage>
-    </tcc-tab>
+    <tdc-tab
+      [tabItems]="tabItems"
+      (onTabChange)="onTabChange($event)"
+    ></tdc-tab>
+    <router-outlet></router-outlet>
   </div>
+
 </div>

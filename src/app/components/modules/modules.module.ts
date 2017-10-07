@@ -11,6 +11,7 @@ import { ProductIntroduceComponent } from './product-introduce/product-introduce
 import { ProductAdvantageComponent } from './product-advantage/product-advantage.component';
 
 import { TuiModule } from '../../tui/tui.module';
+import { TdcModule } from '../common/components/tdc.module';
 import { I18nModule } from '../../i18n';
 import { SharedModule } from '../../shared';
 
@@ -23,6 +24,7 @@ import { ProductUtilService } from './services/product-util.service';
     CommonModule,
     ModulesRoutingModule,
     TuiModule,
+    TdcModule,
     I18nModule,
     SharedModule,
   ],
