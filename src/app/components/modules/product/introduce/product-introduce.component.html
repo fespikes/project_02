@@ -1,0 +1,19 @@
+<h3 class="sub-title">{{'MODULES.PRODUCT_FUNCTION' | translate}}</h3>
+<div class="details-box">
+  <img
+    tccImgSrc="{{productIntroduce.img.url | translate}}"
+    [ngStyle]="{'width': productIntroduce.img.width, 'height':productIntroduce.img.height}"
+  />
+  <ul
+    class="text-list"
+    [ngStyle]="{'margin-left': productIntroduce.img.width}">
+    <li
+      *ngFor="let item of productIntroduce.items"
+      [ngClass]="{'indent':item.indent}"
+    >
+      <h5 *ngIf="item.type === 'title'">{{item.content | translate}}</h5>
+      <p *ngIf="item.type === 'text'">{{item.content | translate}}</p>
+    </li>
+  </ul>
+</div>
+

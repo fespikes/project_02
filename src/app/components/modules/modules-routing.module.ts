@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ModulesComponent } from './modules.component';
 import { ProductComponent } from './product/product.component';
-import { ProductIntroduceComponent } from './product-introduce/product-introduce.component';
-import { ProductAdvantageComponent } from './product-advantage/product-advantage.component';
+import { ProductIntroduceComponent } from './product/introduce/product-introduce.component';
+import { ProductAdvantageComponent } from './product/advantage/product-advantage.component';
 
 import { TranslateDeactivator, TranslateResolver, TranslateToken } from '../../i18n';
 

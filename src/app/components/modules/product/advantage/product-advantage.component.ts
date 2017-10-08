@@ -1,8 +1,8 @@
 import { Component, OnInit, HostBinding, Input } from '@angular/core';
 
-import { ProductBannerService } from '../services/product-banner.service';
-import { ProductContentService } from '../services/product-content.service';
-import { ProductUtilService } from '../services/product-util.service';
+import { ProductBannerService } from '../../services/product-banner.service';
+import { ProductContentService } from '../../services/product-content.service';
+import { ProductUtilService } from '../../services/product-util.service';
 
 @Component({
   selector: 'product-advantage',

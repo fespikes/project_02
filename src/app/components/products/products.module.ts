@@ -62,7 +62,7 @@ import { SelfAnalysisPlatformComponent } from './data-mart/data-mart-scenarios/s
 import { MarketingAnalysisSystemComponent } from './data-mart/data-mart-scenarios/marketing-analysis-system/marketing-analysis-system.component';
 import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenarios/customer-service-managing/customer-service-managing.component';
 
-
+import { ProductsService } from './products.service';
 
 @NgModule({
   imports: [
@@ -127,7 +127,8 @@ import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenario
   ],
   providers: [
     TccModalService,
-    DataMartService
+    DataMartService,
+    ProductsService
   ],
   entryComponents: [
     TheBannerComponent,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProductIntroduceComponent } from '../product-introduce/product-introduce.component';
-import { ProductAdvantageComponent } from '../product-advantage/product-advantage.component';
+import { ProductIntroduceComponent } from './introduce/product-introduce.component';
+import { ProductAdvantageComponent } from './advantage/product-advantage.component';
 import { TabComponent } from '../../common/components/tab/tab.component';
 
 import { ProductContentService } from '../services/product-content.service';

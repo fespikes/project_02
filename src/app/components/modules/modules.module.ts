@@ -7,8 +7,8 @@ import { ModulesRoutingModule } from './modules-routing.module';
 import { ProductComponent } from './product/product.component';
 import { ModuleListComponent } from './module-list/module-list.component';
 import { ModuleTableComponent } from './module-table/module-table.component';
-import { ProductIntroduceComponent } from './product-introduce/product-introduce.component';
-import { ProductAdvantageComponent } from './product-advantage/product-advantage.component';
+import { ProductIntroduceComponent } from './product/introduce/product-introduce.component';
+import { ProductAdvantageComponent } from './product/advantage/product-advantage.component';
 
 import { TuiModule } from '../../tui/tui.module';
 import { TdcModule } from '../common/components/tdc.module';
