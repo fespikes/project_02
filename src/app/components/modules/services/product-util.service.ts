@@ -13,7 +13,6 @@ export class ProductUtilService {
   }
 
   refreshListState(list, module): any {
-    console.log(Object.keys(list));
     let attrList = Object.keys(list);
     attrList.map(attr => {
       list[attr].map(item => {

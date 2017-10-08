@@ -71,22 +71,22 @@ h3.sub-title
   padding: 6rem 5rem
   background: #fff
   border-radius: 0.4rem
+  overflow: hidden
+  font-size: 0
+
+  .img-box, .text-list
+    padding-bottom: 100rem
+    margin-bottom: -100rem
+    display: inline-block
 
   .img
     background-repeat: no-repeat
   .diagram
-    float: left
     padding: 40rem 40rem 2.1rem 7rem
     display: inline-block
 
-  img /*this not unify*/
-    float: left
-    display: inline-block
-
   .text-list
-    padding-bottom: 100rem
-    margin-bottom: -100rem
-    overflow: hidden
+
     li
       padding-left: 8rem
       padding-right: 3rem
@@ -117,8 +117,15 @@ h3.sub-title
         top: 0.7rem
         border-radius: 0.3rem
         background: $tdcCommonBlue
+
     .intent
       padding-left: 1rem
+
+  .fl
+    float: left
+
+  .fr
+    float: right
 
 .details-box.text
   padding: 4.6rem 5rem

@@ -1,9 +1,11 @@
 <h3 class="sub-title">{{'MODULES.PRODUCT_FUNCTION' | translate}}</h3>
-<div class="details-box">
-  <img
-    tccImgSrc="{{productIntroduce.img.url | translate}}"
-    [ngStyle]="{'width': productIntroduce.img.width, 'height':productIntroduce.img.height}"
-  />
+<div class="details-box clearfix">
+  <div class="img-box fl">
+    <img
+      tccImgSrc="{{productIntroduce.img.url | translate}}"
+      [ngStyle]="{'width': productIntroduce.img.width, 'height':productIntroduce.img.height}"
+    />
+  </div>
   <ul
     class="text-list"
     [ngStyle]="{'margin-left': productIntroduce.img.width}">
