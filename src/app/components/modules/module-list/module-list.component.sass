@@ -1,4 +1,5 @@
 @import '../../../styles/util'
+@include clearfix
 
 \:host
 
@@ -7,6 +8,21 @@
   overflow: auto
   display: inline-block
   background-color: white
+
+  .operation
+    width: 100%
+    height: 3rem
+    padding: 0 0.5rem
+    background-color: #f2f3f7
+    svg
+      fill: #305ab5
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
+    svg:first-child
+      float: left
+    svg:last-child
+      float: right
 
   .title
     height: 6rem

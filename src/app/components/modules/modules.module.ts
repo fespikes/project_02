@@ -7,14 +7,11 @@ import { ModulesRoutingModule } from './modules-routing.module';
 import { ProductComponent } from './product/product.component';
 import { ModuleListComponent } from './module-list/module-list.component';
 import { ModuleTableComponent } from './module-table/module-table.component';
-import { ProductIntroduceComponent } from './product-introduce/product-introduce.component';
-import { ProductAdvantageComponent } from './product-advantage/product-advantage.component';
-import { ProductScenariosComponent } from './product-scenarios/product-scenarios.component';
-import { RealTimeCollectionComponent } from './product-scenarios/scenarios-tab/real-time-collection/real-time-collection.component';
-import { RealTimeMonitoringComponent } from './product-scenarios/scenarios-tab/real-time-monitoring/real-time-monitoring.component';
-import { RiskPredictComponent } from './product-scenarios/scenarios-tab/risk-predict/risk-predict.component';
+import { ProductIntroduceComponent } from './product/introduce/product-introduce.component';
+import { ProductAdvantageComponent } from './product/advantage/product-advantage.component';
 
 import { TuiModule } from '../../tui/tui.module';
+import { TdcModule } from '../common/components/tdc.module';
 import { I18nModule } from '../../i18n';
 import { SharedModule } from '../../shared';
 
@@ -27,6 +24,7 @@ import { ProductUtilService } from './services/product-util.service';
     CommonModule,
     ModulesRoutingModule,
     TuiModule,
+    TdcModule,
     I18nModule,
     SharedModule,
   ],
@@ -37,10 +35,6 @@ import { ProductUtilService } from './services/product-util.service';
     ProductComponent,
     ProductIntroduceComponent,
     ProductAdvantageComponent,
-    ProductScenariosComponent,
-    RealTimeCollectionComponent,
-    RealTimeMonitoringComponent,
-    RiskPredictComponent,
   ],
   providers: [
     ProductContentService,

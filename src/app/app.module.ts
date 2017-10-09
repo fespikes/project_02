@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { TuiModule, TccModalService } from './tui';
+import { TdcModule } from './components/common/components/index';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -48,6 +49,7 @@ import { BusinessScenarioModule } from './components/business-scenario/business-
     BrowserModule,
     HttpModule,
     TuiModule,
+    TdcModule,
     SharedModule,
 
     HomeModule,

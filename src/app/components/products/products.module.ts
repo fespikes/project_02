@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiModule, TccModalService } from '../../tui';
+import { TdcModule } from '../common/components/tdc.module';
 
 import { ProductsRoutingModule } from './products-routing.module';
 
@@ -61,12 +62,13 @@ import { SelfAnalysisPlatformComponent } from './data-mart/data-mart-scenarios/s
 import { MarketingAnalysisSystemComponent } from './data-mart/data-mart-scenarios/marketing-analysis-system/marketing-analysis-system.component';
 import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenarios/customer-service-managing/customer-service-managing.component';
 
-
+import { ProductsService } from './products.service';
 
 @NgModule({
   imports: [
     CommonModule,
     TuiModule,
+    TdcModule,
     DataWarehouseModule,
     ProductsRoutingModule
   ],
@@ -86,7 +88,7 @@ import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenario
     ScenariosComponent,
     ComponentIntroComponent,
     ExpenseExplanationComponent,
-    
+
     TabsComponent,
     DataMartFunctionalitiesComponent,
     FunctionalitiesDirective,
@@ -125,7 +127,8 @@ import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenario
   ],
   providers: [
     TccModalService,
-    DataMartService
+    DataMartService,
+    ProductsService
   ],
   entryComponents: [
     TheBannerComponent,

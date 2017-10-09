@@ -18,73 +18,43 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.INTRODUCE_1',
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.INTRODUCE_2',
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.INTRODUCE_3',
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.INTRODUCE_4',
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.INTRODUCE_5',
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.INTRODUCE_6',
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.INTRODUCE_7',
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.INTRODUCE_8',
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.INTRODUCE_9',
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.INTRODUCE_10',
             }
           ]
@@ -99,80 +69,47 @@ export class ProductContentService {
           },
           'items':[
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_1'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': true,
-              'title': true,
+              'type': 'title',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_2'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': true,
-              'title': false,
+              'type': 'text',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_3'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': true,
-              'title': true,
+              'type': 'title',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_4'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': true,
-              'title': false,
+              'type': 'text',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_5'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': true,
-              'title': true,
+              'type': 'title',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_6'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': true,
-              'title': false,
+              'type': 'text',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_7'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': true,
-              'title': true,
+              'type': 'title',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_8'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': true,
-              'title': false,
+              'type': 'text',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_9'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': true,
-              'title': true,
+              'type': 'title',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_10'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': true,
-              'title': false,
+              'type': 'text',
               'content':'MODULES.SLIPSTREAM.INTRODUCE_11'
             }
           ]
@@ -187,33 +124,23 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.INTRODUCE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.INTRODUCE_2'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.INTRODUCE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.INTRODUCE_4'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.INTRODUCE_5'
             }
           ]
@@ -228,31 +155,19 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.INTRODUCE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.INTRODUCE_2'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.INTRODUCE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.INTRODUCE_4'
             }
           ]
@@ -267,59 +182,38 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.INTRODUCE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.INTRODUCE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.INTRODUCE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.INTRODUCE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
               'indent': true,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.INTRODUCE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
               'indent': true,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.INTRODUCE_6'
             },
             {
-              'chapter': true,
-              'paragraph': false,
               'indent': true,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.INTRODUCE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.INTRODUCE_8'
             }
           ]
@@ -334,80 +228,47 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.INTRODUCE_1'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.INTRODUCE_2'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.INTRODUCE_3'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.INTRODUCE_4'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.INTRODUCE_5'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.INTRODUCE_6'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.INTRODUCE_7'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.INTRODUCE_8'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.INTRODUCE_9'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'titile',
               'content': 'MODULES.SOPHON.INTRODUCE_10'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.INTRODUCE_11'
             }
           ]
@@ -422,94 +283,55 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.INTRODUCE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.INTRODUCE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.INTRODUCE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.INTRODUCE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.INTRODUCE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.INTRODUCE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.INTRODUCE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.INTRODUCE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.INTRODUCE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.INTRODUCE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.INTRODUCE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.INTRODUCE_10'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.INTRODUCE_11'
             }
           ]
@@ -524,39 +346,30 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.INTRODUCE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.INTRODUCE_2'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.INTRODUCE_3'
             },
             {
-              'chapter': false,
-              'paragraph': true,
               'indent': true,
+              'type': 'text',
               'content': 'MODULES.HADOOP.INTRODUCE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
               'indent': true,
+              'type': 'text',
               'content': 'MODULES.HADOOP.INTRODUCE_5'
             },
             {
-              'chapter': false,
-              'paragraph': true,
               'indent': true,
+              'type': 'text',
               'content': 'MODULES.HADOOP.INTRODUCE_6'
             }
           ]
@@ -571,101 +384,59 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.INTRODUCE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.INTRODUCE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.INTRODUCE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.INTRODUCE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.INTRODUCE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.INTRODUCE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.INTRODUCE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.INTRODUCE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.INTRODUCE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.INTRODUCE_10'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.INTRODUCE_11'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.INTRODUCE_12'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.INTRODUCE_13'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.INTRODUCE_14'
             }
           ]
@@ -680,101 +451,59 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.INTRODUCE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.INTRODUCE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.INTRODUCE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.INTRODUCE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.INTRODUCE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.INTRODUCE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.INTRODUCE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.INTRODUCE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.INTRODUCE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.INTRODUCE_10'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.INTRODUCE_11'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.INTRODUCE_12'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.INTRODUCE_13'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.INTRODUCE_14'
             }
           ]
@@ -789,73 +518,43 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_3'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.INTRODUCE_10'
             }
           ]
@@ -870,66 +569,39 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.INTRODUCE_1'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GOVERNOR.INTRODUCE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.INTRODUCE_3'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GOVERNOR.INTRODUCE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.INTRODUCE_5'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GOVERNOR.INTRODUCE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.INTRODUCE_7'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GOVERNOR.INTRODUCE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.INTRODUCE_9'
             }
           ]
@@ -944,80 +616,47 @@ export class ProductContentService {
           },
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.INTRODUCE_1'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.INTRODUCE_2'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.INTRODUCE_3'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.INTRODUCE_4'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.INTRODUCE_5'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.INTRODUCE_6'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.INTRODUCE_7'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.INTRODUCE_8'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.INTRODUCE_9'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.INTRODUCE_10'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.INTRODUCE_11'
             }
           ]
@@ -1116,73 +755,43 @@ export class ProductContentService {
         productAdvantage = {
           'items':[
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title':true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title':true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title':true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title':true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title':true,
+              'type': 'title',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.INCEPTOR.ADVANTAGE_10'
             }
           ]
@@ -1192,73 +801,43 @@ export class ProductContentService {
         productAdvantage = {
           'items': [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SLIPSTREAM.ADVANTAGE_10'
             }
           ]
@@ -1268,59 +847,35 @@ export class ProductContentService {
         productAdvantage = {
           'items': [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.DISCOVER.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.DISCOVER.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.DISCOVER.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.DISCOVER.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.DISCOVER.ADVANTAGE_8'
             }
           ]
@@ -1330,73 +885,43 @@ export class ProductContentService {
         productAdvantage = {
           'items': [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.HYPERBASE.ADVANTAGE_10'
             }
           ]
@@ -1406,59 +931,35 @@ export class ProductContentService {
         productAdvantage = {
           'items': [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SEARCH.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SEARCH.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SEARCH.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SEARCH.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SEARCH.ADVANTAGE_8'
             }
           ]
@@ -1468,101 +969,59 @@ export class ProductContentService {
         productAdvantage = {
           'items': [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.ADVANTAGE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.ADVANTAGE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.ADVANTAGE_10'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.ADVANTAGE_11'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.ADVANTAGE_12'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.SOPHON.ADVANTAGE_13'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.SOPHON.ADVANTAGE_14'
             }
           ]
@@ -1572,59 +1031,35 @@ export class ProductContentService {
         productAdvantage = {
           'items': [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GUARDIAN.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GUARDIAN.ADVANTAGE_8'
             }
           ]
@@ -1634,51 +1069,35 @@ export class ProductContentService {
         productAdvantage = {
           'items': [
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.ADVANTAGE_1'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.ADVANTAGE_5'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
+              'type': 'text',
               'content': 'MODULES.HADOOP.ADVANTAGE_8'
             }
           ]
@@ -1688,87 +1107,51 @@ export class ProductContentService {
         productAdvantage = {
           items: [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.ADVANTAGE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.ADVANTAGE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.ADVANTAGE_10'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.PILOT.ADVANTAGE_11'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.PILOT.ADVANTAGE_12'
             }
           ]
@@ -1778,73 +1161,43 @@ export class ProductContentService {
         productAdvantage = {
           items: [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.WORKFLOW.ADVANTAGE_10'
             }
           ]
@@ -1854,101 +1207,59 @@ export class ProductContentService {
         productAdvantage = {
           items: [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_10'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_11'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_12'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_13'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.TRANSPORTER.ADVANTAGE_14'
             }
           ]
@@ -1958,59 +1269,35 @@ export class ProductContentService {
         productAdvantage = {
           items: [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GOVERNOR.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GOVERNOR.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GOVERNOR.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.GOVERNOR.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.GOVERNOR.ADVANTAGE_8'
             }
           ]
@@ -2020,73 +1307,43 @@ export class ProductContentService {
         productAdvantage = {
           items: [
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.ADVANTAGE_1'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.ADVANTAGE_2'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.ADVANTAGE_3'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.ADVANTAGE_4'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.ADVANTAGE_5'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.ADVANTAGE_6'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.ADVANTAGE_7'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.ADVANTAGE_8'
             },
             {
-              'chapter': false,
-              'paragraph': true,
-              'indent': false,
-              'title': true,
+              'type': 'title',
               'content': 'MODULES.RUBIK.ADVANTAGE_9'
             },
             {
-              'chapter': true,
-              'paragraph': false,
-              'indent': false,
-              'title': false,
+              'type': 'text',
               'content': 'MODULES.RUBIK.ADVANTAGE_10'
             }
           ]

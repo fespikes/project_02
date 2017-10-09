@@ -2,8 +2,13 @@
 <h3 class="sub-title">产品功能</h3>
 
 <div class="details-box">
-	<div class="diagram"></div>
-	<ul class="text-list">
+  <div class="img-box fl">
+    <div class="diagram"></div>
+  </div>
+	<ul
+    class="text-list"
+    [ngStyle]="{'margin-left': '470px'}"
+  >
 	<!--TDH-DW底层使用Transwarp Operating System，用于集群资源管理、容器化部署等。数据平台层包含大数据分析软件Inceptor 和 NoSQL 数据库 Hyperbase，安全管理软件Quardian 以及Hadoop2.7.2。工具层包含数据仓库开发工具 Transwarp Studio，可以支持数据整合、工作流调度、数据治理以及报表工具等数据业务。
 
 	帮助企业构建基于大数据的数据仓库、操作型数据仓库以及数据湖等服务。

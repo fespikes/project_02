@@ -1,6 +1,11 @@
+<div class="operation clearfix">
+  <svg tccIcon="angle-left"></svg>
+  <svg tccIcon="menu-collapse"></svg>
+</div>
+
 <div class="title">
-    <span>{{'MODULES.CLOUD_PRODUCT_COMPONENT' | translate}}</span>
-  </div>
+  <span>{{'MODULES.CLOUD_PRODUCT_COMPONENT' | translate}}</span>
+</div>
 
 <div *ngFor="let type of moduleTypes">
   <div class="module-type" (click)="toggleModules(type)">
