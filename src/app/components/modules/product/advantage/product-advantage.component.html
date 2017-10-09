@@ -1,0 +1,14 @@
+<h3 class="sub-title">{{'MODULES.PRODUCT_FUNCTION' | translate}}</h3>
+<div class="details-box text">
+  <ul class="text-list">
+    <li
+      *ngFor="let item of productAdvantage.items"
+      [ngStyle]="{'padding-left': 0}"
+      [ngClass]="{'indent':item.indent}"
+    >
+      <h5 *ngIf="item.type === 'title'">{{item.content | translate}}</h5>
+      <p *ngIf="item.type === 'text'">{{item.content | translate}}</p>
+    </li>
+  </ul>
+</div>
+

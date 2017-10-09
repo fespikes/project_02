@@ -1,7 +1,12 @@
-<p> modules works!</p>
-<tcc-submenu >
-  <tcc-submenu-list [menuTitle]="menuTitle" [items]="menuItems"></tcc-submenu-list>
-</tcc-submenu>
+<div class="products-menu clearfix">
+  <module-list
+    [moduleItems]="moduleItems"
+    [moduleTypes]="moduleTypes"
+    (onMoudleChange)="onModuleChange($event)"
+  ></module-list>
+</div>
 
-<router-outlet></router-outlet>
+<div class="products-details clearfix">
+  <router-outlet></router-outlet>
+</div>
 

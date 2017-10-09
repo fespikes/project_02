@@ -1,0 +1,15 @@
+<ul class="clearfix">
+  <li
+    *ngFor="let item of tabItems"
+    (click)="tabChange(item.type)"
+  >
+    <a
+      [routerLink]="item.url"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
+    >
+      <!--{{item.alias | translate}}-->
+      {{ item.alias }} <!-- for unify code in version 1 -->
+    </a>
+  </li>
+</ul>

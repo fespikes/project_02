@@ -42,7 +42,7 @@ const items = [{
 })
 export class NavTopComponent implements OnInit {
 
-  @HostBinding('class.tcc-nav-wrapper') hostClass = true;
+  @HostBinding('class.nav-wrapper') hostClass = true;
 
   private subMenuItems: any;
 

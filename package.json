@@ -6,11 +6,11 @@
     "ng": "ng",
     "start": "ng serve",
     "i18n": "ng xi18n --output-path src/i18n",
+    "icon": "node scripts/generateIconSymbol",
     "build": "ng build",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix --type-check",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,

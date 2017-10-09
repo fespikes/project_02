@@ -13,15 +13,10 @@
 </div>
 
 <div class="tab-box">
-	<ul>
-		<li><a routerLink="./functionalities" routerLinkActive="active" class="">产品功能</a></li>
-		<li><a routerLink="./advantages" routerLinkActive="active">产品优势</a></li>
-		<li><a routerLink="./scenarios" routerLinkActive="active">应用场景</a></li>
-		<li><a routerLink="./component-intro/tdh-platform-products" routerLinkActive="active">组件介绍</a></li>
-		<!-- 
-			<li><a routerLink="./expense-explanation" routerLinkActive="active">费用说明</a></li> 
-			-->
-	</ul>
+  <tdc-tab
+    [tabItems]="tabItems"
+    (onTabChange)="onTabChange($event)"
+  ></tdc-tab>
 	<div class="tab-sub">
 		<router-outlet></router-outlet>
 	</div>

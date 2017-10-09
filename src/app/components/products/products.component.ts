@@ -21,32 +21,32 @@ export class ProductsComponent implements OnInit {
 		},
 		{
 		  name: '数据集市',
-		  url: `/products/data-mart`,
+		  url: `/products/data-mart/functionalities`,
 		  icon: 'user'
 		},
 		{
 		  name: '信息检索',
-		  url: `/products/info-retrieval`,
+		  url: `/products/info-retrieval/functionalities`,
 		  icon: 'user'
 		},
 		{
 		  name: '关系数据库',
-		  url: `/products/relational-database`,
+		  url: `/products/relational-database/functionalities`,
 		  icon: 'user'
 		},
 		{
 		  name: '深度学习',
-		  url: `/products/deep-learning`,
+		  url: `/products/deep-learning/functionalities`,
 		  icon: 'user'
 		},
 		{
 		  name: '实时计算',
-		  url: `/products/realtime-computation`,
+		  url: `/products/realtime-computation/functionalities`,
 		  icon: 'user'
 		},
 		{
 		  name: '数据分析与挖掘',
-		  url: `/products/analysis-mining`,
+		  url: `/products/analysis-mining/functionalities`,
 		  icon: 'user'
 		},
 	];
@@ -55,7 +55,6 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  	console.log(11);
   }
 
 }

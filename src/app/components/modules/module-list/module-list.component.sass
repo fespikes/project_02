@@ -1,0 +1,98 @@
+@import '../../../styles/util'
+@include clearfix
+
+\:host
+
+  width: 100%
+  height: 100vh
+  overflow: auto
+  display: inline-block
+  background-color: white
+
+  .operation
+    width: 100%
+    height: 3rem
+    padding: 0 0.5rem
+    background-color: #f2f3f7
+    svg
+      fill: #305ab5
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
+    svg:first-child
+      float: left
+    svg:last-child
+      float: right
+
+  .title
+    height: 6rem
+    line-height: 6rem
+    width: 100%
+    padding-left: 2rem
+    padding-bottom: 0
+    border-bottom: 1px solid #e4e7ee
+    font-weight: bold
+    color: #fff
+    background: #2481e3
+
+  .module-type
+    height: 3.75rem
+    line-height: 3.75rem
+    padding: 0 1rem 0 1.875rem
+    border-bottom: 1px solid #e4e7ee
+    color: $text-dark
+    user-select: none
+    cursor: default
+
+    svg
+      width: 2rem
+      height: 2rem
+      fill: $brandblue
+      margin-right: 0.5rem
+      transition: transform 0.4s
+
+      &.expanded
+        transform: rotate(180deg)
+
+  .module-list
+    background-color: $ghostwhite
+    max-height: 0
+    visibility: hidden
+    opacity: 0
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1)
+    overflow: hidden
+
+    &.expanded
+      max-height: 125rem
+      opacity: 1
+      visibility: visible
+      transition: all 1s ease-in-out
+
+    &-item
+      height: 3.75rem
+      line-height: 3.75rem
+      display: block
+      padding: 0 1rem 0 3.875rem
+      color: $text-dark
+      user-select: none
+      cursor: default
+      font-size: 0
+      text-decoration: none
+      transition: all .4s
+
+      &.selected
+        background-color: #2481e3
+        color: #fff
+        svg
+          fill: #fff
+
+      span
+        font-size: 1.2rem
+        display: inline-block
+        padding-left: 1rem
+
+      svg
+        fill: #b9c1cf
+        position: relative
+        top: 0.2rem
+

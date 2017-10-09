@@ -28,7 +28,6 @@ const scenarioRoutes:Routes = [
     // CommonModule,
     RouterModule.forChild(scenarioRoutes)
   ],
-  declarations: [],
   exports: [
   	RouterModule
   ]

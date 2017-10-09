@@ -1,0 +1,24 @@
+<div class="module-table">
+  <div class="table-header">
+    <span
+      *ngFor="let column of columns"
+      [ngStyle]="{'width': column.width}"
+    >
+      {{column.title | translate}}
+    </span>
+  </div>
+  <div class="table-body">
+    <div *ngFor="let row of rows">
+      <span *ngFor="let attr of getKeys(row)">
+        <svg
+          *ngIf="row[attr].svg"
+          tccIcon="{{row[attr].name}}"
+          size="sm"
+        ></svg>
+        <span *ngIf="!row[attr].svg">
+          {{row[attr].name | translate}}
+        </span>
+      </span>
+    </div>
+  </div>
+</div>

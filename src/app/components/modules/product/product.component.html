@@ -1,0 +1,22 @@
+
+<div class="details-banner">
+  <div class="slogans">
+    <h3 class="title">{{bannerInfo.title | translate}}</h3>
+    <p>{{bannerInfo.subTitle | translate}}</p>
+  </div>
+  <div
+    class="adv-image"
+    [ngStyle]="{'background': 'url(' + bannerInfo.logoUrl + ') no-repeat'}"
+  ></div>
+</div>
+
+<div class="tab-box">
+  <tdc-tab
+    [tabItems]="tabItems"
+    (onTabChange)="onTabChange($event)"
+  ></tdc-tab>
+  <div class="tab-sub">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

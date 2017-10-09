@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ProductsService } from '../products.service';
+
 @Component({
   selector: 'tdc-deep-learning',
   templateUrl: './deep-learning.component.html',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeepLearningComponent implements OnInit {
 
-  constructor() { }
+  tabItems = [];
+  constructor(
+    private productsService: ProductsService
+  ) { }
 
   ngOnInit() {
+    this.tabItems = this.productsService.getProductTabs();
   }
 
+  onTabChange() {
+
+  }
 }
