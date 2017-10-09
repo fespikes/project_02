@@ -1,13 +1,12 @@
-<div class="panel-left">
-  <div class="slide-back clearfix">
-    <svg tccIcon="angle-left"></svg>
-    <svg tccIcon="menu-collapse"></svg>
-  </div>
+<div class="products-menu clearfix">
   <module-list
     [moduleItems]="moduleItems"
     [moduleTypes]="moduleTypes"
     (onMoudleChange)="onModuleChange($event)"
   ></module-list>
 </div>
-<router-outlet></router-outlet>
+
+<div class="products-details clearfix">
+  <router-outlet></router-outlet>
+</div>
 

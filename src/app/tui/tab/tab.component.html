@@ -4,6 +4,9 @@
     *ngFor="let pane of panes; let index = index"
     [class.active]="index === selectedIndex"
     (click)="selectPane(pane, index, false)"
+    [routerLink]="pane.tccTabUrl"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
   >
     {{pane.tccTabPane | tccDefault | translate}}
   </div>

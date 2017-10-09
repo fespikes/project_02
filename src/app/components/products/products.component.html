@@ -1,13 +1,11 @@
 
-<div class="products-box">
-	
-	<tcc-submenu [backUrl]="backUrl">
-	  <tcc-submenu-list [menuTitle]="menuTitle" [items]="menuItems"></tcc-submenu-list>
-	</tcc-submenu>
+<div class="products-menu clearfix">
+  <tcc-submenu [backUrl]="backUrl">
+    <tcc-submenu-list [menuTitle]="menuTitle" [items]="menuItems"></tcc-submenu-list>
+  </tcc-submenu>
+</div>
 
-	<div class="products-details">
-		<router-outlet></router-outlet>
-	</div>
-
+<div class="products-details">
+  <router-outlet></router-outlet>
 </div>
 

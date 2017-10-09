@@ -20,10 +20,12 @@ import { TdhPlatformProductsComponent } from './component-intro/tdh-platform-pro
 import { TdhDevKitsComponent } from './component-intro/tdh-dev-kits/tdh-dev-kits.component';
 import { OperationDevToolsComponent } from './component-intro/operation-dev-tools/operation-dev-tools.component';
 
+import { TdcModule } from '../../common/components/tdc.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    TdcModule,
     DataWarehouseRoutingModule
   ],
   declarations: [
@@ -32,14 +34,15 @@ import { OperationDevToolsComponent } from './component-intro/operation-dev-tool
   	// ScenariosComponent,
   	// ComponentIntroComponent,
   	// ExpenseExplanationComponent
-    
+
     MultiTenancyPlatformComponent,
   	BuildDataWarehouseComponent,
   	DataLakeComponent,
   	DataGovernancePlatformComponent,
-    
+
   	TdhPlatformProductsComponent,
   	TdhDevKitsComponent,
-  	OperationDevToolsComponent]
+  	OperationDevToolsComponent
+  ]
 })
 export class DataWarehouseModule { }
