@@ -1,3 +1,5 @@
+@import '../common/style/layout'
+
 $f12: 1.2rem
 $f14: 1.4rem
 $f16: 1.6rem
@@ -16,9 +18,9 @@ $h60: 60px
   overflow: auto
   font-size: $f16
   font-weight: 500
-
   
   .top-nav-ul
+    @extend .center-box
     li
       float: left
       height: 60px

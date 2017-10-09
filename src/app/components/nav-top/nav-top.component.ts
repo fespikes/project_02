@@ -7,7 +7,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class NavTopComponent implements OnInit {
 
-  @HostBinding('class.tcc-nav-wrapper') hostClass = true;
+  @HostBinding('class.nav-wrapper') hostClass = true;
 
   constructor() { }
 

@@ -1,3 +1,4 @@
+@import '../common/style/layout'
 
 $f12: 1.2rem;
 
@@ -7,6 +8,7 @@ $bg-color: #031129
   background: $bg-color
 
 .nav-btm-ul
+  @extend .center-box
   display: flex
   flex-wrap: wrap
   justify-content: space-evenly		/*水平方向的排布*/
@@ -25,4 +27,5 @@ dl
   dd
     font-size: 1.2rem
 
-  
+.bottom
+  @extend .center-box
