@@ -13,7 +13,6 @@ import { NormalIssuesComponent } from './documents-list/normal-issues/normal-iss
 import { FreshGuidesComponent } from './documents-list/fresh-guides/fresh-guides.component';
 import { ProductListComponent } from './documents-list/product-document/product-list/product-list.component';
 
-import { TabComponent } from '../common/components/tab/tab.component';
 import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 import { SearchComponent } from './common/search/search.component';
 
@@ -22,6 +21,7 @@ import { DocumentAPIService } from './services/document.api.service';
 import { TdcApiService } from '../../shared/services/api.service';
 
 import { TuiModule } from '../../tui/tui.module';
+import { TdcModule } from '../common/components/tdc.module';
 import { I18nModule } from '../../i18n';
 import { SharedModule } from '../../shared';
 
@@ -32,6 +32,7 @@ import { SharedModule } from '../../shared';
     ReactiveFormsModule,
     DocumentsSupportRoutingModule,
     TuiModule,
+    TdcModule,
     I18nModule,
     SharedModule
   ],
@@ -44,7 +45,6 @@ import { SharedModule } from '../../shared';
     NormalIssuesComponent,
     FreshGuidesComponent,
     ProductListComponent,
-    TabComponent,
     SearchComponent,
     BreadcrumbComponent
   ],

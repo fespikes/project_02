@@ -28,23 +28,23 @@ export class DocumentsListComponent implements OnInit {
     let docsType = this.documentUtilService.getDocsType(window.location.hash);
     this.crumbItems = this.documentUtilService.getDocsCrumb(docsType, '');
 
-    this.tabItems = [
+    this.tabItems = [ //for unify i18n in version 1
       {
         name: 'productDocument',
         type: 'products',
-        alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
+        alias: '产品文档',
         url: './products'
       },
       {
         name: 'normalIssue',
         type: 'issues',
-        alias: 'DOCUMENTS.NORMAL_ISSUE',
+        alias: '常见问题',
         url: './issues'
       },
       {
         name: 'freshGuide',
         type: 'guides',
-        alias: 'DOCUMENTS.FRESH_GUIDE',
+        alias: '新手入门',
         url: './guides'
       }
     ];
