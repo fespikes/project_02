@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { I18nModule } from '../i18n';
 
 import { AvatarComponent } from './avatar';
+import { AdvComponent } from './adv';
 import {
   BtnDirective,
   BtnOutlineDirective,
@@ -88,6 +89,7 @@ import { TextareaComponent } from './form/textarea/textarea.component';
     I18nModule,
   ],
   declarations: [
+    AdvComponent,
     AvatarComponent,
     BgImgUrlDirective,
     BtnDirective,
@@ -139,6 +141,7 @@ import { TextareaComponent } from './form/textarea/textarea.component';
     CarouselContentDirective,
   ],
   exports: [
+    AdvComponent,
     AvatarComponent,
     BgImgUrlDirective,
     BtnDirective,

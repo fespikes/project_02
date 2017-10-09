@@ -1,0 +1,22 @@
+<div
+	class="home-banner"
+	[ngStyle]="{background: currentAdv.bgColor +' url('+ currentAdv.bgUrl + ') no-repeat center top'}"
+>
+  <ul class="advs">
+		<li *ngFor="let adv of advList; let idx = index" [class.active]="currentIdx==idx">
+			<h2>{{adv.h2}}</h2>
+			<p>{{adv.p}}</p>
+		</li>
+  </ul>
+
+  <a class="arrow left" (click)="goPrevious()"></a>
+  <a class="arrow right" (click)="goAfter()"></a>
+
+  <ul class="crumbs">
+    <li
+    	*ngFor="let adv of advList; let idx=index"
+    	[class.big]="currentIdx==idx">
+			<span (click)="setInterval(idx)">{{idx}}</span>
+		</li>
+  </ul>
+</div>
