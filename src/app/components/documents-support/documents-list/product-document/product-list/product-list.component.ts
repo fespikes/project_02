@@ -38,8 +38,6 @@ export class ProductListComponent implements OnInit {
   }
 
   viewDocDetail(category, doc) {
-    console.log('category=', category);
-    console.log('doc=', doc);
     //this.router.navigate([`/docs-search/${category.name}/${category.currentVersion.name}/${doc.name}/index`]);
     this.router.navigate([`/docs-detail/TDH/5.0/manual/index`]);
   }

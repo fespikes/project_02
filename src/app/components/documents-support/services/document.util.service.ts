@@ -104,6 +104,29 @@ export class DocumentUtilService {
     return crumbItems;
   }
 
+  getTabItems() {
+    return [ //for unify i18n in version 1
+      {
+        name: 'productDocument',
+        type: 'products',
+        alias: '产品文档',
+        url: './products'
+      },
+      {
+        name: 'normalIssue',
+        type: 'issues',
+        alias: '常见问题',
+        url: './issues'
+      },
+      {
+        name: 'freshGuide',
+        type: 'guides',
+        alias: '新手入门',
+        url: './guides'
+      }
+    ];
+  }
+
   addDocsVersions(data): any[] {
     data.map(category => {
       let versionList = [];
@@ -125,5 +148,22 @@ export class DocumentUtilService {
       docList.push(doc);
     });
     return docList;
+  }
+
+  traversalTree(treeModel, expanded): any[] {
+
+    var stack = [], item;
+    for (var i = 0; i < treeModel.length; i++) {
+      stack.push(treeModel[i]);
+    }
+    while (stack.length) {
+      item = stack.shift();
+      item.expanded = expanded;
+      if (item.children && item.children.length) {
+        stack = stack.concat(item.children);
+      }
+    }
+
+    return treeModel;
   }
 }

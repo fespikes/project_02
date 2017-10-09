@@ -15,6 +15,7 @@ import { ProductListComponent } from './documents-list/product-document/product-
 
 import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 import { SearchComponent } from './common/search/search.component';
+import { TreeComponent } from './common/tree/tree.component';
 
 import { DocumentUtilService } from './services/document.util.service';
 import { DocumentAPIService } from './services/document.api.service';
@@ -46,6 +47,7 @@ import { SharedModule } from '../../shared';
     FreshGuidesComponent,
     ProductListComponent,
     SearchComponent,
+    TreeComponent,
     BreadcrumbComponent
   ],
   providers: [

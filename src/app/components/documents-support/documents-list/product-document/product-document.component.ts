@@ -29,9 +29,7 @@ export class ProductDocumentComponent implements OnInit {
   getDocsFolder() {
     this.documentAPIService.getTileDocs().subscribe(
       result => {
-        console.log('result=', result);
         this.docsFolderList = this.documentUtilService.addDocsVersions(result);
-        console.log('this.docsFolderList=', this.docsFolderList);
       }
     );
   }

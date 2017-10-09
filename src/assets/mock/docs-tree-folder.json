@@ -1,51 +1,46 @@
 [
   {
-    "name":"OBJ",
-    "sub":[
+    "name": "searchObject",
+    "alias": "搜索对象",
+    "children": [
       {
-        "name":"Product Document",
-        "sub":[]
+        "name": "productDocument",
+        "alias": "产品文档",
+        "type": "category",
+        "children": []
       },
       {
-        "name":"Normal Issue",
-        "sub":[]
+        "name": "commonIssue",
+        "alias": "常见问题",
+        "type": "category",
+        "children": []
       },
       {
-        "name":"Fresh Guide",
-        "sub":[]
+        "name": "freshGuide",
+        "alias": "新手入门",
+        "type": "category",
+        "children": []
       }
     ]
   },
   {
-    "name":"Component",
-    "sub":[
+    "name": "cloudProduct",
+    "alias": "云产品",
+    "children": [
       {
-        "name":"Inceptor",
-        "sub":[
+        "name": "dataWarehouse",
+        "alias": "数据仓库",
+        "type": "component",
+        "children": [
           {
-            "name":"TDH 5.0",
-            "sub":[]
+            "name": "version1.0",
+            "alias": "version 1.0",
+            "type": "version"
           },
           {
-            "name":"TDH 4.8",
-            "sub":[]
-          }
-        ]
-      },
-      {
-        "name":"Discover",
-        "sub":[
-          {
-            "name":"InceptorManual",
-            "sub":[
-
-            ]
-          },
-          {
-            "name":"InstallManual",
-            "sub":[
-
-            ]
+            "name": "version2.0",
+            "alias": "version 2.0",
+            "type": "version"
           }
         ]
       }

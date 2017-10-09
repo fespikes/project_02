@@ -4,6 +4,7 @@
 >
   <input
     class="search-field"
+    [(ngModel)]="keyword"
     placeholder="{{'DOCUMENTS.SEARCH_PLACEHOLDER' | translate}}" />
   <button
     (click)="documentSearch()"

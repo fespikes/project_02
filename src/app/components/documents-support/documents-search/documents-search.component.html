@@ -10,11 +10,18 @@
         <span>{{'DOCUMENTS.SEARCH_FILTER' | translate}}</span>
       </div>
       <div class="tree">
-
+        <tdc-tree
+          [treeModel]="treeModel"
+          (onSelectChange)="onSelectChange($event)"
+        ></tdc-tree>
       </div>
       <div class="operation">
-        <button>{{'DOCUMENTS.EXPAND_ALL' | translate}}</button>
-        <button>{{'DOCUMENTS.COLLAPSE_ALL' | translate}}</button>
+        <button (click)="expandAll()">
+          {{'DOCUMENTS.EXPAND_ALL' | translate}}
+        </button>
+        <button (click)="collapseAll()">
+          {{'DOCUMENTS.COLLAPSE_ALL' | translate}}
+        </button>
       </div>
     </div>
     <div class="panel-right">

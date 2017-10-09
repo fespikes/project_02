@@ -15,7 +15,7 @@ import { DocumentAPIService } from '../services/document.api.service';
 export class DocumentsListComponent implements OnInit {
   crumbItems = [];
   tabItems = [];
-  //tileDocsFolderList = [];
+
   constructor(
     private documentUtilService: DocumentUtilService,
     private documentAPIService: DocumentAPIService
@@ -28,38 +28,10 @@ export class DocumentsListComponent implements OnInit {
     let docsType = this.documentUtilService.getDocsType(window.location.hash);
     this.crumbItems = this.documentUtilService.getDocsCrumb(docsType, '');
 
-    this.tabItems = [ //for unify i18n in version 1
-      {
-        name: 'productDocument',
-        type: 'products',
-        alias: '产品文档',
-        url: './products'
-      },
-      {
-        name: 'normalIssue',
-        type: 'issues',
-        alias: '常见问题',
-        url: './issues'
-      },
-      {
-        name: 'freshGuide',
-        type: 'guides',
-        alias: '新手入门',
-        url: './guides'
-      }
-    ];
+    this.tabItems = this.documentUtilService.getTabItems();
 
-    //this.getDocsFolder();
   }
 
-  //getDocsFolder() {
-  //  this.documentSearchService.getTileDocs().subscribe(
-  //    result => {
-  //      console.log('result=', result);
-  //      this.tileDocsFolderList = result;
-  //    }
-  //  );
-  //}
 
   onTabChange(type) {
     this.crumbItems = this.documentUtilService.getDocsCrumb(type, '');

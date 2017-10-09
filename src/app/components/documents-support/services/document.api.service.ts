@@ -20,6 +20,11 @@ export class DocumentAPIService {
       .map((res) => res.json());
   }
 
+  getTreeDocs(): Observable<any> {
+    return this.http.get('./assets/mock/docs-tree-folder.json')
+      .map((res) => res.json());
+  }
+
   getDocDetail(): Observable<any> {
     return this.http.get('./assets/mock/docs-detail.json')
       .map((res) => res.json());

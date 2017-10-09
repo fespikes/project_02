@@ -26,6 +26,10 @@ const routes: Routes = [
     component: DocumentsSearchComponent
   },
   {
+    path: 'documents-support/docs-search/:keyword',
+    component: DocumentsSearchComponent
+  },
+  {
     path: 'documents-support/docs',
     component: DocumentsListComponent,
     children: [

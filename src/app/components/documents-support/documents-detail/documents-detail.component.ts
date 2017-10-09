@@ -28,13 +28,11 @@ export class DocumentsDetailComponent implements OnInit {
       'inceptor'
     );
     this.getDocDetail();
-    console.log('this.tabItems=', this.crumbItems);
   }
 
   getDocDetail() {
     this.documentAPIService.getDocDetail().subscribe(
       result => {
-        console.log('result=', result);
         this.docDetail = result;
       }
     );
