@@ -41,10 +41,15 @@
 		</ul>
 		<ul *ngIf="subMenuItems.type===submenuType.modules">
 			<li *ngFor="let item of subMenuItems.products">
-				<a routerLink="{{item.path}}">
-					<h3>{{item.title}}</h3>
-					<p>{{item.summary}}</p>
-				</a>
+				<h3>{{item.title}}</h3>
+				<dl>
+					<dd *ngFor="let product of item.products; let i = index">
+						<a>
+							<h4>{{product.title}}</h4>
+							<p>{{product.summary}}</p>
+						</a>
+					</dd>
+				</dl>
 			</li>
 		</ul>
 </div>
