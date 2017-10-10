@@ -100,6 +100,7 @@ import {
   DatepickerComponent,
 } from './datepicker';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { SlicesComponent } from './adv/slices/slices.component';
 
 
 @NgModule({
@@ -175,6 +176,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MonthViewComponent,
     YearViewComponent,
     CalendarBodyComponent,
+    SlicesComponent,
   ],
   exports: [
     AdvComponent,
