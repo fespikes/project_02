@@ -137,7 +137,7 @@ export class DocumentUtilService {
       });
       category.versionList = versionList;
       category.docsCollection = docsCollection;
-      category.currentVersion = category.sub[0];
+      category.currentVersion = category.sub[0] || {'name': ''};
     });
     return data;
   }

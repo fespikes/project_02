@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import {Http} from '@angular/http';//for mock data
+import {Http, Headers} from '@angular/http';//for mock data
 
 import { Observable } from 'rxjs/Rx';
 
@@ -16,7 +16,7 @@ export class DocumentAPIService {
   }
 
   getTileDocs(): Observable<any> {
-    return this.http.get('./assets/mock/docs-tile-folder.json')
+    return this.http.get('/v2/document/_ls')
       .map((res) => res.json());
   }
 
