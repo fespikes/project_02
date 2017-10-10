@@ -1,4 +1,9 @@
 {
+  "TUI":{
+    "SELECT":{
+      "NO_OPTIONS":"没有可选择的选项"
+    }
+  },
   "MODULES":{
     "CLOUD_PRODUCT_COMPONENT":"云产品组件",
     "TDH_PLATFORM_PRODUCT":"TDH平台产品",
