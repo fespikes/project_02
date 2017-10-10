@@ -7,27 +7,27 @@ import {
   EventEmitter,
   Host,
   AfterContentInit,
+  OnDestroy,
 } from '@angular/core';
 
 import { SELECTED_KEY } from './selectedKey.const';
-import { TableFlexService } from './table-flex.service';
 import { TableComponent } from './table.component';
+import { TableFlexService } from './table-flex.service';
 
 @Component({
   selector: 'tcc-table-head',
   templateUrl: './table-head.component.html',
 })
-export class TableHeadComponent {
+export class TableHeadComponent implements AfterContentInit, OnDestroy {
   @HostBinding('class.tcc-table-head') hostClass = true;
   @Input() selectedKey = SELECTED_KEY;
-  @Output() tccTableDataChange = new EventEmitter();
-  @Input() tccTableData = [];
 
   get selected() {
-    if (!Array.isArray(this.tccTableData)) {
+    const tccTableData = this.table.tccTableData;
+    if (!Array.isArray(tccTableData)) {
       return false;
     }
-    return !this.tccTableData
+    return !tccTableData
     .map((datum) => datum[this.selectedKey])
     .filter((selected) => selected === false || selected === undefined)
     .length;
@@ -35,14 +35,24 @@ export class TableHeadComponent {
 
   constructor(
     public element: ElementRef,
+    @Host() private table: TableComponent,
+    private tableFlex: TableFlexService,
   ) { }
 
+  ngAfterContentInit() {
+    this.tableFlex.register(this.element.nativeElement);
+  }
+
+  ngOnDestroy() {
+    this.tableFlex.unregister(this.element.nativeElement);
+  }
+
   updateData(selected) {
-    const data = this.tccTableData.map((datum) => {
+    this.table.tccTableData.forEach((datum) => {
       datum[this.selectedKey] = selected;
       return datum;
     });
-    this.tccTableDataChange.emit(data);
+    this.table.emitDataChange();
   }
 
 }

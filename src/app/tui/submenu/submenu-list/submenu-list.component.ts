@@ -1,10 +1,12 @@
 import { Component, OnInit, Input, Host } from '@angular/core';
 import { Router } from '@angular/router';
+import { SafeHtml } from '@angular/platform-browser';
 
 import { SubmenuComponent } from '../submenu.component';
 import { DropdownComponent } from '../../dropdown/dropdown.component';
 
 export interface SubmenuItem {
+  count?: number;
   name: string;
   url: string;
   icon?: string;

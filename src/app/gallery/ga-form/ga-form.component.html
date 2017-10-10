@@ -1,0 +1,121 @@
+<h2>Form</h2>
+
+<h3>Login Form</h3>
+<section>
+  <form #loginForm="ngForm" tccForm labelFlex="1" inputFlex="4" (ngSubmit)="login(loginForm.value)">
+    <tcc-form-item label="Account">
+      <tcc-input name="username" ngModel required [disabled]="loginFormDisabled"></tcc-input>
+    </tcc-form-item>
+    <tcc-form-item label="Password">
+      <tcc-input name="password" type="password" ngModel required [disabled]="loginFormDisabled"></tcc-input>
+    </tcc-form-item>
+    <tcc-form-item>
+      <tcc-checkbox name="agree" ngModel tccCompel [disabled]="loginFormDisabled">Agree To Terms</tcc-checkbox>
+    </tcc-form-item>
+    <tcc-form-item>
+      <button tccBtn="primary" [disabled]="loginForm.invalid">Login</button>
+      <button tccBtn="primary" type="button" (click)="toggleLoginFormDisable()">Toggle Disable</button>
+    </tcc-form-item>
+  </form>
+</section>
+
+<h3>Form with Default Value</h3>
+<section>
+  <form [formGroup]="userForm" tccForm labelFlex="1" inputFlex="4" addon (ngSubmit)="submit()">
+    <tcc-form-item label="Name">
+      <tcc-input
+        name="name"
+        [formControl]="userForm.controls['name']"
+        required
+      ></tcc-input>
+    </tcc-form-item>
+    <tcc-form-item label="Email">
+      <tcc-input
+        name="email"
+        email
+        [formControl]="userForm.controls['email']"
+        required
+      ></tcc-input>
+    </tcc-form-item>
+    <tcc-form-item label="Age">
+      <tcc-input
+        name="age"
+        minlength="2"
+        maxlength="2"
+        type="number"
+        [formControl]="userForm.controls['age']"
+        required
+      ></tcc-input>
+    </tcc-form-item>
+    <tcc-form-item label="Hobbies">
+      <tcc-checkbox-group
+        [formControl]="userForm.controls['hobbies']"
+        required
+      >
+        <tcc-checkbox-item value="read">Read</tcc-checkbox-item>
+        <tcc-checkbox-item value="code">Code</tcc-checkbox-item>
+      </tcc-checkbox-group>
+    </tcc-form-item>
+    <tcc-form-item label="Sex">
+      <tcc-radio-group
+        name="sex"
+        [formControl]="userForm.controls['sex']"
+        required
+      >
+        <tcc-radio-item value="male">Male</tcc-radio-item>
+        <tcc-radio-item value="female">Female</tcc-radio-item>
+      </tcc-radio-group>
+    </tcc-form-item>
+    <tcc-form-item label="Color">
+      <tcc-radio-group
+        name="color"
+        [formControl]="userForm.controls['color']"
+        required
+      >
+        <tcc-radio-item value="red">Red</tcc-radio-item>
+        <tcc-radio-item value="blue">Blue</tcc-radio-item>
+      </tcc-radio-group>
+    </tcc-form-item>
+    <tcc-form-item label="Company">
+      <tcc-select
+        style="width:100px"
+        placeholder="tcc select example"
+        [formControl]="userForm.controls['company']"
+      >
+        <tcc-select-option
+          *ngFor="let company of companies"
+          [value]="company.name"
+        >
+          {{company.name | tccDefault | translate}}
+        </tcc-select-option>
+      </tcc-select>
+    </tcc-form-item>
+    <tcc-form-item>
+      <button tccBtn="primary" [disabled]="userForm.invalid">Confirm</button>
+      <button tccBtn="primary" type="button" (click)="toggleUserFormDisable()">Toggle Disable</button>
+    </tcc-form-item>
+  </form>
+</section>
+
+<h3>Custom Error Messages</h3>
+<section>
+  <form tccForm>
+    <tcc-form-item label="Name">
+      <tcc-input name="name" ngModel required [errorMsgs]="{'required': 'GA.FORM.ERROR.NAME_REQUIRED'}"></tcc-input>
+    </tcc-form-item>
+  </form>
+</section>
+
+<h3>Radio Button Group</h3>
+<section>
+  <tcc-radio-group
+    tccRadioBtnGroup
+    name="button"
+    [(ngModel)]="button"
+  >
+    <tcc-radio-item value="b1">btn 1</tcc-radio-item>
+    <tcc-radio-item value="b2">btn 2</tcc-radio-item>
+    <tcc-radio-item value="b3">btn 3</tcc-radio-item>
+  </tcc-radio-group>
+  <p>Active button: {{button}}</p>
+</section>

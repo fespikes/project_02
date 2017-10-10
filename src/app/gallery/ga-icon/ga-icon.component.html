@@ -1,0 +1,15 @@
+<h2>Icon</h2>
+<section>
+  <div class="icon" *ngFor="let icon of icons">
+    <svg [tccIcon]="icon" size="lg"></svg>
+    <div class="icon-name" [title]="icon">{{icon}}</div>
+  </div>
+</section>
+
+<h2>Status Icon</h2>
+<section>
+  <div class="icon" *ngFor="let status of statuses">
+    <svg tccIcon [tccIconStatus]="status" size="lg"></svg>
+    <div class="icon-name" [title]="icon">{{status}}</div>
+  </div>
+</section>

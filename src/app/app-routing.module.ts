@@ -15,6 +15,10 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
 
 const routes: Routes = [
   {
+    path: 'gallery',
+    loadChildren: './gallery/gallery.module#GalleryModule',
+  },
+  {
     path: 'home',
     component: HomeComponent
   },

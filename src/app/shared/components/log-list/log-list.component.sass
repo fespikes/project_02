@@ -1,0 +1,58 @@
+@import '../../../styles/util'
+
+\:host
+  display: block
+  height: 100%
+  overflow: hidden
+
+.body
+  height: 100%
+  border-top: 1px solid $border-mute
+
+  .operations
+    height: 100%
+    overflow: auto
+
+  .operation
+    display: flex
+    align-items: center
+    height: 3rem
+    padding: 0.5rem 1rem
+    border-bottom: 1px solid $border-mute
+    white-space: nowrap
+
+    &-thumbnail
+      margin-right: 1rem
+
+    &-detail
+      flex-grow: 1
+      min-width: 0
+
+    &-operator
+      line-height: 1.25rem
+      font-size: $font-md
+
+    &-message
+      @include text-ellipsis
+      font-size: $font-sm
+      color: $text-mute
+
+    &-time
+      font-size: $font-md
+      color: $text-mute
+
+    &-more
+      @include flex-xy-center
+      background: $ghostwhite
+      line-height: 3rem
+      cursor: pointer
+      transition: color .2s
+
+      svg
+        margin: 0 0.5rem
+
+      &:hover
+        color: $brand-primary
+
+        svg
+          fill: $color-icon-hover

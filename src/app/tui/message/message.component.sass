@@ -1,0 +1,37 @@
+@import '../../styles/util'
+
+.tcc-message
+
+  &-notice
+    padding: 8px
+    text-align: center
+
+    &:first-child
+      margin-top: -8px
+
+  &-notice-content
+    padding: 8px 16px
+    border-radius: 0.25rem
+    background: #FFF
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,.2)
+    display: inline-block
+    pointer-events: all
+    font-size: $font-md
+
+    svg
+      vertical-align: text-top
+
+  &-success svg
+    fill: $brand-success
+
+  &-error svg
+    fill: $brand-danger
+
+  &-warning svg
+    fill: $brand-warning
+
+  &-info svg
+    fill: $brand-primary
+
+  &-loading svg
+    fill: $brand-default

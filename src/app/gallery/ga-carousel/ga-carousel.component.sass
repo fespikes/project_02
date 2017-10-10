@@ -1,0 +1,20 @@
+@import '../../styles/util'
+
+\:host
+  padding: 2rem
+
+.tcc-carousel
+  height: 200px
+  width: 400px
+  background: $brand-primary
+  border-radius: 0.25rem
+  box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1)
+
+  .slick-slide
+    @include flex-xy-center
+    height: 100%
+
+    h2
+      height: 200px
+      line-height: 200px
+      color: #FFF

@@ -30,11 +30,11 @@ export abstract class ElementBase<T> extends ValueAccessorBase<T> {
       (this.model.control);
   }
 
-  protected get invalid(): Observable<boolean> {
+  get invalid(): Observable<boolean> {
     return this.validate().map(v => Object.keys(v || {}).length > 0);
   }
 
-  protected get failures(): Observable<Object[]> {
+  get failures(): Observable<Object[]> {
     return this.validate()
     .map(v => Object.keys(v).map((key) => ({ key, value: v[key] })));
   }

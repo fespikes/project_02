@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CheckboxComponent } from '../../mock';
 import { TableHeadComponent } from './table-head.component';
 import { TableComponent } from './table.component';
+import { TableFlexService } from './table-flex.service';
 
 describe('TableHeadComponent', () => {
   let component: TableHeadComponent;
@@ -18,7 +19,16 @@ describe('TableHeadComponent', () => {
         TableHeadComponent,
         CheckboxComponent,
       ],
-      providers: [ TableComponent ],
+      providers: [
+        TableComponent,
+        {
+          provide: TableFlexService,
+          useValue: {
+            register() {},
+            unregister() {},
+          },
+        },
+      ],
     })
     .compileComponents();
   }));

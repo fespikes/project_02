@@ -1,19 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ImgSrcDirective } from './img/img-src.directive';
-import { BgImgUrlDirective } from './img/bg-img-url.directive';
+import { TuiModule } from '../tui';
+import { I18nModule } from '../i18n';
+
+import {
+  IconStatusDirective,
+  LogListComponent,
+  LogListService,
+  PermControlDirective,
+} from './components';
 
 @NgModule({
   imports: [
     CommonModule,
+    TuiModule,
+    I18nModule,
   ],
   declarations: [
-    ImgSrcDirective,
-    BgImgUrlDirective,
+    IconStatusDirective,
+    LogListComponent,
+    PermControlDirective,
   ],
   exports: [
-    ImgSrcDirective,
-    BgImgUrlDirective,
+    TuiModule,
+    IconStatusDirective,
+    LogListComponent,
+    PermControlDirective,
+  ],
+  providers: [
+    LogListService,
   ],
 })
 export class SharedModule { }

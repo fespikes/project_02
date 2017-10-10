@@ -1,0 +1,13 @@
+<h1>GALLERY</h1>
+
+<div class="container">
+  <ul class="nav">
+    <li *ngFor="let nav of navs">
+      <a [routerLink]="[nav]" routerLinkActive="active">
+        {{nav | uppercase}}
+      </a>
+    </li>
+  </ul>
+
+  <router-outlet></router-outlet>
+</div>

@@ -21,7 +21,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { SubmenuService } from '../submenu';
 
-import { CarouselContentDirective } from './';
+import { CarouselContentDirective } from './carousel-content.directive';
 
 @Component({
   selector: 'tcc-carousel',
@@ -33,8 +33,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
   private ngUnsubscribe = new Subject();
   private submenuSub: Subscription;
   private activeIndex = 0;
-  private transform = 'translate3d(0px, 0px, 0px)';
-  private rendering = false;
+  transform = 'translate3d(0px, 0px, 0px)';
+  rendering = false;
   private slideContents: QueryList<CarouselContentDirective>;
 
   @ContentChildren(CarouselContentDirective)
@@ -96,12 +96,6 @@ export class CarouselComponent implements OnInit, OnDestroy {
         content.width = this.hostElement.nativeElement.offsetWidth;
       });
 
-      this.renderer.removeStyle(this.slickList.nativeElement, 'height');
-      this.renderer.setStyle(
-        this.slickList.nativeElement,
-        'height',
-        `${this.hostElement.nativeElement.offsetHeight}px`,
-      );
       this.renderer.removeStyle(this.slickTrack.nativeElement, 'width');
       this.renderer.setStyle(
         this.slickTrack.nativeElement,

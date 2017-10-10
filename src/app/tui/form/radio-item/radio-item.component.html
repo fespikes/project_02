@@ -3,7 +3,6 @@
     type="radio"
     [ngModel]="radioGroup.value"
     (ngModelChange)="radioGroup.updateValue(radioValue)"
-    [ngClass]="{invalid: (invalid | async)}"
     [disabled]="radioGroup.disabled"
     [value]="radioValue"
     [name]="radioGroup.name"

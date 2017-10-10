@@ -1,0 +1,21 @@
+<input
+  type="text"
+  [tccDatepicker]="datepicker"
+  [tccDatepickerFilter]="dateFilter"
+  [min]="min"
+  [max]="max"
+  [value]="value"
+  [disabled]="disabled"
+  (dateChange)="_dateChange($event)"
+  (dateInput)="_dateInput($event)"
+  placeholder="input date"
+/>
+
+<button
+  type="button"
+  class="tcc-datepicker-toggle"
+  [disabled]="disabled"
+  (click)="_open($event)"
+  >
+  <svg tccIcon="calendar" size="md"></svg>
+</button>

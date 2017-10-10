@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs/Rx';
 
-// import { TccApiService } from '../shared';
+import { TccApiService } from '../shared/services/api.service';
 
 export const LANG_KEY = 'tcc_language';
 
@@ -10,14 +10,22 @@ export enum Language {
   en_US,
 }
 
+const BCP47Mapping = {
+  en_US: 'en-US',
+  zh_CN: 'zh-CN',
+};
+
 @Injectable()
 export class I18nLangService {
   private langId: Language;
   private currentLangSubject = new BehaviorSubject<string>(this.lang);
   current = this.currentLangSubject.asObservable().distinctUntilChanged();
+  currentBCP47 = this.current.map((lang) => {
+    return BCP47Mapping[lang];
+  });
 
   constructor(
-    // private api: TccApiService,
+    private api: TccApiService,
   ) {}
 
   set lang(lang: string) {
@@ -42,9 +50,9 @@ export class I18nLangService {
     if (!Language[lang]) {
       return;
     }
-/*    this.api.post('locale', { code: lang })
-    .subscribe(() => {
+    return this.api.post('locale', { code: lang })
+    .map(() => {
       this.lang = lang;
-    });*/
+    });
   }
 }

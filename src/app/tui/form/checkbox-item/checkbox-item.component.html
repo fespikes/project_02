@@ -3,7 +3,6 @@
     type="checkbox"
     [(ngModel)]="value"
     (ngModelChange)="updateCheckboxGroupValue()"
-    [ngClass]="{invalid: (invalid | async)}"
     [disabled]="checkboxGroup.disabled"
   >
   <ng-content></ng-content>

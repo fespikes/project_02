@@ -1,0 +1,29 @@
+<div class="body" [tccLoading]="loading">
+  <div class="operations">
+    <div *ngFor="let operation of operations" class="operation">
+      <div class="operation-thumbnail">
+        <tcc-avatar icon="user"></tcc-avatar>
+      </div>
+      <div class="operation-detail">
+        <div class="operation-operator">
+          {{operation.operator}}
+        </div>
+        <div class="operation-message" title="{{operation.displayMsg}}">
+          {{operation.displayMsg}}
+        </div>
+      </div>
+      <div class="operation-time">
+        {{operation.operateTime | date:'y.MM.dd HH:mm'}}
+      </div>
+    </div>
+
+    <div
+      class="operation-more"
+      *ngIf="hasMore"
+      (click)="showMoreOperations()"
+    >
+      {{'COMMON.SEE_MORE' | translate}}
+      <svg tccIcon="angle-down"></svg>
+    </div>
+  </div>
+</div>

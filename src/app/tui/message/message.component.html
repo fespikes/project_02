@@ -1,0 +1,20 @@
+<div
+  class="tcc-message-notice"
+  [@enterLeave]="message.state"
+  (mouseenter)="onEnter()"
+  (mouseleave)="onLeave()"
+>
+  <div class="tcc-message-notice-content">
+    <div *ngIf="!message.html" class="tcc-message-custom-content" [ngClass]="'tcc-message-' + message.type">
+      <ng-container [ngSwitch]="message.type">
+        <svg *ngSwitchCase="'success'" tccIcon="circle"></svg>
+        <svg *ngSwitchCase="'info'" tccIcon="info-circle"></svg>
+        <svg *ngSwitchCase="'warning'" tccIcon="exclamation-circle"></svg>
+        <svg *ngSwitchCase="'error'" tccIcon="cross-circle"></svg>
+        <svg *ngSwitchCase="'loading'" tccIcon="loading" class="tcc-rotate"></svg>
+      </ng-container>
+      <span>{{message.content}}</span>
+    </div>
+    <div *ngIf="message.html" [innerHTML]="message.html"></div>
+  </div>
+</div>

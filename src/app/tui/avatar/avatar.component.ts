@@ -67,9 +67,7 @@ export class AvatarComponent implements OnChanges {
     } else {
       this.textStyles = {
         transform: `scale(${scale})`,
-        position: 'absolute',
         display: 'inline-block',
-        left: `calc(50% - ${Math.round(childrenWidth / 2)}px)`,
       };
     }
   }

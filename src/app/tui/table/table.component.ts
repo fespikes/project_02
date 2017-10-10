@@ -11,8 +11,6 @@ import {
 } from '@angular/core';
 
 import { TableFlexService } from './table-flex.service';
-import { TableRowComponent } from './table-row.component';
-import { TableHeadComponent } from './table-head.component';
 
 @Component({
   selector: 'tcc-table',
@@ -21,7 +19,7 @@ import { TableHeadComponent } from './table-head.component';
     TableFlexService,
   ],
 })
-export class TableComponent implements AfterContentChecked {
+export class TableComponent {
   @HostBinding('class.tcc-table') hostClass = true;
 
   /** 标识当前表格是否处于loading状态 */
@@ -34,26 +32,28 @@ export class TableComponent implements AfterContentChecked {
     return this.empty;
   }
 
-  @ContentChildren(TableRowComponent) rows: QueryList<TableRowComponent>;
-  @ContentChild(TableHeadComponent) head: TableHeadComponent;
-  @Input() tccTableFlex: Array<number | string>;
+  @Input() set tccTableFlex(flex: Array<number| string>) {
+    this.tableFlex.flexSubject.next(flex);
+  }
+
   @Input() loading = false;
-  @Output() dataChange = new EventEmitter();
+
+  @Input() tccTableData = [];
+
+  /** 当勾选变化是会释放事件 */
+  @Output() tccTableDataChange = new EventEmitter();
 
   get empty() {
-    return !this.rows.length;
+    return this.tableFlex.rows.filter((element: HTMLElement) => {
+      return element.localName === 'tcc-table-row' && element.style.display !== 'none';
+    }).length === 0;
   }
 
   constructor(
     private tableFlex: TableFlexService,
   ) { }
 
-  ngAfterContentChecked() {
-    this.rows.forEach((row: TableRowComponent) => {
-      this.tableFlex.setFlex(row.element.nativeElement, this.tccTableFlex);
-    });
-    if (this.head) {
-      this.tableFlex.setFlex(this.head.element.nativeElement, this.tccTableFlex);
-    }
+  emitDataChange() {
+    this.tccTableDataChange.emit(this.tccTableData);
   }
 }

@@ -1,0 +1,25 @@
+<h2>Tab</h2>
+
+<h3>basic loading</h3>
+<div style="height:200px" [tccLoading]="loading">
+  <div style="border:1px solid blue">DIV</div>
+</div>
+
+<div style="height:200px" [tccLoading]="loading" tccLoadingHeight="100px">
+  <div style="border:1px solid blue">DIV</div>
+</div>
+
+<h3>Tab loading</h3>
+<section>
+  <tcc-tab (selectedIndexChange)="tabChange($event)">
+    <div *tccTabPane="'hello'" [tccLoading]="loading">
+      <span>hello</span>
+    </div>
+    <div *tccTabPane="'world'" [tccLoading]="loading">
+      <span>world</span>
+    </div>
+    <div *tccTabPane="'tcc'" [tccLoading]="loading">
+      <span>tcc</span>
+    </div>
+  </tcc-tab>
+</section>

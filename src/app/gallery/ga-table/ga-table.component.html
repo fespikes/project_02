@@ -1,0 +1,82 @@
+<h2>Table</h2>
+
+<h3>Table with Checkbox</h3>
+<section>
+  {{tableData | json}}
+  <tcc-table
+    [tccTableFlex]="[1,1,1,3,1]"
+    [(tccTableData)]="tableData"
+    (tccTableDataChange)="selectChange($event)"
+  >
+    <tcc-table-head tccTableSelect>
+      <div>ID</div>
+      <div>Name</div>
+      <div>Type</div>
+      <div>Description</div>
+      <div>Operation</div>
+    </tcc-table-head>
+    <tcc-table-row
+      *ngFor="let datum of tableData"
+      [tccTableRowDatum]="datum"
+      tccTableSelect
+    >
+      <div>{{datum.id}}</div>
+      <div><strong>{{datum.name}}</strong></div>
+      <div>{{datum.type}}</div>
+      <div>{{datum.desc}}</div>
+      <div>
+        <tcc-ga-table-operation [record]="datum" (onDelete)="onDelete(datum)"></tcc-ga-table-operation>
+      </div>
+    </tcc-table-row>
+  </tcc-table>
+</section>
+
+<h3>Nesting Table</h3>
+<section>
+  {{tableData | json}}
+  <tcc-table [tccTableFlex]="[1,1,1,2]">
+    <tcc-table-head>
+      <div>ID</div>
+      <div>Name</div>
+      <div>Type</div>
+      <div>Description</div>
+    </tcc-table-head>
+    <ng-container *ngFor="let datum of tableData">
+      <tcc-table-row>
+        <tcc-ga-table-id [(open)]="datum.showSublist">{{datum.id}}</tcc-ga-table-id>
+        <div><strong>{{datum.name}}</strong></div>
+        <div>{{datum.type}}</div>
+        <div>{{datum.desc}}</div>
+      </tcc-table-row>
+      <tcc-ga-table-sublist *ngIf="datum.showSublist"></tcc-ga-table-sublist>
+    </ng-container>
+  </tcc-table>
+</section>
+
+<h3>Empty Table</h3>
+<section>
+  <tcc-table [tccTableFlex]="[1,1,1,2]">
+    <tcc-table-head>
+      <div>ID</div>
+      <div>Name</div>
+      <div>Type</div>
+      <div>Description</div>
+    </tcc-table-head>
+  </tcc-table>
+</section>
+
+<h3>Loading</h3>
+<section>
+  <tcc-table [tccTableFlex]="[1,1,1,2]" [loading]="loading">
+    <tcc-table-head>
+      <div>Name</div>
+      <div>Alias</div>
+    </tcc-table-head>
+    <tcc-table-row *ngFor="let datum of loadingTableData">
+      <div>{{datum.name}}</div>
+      <div>{{datum.alias}}</div>
+    </tcc-table-row>
+  </tcc-table>
+  <button tccBtn="primary" *ngIf="!loading" (click)="startLoading()">Loading</button>
+  <button tccBtn="primary" *ngIf="loading" (click)="stopLoading()">Loaded</button>
+</section>
