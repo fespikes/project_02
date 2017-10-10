@@ -12,15 +12,16 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './components/home/home.module';
 import { ModulesModule } from './components/modules/modules.module';
+import { DocumentsSupportModule } from './components/documents-support/documents-support.module';
 import { ProductsModule } from './components/products/products.module';
+import { LatestNewsModule } from './components/latest-news/latest-news.module';
+import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { ManagementCenterComponent } from './components/management-center/management-center.component';
 import { NavTopComponent } from './components/nav-top/nav-top.component';
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
-
-import { LatestNewsModule } from './components/latest-news/latest-news.module';
 
 import {
   I18nModule,
@@ -30,11 +31,6 @@ import {
   I18nLangService,
 } from './i18n';
 
-import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
-import { ManagementCenterComponent } from './components/management-center/management-center.component';
-
-import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +38,6 @@ import { BusinessScenarioModule } from './components/business-scenario/business-
     NavTopComponent,
     NavBottomComponent,
     PageNotFoundComponent,
-    DocumentsSupportComponent,
     ManagementCenterComponent
   ],
   imports: [
@@ -53,11 +48,11 @@ import { BusinessScenarioModule } from './components/business-scenario/business-
     SharedModule,
 
     HomeModule,
-
     ProductsModule,
     BusinessScenarioModule,
     LatestNewsModule,
     ModulesModule,
+    DocumentsSupportModule,
 
     AppRoutingModule,
   ],

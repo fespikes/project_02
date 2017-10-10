@@ -1,0 +1,43 @@
+@import "../../../../../styles/util"
+@include clearfix
+
+.doc-type
+  width: 25%
+  float: left
+  padding: 2.5rem 3rem
+
+.doc-title
+  height: 2.8rem
+  line-height: 2.8rem
+
+  .title-name
+    display: inline-block
+    float: left
+    height: 100%
+    span
+      display: inline-block
+    span:first-child
+      height: 1rem
+      border-left: 3px solid $tdcCommonBlue
+      margin-right: 1rem
+
+  tcc-select
+    float: right
+    width: 11rem
+    height: 100%
+
+.doc-list
+  margin-top: 1.5rem
+  .doc-item
+    margin: 0 0 1rem 2rem
+    padding-left: 0.5rem
+    height: 4.5rem
+    line-height: 4.5rem
+    border-radius: 0.4rem
+    border: solid 1px $tdcCommonGrey
+    &:hover
+      cursor: pointer
+      color: $tdcCommonBlue
+
+
+

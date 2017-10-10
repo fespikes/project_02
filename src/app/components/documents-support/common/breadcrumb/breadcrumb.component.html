@@ -1,0 +1,13 @@
+<ul class="clearfix">
+  <li *ngFor="let item of crumbItems">
+    <a
+      [routerLink]="item.url"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
+      [ngClass]="{'link' : !item.last}"
+    >
+      {{item.alias | translate}}
+    </a>
+    <span *ngIf="!item.last">></span>
+  </li>
+</ul>
