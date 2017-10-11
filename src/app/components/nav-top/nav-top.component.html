@@ -31,6 +31,7 @@
 		*ngIf="showSubmenu"
 		(mouseleave)="onMouseleave()"
 		class="top-nav-sub-items">
+
 		<ul *ngIf="subMenuItems.type===submenuType.products">
 			<li *ngFor="let item of subMenuItems.products">
 				<a routerLink="{{item.path}}">
@@ -39,6 +40,7 @@
 				</a>
 			</li>
 		</ul>
+
 		<ul *ngIf="subMenuItems.type===submenuType.modules">
 			<li *ngFor="let item of subMenuItems.products">
 				<h3>{{item.title}}</h3>
@@ -52,4 +54,5 @@
 				</dl>
 			</li>
 		</ul>
+		
 </div>
