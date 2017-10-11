@@ -1,50 +1,57 @@
-<div class="box">
-	<div class="picbox">
-		<ul class="piclist mainlist">
-			<li>
-				<a href="http://www.lanrentuku.com/" target="_blank">
-					<img src="images/1.jpg" width="220" height="105" />
-				</a>
-			</li>
-			<li>
-				<a href="http://www.lanrentuku.com/" target="_blank">
-					<img src="images/2.jpg" />
-				</a>
-			</li>
-			<li>
-				<a href="http://www.lanrentuku.com/" target="_blank">
-					<img src="images/3.jpg" />
-				</a>
-			</li>
-			<li>
-				<a href="http://www.lanrentuku.com/" target="_blank">
-					<img src="images/4.jpg" />
-				</a>
-			</li>
-			<li>
-				<a href="http://www.lanrentuku.com/" target="_blank">
-					<img src="images/1.jpg" />
-				</a>
-			</li>
-			<li>
-				<a href="http://www.lanrentuku.com/" target="_blank">
-					<img src="images/2.jpg" />
-				</a>
-			</li>
-			<li>
-				<a href="http://www.lanrentuku.com/" target="_blank">
-					<img src="images/3.jpg" />
-				</a>
-			</li>
-			<li>
-				<a href="http://www.lanrentuku.com/" target="_blank">
-					<img src="images/4.jpg" />
-				</a>
-			</li>
-		</ul>
-		<ul class="piclist swaplist">
-		</ul>
-	</div>
-	<div class="og_prev"></div>
-	<div class="og_next"></div>
-</div>
+
+<ul 
+	class="products"
+	[ngStyle]="{width: itemsWidth + 'px'}"
+	#products
+	>
+  <li 
+  	*ngFor="let p of items"
+  	(mouseenter)="itemOnMouseenter($event.target, p)"
+  	(mouseleave)="itemOnMouseleave($event.target, p)" #li
+  	>
+  	<!--the this is the current component, and all instance properties on your hands-->
+    <div
+    	[ngStyle]="{'background-image':'url(' + p.thumbnail + ')'}"
+    	class="thumbnail"></div>
+    <h4>{{p.title}}</h4>
+
+    <p class="desc">{{p.summary}}</p>
+
+    <h5>{{p.details.title}}</h5>
+    <ul class="details">
+    	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
+    </ul>
+    <a
+    	routerLink="{{p.button.routerLink}}"
+    	class="blue-button">{{p.button.text}}</a>
+  </li>
+</ul>
+<ul 
+	*ngIf="false"
+	class="swap"
+	[ngStyle]="{width: itemsWidth + 'px'}"
+	#products
+	>
+  <li *ngFor="let p of items"
+  	(mouseenter)="itemOnMouseenter($event.target, p)"
+  	(mouseleave)="itemOnMouseleave($event.target, p)" #li>
+    <div
+    	[ngStyle]="{'background-image':'url(' + p.thumbnail + ')'}"
+    	class="thumbnail"></div>
+    <h4>{{p.title}}</h4>
+
+    <p class="desc">{{p.summary}}</p>
+    
+    <h5>{{p.details.title}}</h5>
+    <ul class="details">
+    	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
+    </ul>
+    <a class="blue-button" href="">查看详情</a>
+    <a
+    	routerLink="{{p.button.routerLink}}"
+    	class="blue-button">{{p.button.text}}</a>
+  </li>
+</ul>
+<a class="arrow left"></a>
+<a class="arrow right"></a>
+

@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { I18nModule } from '../i18n';
 
 import { AvatarComponent } from './avatar';
-import { AdvComponent } from './adv';
+import { AdvComponent, SlicesComponent } from './adv';
 import {
   BtnDirective,
   BtnOutlineDirective,
@@ -100,8 +100,6 @@ import {
   DatepickerComponent,
 } from './datepicker';
 import {OverlayModule} from '@angular/cdk/overlay';
-import { SlicesComponent } from './adv/slices/slices.component';
-
 
 @NgModule({
   imports: [
@@ -235,6 +233,7 @@ import { SlicesComponent } from './adv/slices/slices.component';
     MonthViewComponent,
     YearViewComponent,
     CalendarBodyComponent,
+    SlicesComponent
   ],
   providers: [
     ModalCountService,
