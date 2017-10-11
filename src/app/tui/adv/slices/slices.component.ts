@@ -21,10 +21,11 @@ export class SlicesComponent implements OnInit {
 	style: any;
 	itemsLength: number;
 	itemsWidth: number;
+  windowWidth: number;
 
 	swapListHtml: string;
 
-	mainListDefault: number;
+	mainListDefault: number = 0;
 	swapListDefault: number;
 
   constructor(
@@ -37,6 +38,7 @@ export class SlicesComponent implements OnInit {
 
   	this.itemsLength = this.items.length;
   	this.itemsWidth = this.itemsLength * (styleConfig.itemWidth + styleConfig.gap);
+    this.windowWidth = 3 * (styleConfig.itemWidth + styleConfig.gap)
 
   	this.interval = setInterval(_=>{
   		this.goRight();
@@ -55,16 +57,23 @@ export class SlicesComponent implements OnInit {
     const ulSwap = nativeElement.querySelector('.ul-swap');
 
     if (this.itemsLength>3) {
-      this.mainListDefault = parseInt(ulProducts.style.left);
-      this.swapListDefault = parseInt(ulSwap.style.left);
+      ml = parseInt(ulProducts.style.left);   //main ul left
+      sl = parseInt(ulSwap.style.left);       //swap ul left
       //TODO: get the left dynamicly
-      if (this.mainListDefault<=0 && this.mainListDefault>this.itemsWidth*-1) {
-        console.log('fffffuck');
+
+      if (ml<=0 && ml>this.itemsWidth*-1) {
+
         ulSwap.style.left = this.itemsWidth + 'px';
-        ulProducts.style.left = this.mainListDefault - 1000 + 'px';
+        ulProducts.style.left = ml - 1120 + 'px';//TODO: animation of fade to left slowly
 
-        if (this.mainListDefault==(this.itemsWidth-)) {
-
+        if (ml==(this.itemsWidth-this.windowWidth)*-1) {
+          ulSwap.style.left = 0 + 'px';
+        }
+      } else {
+        ulProducts.style.left = '1120px';
+        ulSwap.style.left = sl - 1120 + 'px';
+        if (sl=(this.itemsWidth-1120)*-1) {
+          ulProducts.style.left = '0px';
         }
       }
     }
