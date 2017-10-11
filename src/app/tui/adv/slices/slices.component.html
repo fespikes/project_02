@@ -1,8 +1,7 @@
 
 <ul 
-	class="products"
-	[ngStyle]="{width: itemsWidth + 'px'}"
-	#products
+	class="ul-products"
+	[ngStyle]="{width: itemsWidth + 'px', left: 0}"
 	>
   <li 
   	*ngFor="let p of items"
@@ -27,10 +26,8 @@
   </li>
 </ul>
 <ul 
-	*ngIf="false"
-	class="swap"
-	[ngStyle]="{width: itemsWidth + 'px'}"
-	#products
+	class="ul-swap"
+	[ngStyle]="{width: itemsWidth + 'px', left: '-3000px'}"
 	>
   <li *ngFor="let p of items"
   	(mouseenter)="itemOnMouseenter($event.target, p)"
@@ -46,12 +43,15 @@
     <ul class="details">
     	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
     </ul>
-    <a class="blue-button" href="">查看详情</a>
     <a
     	routerLink="{{p.button.routerLink}}"
     	class="blue-button">{{p.button.text}}</a>
   </li>
 </ul>
-<a class="arrow left"></a>
-<a class="arrow right"></a>
+<a 
+  (click)="goLeft()"
+  class="arrow left"></a>
+<a
+  (click)="goRight()"
+  class="arrow right"></a>
 
