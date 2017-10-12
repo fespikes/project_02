@@ -4,7 +4,7 @@ import { TabComponent } from '../../common/components/tab/tab.component';
 import { BreadcrumbComponent } from '../common/breadcrumb/breadcrumb.component';
 
 import { DocumentUtilService } from '../services/document.util.service';
-import { DocumentAPIService } from '../services/document.api.service';
+import { DocumentResService } from '../services/document.res.service';
 
 @Component({
   selector: 'tdc-documents-list',
@@ -18,7 +18,7 @@ export class DocumentsListComponent implements OnInit {
 
   constructor(
     private documentUtilService: DocumentUtilService,
-    private documentAPIService: DocumentAPIService
+    private documentResService: DocumentResService
   ) {
 
   }
@@ -26,14 +26,14 @@ export class DocumentsListComponent implements OnInit {
   ngOnInit() {
 
     let docsType = this.documentUtilService.getDocsType(window.location.hash);
-    this.crumbItems = this.documentUtilService.getDocsCrumb(docsType, '');
+    this.crumbItems = this.documentResService.getDocsCrumb(docsType, '');
 
-    this.tabItems = this.documentUtilService.getTabItems();
+    this.tabItems = this.documentResService.getTabItems();
 
   }
 
 
   onTabChange(type) {
-    this.crumbItems = this.documentUtilService.getDocsCrumb(type, '');
+    this.crumbItems = this.documentResService.getDocsCrumb(type, '');
   }
 }

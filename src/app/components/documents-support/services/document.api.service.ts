@@ -15,18 +15,35 @@ export class DocumentAPIService {
 
   }
 
+  private get headers(): Headers {
+    return new Headers({
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json;charset=UTF-8',
+    });
+  }
+
   getTileDocs(): Observable<any> {
-    return this.http.get('/v2/document/_ls')
+    return this.http.get('/v2/document/_ls?r=true')
       .map((res) => res.json());
   }
 
   getTreeDocs(): Observable<any> {
-    return this.http.get('./assets/mock/docs-tree-folder.json')
+    return this.http.get('/v2/document/_ls?r=true&reverse=true')
       .map((res) => res.json());
   }
 
-  getDocDetail(): Observable<any> {
-    return this.http.get('./assets/mock/docs-detail.json')
+  getDocDetail(url): Observable<any> {
+    console.log('doc-detail-url=', url);
+    return this.http.get(
+      url, { headers: this.headers })
       .map((res) => res.json());
+  }
+
+  docsSearch(data): Observable<any> {
+    return this.http.post(
+      '/v2/search',
+      JSON.stringify(data),
+      { headers: this.headers }
+    ).map((res) => res.json())
   }
 }

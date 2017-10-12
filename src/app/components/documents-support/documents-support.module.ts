@@ -16,9 +16,12 @@ import { ProductListComponent } from './documents-list/product-document/product-
 import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 import { SearchComponent } from './common/search/search.component';
 import { TreeComponent } from './common/tree/tree.component';
+import { MenuTreeComponent } from './documents-detail/tree/menu-tree.component';
+import { DocsListComponent } from './common/docs-list/docs-list.component';
 
 import { DocumentUtilService } from './services/document.util.service';
 import { DocumentAPIService } from './services/document.api.service';
+import { DocumentResService } from './services/document.res.service';
 import { TdcApiService } from '../../shared/services/api.service';
 
 import { TuiModule } from '../../tui/tui.module';
@@ -48,10 +51,13 @@ import { SharedModule } from '../../shared';
     ProductListComponent,
     SearchComponent,
     TreeComponent,
+    MenuTreeComponent,
+    DocsListComponent,
     BreadcrumbComponent
   ],
   providers: [
     TdcApiService,
+    DocumentResService,
     DocumentUtilService,
     DocumentAPIService
   ]

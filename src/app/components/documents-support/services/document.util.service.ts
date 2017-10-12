@@ -2,129 +2,39 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs/Rx';
 
-import { TdcApiService } from '../../../shared';
+import { DocumentResService } from './document.res.service';
 
 @Injectable()
 export class DocumentUtilService {
-  constructor() {
+
+  constructor(
+    private documentResService: DocumentResService
+  ) {
 
   }
 
-  getDocsType(url): string {
-    let array = url.split('/');
+  getDocsType(path): string {
+    let array = path.split('/');
     return array[array.length - 1];
   }
 
-  getDocsCrumb(type, alias): any[] {
-    let crumbItems = [];
-    switch (type) {
-      case 'products':
-        crumbItems = [
-          {
-            name: 'documentSupport',
-            alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
-            url: '../'
-          },
-          {
-            name: 'productDocument',
-            alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
-            url: './products',
-            last: true
-          }
-        ];
-        break;
-      case 'issues':
-        crumbItems = [
-          {
-            name: 'documentSupport',
-            alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
-            url: '../'
-          },
-          {
-            name: 'normalIssue',
-            alias: 'DOCUMENTS.NORMAL_ISSUE',
-            url: './issues',
-            last: true
-          }
-        ];
-        break;
-      case 'guides':
-        crumbItems = [
-          {
-            name: 'documentSupport',
-            alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
-            url: '../'
-          },
-          {
-            name: 'freshGuide',
-            alias: 'DOCUMENTS.FRESH_GUIDE',
-            url: './guides',
-            last: true
-          }
-        ];
-        break;
-      case 'docs-search':
-        crumbItems = [
-          {
-            name: 'documentSupport',
-            alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
-            url: '../'
-          },
-          {
-            name: 'documentSearch',
-            alias: 'DOCUMENTS.SEARCH_RESULTS',
-            url: '../docs-search',
-            last: true
-          }
-        ];
-        break;
-      case 'docs-detail':
-        crumbItems = [
-          {
-            name: 'documentSupport',
-            alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
-            url: '../../../../../documents-support'
-          },
-          {
-            name: 'productDocument',
-            alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
-            url: '../../../../../documents-support/docs/products'
-          },
-          {
-            name: 'documentDetail',
-            alias: alias,
-            url: '../index',
-            last: true
-          }
-        ];
-        break;
-      default:
-        break;
-    }
-    return crumbItems;
+  getModuleName(path): string {
+    let array = path.split('/');
+    return array[array.length - 1];
   }
 
-  getTabItems() {
-    return [ //for unify i18n in version 1
-      {
-        name: 'productDocument',
-        type: 'products',
-        alias: '产品文档',
-        url: './products'
-      },
-      {
-        name: 'normalIssue',
-        type: 'issues',
-        alias: '常见问题',
-        url: './issues'
-      },
-      {
-        name: 'freshGuide',
-        type: 'guides',
-        alias: '新手入门',
-        url: './guides'
-      }
-    ];
+  getDocDetailUrlParams(path, sectionName): any {
+    let array = path.split('/');
+    return {
+      section: sectionName,
+      component: array[array.length - 1],
+      version: array[array.length - 2],
+      category: array[array.length - 3]
+    };
+  }
+
+  makeDocDetailUrl(params): string {
+    return '/v2/document/' + params.category + '/' + params.version + '/' + params.component + '/' + params.section;
   }
 
   addDocsVersions(data): any[] {
@@ -165,5 +75,29 @@ export class DocumentUtilService {
     }
 
     return treeModel;
+  }
+
+  appendDocContent(content): void {
+    document.getElementById('doc-detail-content').innerHTML = content;
+  }
+
+  appendDocCssSheet(sheet): void {
+    let style = document.createElement("style");
+    style.innerHTML = sheet;
+    document.head.appendChild(style);
+  }
+
+  initSearchTree(docsTree): any[] {
+    return [
+      this.documentResService.getSearchObject(),
+      docsTree[0]
+    ];
+  }
+
+  makeSearchParams(keyword): Object {
+    return {
+      keywords: [keyword],
+      documents: []
+    };
   }
 }

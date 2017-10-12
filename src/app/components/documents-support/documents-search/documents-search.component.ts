@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BreadcrumbComponent } from '../common/breadcrumb/breadcrumb.component';
-import { SearchComponent } from '../common/search/search.component';
-
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentAPIService } from '../services/document.api.service';
+import { DocumentResService } from '../services/document.res.service';
 
 import { Router } from '@angular/router';
 
@@ -16,10 +14,12 @@ import { Router } from '@angular/router';
 export class DocumentsSearchComponent implements OnInit {
   crumbItems = [];
   treeModel = [];
+  docsList = [];
 
   constructor(
     private documentUtilService: DocumentUtilService,
     private documentAPIService: DocumentAPIService,
+    private documentResService: DocumentResService,
     private router: Router
   ) {
 
@@ -27,14 +27,15 @@ export class DocumentsSearchComponent implements OnInit {
 
   ngOnInit() {
     let docsType = this.documentUtilService.getDocsType(window.location.hash);
-    this.crumbItems = this.documentUtilService.getDocsCrumb(docsType, '');
+    this.crumbItems = this.documentResService.getDocsCrumb(docsType, '');
     this.getTreeDocs();
   }
 
   getTreeDocs() {
     this.documentAPIService.getTreeDocs().subscribe(
       result => {
-        this.treeModel = result;
+        console.log('result-reverse=', result);
+        this.treeModel = this.documentUtilService.initSearchTree(result);
       }
     );
   }
@@ -49,9 +50,21 @@ export class DocumentsSearchComponent implements OnInit {
 
   documentSearch(keyword) {
     this.router.navigate([`/documents-support/docs-search/${keyword}`]);
+    let searchParams = this.documentUtilService.makeSearchParams(keyword);
+    this.documentAPIService.docsSearch(searchParams).subscribe(
+      result => {
+        console.log('result-search=', result);
+        this.docsList = result;
+      }
+    );
   }
 
   onSelectChange(entity) {
     console.log('entity=', entity);
+  }
+
+  listItemClick(doc) {
+    console.log('doc===', doc);
+    this.router.navigate([`/docs-detail/${doc.document.id}`]);
   }
 }
