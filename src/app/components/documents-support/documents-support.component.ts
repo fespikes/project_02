@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { DocumentResService } from './services/document.res.service';
+
 @Component({
   selector: 'tdc-documents-support',
   templateUrl: './documents-support.component.html',
@@ -8,12 +10,14 @@ import { Router } from '@angular/router';
 })
 export class DocumentsSupportComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router) { }
 
   ngOnInit() {
   }
 
   documentSearch(keyword) {
+
     this.router.navigate([`/documents-support/docs-search/${keyword}`]);
   }
 }

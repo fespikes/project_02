@@ -25,13 +25,16 @@
       </div>
     </div>
     <div class="panel-right">
-      <docs-search
-        (onDocumentSearch)="documentSearch($event)"
-        [filterSearch]=true
-      ></docs-search>
-      <div>
-
+      <div class="search-docs">
+        <docs-search
+          (onDocumentSearch)="documentSearch($event)"
+          [filterSearch]=true
+        ></docs-search>
       </div>
+      <tdc-docs-list
+        [docsList]="docsList"
+        (onListItemClick)="listItemClick($event)"
+      ></tdc-docs-list>
       <div>
 
       </div>

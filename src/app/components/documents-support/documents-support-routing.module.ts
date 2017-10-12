@@ -17,16 +17,16 @@ const routes: Routes = [
     path: 'documents-support',
     component: DocumentsSupportComponent
   },
+  //{
+  //  path: 'documents-support/home',
+  //  component: DocumentsSupportComponent
+  //},
   {
-    path: 'documents-support/home',
-    component: DocumentsSupportComponent
-  },
-  {
-    path: 'documents-support/docs-search',
+    path: 'documents-support/docs-search/:id',
     component: DocumentsSearchComponent
   },
   {
-    path: 'documents-support/docs-search/:keyword',
+    path: 'documents-support/docs-search',
     component: DocumentsSearchComponent
   },
   {
@@ -48,7 +48,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'docs-detail/:category/:version/:document/:section',
+    path: 'docs-detail/:category/:version/:document',
     //path: 'docs-detail',
     component: DocumentsDetailComponent
   }

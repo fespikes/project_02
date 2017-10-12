@@ -1,4 +1,14 @@
 <document-breadcrumb
   [crumbItems]="crumbItems"
 ></document-breadcrumb>
-<div>documents detail</div>
+<div class="doc-detail clearfix">
+  <div class="menu">
+    <tdc-menu-tree
+      [treeModel]="treeModel"
+      (onSelectChange)="onSelectChange($event)"
+    ></tdc-menu-tree>
+  </div>
+  <div id="doc-detail-content" class="content">
+    doc content
+  </div>
+</div>
