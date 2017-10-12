@@ -180,6 +180,36 @@ export class HomeService {
 						]
 					}
 				}
+			],
+
+			latestNews: [
+				{
+					id: 11,
+					routerLink: '',
+					routerLinkActive: '',
+					image: '/assets/images/home/news-0.jpg',
+					title: 'Hadoop性能调优案例分享',
+					tag: '【巨能聊】',
+					date: '2017-09-23'
+				},
+				{
+					id: 12,
+					routerLink: '',
+					routerLinkActive: '',
+					image: '/assets/images/home/news-1.jpg',
+					title: 'Hadoop性能调优案例分享',
+					tag: '【巨能聊】',
+					date: '2017-09-23'
+				},
+				{
+					id: 13,
+					routerLink: '',
+					routerLinkActive: '',
+					image: '/assets/images/home/news-2.jpg',
+					title: 'Hadoop性能调优案例分享',
+					tag: '【巨能聊】',
+					date: '2017-09-23'
+				}
 			]
 		}
   }

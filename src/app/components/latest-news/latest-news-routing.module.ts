@@ -14,7 +14,7 @@ const latestNewsRoutes: Routes = [
         component: TheNewsComponent
       }
     ]
-	}
+	},
 ];
 
 

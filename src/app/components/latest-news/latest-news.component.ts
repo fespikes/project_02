@@ -32,11 +32,11 @@ export class LatestNewsComponent implements OnInit {
   }
 
   isSelected(news: News) {
-  	return news.id === this.selectedId; 
+  	return news.id === this.selectedId;
 	}
 
   onSelect(news: News) {
-    this.router.navigate(['/latest-news', news.id]);
+    this.router.navigate(['/latest-news', {id: news.id}]);
   }
 
 }

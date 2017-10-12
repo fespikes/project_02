@@ -19,7 +19,7 @@
   </div> -->
   <!--E: home-banner-->
 
-  <div class="cloud-products">
+  <div class="cloud-products" style="overflow: hidden">
     <h3 class="middle-title">星环云产品</h3>
 
     <tdc-ui-slices [items]="cloudProducts"></tdc-ui-slices>
@@ -195,33 +195,21 @@
   <div class="status-update">
     <h3 class="middle-title">最新动态</h3>
     <ul class="news-list">
-      <li>
-        <a 
-          class="news-a news-0"
-          routerLink="/latest-news/11" routerLinkActive="active">
-          <h3><span>【深度】</span> Hadoop性能调优案例分享</h3>
-          <div class="date">2017-09-23</div>
-        </a>
-      </li>
-      <li>
+      <li 
+        *ngFor="let news of latestNews"
+        (click)="toLatestNewsDetails($event.target, news)" #li>
         <a
-          class="news-a news-1"
-          routerLink="/latest-news">
-          <h3><span>【巨能聊】</span>Hadoop性能调优案例分享</h3>
-          <div class="date">2017-09-23</div>
+          [ngStyle]="{'background-image': 'url('+ news.image + ')'}"
+          class="news-a">
+          <h3><span>{{news.tag}}</span>{{news.title}}</h3>
+          <div class="date">{{news.date}}</div>
         </a>
       </li>
-      <li>
+<!--       <li>
         <a
           routerLink="/latest-news"
           class="news-a news-2">
           <h3><span>【巨能聊】</span>Hadoop性能调优案例分享</h3>
-          <div class="date">2017-09-23</div>
-        </a>
-      </li>
-<!--       <li>
-        <a class="news-a">
-          <h3><span>【深度】</span>Hadoop性能调优案例分享</h3>
           <div class="date">2017-09-23</div>
         </a>
       </li> -->
