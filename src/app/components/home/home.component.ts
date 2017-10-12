@@ -11,6 +11,7 @@ import { CommonService } from '../common/services/common.service';
 export class HomeComponent implements OnInit {
 
   advs: any;
+  cloudProducts: any;
   
   @HostBinding('class.tdc-home-body') hostClass = true;
 
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
   ) {
     const data = this.homeService.getData('');
     this.advs = data.advList;
+    this.cloudProducts = data.cloudProducts;
   }
 
   ngOnInit() {

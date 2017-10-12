@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { I18nModule } from '../i18n';
 
 import { AvatarComponent } from './avatar';
-import { AdvComponent } from './adv';
+import { AdvComponent, SlicesComponent } from './adv';
 import {
   BtnDirective,
   BtnOutlineDirective,
@@ -101,7 +101,6 @@ import {
 } from './datepicker';
 import {OverlayModule} from '@angular/cdk/overlay';
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -175,6 +174,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MonthViewComponent,
     YearViewComponent,
     CalendarBodyComponent,
+    SlicesComponent,
   ],
   exports: [
     AdvComponent,
@@ -233,6 +233,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MonthViewComponent,
     YearViewComponent,
     CalendarBodyComponent,
+    SlicesComponent
   ],
   providers: [
     ModalCountService,

@@ -3,7 +3,6 @@ import { animate, AnimationEntryMetadata,
 
 // Component transition animations
 export const slidesAnimation: AnimationEntryMetadata = trigger('slicesAnimation', [
-  //routeAnimation 为  触发器
     state('*',
       style({
         opacity: 1,
