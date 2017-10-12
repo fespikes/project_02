@@ -11,9 +11,9 @@ import { Observable } from 'rxjs/Observable';
 })
 export class LatestNewsComponent implements OnInit {
 
-	newsList: Observable<News[]>;
+  newsList: Observable<News[]>;
 
-	private selectedId: number;
+  private selectedId: number;
 
   constructor(
     private service: LatestNewsService,

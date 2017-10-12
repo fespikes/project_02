@@ -8,6 +8,8 @@ import { TuiModule, TccModalService } from './tui';
 import {
   TccApiService
 } from './shared';
+import { CommonService } from './components/common/services/common.service';
+
 import { NavTopService } from './components/nav-top/nav-top.service';
 import { TdcModule } from './components/common/components/index';
 import { AppRoutingModule } from './app-routing.module';
@@ -70,7 +72,8 @@ import { BusinessScenarioModule } from './components/business-scenario/business-
     TranslateService,
     TccModalService,
     TccApiService,
-    NavTopService
+    NavTopService,
+    CommonService
   ],
   bootstrap: [AppComponent]
 })
