@@ -53,6 +53,7 @@ import { BusinessScenarioModule } from './components/business-scenario/business-
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     HttpModule,
     TuiModule,
     TdcModule,

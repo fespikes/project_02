@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   toLatestNewsDetails(target, news) {
-    this.router.navigate(['/latest-news', {id: news.id}]);
+    this.router.navigate(['/latest-news', news.id]);
   }
 
 }
