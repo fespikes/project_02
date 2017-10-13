@@ -11,13 +11,17 @@ import { DocumentResService } from './services/document.res.service';
 export class DocumentsSupportComponent implements OnInit {
 
   constructor(
-    private router: Router) { }
+    private router: Router,
+    private documentResService: DocumentResService
+  ) {
+
+  }
 
   ngOnInit() {
   }
 
   documentSearch(keyword) {
-
-    this.router.navigate([`/documents-support/docs-search/${keyword}`]);
+    this.documentResService.setKeyword(keyword);
+    this.router.navigate([`/documents-support/docs-search`]);
   }
 }

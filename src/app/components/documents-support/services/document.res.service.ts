@@ -27,8 +27,8 @@ export class DocumentResService {
     return this.keyword;
   }
 
-  setKeyword(): void {
-
+  setKeyword(keyword): void {
+    this.keyword = keyword;
   }
 
   getDocsCrumb(type, alias): any[] {

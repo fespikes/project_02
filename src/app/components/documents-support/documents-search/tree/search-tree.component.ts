@@ -7,12 +7,12 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'tdc-menu-tree',
-  templateUrl: './menu-tree.component.html',
-  styleUrls: ['./menu-tree.component.sass'],
+  selector: 'tdc-search-tree',
+  templateUrl: './search-tree.component.html',
+  styleUrls: ['./search-tree.component.sass'],
 })
 
-export class MenuTreeComponent implements OnInit {
+export class SearchTreeComponent implements OnInit {
   @Input() treeModel: any[];
   @Output() onSelectChange = new EventEmitter();
   constructor() { }
@@ -24,8 +24,10 @@ export class MenuTreeComponent implements OnInit {
   }
 
 
-  selectChange(node) {
-    //console.log('node=', node);
-    this.onSelectChange.emit(node);
+  selectChange(module, version) {
+    this.onSelectChange.emit({
+      module: module,
+      version: version
+    });
   }
 }
