@@ -32,7 +32,7 @@
   .module-type
     height: 3.75rem
     line-height: 3.75rem
-    padding: 0 1rem 0 1.875rem
+    padding: 0 1rem 0 0
     color: $text-dark
     user-select: none
     cursor: default
@@ -54,17 +54,17 @@
     .module-item, .module-version
       height: 3.75rem
       line-height: 3.75rem
-      padding: 0 1rem 0 3.875rem
+      padding: 0 1rem 0 2rem
       .tcc-checkbox
         display: inline-block
 
     .module-version
-      padding-left: 8.7rem
-      visibility: hidden
+      padding-left: 6.7rem
+      display: none
       &.expanded
         max-height: 125rem
         opacity: 1
-        visibility: visible
+        display: block
         transition: all 1s ease-in-out
 
     span

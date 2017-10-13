@@ -1,0 +1,38 @@
+@import '../../../../styles/util'
+
+\:host
+  cursor: pointer
+  h3.docs-count
+    font-size: 1.6rem
+    font-weight: 700
+    color: #354052
+    span
+      color: $tdcCommonBlue
+    &:before
+      content: ""
+      display: inline-block
+      width: 0.4rem
+      height: 1.6rem
+      position: relative
+      top: 0.3rem
+      right: 0.8rem
+      background: $tdcCommonBlue
+
+  .docs-item
+    border-bottom: solid 1px $tdcCommonGrey
+    h5
+      color: #354052
+      font-size: 1.4rem
+      font-weight: 600
+    p
+      color: #354052
+      font-size: 1.2rem
+    em
+      color: #ffff00
+
+  .docs-item:last-child
+    border-bottom: solid 1px transparent
+
+
+
+

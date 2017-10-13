@@ -21,6 +21,7 @@ export class DocumentsDetailComponent implements OnInit {
   };
   crumbItems = [];
   treeModel = [];
+  treeLevel = 0;
 
   constructor(
     private documentAPIService: DocumentAPIService,

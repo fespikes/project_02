@@ -15,9 +15,9 @@ import {
 
 export class SearchComponent implements OnInit {
   @Input() filterSearch: boolean;
+  @Input() keyword: string;
   @Output() onDocumentSearch = new EventEmitter();
 
-  keyword = '';
   constructor() {
 
   }

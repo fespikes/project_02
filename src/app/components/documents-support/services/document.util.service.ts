@@ -69,8 +69,8 @@ export class DocumentUtilService {
     while (stack.length) {
       item = stack.shift();
       item.expanded = expanded;
-      if (item.children && item.children.length) {
-        stack = stack.concat(item.children);
+      if (item.sub && item.sub.length) {
+        stack = stack.concat(item.sub);
       }
     }
 
@@ -88,16 +88,21 @@ export class DocumentUtilService {
   }
 
   initSearchTree(docsTree): any[] {
+    console.log('docsTree=', docsTree);
     return [
       this.documentResService.getSearchObject(),
-      docsTree[0]
+      docsTree[0],
+      docsTree[1]
     ];
   }
 
-  makeSearchParams(keyword): Object {
+  makeSearchParams(keyword, pagination): Object {
+    let from = (pagination.page - 1) * pagination.size;
     return {
       keywords: [keyword],
-      documents: []
+      documents: [],//todo dock real logistic
+      from: from,
+      size: pagination.size
     };
   }
 }
