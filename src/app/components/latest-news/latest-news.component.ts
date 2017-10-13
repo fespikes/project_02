@@ -36,7 +36,8 @@ export class LatestNewsComponent implements OnInit {
 	}
 
   onSelect(news: News) {
-    this.router.navigate(['/latest-news', news.id]);
+    // this.router.navigate(['/latest-news', {id: news.id}, {relativeTo: this.route} ]);
+    this.router.navigate(['/latest-news', news.id ]);
   }
 
 }

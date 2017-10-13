@@ -19,7 +19,8 @@
 		<div class="news-items">
 			<ul>
 				<li *ngFor="let news of newsList | async">
-				<!--[routerLink]="['/latest-news', news.id]" -->
+				<!-- [routerLink]="['/latest-news', {id: news.id}]" -->
+				<!-- [routerLink]="['/latest-news', news.id]" -->
 					<a 
 						(click)="onSelect(news)"
 						class="item-anchor"

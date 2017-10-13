@@ -26,7 +26,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavTopComponent } from './components/nav-top/nav-top.component';
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
 
-import { LatestNewsModule } from './components/latest-news/latest-news.module';
+// import { LatestNewsModule } from './components/latest-news/latest-news.module';
 
 import {
   I18nModule,
@@ -63,7 +63,7 @@ import { BusinessScenarioModule } from './components/business-scenario/business-
 
     ProductsModule,
     BusinessScenarioModule,
-    LatestNewsModule,
+    // LatestNewsModule,
     ModulesModule,
 
     AppRoutingModule,
