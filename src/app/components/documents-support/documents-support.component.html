@@ -1,18 +1,38 @@
-
 <div class="search-box">
-	<div class="search">
-		<input class="search-field" placeholder="请输入您要了解的关键词" />
-		<button class="search-btn">搜索</button>
-	</div>
+  <docs-search
+    (onDocumentSearch)="documentSearch($event)"
+  ></docs-search>
 	<div class="documents-options">
 		<span>
-			<a class="products-docs">产品文档</a>
+      <a
+        routerLink="/documents-support/docs/products"
+        routerLinkActive="active"
+        routerLinkActiveOptions="{exact: true}"
+        class="products-docs"
+      >
+        {{'DOCUMENTS.PRODUCT_DOCUMENT' | translate}}
+      </a>
 		</span>
 		<span>
-			<a class="normal-issues">常见问题</a>
+      <a
+        routerLink="/documents-support/docs/issues"
+        routerLinkActive="active"
+        routerLinkActiveOptions="{exact: true}"
+        class="normal-issues"
+      >
+        {{'DOCUMENTS.NORMAL_ISSUE' | translate}}
+      </a>
 		</span>
 		<span>
-			<a class="fresh-guides">新手入门</a>
+      <a
+        routerLink="/documents-support/docs/guides"
+        routerLinkActive="active"
+        routerLinkActiveOptions="{exact: true}"
+        class="fresh-guides"
+      >
+        {{'DOCUMENTS.FRESH_GUIDE' | translate}}
+      </a>
 		</span>
 	</div>
 </div>
+<router-outlet></router-outlet>

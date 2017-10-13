@@ -16,6 +16,9 @@ export class ModuleListComponent implements OnInit {
   @Input() moduleItems: any[];
   @Input() moduleTypes: any[];
   @Output() onModuleChange = new EventEmitter();
+
+  backUrl = '../home';
+
   constructor() { }
   ngOnInit() {
   }
