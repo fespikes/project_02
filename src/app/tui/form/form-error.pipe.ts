@@ -24,6 +24,8 @@ export class FormErrorPipe implements PipeTransform {
       return customMsgs[key];
     } else if (defaultErrorMsgs[key]) {
       return defaultErrorMsgs[key];
+    } else if (value) {
+      return value;
     }
     return 'TUI.FORM.VALIDATION_FAILED';
   }

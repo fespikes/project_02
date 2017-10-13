@@ -1,4 +1,20 @@
-<div class="news-details">
+<div *ngIf="news" class="news-details">
+	<h3>{{news.title}}</h3>
+	<div class="time">{{news.date}}</div>
+	<div class="content">
+		<ng-container *ngFor="let item of news.content">
+			<p *ngIf="item.p">{{item.p}}</p>
+			<img *ngIf="item.img" src="{{item.img}}" />
+			<h4 *ngIf="item.title" >{{item.title}}</h4>
+			<div *ngIf="item.mailTo" class="mail-to">
+				{{item.mailTo}}
+				<a href="mailto:{{item.email}}">{{item.email}}</a>
+			</div>
+		</ng-container>
+	</div>
+</div>
+
+<!-- <div class="news-details">
 	<h3>星环的划时代版本 - Transwarp Data Hub 5.0 </h3>
 	<div class="time">2017-07-21</div>
 	<div class="content">
@@ -17,4 +33,4 @@
 		</div>
 		
 	</div>
-</div>
+</div> -->

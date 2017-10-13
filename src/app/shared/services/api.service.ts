@@ -6,6 +6,8 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import { PartialCollection } from '../models';
+
 @Injectable()
 export class TdcApiService {
   constructor(private http: Http) {}
@@ -17,9 +19,7 @@ export class TdcApiService {
     });
   }
 
-  // 请求前缀
   private makeUrl(url) {
-    console.log(path.join('v2/', url));
     return path.join('v2/', url);
   }
 
@@ -33,10 +33,22 @@ export class TdcApiService {
     return Observable.throw(data);
   }
 
-  get(path: string, params: URLSearchParams = new URLSearchParams()): Observable<any> {
+  get(path: string, params: Object = {}): Observable<any> {
     return this.http.get(this.makeUrl(path), { headers: this.headers, search: params })
       .catch(this.formatErrors)
       .map((res: Response) => res.json());
+  }
+
+  getAll(path: string, params: Object = {}): Observable<PartialCollection> {
+    params['size'] = Math.pow(2, 31) - 1;
+    params['page'] = 1;
+    return this.get(path, params);
+  }
+
+  getText(path: string, params: Object = {}): Observable<any> {
+    return this.http.get(this.makeUrl(path), { headers: this.headers, search: params })
+    .catch(this.formatErrors)
+    .map((res: Response) => res.text());
   }
 
   put(path: string, body: Object = {}): Observable<any> {

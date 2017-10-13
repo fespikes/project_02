@@ -1,0 +1,29 @@
+<h2>Tab</h2>
+
+<h3>Basic</h3>
+<section>
+  <tcc-tab>
+    <div *tccTabPane="'hello'">hello</div>
+    <div *tccTabPane="'world'">world</div>
+    <div *tccTabPane="'tcc'">tcc</div>
+  </tcc-tab>
+</section>
+
+<h3>Selected Index Output</h3>
+<section>
+  <tcc-tab (selectedIndexChange)="tabChange($event)">
+    <div *tccTabPane="'hello'">hello</div>
+    <div *tccTabPane="'world'">world</div>
+    <div *tccTabPane="'tcc'">tcc</div>
+  </tcc-tab>
+</section>
+
+<h3>Selected Index Input & Output</h3>
+<section>
+  <div>Current Selected Index: {{selectedIndex}}</div>
+  <tcc-tab [(selectedIndex)]="selectedIndex">
+    <div *tccTabPane="'hello'">hello</div>
+    <div *tccTabPane="'world'">world</div>
+    <div *tccTabPane="'tcc'">tcc</div>
+  </tcc-tab>
+</section>

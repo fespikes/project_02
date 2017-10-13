@@ -1,0 +1,57 @@
+
+<ul 
+	class="ul-products"
+	[ngStyle]="{width: itemsWidth + 'px', left: 0}"
+	>
+  <li 
+  	*ngFor="let p of items"
+  	(mouseenter)="itemOnMouseenter($event.target, p)"
+  	(mouseleave)="itemOnMouseleave($event.target, p)" #li
+  	>
+  	<!--the this is the current component, and all instance properties on your hands-->
+    <div
+    	[ngStyle]="{'background-image':'url(' + p.thumbnail + ')'}"
+    	class="thumbnail"></div>
+    <h4>{{p.title}}</h4>
+
+    <p class="desc">{{p.summary}}</p>
+
+    <h5>{{p.details.title}}</h5>
+    <ul class="details">
+    	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
+    </ul>
+    <a
+    	routerLink="{{p.button.routerLink}}"
+    	class="blue-button">{{p.button.text}}</a>
+  </li>
+</ul>
+<ul 
+	class="ul-swap"
+	[ngStyle]="{width: itemsWidth + 'px', left: '-3000px'}"
+	>
+  <li *ngFor="let p of items"
+  	(mouseenter)="itemOnMouseenter($event.target, p)"
+  	(mouseleave)="itemOnMouseleave($event.target, p)" #li>
+    <div
+    	[ngStyle]="{'background-image':'url(' + p.thumbnail + ')'}"
+    	class="thumbnail"></div>
+    <h4>{{p.title}}</h4>
+
+    <p class="desc">{{p.summary}}</p>
+    
+    <h5>{{p.details.title}}</h5>
+    <ul class="details">
+    	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
+    </ul>
+    <a
+    	routerLink="{{p.button.routerLink}}"
+    	class="blue-button">{{p.button.text}}</a>
+  </li>
+</ul>
+<a 
+  (click)="goLeft()"
+  class="arrow left"></a>
+<a
+  (click)="goRight()"
+  class="arrow right"></a>
+

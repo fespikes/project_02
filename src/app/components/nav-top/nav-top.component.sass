@@ -15,12 +15,14 @@ $h60: 60px
   height: $h60
   display: block
   background: #090e11
-  overflow: auto
   font-size: $f16
   font-weight: 500
+  position: relative
   
   .top-nav-ul
     @extend .center-box
+    position: relative
+    
     li
       float: left
       height: 60px
@@ -60,14 +62,35 @@ $h60: 60px
         text-align: center
         color: #fff
         background: #2481e3
+        position: absolute
+        right: 88px
+        top: 14px
+        &:hover, &.active
+          height: $h30
+          color: #fff
 
   .top-nav-sub-items
-    width: 100%
-    height: 300px
-    display: none
-    overflow-y: auto
-    left: 20%
-    background: green
+    @extend .center-box-absolute
+    height: auto
+    background: #051722
+    top: 60px 
+    z-index: 100
+    ul
+      li
+
+.border-radius
+  border-radius: 5px
+
+a.submenu-color
+  background: #162c44
+  color: #7c8a97
+
+  &>p
+    color: #7c8a97
+
+  &:hover
+    background: #0063cb
+
 
 
 

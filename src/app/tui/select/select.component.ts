@@ -48,7 +48,7 @@ export class SelectComponent implements ControlValueAccessor, OnDestroy {
   private options = {};
 
   /** 当前options数量 */
-  private count = 0;
+  count = 0;
 
   /** 是否disabled */
   private innerDisabled = false;

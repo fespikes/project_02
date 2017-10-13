@@ -6,6 +6,8 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
   padding: 0
   margin: 0
 
+.hide
+  display: none
 .middle-title
   padding-top: 80px
   padding-bottom: 35px
@@ -96,6 +98,7 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
   .products
     width: 1120px
     padding: 40px 0
+    overflow: auto
     margin: 0 auto
 
     >li
@@ -193,7 +196,13 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
   bottom: 0
   @include background(gap-bg)
 
-
+.tui-plugin-slices
+  display: block
+  width: 1300px
+  height: 600px
+  overflow: hidden
+  padding-left: 40px
+  margin: 0 auto
 //E: .cloud-products
 
 .hot-modules
@@ -464,6 +473,8 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
         width: 100%
         padding-top: 150px
         height: 150px
+        background: transparent no-repeat left top
+        
         &.news-0
           @include background(news-0)
         &.news-1

@@ -11,7 +11,9 @@ export class SubmenuComponent {
   @HostBinding('class.tcc-submenu-collapsed') collapsed = false;
   @HostBinding('class.tcc-submenu') true;
 
-  constructor(private service: SubmenuService) {
+  constructor(
+    private service: SubmenuService,
+  ) {
   }
 
   toggle() {

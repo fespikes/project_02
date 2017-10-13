@@ -5,6 +5,9 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { TuiModule, TccModalService } from './tui';
+import { CommonService } from './components/common/services/common.service';
+
+import { NavTopService } from './components/nav-top/nav-top.service';
 import { TdcModule } from './components/common/components/index';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +25,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
 import { NavTopComponent } from './components/nav-top/nav-top.component';
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
+
+// import { LatestNewsModule } from './components/latest-news/latest-news.module';
+
 
 import {
   I18nModule,
@@ -42,6 +48,7 @@ import {
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     HttpModule,
     TuiModule,
     TdcModule,
@@ -50,7 +57,7 @@ import {
     HomeModule,
     ProductsModule,
     BusinessScenarioModule,
-    LatestNewsModule,
+    // LatestNewsModule,
     ModulesModule,
     DocumentsSupportModule,
 
@@ -60,6 +67,8 @@ import {
     I18nLangService,
     TranslateService,
     TccModalService,
+    NavTopService,
+    CommonService
   ],
   bootstrap: [AppComponent]
 })

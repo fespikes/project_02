@@ -1,0 +1,88 @@
+@mixin background($image, $type:jpg, $bgColor:#fff, $left:left, $top:top)
+  background: #{$bgColor} url(/assets/images/home/#{$image}.#{$type}) no-repeat #{$left} #{$top}
+
+/**S: normal style**/
+
+div, h1, h2, h3, h4, h5, h6, ul, li, span, p 
+  padding: 0
+  margin: 0
+
+.middle-title
+  padding-top: 80px
+  padding-bottom: 35px
+  text-align: center
+  font-size: 2.8rem
+  font-weight: 300
+  color: #fff
+  position: relative
+
+  &:after
+    content: ""
+    display: inline-block
+    width: 70px
+    height: 0
+    border-bottom: 2px #fff solid
+    margin: 0 auto
+    position: absolute
+    top: 144px
+    left: 50%
+    margin-left: -35px
+
+.center-box
+  width: 1360px
+  margin: 0 auto
+
+
+.arrow
+  width: 60px
+  height: 60px
+  display: inline-block
+  margin-top: -30px
+  cursor: pointer
+  position: absolute
+  top: 50%
+  &:before
+    margin-top: -13px
+
+.arrow.left
+  left: 50%
+  margin-left: -680px
+
+  &:before
+    content: ""
+    display: inline-block
+    width: 24px
+    height: 24px
+    border-bottom: 2px #009aff solid
+    border-left: 2px #009aff solid
+    transform: rotate(45deg)
+    position: absolute
+    left: 15px
+    top: 50%
+.arrow.right
+  right: 50%
+  margin-right: -680px
+
+  &:before
+    content: ""
+    display: inline-block
+    width: 24px
+    height: 24px
+    border-right: 2px #009aff solid
+    border-top: 2px #009aff solid
+    transform: rotate(45deg)
+    position: absolute
+    right: 15px
+    top: 50%
+
+.blue-button, a.blue-button
+  display: inline-block
+  width: 130px
+  height: 40px
+  line-height: 40px
+  background: #176eda
+  font-size: 1.4rem
+  color: #fff
+  text-align: center
+
+/**E: normal style**/

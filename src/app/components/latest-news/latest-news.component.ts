@@ -11,9 +11,9 @@ import { Observable } from 'rxjs/Observable';
 })
 export class LatestNewsComponent implements OnInit {
 
-	newsList: Observable<News[]>;
+  newsList: Observable<News[]>;
 
-	private selectedId: number;
+  private selectedId: number;
 
   constructor(
     private service: LatestNewsService,
@@ -32,11 +32,12 @@ export class LatestNewsComponent implements OnInit {
   }
 
   isSelected(news: News) {
-  	return news.id === this.selectedId; 
+  	return news.id === this.selectedId;
 	}
 
   onSelect(news: News) {
-    this.router.navigate(['/latest-news', news.id]);
+    // this.router.navigate(['/latest-news', {id: news.id}, {relativeTo: this.route} ]);
+    this.router.navigate(['/latest-news', news.id ]);
   }
 
 }

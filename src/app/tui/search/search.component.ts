@@ -16,7 +16,7 @@ import { ElementBase } from '../form/element-base';
 })
 export class SearchComponent implements OnInit, OnDestroy, ControlValueAccessor {
   @HostBinding('class.tcc-search') hostClass = true;
-  private model: string;
+  model: string;
   private searchSubject = new Subject<any>();
   private ngUnsubscribe = new Subject<any>();
   private controlValueAccessorChangeFn: (value: any) => void = () => { };

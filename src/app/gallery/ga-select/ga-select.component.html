@@ -1,0 +1,62 @@
+<h2>Select</h2>
+
+<h3>Object Options</h3>
+<section>
+  <tcc-select
+    placeholder="tcc select example"
+    [(ngModel)]="objectOption"
+  >
+    <tcc-select-option
+      *ngFor="let option of objectOptions"
+      [value]="option.value"
+      [label]="option.label"
+    >
+      {{option.label | tccDefault | translate}}
+    </tcc-select-option>
+  </tcc-select>
+  <span>objectOption: {{objectOption | json}}</span>
+</section>
+
+<h3>String Options</h3>
+<section>
+  <tcc-select
+    placeholder="tcc select example"
+    [(ngModel)]="stringOption"
+  >
+    <tcc-select-option *ngFor="let option of stringOptions" [value]="option">
+      {{option | tccDefault | translate}}
+    </tcc-select-option>
+  </tcc-select>
+  <span>stringOption: {{stringOption | json}}</span>
+</section>
+
+<h3>Select with No Options</h3>
+<section>
+  <tcc-select placeholder="empty options"></tcc-select>
+</section>
+
+
+<h3>Deprecated</h3>
+<section>
+  <tcc-select
+    key="label"
+    placeholder="tcc select example"
+    [(ngModel)]="dpOption"
+  >
+    <tcc-select-option *ngFor="let option of objectOptions" [value]="option">
+      {{option.label | tccDefault | translate}}
+    </tcc-select-option>
+  </tcc-select>
+  <span>dpOption: {{dpOption | json}}</span>
+</section>
+
+
+<h3>Form</h3>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <tcc-select [formControl]="form.controls['username']" placeholder="select" required>
+    <tcc-select-option *ngFor="let option of formOptions" [value]="option.value" [label]="option.username">
+      {{option.username | tccDefault | translate}}
+    </tcc-select-option>
+  </tcc-select>
+  <button tccBtn="primary">submit</button>
+</form>

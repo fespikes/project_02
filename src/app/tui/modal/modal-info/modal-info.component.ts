@@ -12,7 +12,7 @@ export class ModalInfoComponent {
   message: string;
 
   constructor(
-    private modalRef: TccModalRef,
+    public modalRef: TccModalRef,
     @Inject(TCC_MODAL_DATA) data,
   ) {
     this.message = data.message;

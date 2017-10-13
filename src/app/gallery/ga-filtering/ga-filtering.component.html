@@ -1,0 +1,36 @@
+<h2>Filtering</h2>
+
+<section class="flex-xy-center" style="display:inline-flex">
+  <tcc-select
+    [(ngModel)]="select"
+    (ngModelChange)="fetchData(true)"
+    style="width:100px"
+  >
+    <tcc-select-option
+      *ngFor="let option of options"
+      [value]="option.type"
+    >
+      {{ option.type }}
+    </tcc-select-option>
+  </tcc-select>
+
+  <tcc-search
+    [(ngModel)]="search"
+    (ngModelChange)="fetchData(true)"
+  ></tcc-search>
+</section>
+
+<section>
+  <div *ngFor="let datum of data">
+    <span>{{datum.name}}</span>
+    <span>{{datum.type}}</span>
+  </div>
+</section>
+
+<section>
+  <tcc-pagination
+  [(pagination)]="pagination"
+  (paginationChange)="fetchData()"
+  >
+  </tcc-pagination>
+</section>

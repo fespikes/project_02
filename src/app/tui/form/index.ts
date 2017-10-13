@@ -13,3 +13,4 @@ export * from './form-item-addon.directive';
 export * from './form-item.component';
 export * from './form.directive';
 export * from './radio.component';
+export * from './input/validators/min-value.directive';

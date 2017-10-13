@@ -2,7 +2,7 @@ import { TestBed, inject, fakeAsync, tick } from '@angular/core/testing';
 import { Observable } from 'rxjs/Rx';
 
 import { I18nLangService, LANG_KEY, Language } from './i18n-lang.service';
-import { TccApiService } from '../shared';
+import { TdcApiService } from '../shared';
 
 class TccApiServiceStub {
   post() {
@@ -16,7 +16,7 @@ describe('I18nLangService', () => {
       providers: [
         I18nLangService,
         {
-          provide: TccApiService,
+          provide: TdcApiService,
           useClass: TccApiServiceStub,
         },
       ],

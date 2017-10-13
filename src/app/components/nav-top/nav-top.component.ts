@@ -1,5 +1,15 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 
+import { NavTopService } from './nav-top.service';
+import { NgIf } from '@angular/common';
+
+const CONSTANT = {
+  submenuTypes: {
+    products: 'products',
+    modules: 'modules'
+  }
+}
+
 @Component({
   selector: 'tdc-nav-top',
   templateUrl: './nav-top.component.html',
@@ -9,15 +19,33 @@ export class NavTopComponent implements OnInit {
 
   @HostBinding('class.nav-wrapper') hostClass = true;
 
-  constructor() { }
+  private navigationData: any;
+  private subMenuItems: any;
+  private showSubmenu = false;
+  submenuType = CONSTANT.submenuTypes;
 
-  ngOnInit() {
-  	this.getNavtopData();
+  constructor(private navTopService: NavTopService) {
+    this.navigationData = this.navTopService.getNavigation();
   }
 
-  getNavtopData(): void{
+  ngOnInit() {
+    // console.log(this.navigationData);
+  }
 
-  	//get the data of nav top bar
+  getNavtopData(): any{
+    return this.navigationData.navTop;
+  }
+
+  onMouseEnter(item: any) {
+    this.showSubmenu = item.subMenu?true:false;
+
+    this.subMenuItems = this.navigationData.subMenu[item.subMenu];
+
+    console.log(this.subMenuItems);
+  }
+
+  onMouseleave() {
+    this.showSubmenu = false;
   }
 
 }

@@ -1,0 +1,35 @@
+<h2>Button</h2>
+
+<h3>Default</h3>
+<section>
+  <button [tccBtn]="color" *ngFor="let color of btnColors">{{color}}</button>
+</section>
+
+<h3>Outlined</h3>
+<section>
+  <button [tccBtn]="color" tccBtnOutline *ngFor="let color of btnColors">{{color}}</button>
+</section>
+
+<h3>Disabled</h3>
+<section>
+  <button [tccBtn]="color" disabled *ngFor="let color of btnColors">{{color}}</button>
+</section>
+
+<h3>Small</h3>
+<section>
+  <button [tccBtn]="color" size="sm" *ngFor="let color of btnColors">{{color}}</button>
+</section>
+
+<h3>Large</h3>
+<section>
+  <button [tccBtn]="color" size="lg" *ngFor="let color of btnColors">{{color}}</button>
+</section>
+
+<h3>Button Group</h3>
+<section>
+  <div class="tcc-btn-group">
+    <button tccBtn="primary" tccBtnOutline>btn 1</button>
+    <button tccBtn="primary" tccBtnOutline>btn 2</button>
+    <button tccBtn="primary" tccBtnOutline>btn 3</button>
+  </div>
+</section>

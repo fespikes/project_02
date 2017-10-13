@@ -3,9 +3,15 @@
   <div class="content">
     <dd *ngFor="let item of items">
       <a (click)="clickItem(item)" [class.active]="isActive(item)" [class.open]="item.childrenOpen">
-        <tcc-avatar *ngIf="!item.icon && isCollapsed()" [text]="getAvatar(item)" size="md"></tcc-avatar>
+        <tcc-avatar
+          *ngIf="!item.icon"
+          [text]="getAvatar(item)"
+          size="md"
+          [hidden]="!isCollapsed()"
+        ></tcc-avatar>
         <svg *ngIf="item.icon" tccIcon="{{item.icon}}" class="item-icon"></svg>
-        <span class="item-name">{{item.name | translate}}</span>
+        <span class="item-name text-ellipsis">{{item.name | translate}}</span>
+        <span *ngIf="item.count" class="item-count">{{item.count}}</span>
         <svg *ngIf="showToggle(item)" class="angle-down" tccIcon="angle-up"></svg>
       </a>
       <div *ngIf="item.children && item.childrenOpen && !isCollapsed()" class="tcc-submenu-children">
@@ -15,7 +21,7 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}"
         >
-          <span class="item-name">{{child.name | translate}}</span>
+          <span class="item-name text-ellipsis">{{child.name | translate}}</span>
         </a>
       </div>
       <tcc-dropdown

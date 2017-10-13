@@ -11,6 +11,6 @@ export class SubmenuService {
     // 在菜单变化稳定之后发出事件
     setTimeout(() => {
       this.onToggle.emit();
-    }, 600);
+    });
   }
 }

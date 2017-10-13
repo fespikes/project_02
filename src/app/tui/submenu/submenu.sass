@@ -1,11 +1,13 @@
-$submenu-normal-width: 21.4rem
+@import '../../styles/util'
+
+$submenu-normal-width: 14.375rem
 $submenu-collapsed-width: 6rem
-$item-active-color: #305ab5
+$item-active-color: $brand-primary
 $embeded-color: #f2f3f7
 
 @mixin clickable-item()
   @include flex-align(center, flex-start)
-  font-size: 1.4rem
+  font-size: 1rem
   height: 3.5rem
   text-decoration: none
   cursor: pointer
@@ -14,23 +16,30 @@ $embeded-color: #f2f3f7
     color: #818183
     margin-left: 15px
 
+
+  .item-count
+    padding: .125rem .25rem
+    margin-left: 0.5rem
+    font-size: .75rem
+    line-height: .75rem
+    border-radius: .25rem
+    background-color: $brand-warning
+    color: #fff
+
 .tcc-submenu
   flex-shrink: 0
   width: $submenu-normal-width
   border-right: 1px solid #e4e7ee
-  // overflow: hidden
-  transition: width 0.6s ease
   background-color: #fff
-  display: inline-block
 
   &-toggle
-    transition: transform 0.6s linear
+    transition: transform 0.5s ease
 
   &-collapsed
     width: $submenu-collapsed-width
 
     .tcc-submenu-toggle
-      transform: rotate(180deg)
+      transform: rotate3d(0, 1, 0, 180deg)
 
 .tcc-submenu-header
   @include flex-align(center, flex-end)
@@ -43,7 +52,7 @@ $embeded-color: #f2f3f7
     cursor: pointer
 
   svg
-    fill: #2f57b1
+    fill: $brand-primary
     cursor: pointer
 
   .angle-left
@@ -63,8 +72,7 @@ $embeded-color: #f2f3f7
 
   dt
     @include text-ellipsis()
-    font-size: 1.4rem
-    font-weight: 600
+    font-size: 1rem
     padding-left: 1.5rem
     margin-bottom: 1.5rem
     white-space: nowrap
@@ -101,7 +109,7 @@ $embeded-color: #f2f3f7
 
       .angle-down
         position: absolute
-        right: 1.4rem
+        right: 1rem
         transform: rotate(180deg)
         transition: transform 0.3s linear
 
@@ -123,7 +131,6 @@ $embeded-color: #f2f3f7
     > a
       padding: 1.5rem
       width: 5.93rem
-      transition: width 0.6s ease
 
       .item-icon
         width: 2rem

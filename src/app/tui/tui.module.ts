@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { I18nModule } from '../i18n';
 
 import { AvatarComponent } from './avatar';
-import { AdvComponent } from './adv';
+import { AdvComponent, SlicesComponent } from './adv';
 import {
   BtnDirective,
   BtnOutlineDirective,
@@ -36,6 +36,7 @@ import {
   RadioGroupComponent,
   RadioBtnGroupDirective,
   RadioItemComponent,
+  MinValueValidatorDirective,
 } from './form';
 import {
   IconSymbolComponent,
@@ -80,6 +81,25 @@ import {
 } from './chart';
 import { SearchComponent } from './search/search.component';
 import { TextareaComponent } from './form/textarea/textarea.component';
+import { FilterPipe } from './filter.pipe';
+import { LoadingDirective } from './loading/loading.directive';
+import {
+  MessageComponent,
+  MessageContainerComponent,
+} from './message';
+import {
+  MonthViewComponent,
+  YearViewComponent,
+  CalendarBodyComponent,
+  DatepickerInputComponent,
+  TCC_DATEPICKER_SCROLL_STRATEGY_PROVIDER,
+  TccNativeDateModule,
+  CalendarComponent,
+  DatepickerInputDirective,
+  DatepickerContentComponent,
+  DatepickerComponent,
+} from './datepicker';
+import {OverlayModule} from '@angular/cdk/overlay';
 
 @NgModule({
   imports: [
@@ -87,6 +107,8 @@ import { TextareaComponent } from './form/textarea/textarea.component';
     FormsModule,
     RouterModule,
     I18nModule,
+    OverlayModule,
+    TccNativeDateModule,
   ],
   declarations: [
     AdvComponent,
@@ -122,6 +144,7 @@ import { TextareaComponent } from './form/textarea/textarea.component';
     RadioGroupComponent,
     RadioBtnGroupDirective,
     RadioItemComponent,
+    MinValueValidatorDirective,
     SelectComponent,
     SelectOptionComponent,
     SubmenuComponent,
@@ -139,6 +162,19 @@ import { TextareaComponent } from './form/textarea/textarea.component';
     TextareaComponent,
     CarouselComponent,
     CarouselContentDirective,
+    FilterPipe,
+    LoadingDirective,
+    MessageComponent,
+    MessageContainerComponent,
+    CalendarComponent,
+    DatepickerInputDirective,
+    DatepickerContentComponent,
+    DatepickerComponent,
+    DatepickerInputComponent,
+    MonthViewComponent,
+    YearViewComponent,
+    CalendarBodyComponent,
+    SlicesComponent,
   ],
   exports: [
     AdvComponent,
@@ -152,6 +188,7 @@ import { TextareaComponent } from './form/textarea/textarea.component';
     CheckboxGroupComponent,
     CheckboxItemComponent,
     CompelValidatorDirective,
+    FilterPipe,
     DefaultPipe,
     DropdownComponent,
     DropdownTriggerDirective,
@@ -172,6 +209,7 @@ import { TextareaComponent } from './form/textarea/textarea.component';
     RadioGroupComponent,
     RadioBtnGroupDirective,
     RadioItemComponent,
+    MinValueValidatorDirective,
     SelectComponent,
     SelectOptionComponent,
     SubmenuComponent,
@@ -187,15 +225,27 @@ import { TextareaComponent } from './form/textarea/textarea.component';
     ChartBaseComponent,
     SearchComponent,
     TextareaComponent,
+    LoadingDirective,
+    CalendarComponent,
+    DatepickerInputDirective,
+    DatepickerComponent,
+    DatepickerInputComponent,
+    MonthViewComponent,
+    YearViewComponent,
+    CalendarBodyComponent,
+    SlicesComponent
   ],
   providers: [
     ModalCountService,
     SubmenuService,
+    TCC_DATEPICKER_SCROLL_STRATEGY_PROVIDER,
   ],
   entryComponents: [
     ModalContainerComponent,
     ModalConfirmComponent,
     ModalInfoComponent,
+    MessageContainerComponent,
+    DatepickerContentComponent,
   ],
 })
 export class TuiModule { }
