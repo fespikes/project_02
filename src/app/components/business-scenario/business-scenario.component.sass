@@ -1,3 +1,7 @@
+@import '../common/style/layout'
+\:host
+  @extend .center-box
+
 @mixin background($image, $type:jpg, $bgColor:#fff)
 	background: #{$bgColor} url(/assets/images/scenarios/#{$image}.#{$type}) no-repeat left top
 
