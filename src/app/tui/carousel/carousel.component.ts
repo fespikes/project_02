@@ -21,7 +21,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { SubmenuService } from '../submenu';
 
-import { CarouselContentDirective } from './';
+import { CarouselContentDirective } from './carousel-content.directive';
 
 @Component({
   selector: 'tcc-carousel',
