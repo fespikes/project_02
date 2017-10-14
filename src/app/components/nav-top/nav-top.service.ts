@@ -46,10 +46,8 @@ const navigationData = {
 		},
 		{
 			text: '管理中心',
-			routerLink: '',
 			style: {
 				class: 'manage-center',
-				routerLinkActive: ''
 			}
 		}
 	],

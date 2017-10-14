@@ -42,7 +42,6 @@ $h60: 60px
           height: 57px
           color: #2481e3
           border-bottom: 3px #2481e3 solid
-          margin-bottom: -3px
 
       .logo
         width: 200px
@@ -71,6 +70,8 @@ $h60: 60px
 
   .top-nav-sub-items
     @extend .center-box-absolute
+    @extend .border-radius
+    border-top-radius: 0
     height: auto
     background: #051722
     top: 60px 
@@ -78,20 +79,59 @@ $h60: 60px
     ul
       li
 
+.title
+  
+  .normal
+    color: #cccccd
+
+.desc
+  .normal
+    color: #727b85
+
+
+
 .border-radius
   border-radius: 5px
 
-a.submenu-color
-  background: #162c44
-  color: #7c8a97
+$bgColor: #162c44
+$fontColor: #7c8a97
+$pColor: #7c8a97
+$hoverBg: #0063cb
 
-  &>p
-    color: #7c8a97
+.products-sub-menu 
+  padding-right: 10px
+  li
+    float: left
+    display: inline-block
+    width: 25%
+    height: 120px
+    padding: 0 0 10px 10px
+    &:nth-child(4n)
+      padding-right: 0
+      color: red
 
-  &:hover
-    background: #0063cb
+    a
+      @extend .border-radius
+      padding: 0 20px
+      overflow: hidden
+      display: inline-block
+      background: $bgColor
 
 
+    h3
+      padding: 22px 0 15px
+      margin: 0
+      font-size: 1.4rem
+      color: $fontColor
 
+    p
+      padding: 0 
+      height: 60px
+      margin: 0
+
+      font-size: 1.2rem
+      line-height: 20px
+      color: $pColor
+      overflow: hidden
 
 

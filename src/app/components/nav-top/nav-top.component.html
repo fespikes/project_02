@@ -1,39 +1,50 @@
-<div class="top-nav">
-	<ul class="top-nav-ul">
-		<li *ngFor="let item of navigationData.navTop; let idx = index" >
-			<a
-				*ngIf="item.routerLink"
-				routerLink="{{item.routerLink}}"
-				class="{{item.style.class}}"
-				routerLinkActive="{{item.style.routerLinkActive}}"
-				(mouseenter)="onMouseEnter(item)"
-			>{{item.text}}</a>
-			<a
-				*ngIf="!item.routerLink"
-				class="{{item.style.class}}"
-				(mouseenter)="onMouseEnter(item)"
-			>{{item.text}}</a>
-		</li>
-<!-- 		<li><a routerLink="./home" class="top-nav-a logo">Logo</a></li>
-		<li>
-			<a
-				routerLink="./products/data-warehouse/functionalities" 
-				routerLinkActive="active" 
-				class="top-nav-a"
-				(mouseenter)="onMouseEnter()" >云产品</a>
-		</li>
-		<li><a routerLink="./modules" routerLinkActive="active" class="top-nav-a">产品组件</a></li>
-		<li><a routerLink="./business-scenario" routerLinkActive="active" class="top-nav-a">业务方案</a></li>
-		<li><a routerLink="./documents-support" routerLinkActive="active" class="top-nav-a">文档与支持</a></li>
-		<li><a class="manage-center" href="http://www.baidu.com/">管理中心</a></li> -->
-	</ul>
+<header class="top-nav">
+
+	<nav>
+		<ul class="top-nav-ul">
+			<li *ngFor="let item of navigationData.navTop; let idx = index" >
+				<!--below conditions all related to the configuration in service-->
+				<a
+					*ngIf="item.routerLink"
+					routerLink="{{item.routerLink}}"
+					class="{{item.style.class}}"
+					routerLinkActive="{{item.style.routerLinkActive}}"
+					(mouseenter)="onMouseEnter(item)"
+					(click)="onClick(item)"
+				>{{item.text}}</a>
+				<!-- only for "to admin center button"-->
+				<a
+					*ngIf="!item.routerLink"
+					class="{{item.style.class}}"
+					(click)="toAdminCenter(item)"
+				>{{item.text}}</a>
+			</li>
+	<!-- 		<li><a routerLink="./home" class="top-nav-a logo">Logo</a></li>
+			<li>
+				<a
+					routerLink="./products/data-warehouse/functionalities" 
+					routerLinkActive="active" 
+					class="top-nav-a"
+					(mouseenter)="onMouseEnter()" >云产品</a>
+			</li>
+			<li><a routerLink="./modules" routerLinkActive="active" class="top-nav-a">产品组件</a></li>
+			<li><a routerLink="./business-scenario" routerLinkActive="active" class="top-nav-a">业务方案</a></li>
+			<li><a routerLink="./documents-support" routerLinkActive="active" class="top-nav-a">文档与支持</a></li>
+			<li><a class="manage-center" href="http://www.baidu.com/">管理中心</a></li> -->
+		</ul>
+	</nav>
+
+	<!--S: sub menu-->
 	<div
 		*ngIf="showSubmenu"
 		(mouseleave)="onMouseleave()"
 		class="top-nav-sub-items">
 
-		<ul *ngIf="subMenuItems.type===submenuType.products">
-			<li *ngFor="let item of subMenuItems.products">
+		<ul
+			*ngIf="subMenuItems.type===submenuType.products"
+			class="products-sub-menu">
+			<li
+				*ngFor="let item of subMenuItems.products">
 				<a routerLink="{{item.path}}">
 					<h3>{{item.title}}</h3>
 					<p>{{item.summary}}</p>
@@ -41,8 +52,11 @@
 			</li>
 		</ul>
 
-		<ul *ngIf="subMenuItems.type===submenuType.modules">
-			<li *ngFor="let item of subMenuItems.products">
+		<ul
+			*ngIf="subMenuItems.type===submenuType.modules"
+			class="modules-sub-menu">
+			<li
+				*ngFor="let item of subMenuItems.products">
 				<h3>{{item.title}}</h3>
 				<dl>
 					<dd *ngFor="let product of item.products; let i = index">
@@ -54,5 +68,7 @@
 				</dl>
 			</li>
 		</ul>
-		
-</div>
+	</div>
+	<!--E: sub menu-->
+
+</header>

@@ -1,8 +1,10 @@
 
+$box-width: 1200px
+
 .center-box
   display: block
-  width: 1200px
-  min-width: 1200px
+  width: $box-width
+  min-width: $box-width
   max-width: 1230px
   margin: 0 auto
   overflow: hidden
@@ -11,4 +13,4 @@
 	@extend .center-box
 	position: absolute
 	left: 50%
-	margin-left: -680px
+	margin-left: -($box-width/2)

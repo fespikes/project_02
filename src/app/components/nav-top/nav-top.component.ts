@@ -25,27 +25,30 @@ export class NavTopComponent implements OnInit {
   submenuType = CONSTANT.submenuTypes;
 
   constructor(private navTopService: NavTopService) {
+    //if using the api, use Rxjs
     this.navigationData = this.navTopService.getNavigation();
   }
 
-  ngOnInit() {
-    // console.log(this.navigationData);
-  }
-
-  getNavtopData(): any{
-    return this.navigationData.navTop;
+  ngOnInit() {// console.log(this.navigationData);
   }
 
   onMouseEnter(item: any) {
-    this.showSubmenu = item.subMenu?true:false;
-
     this.subMenuItems = this.navigationData.subMenu[item.subMenu];
 
-    console.log(this.subMenuItems);
+    this.showSubmenu = item.subMenu ? true : false;
   }
 
   onMouseleave() {
+    // this.showSubmenu = false;
+  }
+
+  onClick() {
     this.showSubmenu = false;
+  }
+
+  toAdminCenter() {
+    console.log('TODO: to the admin center.')
+    //TODO: 
   }
 
 }
