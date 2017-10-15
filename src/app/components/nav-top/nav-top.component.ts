@@ -39,7 +39,7 @@ export class NavTopComponent implements OnInit {
   }
 
   onMouseleave() {
-    this.showSubmenu = false;
+    // this.showSubmenu = false;
   }
 
   onClick() {

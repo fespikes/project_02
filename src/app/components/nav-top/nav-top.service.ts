@@ -140,7 +140,7 @@ const navigationData = {
 					]
 				},
 				{
-					category: '',
+					category: 'tdh-dev-tools',
 					title: 'TDH开发套件',
 					products: [
 						{

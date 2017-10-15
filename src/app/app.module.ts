@@ -26,6 +26,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { LoginComponent } from './components/login/login.component';
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
 import { NavTopComponent } from './components/nav-top/nav-top.component';
+
 import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component';
 
 // import { LatestNewsModule } from './components/latest-news/latest-news.module';

@@ -68,44 +68,41 @@ $h60: 60px
           height: $h30
           color: #fff
 
-  .top-nav-sub-items
-    @extend .center-box-absolute
-    @extend .border-radius
-    border-top-radius: 0
-    height: auto
-    background: #051722
-    top: 60px 
-    z-index: 100
-    ul
-      li
-
-.title
-  
-  .normal
-    color: #cccccd
-
-.desc
-  .normal
-    color: #727b85
-
-
-
 .border-radius
-  border-radius: 5px
+  border-radius: 3px
+
+.border-bottom-radius
+  @extend .border-radius
+  border-top-left-radius: 0
+  border-top-right-radius: 0
 
 $bgColor: #162c44
-$fontColor: #7c8a97
+$fontColor: #b8bec6
 $pColor: #7c8a97
 $hoverBg: #0063cb
 
+
+.top-nav-sub-items
+  @extend .center-box-absolute
+  @extend .border-bottom-radius
+  padding-bottom: 30px
+  padding-top: 20px
+  border-top-radius: 0
+  height: auto
+  background: #051722
+  top: 60px 
+  z-index: 100
+  ul
+    li
+
 .products-sub-menu 
-  padding-right: 10px
+  padding-right: 20px
   li
     float: left
     display: inline-block
     width: 25%
-    height: 120px
-    padding: 0 0 10px 10px
+    height: 130px
+    padding: 0 0 20px 20px
     &:nth-child(4n)
       padding-right: 0
       color: red
@@ -116,6 +113,8 @@ $hoverBg: #0063cb
       overflow: hidden
       display: inline-block
       background: $bgColor
+      &:hover
+        background: $hoverBg
 
 
     h3
@@ -133,5 +132,71 @@ $hoverBg: #0063cb
       line-height: 20px
       color: $pColor
       overflow: hidden
+
+
+.column-one
+  width: 170px
+
+.column-two
+  width: 360px
+
+.modules-sub-menu
+  overflow: auto
+
+  li
+    float: left
+    display: inline-block
+
+
+  h3
+    font-size: 1.6rem
+    height: 60px
+    line-height: 60px
+
+  dl
+    overflow: auto
+
+  dd
+    float: left
+    display: inline-block
+    width: 170px
+    height: 60px
+    margin: 0
+
+    &:nth-child(2n)
+      margin-left: 18px
+
+  &>li.column-two
+    
+
+  a
+    display: inline-block
+    width: 100%
+    @extend .border-radius
+    background: $bgColor
+    height: 60px
+    padding: 0 20px
+
+    h4, p
+      font-size: 1.4rem
+
+    h4
+      height: 36px
+      line-height: 40px
+      font-weight: 500
+      color: $fontColor
+
+    p
+      height: 24px
+      line-height: 20px
+      color: $pColor
+
+
+    &:hover
+      background: $hoverBg
+
+
+
+
 
 
