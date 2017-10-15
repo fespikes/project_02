@@ -10,7 +10,7 @@ import { TranslateDeactivator, TranslateResolver, TranslateToken } from '../../i
 
 const routes: Routes = [
     {
-      path: 'modules',
+      path: '',
       component: ModulesComponent,
       children: [
         {

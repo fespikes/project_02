@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { TuiModule, TccModalService } from './tui';
+import { TdcApiService } from './shared/services/api.service';
+
 import { CommonService } from './components/common/services/common.service';
 
 import { NavTopService } from './components/nav-top/nav-top.service';
@@ -16,9 +18,9 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './components/home/home.module';
 import { ModulesModule } from './components/modules/modules.module';
 import { DocumentsSupportModule } from './components/documents-support/documents-support.module';
-import { ProductsModule } from './components/products/products.module';
+// import { ProductsModule } from './components/products/products.module';
 import { LatestNewsModule } from './components/latest-news/latest-news.module';
-import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
+// import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
@@ -53,12 +55,8 @@ import {
     TuiModule,
     TdcModule,
     SharedModule,
-
     HomeModule,
-    ProductsModule,
-    BusinessScenarioModule,
-    // LatestNewsModule,
-    ModulesModule,
+
     DocumentsSupportModule,
 
     AppRoutingModule,
@@ -67,6 +65,7 @@ import {
     I18nLangService,
     TranslateService,
     TccModalService,
+    TdcApiService,
     NavTopService,
     CommonService
   ],

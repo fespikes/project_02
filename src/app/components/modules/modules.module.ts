@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { TdcApiService } from '../../shared/services/api.service';
 import { ModulesComponent } from './modules.component';
 import { ModulesRoutingModule } from './modules-routing.module';
 
@@ -40,6 +40,7 @@ import { ProductUtilService } from './services/product-util.service';
     ProductContentService,
     ProductBannerService,
     ProductUtilService,
+    TdcApiService
   ],
 })
 export class ModulesModule { }

@@ -7,7 +7,7 @@ import { BusinessScenarioComponent } from './business-scenario.component';
 
 const scenarioRoutes:Routes = [
   {
-    path: 'business-scenario',
+    path: '',
     component: BusinessScenarioComponent,
 /*    children: [
       {

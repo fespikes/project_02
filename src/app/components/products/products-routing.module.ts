@@ -44,7 +44,7 @@ import { DataMartComponentIntroComponent } from './data-mart/data-mart-component
 
 const productRoutes: Routes = [
   {
-    path: 'products',
+    path: '',
     component: ProductsComponent,
     children: [
       {

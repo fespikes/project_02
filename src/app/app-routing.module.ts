@@ -19,25 +19,25 @@ const routes: Routes = [
     loadChildren: './gallery/gallery.module#GalleryModule',
   },
   {
+    path: 'products',
+    loadChildren: './components/products/products.module#ProductsModule',
+  },
+  {
     path: 'home',
     component: HomeComponent
   },
   {
     path: 'business-scenario',
-    component: BusinessScenarioComponent
+    loadChildren: './components/business-scenario/business-scenario.module#BusinessScenarioModule'
   },
+
   {
-    path: 'documents-support',
-    component: DocumentsSupportComponent
-  },
-  {
-    path: 'management-center',
-    component: ManagementCenterComponent
+    path: 'modules',
+    loadChildren: './components/modules/modules.module#ModulesModule'
   },
   {
     path: 'latest-news',
-    loadChildren: 'app/components/latest-news/latest-news.module#LatestNewsModule',
-    // component: LatestNewsComponent
+    loadChildren: 'app/components/latest-news/latest-news.module#LatestNewsModule'
   },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
