@@ -52,9 +52,8 @@
 			</li>
 		</ul>
 
-		<ul
-			*ngIf="subMenuItems.type===submenuType.modules"
-			class="modules-sub-menu">
+		<ul class="modules-sub-menu"
+			*ngIf="subMenuItems.type===submenuType.modules">
 			<li
 				*ngFor="let item of subMenuItems.products"
 				[ngClass]="item.category==='tdh-dev-tools'?'column-one':'column-two'">
