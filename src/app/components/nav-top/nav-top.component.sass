@@ -135,55 +135,67 @@ $hoverBg: #0063cb
 
 
 .column-one
-  width: 170px
+  width: 188px
 
 .column-two
-  width: 360px
+  width: 386px
 
 .modules-sub-menu
-  overflow: auto
+  &:after
+    content: ""
+    display: table
+    clear: both
+  width: 1080px
+  padding: 0 0 30px
+  margin: 0 auto
 
   li
     float: left
     display: inline-block
-
+    width: 386px
 
   h3
     font-size: 1.6rem
     height: 60px
     line-height: 60px
-
-  dl
-    overflow: auto
+    color: #b8bec6
 
   dd
     float: left
     display: inline-block
-    width: 170px
+    width: 188px
     height: 60px
-    margin: 0
+    margin: 0 0 10px
 
     &:nth-child(2n)
-      margin-left: 18px
+      margin-left: 10px
 
-  &>li.column-two
-    
+  &>li.column-one
+    margin: 0 60px
+    width: 188px
 
+    dd
+      &:nth-child(2n)
+        margin-left: 0
   a
     display: inline-block
     width: 100%
     @extend .border-radius
     background: $bgColor
     height: 60px
-    padding: 0 20px
+    padding: 0 16px
 
-    h4, p
-      font-size: 1.4rem
+    p
+      font-size: 1.2rem
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
 
     h4
       height: 36px
       line-height: 40px
       font-weight: 500
+      font-size: 1.4rem
       color: $fontColor
 
     p
