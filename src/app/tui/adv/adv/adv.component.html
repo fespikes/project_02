@@ -1,7 +1,14 @@
 <div
 	class="home-banner"
-	[ngStyle]="{background: currentAdv.bgColor +' url('+ currentAdv.bgUrl + ') no-repeat center top'}"
+	[ngStyle]="{
+    'background-color': currentAdv.bgColor,
+    'background-image': ' url('+ currentAdv.bgUrl + ')',
+    'background-repeat': 'no-repeat',
+    'background-position': 'center top',
+    'background-size': '1200px 565px'
+  }"
 >
+<!--if only use "background: color url() position repeat ..., background-size. it doesn't work, so changed to separate them"-->
   <ul class="advs">
 		<li *ngFor="let adv of advList; let idx = index" [class.active]="currentIdx==idx">
 			<h2>{{adv.h2}}</h2>
