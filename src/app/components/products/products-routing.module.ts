@@ -44,6 +44,8 @@ import { DataMartComponentIntroComponent } from './data-mart/data-mart-component
 
 import { InfoRetrievalFunctionalitiesComponent } from './info-retrieval/info-retrieval-functionalities/info-retrieval-functionalities.component';
 import { InfoRetrievalAdvantagesComponent } from './info-retrieval/info-retrieval-advantages/info-retrieval-advantages.component';
+import { InfoRetrievalScenariosComponent } from './info-retrieval/info-retrieval-scenarios/info-retrieval-scenarios.component';
+import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retrieval-component-intro/info-retrieval-component-intro.component';
 
 const productRoutes: Routes = [
   {
@@ -136,7 +138,7 @@ const productRoutes: Routes = [
               { path: 'advantages', component: InfoRetrievalAdvantagesComponent },
               {
                 path: 'scenarios', 
-                component: ScenariosComponent,
+                component: InfoRetrievalScenariosComponent,
                 children: [
                   {
                     path: '',
@@ -152,7 +154,7 @@ const productRoutes: Routes = [
               },
               {
                 path: 'component-intro', 
-                component: ComponentIntroComponent,
+                component: InfoRetrievalComponentIntroComponent,
                 children: [
                   {
                     path: '',
