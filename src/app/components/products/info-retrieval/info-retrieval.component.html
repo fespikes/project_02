@@ -1,7 +1,8 @@
 
 
+<info-retrieval-banner [productDetails]=productDetails></info-retrieval-banner>
 
-<div class="details-banner">
+<!-- <div class="details-banner">
 	<div class="slogans">
 		<h3 class="title">信息检索</h3>
 		<p>
@@ -10,12 +11,9 @@
 	</div>
 	<div class="adv-image"></div>
 </div>
-
+ -->
 <div class="tab-box">
-  <tdc-tab
-    [tabItems]="tabItems"
-    (onTabChange)="onTabChange($event)"
-  ></tdc-tab>
+	<info-retrieval-tabs [productDetails]=productDetails></info-retrieval-tabs>
 	<div class="tab-sub">
 		<router-outlet></router-outlet>
 	</div>

@@ -42,6 +42,9 @@ import { DataMartComponentIntroComponent } from './data-mart/data-mart-component
   import { TdhDevKitsComponent as DataMartTdhDevKitsComponent } from './data-mart/data-mart-component-intro/tdh-dev-kits/tdh-dev-kits.component';
   import { OperationDevToolsComponent as DataMartOperationDevToolsComponent } from './data-mart/data-mart-component-intro/operation-dev-tools/operation-dev-tools.component';
 
+import { InfoRetrievalFunctionalitiesComponent } from './info-retrieval/info-retrieval-functionalities/info-retrieval-functionalities.component';
+import { InfoRetrievalAdvantagesComponent } from './info-retrieval/info-retrieval-advantages/info-retrieval-advantages.component';
+
 const productRoutes: Routes = [
   {
     path: '',
@@ -129,8 +132,8 @@ const productRoutes: Routes = [
           { path: 'info-retrieval', component: InfoRetrievalComponent,
             children: [
 
-              { path: 'functionalities', component: FunctionalitiesComponent },
-              { path: 'advantages', component: AdvantagesComponent },
+              { path: 'functionalities', component: InfoRetrievalFunctionalitiesComponent },
+              { path: 'advantages', component: InfoRetrievalAdvantagesComponent },
               {
                 path: 'scenarios', 
                 component: ScenariosComponent,

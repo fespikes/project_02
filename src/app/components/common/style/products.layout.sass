@@ -1,5 +1,9 @@
 @import '../../../styles/util'
 
+p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt,
+  padding: 0
+  margin: 0
+
 .products-menu
   width: 190px
   float: left
@@ -16,18 +20,20 @@
 
   .slogans
     display: inline-block
-    width: 55%
+    width: 466px
     padding-left: 86px
     vertical-align: top
     position: relative
     top: 50%
     transform: translateY(-50%)
+    margin-right: 50px
 
     h3, h4
       color: #fff
 
     h3.title
       font-size: 4.8rem
+      margin: 0
 
     h4.title
       font-size: 2.4rem
@@ -41,18 +47,43 @@
 
   .adv-image
     display: inline-block
-    width: 45%
-    height: 333px
+    width: 400px
+    height: 300px
     position: relative
     vertical-align: top
-    top: 3rem
+    top: 50%
+    transform: translateY(-50%)
+    img
+      width: 100%
+
+.tabsUl
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  border-bottom: 1px #d3d9e5 solid
+  margin: 0 20px
+
+  li
+  font-size: 1.4rem
+
+  a
+    display: inline-block
+    padding: 30px 20px 10px
+
+    &:hover, &.active
+      color: #2481e3
+      font-weight: 600
+      border-bottom: 2px #2481e3 solid
+      margin-bottom: -2px
+      cursor: pointer
+
 
 .tab-sub
-  padding: 0 2rem
+  padding: 0 18px
 
 h3.sub-title
   font-size: 1.6rem
-  padding: 4rem 0 1.6rem 1rem
+  padding: 32px 0 14px 1rem
   &:before
     content: ""
     display: inline-block
@@ -64,27 +95,29 @@ h3.sub-title
     background: $tdcCommonBlue
 
 .details-box
-  padding: 6rem 5rem
+  padding: 50px 46px
   background: #fff
   border-radius: 0.4rem
   overflow: hidden
   font-size: 0
 
   .img-box, .text-list
-    padding-bottom: 100rem
-    margin-bottom: -100rem
 
   .img
     background-repeat: no-repeat
   .diagram
-    padding: 40rem 40rem 2.1rem 7rem
+    width: 400px
+    float: left
     display: inline-block
 
+    img
+      width: 100%
+
   .text-list
+    margin-left: 400px
 
     li
-      padding-left: 8rem
-      padding-right: 3rem
+      padding-left: 70px
       position: relative
       line-height: 2rem
       font-size: 1.2rem
@@ -105,12 +138,12 @@ h3.sub-title
       h5:before
         content: ''
         display: inline-block
-        width: 0.6rem
-        height: 0.6rem
+        width: 0.5rem
+        height: 0.5rem
         position: absolute
-        left: 6rem
+        left: 4.5rem
         top: 0.7rem
-        border-radius: 0.3rem
+        border-radius: 0.25rem
         background: $tdcCommonBlue
 
     .intent
@@ -136,3 +169,40 @@ h3.sub-title
 
       h5:before
         left: -2rem
+
+.details-box.d
+  .text-list
+    margin-left: 0
+    li
+      h5:before
+        left: -20px
+
+.intro-table
+
+  .row
+    height: 98px
+    display: flex
+
+    .title
+      width: 200px
+      height: 98px
+      line-height: 98px
+      font-weight: 600
+      text-indent: 40px
+      color: #354052
+
+    .ctn
+      width: 680px
+      padding-right: 120px
+      display: flex
+      align-items: center
+      align-content: center
+      line-height: 1.5
+
+    .anchor
+      width: 110px
+      height: 98px
+      line-height: 98px
+      font-weight: 600
+      color: #0066ce
+

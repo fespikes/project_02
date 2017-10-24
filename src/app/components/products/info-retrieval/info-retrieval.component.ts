@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, ViewChild, ComponentFactoryResolver } from '@angular/core';
 
-import { ProductsService } from '../products.service';
+import { InfoRetrievalService } from './info-retrieval.service';
 
 @Component({
   selector: 'tdc-info-retrieval',
@@ -9,18 +9,19 @@ import { ProductsService } from '../products.service';
 })
 export class InfoRetrievalComponent implements OnInit {
 
-  tabItems = [];
+  productDetails: any;
 
-  constructor(
-    private productsService: ProductsService
-  ) { }
+  constructor(private service: InfoRetrievalService) {
+
+  }
 
   ngOnInit() {
-    this.tabItems = this.productsService.getProductTabs();
+    const productDetails = this.service.getProductDetails();
+    this.productDetails = productDetails;
   }
 
-  onTabChange() {
-
+  ngOnDestroy() {
   }
+
 
 }

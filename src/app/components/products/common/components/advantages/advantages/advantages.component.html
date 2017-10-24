@@ -1,7 +1,9 @@
 
 <h3 class="sub-title">{{data.title}}</h3>
 
-<div class="details-box">
+<div
+	class="details-box"
+	[ngClass]="{'d': (data.diagram?false:true)}">
 	<ul class="text-list">
 		<li *ngFor="let obj of data.content">
 			<h5>{{obj.title}}</h5>
