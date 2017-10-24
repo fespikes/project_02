@@ -1,0 +1,26 @@
+<div *ngFor="let node of treeModel">
+  <div
+    class="node-type"
+    [ngStyle]="{'padding-left': (treeLevel * 20) + 'px'}"
+  >
+    <svg
+      *ngIf="node.children && node.children.length > 0"
+      tccIcon="angle-up" size="sm"
+      [class.expanded]="node.expanded"
+      (click)="toggle(node, treeLevel)"
+    ></svg>
+    <a
+      id="node.id"
+      class="node-name"
+      (click)="selectChange(node, treeLevel)"
+    >
+      {{node.name}}
+    </a>
+  </div>
+  <tdc-menu-tree
+    *ngIf="node.expanded && node.children.length > 0"
+    [treeModel]="node.children"
+    [treeLevel]="treeLevel + 1"
+    (onSelectChange)="selectChange($event)"
+  ></tdc-menu-tree>
+</div>

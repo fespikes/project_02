@@ -18,15 +18,7 @@ const routes: Routes = [
     component: DocumentsSupportComponent
   },
   {
-    path: 'documents-support/home',
-    component: DocumentsSupportComponent
-  },
-  {
     path: 'documents-support/docs-search',
-    component: DocumentsSearchComponent
-  },
-  {
-    path: 'documents-support/docs-search/:keyword',
     component: DocumentsSearchComponent
   },
   {
@@ -48,8 +40,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'docs-detail/:category/:version/:document/:section',
-    //path: 'docs-detail',
+    path: 'docs-detail/:category/:version/:document',
     component: DocumentsDetailComponent
   }
 ];

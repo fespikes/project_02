@@ -1,9 +1,9 @@
 @import "../../../styles/util"
-.docs-search
-  min-height: calc(100vh - 223px)
-  background-color: $tdcCommonBgColor
-
 @include clearfix
+
+.docs-search
+  min-height: calc(100vh - #{$nav-height})
+  background-color: $tdcCommonBgColor
 
 .panel-left
   float: left
@@ -20,7 +20,7 @@
       position: relative
       top: 3.5rem
   .tree
-    min-height: calc(100vh - 33.3rem)
+    min-height: calc(100vh - (#{$nav-height}) - 23rem)
 
   .operation
     height: 8rem
@@ -37,15 +37,21 @@
 
 .panel-right
   margin: 0 2rem 0 27rem
-  padding: 3rem 2rem 1rem 2rem
+  padding: 3rem 4rem 1rem 2rem
   background-color: #fff
   border-radius: 0.4rem
-  .search
-    .search-field
+
+  .search-docs
+    height: 3.2rem
+    .search .search-field
       height: 3rem
       border: 1px solid $tdcCommonGrey
-    .search-btn
+    .search .search-btn
       height: 3rem
+
+  .tcc-pagination
+    justify-content: flex-end
+    margin-top: 2rem
 
 
 

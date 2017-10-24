@@ -1,4 +1,27 @@
-<document-breadcrumb
-  [crumbItems]="crumbItems"
-></document-breadcrumb>
-<div>documents detail</div>
+<div class="doc-detail">
+  <document-breadcrumb
+    [crumbItems]="crumbItems"
+  ></document-breadcrumb>
+  <div class="doc-content clearfix">
+    <div class="menu">
+      <div class="go-back">
+        <svg
+          tccIcon="angle-left"
+          size='sm'
+          [routerLink]="backUrl"
+        ></svg>
+      </div>
+      <div class="doc-name">{{docName}}</div>
+      <tdc-menu-tree
+        [treeModel]="treeModel"
+        [treeLevel]="treeLevel"
+        (onSelectChange)="onSelectChange($event)"
+      ></tdc-menu-tree>
+    </div>
+    <div id="doc-detail-content" class="context">
+
+    </div>
+  </div>
+</div>
+
+

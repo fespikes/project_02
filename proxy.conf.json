@@ -2,5 +2,9 @@
   "/v2/*": {
     "target": "http://172.16.1.161:31177",
     "secure": false
+  },
+  "/images/*": {
+    "target": "http://172.16.1.161:31177",
+    "secure": false
   }
 }

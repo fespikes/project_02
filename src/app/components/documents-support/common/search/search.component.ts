@@ -15,15 +15,21 @@ import {
 
 export class SearchComponent implements OnInit {
   @Input() filterSearch: boolean;
+  @Input() keyword: string;
   @Output() onDocumentSearch = new EventEmitter();
 
-  keyword = '';
   constructor() {
 
   }
 
   ngOnInit() {
 
+  }
+
+  onKey(event) {
+    if(event.keyCode === 13) {
+      this.documentSearch();
+    }
   }
 
   documentSearch() {

@@ -1,0 +1,36 @@
+@import '../../../../styles/util'
+@include clearfix
+
+\:host
+
+  width: 100%
+  display: inline-block
+  background-color: white
+  padding-left: 2rem
+  overflow: auto
+
+  svg
+    width: 2rem
+    height: 2rem
+    fill: $brandblue
+    margin-right: 0.5rem
+    transition: transform 0.4s
+
+    &.expanded
+      transform: rotate(180deg)
+
+  .node-type
+    height: 3.75rem
+    line-height: 3.75rem
+    padding: 0 1rem 0 1.875rem
+    color: $text-dark
+    user-select: none
+    cursor: default
+    white-space: nowrap
+
+
+
+
+
+
+
