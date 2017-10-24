@@ -9,7 +9,7 @@ export class OperationDevToolsComponent extends ComponentIntroChildComponent imp
 
   constructor(
   	componentFactoryResolver: ComponentFactoryResolver,
-  	private dataMartService: DataMartService,
+  	private service: DataMartService,
   	private el: ElementRef 
 	) {
   	super(componentFactoryResolver);
@@ -17,7 +17,7 @@ export class OperationDevToolsComponent extends ComponentIntroChildComponent imp
 
   ngOnInit() {
   	try{
-  		const productDetails = this.dataMartService.getProductDetails();
+      const productDetails = this.service.getProductDetails();
   		this.data = productDetails.componentIntro.operationDevTools;
   	} catch(e){
   		console.log(e.message);

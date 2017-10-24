@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 import { TuiModule, TccModalService } from '../../tui';
 import { TdcModule } from '../common/components/tdc.module';
 
@@ -66,14 +67,7 @@ import { DataMartComponentIntroComponent } from './data-mart/data-mart-component
   import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenarios/customer-service-managing/customer-service-managing.component';
 
 //S: info-retrieval
-import { InfoRetrievalComponent } from './info-retrieval/info-retrieval.component';
-import { InfoRetrievalService } from './info-retrieval/info-retrieval.service';
-import { InfoRetrievalBannerComponent } from './info-retrieval/info-retrieval-banner/info-retrieval-banner.component';
-import { InfoRetrievalTabsComponent } from './info-retrieval/info-retrieval-tabs/info-retrieval-tabs.component';
-import { InfoRetrievalFunctionalitiesComponent } from './info-retrieval/info-retrieval-functionalities/info-retrieval-functionalities.component';
-import { InfoRetrievalAdvantagesComponent } from './info-retrieval/info-retrieval-advantages/info-retrieval-advantages.component';
-import { InfoRetrievalScenariosComponent } from './info-retrieval/info-retrieval-scenarios/info-retrieval-scenarios.component';
-import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retrieval-component-intro/info-retrieval-component-intro.component';
+import { InfoRetrievalModule } from './info-retrieval/info-retrieval.module';
 
 @NgModule({
   imports: [
@@ -81,6 +75,8 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retr
     TuiModule,
     TdcModule,
     DataWarehouseModule,
+
+    InfoRetrievalModule,
     ProductsRoutingModule
   ],
   declarations: [
@@ -88,7 +84,6 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retr
 
   	DataWarehouseComponent,
   	DataMartComponent,
-  	InfoRetrievalComponent,
   	RelationalDatabaseComponent,
   	DeepLearningComponent,
   	RealtimeComputationComponent,
@@ -135,18 +130,11 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retr
     TdhPlatformProductsComponent,
     TdhDevKitsComponent,
     OperationDevToolsComponent,
-    InfoRetrievalBannerComponent,
-    InfoRetrievalTabsComponent,
-    InfoRetrievalFunctionalitiesComponent,
-    InfoRetrievalAdvantagesComponent,
-    InfoRetrievalScenariosComponent,
-    InfoRetrievalComponentIntroComponent
   ],
   providers: [
     TccModalService,
     ProductsService,
     DataMartService,
-    InfoRetrievalService,
   ],
   entryComponents: [
     TheBannerComponent,

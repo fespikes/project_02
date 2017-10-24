@@ -9,7 +9,7 @@ export class TdhDevKitsComponent extends ComponentIntroChildComponent implements
 
   constructor(
   	componentFactoryResolver: ComponentFactoryResolver,
-  	private dataMartService: DataMartService,
+  	private service: DataMartService,
   	private el: ElementRef 
 	) {
   	super(componentFactoryResolver);
@@ -17,7 +17,7 @@ export class TdhDevKitsComponent extends ComponentIntroChildComponent implements
 
   ngOnInit() {
   	try{
-  		const productDetails = this.dataMartService.getProductDetails();
+      const productDetails = this.service.getProductDetails();
   		this.data = productDetails.componentIntro.tdhDevKits;
   	} catch(e){
   		console.log(e.message);

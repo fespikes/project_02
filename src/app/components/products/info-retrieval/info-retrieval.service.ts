@@ -24,7 +24,7 @@ export class InfoRetrievalService {
         },
         {
           text: '应用场景',
-          link: './scenarios/self-analysis-platform'
+          link: './scenarios'///self-analysis-platform
         },
         {
           text: '组件介绍',
@@ -84,44 +84,44 @@ export class InfoRetrievalService {
         tabs: [
           {
             text: '企业数据搜索引擎',
-            link: './ddddddddd'
+            link: './data-search-engine'
           },
           {
             text: '日志采集与分析系统',
-            link: './ddddddddddddddd'
+            link: './log-acquisition-analysis'
           },
           {
-            text: '客户服务管理',
-            link: './customer-service-managing'
+            text: '商业分析',
+            link: './business-analysis'
           }
         ],
-        selfAnalysisPlatform: {
-          text: '规模较大分支机构较多的企业，可以利用TDH-DM将总部至基层的数据按照主题整合于集市，打造自助式的查询平台。基层部门的业务人员在平台上自主的实现快速查询，不再需要寻求总部和技术人员的帮助构建报表，节省了等待审批、数据提取和技术支持的时间开销。打破企业层级对数据流动的限制，迎合专业群体的特殊需求，促进基层部门的业务和总体经营发展。',
+        dataSearchEngine: {
+          text: 'TDH-RI可用于构建企业内部搜索引擎，根据指定的规则策略，在海量的结构化和非结构化数据中实现对目标关键字的搜索，返回并高亮匹配目标内容片段，按照同查询内容的相关性显示搜索的结果。同时支持根据记录的历史查询内容，自动提供搜索推荐，构造高效精确的搜索引擎。',
           image: {
-            src: '/assets/images/products/scenarios/data-mart/self-analysis-platform.png',
+            src: '/assets/images/products/scenarios/info-retrieval/data-search-engine.png',
             style: {
-              width: '810',
-              height: '394'
+              width: '690',
+              height: '486'
             }
           }
         },
-        marketingAnalysisSystem: {
-          text: '根据交易 数据的含义和关系，开发OLAP业务应用，对销售状况做多维度分析。在规模高至亿级别的数据中进行关联汇总，通过不断改变维度和度量，分析并整理数据分布，发现模式变化，探索趋势。发掘内外因素对销售效果产生的影响，制定恰当并具有特色的营销方式，提升管理经营水平。',
+        logAcquisitionAnalysis: {
+          text: '广泛采集汇聚不同系统的日志，对重要关键字进行转化、检索、解析与分析，检测系统中的隐藏问题和漏洞。同时对接可视化平台，通过生成图表进行更高级直观的分析，协助发现未知攻击，提升效率和识别力。另外为用户提供关键字检索接口，使人工处理协助自动分析，实现更具针对性和精确度的日志分析功能，打造日志处理的瑞士军刀。',
           image: {
-            src: '/assets/images/products/scenarios/data-mart/marketing-analysis-system.png',
+            src: '/assets/images/products/scenarios/info-retrieval/marketing-analysis-system.png',
             style: {
-              width: '728',
-              height: '429'
+              width: '798',
+              height: '363'
             }
           }
         },
-        customerServiceManaging: {
-          text: '根据交易 数据的含义和关系，开发OLAP业务应用，对销售状况做多维度分析。在规模高至亿级别的数据中进行关联汇总，通过不断改变维度和度量，分析并整理数据分布，发现模式变化，探索趋势。发掘内外因素对销售效果产生的影响，制定恰当并具有特色的营销方式，提升管理经营水平。',
+        businessAnalysis: {
+          text: '在海量数据中快速定位关键信息，进行分析聚合，充分利用隐藏在非结构化数据中的信息，锁定某类用户的属性和行为特征，从而制定相应策略或作出决策。例如分析产品的购买群体，消费者的消费特征，销售额的变化情况与趋势，构建商业智能平台。',
           image: {
-            src: '/assets/images/products/scenarios/data-mart/csm.png',
+            src: '',//'/assets/images/products/scenarios/info-retrieval/business-analysis.png',
             style: {
-              width: '900',
-              height: '322'
+              // width: '900',
+              // height: '322'
             }
           }
         }
@@ -150,20 +150,16 @@ export class InfoRetrievalService {
           title: 'Guardian',
           text: 'Guardian为TDH提供集中的安全和资源管理服务。它支持LDAP和Kerberos，保护Hadoop集群免受恶意攻击和安全威胁，而且还可以对资源做细粒度的ACL控制。多租户资源管理模块可以按照租户的方式管理资源，并通过一个图形化工具为用户提供权限配置以及资源配置接口。',
           link: ''  //TODO: the link goto incepter introduction
+        }, {
+          title: 'Search',
+          text: 'Search用于在企业内部构建大数据搜索引擎。它能够在PB数据量级上实现秒级延迟的搜索功能;在开发接口方面，Search提供了完整 的SQL语法支持并提供了搜索语法SQL扩展，通过和Inceptor优化器有效结合，使开发者无需了解底层架构就可以开发出高效的搜索引 擎。Search创新的使用了堆外内存管理技术来提高系统的健壮性，避免了GC问题对系统的影响;此外，Search还支持混合存储，通过 将热数据存储在SSD上来提升查询速度。',
+          link: ''  //TODO: the link goto incepter introduction
         },{
           title: 'Hadoop',
           text: 'Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。',
           link: ''  //TODO: the link goto incepter introduction
         }],
         tdhDevKits: [{
-          title: 'Workflow',
-          text: 'Workflow是一个图形化的工作流设计、调试、调度和分析的服务平台，它支持Shell、SQL、JDBC、HTTP等任务类型，也可以写自定 义Java任务。它还提供丰富的分析能力，如依赖关系、执行历史、甘特图等，可以帮助用户诊断工作流的执行状况。',
-          link: ''  //TODO: the link goto incepter introduction
-        },{
-          title: 'Rubik',
-          text: 'Rubik是一款用于设计OLAP Cube的可视化工具，所建Cube可以实例化于HDFS或Holodesk。Rubik支持雪花模型和星形模型两种Cube 设计模型，并支持多种格式的数据源(包括HDFS和远程RDBMS)。实验显示，在数据立方体的加速下，分析查询的速度可提高10倍。 Rubik通过可视化方式提供服务，使数据分析师得到更友好的交互体验。',
-          link: ''  //TODO: the link goto incepter introduction
-        },{
           title: 'Pilot',
           text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
           link: ''  //TODO: the link goto incepter introduction
