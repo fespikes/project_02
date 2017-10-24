@@ -13,6 +13,8 @@ import { DocumentResService } from '../services/document.res.service';
 })
 
 export class DocumentsDetailComponent implements OnInit {
+  @HostBinding('class.tdc-documents-detail') layout = true;
+
   pathParams = {
     category: '',
     version: '',
@@ -22,6 +24,8 @@ export class DocumentsDetailComponent implements OnInit {
   crumbItems = [];
   treeModel = [];
   treeLevel = 0;
+  docName = '';
+  backUrl = '../../../../documents-support';
 
   constructor(
     private documentAPIService: DocumentAPIService,
@@ -34,8 +38,8 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.crumbItems = this.documentResService.getDocsCrumb(
-      'docs-detail', this.documentUtilService.getModuleName(window.location.hash));
+    this.docName = this.documentUtilService.getModuleName(window.location.hash);
+    this.crumbItems = this.documentResService.getDocsCrumb('docs-detail', this.docName);
     this.getDocTree();
     this.getDocDetail();
   }
@@ -60,7 +64,8 @@ export class DocumentsDetailComponent implements OnInit {
 
   getPath(type) {
     let sectionId = this.documentResService.getSectionId();
-    this.pathParams = this.documentUtilService.getDocDetailUrlParams(window.location.hash, sectionId);
+    this.pathParams = this.documentUtilService.getDocDetailUrlParams(
+      window.location.hash, sectionId);
     let path;
     switch (type) {
       case 'docTree':

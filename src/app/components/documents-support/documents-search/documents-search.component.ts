@@ -46,7 +46,8 @@ export class DocumentsSearchComponent implements OnInit {
     this.keyword = keyword;
     this.documentResService.setKeyword(keyword);
     this.router.navigate([`/documents-support/docs-search`]);
-    let searchParams = this.documentSearchService.makeSearchParams(keyword, this.pagination, this.selectedDocs);
+    let searchParams = this.documentSearchService.makeSearchParams(
+      keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
   }
 
@@ -63,29 +64,15 @@ export class DocumentsSearchComponent implements OnInit {
       result => {
         this.docsList = result.results;
         this.docsCount = result.total;
-        this.makePaginationParams(this.docsList);
-        //if(this.docsList.length > 0) {
-        //
-        //  //this.docsCount = this.docsList[0].total;
-        //  //let docAbsDom = document.getElementById('doc-abs-container');
-        //  //docAbsDom.innerHTML = this.docsList[0].summary;
-        //}
+        this.pagination = this.documentSearchService.makePaginationParams(
+          this.docsCount, this.pagination);
       }
     );
   }
 
-  makePaginationParams(list) {
-    if(list.length > 0) {
-      this.pagination = {
-        page: this.pagination.page,
-        size: this.pagination.size,
-        total: this.docsCount
-      };
-    }
-  }
-
   paginationChange() {
-    const searchParams = this.documentSearchService.makeSearchParams(this.keyword, this.pagination, this.selectedDocs);
+    const searchParams = this.documentSearchService.makeSearchParams(
+      this.keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
   }
 
@@ -98,10 +85,12 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   onSelectChange(entity) {
-    const searchState: any = this.documentSearchService.makeSelectedDocs(entity, this.selectedDocs, this.treeModel);
+    const searchState: any = this.documentSearchService.makeSelectedDocs(
+      entity, this.selectedDocs, this.treeModel);
     this.selectedDocs = searchState.selectedDocs;
     this.treeModel = searchState.treeModel;
-    const searchParams = this.documentSearchService.makeSearchParams(this.keyword, this.pagination, this.selectedDocs);
+    const searchParams = this.documentSearchService.makeSearchParams(
+      this.keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
   }
 

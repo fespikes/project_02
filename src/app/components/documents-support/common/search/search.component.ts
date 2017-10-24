@@ -26,6 +26,12 @@ export class SearchComponent implements OnInit {
 
   }
 
+  onKey(event) {
+    if(event.keyCode === 13) {
+      this.documentSearch();
+    }
+  }
+
   documentSearch() {
     this.onDocumentSearch.emit(this.keyword);
   }

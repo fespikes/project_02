@@ -5,6 +5,7 @@
   <input
     class="search-field"
     [(ngModel)]="keyword"
+    (keyup)="onKey($event)"
     placeholder="{{'DOCUMENTS.SEARCH_PLACEHOLDER' | translate}}" />
   <button
     (click)="documentSearch()"

@@ -29,7 +29,7 @@ export class DocTreeComponent implements OnInit {
 
 
   selectChange(node, level) {
-    if(level > 2) {
+    if(level > 1) {
       return;
     }
     node.level = level;

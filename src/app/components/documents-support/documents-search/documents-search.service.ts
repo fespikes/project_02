@@ -150,4 +150,12 @@ export class DocumentSearchService {
     return collection;
   }
 
+  makePaginationParams(docsCount, pagination) {
+    return {
+      page: pagination.page,
+      size: pagination.size,
+      total: docsCount
+    };
+  }
+
 }

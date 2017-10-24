@@ -23,11 +23,12 @@
   </div>
   <div class="doc-list">
     <div
-      class="doc-item"
+      class="doc-item clearfix"
       (click)="viewDocDetail(docsItem, doc)"
       *ngFor="let doc of docsItem.docsCollection[docsItem.currentVersion.name]"
     >
-      {{doc.name}}
+      <span>{{doc.name}}</span>
+      <svg tccIcon="enter" size='md'></svg>
     </div>
   </div>
 </div>

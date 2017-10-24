@@ -21,16 +21,6 @@ export class DocsListComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.renderDocAbsDom();
-  }
-
-  renderDocAbsDom() {
-    console.log('this.docsList=', this.docsList);
-    //let docAbsDom = document.getElementById('doc-abs-container');
-    //docAbsDom.innerHTML = this.docsList[0].summary;
-    //this.docsList.map(doc => {
-    //
-    //});
   }
 
   listItemClick(doc) {

@@ -42,7 +42,7 @@ export class PaginationComponent implements OnInit, OnDestroy {
   private ngUnsubscribe = new Subject<any>();
   pageSize: number;
   totalData: number;
-  sizes = [10, 20];
+  sizes = [5, 10, 20];
   pages: any[];
   searchPage: number;
   _currentPage: number;
