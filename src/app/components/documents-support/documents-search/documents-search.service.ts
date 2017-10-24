@@ -21,8 +21,8 @@ export class DocumentSearchService {
     while (stack.length) {
       item = stack.shift();
       item.expanded = expanded;
-      if (item.sub && item.sub.length) {
-        stack = stack.concat(item.sub);
+      if (item.children && item.children.length) {
+        stack = stack.concat(item.children);
       }
     }
 
@@ -121,9 +121,11 @@ export class DocumentSearchService {
 
   updateTreeModelStateByVersion(manual, treeModel, version) {
     const consistent = this.stateConsistent(manual.children, version.selected);
+    let manualNode: any = this.findTreeNode(manual.id, treeModel);
     if(consistent) {
-      let manualNode: any = this.findTreeNode(manual.id, treeModel);
       manualNode.selected = version.selected;
+    }else {
+      manualNode.selected = false;
     }
   }
 
