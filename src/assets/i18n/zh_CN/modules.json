@@ -2,6 +2,12 @@
   "TUI":{
     "SELECT":{
       "NO_OPTIONS":"没有可选择的选项"
+    },
+    "PAGINATION":{
+      "SHOW_ROW_COUNT":"显示行数",
+      "GO_TO":"跳转至第",
+      "GO_TO_PAGE":"页",
+      "CONFIRM":"确定"
     }
   },
   "MODULES":{
@@ -380,6 +386,8 @@
     "SEARCH_FILTER":"搜索条件",
     "EXPAND_ALL":"全部展开",
     "COLLAPSE_ALL":"全部收起",
+    "SEARCH_RELATED_RESULT":"搜索相关结果",
+    "ITEM":"条",
     "PRODUCT":{
 
     },

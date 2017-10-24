@@ -1,4 +1,6 @@
 @import '../common/style/layout'
+@import '../../styles/util'
+
 \:host
   @extend .center-box
 
@@ -6,7 +8,7 @@
 	cursor: pointer
 
 .search-box
-	min-height: calc(100vh - 223px)
+	min-height: calc(100vh - #{$nav-height})
 	padding-top: 160px
 	background: url(/assets/images/search/index-bg.jpg) no-repeat center top
     size: cover

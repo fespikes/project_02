@@ -15,10 +15,14 @@ import { ProductListComponent } from './documents-list/product-document/product-
 
 import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 import { SearchComponent } from './common/search/search.component';
-import { TreeComponent } from './common/tree/tree.component';
+import { SearchTreeComponent } from './documents-search/tree/search-tree.component';
+import { DocTreeComponent } from './documents-detail/tree/doc-tree.component';
+import { DocsListComponent } from './documents-search/list/docs-list.component';
 
 import { DocumentUtilService } from './services/document.util.service';
 import { DocumentAPIService } from './services/document.api.service';
+import { DocumentResService } from './services/document.res.service';
+import { DocumentSearchService } from './documents-search/documents-search.service';
 import { TdcApiService } from '../../shared/services/api.service';
 
 import { TuiModule } from '../../tui/tui.module';
@@ -47,11 +51,15 @@ import { SharedModule } from '../../shared';
     FreshGuidesComponent,
     ProductListComponent,
     SearchComponent,
-    TreeComponent,
+    SearchTreeComponent,
+    DocTreeComponent,
+    DocsListComponent,
     BreadcrumbComponent
   ],
   providers: [
     TdcApiService,
+    DocumentSearchService,
+    DocumentResService,
     DocumentUtilService,
     DocumentAPIService
   ]

@@ -18,7 +18,7 @@ interface PaginationState {
 
 export class Pagination {
   page = 1;
-  size = 10;
+  size = 5;
   total = 0;
 }
 
@@ -42,7 +42,7 @@ export class PaginationComponent implements OnInit, OnDestroy {
   private ngUnsubscribe = new Subject<any>();
   pageSize: number;
   totalData: number;
-  sizes = [10, 20];
+  sizes = [5, 10, 20];
   pages: any[];
   searchPage: number;
   _currentPage: number;

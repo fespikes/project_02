@@ -9,7 +9,7 @@ import {
 
 import { Router } from '@angular/router';
 
-import { DocumentAPIService } from '../../../services/document.api.service';
+import { DocumentResService } from '../../../services/document.res.service';
 import { DocumentUtilService } from '../../../services/document.util.service';
 
 @Component({
@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
   @Input() docsFolderList: any[];
 
   constructor(
-    private documentAPIService: DocumentAPIService,
+    private documentResService: DocumentResService,
     private documentUtilService: DocumentUtilService,
     private router: Router
   ) {
@@ -38,7 +38,12 @@ export class ProductListComponent implements OnInit {
   }
 
   viewDocDetail(category, doc) {
-    //this.router.navigate([`/docs-search/${category.name}/${category.currentVersion.name}/${doc.name}/index`]);
-    this.router.navigate([`/docs-detail/TDH/5.0/manual/index`]);
+    this.documentResService.setSectionId('index');
+    this.router.navigate([`/docs-detail/${category.id}/${category.currentVersion.id}/${doc.id}`]);
+
+    //this.router.navigate(
+    //  [`/docs-detail/${category.name}/${category.currentVersion.name}/${doc.name}`],
+    //  { params : { section: 'index' }}
+    //);
   }
 }

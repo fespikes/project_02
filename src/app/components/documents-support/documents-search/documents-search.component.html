@@ -10,10 +10,10 @@
         <span>{{'DOCUMENTS.SEARCH_FILTER' | translate}}</span>
       </div>
       <div class="tree">
-        <tdc-tree
+        <tdc-search-tree
           [treeModel]="treeModel"
           (onSelectChange)="onSelectChange($event)"
-        ></tdc-tree>
+        ></tdc-search-tree>
       </div>
       <div class="operation">
         <button (click)="expandAll()">
@@ -25,16 +25,23 @@
       </div>
     </div>
     <div class="panel-right">
-      <docs-search
-        (onDocumentSearch)="documentSearch($event)"
-        [filterSearch]=true
-      ></docs-search>
-      <div>
-
+      <div class="search-docs">
+        <docs-search
+          [keyword]="keyword"
+          [filterSearch]=true
+          (onDocumentSearch)="onDocumentSearch($event)"
+        ></docs-search>
       </div>
-      <div>
-
-      </div>
+      <tdc-docs-list
+        [docsList]="docsList"
+        [docsCount]="docsCount"
+        (onListItemClick)="listItemClick($event)"
+      ></tdc-docs-list>
+      <tcc-pagination
+        [(pagination)]="pagination"
+        (paginationChange)="paginationChange()"
+      >
+      </tcc-pagination>
     </div>
   </div>
 </div>
