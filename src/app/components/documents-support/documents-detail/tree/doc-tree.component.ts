@@ -33,6 +33,7 @@ export class DocTreeComponent implements OnInit {
       return;
     }
     node.level = level;
+    //node.expanded = true;
     this.onSelectChange.emit(node);
   }
 }

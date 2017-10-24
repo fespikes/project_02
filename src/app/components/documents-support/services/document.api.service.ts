@@ -14,6 +14,7 @@ export class DocumentAPIService {
   ) {
 
   }
+  private version = '/v2';
 
   private get headers(): Headers {
     return new Headers({
@@ -23,17 +24,24 @@ export class DocumentAPIService {
   }
 
   getTileDocs(): Observable<any> {
-    return this.http.get('/v2/document/_ls?r=true')
-      .map((res) => res.json());
+    return this.http.get(
+      `${this.version}/document/_ls?r=true`
+    ).map((res) => res.json());
   }
 
   getTreeDocs(): Observable<any> {
-    return this.http.get('/v2/document/_ls?r=true&reverse=true')
-      .map((res) => res.json());
+    return this.http.get(
+      `${this.version}/document/_ls?r=true&reverse=true`
+    ).map((res) => res.json());
   }
 
   getDocDetail(url): Observable<any> {
-    console.log('doc-detail-url=', url);
+    return this.http.get(
+      url, { headers: this.headers })
+      .map((res) => res.json());
+  }
+
+  getDocTree(url): Observable<any> {
     return this.http.get(
       url, { headers: this.headers })
       .map((res) => res.json());
@@ -41,7 +49,7 @@ export class DocumentAPIService {
 
   docsSearch(data): Observable<any> {
     return this.http.post(
-      '/v2/search',
+      `${this.version}/search`,
       JSON.stringify(data),
       { headers: this.headers }
     ).map((res) => res.json())

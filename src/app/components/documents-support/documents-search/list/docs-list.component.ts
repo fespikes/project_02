@@ -21,8 +21,6 @@ export class DocsListComponent implements OnInit {
 
   }
   ngOnInit() {
-    //console.log('this.docsList=', this.docsList);
-    //this.docsCount = this.docsList[0].total || 0
     this.renderDocAbsDom();
   }
 
@@ -36,7 +34,6 @@ export class DocsListComponent implements OnInit {
   }
 
   listItemClick(doc) {
-    console.log('doc=', doc);
     this.onListItemClick.emit(doc);
   }
 }

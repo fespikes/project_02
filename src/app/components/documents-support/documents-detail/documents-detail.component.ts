@@ -36,35 +36,48 @@ export class DocumentsDetailComponent implements OnInit {
   ngOnInit() {
     this.crumbItems = this.documentResService.getDocsCrumb(
       'docs-detail', this.documentUtilService.getModuleName(window.location.hash));
+    this.getDocTree();
     this.getDocDetail();
   }
 
-  getDocDetail() {
-
-    let url = this.getApiPath();
-    this.documentAPIService.getDocDetail(url).subscribe(
+  getDocTree() {
+    let url = this.getPath('docTree');
+    this.documentAPIService.getDocTree(url).subscribe(
       result =>{
-        console.log('result=', result);
-        this.treeModel[0] = result.nav;
-        this.documentUtilService.appendDocContent(result.content);
-        //this.documentUtilService.appendDocCssSheet(result.style);
+        this.treeModel = result.nav.children;
       }
     );
   }
 
-  getApiPath() {
-    let sectionName = this.documentResService.getSectionName();
-    console.log('sectionName=', sectionName);
-    this.pathParams = this.documentUtilService.getDocDetailUrlParams(window.location.hash, sectionName);
-    let url = this.documentUtilService.makeDocDetailUrl(this.pathParams);
-    return url;
+  getDocDetail() {
+    let url = this.getPath('docDetail');
+    this.documentAPIService.getDocDetail(url).subscribe(
+      result =>{
+        this.documentUtilService.appendDocContent(result.content);
+      }
+    );
+  }
+
+  getPath(type) {
+    let sectionId = this.documentResService.getSectionId();
+    this.pathParams = this.documentUtilService.getDocDetailUrlParams(window.location.hash, sectionId);
+    let path;
+    switch (type) {
+      case 'docTree':
+        path = this.documentUtilService.makeDocTreeUrl(this.pathParams);
+        break;
+      case 'docDetail':
+        path = this.documentUtilService.makeDocDetailUrl(this.pathParams);
+        break;
+      default:
+        break;
+    }
+    return path;
   }
 
   onSelectChange(node) {
-    console.log('node==', node);
-    this.documentResService.setSectionName(node.id);
-    let params = this.pathParams;
-    this.router.navigate([`/docs-detail/${params.category}/${params.version}/${params.component}`]);
+    this.documentResService.setSectionId(node.id);
+    this.router.navigate([`/docs-detail/${this.pathParams.category}/${this.pathParams.version}/${this.pathParams.component}`]);
     this.getDocDetail();
   }
 }

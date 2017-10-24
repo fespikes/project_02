@@ -5,19 +5,19 @@
   </div>
   <div class="module-list" [class.expanded]="type.expanded">
     <div
-      *ngFor="let module of type.sub"
+      *ngFor="let module of type.children"
       class="module-list-item"
     >
       <div class="module-item">
         <svg
-          *ngIf="module.sub.length > 0"
+          *ngIf="module.children.length > 0"
           tccIcon="angle-up" size="sm"
           [class.expanded]="module.expanded"
           (click)="toggle(module)"
         ></svg>
         <tcc-checkbox
           [(ngModel)]="module.selected"
-          (ngModelChange)="selectChange(module)"
+          (ngModelChange)="selectChange(type, module)"
         ></tcc-checkbox>
         <span>{{module.name}}</span>
       </div>
@@ -25,11 +25,11 @@
       <div
         class="module-version"
         [class.expanded]="module.expanded"
-        *ngFor="let version of module.sub"
+        *ngFor="let version of module.children"
       >
         <tcc-checkbox
           [(ngModel)]="version.selected"
-          (ngModelChange)="selectChange(module, version)"
+          (ngModelChange)="selectChange(type, module, version)"
         ></tcc-checkbox>
         <span>{{version.name}}</span>
       </div>

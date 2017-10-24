@@ -24,8 +24,9 @@ export class SearchTreeComponent implements OnInit {
   }
 
 
-  selectChange(module, version) {
+  selectChange(category, module, version) {
     this.onSelectChange.emit({
+      category: category,
       module: module,
       version: version
     });

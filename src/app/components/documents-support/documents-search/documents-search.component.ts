@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentResService } from '../services/document.res.service';
+import { DocumentSearchService } from './documents-search.service';
 
 import { Pagination } from '../../../tui/pagination/pagination.component';
 
@@ -19,12 +20,14 @@ export class DocumentsSearchComponent implements OnInit {
   docsList = [];
   docsCount = 0;
   keyword = '';
+  selectedDocs = [];
   pagination = new Pagination();
 
   constructor(
     private documentUtilService: DocumentUtilService,
     private documentAPIService: DocumentAPIService,
     private documentResService: DocumentResService,
+    private documentSearchService: DocumentSearchService,
     private router: Router
   ) {
 
@@ -43,14 +46,14 @@ export class DocumentsSearchComponent implements OnInit {
     this.keyword = keyword;
     this.documentResService.setKeyword(keyword);
     this.router.navigate([`/documents-support/docs-search`]);
-    let searchParams = this.documentUtilService.makeSearchParams(keyword, this.pagination);
+    let searchParams = this.documentSearchService.makeSearchParams(keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
   }
 
   getTreeDocs() {
     this.documentAPIService.getTreeDocs().subscribe(
       result => {
-        this.treeModel = this.documentUtilService.initSearchTree(result);
+        this.treeModel = this.documentSearchService.initSearchTree(result);
       }
     );
   }
@@ -58,8 +61,9 @@ export class DocumentsSearchComponent implements OnInit {
   documentSearch(params) {
     this.documentAPIService.docsSearch(params).subscribe(
       result => {
-        this.docsList = result;
-        this.makePaginationParams(result);
+        this.docsList = result.results;
+        this.docsCount = result.total;
+        this.makePaginationParams(this.docsList);
         //if(this.docsList.length > 0) {
         //
         //  //this.docsCount = this.docsList[0].total;
@@ -75,27 +79,30 @@ export class DocumentsSearchComponent implements OnInit {
       this.pagination = {
         page: this.pagination.page,
         size: this.pagination.size,
-        total: list[0].total
+        total: this.docsCount
       };
     }
   }
 
   paginationChange() {
-    console.log('this.pagination=', this.pagination);
-    let searchParams = this.documentUtilService.makeSearchParams(this.keyword, this.pagination);
+    const searchParams = this.documentSearchService.makeSearchParams(this.keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
   }
 
   expandAll() {
-    this.treeModel = this.documentUtilService.traversalTree(this.treeModel, true);
+    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, true);
   }
 
   collapseAll() {
-    this.treeModel = this.documentUtilService.traversalTree(this.treeModel, false);
+    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, false);
   }
 
   onSelectChange(entity) {
-    console.log('entity=', entity);
+    const searchState: any = this.documentSearchService.makeSelectedDocs(entity, this.selectedDocs, this.treeModel);
+    this.selectedDocs = searchState.selectedDocs;
+    this.treeModel = searchState.treeModel;
+    const searchParams = this.documentSearchService.makeSearchParams(this.keyword, this.pagination, this.selectedDocs);
+    this.documentSearch(searchParams);
   }
 
   listItemClick(doc) {

@@ -15,11 +15,11 @@ export class DocumentResService {
 
   }
 
-  getSectionName(): string {
+  getSectionId(): string {
     return this.sectionName;
   }
 
-  setSectionName(name): void {
+  setSectionId(name): void {
     this.sectionName = name;
   }
 
@@ -109,7 +109,7 @@ export class DocumentResService {
           {
             name: 'documentDetail',
             alias: alias,
-            url: './index',
+            url: './',
             last: true
           }
         ];
@@ -147,24 +147,24 @@ export class DocumentResService {
     return {
       "name": "搜索对象",
       "alias": "searchObj",
-      "sub": [
+      "children": [
         {
           "name": "产品文档",
           "alias": "productDocument",
           "type": "category",
-          "sub": []
+          "children": []
         },
         {
           "name": "常见问题",
           "alias": "commonIssue",
           "type": "category",
-          "sub": []
+          "children": []
         },
         {
           "name": "新手入门",
           "alias": "freshGuide",
           "type": "category",
-          "sub": []
+          "children": []
         }
       ]
     };

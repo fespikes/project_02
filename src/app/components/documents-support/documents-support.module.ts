@@ -22,6 +22,7 @@ import { DocsListComponent } from './documents-search/list/docs-list.component';
 import { DocumentUtilService } from './services/document.util.service';
 import { DocumentAPIService } from './services/document.api.service';
 import { DocumentResService } from './services/document.res.service';
+import { DocumentSearchService } from './documents-search/documents-search.service';
 import { TdcApiService } from '../../shared/services/api.service';
 
 import { TuiModule } from '../../tui/tui.module';
@@ -57,6 +58,7 @@ import { SharedModule } from '../../shared';
   ],
   providers: [
     TdcApiService,
+    DocumentSearchService,
     DocumentResService,
     DocumentUtilService,
     DocumentAPIService

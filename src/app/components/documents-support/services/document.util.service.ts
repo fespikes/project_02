@@ -33,6 +33,10 @@ export class DocumentUtilService {
     };
   }
 
+  makeDocTreeUrl(params): string {
+    return '/v2/document/' + params.category + '/' + params.version + '/' + params.component;
+  }
+
   makeDocDetailUrl(params): string {
     return '/v2/document/' + params.category + '/' + params.version + '/' + params.component + '/' + params.section;
   }
@@ -41,13 +45,16 @@ export class DocumentUtilService {
     data.map(category => {
       let versionList = [];
       let docsCollection = {};
-      category.sub.map(version => {
-        versionList.push({name: version.name});
-        docsCollection[version.name] = this.addDocsCollection(version.sub);
+      category.children.map(version => {
+        versionList.push({
+          id: version.id,
+          name: version.name
+        });
+        docsCollection[version.name] = this.addDocsCollection(version.children);
       });
       category.versionList = versionList;
       category.docsCollection = docsCollection;
-      category.currentVersion = category.sub[0] || {'name': ''};
+      category.currentVersion = category.children[0];
     });
     return data;
   }
@@ -60,23 +67,6 @@ export class DocumentUtilService {
     return docList;
   }
 
-  traversalTree(treeModel, expanded): any[] {
-
-    var stack = [], item;
-    for (var i = 0; i < treeModel.length; i++) {
-      stack.push(treeModel[i]);
-    }
-    while (stack.length) {
-      item = stack.shift();
-      item.expanded = expanded;
-      if (item.sub && item.sub.length) {
-        stack = stack.concat(item.sub);
-      }
-    }
-
-    return treeModel;
-  }
-
   appendDocContent(content): void {
     document.getElementById('doc-detail-content').innerHTML = content;
   }
@@ -87,22 +77,4 @@ export class DocumentUtilService {
     document.head.appendChild(style);
   }
 
-  initSearchTree(docsTree): any[] {
-    console.log('docsTree=', docsTree);
-    return [
-      this.documentResService.getSearchObject(),
-      docsTree[0],
-      docsTree[1]
-    ];
-  }
-
-  makeSearchParams(keyword, pagination): Object {
-    let from = (pagination.page - 1) * pagination.size;
-    return {
-      keywords: [keyword],
-      documents: [],//todo dock real logistic
-      from: from,
-      size: pagination.size
-    };
-  }
 }
