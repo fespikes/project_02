@@ -49,6 +49,7 @@ import { ScenariosChildComponent } from './common/components/scenarios-child/sce
 //E: products common
 
 //data mart
+// import { DataMartModule } from './data-mart/data-mart.module';
 import { DataMartService } from './data-mart/data-mart.service';
 import { DataMartComponent } from './data-mart/data-mart.component';
 import { DataMartBannerComponent } from './data-mart/data-mart-banner/data-mart-banner.component';
@@ -56,18 +57,38 @@ import { DataMartTabsComponent } from './data-mart/data-mart-tabs/data-mart-tabs
 
 import { DataMartFunctionalitiesComponent } from './data-mart/data-mart-functionalities/data-mart-functionalities.component';
 import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/data-mart-advantages.component';
-import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
 import { DataMartComponentIntroComponent } from './data-mart/data-mart-component-intro/data-mart-component-intro.component';
-  import { TdhPlatformProductsComponent } from './data-mart/data-mart-component-intro/tdh-platform-products/tdh-platform-products.component';
-  import { TdhDevKitsComponent } from './data-mart/data-mart-component-intro/tdh-dev-kits/tdh-dev-kits.component';
-  import { OperationDevToolsComponent } from './data-mart/data-mart-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhPlatformProductsComponent as DataMartTdhPlatformProductsComponent } from './data-mart/data-mart-component-intro/tdh-platform-products/tdh-platform-products.component';
+  import { TdhDevKitsComponent as DataMartTdhDevKitsComponent } from './data-mart/data-mart-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { OperationDevToolsComponent as DataMartOperationDevToolsComponent } from './data-mart/data-mart-component-intro/operation-dev-tools/operation-dev-tools.component';
 
+import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
   import { SelfAnalysisPlatformComponent } from './data-mart/data-mart-scenarios/self-analysis-platform/self-analysis-platform.component';
   import { MarketingAnalysisSystemComponent } from './data-mart/data-mart-scenarios/marketing-analysis-system/marketing-analysis-system.component';
   import { CustomerServiceManagingComponent } from './data-mart/data-mart-scenarios/customer-service-managing/customer-service-managing.component';
 
 //S: info-retrieval
-import { InfoRetrievalModule } from './info-retrieval/info-retrieval.module';
+// import { InfoRetrievalModule } from './info-retrieval/info-retrieval.module';
+import { InfoRetrievalComponent } from './info-retrieval/info-retrieval.component';
+import { InfoRetrievalService } from './info-retrieval/info-retrieval.service';
+import { InfoRetrievalBannerComponent } from './info-retrieval/info-retrieval-banner/info-retrieval-banner.component';
+import { InfoRetrievalTabsComponent } from './info-retrieval/info-retrieval-tabs/info-retrieval-tabs.component';
+import { InfoRetrievalFunctionalitiesComponent } from './info-retrieval/info-retrieval-functionalities/info-retrieval-functionalities.component';
+import { InfoRetrievalAdvantagesComponent } from './info-retrieval/info-retrieval-advantages/info-retrieval-advantages.component';
+import { InfoRetrievalScenariosComponent } from './info-retrieval/info-retrieval-scenarios/info-retrieval-scenarios.component';
+  import { DataSearchEngineComponent } from './info-retrieval/info-retrieval-scenarios/data-search-engine/data-search-engine.component';
+  import { LogAcquisitionAnalysisComponent } from './info-retrieval/info-retrieval-scenarios/log-acquisition-analysis/log-acquisition-analysis.component';
+  import { BusinessAnalysisComponent } from './info-retrieval/info-retrieval-scenarios/business-analysis/business-analysis.component';
+
+import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retrieval-component-intro/info-retrieval-component-intro.component';
+  import { OperationDevToolsComponent as InfoRetrievalOperationDevToolsComponent } from './info-retrieval/info-retrieval-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent as InfoRetrievalTdhDevKitsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent as InfoRetrievalTdhPlatformProductsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-platform-products/tdh-platform-products.component';
+
+//E: info-retrieval
+
+
+
 
 @NgModule({
   imports: [
@@ -76,18 +97,28 @@ import { InfoRetrievalModule } from './info-retrieval/info-retrieval.module';
     TdcModule,
     DataWarehouseModule,
 
-    InfoRetrievalModule,
+    // DataMartModule,
+    // InfoRetrievalModule,
     ProductsRoutingModule
   ],
   declarations: [
   	ProductsComponent,
 
+    TabsDirective,
+    BannerDirective,
+    AdvantagesDirective,
+    ScenariosDirective,
+    ComponentIntroDirective,
+    ScenariosChildDirective,
+    ComponentIntroChildDirective,
+    FunctionalitiesDirective,
+
+
   	DataWarehouseComponent,
-  	DataMartComponent,
-  	RelationalDatabaseComponent,
-  	DeepLearningComponent,
-  	RealtimeComputationComponent,
-  	AnalysisMiningComponent,
+    RelationalDatabaseComponent,
+    DeepLearningComponent,
+    RealtimeComputationComponent,
+    AnalysisMiningComponent,
 
     FunctionalitiesComponent,
     AdvantagesComponent,
@@ -95,47 +126,58 @@ import { InfoRetrievalModule } from './info-retrieval/info-retrieval.module';
     ComponentIntroComponent,
     ExpenseExplanationComponent,
 
+    BannerComponent,
     TabsComponent,
-    DataMartFunctionalitiesComponent,
-    // TabsDirective,
-    // BannerDirective,
-    // AdvantagesDirective,
-    // ScenariosDirective,
-    // ComponentIntroDirective,
-    // ScenariosChildDirective,
-    // ComponentIntroChildDirective,
-    // FunctionalitiesDirective,
-
+    ScenariosChildComponent,
+    ComponentIntroChildComponent,
+    
     TheFunctionalitiesComponent,
     TheAdvantagesComponent,
     TheScenariosComponent,
     TheComponentIntroComponent,
     TheBannerComponent,
     TheTabsComponent,
-
     TheScenariosChildComponent,
     TheComponentIntroChildComponent,
 
+//data-mart
+    DataMartComponent,
+    DataMartFunctionalitiesComponent,
     DataMartAdvantagesComponent,
-    
     DataMartScenariosComponent,
     DataMartComponentIntroComponent,
     DataMartBannerComponent,
-    BannerComponent,
     DataMartTabsComponent,
-    ScenariosChildComponent,
-    ComponentIntroChildComponent,
+    DataMartTdhPlatformProductsComponent,
+    DataMartTdhDevKitsComponent,
+    DataMartOperationDevToolsComponent,
+    
     SelfAnalysisPlatformComponent,
     MarketingAnalysisSystemComponent,
     CustomerServiceManagingComponent,
-    TdhPlatformProductsComponent,
-    TdhDevKitsComponent,
-    OperationDevToolsComponent,
+
+//info-retrieval
+
+    InfoRetrievalComponent,
+    InfoRetrievalBannerComponent,
+    InfoRetrievalTabsComponent,
+    InfoRetrievalFunctionalitiesComponent,
+    InfoRetrievalAdvantagesComponent,
+    InfoRetrievalScenariosComponent,
+    DataSearchEngineComponent,
+    LogAcquisitionAnalysisComponent,
+    BusinessAnalysisComponent,
+    InfoRetrievalComponentIntroComponent,
+    InfoRetrievalOperationDevToolsComponent,
+    InfoRetrievalTdhDevKitsComponent,
+    InfoRetrievalTdhPlatformProductsComponent
   ],
   providers: [
     TccModalService,
     ProductsService,
+
     DataMartService,
+    InfoRetrievalService
   ],
   entryComponents: [
     TheBannerComponent,

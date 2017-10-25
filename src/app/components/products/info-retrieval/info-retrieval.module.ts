@@ -2,29 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-//S: common
-  import { TabsDirective } from '../common/components/tabs/tabs.directive';
-  import { BannerDirective } from '../common/components/banner/banner.directive';
-  import { FunctionalitiesDirective } from '../common/components/functionalities/functionalities.directive';
-  import { AdvantagesDirective } from '../common/components/advantages/advantages.directive';
-  import { ScenariosDirective } from '../common/components/scenarios/scenarios.directive';
-  import { ComponentIntroDirective } from '../common/components/component-intro/component-intro.directive';
-  import { ComponentIntroChildDirective } from '../common/components/component-intro-child/component-intro-child.directive';
-  import { ScenariosChildDirective } from '../common/components/scenarios-child/scenarios-child.directive';
-
-// import { FunctionalitiesComponent as TheFunctionalitiesComponent } from '../common/components/functionalities/functionalities/functionalities.component';
-// import { AdvantagesComponent as TheAdvantagesComponent } from '../common/components/advantages/advantages/advantages.component';
-// import { ScenariosComponent as TheScenariosComponent } from '../common/components/scenarios/scenarios/scenarios.component';
-// import { ComponentIntroComponent as TheComponentIntroComponent } from '../common/components/component-intro/component-intro/component-intro.component';
-// import { BannerComponent as TheBannerComponent } from '../common/components/banner/banner/banner.component';
-// import { TabsComponent as TheTabsComponent } from '../common/components/tabs/tabs/tabs.component';
-// import { ComponentIntroChildComponent as TheComponentIntroChildComponent } from '../common/components/component-intro-child/component-intro-child/component-intro-child.component';
-// import { ScenariosChildComponent as TheScenariosChildComponent } from '../common/components/scenarios-child/scenarios-child/scenarios-child.component';
-// import { ComponentIntroChildComponent } from '../common/components/component-intro-child/component-intro-child.component';
-// import { BannerComponent } from '../common/components/banner/banner.component';
-// import { TabsComponent } from '../common/components/tabs/tabs.component';
-// import { ScenariosChildComponent } from '../common/components/scenarios-child/scenarios-child.component';
-//E: common
 import { InfoRetrievalRoutingModule } from './info-retrieval-routing.module';
 
 import { InfoRetrievalComponent } from './info-retrieval.component';
@@ -49,14 +26,6 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval-component
     InfoRetrievalRoutingModule
   ],
   declarations: [
-		TabsDirective,
-    BannerDirective,
-    AdvantagesDirective,
-    ScenariosDirective,
-    ComponentIntroDirective,
-    ScenariosChildDirective,
-    ComponentIntroChildDirective,
-    FunctionalitiesDirective,
 
 		InfoRetrievalComponent,
 		InfoRetrievalBannerComponent,
