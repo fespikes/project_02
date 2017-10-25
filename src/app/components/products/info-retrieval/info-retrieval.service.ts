@@ -108,7 +108,7 @@ export class InfoRetrievalService {
         logAcquisitionAnalysis: {
           text: '广泛采集汇聚不同系统的日志，对重要关键字进行转化、检索、解析与分析，检测系统中的隐藏问题和漏洞。同时对接可视化平台，通过生成图表进行更高级直观的分析，协助发现未知攻击，提升效率和识别力。另外为用户提供关键字检索接口，使人工处理协助自动分析，实现更具针对性和精确度的日志分析功能，打造日志处理的瑞士军刀。',
           image: {
-            src: '/assets/images/products/scenarios/info-retrieval/marketing-analysis-system.png',
+            src: '/assets/images/products/scenarios/info-retrieval/log-acquisition-analysis.png',
             style: {
               width: '798',
               height: '363'
@@ -117,13 +117,13 @@ export class InfoRetrievalService {
         },
         businessAnalysis: {
           text: '在海量数据中快速定位关键信息，进行分析聚合，充分利用隐藏在非结构化数据中的信息，锁定某类用户的属性和行为特征，从而制定相应策略或作出决策。例如分析产品的购买群体，消费者的消费特征，销售额的变化情况与趋势，构建商业智能平台。',
-          image: {
-            src: '',//'/assets/images/products/scenarios/info-retrieval/business-analysis.png',
-            style: {
-              // width: '900',
-              // height: '322'
-            }
-          }
+          // image: {
+          //   src: '/assets/images/products/scenarios/info-retrieval/business-analysis.png',
+          //   style: {
+          //     width: '900',
+          //     height: '322'
+          //   }
+          // }
         }
       },
       componentIntro: {

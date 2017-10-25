@@ -33,7 +33,6 @@ export class ScenariosChildComponent implements AfterViewInit {
     if (data.image){
       (<TheComponent>componentRef.instance).data = {
         text: data.text,
-        hasImage: true,
         image: {
           src: data.image.src,
           width: data.image.style.width,
@@ -42,7 +41,6 @@ export class ScenariosChildComponent implements AfterViewInit {
       }
     } else {
       (<TheComponent>componentRef.instance).data = {
-        hasImage: false,
         text: data.text,
       }
     }

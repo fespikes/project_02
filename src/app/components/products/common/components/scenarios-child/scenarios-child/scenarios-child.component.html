@@ -3,13 +3,15 @@
 <div class="details-box"
 	[ngClass]="{'details-box': true, 'text': !data.image}"
 >
-	<ul class="text-list">
-		<li [ngStyle]="{'width': 970-data.image.width + 'px'}">
+	<ul
+		class="paragraphs fl"
+		[ngStyle]="{'width': 882 - (data.image?data.image.width : 0) + 'px'}">
+		<li>
 			<p>{{data.text}}</p>
 		</li>
 	</ul>
-	<div *ngIf="data.hasImage"
-		class="img multi-tenancy-platform"
+	<div *ngIf="data.image"
+		class="img fl multi-tenancy-platform"
 		[ngStyle]="{'background-image':'url(' + data.image.src + ')',
 								'width': data.image.width +'px',
 								'height': + data.image.height +'px'}">

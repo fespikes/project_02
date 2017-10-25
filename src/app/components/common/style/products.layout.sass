@@ -158,24 +158,43 @@ h3.sub-title
   .in-block
     display: inline-block
 
-.details-box.text
-  padding: 4.6rem 5rem
 
-  .text-list
-    overflow: visible
+  //paragraphs if for scenario-children and component-intro, to support flexable image children
+  .paragraphs
     li
-      padding-left: 0
-      width: 100%
+      margin-bottom: 2rem
+      position: relative
+      p
+        padding-right: 45px
+        margin-bottom: 1rem
+        font-size: 1.2rem
+        line-height: 2rem
+        text-align: justify
 
-      h5:before
-        left: -2rem
+        &:before
+          content: ''
+          display: inline-block
+          width: 0.5rem
+          height: 0.5rem
+          position: absolute
+          left: -20px
+          top: 0.7rem
+          border-radius: 0.25rem
+          background: $tdcCommonBlue
 
-.details-box.d
+
+.details-box.text, .details-box.d
   .text-list
     margin-left: 0
     li
       h5:before
         left: -20px
+
+
+
+
+
+
 
 .intro-table
 
