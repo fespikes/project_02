@@ -13,7 +13,6 @@ import { DataWarehouseComponent } from './data-warehouse/data-warehouse.componen
 import { RelationalDatabaseComponent } from './relational-database/relational-database.component';
 import { DeepLearningComponent } from './deep-learning/deep-learning.component';
 import { RealtimeComputationComponent } from './realtime-computation/realtime-computation.component';
-import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.component';
 
 import { DataWarehouseModule } from './data-warehouse/data-warehouse.module';
 
@@ -85,6 +84,53 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retr
   import { TdhDevKitsComponent as InfoRetrievalTdhDevKitsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-dev-kits/tdh-dev-kits.component';
   import { TdhPlatformProductsComponent as InfoRetrievalTdhPlatformProductsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-platform-products/tdh-platform-products.component';
 
+import { RelationalDatabaseAdvantagesComponent } from './relational-database/relational-database-advantages/relational-database-advantages.component';
+import { RelationalDatabaseBannerComponent } from './relational-database/relational-database-banner/relational-database-banner.component';
+import { RelationalDatabaseComponentIntroComponent } from './relational-database/relational-database-component-intro/relational-database-component-intro.component';
+  import { OperationDevToolsComponent as RelationalDatabaseOperationDevToolsComponent } from './relational-database/relational-database-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent as RelationalDatabaseTdhDevKitsComponent } from './relational-database/relational-database-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent as RelationalDatabaseTdhPlatformProductsComponent } from './relational-database/relational-database-component-intro/tdh-platform-products/tdh-platform-products.component';
+import { RelationalDatabaseFunctionalitiesComponent } from './relational-database/relational-database-functionalities/relational-database-functionalities.component';
+import { RelationalDatabaseScenariosComponent } from './relational-database/relational-database-scenarios/relational-database-scenarios.component';
+import { RelationalDatabaseTabsComponent } from './relational-database/relational-database-tabs/relational-database-tabs.component';
+
+import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.component';
+import { AnalysisMiningAdvantagesComponent } from './analysis-mining/analysis-mining-advantages/analysis-mining-advantages.component';
+import { AnalysisMiningBannerComponent } from './analysis-mining/analysis-mining-banner/analysis-mining-banner.component';
+import { AnalysisMiningComponentIntroComponent } from './analysis-mining/analysis-mining-component-intro/analysis-mining-component-intro.component';
+  import { OperationDevToolsComponent as AnalysisMiningOperationDevToolsComponent } from './analysis-mining/analysis-mining-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent as AnalysisMiningTdhDevKitsComponent } from './analysis-mining/analysis-mining-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent as AnalysisMiningTdhPlatformProductsComponent } from './analysis-mining/analysis-mining-component-intro/tdh-platform-products/tdh-platform-products.component';
+import { AnalysisMiningFunctionalitiesComponent } from './analysis-mining/analysis-mining-functionalities/analysis-mining-functionalities.component';
+import { AnalysisMiningScenariosComponent } from './analysis-mining/analysis-mining-scenarios/analysis-mining-scenarios.component';
+  import { CreditRiskControlComponent } from './analysis-mining/analysis-mining-scenarios/credit-risk-control/credit-risk-control.component';
+  import { PreciseMarketingComponent } from './analysis-mining/analysis-mining-scenarios/precise-marketing/precise-marketing.component';
+  import { FraudCheckComponent } from './analysis-mining/analysis-mining-scenarios/fraud-check/fraud-check.component';
+import { AnalysisMiningTabsComponent } from './analysis-mining/analysis-mining-tabs/analysis-mining-tabs.component';
+
+
+import { DeepLearningAdvantagesComponent } from './deep-learning/deep-learning-advantages/deep-learning-advantages.component';
+import { DeepLearningBannerComponent } from './deep-learning/deep-learning-banner/deep-learning-banner.component';
+import { DeepLearningComponentIntroComponent } from './deep-learning/deep-learning-component-intro/deep-learning-component-intro.component';
+  import { OperationDevToolsComponent as DeepLearningOperationDevToolsComponent } from './deep-learning/deep-learning-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent as DeepLearningTdhDevKitsComponent } from './deep-learning/deep-learning-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent as DeepLearningTdhPlatformProductsComponent } from './deep-learning/deep-learning-component-intro/tdh-platform-products/tdh-platform-products.component';
+import { DeepLearningFunctionalitiesComponent } from './deep-learning/deep-learning-functionalities/deep-learning-functionalities.component';
+import { DeepLearningScenariosComponent } from './deep-learning/deep-learning-scenarios/deep-learning-scenarios.component';
+import { DeepLearningTabsComponent } from './deep-learning/deep-learning-tabs/deep-learning-tabs.component';
+
+
+import { RealtimeComputationAdvantagesComponent } from './realtime-computation/realtime-computation-advantages/realtime-computation-advantages.component';
+import { RealtimeComputationBannerComponent } from './realtime-computation/realtime-computation-banner/realtime-computation-banner.component';
+import { RealtimeComputationComponentIntroComponent } from './realtime-computation/realtime-computation-component-intro/realtime-computation-component-intro.component';
+  import { OperationDevToolsComponent as RealtimeComputationOperationDevToolsComponent } from './realtime-computation/realtime-computation-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent as RealtimeComputationTdhDevKitsComponent } from './realtime-computation/realtime-computation-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent as RealtimeComputationTdhPlatformProductsComponent } from './realtime-computation/realtime-computation-component-intro/tdh-platform-products/tdh-platform-products.component';
+import { RealtimeComputationFunctionalitiesComponent } from './realtime-computation/realtime-computation-functionalities/realtime-computation-functionalities.component';
+import { RealtimeComputationScenariosComponent } from './realtime-computation/realtime-computation-scenarios/realtime-computation-scenarios.component';
+import { RealtimeComputationTabsComponent } from './realtime-computation/realtime-computation-tabs/realtime-computation-tabs.component';
+
+
 //E: info-retrieval
 
 
@@ -146,12 +192,12 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retr
     DataMartAdvantagesComponent,
     DataMartScenariosComponent,
     DataMartComponentIntroComponent,
+      DataMartTdhPlatformProductsComponent,
+      DataMartTdhDevKitsComponent,
+      DataMartOperationDevToolsComponent,
+      
     DataMartBannerComponent,
     DataMartTabsComponent,
-    DataMartTdhPlatformProductsComponent,
-    DataMartTdhDevKitsComponent,
-    DataMartOperationDevToolsComponent,
-    
     SelfAnalysisPlatformComponent,
     MarketingAnalysisSystemComponent,
     CustomerServiceManagingComponent,
@@ -164,13 +210,59 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retr
     InfoRetrievalFunctionalitiesComponent,
     InfoRetrievalAdvantagesComponent,
     InfoRetrievalScenariosComponent,
-    DataSearchEngineComponent,
-    LogAcquisitionAnalysisComponent,
-    BusinessAnalysisComponent,
     InfoRetrievalComponentIntroComponent,
-    InfoRetrievalOperationDevToolsComponent,
-    InfoRetrievalTdhDevKitsComponent,
-    InfoRetrievalTdhPlatformProductsComponent
+      DataSearchEngineComponent,
+      LogAcquisitionAnalysisComponent,
+      BusinessAnalysisComponent,
+
+      InfoRetrievalOperationDevToolsComponent,
+      InfoRetrievalTdhDevKitsComponent,
+      InfoRetrievalTdhPlatformProductsComponent,
+
+
+    RelationalDatabaseAdvantagesComponent,
+    RelationalDatabaseBannerComponent,
+    RelationalDatabaseComponentIntroComponent,
+      RelationalDatabaseOperationDevToolsComponent,
+      RelationalDatabaseTdhDevKitsComponent,
+      RelationalDatabaseTdhPlatformProductsComponent,
+    RelationalDatabaseFunctionalitiesComponent,
+    RelationalDatabaseScenariosComponent,
+    RelationalDatabaseTabsComponent,
+
+    AnalysisMiningAdvantagesComponent,
+    AnalysisMiningBannerComponent,
+    AnalysisMiningComponentIntroComponent,
+      AnalysisMiningOperationDevToolsComponent,
+      AnalysisMiningTdhDevKitsComponent,
+      AnalysisMiningTdhPlatformProductsComponent,
+    AnalysisMiningFunctionalitiesComponent,
+    AnalysisMiningScenariosComponent,
+    AnalysisMiningTabsComponent,
+      CreditRiskControlComponent,
+      PreciseMarketingComponent,
+      FraudCheckComponent,
+    
+    DeepLearningAdvantagesComponent,
+    DeepLearningBannerComponent,
+    DeepLearningComponentIntroComponent,
+      DeepLearningOperationDevToolsComponent,
+      DeepLearningTdhDevKitsComponent,
+      DeepLearningTdhPlatformProductsComponent,
+    DeepLearningFunctionalitiesComponent,
+    DeepLearningScenariosComponent,
+    DeepLearningTabsComponent,
+    
+    RealtimeComputationAdvantagesComponent,
+    RealtimeComputationBannerComponent,
+    RealtimeComputationComponentIntroComponent,
+      RealtimeComputationOperationDevToolsComponent,
+      RealtimeComputationTdhDevKitsComponent,
+      RealtimeComputationTdhPlatformProductsComponent,
+    RealtimeComputationFunctionalitiesComponent,
+    RealtimeComputationScenariosComponent,
+    RealtimeComputationTabsComponent,
+    
   ],
   providers: [
     TccModalService,

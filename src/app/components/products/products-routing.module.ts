@@ -8,7 +8,6 @@ import { DataWarehouseComponent } from './data-warehouse/data-warehouse.componen
 import { RelationalDatabaseComponent } from './relational-database/relational-database.component';
 import { DeepLearningComponent } from './deep-learning/deep-learning.component';
 import { RealtimeComputationComponent } from './realtime-computation/realtime-computation.component';
-import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.component';
 
 // import { DataWarehouseModule } from './data-warehouse/data-warehouse.module';
 //deprecated
@@ -66,6 +65,20 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retr
   import { TdhPlatformProductsComponent as InfoRetrievalTdhPlatformProductsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-platform-products/tdh-platform-products.component';
 
 //E: info-retrieval
+import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.component';
+import { AnalysisMiningAdvantagesComponent } from './analysis-mining/analysis-mining-advantages/analysis-mining-advantages.component';
+import { AnalysisMiningBannerComponent } from './analysis-mining/analysis-mining-banner/analysis-mining-banner.component';
+import { AnalysisMiningComponentIntroComponent } from './analysis-mining/analysis-mining-component-intro/analysis-mining-component-intro.component';
+  import { OperationDevToolsComponent as AnalysisMiningOperationDevToolsComponent } from './analysis-mining/analysis-mining-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent as AnalysisMiningTdhDevKitsComponent } from './analysis-mining/analysis-mining-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent as AnalysisMiningTdhPlatformProductsComponent } from './analysis-mining/analysis-mining-component-intro/tdh-platform-products/tdh-platform-products.component';
+import { AnalysisMiningFunctionalitiesComponent } from './analysis-mining/analysis-mining-functionalities/analysis-mining-functionalities.component';
+import { AnalysisMiningScenariosComponent } from './analysis-mining/analysis-mining-scenarios/analysis-mining-scenarios.component';
+  import { CreditRiskControlComponent } from './analysis-mining/analysis-mining-scenarios/credit-risk-control/credit-risk-control.component';
+  import { PreciseMarketingComponent } from './analysis-mining/analysis-mining-scenarios/precise-marketing/precise-marketing.component';
+  import { FraudCheckComponent } from './analysis-mining/analysis-mining-scenarios/fraud-check/fraud-check.component';
+import { AnalysisMiningTabsComponent } from './analysis-mining/analysis-mining-tabs/analysis-mining-tabs.component';
+
 
 const productRoutes: Routes = [
   {
@@ -315,40 +328,38 @@ const productRoutes: Routes = [
             path: 'analysis-mining', component: AnalysisMiningComponent,
             children: [
 
-              { path: 'functionalities', component: FunctionalitiesComponent },
-              { path: 'advantages', component: AdvantagesComponent },
+              { path: 'functionalities', component: AnalysisMiningFunctionalitiesComponent },
+              { path: 'advantages', component: AnalysisMiningAdvantagesComponent },
               {
                 path: 'scenarios', 
-                component: ScenariosComponent,
+                component: AnalysisMiningScenariosComponent,
                 children: [
                   {
                     path: '',
                     children: [//enterprise-class
-                      { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
-                      { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
-                      { path: 'data-lake', component: DataLakeComponent },
-                      { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
-                      // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
+                      { path: 'credit-risk-control', component: CreditRiskControlComponent },
+                      { path: 'precise-marketing', component: PreciseMarketingComponent },
+                      { path: 'fraud-check', component: FraudCheckComponent },
+                      { path: '',   redirectTo: '/products/analysis-mining/scenarios/credit-risk-control', pathMatch: 'full' }
                     ]
                   }
                 ],
               },
               {
                 path: 'component-intro', 
-                component: ComponentIntroComponent,
+                component: AnalysisMiningComponentIntroComponent,
                 children: [
                   {
                     path: '',
                     children: [
-                      { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
-                      { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
-                      { path: 'operation-dev-tools', component: OperationDevToolsComponent }
+                      { path: 'tdh-platform-products', component: AnalysisMiningTdhPlatformProductsComponent },
+                      { path: 'tdh-dev-kits', component: AnalysisMiningTdhDevKitsComponent },
+                      { path: 'operation-dev-tools', component: AnalysisMiningOperationDevToolsComponent }
                     ]
                   }
                 ]
               },
-              { path: 'expense-explanation', component: ExpenseExplanationComponent },
-              //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
+              { path: '', redirectTo: 'products/analysis-mining/component-intro/tdh-platform-products', pathMatch: 'full' }
             ]
           },
           { path: '', redirectTo: '/data-warehouse', pathMatch: 'full' }
