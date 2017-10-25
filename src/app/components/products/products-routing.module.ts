@@ -131,7 +131,12 @@ const productRoutes: Routes = [
               //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
             ]
           },
-          { path: 'info-retrieval', component: InfoRetrievalComponent,
+          {
+            path: 'info-retrieval',
+            data: { preload: true },
+            loadChildren: 'app/components/products/info-retrieval/info-retrieval.module#InfoRetrievalModule'
+          },
+/*          { path: 'info-retrieval', component: InfoRetrievalComponent,
             children: [
 
               { path: 'functionalities', component: InfoRetrievalFunctionalitiesComponent },
@@ -169,7 +174,7 @@ const productRoutes: Routes = [
               { path: 'expense-explanation', component: ExpenseExplanationComponent },
               //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
             ]
-          },
+          },*/
           
           { path: 'relational-database', component: RelationalDatabaseComponent,
             children: [

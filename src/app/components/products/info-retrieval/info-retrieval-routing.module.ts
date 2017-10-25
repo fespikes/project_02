@@ -21,7 +21,8 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval-component
 
 const infoRetrievalRoutes: Routes = [
 	{
-		path: 'info-retrieval', component: InfoRetrievalComponent,
+		path: '',
+		component: InfoRetrievalComponent,
 		children: [
 
 			{ path: 'functionalities', component: InfoRetrievalFunctionalitiesComponent },
