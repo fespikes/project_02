@@ -91,7 +91,7 @@ const productRoutes: Routes = [
                       { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
                       { path: 'data-lake', component: DataLakeComponent },
                       { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
-                      // { path: '',   redirectTo: '/multi-tenancy-platform', pathMatch: 'full' }
+                      { path: '', redirectTo: '/products/data-warehouse/scenarios/multi-tenancy-platform', pathMatch: 'full' }
                     ]
                   }
                 ],
@@ -105,13 +105,13 @@ const productRoutes: Routes = [
                     children: [
                       { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
                       { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
-                      { path: 'operation-dev-tools', component: OperationDevToolsComponent }
-                    ]
+                      { path: 'operation-dev-tools', component: OperationDevToolsComponent },
+                      { path: '', redirectTo: '/products/data-warehouse/component-intro/tdh-platform-products', pathMatch: 'full' }                    ]
                   }
                 ]
               },
-              { path: 'expense-explanation', component: ExpenseExplanationComponent },
-              //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
+              // { path: 'expense-explanation', component: ExpenseExplanationComponent },
+              { path: '', redirectTo: '/products/data-warehouse/functionalities', pathMatch: 'full' }
             ]
            },
           { 
@@ -350,9 +350,8 @@ const productRoutes: Routes = [
               { path: 'expense-explanation', component: ExpenseExplanationComponent },
               //{ path: 'products/data-warehouse', redirectTo: 'products/data-warehouse/functionalities', pathMatch: 'full' }
             ]
-          }
-
-          // ,{ path: '', redirectTo: '/data-warehouse', pathMatch: 'full' }
+          },
+          { path: '', redirectTo: '/data-warehouse', pathMatch: 'full' }
         ]
       }
     ]
