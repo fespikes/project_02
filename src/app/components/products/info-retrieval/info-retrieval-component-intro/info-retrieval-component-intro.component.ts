@@ -3,7 +3,7 @@ import { ComponentIntroComponent } from '../../common/components/component-intro
 import { InfoRetrievalService } from '../info-retrieval.service';
 
 @Component({
-	templateUrl: '../../common/components/advantages/advantages.component.html',
+	templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
 export class InfoRetrievalComponentIntroComponent extends ComponentIntroComponent {
 

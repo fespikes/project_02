@@ -190,38 +190,42 @@ h3.sub-title
       h5:before
         left: -20px
 
-
-
-
-
-
-
+$row-height: 124px
 .intro-table
-
   .row
-    height: 98px
+    height: $row-height
     display: flex
+    font-size: 1.4rem
+    border-bottom: 1px #e6eaee solid
+    span
+      float： left
+      display: inline-block
+      height: $row-height
 
     .title
       width: 200px
-      height: 98px
-      line-height: 98px
+      height: $row-height
+      line-height: $row-height
       font-weight: 600
+      font-size: 1.4rem
       text-indent: 40px
       color: #354052
 
     .ctn
       width: 680px
-      padding-right: 120px
+      padding-right: $row-height
       display: flex
+      font-size： 1.2rem
       align-items: center
       align-content: center
       line-height: 1.5
 
     .anchor
       width: 110px
-      height: 98px
-      line-height: 98px
+      height: $row-height
+      line-height: $row-height
       font-weight: 600
       color: #0066ce
 
+  .row.h
+    height: $row-height
