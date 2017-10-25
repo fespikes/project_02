@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { ScenariosComponent } from '../../common/components/scenarios/scenarios.component'
+import { RealtimeComputationService } from '../realtime-computation.service';
 
 @Component({
-  selector: 'tdc-realtime-computation-scenarios',
-  templateUrl: './realtime-computation-scenarios.component.html',
-  styleUrls: ['./realtime-computation-scenarios.component.sass']
+	templateUrl: '../../common/components/scenarios/scenarios.component.html',
 })
-export class RealtimeComputationScenariosComponent implements OnInit {
+export class RealtimeComputationScenariosComponent extends ScenariosComponent {
 
-  constructor() { }
+	constructor(
+		componentFactoryResolver: ComponentFactoryResolver,
+		private service: RealtimeComputationService
+	) {
+		super(componentFactoryResolver);
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		const productDetails = this.service.getProductDetails();
+		this.data = productDetails.scenarios;
+	}
 
 }

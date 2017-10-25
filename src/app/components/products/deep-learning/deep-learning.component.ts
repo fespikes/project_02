@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProductsService } from '../products.service';
+import { DeepLearningService } from './deep-learning.service';
 
 @Component({
   selector: 'tdc-deep-learning',
@@ -9,16 +9,19 @@ import { ProductsService } from '../products.service';
 })
 export class DeepLearningComponent implements OnInit {
 
-  tabItems = [];
-  constructor(
-    private productsService: ProductsService
-  ) { }
+  productDetails: any;
+
+  constructor(private service: DeepLearningService) {
+
+  }
 
   ngOnInit() {
-    this.tabItems = this.productsService.getProductTabs();
+    const productDetails = this.service.getProductDetails();
+    this.productDetails = productDetails;
   }
 
-  onTabChange() {
-
+  ngOnDestroy() {
   }
+
+
 }

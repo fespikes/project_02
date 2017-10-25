@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { FunctionalitiesComponent } from '../../common/components/functionalities/functionalities.component';
+import { DeepLearningService } from '../deep-learning.service';
 
 @Component({
-  selector: 'tdc-deep-learning-functionalities',
-  templateUrl: './deep-learning-functionalities.component.html',
-  styleUrls: ['./deep-learning-functionalities.component.sass']
+	templateUrl: '../../common/components/functionalities/functionalities.component.html',
 })
-export class DeepLearningFunctionalitiesComponent implements OnInit {
+export class DeepLearningFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */ {
 
-  constructor() { }
+	constructor(
+		componentFactoryResolver: ComponentFactoryResolver,
+		private service: DeepLearningService,
+		private el: ElementRef
+	) {
+		super(componentFactoryResolver);
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		const productDetails = this.service.getProductDetails();
+		this.data = productDetails.functionalities;
+	}
 
 }

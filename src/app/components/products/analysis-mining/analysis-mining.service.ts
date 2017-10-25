@@ -24,11 +24,11 @@ export class AnalysisMiningService {
         },
         {
           text: '应用场景',
-          link: './scenarios/self-analysis-platform'
+          link: './scenarios'
         },
         {
           text: '组件介绍',
-          link: './component-intro/tdh-platform-products'
+          link: './component-intro'
         },
         /*{
           text: '费用说明',
@@ -120,8 +120,8 @@ export class AnalysisMiningService {
           image: {
             src: '/assets/images/products/scenarios/analysis-mining/fraud-check.png',
             style: {
-              width: '827',
-              height: '297'
+              width: '700',//827',
+              height: '251'//'297'
             }
           }
         }

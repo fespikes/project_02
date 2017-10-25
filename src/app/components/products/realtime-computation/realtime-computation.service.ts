@@ -24,11 +24,11 @@ export class RealtimeComputationService {
         },
         {
           text: '应用场景',
-          link: './scenarios/self-analysis-platform'
+          link: './scenarios'
         },
         {
           text: '组件介绍',
-          link: './component-intro/tdh-platform-products'
+          link: './component-intro'
         },
         /*{
           text: '费用说明',
@@ -104,7 +104,7 @@ export class RealtimeComputationService {
           },
           {
             text: '生产设备安全预警',
-            link: './equipment-security-warning'
+            link: './equipments-security-warning'
           }
         ],
         raidDeployControl: {
@@ -122,20 +122,20 @@ export class RealtimeComputationService {
           image: {
             src: '/assets/images/products/scenarios/realtime-computation/financial-risk-management.png',
             style: {
-              width: '816',
-              height: '360'
+              width: '700',//'816',
+              height: '308'//'360'
             }
           }
         },
-        equipmentSecurityWarning: {
+        equipmentsSecurityWarning: {
           text: '实时收集从生产设备传感器采集的数据，监测设备在某个时间窗口内的异常状态和异常变化，分析是否存在潜在的安全隐患，提供消息实时警报。支持状态持久化，留存并汇总数据记录，用以进行事后安全分析。实现事前预警、事后分析、故障预测，对生产设备提供信息化的全面安全保护。',
-          image: {
-            src: '/assets/images/products/scenarios/realtime-computation/equipment-security-warning.png',
-            style: {
-              width: '801',
-              height: '322'
-            }
-          }
+          // image: {
+          //   src: '/assets/images/products/scenarios/realtime-computation/equipments-security-warning.png',
+          //   style: {
+          //     width: '801',
+          //     height: '322'
+          //   }
+          // }
         }
       },
       componentIntro: {

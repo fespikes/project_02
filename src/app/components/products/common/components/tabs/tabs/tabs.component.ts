@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'tdc-tabs',
+  selector: 'tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.sass']
 })

@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, Input } from '@angular/core';
+import { TabsComponent } from '../../common/components/tabs/tabs.component';
 
 @Component({
-  selector: 'tdc-relational-database-tabs',
-  templateUrl: './relational-database-tabs.component.html',
-  styleUrls: ['./relational-database-tabs.component.sass']
+	selector: 'relational-database-tabs',
+	templateUrl: '../../common/components/tabs/tabs.component.html'
 })
-export class RelationalDatabaseTabsComponent implements OnInit {
+export class RelationalDatabaseTabsComponent extends TabsComponent implements OnInit {
 
-  constructor() { }
+	@Input()
+	productDetails: any;
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		this.data = this.productDetails.tabs;
+	}
 
 }

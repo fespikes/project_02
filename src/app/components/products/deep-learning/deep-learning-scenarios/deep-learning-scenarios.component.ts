@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { ScenariosComponent } from '../../common/components/scenarios/scenarios.component'
+import { DeepLearningService } from '../deep-learning.service';
 
 @Component({
-  selector: 'tdc-deep-learning-scenarios',
-  templateUrl: './deep-learning-scenarios.component.html',
-  styleUrls: ['./deep-learning-scenarios.component.sass']
+	templateUrl: '../../common/components/scenarios/scenarios.component.html',
 })
-export class DeepLearningScenariosComponent implements OnInit {
+export class DeepLearningScenariosComponent extends ScenariosComponent {
 
-  constructor() { }
+	constructor(
+		componentFactoryResolver: ComponentFactoryResolver,
+		private service: DeepLearningService
+	) {
+		super(componentFactoryResolver);
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		const productDetails = this.service.getProductDetails();
+		this.data = productDetails.scenarios;
+	}
 
 }

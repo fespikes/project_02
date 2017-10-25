@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { ComponentIntroComponent } from '../../common/components/component-intro/component-intro.component';
+import { RelationalDatabaseService } from '../relational-database.service';
 
 @Component({
-  selector: 'tdc-relational-database-component-intro',
-  templateUrl: './relational-database-component-intro.component.html',
-  styleUrls: ['./relational-database-component-intro.component.sass']
+	templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
-export class RelationalDatabaseComponentIntroComponent implements OnInit {
+export class RelationalDatabaseComponentIntroComponent extends ComponentIntroComponent {
 
-  constructor() { }
+	constructor(
+		componentFactoryResolver: ComponentFactoryResolver,
+		private service: RelationalDatabaseService
+	) {
+		super(componentFactoryResolver);
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		const productDetails = this.service.getProductDetails();
+		this.data = productDetails.componentIntro;
+	}
 
 }

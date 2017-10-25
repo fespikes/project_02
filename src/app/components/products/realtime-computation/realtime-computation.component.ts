@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProductsService } from '../products.service';
+import { RealtimeComputationService } from './realtime-computation.service';
 
 @Component({
   selector: 'tdc-realtime-computation',
@@ -9,18 +9,19 @@ import { ProductsService } from '../products.service';
 })
 export class RealtimeComputationComponent implements OnInit {
 
-  tabItems = [];
+  productDetails: any;
 
-  constructor(
-    private productsService: ProductsService
-  ) { }
+  constructor(private service: RealtimeComputationService) {
+
+  }
 
   ngOnInit() {
-    this.tabItems = this.productsService.getProductTabs();
+    const productDetails = this.service.getProductDetails();
+    this.productDetails = productDetails;
   }
 
-  onTabChange() {
-
+  ngOnDestroy() {
   }
+
 
 }

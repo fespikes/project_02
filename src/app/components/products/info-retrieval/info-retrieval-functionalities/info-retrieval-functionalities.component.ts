@@ -20,9 +20,4 @@ export class InfoRetrievalFunctionalitiesComponent extends FunctionalitiesCompon
   	this.data = productDetails.functionalities;
   }
 
-  // ngAfterViewInit() {
-  // 	setTimeout( _ => this.loadComponent(), 1);
-  // }
-  // ngOnDestroy() { }
-
 }

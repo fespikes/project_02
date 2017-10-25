@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { ComponentIntroComponent } from '../../common/components/component-intro/component-intro.component';
+import { RealtimeComputationService } from '../realtime-computation.service';
 
 @Component({
-  selector: 'tdc-realtime-computation-component-intro',
-  templateUrl: './realtime-computation-component-intro.component.html',
-  styleUrls: ['./realtime-computation-component-intro.component.sass']
+	templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
-export class RealtimeComputationComponentIntroComponent implements OnInit {
+export class RealtimeComputationComponentIntroComponent extends ComponentIntroComponent {
 
-  constructor() { }
+	constructor(
+		componentFactoryResolver: ComponentFactoryResolver,
+		private service: RealtimeComputationService
+	) {
+		super(componentFactoryResolver);
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		const productDetails = this.service.getProductDetails();
+		this.data = productDetails.componentIntro;
+	}
 
 }

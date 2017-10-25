@@ -24,11 +24,11 @@ export class RelationalDatabaseService {
         },
         {
           text: '应用场景',
-          link: './scenarios/self-analysis-platform'
+          link: './scenarios'
         },
         {
           text: '组件介绍',
-          link: './component-intro/tdh-platform-products'
+          link: './component-intro'
         },
         /*{
           text: '费用说明',
@@ -79,56 +79,52 @@ export class RelationalDatabaseService {
         title: '应用场景',
         tabs: [
           {
-            text: '缉查布控系统',
-            link: './raid-deploy-control'
+            text: '高并发电商平台',
+            link: './concurrent-ecommerce-platform'
           },
           {
-            text: '金融风险管理',
-            link: './financial-risk-management'
+            text: '金融交易系统',
+            link: './financial-transaction-system'
           },
           {
-            text: '生产设备安全预警',
-            link: './equipment-security-warning'
+            text: '网站读写分离应用',
+            link: './separate-read-write'
           }
         ],
-        raidDeployControl: {
-          text: '构建公路车辆智能监测记录系统，汇聚卡口车辆通行信息，捕捉违规现象，实现车辆轨迹追踪。同时将通行信息和布控信息之间进行对比，对可疑对象发出预警，通知路面民警对预警车辆拦截处置。也可以实现交通流量监控，嗅探流量增幅异常高的路段。为打击违法犯罪工作、预防和减少道路交通事故、控制交通流量提供技术支撑。',
-          image: {
-            src: '/assets/images/products/scenarios/relational-database/raid-deploy-control.png',
-            style: {
-              width: '700',	//'926',
-              height: '344'	//'455'
-            }
-          }
+        concurrentEcommercePlatform: {
+          text: 'TDH-RDB可作为基础架构参与电商交易平台构建，提供交易数据录入和查询功能。能够在短时间内处理大量业务，响应高并发请求，从容应对访问高峰，保证始终对外提供稳定的数据服务。采用主从节点架构，并确保主从设备的数据一致性，实现可靠的即时容灾切换。其弹性伸缩能力，可为电商实现平台处理能力的按需扩展。',
+          // image: {
+          //   src: '/assets/images/products/scenarios/relational-database/concurrent-ecommerce-platform.png',
+          //   style: {
+          //     width: '700',
+          //     height: '344'
+          //   }
+          // }
         },
-        financialRiskManagement: {
-          text: '为实时风控和实时反欺诈提供技术支持。利用TDH-RC对于流计算的超强表达能力，实现复杂的应用逻辑，对于从生产系统通过实时消息队列进入计算集群的实时交易数据，完成数据转换、特征提取、探索分析，检测异常的金融交易行为，将结果最终以消息或者页面等形式输出。',
-          image: {
-            src: '/assets/images/products/scenarios/relational-database/financial-risk-management.png',
-            style: {
-              width: '816',
-              height: '360'
-            }
-          }
+        financialTransactionSystem: {
+          text: '保障金融数据的完整性、一致性，满足金融行业对于关系型数据库的特性需求。企业可以采用多节点多中心的架构部署TDH-RDB，以获取稳健的灾难恢复能力，同时提供分布式事务支持，维护数据时效性，保证在分布式环境下，数据不丢不错，防止因数据错乱或者丢失导致的金融损失和财产损害。',
+          // image: {
+          //   src: '/assets/images/products/scenarios/relational-database/financial-risk-management.png',
+          //   style: {
+          //     width: '816',
+          //     height: '360'
+          //   }
+          // }
         },
-        equipmentSecurityWarning: {
-          text: '实时收集从生产设备传感器采集的数据，监测设备在某个时间窗口内的异常状态和异常变化，分析是否存在潜在的安全隐患，提供消息实时警报。支持状态持久化，留存并汇总数据记录，用以进行事后安全分析。实现事前预警、事后分析、故障预测，对生产设备提供信息化的全面安全保护。',
-          image: {
-            src: '/assets/images/products/scenarios/relational-database/equipment-security-warning.png',
-            style: {
-              width: '801',
-              height: '322'
-            }
-          }
+        separateReadWrite: {
+          text: '某些网站的读操作远远多于写操作，例如对于大型的新闻网站而言，主要应对各种访问查询，而添加一则新闻的次数与之相比则微乎其微。对于这种特性的网站，可将读写请求分离在不同节点处理，主节点负责写，读操作分摊在各个从节点，从而缓解锁之间的竞争，提高资源利用率和生产效率，成倍提升对于读的应答效率。同时也通过增加冗余，提高了系统的可用性。',
+          // image: {
+          //   src: '/assets/images/products/scenarios/relational-database/equipment-security-warning.png',
+          //   style: {
+          //     width: '801',
+          //     height: '322'
+          //   }
+          // }
         }
       },
       componentIntro: {
         title: '组件介绍',
         tabs: [
-          {
-            text: 'TDH平台产品',
-            link: './tdh-platform-products'
-          },
           {
             text: 'TDH开发套件',
             link: './tdh-dev-kits'
@@ -138,43 +134,18 @@ export class RelationalDatabaseService {
             link: './operation-dev-tools'
           }
         ],
-        tdhPlatformProducts: [{
-          title: 'Guardian',
-          text: 'Guardian为TDH提供集中的安全和资源管理服务。它支持LDAP和Kerberos，保护Hadoop集群免受恶意攻击和安全威胁，而且还可以对资源做细粒度的ACL控制。多租户资源管理模块可以按照租户的方式管理资源，并通过一个图形化工具为用户提供权限配置以及资源配置接口。',
-          link: ''  //TODO: the link goto incepter introduction
-        },{
-          title: 'Slipstream',
-          text: 'Slipstream是提供实时计算的产品，被广泛用于交通运输和物联网行业。和其他解决方案相比，Slipstream有几个突出的技术优势: 完整的SQL支持使得实时业务开发过程更加简便;基于事件驱动的计算引擎可将延迟时间缩减到5毫秒，是Spark Streaming引擎的延 时的1/100;此外Slipstream支持复杂事件处理能力(CEP)，因此用户可以基于Slipstream用SQL语言开发比较复杂的在线流计算业 务，如在线反欺诈应用等。Slipstream还提供完善的高可用性(HA)和Exactly-Once语义，而这些都是使实时应用稳定、可靠的保障。',
-          link: ''  //TODO: the link goto incepter introduction
-        },{
-          title: 'Hyperbase',
-          text: 'Hyperbase是以Apache HBase为基础，融合多项创新技术的NoSQL数据库: 它采用了和Inceptor同样的SQL引擎，允许开发者们直接 用SQL构建复杂应用; 支持全局索引和次级索引，实现高速的非主键查询; 提供原生的JSON/BSON格式支持以及对象存储(Object Store) 技术，极大地简化了非结构化数据处理。',
-          link: ''  //TODO: the link goto incepter introduction
-        },{
-          title: 'Hadoop',
-          text: 'Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。',
-          link: ''  //TODO: the link goto incepter introduction
-        }],
         tdhDevKits: [{
           title: 'Pilot',
           text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
           link: ''  //TODO: the link goto incepter introduction
         }],
         operationDevTools: [{
-          title: 'Redis',
-          text: 'Redis是个基于内存的数据存储，可以被用作数据库、缓存或者消息转发器。它支持多种数据结构，包括strings, hashes, lists, sets, bitmaps等。Redis支持事务，基于磁盘的持久化，多副本等特性，保证服务的高可用性。Redis Cluster可以用于构建一个Redis的集群，提供高吞吐、高可用的内存数据服务。',
-          link: ''  //TODO: the link goto incepter introduction
-        },{
-          title: 'Milano',
-          text: 'Milano是一个日志收集分析和展示平台，为运维人员提供基于日志问题的定位和分析工具。它具有五个功能组件：logstash、kafka、elasticsearch、kibana、flink，分别用来帮助用户实现日志收集、传输、存储、展示和分析这五项功能。',
+          title: 'TxSQL',
+          text: 'TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群。 其底层通过 Paxos Group 保证数据的一致性和高可用，在业务层通过分布式的事 务管理器来提供高并发的事务支持',
           link: ''  //TODO: the link goto incepter introduction
         },{
           title: 'Terminal',
           text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
-          link: ''  //TODO: the link goto incepter introduction
-        },{
-          title: 'Prometheus',
-          text: 'Prometheus是开源的监控和告警系统，以Metrics监控为主，通过pull mode完成时间序列数据的收集。主要包括的组件有：负责时间序列数据存储和抓取的Prometheus Server，Alertmanager，Push gateway，以及各类exporter。',
           link: ''  //TODO: the link goto incepter introduction
         }]
       },

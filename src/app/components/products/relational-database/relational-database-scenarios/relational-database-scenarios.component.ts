@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { ScenariosComponent } from '../../common/components/scenarios/scenarios.component'
+import { RelationalDatabaseService } from '../relational-database.service';
 
 @Component({
-  selector: 'tdc-relational-database-scenarios',
-  templateUrl: './relational-database-scenarios.component.html',
-  styleUrls: ['./relational-database-scenarios.component.sass']
+	templateUrl: '../../common/components/scenarios/scenarios.component.html',
 })
-export class RelationalDatabaseScenariosComponent implements OnInit {
+export class RelationalDatabaseScenariosComponent extends ScenariosComponent {
 
-  constructor() { }
+	constructor(
+		componentFactoryResolver: ComponentFactoryResolver,
+		private service: RelationalDatabaseService
+	) {
+		super(componentFactoryResolver);
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		const productDetails = this.service.getProductDetails();
+		this.data = productDetails.scenarios;
+	}
 
 }

@@ -60,7 +60,6 @@ import { DataMartComponentIntroComponent } from './data-mart/data-mart-component
   import { TdhPlatformProductsComponent as DataMartTdhPlatformProductsComponent } from './data-mart/data-mart-component-intro/tdh-platform-products/tdh-platform-products.component';
   import { TdhDevKitsComponent as DataMartTdhDevKitsComponent } from './data-mart/data-mart-component-intro/tdh-dev-kits/tdh-dev-kits.component';
   import { OperationDevToolsComponent as DataMartOperationDevToolsComponent } from './data-mart/data-mart-component-intro/operation-dev-tools/operation-dev-tools.component';
-
 import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
   import { SelfAnalysisPlatformComponent } from './data-mart/data-mart-scenarios/self-analysis-platform/self-analysis-platform.component';
   import { MarketingAnalysisSystemComponent } from './data-mart/data-mart-scenarios/marketing-analysis-system/marketing-analysis-system.component';
@@ -78,22 +77,26 @@ import { InfoRetrievalScenariosComponent } from './info-retrieval/info-retrieval
   import { DataSearchEngineComponent } from './info-retrieval/info-retrieval-scenarios/data-search-engine/data-search-engine.component';
   import { LogAcquisitionAnalysisComponent } from './info-retrieval/info-retrieval-scenarios/log-acquisition-analysis/log-acquisition-analysis.component';
   import { BusinessAnalysisComponent } from './info-retrieval/info-retrieval-scenarios/business-analysis/business-analysis.component';
-
 import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retrieval-component-intro/info-retrieval-component-intro.component';
   import { OperationDevToolsComponent as InfoRetrievalOperationDevToolsComponent } from './info-retrieval/info-retrieval-component-intro/operation-dev-tools/operation-dev-tools.component';
   import { TdhDevKitsComponent as InfoRetrievalTdhDevKitsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-dev-kits/tdh-dev-kits.component';
   import { TdhPlatformProductsComponent as InfoRetrievalTdhPlatformProductsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-platform-products/tdh-platform-products.component';
 
+import { RelationalDatabaseService } from './relational-database/relational-database.service';
 import { RelationalDatabaseAdvantagesComponent } from './relational-database/relational-database-advantages/relational-database-advantages.component';
 import { RelationalDatabaseBannerComponent } from './relational-database/relational-database-banner/relational-database-banner.component';
 import { RelationalDatabaseComponentIntroComponent } from './relational-database/relational-database-component-intro/relational-database-component-intro.component';
   import { OperationDevToolsComponent as RelationalDatabaseOperationDevToolsComponent } from './relational-database/relational-database-component-intro/operation-dev-tools/operation-dev-tools.component';
   import { TdhDevKitsComponent as RelationalDatabaseTdhDevKitsComponent } from './relational-database/relational-database-component-intro/tdh-dev-kits/tdh-dev-kits.component';
-  import { TdhPlatformProductsComponent as RelationalDatabaseTdhPlatformProductsComponent } from './relational-database/relational-database-component-intro/tdh-platform-products/tdh-platform-products.component';
+  // import { TdhPlatformProductsComponent as RelationalDatabaseTdhPlatformProductsComponent } from './relational-database/relational-database-component-intro/tdh-platform-products/tdh-platform-products.component';
 import { RelationalDatabaseFunctionalitiesComponent } from './relational-database/relational-database-functionalities/relational-database-functionalities.component';
 import { RelationalDatabaseScenariosComponent } from './relational-database/relational-database-scenarios/relational-database-scenarios.component';
+  import { ConcurrentEcommercePlatformComponent } from './relational-database/relational-database-scenarios/concurrent-ecommerce-platform/concurrent-ecommerce-platform.component';
+  import { FinancialTransactionSystemComponent } from './relational-database/relational-database-scenarios/financial-transaction-system/financial-transaction-system.component';
+  import { SeparateReadWriteComponent } from './relational-database/relational-database-scenarios/separate-read-write/separate-read-write.component';
 import { RelationalDatabaseTabsComponent } from './relational-database/relational-database-tabs/relational-database-tabs.component';
 
+import { AnalysisMiningService } from './analysis-mining/analysis-mining.service';
 import { AnalysisMiningComponent } from './analysis-mining/analysis-mining.component';
 import { AnalysisMiningAdvantagesComponent } from './analysis-mining/analysis-mining-advantages/analysis-mining-advantages.component';
 import { AnalysisMiningBannerComponent } from './analysis-mining/analysis-mining-banner/analysis-mining-banner.component';
@@ -109,6 +112,7 @@ import { AnalysisMiningScenariosComponent } from './analysis-mining/analysis-min
 import { AnalysisMiningTabsComponent } from './analysis-mining/analysis-mining-tabs/analysis-mining-tabs.component';
 
 
+import { DeepLearningService } from './deep-learning/deep-learning.service';
 import { DeepLearningAdvantagesComponent } from './deep-learning/deep-learning-advantages/deep-learning-advantages.component';
 import { DeepLearningBannerComponent } from './deep-learning/deep-learning-banner/deep-learning-banner.component';
 import { DeepLearningComponentIntroComponent } from './deep-learning/deep-learning-component-intro/deep-learning-component-intro.component';
@@ -117,9 +121,13 @@ import { DeepLearningComponentIntroComponent } from './deep-learning/deep-learni
   import { TdhPlatformProductsComponent as DeepLearningTdhPlatformProductsComponent } from './deep-learning/deep-learning-component-intro/tdh-platform-products/tdh-platform-products.component';
 import { DeepLearningFunctionalitiesComponent } from './deep-learning/deep-learning-functionalities/deep-learning-functionalities.component';
 import { DeepLearningScenariosComponent } from './deep-learning/deep-learning-scenarios/deep-learning-scenarios.component';
+  import { ImgRecognitionSystemComponent } from './deep-learning/deep-learning-scenarios/img-recognition-system/img-recognition-system.component';
+  import { CustomerLosingWarningComponent } from './deep-learning/deep-learning-scenarios/customer-losing-warning/customer-losing-warning.component';
+  import { NaturalLanguageProcessingComponent } from './deep-learning/deep-learning-scenarios/natural-language-processing/natural-language-processing.component';
 import { DeepLearningTabsComponent } from './deep-learning/deep-learning-tabs/deep-learning-tabs.component';
 
 
+import { RealtimeComputationService } from './realtime-computation/realtime-computation.service';
 import { RealtimeComputationAdvantagesComponent } from './realtime-computation/realtime-computation-advantages/realtime-computation-advantages.component';
 import { RealtimeComputationBannerComponent } from './realtime-computation/realtime-computation-banner/realtime-computation-banner.component';
 import { RealtimeComputationComponentIntroComponent } from './realtime-computation/realtime-computation-component-intro/realtime-computation-component-intro.component';
@@ -128,12 +136,10 @@ import { RealtimeComputationComponentIntroComponent } from './realtime-computati
   import { TdhPlatformProductsComponent as RealtimeComputationTdhPlatformProductsComponent } from './realtime-computation/realtime-computation-component-intro/tdh-platform-products/tdh-platform-products.component';
 import { RealtimeComputationFunctionalitiesComponent } from './realtime-computation/realtime-computation-functionalities/realtime-computation-functionalities.component';
 import { RealtimeComputationScenariosComponent } from './realtime-computation/realtime-computation-scenarios/realtime-computation-scenarios.component';
+  import { RaidDeployControlComponent } from './realtime-computation/realtime-computation-scenarios/raid-deploy-control/raid-deploy-control.component';
+  import { FinancialRiskManagementComponent } from './realtime-computation/realtime-computation-scenarios/financial-risk-management/financial-risk-management.component';
+  import { EquipmentsSecurityWarningComponent } from './realtime-computation/realtime-computation-scenarios/equipments-security-warning/equipments-security-warning.component';
 import { RealtimeComputationTabsComponent } from './realtime-computation/realtime-computation-tabs/realtime-computation-tabs.component';
-
-
-//E: info-retrieval
-
-
 
 
 @NgModule({
@@ -225,9 +231,12 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     RelationalDatabaseComponentIntroComponent,
       RelationalDatabaseOperationDevToolsComponent,
       RelationalDatabaseTdhDevKitsComponent,
-      RelationalDatabaseTdhPlatformProductsComponent,
+      // RelationalDatabaseTdhPlatformProductsComponent,
     RelationalDatabaseFunctionalitiesComponent,
     RelationalDatabaseScenariosComponent,
+      ConcurrentEcommercePlatformComponent,
+      FinancialTransactionSystemComponent,
+      SeparateReadWriteComponent,
     RelationalDatabaseTabsComponent,
 
     AnalysisMiningAdvantagesComponent,
@@ -261,7 +270,13 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
       RealtimeComputationTdhPlatformProductsComponent,
     RealtimeComputationFunctionalitiesComponent,
     RealtimeComputationScenariosComponent,
+      RaidDeployControlComponent,
+      FinancialRiskManagementComponent,
+      EquipmentsSecurityWarningComponent,
     RealtimeComputationTabsComponent,
+    ImgRecognitionSystemComponent,
+    CustomerLosingWarningComponent,
+    NaturalLanguageProcessingComponent,
     
   ],
   providers: [
@@ -269,7 +284,11 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     ProductsService,
 
     DataMartService,
-    InfoRetrievalService
+    InfoRetrievalService,
+    AnalysisMiningService,
+    DeepLearningService,
+    RealtimeComputationService,
+    RelationalDatabaseService
   ],
   entryComponents: [
     TheBannerComponent,

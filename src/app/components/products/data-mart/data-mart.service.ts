@@ -24,11 +24,11 @@ export class DataMartService {
         },
         {
           text: '应用场景',
-          link: './scenarios/self-analysis-platform'
+          link: './scenarios'
         },
         {
           text: '组件介绍',
-          link: './component-intro/tdh-platform-products'
+          link: './component-intro'
         },
         /*{
           text: '费用说明',

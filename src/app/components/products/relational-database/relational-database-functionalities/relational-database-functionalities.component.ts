@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { FunctionalitiesComponent } from '../../common/components/functionalities/functionalities.component';
+import { RelationalDatabaseService } from '../relational-database.service';
 
 @Component({
-  selector: 'tdc-relational-database-functionalities',
-  templateUrl: './relational-database-functionalities.component.html',
-  styleUrls: ['./relational-database-functionalities.component.sass']
+	templateUrl: '../../common/components/functionalities/functionalities.component.html',
 })
-export class RelationalDatabaseFunctionalitiesComponent implements OnInit {
+export class RelationalDatabaseFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */ {
 
-  constructor() { }
+	constructor(
+		componentFactoryResolver: ComponentFactoryResolver,
+		private service: RelationalDatabaseService,
+		private el: ElementRef
+	) {
+		super(componentFactoryResolver);
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		const productDetails = this.service.getProductDetails();
+		this.data = productDetails.functionalities;
+	}
 
 }
