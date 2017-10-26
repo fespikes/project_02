@@ -19,7 +19,7 @@
     "PRODUCT_ADVANTAGE":"产品优势",
     "PRODUCT_SCENARIOS":"应用场景",
     "INCEPTOR":{
-      "TITLE":"Inceptor 分析型数据库",
+      "TITLE":"分析型数据库",
       "SUB_TITLE":"Inceptor是用于批量处理及分析的数据库，可应用于数据仓库和数据集市的构建。它基于Hadoop和Spark技术平台打造，加上自主开发的创新功能组件，有效解决了企业级大数据数据处理和分析的各种技术难题，帮助企业快速构建和推广数据业务。",
       "INTRODUCE_IMG_URL":"modules/inceptor-introduce.png",
       "INTRODUCE_1":"服务层",
@@ -44,7 +44,7 @@
       "ADVANTAGE_10":"Inceptor拥有极为优异的大数据分析性能，支持批处理性能线性可扩展，比Apache Hadoop处理速度快10倍以上，是MPP处理速度的5倍以上。此外，Inceptor可对接基于SSD或内存的列式存储引擎Holodesk，提供卓越的数据读取速度。"
     },
     "SLIPSTREAM":{
-      "TITLE":"Slipstream 实时计算引擎",
+      "TITLE":"实时计算引擎",
       "SUB_TITLE":"Slipstream是实时计算引擎，被广泛用于交通运输和物联网行业。Slipstream提供完整的SQL支持，简化实时业务开发过程，同时实现了基于事件驱动的计算引擎，将延迟时间缩减到5毫秒，此外还支持复杂事件处理能力（CEP），和高可用性（HA）和Exactly-Once语义，为实现实时应用提供稳定、可靠的保障。",
       "INTRODUCE_IMG_URL":"modules/slipstream-introduce.png",
       "INTRODUCE_1":"Transwarp Slipstream是统一支持微批处理和事件驱动的混合流计算引擎，可以同时支持低延时和高吞吐的实时计算场景。",
@@ -70,7 +70,7 @@
       "ADVANTAGE_10":"用户原有的业务逻辑很多是通过SQL实现的，如果通过编程的方式迁移到流上，迁移成本非常高，还不能保证迁移后的逻辑是否正确。而一旦采用Slipstream的方式，用户只需要修改少量SQL，迁移成本几乎接近零。"
     },
     "DISCOVER":{
-      "TITLE":"Discover 数据挖掘",
+      "TITLE":"数据挖掘",
       "SUB_TITLE":"Discover是分布式机器学习平台，它包含丰富的分布式算法库，内置多个行业应用模块，提供R语言、Python和SQL接口，以帮助数据科学家开发自己的数据挖掘算法。此外Discover还通过内置Notebook工具Zeppelin，灵活支持数据工程师和科学家之间的团队协作。",
       "INTRODUCE_IMG_URL":"modules/discover-introduce.png",
       "INTRODUCE_1":"Transwarp Discover是一款灵活的数据科学分析探索工具，提供了R、Python、Spark的集成开发环境以及Notebook工具提供可视化的模型学习和数据分析。Discover提供了多种行业模板和基础架构来辅助用户构建智能应用，比如，精准营销、流失预警、文本挖掘等。",
@@ -88,7 +88,7 @@
       "ADVANTAGE_8":"Discover-Notebook平台具有多样化的功能，例如支持Shell脚本，方便自动化任务；支持markdown语法，让用户轻松完成一篇高质量的论文报告；支持多人协作开发，让工程文件的改动更新实时地广播给团队其他成员；还支持报表发布功能，将报表的展示效果及动态通过链接发布至代码或报告中。"
     },
     "HYPERBASE":{
-      "TITLE":"Hyperbase 快速检索和非结构化数据处理",
+      "TITLE":"快速检索和非结构化数据处理",
       "SUB_TITLE":"融合了多项创新技术的NoSQL数据库，采用与Inceptor相同的SQL引擎，允许开发者直接利用SQL构建复杂应用，同时支持全局索引和次级索引，实现高速非主键查询，提供原生的JSON/BSON格式支持以及对象存储（Object Store）技术，极大地简化了非结构化数据处理。",
       "INTRODUCE_IMG_URL":"modules/hyperbase-introduce.png",
       "INTRODUCE_1":"Transwarp Hyperbase实时数据库是建立在Apache HBase和Elasticsearch基础之上，融合了多种索引技术、分布式事务处理、全文实时搜索、图形数据库在内的实时NoSQL数据库。",
@@ -107,7 +107,7 @@
       "ADVANTAGE_10":"支持文档型数据（如JSON/BSON/XML)的存储、索引和搜索，支持BLOB对象数据（图片、音视频、二进制文档等）的存储、检索和自动回收，并提供Titan图形数据库服务。"
     },
     "SEARCH":{
-      "TITLE":"Search 全文检索",
+      "TITLE":"全文检索",
       "SUB_TITLE":"用于构建企业内部搜索引擎，支持PB级别的高速全文检索。Transwarp Search支持利用SQL实现大数据上的秒级全文搜索，并与SQL引擎优化器进行深度整合，优化器会根据数据特点，优化数据搜索的执行过程，提供更好的性能。同时它利用各种创新性的存储与内存管理技术，极大的提高了系统的可用性。",
       "INTRODUCE_IMG_URL":"modules/search-introduce.png",
       "INTRODUCE_1":"Transwarp Search是基于开源Elasticsearch开发出的可扩展的分布式全文搜索和分析引擎。Search以Elasticsearch基础架构为基础优化了多种功能，并实现了基于SQL的全文检索。",
@@ -131,7 +131,7 @@
       "ADVANTAGE_10":"Search统一了数据存储，充分利用大数据平台大容量分布式存储优势，实现高效、安全的数据存储与交互。同时创新性的使用了堆外内存管理技术来提高系统的健壮性，避免了GC问题对系统的影响，数据量级可轻松扩展至PB级别。"
     },
     "SOPHON":{
-      "TITLE":"Sophon 深度学习和交互式数据挖掘",
+      "TITLE":"深度学习和交互式数据挖掘",
       "SUB_TITLE":"通用的人工智能平台，帮助企业级用户快速实现人工智能落地。Sophon打通了大数据平台和人工智能平台，业务分析师和数据分析师可以通过其内置的行业模版轻松构建对应AI模型，使得大多数企业用户不再需要通过技术实力强大的大数据团队和AI团队的支持，就可以以较低的成本从无到有打造AI人工智能平台，轻松提升业务价值。",
       "INTRODUCE_IMG_URL":"modules/sophon-introduce.png",
       "INTRODUCE_1":"Sophon作为人工智能开发平台，主要具有以下的特点：一站式图形化人工智能开发环境、高性能的分布式机器学习算法、高效率的交互式体验、完善的深度学习支持以及大量行业应用模板。",
@@ -161,7 +161,7 @@
       "ADVANTAGE_14":"对于大多数用户而言，平台提供的预制模板至关重要。有效丰富的模板定制可以实现无需不需要长时间的培训和学习，就可以快速开展业务。"
     },
     "GUARDIAN":{
-      "TITLE":"Guardian 安全、权限和资源管控",
+      "TITLE":"安全、权限和资源管控",
       "SUB_TITLE":"为TDH提供集中的安全和资源管理服务。支持LDAP和Kerberos，保护集群免受恶意攻击和安全威胁，同时对资源做细粒度的ACL控制。其多租户资源管理模块可以按照租户的方式管理资源，并通过一个图形化工具为用户提供权限配置以及资源配置接口。",
       "INTRODUCE_IMG_URL":"modules/guardian-introduce.png",
       "INTRODUCE_1":"为了保障云上大数据的安全，更好且可靠的认证和授权服务成为刚需。因此，设计并实现了统一的安全和资源管理服务Guardian来保护云产品和各组件安全。",
@@ -185,7 +185,7 @@
       "ADVANTAGE_8":"Guardian实现了标准的LDAP和KERBEROS认证协议，并将所有组件的权限信息都统一集中存储在ApacheDS，使得即使服务处于异常状态甚至关闭，用户仍然可以正常的对服务设置访问权限和配额，成功实现了资源管理与具体的服务之间的解耦。Guardian 5.0还提供了友好的日志系统和报错信息，便于降低运维难度。"
     },
     "HADOOP":{
-      "TITLE":"Transwarp's Distribution for Apache Hadoop 分布式系统基础架构",
+      "TITLE":"分布式系统基础架构",
       "SUB_TITLE":"Transwarp's Distribution for Apache Hadoop基于Apache Hadoop 2.7.2开发，以Hadoop Distributed File System (HDFS) 为文件系统，以YARN为资源管理平台。",
       "INTRODUCE_1":"Transwarp's Distribution for Apache Hadoop 是由Transwarp 基于Apache Hadoop 2.7.2开发，以HDFS为文件系统，以YARN为资源管理平台。Transwarp对各组件性能都进行了优化，以提升安全性、稳定性，从而提供7×24小时的不间断服务。",
       "INTRODUCE_2":"Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。",
@@ -206,7 +206,7 @@
       "SCENARIOS_3":"•用于数据湖建设。"
     },
     "PILOT":{
-      "TITLE":"Pilot 报表工具",
+      "TITLE":"报表工具",
       "SUB_TITLE":"基于Web的报表展现工具，轻量、灵活，可以快速部署。支持多维度的分析和自助分析，提供数十种报表样式，对时序数据也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。",
       "INTRODUCE_1":"Transwarp Pilot是轻量的自助式分析BI工具，克服了传统BI工具的多方面缺陷，功能全面且智能，不论是对于可视化报表展现的丰富度，还是对于处理性能，都有极致的表现。使分析平台的自助性得到全面提升，为企业创造更高的价值。",
       "INTRODUCE_2":"以下是Pilot实现的几个主要功能和特性：",
@@ -239,7 +239,7 @@
       "ADVANTAGE_12":"可服务于多租户场景，实现报表的共享与隔离，方便团队协作和互助。同时保障信息安全。"
     },
     "WORKFLOW":{
-      "TITLE":"Workflow 调度流",
+      "TITLE":"调度流",
       "SUB_TITLE":"用于实现工作流调度DAG设计与管理的图形化工具，支持Shell、SQL、JDBC、HTTP等任务类型，以及自定义Java任务。同Hadoop开源Oozie相比，Workflow的功能更强大，操作更方便，可用性更高。",
       "INTRODUCE_1":"Transwarp Workflow很大程度上简化了工作流调度设计与管理工作，图形化的设计方式让作业任务之间的逻辑关系更清晰，调试和分析功能可以反馈任务执行期间存在的问题，任务定时触发使工作执行被自动化，把原来工程师负责的工作简化到业务人员也可以很快上手操作的程度。",
       "INTRODUCE_2":"Workflow主要具有以下几个功能：仪表盘、工作流管理、工作流设计、调试工作流、监控、分析。",
@@ -267,7 +267,7 @@
       "ADVANTAGE_10":"Workflow服务本身通过Master-Standby机制保证高可用性，持久层通过TxSQL保证高可用。此外，Workflow本身不做复杂的数据计算，而是通过多个实例部署的方式执行任务，从而有很高的可扩展性。"
     },
     "TRANSPORTER":{
-      "TITLE":"Transporter 数据流",
+      "TITLE":"数据流",
       "SUB_TITLE":"Transporter是一款用于设计和创建ETL任务的可视化工具。",
       "INTRODUCE_1":"Transporter是用于设计和创建ETL任务的可视化工具。Transporter左侧连接数据源，如关系型数据库，右侧连接目标系统，如Inceptor。因此支持用户将数据从RDBMS迁移到Hadoop，再进行数据分析和挖掘工作。Transporter支持多种数据源，包括CSV、JDBC、XML、JSON以及关系数据库；提供多种常用的数据转换操作，例如，连接、聚合、清洗等。由于Transporter数据迁移过程中的数据处理任务都在Inceptor中完成，且受完整的ACID支持，因此用户不必为了ELT任务建立单独集群，也不用担心数据一致性问题。",
       "INTRODUCE_2":"Transporter的功能模块分为三部分：数据流、仪表盘、参数。",
@@ -295,7 +295,7 @@
       "ADVANTAGE_14":"提供事务级别的数据同步，确保目标表与原表拥有相同的数据一致性。另外还提供了完整的权限控制机制，用于保证数据的安全。"
     },
     "GOVERNOR":{
-      "TITLE":"Governor 元数据管理工具",
+      "TITLE":"元数据管理工具",
       "SUB_TITLE":"用于数据仓库元数据管理的工具，管理数据的位置、数据的结构、数据的操作以及表的血缘与影响关系。帮助用户调试数据问题，追踪问题来源，有助于监控元数据关系，使数据的发展过程有迹可循，从而在减少资源成本投入的基础上，提供更准确的预测分析，有利于商业智能的发展。",
       "INTRODUCE_1":"Governor的以下四个特征，使让它可以方便的为用户提供源数据管理：",
       "INTRODUCE_2":"图形化的操作",
@@ -316,7 +316,7 @@
       "ADVANTAGE_8":"为了将Governor庇护在强大的安全屏障下，Governor 实现了与Guardian的集合。Guardian提供了安全认证以及访问权限控制，防止恶意访问者窃取数据集和关键元数据信息，降低信息共享的安全风险。从而避免暴露任何数据安全问题。"
     },
     "RUBIK":{
-      "TITLE":"Rubik OLAP    Cube设计工具",
+      "TITLE":"OLAP Cube 设计工具",
       "SUB_TITLE":"Rubik是用于设计OLAP Cube的可视化工具，所建Cube可以实例化于HDFS或Holodesk。Rubik支持雪花模型和星形模型两种Cube设计模型，并支持多种格式的数据源。在数据立方体的加速下，查询分析的速度可提高10倍。Rubik通过可视化方式提供服务，使数据分析师得到更友好的交互体验。",
       "INTRODUCE_1":"Transwarp Rubik除了可以实现Cube设计，以及实例化，还提供对它的管理功能，以及方便团队协作。其主要功能列举如下。",
       "INTRODUCE_2":"Cube设计",
@@ -341,37 +341,37 @@
       "ADVANTAGE_10":"为了将Rubik庇护在强大的安全屏障下，Rubik实现了与Guardian的集合。Guardian提供了安全认证以及访问权限控制，防止恶意访问者窃取关键信息，降低信息共享的安全风险。从而避免暴露任何数据安全问题。"
     },
     "WATERDROP":{
-      "TITLE":"Waterdrop SQL开发工具",
+      "TITLE":"SQL开发工具",
       "SUB_TITLE":"Waterdrop是TDH中的SQL IDE工具。"
     },
     "TXSQL":{
-      "TITLE":"TxSQL 关系数据库",
+      "TITLE":"关系数据库",
       "SUB_TITLE":"TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群"
     },
     "PROMETHEUS":{
-      "TITLE":"Prometheus  Metrics监控",
+      "TITLE":"Metrics监控",
       "SUB_TITLE":"Prometheus是开源的监控和告警系统。"
     },
     "KAFKA":{
-      "TITLE":"Transwarp's Distribution for Apache Kafka 消息中间件",
+      "TITLE":"消息中间件",
       "SUB_TITLE":"Transwarp's Distribution for Apache Kafka 是一种分布式的基于发布/订阅的消息系统，在Apache Kafka 1.0的基础上添加了大量安全特性。"
     },
     "ZEPPELIN":{
-      "TITLE":"Transwarp's Distribution for Apache Zeppelin  Notebook IDE",
+      "TITLE":"Notebook IDE",
       "SUB_TITLE":"Transwarp's Distribution for Apache Zeppelin 是一个基于web的图形化Notebook，用于交互式的数据分析。"
     },
     "MIDAS":{
-      "TITLE":"Midas 机器学习分析工具",
+      "TITLE":"机器学习分析工具",
       "SUB_TITLE":"Midas是一个图形化的交互式数据挖掘和分析的客户端。"
     },
     "TERMINAL":{
       "LOGO_URL":"modules/terminal-logo.png",
-      "TITLE":"Terminal  Docker命令行工具",
+      "TITLE":"Docker命令行工具",
       "SUB_TITLE":"Terminal 是集群上服务用命令行指令操作的入口。"
     },
     "REDIS":{
       "LOGO_URL":"modules/redis-logo.png",
-      "TITLE":"Redis 内存K-V数据库",
+      "TITLE":"内存K-V数据库",
       "SUB_TITLE":"Redis是基于内存的数据存储，可以被用作数据库、缓存或者消息转发器。"
     }
   },
