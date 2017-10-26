@@ -28,7 +28,7 @@ export class InfoRetrievalService {
         },
         {
           text: '组件介绍',
-          link: './component-intro/tdh-platform-products'
+          link: './component-intro'
         },
         /*{
           text: '费用说明',

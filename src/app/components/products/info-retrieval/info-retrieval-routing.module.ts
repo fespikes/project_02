@@ -36,7 +36,8 @@ const infoRetrievalRoutes: Routes = [
 						children: [//enterprise-class
 							{ path: 'data-search-engine', component: DataSearchEngineComponent },
 							{ path: 'log-acquisition-analysis', component: LogAcquisitionAnalysisComponent },
-							{ path: 'business-analysis', component: BusinessAnalysisComponent }
+							{ path: 'business-analysis', component: BusinessAnalysisComponent },
+							{ path: '', redirectTo: '/products/info-retrieval/scenarios/data-search-engine', pathMatch: 'full' }
 						]
 					}
 				],

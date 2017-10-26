@@ -11,12 +11,12 @@ export class DataMartComponent implements OnInit {
 
 	productDetails: any;
 
-	constructor(private dataMartService: DataMartService) {
+	constructor(private service: DataMartService) {
 
 	}
 
   ngOnInit() {
-  	const productDetails = this.dataMartService.getProductDetails();
+  	const productDetails = this.service.getProductDetails();
   	this.productDetails = productDetails;
   }
 

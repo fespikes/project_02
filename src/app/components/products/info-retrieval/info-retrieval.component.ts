@@ -3,7 +3,7 @@ import { Component, OnInit, AfterViewInit, OnDestroy, ViewChild, ComponentFactor
 import { InfoRetrievalService } from './info-retrieval.service';
 
 @Component({
-  selector: 'tdc-info-retrieval',
+  selector: 'info-retrieval',
   templateUrl: './info-retrieval.component.html',
   styleUrls: ['./info-retrieval.common.sass', './info-retrieval.component.sass']
 })

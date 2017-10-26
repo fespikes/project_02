@@ -1,26 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProductsService } from '../products.service';
+import { RelationalDatabaseService } from './relational-database.service';
 
 @Component({
-  selector: 'tdc-relational-database',
+  selector: 'relational-database',
   templateUrl: './relational-database.component.html',
   styleUrls: ['./relational-database.component.sass']
 })
 export class RelationalDatabaseComponent implements OnInit {
 
-  tabItems = [];
+  productDetails: any;
 
-  constructor(
-    private productsService: ProductsService
-  ) { }
-
-  ngOnInit() {
-    this.tabItems = this.productsService.getProductTabs();
+  constructor(private service: RelationalDatabaseService) {
   }
 
-  onTabChange() {
+  ngOnInit() {
+    const productDetails = this.service.getProductDetails();
+    this.productDetails = productDetails;
+  }
 
+  ngOnDestroy() {
   }
 
 }

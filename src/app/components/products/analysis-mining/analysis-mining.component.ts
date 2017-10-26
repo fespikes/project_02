@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProductsService } from '../products.service';
+import { AnalysisMiningService } from './analysis-mining.service';
 
 @Component({
   selector: 'tdc-analysis-mining',
@@ -9,17 +9,19 @@ import { ProductsService } from '../products.service';
 })
 export class AnalysisMiningComponent implements OnInit {
 
-  tabItems = [];
+  productDetails: any;
 
-  constructor(
-    private productsService: ProductsService
-  ) { }
+  constructor(private service: AnalysisMiningService) {
+
+  }
 
   ngOnInit() {
-    this.tabItems = this.productsService.getProductTabs();
+    const productDetails = this.service.getProductDetails();
+    this.productDetails = productDetails;
   }
 
-  onTabChange() {
-
+  ngOnDestroy() {
   }
+
+
 }
