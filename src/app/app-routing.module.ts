@@ -27,7 +27,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'business-scenario',
+    path: 'business-scenarios',
     loadChildren: './components/business-scenario/business-scenario.module#BusinessScenarioModule'
   },
 

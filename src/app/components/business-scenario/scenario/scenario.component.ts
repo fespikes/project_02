@@ -21,9 +21,16 @@ export class ScenarioComponent implements OnInit {
 	) { }
 
   ngOnInit() {
+  	let scenario: Scenario = null;
+  	let type: string = null;
+
   	this.route.paramMap
-		  .switchMap((params: ParamMap) => this.service.getScenarios(params.get('token')))
-		  .subscribe((scenario: Scenario) => this.scenario = scenario);
+      .switchMap((params: ParamMap) => params.get('type'));
+
+/*  	this.route.paramMap
+      .switchMap((params: ParamMap) =>
+        this.service.getScenarioByType(params.get('type')))
+      .subscribe((scenario: Scenario) => this.scenario = scenario);*/
   }
 
 }

@@ -9,15 +9,10 @@ const scenarioRoutes:Routes = [
   {
     path: '',
     component: BusinessScenarioComponent,
-/*    children: [
-      {
-        path: ':token',
-        component: ''
-      }
-    ]*/
   },
+  //TODO: what's wrong with the router
   {
-    path: 'business-scenario/:token',
+    path: 'business-scenario/:type',
     component: ScenarioComponent
   }
 ];
