@@ -20,7 +20,7 @@ import { ModulesModule } from './components/modules/modules.module';
 import { DocumentsSupportModule } from './components/documents-support/documents-support.module';
 // import { ProductsModule } from './components/products/products.module';
 import { LatestNewsModule } from './components/latest-news/latest-news.module';
-// import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
+import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
@@ -57,9 +57,9 @@ import {
     TdcModule,
     SharedModule,
     HomeModule,
+    BusinessScenarioModule,  //related to app-routing.module
 
     DocumentsSupportModule,
-
     AppRoutingModule,
   ],
   providers: [

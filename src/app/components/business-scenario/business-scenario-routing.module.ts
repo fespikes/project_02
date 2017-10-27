@@ -7,17 +7,11 @@ import { BusinessScenarioComponent } from './business-scenario.component';
 
 const scenarioRoutes:Routes = [
   {
-    path: '',
+    path: 'business-scenario',
     component: BusinessScenarioComponent,
-/*    children: [
-      {
-        path: ':token',
-        component: ''
-      }
-    ]*/
   },
   {
-    path: 'business-scenario/:token',
+    path: 'business-scenario/:type',
     component: ScenarioComponent
   }
 ];

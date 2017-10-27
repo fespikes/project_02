@@ -27,8 +27,12 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'business-scenario',
-    loadChildren: './components/business-scenario/business-scenario.module#BusinessScenarioModule'
+    path: 'business-scenarios',
+    component: BusinessScenarioComponent
+
+    //below code made error when adding business-scenario/:type
+    // loadChildren: './components/business-scenario/business-scenario.module#BusinessScenarioModule'
+    //TODO: lazy load
   },
 
   {

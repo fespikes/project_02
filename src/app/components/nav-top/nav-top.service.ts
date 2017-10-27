@@ -30,7 +30,7 @@ const navigationData = {
 		},
 		{
 			text: '业务方案',
-			routerLink: './business-scenario',
+			routerLink: './business-scenarios',
 			style: {
 				class: 'top-nav-a',
 				routerLinkActive: 'active'
