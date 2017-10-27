@@ -9,24 +9,27 @@ export class Scenario {
 	slogan?: string;
 	adv?: string;	//means imagesz
 
-	details?: {
-		'business-background': {
-			title: string,
-			adv: string,
-			desc: [
+	details?: [
+		//'business-background': 
+		{
+			title?: string,
+			adv?: string,
+			desc?: [
 				{
-					p: string,
-					details: string,
-					aspects: string[]
+					p?: string,
+					h4?: string,
+					summary?: string,
+					aspects?: string[]
 				}
 			]
-		},
-		'core-issues': {
+		}
+/*		,'core-issues': {
 			title: string,
 			adv?: string,
 			desc?: [
 				{
-					summary: string,
+					p
+					h4: string,
 					details: string
 				}
 			]
@@ -37,10 +40,10 @@ export class Scenario {
 			summary: string,
 			desc?: [
 				{
-					summary: string,
+					h4: string,
 					details: string
 				}
 			]
-		},
-	}
+		},*/
+	]
 }

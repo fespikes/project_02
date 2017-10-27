@@ -7,10 +7,9 @@ import { BusinessScenarioComponent } from './business-scenario.component';
 
 const scenarioRoutes:Routes = [
   {
-    path: '',
+    path: 'business-scenario',
     component: BusinessScenarioComponent,
   },
-  //TODO: what's wrong with the router
   {
     path: 'business-scenario/:type',
     component: ScenarioComponent

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { BusinessScenarioService } from '../business-scenario.service';
 import { Scenario } from './scenario';
 
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -25,12 +27,11 @@ export class ScenarioComponent implements OnInit {
   	let type: string = null;
 
   	this.route.paramMap
-      .switchMap((params: ParamMap) => params.get('type'));
-
-/*  	this.route.paramMap
-      .switchMap((params: ParamMap) =>
-        this.service.getScenarioByType(params.get('type')))
-      .subscribe((scenario: Scenario) => this.scenario = scenario);*/
+      .switchMap(
+        (params: ParamMap) => this.service.getScenarioByType( params.get('type') )
+      ).subscribe(
+        (scenario: Scenario) => this.scenario = scenario
+      );
   }
 
 }

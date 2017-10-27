@@ -28,7 +28,11 @@ const routes: Routes = [
   },
   {
     path: 'business-scenarios',
-    loadChildren: './components/business-scenario/business-scenario.module#BusinessScenarioModule'
+    component: BusinessScenarioComponent
+
+    //below code made error when adding business-scenario/:type
+    // loadChildren: './components/business-scenario/business-scenario.module#BusinessScenarioModule'
+    //TODO: lazy load
   },
 
   {
