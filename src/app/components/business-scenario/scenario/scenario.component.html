@@ -6,7 +6,9 @@
 </div> -->
 
 <tui-bread-crumbs [data]="breadCrumbs"></tui-bread-crumbs>
-
+<div *ngIf="!scenario.details">
+	have no data!
+</div>
 <div
 	class="scenario-banner"
 	[ngStyle]="{
