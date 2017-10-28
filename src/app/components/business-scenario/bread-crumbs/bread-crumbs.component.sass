@@ -1,0 +1,38 @@
+@import '../../common/style/layout.sass'
+
+$blue: #0066ce
+$gray: #565757
+
+\:host
+	@extend .center-box
+	border: 1px red solid
+	
+
+ul
+	overflow: auto
+
+	li
+		float: left
+		display: inline-block
+
+a.anchor
+	display: inline-block
+	height: 46px
+	line-height: 46px
+	font-size: 1.2rem
+	padding: 0 3px
+	color: $blue
+	&:hover
+		text-decoration: underline
+
+	&.first
+		padding-left: 18px
+
+	&.last
+		color: $gray
+		&:hover
+			cursor: default
+			text-decoration: none
+
+
+

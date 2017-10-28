@@ -10,11 +10,13 @@ import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'tdc-scenario',
   templateUrl: './scenario.component.html',
-  styleUrls: ['./scenario.component.scss']
+  styleUrls: ['./scenario.component.sass']
 })
 export class ScenarioComponent implements OnInit {
 
 	scenario: Scenario;
+
+  breadCrumbs: any;
 
   constructor(
 	  private route: ActivatedRoute,
@@ -23,14 +25,26 @@ export class ScenarioComponent implements OnInit {
 	) { }
 
   ngOnInit() {
-  	let scenario: Scenario = null;
   	let type: string = null;
+    let crumbRoot = this.service.getRoute();
 
   	this.route.paramMap
       .switchMap(
-        (params: ParamMap) => this.service.getScenarioByType( params.get('type') )
+        (params: ParamMap) => this.service.getScenarioByType( type=params.get('type') )
       ).subscribe(
-        (scenario: Scenario) => this.scenario = scenario
+        (scenario: Scenario) => {
+          this.scenario = scenario;
+          this.breadCrumbs = [
+            {
+              text: crumbRoot.short,
+              href: crumbRoot.href
+            },
+            {
+              text: scenario.short,
+              href: 'business-scenario/:'+ type
+            }
+          ]
+        }
       );
   }
 

@@ -12,7 +12,7 @@ import { TabComponent } from './tab/tab.component';
     RouterModule
   ],
   declarations: [
-    TabComponent
+    TabComponent,
   ],
   exports: [
     TabComponent

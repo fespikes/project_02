@@ -11,9 +11,15 @@ export class BusinessScenarioService {
   private scenarios: Scenario[];
 
   constructor() {
-    this.scenarios = scenarios
+    this.scenarios = scenarios;
   }
 
+  getRoute() {
+    return {
+      short: '业务方案',
+      href: '/business-scenario'
+    };
+  }
 
   getScenarios() {
   	return this.scenarios;
