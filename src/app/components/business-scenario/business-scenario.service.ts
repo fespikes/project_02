@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Scenario } from './scenario/scenario';
 
 const base = '/assets/images/scenarios/'
+const bannerBase = base+ 'scenario/banner/';
+const backgroundBase = base+ 'scenario/background/';
+
 let scenarios: Scenario[];
 //TODO: add back all scenario contents
 
@@ -35,7 +38,7 @@ export class BusinessScenarioService {
   }
 }
 
-
+const root = '/assets/images/scenarios/'
 scenarios = [
   {
     id: 1,
@@ -70,13 +73,14 @@ scenarios = [
     title: '数据仓库 业务方案',
     slogan: '一站式数据仓库服务解决方案，实现数据采集、数据整合、模型加工、数据管理等完备的一体化数仓功能，支持对于查询速度、并发度、扩展性的保障。',
 
-    adv: '',//TODO: the pic
+    adv: bannerBase + 'data-warehouse.jpg',//TODO: the pic
+    advBgColor: '#011a45',
 
     details: [
       //'business-background': 
       {
         title: '业务背景',
-        adv: '', //TODO: the pic
+        adv: backgroundBase + 'data-warehouse.jpg', //TODO: the pic
         desc: [
           {
             p: '某国企是系统非常庞大组织十分复杂的集团，其下属机关遍布于全国31个省（自治区、直辖市）、地、市（州）机构，提供多种类型服务，涵盖面广，差异性大，数据丰富且特征广泛。'

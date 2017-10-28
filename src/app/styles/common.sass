@@ -1,3 +1,5 @@
+@import './variables'
+
 @mixin background($image, $type:jpg, $bgColor:#fff, $left:left, $top:top)
   background: #{$bgColor} url(/assets/images/home/#{$image}.#{$type}) no-repeat #{$left} #{$top}
 
@@ -85,5 +87,18 @@ $box-width: 1200px
   font-size: 1.4rem
   color: #fff
   text-align: center
+
+h3.sub-title
+  font-size: 1.6rem
+  padding: 32px 0 14px 1rem
+  &:before
+    content: ""
+    display: inline-block
+    width: 0.4rem
+    height: 1.6rem
+    position: relative
+    top: 0.3rem
+    right: 0.8rem
+    background: $tdcCommonBlue
 
 /**E: normal style**/

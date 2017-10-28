@@ -8,6 +8,7 @@ export class Scenario {
 	title?: string;
 	slogan?: string;
 	adv?: string;	//means imagesz
+	advBgColor?: string;
 
 	details?: [
 		//'business-background': 

@@ -1,5 +1,104 @@
-
+@import '../../common/style/layout'
 \:host
   display: block
+
+.scenario-banner
+	height: 350px
+	width: 100%
+	background: no-repeat center top;
+	position: relative
+
+	.scenario-slogan
+		@extend .center-box
+
+		padding: 0 124px
+		color: #fff
+
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+
+		h2
+			color: #fff
+			font-size: 4.2rem
+			line-height: 1.5
+			height: 68px
+
+		p
+			width: 40%
+			font-size: 1.4rem
+			line-height: 1.8rem
+
+.details-box,
+	@extend .center-box
+	background: $box-bg
+	padding: 0 18px
+
+	.ctn
+		overflow: auto
+		border-radius: 5px
+		background: #fff
+
+		.paragraps, .bg-adv-img
+			float: left
+			display: inline-block
+
+
+.bg-adv-img
+	width: 580px
+	height: 414px
+	background: transparent no-repeat 46px 50px
+	//background: transparent url("/assets/images/scenarios/scenario/background/data-warehouse.jpg") no-repeat 46px 50px
+
+
+.paragraps
+	width: 582px
+	overflow: auto
+	padding: 50px 42px 50px 0
+
+	p
+		font-size: 1.2rem
+		padding-bottom: 20px
+		line-height: 1.5rem
+
+	h4
+		font-weight: 600
+		line-height: 2
+
+	.summary
+		font-size: 1.2rem
+
+
+	ul
+		li
+			line-height: 1.5
+			font-size: 1.2rem
+			padding-bottom: 10px
+
+.pure .paragraps
+	width: 100%
+	padding: 50px 42px
+
+	h4
+		position: relative
+
+	h4:before
+		content: ''
+		display: inline-block
+		width: 0.5rem
+		height: 0.5rem
+		position: absolute
+		left: -16px
+		top: 0.9rem
+		border-radius: 0.25rem
+		background: #2481e3
+
+
+.business-background
+.core-issue
+.solution
+
+
+
 
 
