@@ -1,11 +1,11 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'tdc-ui-slices',
+  selector: 'tui-slices',
   templateUrl: './slices.component.html',
   styleUrls: ['./slices.component.sass'],
   host: {
-  	class: 'tui-plugin-slices'
+  	class: 'tui-slices'
   },
   inputs: ['items', 'style']
 })
@@ -41,7 +41,7 @@ export class SlicesComponent implements OnInit {
     this.windowWidth = 3 * (styleConfig.itemWidth + styleConfig.gap)
 
   	this.interval = setInterval(_=>{
-  		this.goRight();
+  		// this.goRight();
   	}, 5000);
 
   }

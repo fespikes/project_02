@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'tdc-ui-adv',
+  selector: 'tui-adv',
   templateUrl: './adv.component.html',
   styleUrls: ['./adv.component.sass'],
   host: {
