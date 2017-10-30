@@ -1,0 +1,77 @@
+@import '../common/style/layout'
+\:host
+  @extend .center-box
+
+$fontGrey: #9e9e9f
+$borderGrey: #dee3e9
+.banner
+	height: 352px
+	background: #ccc url(/assets/images/after-sale-service/banner.jpg) no-repeat center top
+
+
+.slogan
+	padding-left: 154px
+	@extend .center-box
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+	color: #fff
+
+	h2
+		line-height: 50px
+		height: 50px
+		font-size: 4.2rem
+		color: #fff
+
+	p
+		font-size: 1.2rem
+		line-height: 1.5
+		width: 420px
+
+
+
+.items
+	text-align: left
+	padding: 35px 70px
+	overflow: auto
+	
+	li
+		float: left
+		display: inline-block
+		width: 330px
+		height: 354px
+		padding: 125px 50px 50px
+		margin-right: 25px
+		border: 1px $borderGrey solid
+		&:last-child
+			margin: 0
+
+	h4
+		height: 50px
+		font-size: 2rem
+		font-weight: 400
+		line-height: 3
+		color: #333
+
+	p
+		font-size: 1.2rem
+		line-height: 1.6
+		position: relative
+		padding-left: 20px
+		color: $grey
+
+		&:before
+			content: ''
+			display: inline-block
+			width: 6px
+			height: 6px
+			border-radius: 3px
+			background: $grey
+			position: relative
+			left: -16px
+
+	a
+		color: $tdcCommonBlue
+		font-size: 1.2rem
+		line-height: 40px
+

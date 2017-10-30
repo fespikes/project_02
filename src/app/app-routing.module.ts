@@ -11,6 +11,7 @@ import { DocumentsSupportComponent } from './components/documents-support/docume
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
 
 // import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+// import { AfterSaleServiceComponent } from './components/after-sale-service/after-sale-service.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,11 @@ const routes: Routes = [
   {
     path: 'latest-news',
     loadChildren: 'app/components/latest-news/latest-news.module#LatestNewsModule'
+  },
+  {
+    path: 'after-sale-service',
+    // component: AfterSaleServiceComponent,
+    loadChildren: 'app/components/after-sale-service/after-sale-service.module#AfterSaleServiceModule'
   },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
