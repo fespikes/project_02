@@ -12,8 +12,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 export class SlicesComponent implements OnInit {
 
 	static styleConfig = {
-		itemWidth: 364,
-		gap: 36
+		itemWidth: 400,
+		gap: 0
 	};
 
 	interval: any;
@@ -35,20 +35,19 @@ export class SlicesComponent implements OnInit {
 
   ngOnInit() {
   	const styleConfig = SlicesComponent.styleConfig;
+    const items = this.items;
 
-  	this.itemsLength = this.items.length;
-  	this.itemsWidth = this.itemsLength * (styleConfig.itemWidth + styleConfig.gap);
-    this.windowWidth = 3 * (styleConfig.itemWidth + styleConfig.gap)
+  	this.itemsLength = items.length;
+  	this.itemsWidth = this.itemsLength * styleConfig.itemWidth ;
+    this.windowWidth = 3 * styleConfig.itemWidth;
 
   	this.interval = setInterval(_=>{
-  		// this.goRight();
+  		this.goRight();
   	}, 5000);
 
   }
 
-  goLeft() {
-
-  }
+  goLeft() { }
 
   goRight() {
     let ml, sl;
@@ -63,16 +62,16 @@ export class SlicesComponent implements OnInit {
 
       if (ml<=0 && ml>this.itemsWidth*-1) {
 
-        ulSwap.style.left = this.itemsWidth + 'px';
-        ulProducts.style.left = ml - 1120 + 'px';//TODO: animation of fade to left slowly
+        ulSwap.style.left = this.windowWidth + 'px';
+        ulProducts.style.left = ml - this.windowWidth + 'px';//TODO: animation of fade to left slowly
 
         if (ml==(this.itemsWidth-this.windowWidth)*-1) {
           ulSwap.style.left = 0 + 'px';
         }
       } else {
-        ulProducts.style.left = '1120px';
-        ulSwap.style.left = sl - 1120 + 'px';
-        if (sl=(this.itemsWidth-1120)*-1) {
+        ulProducts.style.left = this.windowWidth + 'px';
+        ulSwap.style.left = sl - this.windowWidth + 'px';
+        if (sl = (this.itemsWidth - this.windowWidth) * -1) {
           ulProducts.style.left = '0px';
         }
       }

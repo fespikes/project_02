@@ -5,7 +5,7 @@ import { Component, OnInit, Input, EventEmitter } from '@angular/core';
   templateUrl: './adv.component.html',
   styleUrls: ['./adv.component.sass'],
   host: {
-  	class: 'tui-plugin-adv'
+  	class: 'tui-adv'
   },
   inputs: ['advList'],
   outputs: ['onSliceSelected']
