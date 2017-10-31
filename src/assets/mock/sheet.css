@@ -1,0 +1,90 @@
+ul, ol, li, p, h1,h2,h3,h4,h5{
+  padding: 0;
+  margin: 0;
+}
+#doc-detail-content{
+  color: #354052;
+  font-family:  'Microsoft YaHei', 'SimSun';
+}
+#content .sectionbody .paragraph{
+  font-size: 1.4rem;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+#content .sectionbody p{
+  line-height: 22px;
+}
+#content .sectionbody .imageblock img{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+#content .sectionbody .olist ol{
+  margin: 15px 0 15px 20px;
+}
+/*#content .sectionbody .olist ol li{*/
+  /*margin-bottom: 12px;*/
+/*}*/
+#content .sectionbody .ulist ul{
+  margin: 15px 0 15px 20px;
+}
+/*#content .sectionbody .ulist ul li{*/
+  /*margin-bottom: 12px;*/
+/*}*/
+
+/* table css style start */
+#content .sectionbody table{
+  border-collapse: collapse;
+}
+#content .sectionbody table caption.title{
+  color: #7a2518;
+  margin: 20px auto;
+}
+#content .sectionbody table tr th{
+  padding: 10px 15px;
+  border: solid 1px rgb(222, 222, 222);
+
+}
+#content .sectionbody table tr td{
+  padding: 10px 15px;
+  border: solid 1px rgb(222, 222, 222);
+}
+/* table css style end */
+
+/* title css style start */
+#content .sect1 h2{
+  font-size: 1.8rem;
+  margin: 20px auto 20px 12px;
+}
+#content .sect1 h2:before{
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  right: 10px;
+  background: #2481e3;
+}
+#content .sectionbody h3{
+  font-size: 1.6rem;
+  margin: 15px auto;
+}
+#content .sectionbody h4, #content .sectionbody h5{
+  font-size: 1.4rem;
+  margin: 10px auto;
+}
+/* title css style end */
+
+/* sql highlight css style start*/
+#doc-detail-content pre.highlight code span.tok-k{
+  color: #2481e3;
+}
+#doc-detail-content pre.highlight code span.tok-n{
+  color: #354052
+}
+#doc-detail-content pre.highlight code span.tok-o{
+  color: rgba(0,0,0,.9);
+}
+/* sql highlight css style end*/
+
