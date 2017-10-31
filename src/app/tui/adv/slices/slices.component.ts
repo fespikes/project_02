@@ -16,7 +16,7 @@ export class SlicesComponent implements OnInit {
 		gap: 0,
 
     defaultLength: 3,
-    direction: 'right'
+    direction: true, //go right
 	};
 
 	interval: any;
@@ -47,7 +47,7 @@ export class SlicesComponent implements OnInit {
     this.ulProducts = nativeElement.querySelector('.ul-products');
     this.ulSwap = nativeElement.querySelector('.ul-swap');
 
-    if (config.direction==='left'){
+    if (config.direction) { 
       this.ulProducts.style.left = '0px';
       this.ulSwap.style.left = this.itemsWidth + 'px';
     } else {
@@ -56,14 +56,25 @@ export class SlicesComponent implements OnInit {
     }
     this.needArrow = this.itemsLength>SlicesComponent.config.defaultLength;
 
-  	this.interval = setInterval(_=>{
-  		// this.goRight();
-  	}, 5000);
+    this.setInterval();
+  }
 
+  setInterval (direction?) {
+    this.interval = setInterval(_=>{
+      (direction || SlicesComponent.config.direction) ? this.goRight(): this.goLeft();
+    }, 3000);
   }
 
   turnLeft() {
     clearInterval(this.interval);
+    this.goLeft();
+    this.setInterval(false);
+  }
+
+  turnRight() {
+    clearInterval(this.interval);
+    this.goRight();
+    this.setInterval(false);
   }
 
   goLeft() {
