@@ -30,7 +30,6 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('product-list-docsFolderList=', this.docsFolderList);
   }
 
   filterDocByVersion() {
