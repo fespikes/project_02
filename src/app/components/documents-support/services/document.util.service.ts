@@ -54,7 +54,7 @@ export class DocumentUtilService {
       });
       category.versionList = versionList;
       category.docsCollection = docsCollection;
-      category.currentVersion = category.children[0];
+      category.currentVersion = category.children[category.children.length - 1];
     });
     return data;
   }

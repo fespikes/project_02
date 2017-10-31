@@ -54,4 +54,11 @@ export class DocumentAPIService {
       { headers: this.headers }
     ).map((res) => res.json())
   }
+
+  getDocSheet(): Observable<any> {
+    return this.http.get(
+      '/assets/mock/sheet.css',
+      { headers: this.headers }
+    ).map((res) => res);
+  }
 }
