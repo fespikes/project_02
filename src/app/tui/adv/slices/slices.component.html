@@ -27,8 +27,9 @@
 </ul>
 <ul 
 	class="ul-swap"
-	[ngStyle]="{width: itemsWidth + 'px', left: '-3000px'}"
+	[ngStyle]="{width: itemsWidth + 'px'}"
 	>
+  
   <li *ngFor="let p of items"
   	(mouseenter)="itemOnMouseenter($event.target, p)"
   	(mouseleave)="itemOnMouseleave($event.target, p)" #li>
@@ -49,9 +50,11 @@
   </li>
 </ul>
 <a 
+  *ngIf="needArrow"
   (click)="goLeft()"
   class="arrow left"></a>
 <a
+  *ngIf="needArrow"
   (click)="goRight()"
   class="arrow right"></a>
 

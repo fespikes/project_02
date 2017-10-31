@@ -160,7 +160,7 @@ export class HomeService {
 							'流上数据挖掘'
 						]
 					}
-				}/*,
+				},
 				{
 					thumbnail: '/assets/images/home/products-data-mart.png',
 					//TODO: the pics 
@@ -179,7 +179,7 @@ export class HomeService {
 							'高效的开发工具'
 						]
 					}
-				}*/
+				}
 			],
 
 			latestNews: [
