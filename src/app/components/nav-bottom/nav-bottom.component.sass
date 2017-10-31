@@ -9,23 +9,52 @@ $bg-color: #031129
 
 .nav-btm-ul
   @extend .center-box
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-evenly		/*水平方向的排布*/
-  align-content: space-evenly
-  border: 2px dashed #000
+  overflow: hidden
 
   li
-    padding: 30px 10px
+    display: inline-block
+    float: left
+    width: 200px
+    height: 195px
+
+
+  li.logo-li
+    width: 398px
+    height: 115px
+    padding: 0
+    background: transparent url(/assets/images/logo.png) no-repeat 68px 42px
+
+  //img
+    //width: 100px
+    //height: 100px
+    //fill: red
 
 
 dl
   
   dt
     font-size: 1.4rem
+    line-height: 100px
+    height: 75px
+    color: #fff
 
   dd
     font-size: 1.2rem
+    height: 28px
+    line-height: 28px
+    color: #62707c
 
 .bottom
   @extend .center-box
+
+  height: 51px
+  line-height: 52px
+  border-top: 1px #0d1a31 solid
+  position: relative
+  color: #798790
+
+  .copyright
+    padding-left: 60px
+    font-size: 1.2rem
+
+//TODO: language switcher
