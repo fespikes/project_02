@@ -9,20 +9,22 @@
   	(mouseleave)="itemOnMouseleave($event.target, p)" #li
   	>
   	<!--the this is the current component, and all instance properties on your hands-->
-    <div
-    	[ngStyle]="{'background-image':'url(' + p.thumbnail + ')'}"
-    	class="thumbnail"></div>
-    <h4>{{p.title}}</h4>
+    <div class="shadow-box">
+      <div
+      	[ngStyle]="{'background-image':'url(' + p.thumbnail + ')'}"
+      	class="thumbnail"></div>
+      <h4>{{p.title}}</h4>
 
-    <p class="desc">{{p.summary}}</p>
+      <p class="desc">{{p.summary}}</p>
 
-    <h5>{{p.details.title}}</h5>
-    <ul class="details">
-    	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
-    </ul>
-    <a
-    	routerLink="{{p.button.routerLink}}"
-    	class="blue-button">{{p.button.text}}</a>
+      <h5>{{p.details.title}}</h5>
+      <ul class="details">
+      	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
+      </ul>
+      <a
+      	routerLink="{{p.button.routerLink}}"
+      	class="blue-button">{{p.button.text}}</a>
+    </div>
   </li>
 </ul>
 <ul 
@@ -33,20 +35,22 @@
   <li *ngFor="let p of items"
   	(mouseenter)="itemOnMouseenter($event.target, p)"
   	(mouseleave)="itemOnMouseleave($event.target, p)" #li>
-    <div
-    	[ngStyle]="{'background-image':'url(' + p.thumbnail + ')'}"
-    	class="thumbnail"></div>
-    <h4>{{p.title}}</h4>
+    <div class="shadow-box">
+      <div
+      	[ngStyle]="{'background-image':'url(' + p.thumbnail + ')'}"
+      	class="thumbnail"></div>
+      <h4>{{p.title}}</h4>
 
-    <p class="desc">{{p.summary}}</p>
-    
-    <h5>{{p.details.title}}</h5>
-    <ul class="details">
-    	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
-    </ul>
-    <a
-    	routerLink="{{p.button.routerLink}}"
-    	class="blue-button">{{p.button.text}}</a>
+      <p class="desc">{{p.summary}}</p>
+      
+      <h5>{{p.details.title}}</h5>
+      <ul class="details">
+      	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
+      </ul>
+      <a
+      	routerLink="{{p.button.routerLink}}"
+      	class="blue-button">{{p.button.text}}</a>
+    </div>
   </li>
 </ul>
 <a 
