@@ -10,6 +10,7 @@ import { TdcApiService } from '../../../shared/services/api.service';
 export class DocumentResService {
   sectionName = 'index';
   keyword = '';
+  docLoaded = false;
 
   constructor() {
 
@@ -29,6 +30,14 @@ export class DocumentResService {
 
   setKeyword(keyword): void {
     this.keyword = keyword;
+  }
+
+  getDocLoaded(): boolean {
+    return this.docLoaded;
+  }
+
+  setDocLoaded(loaded): void {
+    this.docLoaded = loaded;
   }
 
   getDocsCrumb(type, alias): any[] {

@@ -144,12 +144,13 @@ export class DocumentSearchService {
   }
 
   clearManualParams(collection, doc): any[] {
+    let selectedDocs = [];
     collection.map((item, index) => {//delete original version
-      if(item.indexOf(doc.category.id) >= 0 && item.indexOf(doc.module.id) >= 0) {
-        collection.splice(index, 1);
+      if(!(item.indexOf(doc.category.id) >= 0 && item.indexOf(doc.module.id) >= 0)) {
+        selectedDocs.push(item);
       }
     });
-    return collection;
+    return selectedDocs;
   }
 
   makePaginationParams(docsCount, pagination) {

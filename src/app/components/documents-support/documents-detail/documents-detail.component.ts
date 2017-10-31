@@ -58,6 +58,19 @@ export class DocumentsDetailComponent implements OnInit {
     this.documentAPIService.getDocDetail(url).subscribe(
       result =>{
         this.documentUtilService.appendDocContent(result.content);
+        document.getElementById('header').style.display = 'none';
+        if(!this.documentResService.getDocLoaded()) {
+          this.getDocSheet();
+        }
+        this.documentResService.setDocLoaded(true);
+      }
+    );
+  }
+
+  getDocSheet() {
+    this.documentAPIService.getDocSheet().subscribe(
+      result => {
+        this.documentUtilService.appendDocCssSheet(result._body);
       }
     );
   }
