@@ -12,7 +12,7 @@ export class DocumentSearchService {
 
   }
 
-  traversalTree(treeModel, expanded): any[] {
+  traversalTree(treeModel, type, state): any[] {
 
     let stack = [], item;
     for (let i = 0; i < treeModel.length; i++) {
@@ -20,7 +20,7 @@ export class DocumentSearchService {
     }
     while (stack.length) {
       item = stack.shift();
-      item.expanded = expanded;
+      item[type] = state;
       if (item.children && item.children.length) {
         stack = stack.concat(item.children);
       }

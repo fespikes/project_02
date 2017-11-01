@@ -12,11 +12,13 @@
         ></svg>
       </div>
       <div class="doc-name">{{docName}}</div>
-      <tdc-menu-tree
-        [treeModel]="treeModel"
-        [treeLevel]="treeLevel"
-        (onSelectChange)="onSelectChange($event)"
-      ></tdc-menu-tree>
+      <div class="tree">
+        <tdc-menu-tree
+          [treeModel]="treeModel"
+          [treeLevel]="treeLevel"
+          (onSelectChange)="onSelectChange($event)"
+        ></tdc-menu-tree>
+      </div>
     </div>
     <div id="doc-detail-content" class="context">
 

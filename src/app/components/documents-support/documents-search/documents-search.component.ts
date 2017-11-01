@@ -77,11 +77,11 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   expandAll() {
-    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, true);
+    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, 'expanded', true);
   }
 
   collapseAll() {
-    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, false);
+    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, 'expanded', false);
   }
 
   onSelectChange(entity) {
