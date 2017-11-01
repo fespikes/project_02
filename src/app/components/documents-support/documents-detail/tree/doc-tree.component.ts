@@ -29,7 +29,7 @@ export class DocTreeComponent implements OnInit {
 
   toggle(node, level) {
     node.expanded = !node.expanded;
-    //this.selectChange(node, level);
+    this.selectChange(node, level);
   }
 
 
@@ -39,5 +39,9 @@ export class DocTreeComponent implements OnInit {
     node.selected = !node.selected;
     node.level = level || node.level;
     this.onSelectChange.emit(node);
+    if(level === 3) {
+      const ele = document.getElementById(node.id);
+      scrollTo(ele.offsetLeft, ele.offsetTop);
+    }
   }
 }

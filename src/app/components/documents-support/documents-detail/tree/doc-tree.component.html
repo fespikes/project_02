@@ -11,10 +11,9 @@
       (click)="toggle(node, treeLevel)"
     ></svg>
     <a
-      id={node.id}
       class="node-name"
       [class.selected]="node.selected"
-      (click)="selectChange(node, treeLevel); $event.stopPropagation()"
+      (click)="selectChange(node, treeLevel);"
     >
       {{node.name}}
     </a>
@@ -23,6 +22,6 @@
     *ngIf="node.expanded && node.children.length > 0"
     [treeModel]="node.children"
     [treeLevel]="treeLevel + 1"
-    (onSelectChange)="selectChange($event); $event.stopPropagation()"
+    (onSelectChange)="selectChange($event);"
   ></tdc-menu-tree>
 </div>
