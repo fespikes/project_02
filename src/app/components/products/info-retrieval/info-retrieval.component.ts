@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, OnDestroy, ViewChild, ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { InfoRetrievalService } from './info-retrieval.service';
 

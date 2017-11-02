@@ -6,7 +6,7 @@ import {
   Output
 } from '@angular/core';
 
-import { ProductsService } from '../products.service';
+import { DataWarehouseService } from './data-warehouse.service';
 
 @Component({
   selector: 'tdc-data-warehouse',
@@ -15,19 +15,16 @@ import { ProductsService } from '../products.service';
 })
 export class DataWarehouseComponent implements OnInit {
 
-  @HostBinding('class.data-warehouse-box') layout = true;
+  // @HostBinding('class.data-warehouse-box') layout = true;
 
-  tabItems = [];
+  productDetails: any;
 
   constructor(
-    private productsService: ProductsService
+    private service: DataWarehouseService
   ) { }
 
   ngOnInit() {
-    this.tabItems = this.productsService.getProductTabs();
-  }
-
-  onTabChange() {
-
+    const productDetails = this.service.getProductDetails();
+    this.productDetails = productDetails;
   }
 }
