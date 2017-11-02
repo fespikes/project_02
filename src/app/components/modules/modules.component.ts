@@ -1,5 +1,4 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import {  } from '@an';
 
 import { ProductUtilService } from './services/product-util.service';
 
@@ -25,9 +24,6 @@ export class ModulesComponent implements OnInit {
 
     let moduleType = this.productUtilService.getModuleType(window.location.hash);
     this.moduleItems = this.productUtilService.refreshListState(this.moduleItems, moduleType);
-
-    var sheets = document.styleSheets;
-    console.log('modules-sheets=', sheets);
   }
 
   onModuleChange(module) {

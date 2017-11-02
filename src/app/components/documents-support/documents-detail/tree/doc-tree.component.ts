@@ -32,16 +32,25 @@ export class DocTreeComponent implements OnInit {
     this.selectChange(node, level);
   }
 
-
   selectChange(node, level) {
+    this.updateTreeState(node, level);
+    this.onSelectChange.emit(node);
+    if(level === 3) {
+      this.scrollToAnchor(node);
+    }
+  }
+
+  updateTreeState(node, level) {
     this.treeModel = this.documentSearchService.traversalTree(
       this.treeModel, 'selected', false);
     node.selected = !node.selected;
     node.level = level || node.level;
-    this.onSelectChange.emit(node);
-    if(level === 3) {
-      const ele = document.getElementById(node.id);
-      scrollTo(ele.offsetLeft, ele.offsetTop);
-    }
+  }
+
+  scrollToAnchor(node) {
+    const ele = document.getElementById(node.id);
+    const offsetLeft = ele.offsetLeft;
+    const offsetTop = ele.offsetTop - 105;
+    scrollTo(offsetLeft, offsetTop);
   }
 }
