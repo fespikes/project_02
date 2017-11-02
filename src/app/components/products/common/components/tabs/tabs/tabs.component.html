@@ -1,5 +1,6 @@
 <ul class="tabsUl">
 	<li *ngFor="let tab of tabs">
-		<a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a>
+		<a *ngIf="tab.href" href="#{{tab.href}}">{{tab.text}}</a>
+		<!-- <a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a> -->
 	</li>
 </ul>

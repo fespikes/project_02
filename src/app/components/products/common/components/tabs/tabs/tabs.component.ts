@@ -16,10 +16,10 @@ export class TabsComponent implements OnInit, OnDestroy {
 	) { }
 
   ngOnInit() {
-  	document.onscroll = this.manipulateTab.bind(this);
+  	document.onscroll = this.manipulateTabPosition.bind(this);
   }
 
-  manipulateTab(e) {
+  manipulateTabPosition(e) {
   	const scrollTop = 402;  	//XXXX: get the scrollTop flexibly;
   	const tabsUl = this.el.nativeElement.querySelector('.tabsUl');
 

@@ -16,19 +16,23 @@ export class DataWarehouseService {
   		tabs: [
         {
           text: '产品功能',
-          link: './functionalities'
+          link: './functionalities',
+          href: 'data-warehouse-functionalities'
         },
         {
           text: '产品优势',
-          link: './advantages'
+          link: './advantages',
+          href: 'data-warehouse-advantages'
         },
         {
           text: '应用场景',
-          link: './scenarios'
+          link: './scenarios',
+          href: 'data-warehouse-scenarios'
         },
         {
           text: '组件介绍',
-          link: './component-intro'
+          link: './component-intro',
+          href: 'data-warehouse-component-intro'
         },
         /*{
           text: '费用说明',
@@ -37,7 +41,8 @@ export class DataWarehouseService {
       ],
       functionalities: {
         title: '产品功能',
-        diagram: '/assets/images/diagram/relational-database.png',
+        id: 'data-warehouse-functionalities',
+        diagram: '/assets/images/diagram/data-warehouse.png',
         //TODO: image style abstraction
         content: [
           {
@@ -64,6 +69,7 @@ export class DataWarehouseService {
       },
       advantages: {
         title: '产品优势',
+        id: 'data-warehouse-advantages',
         content: [
           {
             title: '轻松打造云上大数据',
@@ -97,6 +103,7 @@ export class DataWarehouseService {
       },
       scenarios: {
         title: '应用场景',
+        id: 'data-warehouse-scenarios',
         tabs: [
           {
             text: '企业级多租户大数据平台台',
@@ -130,6 +137,7 @@ export class DataWarehouseService {
       },
       componentIntro: {
         title: '组件介绍',
+        id: 'data-warehouse-component-intro',
         tabs: [
           {
             text: 'TDH平台产品',
