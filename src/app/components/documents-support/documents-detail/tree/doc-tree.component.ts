@@ -6,6 +6,8 @@ import {
   EventEmitter,
 } from '@angular/core';
 
+import { DocumentSearchService } from '../../documents-search/documents-search.service';
+
 @Component({
   selector: 'tdc-menu-tree',
   templateUrl: './doc-tree.component.html',
@@ -17,7 +19,10 @@ export class DocTreeComponent implements OnInit {
   @Input() treeLevel: number;
   @Output() onSelectChange = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private documentSearchService: DocumentSearchService
+  ) { }
+
   ngOnInit() {
 
   }
@@ -29,11 +34,14 @@ export class DocTreeComponent implements OnInit {
 
 
   selectChange(node, level) {
-    if(level > 1) {
-      return;
-    }
-    node.level = level;
-    //node.expanded = true;
+    this.treeModel = this.documentSearchService.traversalTree(
+      this.treeModel, 'selected', false);
+    node.selected = !node.selected;
+    node.level = level || node.level;
     this.onSelectChange.emit(node);
+    if(level === 3) {
+      const ele = document.getElementById(node.id);
+      scrollTo(ele.offsetLeft, ele.offsetTop);
+    }
   }
 }

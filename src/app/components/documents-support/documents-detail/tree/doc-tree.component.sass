@@ -6,27 +6,38 @@
   width: 100%
   display: inline-block
   background-color: white
-  padding-left: 2rem
-  overflow: auto
 
   svg
-    width: 2rem
-    height: 2rem
     fill: $brandblue
-    margin-right: 0.5rem
+    margin-right: 5px
     transition: transform 0.4s
-
     &.expanded
       transform: rotate(180deg)
 
+  svg.hide
+    visibility: hidden
+
   .node-type
-    height: 3.75rem
-    line-height: 3.75rem
-    padding: 0 1rem 0 1.875rem
+    height: 40px
+    line-height: 40px
+    width: 100%
+    display: inline-block
     color: $text-dark
     user-select: none
     cursor: default
     white-space: nowrap
+    &.selected
+      background-color: $tdcCommonBlue
+      color: #fff
+      svg
+        fill: #fff
+
+  .node-name
+    padding-right: 10px
+    display: inline-block
+    width: 100%
+    &.selected
+      background-color: $tdcCommonBlue
 
 
 
