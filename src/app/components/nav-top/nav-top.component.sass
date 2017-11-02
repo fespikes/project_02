@@ -18,6 +18,12 @@ $h52: 52px
   font-size: $f16
   font-weight: 500
   position: relative
+  &.fixed
+    position: fixed
+    top: 0
+    z-index: 100
+    box-shadow: rgba(0,0,0,.22) 0 5px 10px -5px
+    border-bottom: 0
   
   .top-nav-ul
     @extend .center-box
