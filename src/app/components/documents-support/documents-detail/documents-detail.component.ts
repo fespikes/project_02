@@ -23,7 +23,7 @@ export class DocumentsDetailComponent implements OnInit {
   };
   crumbItems = [];
   treeModel = [];
-  treeLevel = 0;
+  treeLevel = 1;
   docName = '';
   backUrl = '../../../../documents-support';
 
@@ -96,6 +96,8 @@ export class DocumentsDetailComponent implements OnInit {
   onSelectChange(node) {
     this.documentResService.setSectionId(node.id);
     this.router.navigate([`/docs-detail/${this.pathParams.category}/${this.pathParams.version}/${this.pathParams.component}`]);
-    this.getDocDetail();
+    if(node.level <= 2) {
+      this.getDocDetail();
+    }
   }
 }
