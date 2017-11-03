@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { ComponentIntroChildComponent } from '../../../common/components/component-intro-child/component-intro-child.component';
+import { DataWarehouseService } from '../../data-warehouse.service';
 
 @Component({
   selector: 'tdc-tdh-platform-products',
-  templateUrl: './tdh-platform-products.component.html',
-  styleUrls: ['./tdh-platform-products.component.sass']
+  templateUrl: '../../../common/components/component-intro-child/component-intro-child.component.html',
 })
-export class TdhPlatformProductsComponent implements OnInit {
+export class TdhPlatformProductsComponent extends ComponentIntroChildComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  	componentFactoryResolver: ComponentFactoryResolver,
+    private service: DataWarehouseService,
+  	private el: ElementRef 
+	) {
+  	super(componentFactoryResolver);
+  }
 
   ngOnInit() {
+  	try{
+      const productDetails = this.service.getProductDetails();
+  		this.data = productDetails.componentIntro.tdhPlatformProducts;
+  	} catch(e){
+  		console.log(e.message);
+  	} finally {}
   }
 
 }

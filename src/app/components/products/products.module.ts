@@ -47,9 +47,9 @@ import { DataWarehouseScenariosComponent } from './data-warehouse/data-warehouse
   import { DataLakeComponent } from './data-warehouse/data-warehouse-scenarios/data-lake/data-lake.component';
   import { MultiTenancyPlatformComponent } from './data-warehouse/data-warehouse-scenarios/multi-tenancy-platform/multi-tenancy-platform.component';
 import { DataWarehouseComponentIntroComponent } from './data-warehouse/data-warehouse-component-intro/data-warehouse-component-intro.component';
-  import { OperationDevToolsComponent } from './data-warehouse/data-warehouse-component-intro/operation-dev-tools/operation-dev-tools.component';
-  import { TdhDevKitsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-dev-kits/tdh-dev-kits.component';
-  import { TdhPlatformProductsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-platform-products/tdh-platform-products.component';
+  import { OperationDevToolsComponent as DataWarehouseOperationDevToolsComponent } from './data-warehouse/data-warehouse-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent as DataWarehouseTdhDevKitsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent as DataWarehouseTdhPlatformProductsComponent  } from './data-warehouse/data-warehouse-component-intro/tdh-platform-products/tdh-platform-products.component';
 
 //data mart
 // import { DataMartModule } from './data-mart/data-mart.module';
@@ -176,6 +176,15 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     RealtimeComputationComponent,
     AnalysisMiningComponent,
 
+    DataWarehouseTabsComponent,
+    DataWarehouseFunctionalitiesComponent,
+    DataWarehouseAdvantagesComponent,
+    DataWarehouseScenariosComponent,
+    DataWarehouseComponentIntroComponent,
+      DataWarehouseOperationDevToolsComponent,
+      DataWarehouseTdhDevKitsComponent,
+      DataWarehouseTdhPlatformProductsComponent,
+      
     BannerComponent,
     TabsComponent,
     ScenariosChildComponent,
@@ -272,15 +281,9 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
       FinancialRiskManagementComponent,
       EquipmentsSecurityWarningComponent,
     RealtimeComputationTabsComponent,
-    ImgRecognitionSystemComponent,
-    CustomerLosingWarningComponent,
-    NaturalLanguageProcessingComponent,
-    DataWarehouseTabsComponent,
-    DataWarehouseFunctionalitiesComponent,
-    DataWarehouseAdvantagesComponent,
-    DataWarehouseScenariosComponent,
-    DataWarehouseComponentIntroComponent,
-    
+      ImgRecognitionSystemComponent,
+      CustomerLosingWarningComponent,
+      NaturalLanguageProcessingComponent,
   ],
   providers: [
     TccModalService,

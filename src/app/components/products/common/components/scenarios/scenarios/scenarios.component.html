@@ -5,10 +5,15 @@
 	<ul>
 		<li *ngFor="let tab of data.tabs; let i=index">
 			<a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a>
+			<!--TODO:
+this.router.navigate(['../', { id: crisisId, foo: 'foo' }], { relativeTo: this.route });
+or:
+<a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
+			-->
 		</li>
 	</ul>
 	<div class="scenarios-content">
 		<!-- TODO: no design and prototype here -->
-		<router-outlet></router-outlet>
+		<router-outlet name="scenarios"></router-outlet>
 	</div>
 </div>

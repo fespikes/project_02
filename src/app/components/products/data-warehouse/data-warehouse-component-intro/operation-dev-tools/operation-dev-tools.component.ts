@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ElementRef } from '@angular/core';
+import { ComponentIntroChildComponent } from '../../../common/components/component-intro-child/component-intro-child.component';
+import { DataWarehouseService } from '../../data-warehouse.service';
 
 @Component({
-  selector: 'tdc-operation-dev-tools',
-  templateUrl: './operation-dev-tools.component.html',
-  styleUrls: ['./operation-dev-tools.component.sass']
+  selector: 'operation-dev-tools',
+  templateUrl: '../../../common/components/component-intro-child/component-intro-child.component.html',
 })
-export class OperationDevToolsComponent implements OnInit {
+export class OperationDevToolsComponent extends ComponentIntroChildComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(
+  	componentFactoryResolver: ComponentFactoryResolver,
+  	private service: DataWarehouseService,
+  	private el: ElementRef 
+	) {
+  	super(componentFactoryResolver);
   }
 
+  ngOnInit() {
+  	try{
+      const productDetails = this.service.getProductDetails();
+  		this.data = productDetails.componentIntro.operationDevTools;
+  	} catch(e){
+  		console.log(e.message);
+  	} finally {}
+  }
 }

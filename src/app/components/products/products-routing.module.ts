@@ -15,9 +15,10 @@ import { DataWarehouseComponent } from './data-warehouse/data-warehouse.componen
   import { DataGovernancePlatformComponent } from './data-warehouse/data-warehouse-scenarios/data-governance-platform/data-governance-platform.component';
   import { DataLakeComponent } from './data-warehouse/data-warehouse-scenarios/data-lake/data-lake.component';
   import { MultiTenancyPlatformComponent } from './data-warehouse/data-warehouse-scenarios/multi-tenancy-platform/multi-tenancy-platform.component';
-  import { OperationDevToolsComponent } from './data-warehouse/data-warehouse-component-intro/operation-dev-tools/operation-dev-tools.component';
-  import { TdhDevKitsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-dev-kits/tdh-dev-kits.component';
-  import { TdhPlatformProductsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-platform-products/tdh-platform-products.component';
+  
+  import { OperationDevToolsComponent as DataWarehouseOperationDevToolsComponent } from './data-warehouse/data-warehouse-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent as DataWarehouseTdhDevKitsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent as DataWarehouseTdhPlatformProductsComponent  } from './data-warehouse/data-warehouse-component-intro/tdh-platform-products/tdh-platform-products.component';
 
 //E: data-warehouse
 
@@ -115,43 +116,58 @@ const productRoutes: Routes = [
         path: '',
         children: [
           { path: 'data-warehouse', component: DataWarehouseComponent,
-            /*children: [
-
-              { path: 'functionalities', component: FunctionalitiesComponent },
-              { path: 'advantages', component: AdvantagesComponent },
+            children: [
               {
-                path: 'scenarios', 
-                component: ScenariosComponent,
+                path: '',
                 children: [
-                  {
-                    path: '',
-                    children: [//enterprise-class
-                      { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
-                      { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
-                      { path: 'data-lake', component: DataLakeComponent },
-                      { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
-                      { path: '', redirectTo: '/products/data-warehouse/scenarios/multi-tenancy-platform', pathMatch: 'full' }
-                    ]
-                  }
-                ],
-              },
-              {
-                path: 'component-intro', 
-                component: ComponentIntroComponent,
-                children: [
-                  {
-                    path: '',
-                    children: [
-                      { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
-                      { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
-                      { path: 'operation-dev-tools', component: OperationDevToolsComponent },
-                      { path: '', redirectTo: '/products/data-warehouse/component-intro/tdh-platform-products', pathMatch: 'full' }                    ]
-                  }
+                  { path: 'tdh-platform-products',
+                    component: DataWarehouseTdhPlatformProductsComponent,
+                  },
+                  { path: 'tdh-dev-kits',
+                    component: DataWarehouseTdhDevKitsComponent,
+                  },
+                  { path: 'operation-dev-tools',
+                    component: DataWarehouseOperationDevToolsComponent,
+                  },
+                  { path: '',
+                    redirectTo: '/products/data-warehouse/tdh-platform-products',
+                    pathMatch: 'full' }
                 ]
-              },
+              }
+              // { path: 'functionalities', component: FunctionalitiesComponent },
+              // { path: 'advantages', component: AdvantagesComponent },
+              // {
+              //   path: 'scenarios', 
+              //   component: ScenariosComponent,
+              //   children: [
+              //     {
+              //       path: '',
+              //       children: [//enterprise-class
+              //         { path: 'multi-tenancy-platform', component: MultiTenancyPlatformComponent },
+              //         { path: 'build-data-warehouse', component: BuildDataWarehouseComponent },
+              //         { path: 'data-lake', component: DataLakeComponent },
+              //         { path: 'data-governance-platform', component: DataGovernancePlatformComponent },
+              //         { path: '', redirectTo: '/products/data-warehouse/scenarios/multi-tenancy-platform', pathMatch: 'full' }
+              //       ]
+              //     }
+              //   ],
+              // },
+              // {
+              //   path: 'component-intro', 
+              //   component: ComponentIntroComponent,
+              //   children: [
+              //     {
+              //       path: '',
+              //       children: [
+              //         { path: 'tdh-platform-products', component: TdhPlatformProductsComponent },
+              //         { path: 'tdh-dev-kits', component: TdhDevKitsComponent },
+              //         { path: 'operation-dev-tools', component: OperationDevToolsComponent },
+              //         { path: '', redirectTo: '/products/data-warehouse/component-intro/tdh-platform-products', pathMatch: 'full' }                    ]
+              //     }
+              //   ]
+              // },
               // { path: 'expense-explanation', component: ExpenseExplanationComponent },
-              { path: '', redirectTo: '/products/data-warehouse/functionalities', pathMatch: 'full' }
-            ]*/
+            ]
            },
           { 
             path: 'data-mart',
