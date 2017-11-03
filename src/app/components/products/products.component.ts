@@ -16,7 +16,7 @@ export class ProductsComponent implements OnInit {
   menuItems = [
 		{
 		  name: '数据仓库',
-		  url: `/products/data-warehouse/functionalities`,
+		  url: `/products/data-warehouse`,
 		  icon: 'user'
 		},
 		{

@@ -6,7 +6,12 @@ export class News {
   	public title: string,
   	public date: string,
   	public content: [any],
-    public summary: string
+    public summary: string,
+
+/*    public routerLink: '',
+    routerLinkActive: '',
+    image: '/assets/images/home/news-0.jpg',
+    tag: '【巨能聊】',*/
 	) { }
 }
 
@@ -16,7 +21,7 @@ let newsList = [
   	'星环的划时代版本 - Transwarp Data Hub 5.0',
   	'2017-07-11',
   	[
-  		{p: '星环科技历时10个月打造的新一代一站式Hadoop发行版——TDH 5.0正式发布。TDH 5.0包含了6大产品， 15个功能组件，共实现3000多个功能、改进以及Bug修复。到目前为止，TDH 5.0是星环最为革命性的一个版本，在可用性以及产品化程度方面，都达到了星环史无前例的高度。'},
+      {p: '星环科技历时10个月打造的新一代一站式Hadoop发行版——TDH 5.0正式发布。TDH 5.0包含了6大产品， 15个功能组件，共实现3000多个功能、改进以及Bug修复。到目前为止，TDH 5.0是星环最为革命性的一个版本，在可用性以及产品化程度方面，都达到了星环史无前例的高度。'},
   		{img: '/assets/images/latest-news/news-adv.jpg'},
   		{title: '核心产品从四个变为六个1'},
   		{
@@ -37,7 +42,7 @@ let newsList = [
   	),
   new News(
     12,
-    '星环的划时代版本 - Transwarp Data Hub 5.0',
+    '星环的划时代版本 - TDH 5.1',
     '2017-07-12',
     [
       {p: '星环科技历时10个月打造的新一代一站式Hadoop发行版——TDH 5.0正式发布。TDH 5.0包含了6大产品， 15个功能组件，共实现3000多个功能、改进以及Bug修复。到目前为止，TDH 5.0是星环最为革命性的一个版本，在可用性以及产品化程度方面，都达到了星环史无前例的高度。'},
@@ -61,7 +66,7 @@ let newsList = [
     ),
   new News(
     13,
-    '星环的划时代版本 - Transwarp Data Hub 5.0',
+    '星环的划时代版本 - TDH 5.2',
     '2017-07-13',
     [
       {p: '星环科技历时10个月打造的新一代一站式Hadoop发行版——TDH 5.0正式发布。TDH 5.0包含了6大产品， 15个功能组件，共实现3000多个功能、改进以及Bug修复。到目前为止，TDH 5.0是星环最为革命性的一个版本，在可用性以及产品化程度方面，都达到了星环史无前例的高度。'},

@@ -7,6 +7,9 @@ import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 })
 export class TabsComponent implements OnInit, OnDestroy {
 
+  static tabHeight = 56;
+  static bannerPlusNav = 402;
+
   public tabs: any;
 
   private tabUlClassName = 'tabsUl';
@@ -20,10 +23,9 @@ export class TabsComponent implements OnInit, OnDestroy {
   }
 
   manipulateTabPosition(e) {
-  	const scrollTop = 402;  	//XXXX: get the scrollTop flexibly;
   	const tabsUl = this.el.nativeElement.querySelector('.tabsUl');
 
-  	if (document.documentElement.scrollTop<scrollTop) {
+  	if (document.documentElement.scrollTop<TabsComponent.bannerPlusNav) {
   		tabsUl.className = this.tabUlClassName;
   		return ;
 
@@ -34,6 +36,14 @@ export class TabsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
   	document.onscroll = null;
+  }
+
+  scrollUp(id) {
+    console.log(id);
+
+    let node = document.querySelector(id);
+    scrollTo(0, node.offsetTop-TabsComponent.tabHeight);
+
   }
 
 }
