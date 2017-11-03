@@ -1,17 +1,25 @@
 @import '../../../../styles/util'
 
-ul
+\:host
+
   @include clearfix
-  height: 5rem
-  line-height: 5rem
-  width: 100%
-  padding: 0 2rem
+  height: 50px
+  line-height: 50px
+  width: 1200px
+  padding: 0 20px
+  top: $top-nav-height
+  z-index: 99
+  margin: 0 auto
+  display: block
+  background-color: $common-bg-color
+
   li
     float: left
   a.link, span
-    color: $tdcCommonBlue
+    color: $common-blue
   span
-    margin: 0 0.5rem
+    margin: 0 5px
+
 
 
 

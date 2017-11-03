@@ -1,20 +1,36 @@
 @import '../../../styles/util'
 @include clearfix
 
+$tree-head-height: 90px
+$tree-height: calc(100vh - #{$top-nav-height + $crumb-height + $tree-head-height})
+$doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
+
 .doc-detail
-  background-color: $tdcCommonBgColor
+  width: 1200px
+  margin: 0 auto
+  background-color: $common-bg-color
+
+  .breadcrumb
+    position: fixed
+
+.doc-content
+  margin-top: $top-nav-height + $crumb-height
+  min-height: $doc-content-min-height
 
   .menu
-    float: left
     width: 250px
     height: 100%
     border-radius: 4px
+    position: fixed
+    top: 100px
+
     .go-back
       width: 100%
       height: 40px
       line-height: 40px
       background-color: #fff
       padding-left: 20px
+
       svg
         fill: #305ab5
 
@@ -24,22 +40,19 @@
       line-height: 50px
       padding-left: 20px
       color: #fff
-      background-color: $tdcCommonBlue
+      background-color: #0066ce
 
     .tree
       overflow: auto
       background-color: #fff
-      height: 100%
-      min-height: calc(100vh - 335px)
+      height: $tree-height
 
-  .doc-content
-    min-height: calc(100vh - 245px)
-
-    .context
-      min-height: inherit
-      border-radius: 4px
-      margin-left: 270px
-      margin-right: 18px
-      background-color: #fff
-      padding: 30px 20px 0 20px
+  .context
+    min-height: inherit
+    border-radius: 4px
+    margin-left: 270px
+    margin-right: 18px
+    background-color: #fff
+    padding: 30px 20px 0 20px
+    margin-top: 100px
 

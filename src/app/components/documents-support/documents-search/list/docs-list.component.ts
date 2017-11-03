@@ -3,8 +3,12 @@ import {
   OnInit,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
+  HostBinding
 } from '@angular/core';
+
+import { DocumentUtilService } from '../../services/document.util.service';
+import { DocumentResService } from '../../services/document.res.service';
 
 @Component({
   selector: 'tdc-docs-list',
@@ -13,14 +17,51 @@ import {
 })
 
 export class DocsListComponent implements OnInit {
+  @HostBinding('class.docs-list') hostClass = true;
+
   @Input() docsList: any[];
   @Input() docsCount: number;
   @Output() onListItemClick = new EventEmitter();
 
-  constructor() {
+  constructor(
+    private documentUtilService: DocumentUtilService,
+    private documentResService: DocumentResService
+  ) {
 
   }
+
   ngOnInit() {
+  }
+
+  ngAfterViewChecked() {
+    if(this.docsList && this.docsList.length > 0) {
+      this.renderDocSummary(this.docsList);
+      if(!this.documentResService.getSearchCompleted()) {
+        this.documentUtilService.appendDocCssSheet(
+          'em{background-color:#ffff00}');
+      }
+      this.documentResService.setSearchCompleted(true);
+    }
+  }
+
+  renderDocSummary(docsList) {
+    docsList.some((doc) => {
+      const mountId = this.getMountId(doc);
+      const mountEl = document.getElementById(mountId);
+      if(mountEl) {
+        mountEl.innerHTML = doc.summary;
+      }else {
+        return false;
+      }
+    })
+  }
+
+  getMountId(doc) {//for backend response data lack of id=0 case
+    let mountId = 'docs-list-item-';
+    if(doc.id) {
+      mountId += doc.id;
+    }
+    return mountId;
   }
 
   listItemClick(doc) {

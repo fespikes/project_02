@@ -11,6 +11,7 @@ export class DocumentResService {
   sectionName = 'index';
   keyword = '';
   docLoaded = false;
+  searchCompleted = false;
 
   constructor() {
 
@@ -38,6 +39,14 @@ export class DocumentResService {
 
   setDocLoaded(loaded): void {
     this.docLoaded = loaded;
+  }
+
+  getSearchCompleted(): boolean {
+    return this.searchCompleted;
+  }
+
+  setSearchCompleted(completed): void {
+    this.searchCompleted = completed;
   }
 
   getDocsCrumb(type, alias): any[] {
