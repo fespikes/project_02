@@ -3,7 +3,8 @@ import {
   OnInit,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
+  HostBinding
 } from '@angular/core';
 
 import { DocumentUtilService } from '../../services/document.util.service';
@@ -16,6 +17,8 @@ import { DocumentResService } from '../../services/document.res.service';
 })
 
 export class DocsListComponent implements OnInit {
+  @HostBinding('class.docs-list') hostClass = true;
+
   @Input() docsList: any[];
   @Input() docsCount: number;
   @Output() onListItemClick = new EventEmitter();
@@ -42,16 +45,20 @@ export class DocsListComponent implements OnInit {
   }
 
   renderDocSummary(docsList) {
-    docsList.map((doc, index) => {
-      const mountId = this.getMountId(index, doc);
+    docsList.some((doc) => {
+      const mountId = this.getMountId(doc);
       const mountEl = document.getElementById(mountId);
-      mountEl.innerHTML = doc.summary;
+      if(mountEl) {
+        mountEl.innerHTML = doc.summary;
+      }else {
+        return false;
+      }
     })
   }
 
-  getMountId(index, doc) {//for backend response data lack of id=0 case
+  getMountId(doc) {//for backend response data lack of id=0 case
     let mountId = 'docs-list-item-';
-    if(index > 0) {
+    if(doc.id) {
       mountId += doc.id;
     }
     return mountId;

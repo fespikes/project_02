@@ -3,11 +3,14 @@
 
 $tree-head-height: 60px
 $tree-footer-height: 80px
+$search-panel-head-height: 87px
+$pagination-area-height: 60px
+$search-panel-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
+$tree-height: calc(100vh - #{$top-nav-height + $crumb-height + $tree-head-height + $tree-footer-height})
+$docs-list-min-height: calc(100vh - #{$top-nav-height + $crumb-height + $search-panel-head-height + $pagination-area-height})
 
 .docs-search
   background-color: $common-bg-color
-  position: relative
-  top: 100px
   width: 1200px
   margin: 0 auto
 
@@ -15,8 +18,8 @@ $tree-footer-height: 80px
     position: fixed
 
 .search-panel
-  height: calc(100vh)
-  min-height: calc(100vh - #{$top-nav-height} - #{$crumb-height})
+  margin-top: $top-nav-height + $crumb-height
+  min-height: $search-panel-min-height
 
   .panel-left
     width: 250px
@@ -38,7 +41,7 @@ $tree-footer-height: 80px
 
     .tree
       overflow: auto
-      height: calc(100vh - #{$top-nav-height} - #{$crumb-height} - #{$tree-head-height} - #{$tree-footer-height})
+      height: $tree-height
 
     .operation
       height: 80px
@@ -74,12 +77,13 @@ $tree-footer-height: 80px
       .search .search-btn
         height: 30px
 
+    .docs-list
+      min-height: $docs-list-min-height
+
     .tcc-pagination
 
       justify-content: flex-end
       margin-top: 20px
-      position: absolute
-      bottom: 20px
 
 
 

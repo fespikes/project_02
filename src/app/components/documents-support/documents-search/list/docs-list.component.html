@@ -1,15 +1,17 @@
-<h3 class="docs-count">
-  {{'DOCUMENTS.SEARCH_RELATED_RESULT' | translate}}
-  <span>{{docsCount}}</span>
-  {{'DOCUMENTS.ITEM' | translate}}
-</h3>
-<div
-  *ngFor="let doc of docsList"
-  (click)="listItemClick(doc)"
-  class="docs-item"
->
-  <h5>{{doc.document.title}}</h5>
-  <p id="docs-list-item-{{doc.id}}">
-    {{doc.summary}}
-  </p>
+<div>
+  <h3 class="docs-count">
+    {{'DOCUMENTS.SEARCH_RELATED_RESULT' | translate}}
+    <span>{{docsCount}}</span>
+    {{'DOCUMENTS.ITEM' | translate}}
+  </h3>
+  <div
+    *ngFor="let doc of docsList"
+    (click)="listItemClick(doc)"
+    class="docs-item"
+  >
+    <h5>{{doc.document.title}}</h5>
+    <p id="docs-list-item-{{doc.id}}">
+      {{doc.summary}}
+    </p>
+  </div>
 </div>
