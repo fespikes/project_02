@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ProductsComponent } from './components/products/products.component';
+// import { ProductsComponent } from './components/products/products.component';
 import { ModulesComponent } from './components/modules/modules.component';
 import { BusinessScenarioComponent } from './components/business-scenario/business-scenario.component';
 import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';

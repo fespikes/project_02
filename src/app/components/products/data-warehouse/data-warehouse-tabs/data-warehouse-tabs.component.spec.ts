@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdvantagesComponent } from './advantages.component';
+import { DataWarehouseTabsComponent } from './data-warehouse-tabs.component';
 
-describe('AdvantagesComponent', () => {
-  let component: AdvantagesComponent;
-  let fixture: ComponentFixture<AdvantagesComponent>;
+describe('DataWarehouseTabsComponent', () => {
+  let component: DataWarehouseTabsComponent;
+  let fixture: ComponentFixture<DataWarehouseTabsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdvantagesComponent ]
+      declarations: [ DataWarehouseTabsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdvantagesComponent);
+    fixture = TestBed.createComponent(DataWarehouseTabsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

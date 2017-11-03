@@ -9,19 +9,6 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
 import { ProductsService } from './products.service';
 
-import { DataWarehouseComponent } from './data-warehouse/data-warehouse.component';
-import { RelationalDatabaseComponent } from './relational-database/relational-database.component';
-import { DeepLearningComponent } from './deep-learning/deep-learning.component';
-import { RealtimeComputationComponent } from './realtime-computation/realtime-computation.component';
-
-import { DataWarehouseModule } from './data-warehouse/data-warehouse.module';
-
-import { FunctionalitiesComponent } from './data-warehouse/functionalities/functionalities.component';
-import { AdvantagesComponent } from './data-warehouse/advantages/advantages.component';
-import { ScenariosComponent } from './data-warehouse/scenarios/scenarios.component';
-import { ComponentIntroComponent } from './data-warehouse/component-intro/component-intro.component';
-import { ExpenseExplanationComponent } from './data-warehouse/expense-explanation/expense-explanation.component';
-
 //S: products common
   //common directives
   import { FunctionalitiesDirective } from './common/components/functionalities/functionalities.directive';
@@ -46,6 +33,23 @@ import { BannerComponent } from './common/components/banner/banner.component';
 import { TabsComponent } from './common/components/tabs/tabs.component';
 import { ScenariosChildComponent } from './common/components/scenarios-child/scenarios-child.component';
 //E: products common
+
+//data-warehouse
+import { DataWarehouseComponent } from './data-warehouse/data-warehouse.component';
+import { DataWarehouseService } from './data-warehouse/data-warehouse.service';
+import { DataWarehouseBannerComponent } from './data-warehouse/data-warehouse-banner/data-warehouse-banner.component';
+import { DataWarehouseTabsComponent } from './data-warehouse/data-warehouse-tabs/data-warehouse-tabs.component';
+import { DataWarehouseFunctionalitiesComponent } from './data-warehouse/data-warehouse-functionalities/data-warehouse-functionalities.component';
+import { DataWarehouseAdvantagesComponent } from './data-warehouse/data-warehouse-advantages/data-warehouse-advantages.component';
+import { DataWarehouseScenariosComponent } from './data-warehouse/data-warehouse-scenarios/data-warehouse-scenarios.component';
+  import { BuildDataWarehouseComponent } from './data-warehouse/data-warehouse-scenarios/build-data-warehouse/build-data-warehouse.component';
+  import { DataGovernancePlatformComponent } from './data-warehouse/data-warehouse-scenarios/data-governance-platform/data-governance-platform.component';
+  import { DataLakeComponent } from './data-warehouse/data-warehouse-scenarios/data-lake/data-lake.component';
+  import { MultiTenancyPlatformComponent } from './data-warehouse/data-warehouse-scenarios/multi-tenancy-platform/multi-tenancy-platform.component';
+import { DataWarehouseComponentIntroComponent } from './data-warehouse/data-warehouse-component-intro/data-warehouse-component-intro.component';
+  import { OperationDevToolsComponent } from './data-warehouse/data-warehouse-component-intro/operation-dev-tools/operation-dev-tools.component';
+  import { TdhDevKitsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  import { TdhPlatformProductsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-platform-products/tdh-platform-products.component';
 
 //data mart
 // import { DataMartModule } from './data-mart/data-mart.module';
@@ -82,6 +86,7 @@ import { InfoRetrievalComponentIntroComponent } from './info-retrieval/info-retr
   import { TdhDevKitsComponent as InfoRetrievalTdhDevKitsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-dev-kits/tdh-dev-kits.component';
   import { TdhPlatformProductsComponent as InfoRetrievalTdhPlatformProductsComponent } from './info-retrieval/info-retrieval-component-intro/tdh-platform-products/tdh-platform-products.component';
 
+import { RelationalDatabaseComponent } from './relational-database/relational-database.component';
 import { RelationalDatabaseService } from './relational-database/relational-database.service';
 import { RelationalDatabaseAdvantagesComponent } from './relational-database/relational-database-advantages/relational-database-advantages.component';
 import { RelationalDatabaseBannerComponent } from './relational-database/relational-database-banner/relational-database-banner.component';
@@ -112,6 +117,7 @@ import { AnalysisMiningScenariosComponent } from './analysis-mining/analysis-min
 import { AnalysisMiningTabsComponent } from './analysis-mining/analysis-mining-tabs/analysis-mining-tabs.component';
 
 
+import { DeepLearningComponent } from './deep-learning/deep-learning.component';
 import { DeepLearningService } from './deep-learning/deep-learning.service';
 import { DeepLearningAdvantagesComponent } from './deep-learning/deep-learning-advantages/deep-learning-advantages.component';
 import { DeepLearningBannerComponent } from './deep-learning/deep-learning-banner/deep-learning-banner.component';
@@ -127,6 +133,7 @@ import { DeepLearningScenariosComponent } from './deep-learning/deep-learning-sc
 import { DeepLearningTabsComponent } from './deep-learning/deep-learning-tabs/deep-learning-tabs.component';
 
 
+import { RealtimeComputationComponent } from './realtime-computation/realtime-computation.component';
 import { RealtimeComputationService } from './realtime-computation/realtime-computation.service';
 import { RealtimeComputationAdvantagesComponent } from './realtime-computation/realtime-computation-advantages/realtime-computation-advantages.component';
 import { RealtimeComputationBannerComponent } from './realtime-computation/realtime-computation-banner/realtime-computation-banner.component';
@@ -147,10 +154,6 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     CommonModule,
     TuiModule,
     TdcModule,
-    DataWarehouseModule,
-
-    // DataMartModule,
-    // InfoRetrievalModule,
     ProductsRoutingModule
   ],
   declarations: [
@@ -167,16 +170,11 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
 
 
   	DataWarehouseComponent,
+    DataWarehouseBannerComponent,
     RelationalDatabaseComponent,
     DeepLearningComponent,
     RealtimeComputationComponent,
     AnalysisMiningComponent,
-
-    FunctionalitiesComponent,
-    AdvantagesComponent,
-    ScenariosComponent,
-    ComponentIntroComponent,
-    ExpenseExplanationComponent,
 
     BannerComponent,
     TabsComponent,
@@ -277,12 +275,17 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     ImgRecognitionSystemComponent,
     CustomerLosingWarningComponent,
     NaturalLanguageProcessingComponent,
+    DataWarehouseTabsComponent,
+    DataWarehouseFunctionalitiesComponent,
+    DataWarehouseAdvantagesComponent,
+    DataWarehouseScenariosComponent,
+    DataWarehouseComponentIntroComponent,
     
   ],
   providers: [
     TccModalService,
     ProductsService,
-
+    DataWarehouseService,
     DataMartService,
     InfoRetrievalService,
     AnalysisMiningService,
