@@ -12,7 +12,7 @@ const navigationData = {
 		},
 		{
 			text: '云产品',
-			routerLink: './products/data-warehouse/functionalities',
+			routerLink: './products/data-warehouse',
 			style: {
 				class: 'top-nav-a',
 				routerLinkActive: 'active'
