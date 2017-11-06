@@ -31,6 +31,7 @@ export class TabsComponent implements OnInit, OnDestroy {
 
   	} else {
   		tabsUl.className = 'fixed ' + this.tabUlClassName;
+      //TODO: change the current tab when scroll up
   	}
   }
 
