@@ -1,13 +1,13 @@
-<ul class="tabsUl">
-	<li *ngFor="let tab of tabs">
-		<a
-			*ngIf="tab.href"
-			(click)="scrollUp(tab.href)">{{tab.text}}</a>
-			<!--TODO:-->
-
-		<a
-			*ngIf="!tab.href"
-			routerLink="{{tab.link}}"
-			routerLinkActive="active">{{tab.text}}</a>
-	</li>
-</ul>
+<div class="tabsUl-box">
+	<ul class="tabsUl">
+		<li *ngFor="let tab of tabs">
+			<a *ngIf="tab.href"
+				(click)="scrollUp(tab.href, $event)">{{tab.text}}</a>
+				<!--TODO:-->
+			<a
+				*ngIf="!tab.href"
+				routerLink="{{tab.link}}"
+				routerLinkActive="active">{{tab.text}}</a>
+		</li>
+	</ul>
+</div>

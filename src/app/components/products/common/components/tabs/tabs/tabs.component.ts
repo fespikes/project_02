@@ -38,11 +38,16 @@ export class TabsComponent implements OnInit, OnDestroy {
   	document.onscroll = null;
   }
 
-  scrollUp(id) {
+  scrollUp(id, $event) {
     console.log(id);
 
     let node = document.querySelector(id);
     scrollTo(0, node.offsetTop-TabsComponent.tabHeight);
+
+    let _active = this.el.nativeElement.querySelector('.active');
+
+    _active && _active.className && (_active.className='');
+    $event.target.className = 'active'
 
   }
 

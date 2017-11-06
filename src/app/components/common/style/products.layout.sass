@@ -65,6 +65,10 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
     img
       width: 100%
 
+.tabsUl-box
+  width: 100%
+  height: 52px
+
 .tabsUl
   display: flex
   flex-direction: row
@@ -86,7 +90,8 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
       margin-bottom: -2px
       cursor: pointer
   &.fixed
-    width: 970px
+    width: 1010px
+    margin-left: 0
     position: fixed
     top: 0
     z-index: 100
@@ -209,6 +214,7 @@ h3.sub-title
 $row-height: 124px
 .intro-table
   display: none
+  background: #fff
   &.current
     display: block
   .row
@@ -322,7 +328,7 @@ $row-height: 124px
           font-weight: 600
 
 .component-intro-content
-  background: #fff
+  padding-bottom: 120px
 
 
 
