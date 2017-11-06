@@ -7,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
 export class ComponentIntroComponent implements OnInit {
 
   data: any;
+
+  private current: any;
 	
   constructor() { }
 
   ngOnInit() {
+  	this.current = this.data.tabs[0];
   }
 
+  clickedTab(tab) {
+  	if (!tab) return;
+  	this.current = tab;
+  }
+  
 }

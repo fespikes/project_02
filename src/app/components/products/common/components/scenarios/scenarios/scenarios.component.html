@@ -3,17 +3,32 @@
 
 <div class="scenarios-tab-box">
 	<ul>
-		<li *ngFor="let tab of data.tabs; let i=index">
-			<a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a>
-			<!--TODO:
-this.router.navigate(['../', { id: crisisId, foo: 'foo' }], { relativeTo: this.route });
-or:
-<a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
-			-->
+		<li
+			*ngFor="let tab of data.tabs"
+			(click)="clickedTab(tab)">
+
+			<!-- <a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a> -->
+			<a [class.active]="tab===current">{{tab.class}}</a>
+
 		</li>
 	</ul>
-	<div class="scenarios-content">
-		<!-- TODO: no design and prototype here -->
+	<!-- <div class="scenarios-content">
 		<router-outlet name="scenarios"></router-outlet>
+	</div> -->
+	<div class="scenarios-content">
+
+		<div
+			class="scenario-details"
+			*ngFor="let tabData of data.tabs"
+			[ngClass]="{current: tabData===current, 'text': !tabData.image}">
+
+			<img class="scenario-img"
+				*ngIf="tabData.image"
+				src="{{tabData.image.src}}" alt=""
+				[ngStyle]="{'width': tabData.image.width + 'px'}"/>
+			<p>{{tabData.text}}</p>
+
+		</div>
+
 	</div>
 </div>

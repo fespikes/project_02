@@ -90,3 +90,18 @@ $backdrop-animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
     overflow-y: scroll;
 
 @include cdk-overlay();
+
+//fix "jumping-scrollbar" issue
+html
+  overflow-y: scroll
+
+\:root
+  overflow-y: auto
+  overflow-x: hidden
+
+\:root body
+  position: absolute
+
+body
+  width: 100vw
+  overflow: hidden

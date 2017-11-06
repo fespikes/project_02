@@ -13,7 +13,6 @@ import { ManagementCenterComponent } from './components/management-center/manage
 // import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 // import { AfterSaleServiceComponent } from './components/after-sale-service/after-sale-service.component';
 
-
 const routes: Routes = [
   {
     path: 'gallery',

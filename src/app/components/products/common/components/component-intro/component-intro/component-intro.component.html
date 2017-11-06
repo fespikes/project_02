@@ -2,9 +2,31 @@
 
 <div class="component-intro-tab-box">
 	<ul>
-		<li *ngFor="let tab of data.tabs">
-			<a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a>
+		<li
+			*ngFor="let tab of data.tabs"
+			(click)="clickedTab(tab)">
+<!-- 			<a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.class}}</a> -->
+			<a [class.active]="tab===current">{{tab.class}}</a>
+
 		</li>
 	</ul>
 </div>
 
+<div class="component-intro-content">
+	<div
+		*ngFor="let item of data.tabs; let idx=index"
+		[ngClass]="{current: item===current}"
+		class="tdh-platform-products intro-table">
+		<div
+			class="row"
+			*ngFor="let obj of item.ctn">
+			<span class="title">{{obj.title}}</span>
+			<span class="ctn">{{obj.text}}</span>
+			<span class="anchor">
+				<a
+					routerLink="{{obj.link}}" routerLinkActive="active"
+					class="more">了解更多&nbsp;→</a>
+			</span>
+		</div>
+	</div>
+</div>

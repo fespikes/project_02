@@ -106,50 +106,105 @@ export class DataWarehouseService {
         id: 'data-warehouse-scenarios',
         tabs: [
           {
-            text: '企业级多租户大数据平台台',
-            link: './multi-tenancy-platform'
+            class: '企业级多租户大数据平台台',
+            text: '打造一体化的大数据平台，满足多租户场景下的应用需求，实现租户权限和资源管理，进行表和资源的访问权限控制，保障资源之间的共享与隔离，提供合理高效的作业调度。使得从数据导入到报表生成的整个批处理分析过程，融会贯通，成为一体。',
+            // link: '/products/data-warehouse/multi-tenancy-platform',
+            image: {
+              src: '/assets/images/products/scenarios/data-warehouse/multi-tenancy-platform.png',
+              width: '645',//810*394
+              // width:700
+              // height: '340.5'
+            }
           },
           {
-            text: '企业级数据仓库建设',
-            link: './build-data-warehouse'
+            class: '企业级数据仓库建设',
+            text: '可以用于实现高效的企业数仓建设。在实现数据仓库的完整流程中，您可以利用TDH-DW中整合的高效工具支持，加速企业数仓的落地实现。确保数据迁移的效率，轻松攻克迁移过程中的技术难题。',
+            // link: '/products/data-warehouse/build-data-warehouse',
+            image: {
+              src: '/assets/images/products/scenarios/data-warehouse/build-data-warehouse.png',
+              width: '645',  //768*366
+              // height: '334'
+            }
           },
           {
-            text: '企业级数据湖',
-            link: './data-lake'
+            class: '企业级数据湖',
+            text: '数据湖将打通各种不同系统中的数据的边界，通过统一的接口访问多种数据源。同数据仓库相比，数据湖将弱化人为选择和处理对数据的影响，有助于发现跨越来源的数据之间的关系与潜在价值，发现在传统数据仓库中容易被遗漏的信息。',
+            // link: '/products/data-warehouse/data-lake',
+            image: {
+              src: '/assets/images/products/scenarios/data-warehouse/data-lake.png',
+              width: '645',//741*387
+              // height: '366'
+            }
           },
           {
-            text: '企业级数据治理平台',
-            link: './data-governance-platform'
+            class: '企业级数据治理平台',
+            text: '搭建可靠的数据治理平台，管理与追踪数据关系，提供方便可用的操作界面，管理并搜索目标数据元信息。将帮助您严格控制企业内部数据质量，提高数据分析准确性，提高商业决策的价值与可信度。',
+            // link: '/products/data-warehouse/data-governance-platform'
           }
-        ],
-        multiTenancyPlatform: {
-          text: '打造一体化的大数据平台，满足多租户场景下的应用需求，实现租户权限和资源管理，进行表和资源的访问权限控制，保障资源之间的共享与隔离，提供合理高效的作业调度。使得从数据导入到报表生成的整个批处理分析过程，融会贯通，成为一体。',
-        },
-        buildDataWarehouse: {
-          text: '可以用于实现高效的企业数仓建设。在实现数据仓库的完整流程中，您可以利用TDH-DW中整合的高效工具支持，加速企业数仓的落地实现。确保数据迁移的效率，轻松攻克迁移过程中的技术难题。',
-        },
-        dataLake: {
-          text: '数据湖将打通各种不同系统中的数据的边界，通过统一的接口访问多种数据源。同数据仓库相比，数据湖将弱化人为选择和处理对数据的影响，有助于发现跨越来源的数据之间的关系与潜在价值，发现在传统数据仓库中容易被遗漏的信息。',
-        },
-        dataGovernancePlatform: {
-          text: '搭建可靠的数据治理平台，管理与追踪数据关系，提供方便可用的操作界面，管理并搜索目标数据元信息。将帮助您严格控制企业内部数据质量，提高数据分析准确性，提高商业决策的价值与可信度。',
-        }
+        ]
       },
       componentIntro: {
         title: '组件介绍',
         id: 'data-warehouse-component-intro',
         tabs: [
           {
-            text: 'TDH平台产品',
-            link: './tdh-platform-products'
+            class: 'TDH平台产品',
+            // link: './tdh-platform-products'
+            ctn: [{
+              title: 'Inceptor',
+              text: 'Inceptor是一款用于批量处理及分析的数据库。它支持SQL 2003标准、Oracle PL/SQL以及DB2 SQL PL，对Oracle、DB2以及Teradata 都有很好的方言支持，是Hadoop领域对SQL标准支持最完善的产品。',
+              link: ''  //TODO: the link goto incepter introduction
+            },{
+              title: 'Guardian',
+              text: 'Guardian为TDH提供集中的安全和资源管理服务。它支持LDAP和Kerberos，保护Hadoop集群免受恶意攻击和安全威胁，而且还可以对资源做细粒度的ACL控制。多租户资源管理模块可以按照租户的方式管理资源，并通过一个图形化工具为用户提供权限配置以及资源配置接口。',
+              link: ''  //TODO: the link 
+            }, {
+              title: 'Hyperbase',
+              text: 'Hyperbase是以Apache HBase为基础，融合多项创新技术的NoSQL数据库: 它采用了和Inceptor同样的SQL引擎，允许开发者们直接 用SQL构建复杂应用; 支持全局索引和次级索引，实现高速的非主键查询; 提供原生的JSON/BSON格式支持以及对象存储(Object Store) 技术，极大地简化了非结构化数据处理。 ',
+              link: ''  //TODO: the link 
+            },{
+              title: 'Hadoop',
+              text: 'Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。',
+              link: ''  //TODO: the link
+            }]
           },
           {
-            text: 'TDH开发套件',
-            link: './tdh-dev-kits'
+            class: 'TDH开发套件',
+            // link: './tdh-dev-kits'
+            ctn: [{
+              title: 'Workflow',
+              text: 'Workflow是一个图形化的工作流设计、调试、调度和分析的服务平台，它支持Shell、SQL、JDBC、HTTP等任务类型，也可以写自定 义Java任务。它还提供丰富的分析能力，如依赖关系、执行历史、甘特图等，可以帮助用户诊断工作流的执行状况。',
+              link: ''  //TODO: the link 
+            },{
+              title: 'Governor',
+              text: 'Governor是TDH中的元数据管理和数据治理工具。可用于管理元数据(包括表和存储过程)，监控所有数据和程序的更改历史，进行数据血缘分析和影响分析。开发者还可以用它调试数据问题，追踪问题来源，并帮助数据管理者预测计划进行的元数据更改会造成的影响，Governor可帮助用户提高大数据的数据质量。',
+              link: ''  //TODO: the link
+            },{
+              title: 'Transporter',
+              text: 'Transporter是一款用于设计和创建ETL任务的可视化工具。它支持从RDBMS到TDH的近实时数据同步功能，用户可用Transporter将数据从RDBMS迁移到Hadoop，再进行数据分析和挖掘工作；它提供完整的数据整合功能，源系统支持多种格式的数据源（CSV、JDBC、XML、JSON、关系数据库）；支持多种常用的数据转换操作（连接、聚合、清洗等）。',
+              link: ''  //TODO: the link 
+            },{
+              title: 'Pilot',
+              text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
+              link: ''  //TODO: the link 
+            }]
           },
           {
-            text: '运维和开发工具',
-            link: './operation-dev-tools'
+            class: '运维和开发工具',
+            // link: './operation-dev-tools',
+            ctn: [{
+              title: 'Milano',
+              text: 'Milano是一个日志收集分析和展示平台，为运维人员提供基于日志问题的定位和分析工具。它具有五个功能组件：logstash、kafka、elasticsearch、kibana、flink，分别用来帮助用户实现日志收集、传输、存储、展示和分析这五项功能。',
+              link: ''  //TODO: the link goto 
+            },{
+              title: 'Terminal',
+              text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
+              link: ''  //TODO: the link goto 
+            },{
+              title: 'Prometheus',
+              text: 'Prometheus是开源的监控和告警系统，以Metrics监控为主，通过pull mode完成时间序列数据的收集。主要包括的组件有：负责时间序列数据存储和抓取的Prometheus Server，Alertmanager，Push gateway，以及各类exporter。',
+              link: ''  //TODO: the link goto 
+            }]
           }
         ],
         tdhPlatformProducts: [{

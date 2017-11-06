@@ -11,14 +11,14 @@ import { RealtimeComputationComponent } from './realtime-computation/realtime-co
 //deprecated
 //S: data-warehouse
 import { DataWarehouseComponent } from './data-warehouse/data-warehouse.component';
-  import { BuildDataWarehouseComponent } from './data-warehouse/data-warehouse-scenarios/build-data-warehouse/build-data-warehouse.component';
-  import { DataGovernancePlatformComponent } from './data-warehouse/data-warehouse-scenarios/data-governance-platform/data-governance-platform.component';
-  import { DataLakeComponent } from './data-warehouse/data-warehouse-scenarios/data-lake/data-lake.component';
-  import { MultiTenancyPlatformComponent } from './data-warehouse/data-warehouse-scenarios/multi-tenancy-platform/multi-tenancy-platform.component';
+  // import { BuildDataWarehouseComponent } from './data-warehouse/data-warehouse-scenarios/build-data-warehouse/build-data-warehouse.component';
+  // import { DataGovernancePlatformComponent } from './data-warehouse/data-warehouse-scenarios/data-governance-platform/data-governance-platform.component';
+  // import { DataLakeComponent } from './data-warehouse/data-warehouse-scenarios/data-lake/data-lake.component';
+  // import { MultiTenancyPlatformComponent } from './data-warehouse/data-warehouse-scenarios/multi-tenancy-platform/multi-tenancy-platform.component';
   
-  import { OperationDevToolsComponent as DataWarehouseOperationDevToolsComponent } from './data-warehouse/data-warehouse-component-intro/operation-dev-tools/operation-dev-tools.component';
-  import { TdhDevKitsComponent as DataWarehouseTdhDevKitsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-dev-kits/tdh-dev-kits.component';
-  import { TdhPlatformProductsComponent as DataWarehouseTdhPlatformProductsComponent  } from './data-warehouse/data-warehouse-component-intro/tdh-platform-products/tdh-platform-products.component';
+  // import { OperationDevToolsComponent as DataWarehouseOperationDevToolsComponent } from './data-warehouse/data-warehouse-component-intro/operation-dev-tools/operation-dev-tools.component';
+  // import { TdhDevKitsComponent as DataWarehouseTdhDevKitsComponent } from './data-warehouse/data-warehouse-component-intro/tdh-dev-kits/tdh-dev-kits.component';
+  // import { TdhPlatformProductsComponent as DataWarehouseTdhPlatformProductsComponent  } from './data-warehouse/data-warehouse-component-intro/tdh-platform-products/tdh-platform-products.component';
 
 //E: data-warehouse
 
@@ -116,7 +116,7 @@ const productRoutes: Routes = [
         path: '',
         children: [
           { path: 'data-warehouse', component: DataWarehouseComponent,
-            children: [
+/*            children: [
               {
                 path: '',
                 children: [
@@ -129,11 +129,14 @@ const productRoutes: Routes = [
                   { path: 'operation-dev-tools',
                     component: DataWarehouseOperationDevToolsComponent,
                   },
+                  { path: '/products/data-warehouse/multi-tenancy-platform',
+                    outlet: 'scenarios',
+                    component: MultiTenancyPlatformComponent },
                   { path: '',
                     redirectTo: '/products/data-warehouse/tdh-platform-products',
                     pathMatch: 'full' }
                 ]
-              }
+              }*/
               // { path: 'functionalities', component: FunctionalitiesComponent },
               // { path: 'advantages', component: AdvantagesComponent },
               // {
@@ -167,7 +170,7 @@ const productRoutes: Routes = [
               //   ]
               // },
               // { path: 'expense-explanation', component: ExpenseExplanationComponent },
-            ]
+            // ]
            },
           { 
             path: 'data-mart',
