@@ -38,7 +38,7 @@ export class DocsListComponent implements OnInit {
       this.renderDocSummary(this.docsList);
       if(!this.documentResService.getSearchCompleted()) {
         this.documentUtilService.appendDocCssSheet(
-          'em{background-color:#ffff00}');
+          '.docs-list em{background-color:#ffff00}');
       }
       this.documentResService.setSearchCompleted(true);
     }

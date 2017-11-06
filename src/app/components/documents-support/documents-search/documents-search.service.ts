@@ -54,6 +54,20 @@ export class DocumentSearchService {
     ];
   }
 
+  initTreeSelectedState(treeModel, nodeId): any[] {
+    if(nodeId === 'index') {
+      treeModel[0].selected = true;
+      return treeModel;
+    }
+    let selectedNode = this.findTreeNode(nodeId, treeModel) as any;
+    selectedNode.selected = true;
+    while (selectedNode.parent !== 'index') {
+      selectedNode = this.findTreeNode(selectedNode.parent, treeModel) as any;
+      selectedNode.expanded =true;
+    }
+    return treeModel;
+  }
+
   makeSearchParams(keyword, pagination, docs): Object {
     let from = (pagination.page - 1) * pagination.size;
     return {
@@ -161,4 +175,35 @@ export class DocumentSearchService {
     };
   }
 
+  keyHighLight(id, key, bgColor): void{
+    if(!key || key === '') {
+      return;
+    }
+    const dom = document.getElementById(id);
+    const nodes  = dom.childNodes as any;
+    const keyEl = "<span style='background-color: "+bgColor+";'>"+key+"</span>";
+    const rStr = new RegExp(key, "g");
+    for(let i =0; i<nodes.length - 1; i++){
+      if(nodes[i].nodeType == 3 && /\s/.test(nodes[i].nodeValue)){
+        nodes[i].parentNode.removeChild(nodes[i]);
+      }
+      nodes[i].innerHTML = nodes[i].innerHTML.replace(rStr,keyEl);
+    }
+  }
+
+  anchorTreeNode(nodeId, treeId): void {
+    const node = document.getElementById(nodeId);
+    const menuTree = document.getElementById(treeId);
+    menuTree.scrollTop = node.offsetTop;
+  }
+
+  anchorDocContent(nodeId, reDis): void {
+    if(nodeId === 'index') {
+      return;
+    }
+    const ele = document.getElementById(nodeId);
+    const offsetLeft = ele.offsetLeft;
+    const offsetTop = ele.offsetTop - reDis;
+    scrollTo(offsetLeft, offsetTop);
+  }
 }

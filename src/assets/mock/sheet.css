@@ -14,6 +14,10 @@ ul, ol, li, p, h1,h2,h3,h4,h5{
 #content .sectionbody p{
   line-height: 22px;
 }
+#content code{
+  white-space: normal;
+  word-break: break-all;
+}
 #content .sectionbody .imageblock img{
   max-width: 100%;
   height: auto;
@@ -66,11 +70,11 @@ ul, ol, li, p, h1,h2,h3,h4,h5{
   right: 10px;
   background: #2481e3;
 }
-#content .sectionbody h3{
+#content h3{
   font-size: 1.6rem;
   margin: 15px auto;
 }
-#content .sectionbody h4, #content .sectionbody h5{
+#content h4, #content h5{
   font-size: 1.4rem;
   margin: 10px auto;
 }
