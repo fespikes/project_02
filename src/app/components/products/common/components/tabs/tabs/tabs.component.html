@@ -1,8 +1,10 @@
 <div class="tabsUl-box">
 	<ul class="tabsUl">
-		<li *ngFor="let tab of tabs">
+		<li *ngFor="let tab of tabs; let idx=index">
 			<a *ngIf="tab.href"
-				(click)="scrollUp(tab.href, $event)">{{tab.text}}</a>
+				(click)="scrollUp(tab.href, $event)"
+				[class.active]="idx===0"
+				>{{tab.text}}</a>
 				<!--TODO:-->
 			<a
 				*ngIf="!tab.href"
