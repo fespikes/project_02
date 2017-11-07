@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
 export class News {
   constructor(
@@ -14,6 +16,13 @@ export class News {
     tag: '【巨能聊】',*/
 	) { }
 }
+
+let utils = {
+  formatDate: (d) => {
+    d = d?new Date(d): new Date();
+    return d.getFullYear() + '-' + d.getDate() + '-' + d.getMonth();
+  }
+};
 
 let newsList = [
   new News(
@@ -94,10 +103,22 @@ let newsListPromise = Promise.resolve(newsList);
 @Injectable()
 export class LatestNewsService {
 
-  constructor() { }
+  private apiUrl = 'api/v1/news?page_num=1';  //TODO: get the URL of web api
+  //http://172.16.1.193:23333/api/v1/news?page_num=1
 
-  getNewsList() {
-  	return newsListPromise;
+  constructor(private http: Http) { }
+
+  getNewsList(): Promise<News[]>{
+    let list: News[]=[];
+  	// return newsListPromise;
+    return this.http.get(this.apiUrl)
+     .toPromise()
+     .then(response => {
+       response.json().list.forEach(item=>list.push(item))
+       console.log(list);
+       return list //as News[]
+     })
+     .catch(this.handleError);
   }
 
   getTheNews(id: number | string) {
@@ -107,6 +128,11 @@ export class LatestNewsService {
   			News => News.id === +id
   		)
   	);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error); // for demo purposes only
+    return Promise.reject(error.message || error);
   }
 
 }

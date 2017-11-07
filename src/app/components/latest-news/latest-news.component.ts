@@ -22,11 +22,13 @@ export class LatestNewsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    let list: Observable<News[]> = null;
     this.newsList = this.route.paramMap
       .switchMap((params: ParamMap) => {
         // (+) before `params.get()` turns the string into a number
         this.selectedId = +params.get('id');
         return this.service.getNewsList();
+        // return list;
       }
     );
   }
