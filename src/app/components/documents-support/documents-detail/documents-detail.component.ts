@@ -104,7 +104,8 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   onSelectChange(node) {
-    this.router.navigate([`/docs-detail/${this.pathParams.category}/${this.pathParams.version}/${this.pathParams.component}`]);
+    this.router.navigate([`/documents-support/docs-detail/${this.pathParams.category}/
+      ${this.pathParams.version}/${this.pathParams.component}`]);
     if(node.level <= 2) {
       this.getDocDetail();
     }

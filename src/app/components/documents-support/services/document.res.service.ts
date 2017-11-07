@@ -126,12 +126,12 @@ export class DocumentResService {
           {
             name: 'documentSupport',
             alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
-            url: '../../../../documents-support'
+            url: '../../../../../documents-support'
           },
           {
             name: 'productDocument',
             alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
-            url: '../../../../documents-support/docs/products'
+            url: '../../../../../documents-support/docs/products'
           },
           {
             name: 'documentDetail',

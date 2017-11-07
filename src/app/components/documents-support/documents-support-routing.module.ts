@@ -40,7 +40,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'docs-detail/:category/:version/:document',
+    path: 'documents-support/docs-detail/:category/:version/:document',
     component: DocumentsDetailComponent
   }
 ];
