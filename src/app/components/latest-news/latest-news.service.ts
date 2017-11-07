@@ -114,7 +114,7 @@ export class LatestNewsService {
     return this.http.get(this.apiUrl)
      .toPromise()
      .then(response => {
-       response.json().list.forEach(item=>list.push(item))
+       response.json().list.forEach(item=>list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item))
        console.log(list);
        return list //as News[]
      })
