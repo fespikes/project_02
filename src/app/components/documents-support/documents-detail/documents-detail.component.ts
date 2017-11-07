@@ -5,6 +5,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentResService } from '../services/document.res.service';
+import { DocumentSearchService } from '../documents-search/documents-search.service';
+import {timeout} from "rxjs/operator/timeout";
 
 @Component({
   selector: 'tdc-documents-detail',
@@ -26,12 +28,13 @@ export class DocumentsDetailComponent implements OnInit {
   treeLevel = 1;
   docName = '';
   backUrl = '../../../../documents-support';
+  RELA_DIS_MAIN_TITLE = 140;
 
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentUtilService: DocumentUtilService,
     private documentResService: DocumentResService,
-    private route: ActivatedRoute,
+    private documentSearchService: DocumentSearchService,
     private router: Router
   ) {
 
@@ -45,20 +48,28 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   getDocTree() {
-    let url = this.getPath('docTree');
+    const url = this.getPath('docTree');
+    const sectionId = this.documentResService.getSectionId();
     this.documentAPIService.getDocTree(url).subscribe(
       result =>{
         this.treeModel = result.nav.children;
+        this.treeModel = this.documentSearchService.initTreeSelectedState(
+          this.treeModel, sectionId
+        );
       }
     );
   }
 
   getDocDetail() {
     let url = this.getPath('docDetail');
+    const sectionId = this.documentResService.getSectionId();
     this.documentAPIService.getDocDetail(url).subscribe(
       result =>{
         this.documentUtilService.appendDocContent(result.content);
         document.getElementById('header').style.display = 'none';
+        this.documentSearchService.anchorDocContent(sectionId, this.RELA_DIS_MAIN_TITLE);
+        this.documentSearchService.keyHighLight(
+          'content', this.documentResService.getKeyword(), '#ffff00');
         if(!this.documentResService.getDocLoaded()) {
           this.getDocSheet();
         }
@@ -94,7 +105,6 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   onSelectChange(node) {
-    this.documentResService.setSectionId(node.id);
     this.router.navigate([`/docs-detail/${this.pathParams.category}/${this.pathParams.version}/${this.pathParams.component}`]);
     if(node.level <= 2) {
       this.getDocDetail();
