@@ -70,13 +70,15 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
   height: 52px
 
 .tabsUl
-  display: flex
-  flex-direction: row
-  justify-content: flex-start
+  display: block
+  width: 970px
+  height: 56px
   border-bottom: 1px #d3d9e5 solid
   margin: 0 20px
 
   li
+    float: left
+    display: inline-block
     font-size: 1.4rem
 
   a
@@ -301,12 +303,14 @@ $row-height: 124px
 .component-intro-tab-box
 
   ul
-    display: inline-flex
-    justify-content: flex-start
-    // align-items: flex-start
+    display: block
+    width: 504px
+    height: 42px
     border: 1px #e6eaee solid
 
     li
+      float: left
+      display: inline-block
 
       a
         margin-top: -1px
