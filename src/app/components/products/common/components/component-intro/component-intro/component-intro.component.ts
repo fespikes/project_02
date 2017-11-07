@@ -16,7 +16,7 @@ export class ComponentIntroComponent implements OnInit {
   	this.current = this.data.tabs[0];
   }
 
-  clickedTab(tab) {
+  onMouseOver(tab) {
   	if (!tab) return;
   	this.current = tab;
   }

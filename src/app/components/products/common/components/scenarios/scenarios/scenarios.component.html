@@ -5,7 +5,7 @@
 	<ul>
 		<li
 			*ngFor="let tab of data.tabs"
-			(click)="clickedTab(tab)">
+			(mouseover)="onMouseOver(tab)">
 
 			<!-- <a routerLink="{{tab.link}}" routerLinkActive="active">{{tab.text}}</a> -->
 			<a [class.active]="tab===current">{{tab.class}}</a>
