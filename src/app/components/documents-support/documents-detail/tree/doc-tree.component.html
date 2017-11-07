@@ -11,6 +11,7 @@
       (click)="toggle(node, treeLevel)"
     ></svg>
     <a
+      id="doc-tree-{{node.id}}"
       class="node-name"
       [class.selected]="node.selected"
       (click)="selectChange(node, treeLevel);"

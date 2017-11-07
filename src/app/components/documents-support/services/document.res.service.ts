@@ -8,6 +8,7 @@ import { TdcApiService } from '../../../shared/services/api.service';
 
 @Injectable()
 export class DocumentResService {
+  anchor='';
   sectionName = 'index';
   keyword = '';
   docLoaded = false;
@@ -23,6 +24,14 @@ export class DocumentResService {
 
   setSectionId(name): void {
     this.sectionName = name;
+  }
+
+  getAnchor(): string {
+    return this.anchor;
+  }
+
+  setAnchor(anchor): void {
+    this.anchor = anchor;
   }
 
   getKeyword(): string {

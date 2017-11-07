@@ -95,6 +95,8 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   listItemClick(doc) {
+    this.documentResService.setAnchor(doc.anchor);
+    this.documentResService.setSectionId(doc.document.filename);
     this.router.navigate([`/docs-detail/${doc.document.id}`]);
   }
 }
