@@ -13,6 +13,7 @@ export class DocumentResService {
   keyword = '';
   docLoaded = false;
   searchCompleted = false;
+  keyNeedRender = false;
 
   constructor() {
 
@@ -56,6 +57,14 @@ export class DocumentResService {
 
   setSearchCompleted(completed): void {
     this.searchCompleted = completed;
+  }
+
+  getKeyNeedRender(): boolean {
+    return this.keyNeedRender;
+  }
+
+  setKeyNeedRender(needRender): void {
+    this.keyNeedRender = needRender;
   }
 
   getDocsCrumb(type, alias): any[] {
