@@ -14,6 +14,8 @@ import {
 })
 
 export class TabComponent implements OnInit {
+  @HostBinding('class.tdc-tab') hostClass = true;
+
   @Input() tabItems: any[];
   @Output() onTabChange = new EventEmitter();
   constructor() {

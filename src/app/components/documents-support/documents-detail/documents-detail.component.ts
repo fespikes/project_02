@@ -27,7 +27,6 @@ export class DocumentsDetailComponent implements OnInit {
   treeModel = [];
   treeLevel = 1;
   docName = '';
-  backUrl = '../../../../documents-support';
   RELA_DIS_MAIN_TITLE = 140;
 
   constructor(

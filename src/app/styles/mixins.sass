@@ -33,6 +33,17 @@
 @mixin text-ellipsis()
   @include text-overflow()
 
+@mixin title-tag($width: 3px, $height: 12px, $top: 2px, $right: 10px)
+  &::before
+    content: ''
+    display: inline-block
+    width: $width
+    height: $height
+    position: relative
+    top: $top
+    right: $right
+    background: $common-blue
+
 @mixin absolute-center
   position: absolute
   top: 50%
@@ -65,7 +76,7 @@
     position: absolute
     right: 0
     bottom: 0
-  
+
   &:after
     content: ''
     position: absolute
@@ -86,7 +97,7 @@
   display: flex
   justify-content: space-between
   flex-direction: column
-  
+
 @mixin icon-ripple-btn($backgroundColor: $silver)
   &:after
     content: ''

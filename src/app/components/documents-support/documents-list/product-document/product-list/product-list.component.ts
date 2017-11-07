@@ -10,7 +10,6 @@ import {
 import { Router } from '@angular/router';
 
 import { DocumentResService } from '../../../services/document.res.service';
-import { DocumentUtilService } from '../../../services/document.util.service';
 
 @Component({
   selector: 'tdc-product-list',
@@ -23,17 +22,12 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private documentResService: DocumentResService,
-    private documentUtilService: DocumentUtilService,
     private router: Router
   ) {
 
   }
 
   ngOnInit() {
-  }
-
-  filterDocByVersion() {
-
   }
 
   viewDocDetail(category, doc) {
