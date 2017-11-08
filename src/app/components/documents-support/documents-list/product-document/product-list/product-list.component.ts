@@ -10,7 +10,6 @@ import {
 import { Router } from '@angular/router';
 
 import { DocumentResService } from '../../../services/document.res.service';
-import { DocumentUtilService } from '../../../services/document.util.service';
 
 @Component({
   selector: 'tdc-product-list',
@@ -23,7 +22,6 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private documentResService: DocumentResService,
-    private documentUtilService: DocumentUtilService,
     private router: Router
   ) {
 
@@ -32,12 +30,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
   }
 
-  filterDocByVersion() {
-
-  }
-
   viewDocDetail(category, doc) {
     this.documentResService.setSectionId('index');
-    this.router.navigate([`/docs-detail/${category.id}/${category.currentVersion.id}/${doc.id}`]);
+    this.router.navigate([`/documents-support/docs-detail/${category.id}/${category.currentVersion.id}/${doc.id}`]);
   }
 }

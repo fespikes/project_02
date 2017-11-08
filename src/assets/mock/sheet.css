@@ -6,35 +6,29 @@ ul, ol, li, p, h1,h2,h3,h4,h5{
   color: #354052;
   font-family:  'Microsoft YaHei', 'SimSun';
 }
-#content .sectionbody .paragraph{
+#content .paragraph{
   font-size: 1.4rem;
   line-height: 22px;
   margin-bottom: 12px;
 }
-#content .sectionbody p{
+#content p{
   line-height: 22px;
 }
 #content code{
   white-space: normal;
   word-break: break-all;
 }
-#content .sectionbody .imageblock img{
+#content .imageblock img{
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
 }
-#content .sectionbody .olist ol{
+#content .olist ol{
   margin: 15px 0 15px 20px;
 }
-/*#content .sectionbody .olist ol li{*/
-  /*margin-bottom: 12px;*/
-/*}*/
-#content .sectionbody .ulist ul{
+#content .ulist ul{
   margin: 15px 0 15px 20px;
 }
-/*#content .sectionbody .ulist ul li{*/
-  /*margin-bottom: 12px;*/
-/*}*/
 
 /* table css style start */
 #content .sectionbody table{

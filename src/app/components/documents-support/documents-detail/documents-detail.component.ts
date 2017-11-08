@@ -27,7 +27,6 @@ export class DocumentsDetailComponent implements OnInit {
   treeModel = [];
   treeLevel = 1;
   docName = '';
-  backUrl = '../../../../documents-support';
   RELA_DIS_MAIN_TITLE = 140;
 
   constructor(
@@ -68,14 +67,25 @@ export class DocumentsDetailComponent implements OnInit {
         this.documentUtilService.appendDocContent(result.content);
         document.getElementById('header').style.display = 'none';
         this.documentSearchService.anchorDocContent(sectionId, this.RELA_DIS_MAIN_TITLE);
-        this.documentSearchService.keyHighLight(
-          'content', this.documentResService.getKeyword(), '#ffff00');
-        if(!this.documentResService.getDocLoaded()) {
-          this.getDocSheet();
-        }
-        this.documentResService.setDocLoaded(true);
+        this.highLightKey();
+        this.loadDocSheet();
       }
     );
+  }
+
+  highLightKey() {
+    const keyNeedRender = this.documentResService.getKeyNeedRender();
+    if(keyNeedRender) {
+      this.documentSearchService.keyHighLight(
+        'content', this.documentResService.getKeyword(), '#ffff00');
+    }
+  }
+
+  loadDocSheet() {
+    if(!this.documentResService.getDocLoaded()) {
+      this.getDocSheet();
+    }
+    this.documentResService.setDocLoaded(true);
   }
 
   getDocSheet() {
@@ -105,7 +115,7 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   onSelectChange(node) {
-    this.router.navigate([`/docs-detail/${this.pathParams.category}/${this.pathParams.version}/${this.pathParams.component}`]);
+    this.router.navigate([`/documents-support/docs-detail/${this.pathParams.category}/${this.pathParams.version}/${this.pathParams.component}`]);
     if(node.level <= 2) {
       this.getDocDetail();
     }

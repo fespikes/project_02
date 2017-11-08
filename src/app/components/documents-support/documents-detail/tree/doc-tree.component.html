@@ -2,6 +2,7 @@
   <div
     class="node-type"
     [class.selected]="node.selected"
+    (dblclick)="dbClick(node, treeLevel)"
     [ngStyle]="{'padding-left': (treeLevel * 20) + 'px'}"
   >
     <svg
@@ -12,7 +13,8 @@
     ></svg>
     <a
       id="doc-tree-{{node.id}}"
-      class="node-name"
+      title="{{node.name}}"
+      class="node-name node-name-level-{{treeLevel}} text-ellipsis"
       [class.selected]="node.selected"
       (click)="selectChange(node, treeLevel);"
     >
