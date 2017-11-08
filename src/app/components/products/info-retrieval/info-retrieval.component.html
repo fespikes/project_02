@@ -2,19 +2,12 @@
 
 <info-retrieval-banner [productDetails]="productDetails"></info-retrieval-banner>
 
-<!-- <div class="details-banner">
-	<div class="slogans">
-		<h3 class="title">信息检索</h3>
-		<p>
-			提供PB级别的高速全文检索服务，实现毫秒级的响应速度，支持用SQL做内容检索，提供多种接口，高并发支持，字段精确和模糊检索以及快速统计功能。采用异地数据共享分布式存储，存储海量数据，为企业构建一站式内部搜索平台和信息检索服务。
-		</p>
-	</div>
-	<div class="adv-image"></div>
-</div>
- -->
 <div class="tab-box">
-	<info-retrieval-tabs [productDetails]="productDetails"></info-retrieval-tabs>
-	<div class="tab-sub">
-		<router-outlet></router-outlet>
-	</div>
+  <info-retrieval-tabs [productDetails]="productDetails"></info-retrieval-tabs>
+  <div class="tab-sub">
+    <info-retrieval-functionalities></info-retrieval-functionalities>
+    <info-retrieval-advantages></info-retrieval-advantages>
+    <info-retrieval-scenarios></info-retrieval-scenarios>
+    <info-retrieval-component-intro></info-retrieval-component-intro>
+  </div>
 </div>

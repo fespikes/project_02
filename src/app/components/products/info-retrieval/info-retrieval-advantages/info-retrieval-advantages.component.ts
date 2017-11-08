@@ -3,6 +3,7 @@ import { AdvantagesComponent } from '../../common/components/advantages/advantag
 import { InfoRetrievalService } from '../info-retrieval.service';
 
 @Component({
+  selector: 'info-retrieval-advantages',
 	templateUrl: '../../common/components/advantages/advantages.component.html',
 })
 export class InfoRetrievalAdvantagesComponent extends AdvantagesComponent {

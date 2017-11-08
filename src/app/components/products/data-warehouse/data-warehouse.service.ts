@@ -107,9 +107,6 @@ export class DataWarehouseService {
             // link: '/products/data-warehouse/multi-tenancy-platform',
             image: {
               src: '/assets/images/products/scenarios/data-warehouse/multi-tenancy-platform.png',
-              width: '645',//810*394
-              // width:700
-              // height: '340.5'
             }
           },
           {
@@ -118,8 +115,6 @@ export class DataWarehouseService {
             // link: '/products/data-warehouse/build-data-warehouse',
             image: {
               src: '/assets/images/products/scenarios/data-warehouse/build-data-warehouse.png',
-              width: '645',  //768*366
-              // height: '334'
             }
           },
           {
@@ -128,8 +123,6 @@ export class DataWarehouseService {
             // link: '/products/data-warehouse/data-lake',
             image: {
               src: '/assets/images/products/scenarios/data-warehouse/data-lake.png',
-              width: '645',//741*387
-              // height: '366'
             }
           },
           {
