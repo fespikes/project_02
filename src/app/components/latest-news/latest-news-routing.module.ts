@@ -6,7 +6,7 @@ import { LatestNewsComponent } from './latest-news.component';
 
 const latestNewsRoutes: Routes = [
 	{
-		path: '',
+		path: 'latest-news',
     component: LatestNewsComponent,
     children: [
       {

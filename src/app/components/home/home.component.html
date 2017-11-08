@@ -196,7 +196,7 @@
     <h3 class="middle-title">最新动态</h3>
     <ul class="news-list">
       <li *ngFor="let news of latestNews">
-        <a [ngStyle]="{'background-image': 'url('+ news.image + ')'}"
+        <a [ngStyle]="{'background-image': 'url('+ news.icon + ')'}"
           [routerLink]="['/latest-news', news.id]"
           class="news-a">
           <h3><span>{{news.tag}}</span>{{news.title}}</h3>

@@ -1,8 +1,48 @@
 <div *ngIf="news" class="news-details">
 	<h3>{{news.title}}</h3>
 	<div class="time">{{news.date}}</div>
-	<div class="content">
-		{{news.content}}
+	<style type="stylesheet">
+.content{
+	padding: 20px;
+	line-height: 22px;
+}
+
+img{
+	display: inline-block;
+	padding: 10px 0;
+	width: 710px;
+	//height: 300px;
+	position: relative;
+	top: -15px;
+}
+
+h4{
+	font-size: 1.4rem;
+	color: #354052;
+}
+
+p{
+	padding-bottom: 30px;
+	color: #354052;
+	font-size: 1.2rem;
+}
+
+.mail-to{
+	color: #2b83e0;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+	</style>
+	<div class="content" [innerHTML]="news.content">
+		<!-- <ng-container *ngFor="let item of news.content">
+			<p *ngIf="item.p">{{item.p}}</p>
+			<img *ngIf="item.img" src="{{item.img}}" />
+			<h4 *ngIf="item.title" >{{item.title}}</h4>
+			<div *ngIf="item.mailTo" class="mail-to">
+				{{item.mailTo}}
+				<a href="mailto:{{item.email}}">{{item.email}}</a>
+			</div>
+		</ng-container> -->
 	</div>
 </div>
 

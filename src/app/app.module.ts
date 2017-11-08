@@ -19,7 +19,7 @@ import { HomeModule } from './components/home/home.module';
 import { ModulesModule } from './components/modules/modules.module';
 import { DocumentsSupportModule } from './components/documents-support/documents-support.module';
 // import { ProductsModule } from './components/products/products.module';
-// import { LatestNewsModule } from './components/latest-news/latest-news.module';
+import { LatestNewsModule } from './components/latest-news/latest-news.module';
 import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -60,6 +60,7 @@ import {
     HomeModule,
     BusinessScenarioModule,  //related to app-routing.module
 
+    LatestNewsModule,
     DocumentsSupportModule,
     AppRoutingModule,
   ],

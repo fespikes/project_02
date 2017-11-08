@@ -39,10 +39,10 @@ const routes: Routes = [
     path: 'modules',
     loadChildren: './components/modules/modules.module#ModulesModule'
   },
-  {
+/*  {
     path: 'latest-news',
     loadChildren: 'app/components/latest-news/latest-news.module#LatestNewsModule'
-  },
+  },*/
   {
     path: 'after-sale-service',
     // component: AfterSaleServiceComponent,

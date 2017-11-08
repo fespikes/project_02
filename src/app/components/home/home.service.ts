@@ -180,7 +180,8 @@ export class HomeService {
 					id: 11,
 					routerLink: '',
 					routerLinkActive: '',
-					image: '/assets/images/home/news-0.jpg',
+					//the key was defined by BE:Huwei
+					icon: '/assets/images/home/news-0.jpg',
 					title: 'Hadoop性能调优案例分享',
 					tag: '【巨能聊】',
 					date: '2017-09-23'
@@ -189,7 +190,7 @@ export class HomeService {
 					id: 12,
 					routerLink: '',
 					routerLinkActive: '',
-					image: '/assets/images/home/news-1.jpg',
+					icon: '/assets/images/home/news-1.jpg',
 					title: 'Hadoop性能调优案例分享',
 					tag: '【巨能聊】',
 					date: '2017-09-23'
@@ -198,7 +199,7 @@ export class HomeService {
 					id: 13,
 					routerLink: '',
 					routerLinkActive: '',
-					image: '/assets/images/home/news-2.jpg',
+					icon: '/assets/images/home/news-2.jpg',
 					title: 'Hadoop性能调优案例分享',
 					tag: '【巨能聊】',
 					date: '2017-09-23'
