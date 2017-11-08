@@ -3,6 +3,7 @@ import { ComponentIntroComponent } from '../../common/components/component-intro
 import { RealtimeComputationService } from '../realtime-computation.service';
 
 @Component({
+	selector: 'realtime-computation-component-intro',
 	templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
 export class RealtimeComputationComponentIntroComponent extends ComponentIntroComponent {

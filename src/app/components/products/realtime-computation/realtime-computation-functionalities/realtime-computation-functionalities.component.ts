@@ -3,11 +3,12 @@ import { FunctionalitiesComponent } from '../../common/components/functionalitie
 import { RealtimeComputationService } from '../realtime-computation.service';
 
 @Component({
-	templateUrl: '../../common/components/functionalities/functionalities.component.html',
+  selector: 'realtime-computation-functionalities',
+  templateUrl: '../../common/components/functionalities/functionalities.component.html',
 })
 export class RealtimeComputationFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */ {
 
-	constructor(
+  constructor(
 		componentFactoryResolver: ComponentFactoryResolver,
 		private service: RealtimeComputationService,
 		private el: ElementRef

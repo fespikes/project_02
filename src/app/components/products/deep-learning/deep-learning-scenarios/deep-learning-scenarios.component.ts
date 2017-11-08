@@ -3,7 +3,8 @@ import { ScenariosComponent } from '../../common/components/scenarios/scenarios.
 import { DeepLearningService } from '../deep-learning.service';
 
 @Component({
-	templateUrl: '../../common/components/scenarios/scenarios.component.html',
+  selector: 'deep-learning-scenarios',
+  templateUrl: '../../common/components/scenarios/scenarios.component.html',
 })
 export class DeepLearningScenariosComponent extends ScenariosComponent {
 

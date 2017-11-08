@@ -3,8 +3,11 @@
 
 <div class="tab-box">
 
-	<realtime-computation-tabs [productDetails]="productDetails"></realtime-computation-tabs>
-	<div class="tab-sub">
-		<router-outlet></router-outlet>
-	</div>
+  <realtime-computation-tabs [productDetails]="productDetails"></realtime-computation-tabs>
+  <div class="tab-sub">
+    <realtime-computation-functionalities></realtime-computation-functionalities>
+    <realtime-computation-advantages></realtime-computation-advantages>
+    <realtime-computation-scenarios></realtime-computation-scenarios>
+    <realtime-computation-component-intro></realtime-computation-component-intro>
+  </div>
 </div>

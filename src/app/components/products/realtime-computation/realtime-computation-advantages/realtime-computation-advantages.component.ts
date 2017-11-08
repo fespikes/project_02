@@ -3,6 +3,7 @@ import { AdvantagesComponent } from '../../common/components/advantages/advantag
 import { RealtimeComputationService } from '../realtime-computation.service';
 
 @Component({
+  selector: 'realtime-computation-advantages',
   templateUrl: '../../common/components/advantages/advantages.component.html',
 })
 export class RealtimeComputationAdvantagesComponent extends AdvantagesComponent {

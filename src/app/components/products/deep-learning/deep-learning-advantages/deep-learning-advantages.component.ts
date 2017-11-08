@@ -3,6 +3,7 @@ import { AdvantagesComponent } from '../../common/components/advantages/advantag
 import { DeepLearningService } from '../deep-learning.service';
 
 @Component({
+  selector: 'deep-learning-advantages',
   templateUrl: '../../common/components/advantages/advantages.component.html',
 })
 export class DeepLearningAdvantagesComponent extends AdvantagesComponent {
