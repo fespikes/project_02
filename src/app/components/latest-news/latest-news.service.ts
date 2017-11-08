@@ -60,15 +60,16 @@ export class LatestNewsService {
 
   getNewsList(): Promise<News[]>{
     let list: News[]=[];
-  	return newsListPromise;
-/*    return this.http.get(this.apiUrl)
+  	// return newsListPromise;
+    return this.http.get(this.apiUrl)
      .toPromise()
      .then(response => {
+       console.log(response);
        response.json().list.forEach(item=>list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item))
        console.log(list);
        return list //as News[]
      })
-     .catch(this.handleError);*/
+     .catch(this.handleError);
   }
 
   getTheNews(id: number | string) {
