@@ -2,12 +2,10 @@
   <document-breadcrumb
     [crumbItems]="crumbItems"
   ></document-breadcrumb>
-  <div class="docs-tab">
-    <tdc-tab
-      [tabItems]="tabItems"
-      (onTabChange)="onTabChange($event)"
-    ></tdc-tab>
-  </div>
+  <tdc-tab
+    [tabItems]="tabItems"
+    (onTabChange)="onTabChange($event)"
+  ></tdc-tab>
   <div class="docs-content">
     <router-outlet></router-outlet>
   </div>

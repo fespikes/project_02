@@ -38,6 +38,10 @@ export class DocTreeComponent implements OnInit {
     this.selectChange(node, level);
   }
 
+  dbClick(node, level) {
+    this.toggle(node, level);
+  }
+
   selectChange(node, level) {
     this.updateTreeState(node, level);
     this.documentResService.setSectionId(node.id);
