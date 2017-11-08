@@ -52,9 +52,9 @@ let newsList = [
 let newsListPromise = Promise.resolve(newsList);
 @Injectable()
 export class LatestNewsService {
+  private apiUrl = '/news/api/v1/news?page_num=1';  //TODO: get the URL of web api
 
-  private apiUrl = 'api/v1/news?page_num=1';  //TODO: get the URL of web api
-  //http://172.16.1.193:23333/api/v1/news?page_num=1
+  // private apiUrl = 'api/v1/news?page_num=1';  //TODO: get the URL of web api
 
   private list: News[];
 
