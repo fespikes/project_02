@@ -3,6 +3,7 @@ import { ScenariosComponent } from '../../common/components/scenarios/scenarios.
 import { DataMartService } from '../data-mart.service';
 
 @Component({
+  selector: 'data-mart-scenarios',
   templateUrl: '../../common/components/scenarios/scenarios.component.html',
 })
 export class DataMartScenariosComponent extends ScenariosComponent{

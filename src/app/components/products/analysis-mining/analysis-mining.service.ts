@@ -90,7 +90,6 @@ export class AnalysisMiningService {
             text: '利用银行内部数据与外部征信数据，使用特征工程充分挖掘数据背后隐藏的风险特征，借助先进的机器学习算法分析是否有循环担保资金链，找出担保团伙，衡量网络风险，衡量关键实体风险，针对逾期违约建模，找到特征重要性。实现贷前风险预测与防范、贷中评测与审查、贷后监控与预警。',
             image: {
               src: '/assets/images/products/scenarios/analysis-mining/credit-risk-control.png',
-              width: '645',
             }
           },
           {
@@ -98,7 +97,6 @@ export class AnalysisMiningService {
             text: '描绘用户画像，获取用户业务访问特征值，个性化标签信息集合，并依托画像及客户终身价值模型，寻找客户各种订购业务之间的关联性，针对不同业务，快速定位和管理潜在客户、活跃客户、流失客户。对不同客户群采取不同的营销手段，提供个性化推荐等丰富的智能营销应用。另外从用户访问数据提炼热点信息、进行排行，根据热点内容进行有针对性的广告投放，预测未来可能火爆的内容。',
             image: {
               src: '/assets/images/products/scenarios/analysis-mining/precise-marketing.png',
-              width: '645'
             }
           },
           {
@@ -106,7 +104,6 @@ export class AnalysisMiningService {
             text: '先对用户的刷卡记录、地理位置、转账交易等信息，通过实时风险评估在线分类、决策分析引擎规则库进行在线并发数据挖掘，然后转交人工审阅系统由操作员进行人工分析，接着送入风险评估模型和规则、决策模型进行离线训练，同时对在线系统进行更新，最终根据分类模型和预测模型的分析结果锁定金融欺诈行为。',
             image: {
               src: '/assets/images/products/scenarios/analysis-mining/fraud-check.png',
-              width: '645'
             }
           }
         ]
