@@ -3,8 +3,11 @@
 
 <div class="tab-box">
 
-	<relational-database-tabs [productDetails]="productDetails"></relational-database-tabs>
-	<div class="tab-sub">
-		<router-outlet></router-outlet>
-	</div>
+  <relational-database-tabs [productDetails]="productDetails"></relational-database-tabs>
+  <div class="tab-sub">
+    <relational-database-functionalities></relational-database-functionalities>
+    <relational-database-advantages></relational-database-advantages>
+    <relational-database-scenarios></relational-database-scenarios>
+    <relational-database-component-intro></relational-database-component-intro>
+  </div>
 </div>

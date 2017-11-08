@@ -3,7 +3,8 @@ import { ScenariosComponent } from '../../common/components/scenarios/scenarios.
 import { RelationalDatabaseService } from '../relational-database.service';
 
 @Component({
-	templateUrl: '../../common/components/scenarios/scenarios.component.html',
+  selector: 'relational-database-scenarios',
+  templateUrl: '../../common/components/scenarios/scenarios.component.html',
 })
 export class RelationalDatabaseScenariosComponent extends ScenariosComponent {
 
