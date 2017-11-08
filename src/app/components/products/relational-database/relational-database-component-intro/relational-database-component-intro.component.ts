@@ -3,7 +3,8 @@ import { ComponentIntroComponent } from '../../common/components/component-intro
 import { RelationalDatabaseService } from '../relational-database.service';
 
 @Component({
-	templateUrl: '../../common/components/component-intro/component-intro.component.html',
+  selector: 'relational-database-component-intro',
+  templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
 export class RelationalDatabaseComponentIntroComponent extends ComponentIntroComponent {
 

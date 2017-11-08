@@ -3,6 +3,7 @@ import { FunctionalitiesComponent } from '../../common/components/functionalitie
 import { DeepLearningService } from '../deep-learning.service';
 
 @Component({
+	selector: 'deep-learning-functionalities',
 	templateUrl: '../../common/components/functionalities/functionalities.component.html',
 })
 export class DeepLearningFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */ {

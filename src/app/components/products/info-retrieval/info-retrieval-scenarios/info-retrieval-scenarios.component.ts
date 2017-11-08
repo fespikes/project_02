@@ -3,6 +3,7 @@ import { ScenariosComponent } from '../../common/components/scenarios/scenarios.
 import { InfoRetrievalService } from '../info-retrieval.service';
 
 @Component({
+  selector: 'info-retrieval-scenarios',
   templateUrl: '../../common/components/scenarios/scenarios.component.html',
 })
 export class InfoRetrievalScenariosComponent extends ScenariosComponent{

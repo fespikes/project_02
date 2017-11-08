@@ -4,49 +4,50 @@
 .doc-type
   width: 25%
   float: left
-  padding: 2.5rem 3rem
+  padding: 25px 30px
 
 .doc-title
-  height: 2.8rem
-  line-height: 2.8rem
+  height: 28px
+  line-height: 28px
 
   .title-name
     display: inline-block
     float: left
     height: 100%
-    span
-      display: inline-block
-    span:first-child
-      height: 1rem
-      border-left: 3px solid $common-blue
-      margin-right: 1rem
 
-  tcc-select
+    @include title-tag
+
+  .tcc-select
     float: right
-    width: 11rem
+    width: 90px
     height: 100%
 
 .doc-list
-  margin-top: 1.5rem
+  margin-top: 15px
+
   .doc-item
-    margin: 0 0 1rem 2rem
-    padding: 0 1rem
-    height: 4.5rem
-    line-height: 4.5rem
-    border-radius: 0.4rem
+    margin: 0 0 10px 0
+    padding: 0 10px
+    height: 35px
+    line-height: 35px
+    border-radius: 4px
     border: solid 1px $common-grey
+
     &:hover
       cursor: pointer
       color: $common-blue
       svg
         visibility: visible
 
+    @include text-ellipsis
     span
       float: left
+      display: inline-block
+      width: 190px
 
     svg
       float: right
-      margin-top: 1.5rem
+      margin-top: 10px
       visibility: hidden
 
 

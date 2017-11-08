@@ -1,7 +1,7 @@
 @import '../../../styles/util'
 @include clearfix
 
-$tree-head-height: 90px
+$tree-head-height: 50px
 $tree-height: calc(100vh - #{$top-nav-height + $crumb-height + $tree-head-height})
 $doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
 
@@ -24,16 +24,6 @@ $doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
     position: fixed
     top: 100px
 
-    .go-back
-      width: 100%
-      height: 40px
-      line-height: 40px
-      background-color: #fff
-      padding-left: 20px
-
-      svg
-        fill: #305ab5
-
     .doc-name
       width: 100%
       height: 50px
@@ -43,14 +33,15 @@ $doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
       background-color: #0066ce
 
     .tree
-      overflow: auto
+      overflow-x: hidden
+      overflow-y: auto
       background-color: #fff
       height: $tree-height
 
   .context
     min-height: inherit
     border-radius: 4px
-    margin: 100px 18px 30px 270px
+    margin: 100px 18px 0 270px
     background-color: #fff
-    padding: 30px 20px 0 20px
+    padding: 30px 20px 30px 20px
 

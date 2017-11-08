@@ -16,19 +16,19 @@ export class RelationalDatabaseService {
   		tabs: [
         {
           text: '产品功能',
-          link: './functionalities'
+          href: 'relational-database-functionalities'
         },
         {
           text: '产品优势',
-          link: './advantages'
+          href: 'relational-database-advantages'
         },
         {
           text: '应用场景',
-          link: './scenarios'
+          href: 'relational-database-scenarios'
         },
         {
           text: '组件介绍',
-          link: './component-intro'
+          href: 'relational-database-component-intro'
         },
         /*{
           text: '费用说明',
@@ -37,6 +37,7 @@ export class RelationalDatabaseService {
       ],
       functionalities: {
         title: '产品功能',
+        id: 'relational-database-functionalities',
         diagram: '/assets/images/diagram/relational-database.png',
         //TODO: image style abstraction
         content: [
@@ -60,6 +61,7 @@ export class RelationalDatabaseService {
       },
       advantages: {
         title: '产品优势',
+        id: 'relational-database-advantages',
         content: [
           {
             title: '简单的运维',
@@ -77,77 +79,47 @@ export class RelationalDatabaseService {
       },
       scenarios: {
         title: '应用场景',
+        id: 'relational-database-scenarios',
         tabs: [
           {
-            text: '高并发电商平台',
-            link: './concurrent-ecommerce-platform'
+            class: '高并发电商平台',
+            text: 'TDH-RDB可作为基础架构参与电商交易平台构建，提供交易数据录入和查询功能。能够在短时间内处理大量业务，响应高并发请求，从容应对访问高峰，保证始终对外提供稳定的数据服务。采用主从节点架构，并确保主从设备的数据一致性，实现可靠的即时容灾切换。其弹性伸缩能力，可为电商实现平台处理能力的按需扩展。',
           },
           {
-            text: '金融交易系统',
-            link: './financial-transaction-system'
+            class: '金融交易系统',
+            text: '保障金融数据的完整性、一致性，满足金融行业对于关系型数据库的特性需求。企业可以采用多节点多中心的架构部署TDH-RDB，以获取稳健的灾难恢复能力，同时提供分布式事务支持，维护数据时效性，保证在分布式环境下，数据不丢不错，防止因数据错乱或者丢失导致的金融损失和财产损害。',
           },
           {
-            text: '网站读写分离应用',
-            link: './separate-read-write'
+            class: '网站读写分离应用',
+            text: '某些网站的读操作远远多于写操作，例如对于大型的新闻网站而言，主要应对各种访问查询，而添加一则新闻的次数与之相比则微乎其微。对于这种特性的网站，可将读写请求分离在不同节点处理，主节点负责写，读操作分摊在各个从节点，从而缓解锁之间的竞争，提高资源利用率和生产效率，成倍提升对于读的应答效率。同时也通过增加冗余，提高了系统的可用性。',
           }
-        ],
-        concurrentEcommercePlatform: {
-          text: 'TDH-RDB可作为基础架构参与电商交易平台构建，提供交易数据录入和查询功能。能够在短时间内处理大量业务，响应高并发请求，从容应对访问高峰，保证始终对外提供稳定的数据服务。采用主从节点架构，并确保主从设备的数据一致性，实现可靠的即时容灾切换。其弹性伸缩能力，可为电商实现平台处理能力的按需扩展。',
-          // image: {
-          //   src: '/assets/images/products/scenarios/relational-database/concurrent-ecommerce-platform.png',
-          //   style: {
-          //     width: '700',
-          //     height: '344'
-          //   }
-          // }
-        },
-        financialTransactionSystem: {
-          text: '保障金融数据的完整性、一致性，满足金融行业对于关系型数据库的特性需求。企业可以采用多节点多中心的架构部署TDH-RDB，以获取稳健的灾难恢复能力，同时提供分布式事务支持，维护数据时效性，保证在分布式环境下，数据不丢不错，防止因数据错乱或者丢失导致的金融损失和财产损害。',
-          // image: {
-          //   src: '/assets/images/products/scenarios/relational-database/financial-risk-management.png',
-          //   style: {
-          //     width: '816',
-          //     height: '360'
-          //   }
-          // }
-        },
-        separateReadWrite: {
-          text: '某些网站的读操作远远多于写操作，例如对于大型的新闻网站而言，主要应对各种访问查询，而添加一则新闻的次数与之相比则微乎其微。对于这种特性的网站，可将读写请求分离在不同节点处理，主节点负责写，读操作分摊在各个从节点，从而缓解锁之间的竞争，提高资源利用率和生产效率，成倍提升对于读的应答效率。同时也通过增加冗余，提高了系统的可用性。',
-          // image: {
-          //   src: '/assets/images/products/scenarios/relational-database/equipment-security-warning.png',
-          //   style: {
-          //     width: '801',
-          //     height: '322'
-          //   }
-          // }
-        }
+        ]
       },
       componentIntro: {
         title: '组件介绍',
+        id: 'relational-database-component-intro',
         tabs: [
           {
-            text: 'TDH开发套件',
-            link: './tdh-dev-kits'
+            class: 'TDH开发套件',
+            ctn: [{
+              title: 'Pilot',
+              text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
+              link: ''  //TODO: the link goto incepter introduction
+            }],
           },
           {
-            text: '运维和开发工具',
-            link: './operation-dev-tools'
+            class: '运维和开发工具',
+            ctn: [{
+              title: 'TxSQL',
+              text: 'TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群。 其底层通过 Paxos Group 保证数据的一致性和高可用，在业务层通过分布式的事 务管理器来提供高并发的事务支持',
+              link: ''  //TODO: the link goto incepter introduction
+            },{
+              title: 'Terminal',
+              text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
+              link: ''  //TODO: the link goto incepter introduction
+            }]
           }
-        ],
-        tdhDevKits: [{
-          title: 'Pilot',
-          text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
-          link: ''  //TODO: the link goto incepter introduction
-        }],
-        operationDevTools: [{
-          title: 'TxSQL',
-          text: 'TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群。 其底层通过 Paxos Group 保证数据的一致性和高可用，在业务层通过分布式的事 务管理器来提供高并发的事务支持',
-          link: ''  //TODO: the link goto incepter introduction
-        },{
-          title: 'Terminal',
-          text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
-          link: ''  //TODO: the link goto incepter introduction
-        }]
+        ]
       },
       
   	}

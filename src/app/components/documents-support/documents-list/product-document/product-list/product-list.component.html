@@ -4,14 +4,12 @@
 >
   <div class="doc-title clearfix">
     <div class="title-name">
-      <span></span>
       <span>{{docsItem.name}}</span>
     </div>
     <tcc-select
       name="tccSelect"
       key="name"
       [(ngModel)]="docsItem.currentVersion"
-      (ngModelChange)="filterDocByVersion(docsItem)"
     >
       <tcc-select-option
         *ngFor="let option of docsItem.versionList"
@@ -27,7 +25,7 @@
       (click)="viewDocDetail(docsItem, doc)"
       *ngFor="let doc of docsItem.docsCollection[docsItem.currentVersion.name]"
     >
-      <span>{{doc.name}}</span>
+      <span class="title-tag text-ellipsis">{{doc.name}}</span>
       <svg tccIcon="enter" size='md'></svg>
     </div>
   </div>

@@ -1,15 +1,23 @@
 @import '../../../styles/util'
 
+$tab-height: 40px
+$margin-top: 30px
+$margin-left-right: 20px
+$docs-list-min-height: calc(100vh - #{$nav-height})
+$docs-content-min-height: calc(100vh - #{$nav-height + $crumb-height + $tab-height + $margin-left-right})
+
 .docs-list
-  min-height: calc(100vh - #{$nav-height})
-  background-color: #F3F4F8
+  min-height: $docs-list-min-height
+  background-color: $common-bg-color
   width: 1200px
   margin: 0 auto
 
+  .tdc-tab
+    height: $tab-height
+
 .docs-content
-  margin: 3.5rem 2rem 0 2rem
-  border-radius: 0.4rem
+  margin: $margin-top $margin-left-right 0 $margin-left-right
+  border-radius: 4px
   background-color: #fff
-  max-height: 50rem
   overflow: auto
-  min-height: calc(100vh - 36.8rem)
+  min-height: $docs-content-min-height

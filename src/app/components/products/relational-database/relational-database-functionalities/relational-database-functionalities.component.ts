@@ -3,7 +3,8 @@ import { FunctionalitiesComponent } from '../../common/components/functionalitie
 import { RelationalDatabaseService } from '../relational-database.service';
 
 @Component({
-	templateUrl: '../../common/components/functionalities/functionalities.component.html',
+  selector: 'relational-database-functionalities',
+  templateUrl: '../../common/components/functionalities/functionalities.component.html',
 })
 export class RelationalDatabaseFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */ {
 

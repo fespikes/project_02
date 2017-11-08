@@ -3,6 +3,7 @@ import { ComponentIntroComponent } from '../../common/components/component-intro
 import { DataMartService } from '../data-mart.service';
 
 @Component({
+  selector: 'data-mart-component-intro',
   templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
 export class DataMartComponentIntroComponent extends ComponentIntroComponent {

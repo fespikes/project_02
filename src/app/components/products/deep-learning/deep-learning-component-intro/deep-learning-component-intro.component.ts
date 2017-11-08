@@ -3,6 +3,7 @@ import { ComponentIntroComponent } from '../../common/components/component-intro
 import { DeepLearningService } from '../deep-learning.service';
 
 @Component({
+	selector: 'deep-learning-component-intro',
 	templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
 export class DeepLearningComponentIntroComponent extends ComponentIntroComponent {

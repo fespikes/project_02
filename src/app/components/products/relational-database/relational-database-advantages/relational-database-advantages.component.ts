@@ -3,6 +3,7 @@ import { AdvantagesComponent } from '../../common/components/advantages/advantag
 import { RelationalDatabaseService } from '../relational-database.service';
 
 @Component({
+  selector: 'relational-database-advantages',
   templateUrl: '../../common/components/advantages/advantages.component.html',
 })
 export class RelationalDatabaseAdvantagesComponent extends AdvantagesComponent {

@@ -3,6 +3,7 @@ import { FunctionalitiesComponent } from '../../common/components/functionalitie
 import { InfoRetrievalService } from '../info-retrieval.service';
 
 @Component({
+  selector: 'info-retrieval-functionalities',
   templateUrl: '../../common/components/functionalities/functionalities.component.html',
 })
 export class InfoRetrievalFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */{

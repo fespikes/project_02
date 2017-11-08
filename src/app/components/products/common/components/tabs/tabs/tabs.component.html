@@ -5,11 +5,6 @@
 				(click)="scrollUp(tab.href, $event)"
 				[class.active]="idx===0"
 				>{{tab.text}}</a>
-				<!--TODO:-->
-			<a
-				*ngIf="!tab.href"
-				routerLink="{{tab.link}}"
-				routerLinkActive="active">{{tab.text}}</a>
 		</li>
 	</ul>
 </div>

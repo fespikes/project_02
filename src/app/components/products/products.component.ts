@@ -21,32 +21,32 @@ export class ProductsComponent implements OnInit {
 		},
 		{
 		  name: '数据集市',
-		  url: `/products/data-mart/functionalities`,
+		  url: `/products/data-mart`,
 		  icon: 'user'
 		},
 		{
 		  name: '信息检索',
-		  url: `/products/info-retrieval/functionalities`,
+		  url: `/products/info-retrieval`,
 		  icon: 'user'
 		},
 		{
 		  name: '关系数据库',
-		  url: `/products/relational-database/functionalities`,
+		  url: `/products/relational-database`,
 		  icon: 'user'
 		},
 		{
 		  name: '深度学习',
-		  url: `/products/deep-learning/functionalities`,
+		  url: `/products/deep-learning`,
 		  icon: 'user'
 		},
 		{
 		  name: '实时计算',
-		  url: `/products/realtime-computation/functionalities`,
+		  url: `/products/realtime-computation`,
 		  icon: 'user'
 		},
 		{
 		  name: '数据分析与挖掘',
-		  url: `/products/analysis-mining/functionalities`,
+		  url: `/products/analysis-mining`,
 		  icon: 'user'
 		},
 	];

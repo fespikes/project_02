@@ -5,6 +5,7 @@ import { FunctionalitiesComponent } from '../../common/components/functionalitie
 import { DataMartService } from '../data-mart.service';
 
 @Component({
+  selector: 'data-mart-functionalities',
   templateUrl: '../../common/components/functionalities/functionalities.component.html',
   //TODO: style abstraction in common of the image
 })

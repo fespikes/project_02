@@ -3,7 +3,8 @@ import { ScenariosComponent } from '../../common/components/scenarios/scenarios.
 import { RealtimeComputationService } from '../realtime-computation.service';
 
 @Component({
-	templateUrl: '../../common/components/scenarios/scenarios.component.html',
+  selector: 'realtime-computation-scenarios',
+  templateUrl: '../../common/components/scenarios/scenarios.component.html',
 })
 export class RealtimeComputationScenariosComponent extends ScenariosComponent {
 

@@ -3,6 +3,7 @@ import { ComponentIntroComponent } from '../../common/components/component-intro
 import { AnalysisMiningService } from '../analysis-mining.service';
 
 @Component({
+  selector: 'analysis-mining-component-intro',
   templateUrl: '../../common/components/component-intro/component-intro.component.html',
 })
 export class AnalysisMiningComponentIntroComponent extends ComponentIntroComponent {

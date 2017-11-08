@@ -3,6 +3,7 @@ import { AdvantagesComponent } from '../../common/components/advantages/advantag
 import { DataMartService } from '../data-mart.service';
 
 @Component({
+  selector: 'data-mart-advantages',
   templateUrl: '../../common/components/advantages/advantages.component.html',
 })
 export class DataMartAdvantagesComponent extends AdvantagesComponent {

@@ -3,6 +3,7 @@ import { AdvantagesComponent } from '../../common/components/advantages/advantag
 import { AnalysisMiningService } from '../analysis-mining.service';
 
 @Component({
+  selector: 'analysis-mining-advantages',
   templateUrl: '../../common/components/advantages/advantages.component.html',
 })
 export class AnalysisMiningAdvantagesComponent extends AdvantagesComponent {

@@ -2,8 +2,11 @@
 <data-mart-banner [productDetails]="productDetails"></data-mart-banner>
 
 <div class="tab-box">
-	<data-mart-tabs [productDetails]="productDetails"></data-mart-tabs>
-	<div class="tab-sub">
-		<router-outlet></router-outlet>
+  <data-mart-tabs [productDetails]="productDetails"></data-mart-tabs>
+  <div class="tab-sub">
+    <data-mart-functionalities></data-mart-functionalities>
+    <data-mart-advantages></data-mart-advantages>
+    <data-mart-scenarios></data-mart-scenarios>
+    <data-mart-component-intro></data-mart-component-intro>
 	</div>
 </div>
