@@ -16,22 +16,18 @@ export class DataWarehouseService {
   		tabs: [
         {
           text: '产品功能',
-          link: './functionalities',
           href: 'data-warehouse-functionalities'
         },
         {
           text: '产品优势',
-          link: './advantages',
           href: 'data-warehouse-advantages'
         },
         {
           text: '应用场景',
-          link: './scenarios',
           href: 'data-warehouse-scenarios'
         },
         {
           text: '组件介绍',
-          link: './component-intro',
           href: 'data-warehouse-component-intro'
         },
         /*{

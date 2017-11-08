@@ -7,8 +7,8 @@ import { TabsComponent } from '../../common/components/tabs/tabs.component';
 })
 export class AnalysisMiningTabsComponent extends TabsComponent implements OnInit {
 
-	@Input()
-	productDetails: any;
+  @Input()
+  productDetails: any;
 
   ngOnInit() {
   	this.data = this.productDetails.tabs;

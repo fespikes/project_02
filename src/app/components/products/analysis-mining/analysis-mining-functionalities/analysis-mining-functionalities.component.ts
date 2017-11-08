@@ -3,6 +3,7 @@ import { FunctionalitiesComponent } from '../../common/components/functionalitie
 import { AnalysisMiningService } from '../analysis-mining.service';
 
 @Component({
+  selector: 'analysis-mining-functionalities',
   templateUrl: '../../common/components/functionalities/functionalities.component.html',
 })
 export class AnalysisMiningFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */{
