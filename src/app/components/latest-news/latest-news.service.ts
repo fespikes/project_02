@@ -56,24 +56,30 @@ export class LatestNewsService {
   private apiUrl = 'api/v1/news?page_num=1';  //TODO: get the URL of web api
   //http://172.16.1.193:23333/api/v1/news?page_num=1
 
+  private list: News[];
+
   constructor(private http: Http) { }
 
   getNewsList(): Promise<News[]>{
-    let list: News[]=[];
   	// return newsListPromise;
+    let list: News[] = [];
     return this.http.get(this.apiUrl)
-     .toPromise()
-     .then(response => {
-       console.log(response);
-       response.json().list.forEach(item=>list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item))
-       console.log(list);
-       return list //as News[]
-     })
-     .catch(this.handleError);
+      .toPromise()
+      .then(response => {
+        console.log(response);
+        response.json().list.forEach(item=>list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item))
+        console.log(list);
+
+        this.list = list;
+
+        return this.list;
+      })
+      .catch(this.handleError);
   }
 
   getTheNews(id: number | string) {
-  	return newsListPromise.then(
+    console.log('in latest news service: id got ->', id);
+  	return Promise.resolve(this.list).then(
   		newsList => newsList.find(
   			//TODO: get api of get the correct news
   			News => News.id === +id
