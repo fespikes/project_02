@@ -17,38 +17,38 @@ export class ProductsComponent implements OnInit {
 		{
 		  name: '数据仓库',
 		  url: `/products/data-warehouse`,
-		  icon: 'user'
+		  icon: 'products-data-warehouse'
 		},
 		{
 		  name: '数据集市',
 		  url: `/products/data-mart`,
-		  icon: 'user'
+		  icon: 'products-data-mart'
 		},
 		{
 		  name: '信息检索',
 		  url: `/products/info-retrieval`,
-		  icon: 'user'
+		  icon: 'products-info-retrieval'
 		},
 		{
 		  name: '关系数据库',
 		  url: `/products/relational-database`,
-		  icon: 'user'
+		  icon: 'products-relational-database'
 		},
 		{
 		  name: '深度学习',
 		  url: `/products/deep-learning`,
-		  icon: 'user'
+		  icon: 'products-deep-learning'
 		},
 		{
 		  name: '实时计算',
 		  url: `/products/realtime-computation`,
-		  icon: 'user'
+		  icon: 'products-realtime-computation'
 		},
 		{
 		  name: '数据分析与挖掘',
 		  url: `/products/analysis-mining`,
-		  icon: 'user'
-		},
+		  icon: 'products-analysis-mining'
+		}
 	];
   backUrl = '../';
 
