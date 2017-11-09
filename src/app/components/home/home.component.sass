@@ -86,7 +86,7 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
 
 .cloud-products
   @extend .center-box
-  height: 858px
+  height: 750px
   background: #fff
   position: relative
 
@@ -187,14 +187,12 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
   .arrow
     margin-top: -80px
 
-.cloud-products:after
-  content: ""
-  display: block
+.gap-below-adv
   height: 108px
   width: 100%
-  position: absolute
-  bottom: 0
-  @include background(gap-bg)
+  position: relative
+  @include background(gap-bg, jpg, #264363, center)
+
 
 .tui-plugin-slices
   display: block
@@ -319,11 +317,14 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
 //E: .hot-modules
 
 .business-scenario
-  @extend .center-box
+  
   height: 700px
   position: relative
-  @include background(business-scenario-bg)
+  @include background(business-scenario-bg, jpg, #19212c, center)
 
+  &>div
+    @extend .center-box
+    height: 700px
 
   .scenarios
     width: 1164px
