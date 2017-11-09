@@ -100,42 +100,42 @@ const navigationData = {
 						{
 						  title: 'Inceptor',
 						  summary: '分析型数据库',
-						  routerLink: ''
+						  routerLink: './modules/product/inceptor/introduce'
 						},
 						{
 						  title: 'Slipstream',
 						  summary: '实时计算引擎',
-						  routerLink: ''
+						  routerLink: './modules/product/slipstream/introduce'
 						},
 						{
 						  title: 'Discover',
 						  summary: '数据挖掘',
-						  routerLink: ''
+						  routerLink: './modules/product/discover/introduce'
 						},
 						{
 						  title: 'Hyperbase',
 						  summary: '快速检索和非结构化数据处理',
-						  routerLink: ''
+						  routerLink: './modules/product/hyperbase/introduce'
 						},
 						{
 						  title: 'Search',
 						  summary: '全文检索',
-						  routerLink: ''
+						  routerLink: './modules/product/search/introduce'
 						},
 						{
 						  title: 'Sophon',
 						  summary: '深度学习和交互式数据挖掘',
-						  routerLink: ''
+						  routerLink: './modules/product/sophon/introduce'
 						},
 						{
 						  title: 'Guardian',
 						  summary: '安全、权限和资源管控',
-						  routerLink: ''
+						  routerLink: './modules/product/guardian/introduce'
 						},
 						{
 						  title: 'Apache Hadoop',
 						  summary: '分布式系统基础架构',
-						  routerLink: ''
+						  routerLink: './modules/product/hadoop/introduce'
 						}
 					]
 				},
@@ -146,27 +146,27 @@ const navigationData = {
 						{
 						  title: 'Pilot',
 						  summary: '报表工具',
-						  routerLink: ''
+						  routerLink: './modules/suite/pilot/introduce'
 						},
 						{
 						  title: 'Workflow',
 						  summary: '调度流',
-						  routerLink: ''
+						  routerLink: './modules/suite/workflow/introduce'
 						},
 						{
 						  title: 'Transporter',
 						  summary: '数据流',
-						  routerLink: ''
+						  routerLink: './modules/suite/transporter/introduce'
 						},
 						{
 						  title: 'Governor',
 						  summary: '元数据管理工具',
-						  routerLink: ''
+						  routerLink: './modules/suite/governor/introduce'
 						},
 						{
 						  title: 'Rubik',
 						  summary: 'OLAP Cube设计工具',
-						  routerLink: ''
+						  routerLink: './modules/suite/rubik/introduce'
 						}
 					]
 				},
@@ -177,17 +177,17 @@ const navigationData = {
 						{
 						  title: 'TxSQL',
 						  summary: '关系数据库',
-						  routerLink: ''
+						  routerLink: './modules/tool/txsql/introduce'
 						},
 						{
 						  title: 'Midas',
 						  summary: '机器学习分析工具',
-						  routerLink: ''
+						  routerLink: './modules/tool/midas/introduce'
 						},
 						{
 						  title: 'Waterdrop',
 						  summary: 'SQL开发工具',
-						  routerLink: ''
+						  routerLink: './modules/tool/waterdrop/introduce'
 						},
 						{
 						  title: 'Milano',
@@ -197,27 +197,27 @@ const navigationData = {
 						{
 						  title: 'Prometheus',
 						  summary: 'Metrics监控',
-						  routerLink: ''
+						  routerLink: './modules/tool/prometheus/introduce'
 						},
 						{
 						  title: 'Kafka',
 						  summary: '消息中间件',
-						  routerLink: ''
+						  routerLink: './modules/tool/kafka/introduce'
 						},
 						{
 						  title: 'Zeppelin',
 						  summary: 'Notebook IDE',
-						  routerLink: ''
+						  routerLink: './modules/tool/zeppelin/introduce'
 						},
 						{
 						  title: 'Terminal',
 						  summary: 'Docker命令行工具',
-						  routerLink: ''
+						  routerLink: './modules/tool/terminal/introduce'
 						},
 						{
 						  title: 'Redis',
 						  summary: '内存K-V数据库',
-						  routerLink: ''
+						  routerLink: './modules/tool/redis/introduce'
 						}
 					]
 				}

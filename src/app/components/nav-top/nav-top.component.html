@@ -62,7 +62,9 @@
 				<h3>{{item.title}}</h3>
 				<dl>
 					<dd *ngFor="let product of item.products; let i = index">
-						<a>
+						<a
+							(click)="onClick()"
+							routerLink="{{product.routerLink}}">
 							<h4>{{product.title}}</h4>
 							<p>{{product.summary}}</p>
 						</a>
