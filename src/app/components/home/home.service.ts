@@ -177,7 +177,7 @@ export class HomeService {
 
 			latestNews: [
 				{
-					id: 11,
+					id: 4,
 					routerLink: '',
 					routerLinkActive: '',
 					//the key was defined by BE:Huwei
@@ -187,7 +187,7 @@ export class HomeService {
 					date: '2017-09-23'
 				},
 				{
-					id: 12,
+					id: 5,
 					routerLink: '',
 					routerLinkActive: '',
 					icon: '/assets/images/home/news-1.jpg',
@@ -196,7 +196,7 @@ export class HomeService {
 					date: '2017-09-23'
 				},
 				{
-					id: 13,
+					id: 6,
 					routerLink: '',
 					routerLinkActive: '',
 					icon: '/assets/images/home/news-2.jpg',

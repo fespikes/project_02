@@ -7,10 +7,9 @@
     "target": "http://172.16.1.161:31177",
     "secure": false
   },
-  "/news/*": {
+  "/v1/*": {
     "target": "http://172.16.201.245:8200",
     "secure": false,
-    "changeOrigin": true,
     "logLevel": "debug"
   }
 }
