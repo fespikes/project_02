@@ -16,10 +16,18 @@
 		</li>
   </ul>
 
-  <a class="arrow left" (click)="goPrevious()"></a>
-  <a class="arrow right" (click)="goAfter()"></a>
+  <a 
+    *ngIf="advLength>1"
+    class="arrow left" 
+    (click)="goPrevious()"></a>
+  <a 
+    *ngIf="advLength>1"
+    class="arrow right"
+    (click)="goAfter()"></a>
 
-  <ul class="crumbs">
+  <ul
+    *ngIf="advLength>1"
+    class="crumbs">
     <li
     	*ngFor="let adv of advList; let idx=index"
     	[class.big]="currentIdx==idx">

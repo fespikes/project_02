@@ -15,7 +15,7 @@ export class HomeService {
 			    h2: '云上大数据服务',
 			    p: '我们专注于为企业提供以客户为中心的全流程产品，帮助企业获得成功'
 			  },
-			  {
+/*			  {
 			    bgUrl: '/assets/images/home/mock/1.jpg',
 			    bgColor: '#4a457f',
 			    h2: 'h2-01',
@@ -38,7 +38,7 @@ export class HomeService {
 			    bgColor: '#fbfde8',
 			    h2: 'h2-04',
 			    p: 'p-04'
-			  }
+			  }*/
 			],
 
 			cloudProducts: [

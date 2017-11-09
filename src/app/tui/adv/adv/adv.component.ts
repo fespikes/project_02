@@ -27,7 +27,9 @@ export class AdvComponent implements OnInit {
 
   ngOnInit() {
   	this.advLength = this.advList.length;
-  	this.setInterval(this.currentIdx);
+
+    this.currentAdv = this.advList[this.currentIdx];    
+  	this.advLength>1 && this.setInterval(this.currentIdx);
   }
 
 	setInterval(idx) {
