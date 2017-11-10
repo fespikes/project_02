@@ -175,35 +175,65 @@ export class DocumentSearchService {
     };
   }
 
-  keyHighLight(id, key, bgColor): void{
+  keyHighLight(id, key, bgColor, operation): void{
     if(!key || key === '') {
       return;
     }
     const dom = document.getElementById(id);
     const nodes  = dom.childNodes as any;
-    const keyEl = "<span style='background-color: "+bgColor+";'>"+key+"</span>";
-    const rStr = new RegExp(key, "g");
+    let originalStr = key;
+    let replacedStr = "<span style='background-color: "+bgColor+";'>"+key+"</span>";
+    if(operation === 'remove') {//default add key high light
+      originalStr = "<span style='background-color: "+bgColor+";'>"+key+"</span>";
+      replacedStr = key;
+    }
+    const rStr = new RegExp(originalStr, "g");
     for(let i =0; i<nodes.length - 1; i++){
       if(nodes[i].nodeType == 3 && /\s/.test(nodes[i].nodeValue)){
         nodes[i].parentNode.removeChild(nodes[i]);
       }
-      nodes[i].innerHTML = nodes[i].innerHTML.replace(rStr,keyEl);
+      nodes[i].innerHTML = nodes[i].innerHTML.replace(rStr,replacedStr);
     }
   }
 
   anchorTreeNode(nodeId, treeId): void {
     const node = document.getElementById(nodeId);
     const menuTree = document.getElementById(treeId);
-    menuTree.scrollTop = node.offsetTop;
+    if(!node || !menuTree) {
+      return;
+    }
+    menuTree.scrollTop = node.offsetTop - 60;
   }
 
   anchorDocContent(nodeId, reDis): void {
-    if(nodeId === 'index') {
+    const ele = document.getElementById(nodeId);
+    if(nodeId === 'index' || !ele) {
       return;
     }
-    const ele = document.getElementById(nodeId);
     const offsetLeft = ele.offsetLeft;
     const offsetTop = ele.offsetTop - reDis;
     scrollTo(offsetLeft, offsetTop);
+  }
+
+  getSecondLevelNodeId(treeModel, node) {
+    const secondLevelNode = this.findSecondLevelNode(treeModel, node) as any;
+    return secondLevelNode.id;
+  }
+
+  hasSameSecondAncestor(node, treeModel, sectionId) {
+    const sectionNode = this.findTreeNode(sectionId, treeModel) as any;
+    if(sectionNode.level !== 2) {
+      return false;
+    }
+    const secondLevelNode = this.findSecondLevelNode(treeModel, node) as any;
+    return secondLevelNode.id === sectionId;
+  }
+
+  findSecondLevelNode(treeModel, node): Object {
+    let parentNode = this.findTreeNode(node.parent, treeModel) as any;
+    while(parentNode.level > 2) {
+      parentNode = this.findTreeNode(parentNode.id, treeModel);
+    }
+    return parentNode;
   }
 }

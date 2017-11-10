@@ -77,11 +77,13 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   expandAll() {
-    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, 'expanded', true);
+    this.treeModel = this.documentSearchService.traversalTree(
+      this.treeModel, 'expanded', true);
   }
 
   collapseAll() {
-    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, 'expanded', false);
+    this.treeModel = this.documentSearchService.traversalTree(
+      this.treeModel, 'expanded', false);
   }
 
   onSelectChange(entity) {
@@ -96,7 +98,7 @@ export class DocumentsSearchComponent implements OnInit {
 
   listItemClick(doc) {
     this.documentResService.setKeyNeedRender(true);
-    this.documentResService.setAnchor(doc.anchor);
+    this.documentResService.setAnchorId(doc.anchor);
     this.documentResService.setSectionId(doc.document.filename);
     this.router.navigate([`/documents-support/docs-detail/${doc.document.id}`]);
   }

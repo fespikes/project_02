@@ -1,5 +1,6 @@
 <div *ngFor="let node of treeModel">
   <div
+    id="doc-tree-{{node.id}}"
     class="node-type"
     [class.selected]="node.selected"
     (dblclick)="dbClick(node, treeLevel)"
@@ -12,7 +13,6 @@
       (click)="toggle(node, treeLevel)"
     ></svg>
     <a
-      id="doc-tree-{{node.id}}"
       title="{{node.name}}"
       class="node-name node-name-level-{{treeLevel}} text-ellipsis"
       [class.selected]="node.selected"
