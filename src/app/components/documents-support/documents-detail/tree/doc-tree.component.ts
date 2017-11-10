@@ -32,19 +32,17 @@ export class DocTreeComponent implements OnInit {
 
   }
 
-  toggle(node, level) {
+  toggle(node) {
     node.expanded = !node.expanded;
-    this.selectChange(node, level);
+    this.onSelectChange.emit(node);
   }
 
-  dbClick(node, level) {
-    this.toggle(node, level);
+  dbClick(node) {
+    this.toggle(node);
   }
 
-  selectChange(node, level) {
-    if(level) {//exclude parent event
-      node.level = level;
-    }
+  selectChange(node) {
+    node.expanded = true;
     this.onSelectChange.emit(node);
   }
 

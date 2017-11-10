@@ -23,6 +23,8 @@ export class DocsListComponent implements OnInit {
   @Input() docsCount: number;
   @Output() onListItemClick = new EventEmitter();
 
+  DOC_LIST_ITEM_PREFIX = 'doc-list-item-';
+
   constructor(
     private documentUtilService: DocumentUtilService,
     private documentResService: DocumentResService
@@ -57,7 +59,7 @@ export class DocsListComponent implements OnInit {
   }
 
   getMountId(doc) {//for backend response data lack of id=0 case
-    let mountId = 'docs-list-item-';
+    let mountId = this.DOC_LIST_ITEM_PREFIX;
     if(doc.id) {
       mountId += doc.id;
     }

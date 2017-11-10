@@ -3,20 +3,20 @@
     id="doc-tree-{{node.id}}"
     class="node-type"
     [class.selected]="node.selected"
-    (dblclick)="dbClick(node, treeLevel)"
+    (dblclick)="dbClick(node)"
     [ngStyle]="{'padding-left': (treeLevel * 20) + 'px'}"
   >
     <svg
       [ngClass]="{'hide': !node.children || node.children.length === 0}"
       tccIcon="angle-up" size="sm"
       [class.expanded]="node.expanded"
-      (click)="toggle(node, treeLevel)"
+      (click)="toggle(node)"
     ></svg>
     <a
       title="{{node.name}}"
       class="node-name node-name-level-{{treeLevel}} text-ellipsis"
       [class.selected]="node.selected"
-      (click)="selectChange(node, treeLevel);"
+      (click)="selectChange(node);"
     >
       {{node.name}}
     </a>

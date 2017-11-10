@@ -40,6 +40,7 @@ export class DocumentsSearchComponent implements OnInit {
 
     this.keyword = this.documentResService.getKeyword();
     this.onDocumentSearch(this.keyword);
+    scrollTo(0, 0);
   }
 
   onDocumentSearch(keyword) {
@@ -94,6 +95,7 @@ export class DocumentsSearchComponent implements OnInit {
     const searchParams = this.documentSearchService.makeSearchParams(
       this.keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
+    scrollTo(0, 0);
   }
 
   listItemClick(doc) {
