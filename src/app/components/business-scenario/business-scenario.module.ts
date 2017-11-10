@@ -6,7 +6,7 @@ import { ScenarioComponent } from './scenario/scenario.component';
 import { BusinessScenarioComponent } from './business-scenario.component';
 import { BusinessScenarioRoutingModule } from './business-scenario-routing.module';
 import { BusinessScenarioService } from './business-scenario.service';
-import { BreadCrumbsComponent } from './bread-crumbs/bread-crumbs.component';
+import { BreadCrumbsComponent } from '../common/components/bread-crumbs/bread-crumbs.component';
 
 @NgModule({
   imports: [
