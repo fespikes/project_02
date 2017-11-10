@@ -74,7 +74,7 @@ scenarios = [
     slogan: '一站式数据仓库服务解决方案，实现数据采集、数据整合、模型加工、数据管理等完备的一体化数仓功能，支持对于查询速度、并发度、扩展性的保障。',
 
     adv: bannerBase + 'data-warehouse.jpg',//TODO: the pic
-    advBgColor: '#011a45',
+    advBgColor: '#001740',
 
     details: [
       //'business-background': 
