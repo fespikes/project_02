@@ -20,7 +20,7 @@ export class BusinessScenarioService {
   getRoute() {
     return {
       short: '业务方案',
-      href: '/business-scenario'
+      href: '/business-scenarios'
     };
   }
 
