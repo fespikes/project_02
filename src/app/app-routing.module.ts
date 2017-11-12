@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 // import { ProductsComponent } from './components/products/products.component';
 import { ModulesComponent } from './components/modules/modules.component';
-import { BusinessScenarioComponent } from './components/business-scenario/business-scenario.component';
+import { BusinessScenariosComponent } from './components/business-scenarios/business-scenarios.component';
 import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
 
@@ -26,15 +26,10 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  {
-    path: 'business-scenarios',
-    component: BusinessScenarioComponent
-
-    //below code made error when adding business-scenario/:type
-    // loadChildren: './components/business-scenario/business-scenario.module#BusinessScenarioModule'
-    //TODO: lazy load
-  },
-
+  // {
+  //   path: 'business-scenarios',
+  //   loadChildren: './components/business-scenarios/business-scenarios.module#BusinessScenariosModule'
+  // },
   {
     path: 'modules',
     loadChildren: './components/modules/modules.module#ModulesModule'

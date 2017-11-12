@@ -6,6 +6,8 @@ import { LatestNewsRoutingModule } from './latest-news-routing.module';
 import { TheNewsComponent } from './the-news/the-news.component';
 import { LatestNewsComponent } from './latest-news.component';
 import { LatestNewsService } from './latest-news.service';
+import { BreadCrumbsComponent } from './bread-crumbs/bread-crumbs.component';
+// import { BreadCrumbsComponent } from '../common/components/bread-crumbs/bread-crumbs.component';
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import { LatestNewsService } from './latest-news.service';
   ],
   declarations: [
   	TheNewsComponent,
-  	LatestNewsComponent
+  	LatestNewsComponent,
+  	BreadCrumbsComponent,
+    // BreadCrumbsComponent
   ],
   providers: [
   	LatestNewsService

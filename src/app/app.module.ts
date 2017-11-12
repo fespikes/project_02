@@ -20,7 +20,7 @@ import { ModulesModule } from './components/modules/modules.module';
 import { DocumentsSupportModule } from './components/documents-support/documents-support.module';
 // import { ProductsModule } from './components/products/products.module';
 import { LatestNewsModule } from './components/latest-news/latest-news.module';
-import { BusinessScenarioModule } from './components/business-scenario/business-scenario.module';
+import { BusinessScenariosModule } from './components/business-scenarios/business-scenarios.module';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
@@ -31,6 +31,7 @@ import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component
 
 // import { AfterSaleServiceModule } from './components/after-sale-service/after-sale-service.module';
 // import { AfterSaleServiceComponent } from './components/after-sale-service/after-sale-service.component';
+import { BreadCrumbsComponent as TheBreadCrumbsComponent } from './components/common/components/bread-crumbs/bread-crumbs.component';
 
 import {
   I18nModule,
@@ -46,6 +47,7 @@ import {
     LoginComponent,
     NavTopComponent,
     NavBottomComponent,
+    TheBreadCrumbsComponent,
     PageNotFoundComponent,
     ManagementCenterComponent,
     // AfterSaleServiceComponent
@@ -58,7 +60,7 @@ import {
     TdcModule,
     SharedModule,
     HomeModule,
-    BusinessScenarioModule,  //related to app-routing.module
+    BusinessScenariosModule,  //related to app-routing.module
 
     LatestNewsModule,
     DocumentsSupportModule,

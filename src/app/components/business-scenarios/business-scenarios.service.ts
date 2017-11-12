@@ -9,7 +9,7 @@ let scenarios: Scenario[];
 //TODO: add back all scenario contents
 
 @Injectable()
-export class BusinessScenarioService {
+export class BusinessScenariosService {
 
   private scenarios: Scenario[];
 

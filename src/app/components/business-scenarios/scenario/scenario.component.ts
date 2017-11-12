@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { BusinessScenarioService } from '../business-scenario.service';
+import { BusinessScenariosService } from '../business-scenarios.service';
 import { Scenario } from './scenario';
 
 import { Observable } from 'rxjs/Observable';
@@ -21,7 +21,7 @@ export class ScenarioComponent implements OnInit {
   constructor(
 	  private route: ActivatedRoute,
 	  private router: Router,
-	  private service: BusinessScenarioService
+	  private service: BusinessScenariosService
 	) { }
 
   ngOnInit() {

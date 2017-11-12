@@ -49,7 +49,6 @@ let newsList = [
     ),
 ];
 
-let newsListPromise = Promise.resolve(newsList);
 @Injectable()
 export class LatestNewsService {
   // private apiUrl = 'news/api/v1/news?page_num=1';  //TODO: get the URL of web api
@@ -61,8 +60,11 @@ export class LatestNewsService {
   constructor(private http: Http) { }
 
   getNewsList(): Promise<News[]>{
-  	// return newsListPromise;
-    let list: News[] = [];
+    this.list = newsList;
+    let newsListPromise = Promise.resolve(this.list);
+  	return newsListPromise;
+
+/*    let list: News[] = [];
     return this.http.get(this.apiUrl)
       .toPromise()
       .then(response => {
@@ -74,7 +76,7 @@ export class LatestNewsService {
 
         return this.list;
       })
-      .catch(this.handleError);
+      .catch(this.handleError);*/
   }
 
   getTheNews(id: number | string) {
@@ -90,6 +92,13 @@ export class LatestNewsService {
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
+  }
+
+  getRoute() {
+    return {
+      short: '首页',
+      href: '/home'
+    };
   }
 
 }

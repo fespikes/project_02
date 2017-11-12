@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ScenarioComponent } from './scenario/scenario.component';
-import { BusinessScenarioComponent } from './business-scenario.component';
+import { BusinessScenariosComponent } from './business-scenarios.component';
 
 const scenarioRoutes:Routes = [
   {
     path: 'business-scenarios',
-    component: BusinessScenarioComponent,
+    component: BusinessScenariosComponent,
   },
   {
     path: 'business-scenario/:type',
@@ -26,4 +26,4 @@ const scenarioRoutes:Routes = [
   	RouterModule
   ]
 })
-export class BusinessScenarioRoutingModule { }
+export class BusinessScenariosRoutingModule { }

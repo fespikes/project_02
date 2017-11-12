@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { BusinessScenarioService } from './business-scenario.service';
+import { BusinessScenariosService } from './business-scenarios.service';
 import { Scenario } from './scenario/scenario';
 
 
 @Component({
-  selector: 'tdc-business-scenario',
-  templateUrl: './business-scenario.component.html',
-  styleUrls: ['./business-scenario.component.sass']
+  selector: 'tdc-business-scenarios',
+  templateUrl: './business-scenarios.component.html',
+  styleUrls: ['./business-scenarios.component.sass']
 })
-export class BusinessScenarioComponent implements OnInit {
+export class BusinessScenariosComponent implements OnInit {
 
 	private scenarios: Scenario[];
 
   constructor(
 	  private route: ActivatedRoute,
 	  private router: Router,
-	  private service: BusinessScenarioService
+	  private service: BusinessScenariosService
 	  ) {
   }
 
