@@ -1,12 +1,10 @@
-<div class="docs-search">
-  <div class="search-crumb">
-    <document-breadcrumb
-      [crumbItems]="crumbItems"
-    ></document-breadcrumb>
-  </div>
-  <div class="search-panel clearfix">
-    <div class="panel-left">
-      <div class="filter">
+<div class="doc-support-panel">
+  <document-breadcrumb
+    [crumbItems]="crumbItems"
+  ></document-breadcrumb>
+  <div class="content-panel">
+    <div class="panel-left filter-tree">
+      <div class="panel-left-header filter">
         <span>{{'DOCUMENTS.SEARCH_FILTER' | translate}}</span>
       </div>
       <div class="tree">
@@ -24,7 +22,7 @@
         </button>
       </div>
     </div>
-    <div class="panel-right">
+    <div class="panel-right filter-result">
       <div class="search-docs">
         <docs-search
           [keyword]="keyword"

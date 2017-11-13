@@ -50,6 +50,8 @@ export class DocumentsDetailComponent implements OnInit {
     );
     this.getDocTree();
     this.getDocDetail();
+    this.documentUtilService.setBodyWidthAttribute('100%');
+    scrollTo(0, 0);
   }
 
   getDocTree() {
@@ -157,5 +159,9 @@ export class DocumentsDetailComponent implements OnInit {
         this.getDocDetail();
       }
     }
+  }
+
+  ngOnDestroy() {
+    this.documentUtilService.setBodyWidthAttribute('100vw');
   }
 }

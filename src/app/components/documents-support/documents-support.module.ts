@@ -13,8 +13,8 @@ import { NormalIssuesComponent } from './documents-list/normal-issues/normal-iss
 import { FreshGuidesComponent } from './documents-list/fresh-guides/fresh-guides.component';
 import { ProductListComponent } from './documents-list/product-document/product-list/product-list.component';
 
-import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
-import { SearchComponent } from './common/search/search.component';
+import { BreadcrumbComponent } from './common/components/breadcrumb/breadcrumb.component';
+import { SearchComponent } from './common/components/search/search.component';
 import { SearchTreeComponent } from './documents-search/tree/search-tree.component';
 import { DocTreeComponent } from './documents-detail/tree/doc-tree.component';
 import { DocsListComponent } from './documents-search/list/docs-list.component';

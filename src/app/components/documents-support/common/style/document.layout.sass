@@ -1,0 +1,43 @@
+@import "../../../../styles/util"
+
+$tree-head-height: 50px
+$tree-footer-height: 80px
+$search-panel-head-height: 87px
+$pagination-area-height: 60px
+$search-panel-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
+$tree-height-filter: calc(100vh - #{$top-nav-height + $crumb-height + $tree-head-height + $tree-footer-height})
+$docs-list-min-height: calc(100vh - #{$top-nav-height + $crumb-height + $search-panel-head-height + $pagination-area-height})
+$tree-height-menu: calc(100vh - #{$top-nav-height + $crumb-height + $tree-head-height})
+$doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
+
+.doc-support-panel
+  width: 1200px
+  margin: 0 auto
+  position: relative
+  left: calc(50vw - 50%)
+
+  .breadcrumb
+    position: fixed
+
+.content-panel
+  margin-top: $top-nav-height + $crumb-height
+  min-height: $search-panel-min-height
+  background-color: $common-bg-color
+
+  .panel-left
+    width: 250px
+    background-color: #fff
+    border-top-right-radius: 4px
+    position: fixed
+
+    &-header
+      width: 100%
+      height: 50px
+      padding-left: 20px
+
+  .panel-right
+    margin: 0 20px 0 270px
+    background-color: #fff
+    border-radius: 4px
+    min-height: inherit
+    position: relative

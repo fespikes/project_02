@@ -1,8 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 
-import { TabComponent } from '../../common/components/tab/tab.component';
-import { BreadcrumbComponent } from '../common/breadcrumb/breadcrumb.component';
-
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentResService } from '../services/document.res.service';
 
