@@ -29,7 +29,7 @@ export class DocumentsDetailComponent implements OnInit {
   docName = '';
 
   RELA_DIS_MAIN_TITLE = 140;
-  RELA_DIS_SUB_TITLE = 105;
+  RELA_DIS_SUB_TITLE = 10;
   DOC_DETAIL = 'doc-detail';
   DOC_TREE = 'doc-tree';
 
@@ -69,14 +69,11 @@ export class DocumentsDetailComponent implements OnInit {
 
   getDocDetail() {
     let url = this.getPath(this.DOC_DETAIL);
-    const anchorId = this.documentResService.getSectionId();
     this.documentAPIService.getDocDetail(url).subscribe(
       result =>{
         this.documentUtilService.appendDocContent(result.content);
         this.documentUtilService.hideDocElement('header');
-        this.documentSearchService.anchorDocContent(
-          anchorId, this.RELA_DIS_MAIN_TITLE
-        );
+        this.anchorDocContent();
         this.highLightKey('add');
         this.loadDocSheet();
       }
@@ -97,6 +94,16 @@ export class DocumentsDetailComponent implements OnInit {
       this.getDocSheet();
     }
     this.documentResService.setDocLoaded(true);
+  }
+
+  anchorDocContent() {
+    const anchorId = this.documentResService.getAnchorId();
+    const anchorNode = this.documentSearchService.findTreeNode(
+      anchorId, this.treeModel
+    );
+    const distance = anchorNode<3 ? this.RELA_DIS_MAIN_TITLE
+      :this.RELA_DIS_SUB_TITLE;
+    this.documentSearchService.anchorDocContent(anchorId, distance);
   }
 
   getDocSheet() {
@@ -133,13 +140,10 @@ export class DocumentsDetailComponent implements OnInit {
       this.documentResService.setKeyNeedRender(false);
     }
     this.showDocContentByLevel(node);
-    this.router.navigate([`/documents-support/docs-detail/${this.pathParams.category}/${this.pathParams.version}/${this.pathParams.component}`]);
   }
 
   updateTreeState(node) {
-    this.treeModel = this.documentSearchService.traversalTree(
-      this.treeModel, 'selected', false
-    );
+    this.treeModel = this.documentSearchService.removeSelectedState(this.treeModel);
     node.selected = true;
   }
 
@@ -149,13 +153,12 @@ export class DocumentsDetailComponent implements OnInit {
     }else if(node.level >= 3) {//third、fourth ... folder anchor content
       if(this.documentSearchService.hasSameSecondAncestor(
           node, this.treeModel, this.documentResService.getSectionId())) {
-        this.documentSearchService.anchorDocContent(
-          node.id, this.RELA_DIS_SUB_TITLE);
+        this.anchorDocContent();
       }else {
         const secondNodeId = this.documentSearchService.getSecondLevelNodeId(
           this.treeModel, node
         );
-        this.documentResService.setLevelId(secondNodeId, 2);
+        this.documentResService.setSectionId(secondNodeId);
         this.getDocDetail();
       }
     }
