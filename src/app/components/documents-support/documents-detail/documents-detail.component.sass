@@ -1,47 +1,22 @@
 @import '../../../styles/util'
-@include clearfix
+@import '../common/style/document.layout'
 
-$tree-head-height: 50px
-$tree-height: calc(100vh - #{$top-nav-height + $crumb-height + $tree-head-height})
-$doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
+.doc-menu
+  border-radius: 4px
+
+  .doc-name
+    width: 100%
+    height: 50px
+    line-height: 50px
+    padding-left: 20px
+    color: #fff
+    background-color: #0066ce
+
+  .tree
+    overflow: auto
+    background-color: #fff
+    height: $tree-height-menu
 
 .doc-detail
-  width: 1200px
-  margin: 0 auto
-  background-color: $common-bg-color
-
-  .breadcrumb
-    position: fixed
-
-.doc-content
-  margin-top: $top-nav-height + $crumb-height
-  min-height: $doc-content-min-height
-
-  .menu
-    width: 250px
-    height: 100%
-    border-radius: 4px
-    position: fixed
-    top: 100px
-
-    .doc-name
-      width: 100%
-      height: 50px
-      line-height: 50px
-      padding-left: 20px
-      color: #fff
-      background-color: #0066ce
-
-    .tree
-      overflow-x: hidden
-      overflow-y: auto
-      background-color: #fff
-      height: $tree-height
-
-  .context
-    min-height: inherit
-    border-radius: 4px
-    margin: 100px 18px 0 270px
-    background-color: #fff
-    padding: 30px 20px 30px 20px
+  padding: 30px 20px 30px 20px
 
