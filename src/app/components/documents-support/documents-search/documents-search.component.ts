@@ -40,6 +40,7 @@ export class DocumentsSearchComponent implements OnInit {
 
     this.keyword = this.documentResService.getKeyword();
     this.onDocumentSearch(this.keyword);
+    scrollTo(0, 0);
   }
 
   onDocumentSearch(keyword) {
@@ -77,11 +78,13 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   expandAll() {
-    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, 'expanded', true);
+    this.treeModel = this.documentSearchService.traversalTree(
+      this.treeModel, 'expanded', true);
   }
 
   collapseAll() {
-    this.treeModel = this.documentSearchService.traversalTree(this.treeModel, 'expanded', false);
+    this.treeModel = this.documentSearchService.traversalTree(
+      this.treeModel, 'expanded', false);
   }
 
   onSelectChange(entity) {
@@ -92,11 +95,12 @@ export class DocumentsSearchComponent implements OnInit {
     const searchParams = this.documentSearchService.makeSearchParams(
       this.keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
+    scrollTo(0, 0);
   }
 
   listItemClick(doc) {
     this.documentResService.setKeyNeedRender(true);
-    this.documentResService.setAnchor(doc.anchor);
+    this.documentResService.setAnchorId(doc.anchor);
     this.documentResService.setSectionId(doc.document.filename);
     this.router.navigate([`/documents-support/docs-detail/${doc.document.id}`]);
   }

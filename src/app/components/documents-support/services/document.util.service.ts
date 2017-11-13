@@ -77,4 +77,7 @@ export class DocumentUtilService {
     document.head.appendChild(style);
   }
 
+  hideDocElement(eleId):void {
+    document.getElementById(eleId).style.display = 'none';
+  }
 }

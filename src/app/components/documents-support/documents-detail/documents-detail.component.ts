@@ -27,7 +27,11 @@ export class DocumentsDetailComponent implements OnInit {
   treeModel = [];
   treeLevel = 1;
   docName = '';
+
   RELA_DIS_MAIN_TITLE = 140;
+  RELA_DIS_SUB_TITLE = 105;
+  DOC_DETAIL = 'doc-detail';
+  DOC_TREE = 'doc-tree';
 
   constructor(
     private documentAPIService: DocumentAPIService,
@@ -41,43 +45,48 @@ export class DocumentsDetailComponent implements OnInit {
 
   ngOnInit() {
     this.docName = this.documentUtilService.getModuleName(window.location.hash);
-    this.crumbItems = this.documentResService.getDocsCrumb('docs-detail', this.docName);
+    this.crumbItems = this.documentResService.getDocsCrumb(
+      this.DOC_DETAIL, this.docName
+    );
     this.getDocTree();
     this.getDocDetail();
   }
 
   getDocTree() {
-    const url = this.getPath('docTree');
-    const sectionId = this.documentResService.getSectionId();
+    const url = this.getPath(this.DOC_TREE);
+    const anchorId = this.documentResService.getAnchorId();
     this.documentAPIService.getDocTree(url).subscribe(
       result =>{
         this.treeModel = result.nav.children;
         this.treeModel = this.documentSearchService.initTreeSelectedState(
-          this.treeModel, sectionId
+          this.treeModel, anchorId
         );
       }
     );
   }
 
   getDocDetail() {
-    let url = this.getPath('docDetail');
-    const sectionId = this.documentResService.getSectionId();
+    let url = this.getPath(this.DOC_DETAIL);
+    const anchorId = this.documentResService.getSectionId();
     this.documentAPIService.getDocDetail(url).subscribe(
       result =>{
         this.documentUtilService.appendDocContent(result.content);
-        document.getElementById('header').style.display = 'none';
-        this.documentSearchService.anchorDocContent(sectionId, this.RELA_DIS_MAIN_TITLE);
-        this.highLightKey();
+        this.documentUtilService.hideDocElement('header');
+        this.documentSearchService.anchorDocContent(
+          anchorId, this.RELA_DIS_MAIN_TITLE
+        );
+        this.highLightKey('add');
         this.loadDocSheet();
       }
     );
   }
 
-  highLightKey() {
+  highLightKey(operation) {
     const keyNeedRender = this.documentResService.getKeyNeedRender();
     if(keyNeedRender) {
       this.documentSearchService.keyHighLight(
-        'content', this.documentResService.getKeyword(), '#ffff00');
+        'content', this.documentResService.getKeyword(), '#ffff00', operation
+      );
     }
   }
 
@@ -102,10 +111,10 @@ export class DocumentsDetailComponent implements OnInit {
       window.location.hash, sectionId);
     let path;
     switch (type) {
-      case 'docTree':
+      case this.DOC_TREE:
         path = this.documentUtilService.makeDocTreeUrl(this.pathParams);
         break;
-      case 'docDetail':
+      case this.DOC_DETAIL:
         path = this.documentUtilService.makeDocDetailUrl(this.pathParams);
         break;
       default:
@@ -115,9 +124,38 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   onSelectChange(node) {
+    this.updateTreeState(node);
+    this.documentResService.setLevelId(node.id, node.level);
+    if(this.documentResService.getKeyNeedRender()) {
+      this.highLightKey('remove');
+      this.documentResService.setKeyNeedRender(false);
+    }
+    this.showDocContentByLevel(node);
     this.router.navigate([`/documents-support/docs-detail/${this.pathParams.category}/${this.pathParams.version}/${this.pathParams.component}`]);
-    if(node.level <= 2) {
+  }
+
+  updateTreeState(node) {
+    this.treeModel = this.documentSearchService.traversalTree(
+      this.treeModel, 'selected', false
+    );
+    node.selected = true;
+  }
+
+  showDocContentByLevel(node) {
+    if(node.level <= 2) {//first、second folder request api
       this.getDocDetail();
+    }else if(node.level >= 3) {//third、fourth ... folder anchor content
+      if(this.documentSearchService.hasSameSecondAncestor(
+          node, this.treeModel, this.documentResService.getSectionId())) {
+        this.documentSearchService.anchorDocContent(
+          node.id, this.RELA_DIS_SUB_TITLE);
+      }else {
+        const secondNodeId = this.documentSearchService.getSecondLevelNodeId(
+          this.treeModel, node
+        );
+        this.documentResService.setLevelId(secondNodeId, 2);
+        this.getDocDetail();
+      }
     }
   }
 }

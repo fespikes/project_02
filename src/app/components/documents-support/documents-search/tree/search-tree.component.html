@@ -19,7 +19,12 @@
           [(ngModel)]="module.selected"
           (ngModelChange)="selectChange(type, module)"
         ></tcc-checkbox>
-        <span>{{module.name}}</span>
+        <span
+          class="text-ellipsis"
+          title="{{module.name}}"
+        >
+          {{module.name}}
+        </span>
       </div>
 
       <div
