@@ -2,9 +2,11 @@
   <document-breadcrumb
     [crumbItems]="crumbItems"
   ></document-breadcrumb>
-  <div class="content-panel">
+  <div class="content-panel doc-panel">
     <div class="panel-left doc-menu">
-      <div class="doc-name">{{docName}}</div>
+      <div class="panel-left-header doc-name">
+        {{docName}}
+      </div>
       <div class="tree" id="doc-menu-tree">
         <tdc-menu-tree
           [treeModel]="treeModel"

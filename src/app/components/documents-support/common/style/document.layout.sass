@@ -11,9 +11,10 @@ $tree-height-menu: calc(100vh - #{$top-nav-height + $crumb-height + $tree-head-h
 $doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
 
 .doc-support-panel
-  background-color: $common-bg-color
   width: 1200px
   margin: 0 auto
+  position: relative
+  left: calc(50vw - 50%)
 
   .breadcrumb
     position: fixed
@@ -21,6 +22,7 @@ $doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
 .content-panel
   margin-top: $top-nav-height + $crumb-height
   min-height: $search-panel-min-height
+  background-color: $common-bg-color
 
   .panel-left
     width: 250px
@@ -28,6 +30,10 @@ $doc-content-min-height: calc(100vh - #{$top-nav-height + $crumb-height})
     border-top-right-radius: 4px
     position: fixed
 
+    &-header
+      width: 100%
+      height: 50px
+      padding-left: 20px
 
   .panel-right
     margin: 0 20px 0 270px
