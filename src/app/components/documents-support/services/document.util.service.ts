@@ -77,7 +77,12 @@ export class DocumentUtilService {
     document.head.appendChild(style);
   }
 
-  hideDocElement(eleId):void {
+  hideDocElement(eleId): void {
     document.getElementById(eleId).style.display = 'none';
+  }
+
+  setBodyWidthAttribute(attribute): void {
+    const bodyEl = document.getElementsByTagName("body")[0];
+    bodyEl.style.width = attribute;
   }
 }

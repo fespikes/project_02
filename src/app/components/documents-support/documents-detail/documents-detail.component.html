@@ -1,10 +1,12 @@
-<div class="doc-detail">
+<div class="doc-support-panel">
   <document-breadcrumb
     [crumbItems]="crumbItems"
   ></document-breadcrumb>
-  <div class="doc-content clearfix">
-    <div class="menu">
-      <div class="doc-name">{{docName}}</div>
+  <div class="content-panel doc-panel">
+    <div class="panel-left doc-menu">
+      <div class="panel-left-header doc-name">
+        {{docName}}
+      </div>
       <div class="tree" id="doc-menu-tree">
         <tdc-menu-tree
           [treeModel]="treeModel"
@@ -13,9 +15,10 @@
         ></tdc-menu-tree>
       </div>
     </div>
-    <div id="doc-detail-content" class="context">
-
-    </div>
+    <div
+      id="doc-detail-content"
+      class="panel-right doc-detail"
+    ></div>
   </div>
 </div>
 
