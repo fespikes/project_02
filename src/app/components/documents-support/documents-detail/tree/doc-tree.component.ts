@@ -22,7 +22,6 @@ export class DocTreeComponent implements OnInit {
 
   DOC_MENU_TREE_ID = 'doc-menu-tree';
   TREE_NODE_PREFIX = 'doc-tree-';
-  RELA_DIS_SUB_TITLE = 105;
 
   constructor(
     private documentSearchService: DocumentSearchService,
@@ -33,37 +32,26 @@ export class DocTreeComponent implements OnInit {
 
   }
 
-  toggle(node, level) {
+  toggle(node) {
     node.expanded = !node.expanded;
-    this.selectChange(node, level);
-  }
-
-  dbClick(node, level) {
-    this.toggle(node, level);
-  }
-
-  selectChange(node, level) {
-    this.updateTreeState(node, level);
-    this.documentResService.setSectionId(node.id);
     this.onSelectChange.emit(node);
-    if(level >= 3) {
-      this.documentSearchService.anchorDocContent(
-        node.id, this.RELA_DIS_SUB_TITLE);
-    }
   }
 
-  updateTreeState(node, level) {
-    this.treeModel = this.documentSearchService.traversalTree(
-      this.treeModel, 'selected', false);
-    node.selected = !node.selected;
-    node.level = level || node.level;
+  dbClick(node) {
+    this.toggle(node);
+  }
+
+  selectChange(node) {
+    node.expanded = true;
+    this.onSelectChange.emit(node);
   }
 
   ngAfterViewInit() {
     if (this.treeModel && this.treeModel.length > 0) {
-      const sectionId = this.documentResService.getSectionId();
+      const anchorId = this.documentResService.getAnchorId();
       this.documentSearchService.anchorTreeNode(
-        this.TREE_NODE_PREFIX + sectionId, this.DOC_MENU_TREE_ID);
+        this.TREE_NODE_PREFIX + anchorId, this.DOC_MENU_TREE_ID
+      );
     }
   }
 }

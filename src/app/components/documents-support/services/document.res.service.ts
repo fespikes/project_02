@@ -8,8 +8,9 @@ import { TdcApiService } from '../../../shared/services/api.service';
 
 @Injectable()
 export class DocumentResService {
-  anchor='';
-  sectionName = 'index';
+  anchor = 'index';//for anchor content
+  sectionId = 'index';//for common api request
+
   keyword = '';
   docLoaded = false;
   searchCompleted = false;
@@ -20,19 +21,26 @@ export class DocumentResService {
   }
 
   getSectionId(): string {
-    return this.sectionName;
+    return this.sectionId;
   }
 
-  setSectionId(name): void {
-    this.sectionName = name;
+  setSectionId(id): void {
+    this.sectionId = id;
   }
 
-  getAnchor(): string {
+  getAnchorId(): string {
     return this.anchor;
   }
 
-  setAnchor(anchor): void {
+  setAnchorId(anchor): void {
     this.anchor = anchor;
+  }
+
+  setLevelId(id, level) {
+    this.setAnchorId(id);
+    if(level <= 2) {
+      this.setSectionId(id);
+    }
   }
 
   getKeyword(): string {
@@ -130,7 +138,7 @@ export class DocumentResService {
           }
         ];
         break;
-      case 'docs-detail':
+      case 'doc-detail':
         crumbItems = [
           {
             name: 'documentSupport',
