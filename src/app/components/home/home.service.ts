@@ -15,7 +15,7 @@ export class HomeService {
 			    p: '我们专注于为企业提供以客户为中心的全流程产品，帮助企业获得成功'
 			  },
 			  {
-			    bgUrl: '/assets/images/home/banners/banner2.png',
+			    bgUrl: '/assets/images/home/banners/banner2.jpg',
 			    bgColor: '#09629a',
 			    h2: '丰富的大数据解决方案',
 			    p: '提供数据仓库、数据集市、机器学习、信息检索等多种解决方案，全面覆盖各种场景的数据处理需求'
