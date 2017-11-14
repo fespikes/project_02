@@ -9,30 +9,29 @@ export class HomeService {
 		return {
 			advList: [
 			  {
-			    bgUrl: '/assets/images/home/banner-bg.jpg',
-			    bgColor: '#0a0e11',
-			    //TODO: switch the bg
+			    bgUrl: '/assets/images/home/banners/banner1.jpg',
+			    bgColor: '#090e14',
 			    h2: '云上大数据服务',
 			    p: '我们专注于为企业提供以客户为中心的全流程产品，帮助企业获得成功'
 			  },
-/*			  {
-			    bgUrl: '/assets/images/home/mock/1.jpg',
-			    bgColor: '#4a457f',
-			    h2: 'h2-01',
-			    p: 'p-01'
+			  {
+			    bgUrl: '/assets/images/home/banners/banner2.png',
+			    bgColor: '#09629a',
+			    h2: '丰富的大数据解决方案',
+			    p: '提供数据仓库、数据集市、机器学习、信息检索等多种解决方案，全面覆盖各种场景的数据处理需求'
 			  },
 			  {
-			    bgUrl: '/assets/images/home/mock/2.jpg',
-			    bgColor: '#030502',
-			    h2: 'h2-02',
-			    p: 'p-02'
+			    bgUrl: '/assets/images/home/banners/banner3.jpg',
+			    bgColor: '#051a37',
+			    h2: '优质的数据服务',
+			    p: '服务安全、稳定、可扩展，打造权限管控系统，租户网络隔离精细化，历经500+企业的数据平台实践打磨，随开随用，20分钟内即可开始大数据开发'
 			  },
 			  {
-			    bgUrl: '/assets/images/home/mock/3.jpg',
-			    bgColor: '#fff6e5',
-			    h2: 'h2-03',
-			    p: 'p-03'
-			  },
+			    bgUrl: '/assets/images/home/banners/banner4.jpg',
+			    bgColor: '#0d1d41',
+			    h2: '专业的技术支持',
+			    p: '提供架构师对接、大数据培训、远程支持、运维辅助等多种类型服务，保证高品质的售后支持'
+			  }/*,
 			  {
 			    bgUrl: '/assets/images/home/mock/4.jpg',
 			    bgColor: '#fbfde8',

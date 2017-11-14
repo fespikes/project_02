@@ -74,7 +74,7 @@ export class SlicesComponent implements OnInit {
   turnRight() {
     clearInterval(this.interval);
     this.goRight();
-    this.setInterval(false);
+    this.setInterval(true);
   }
 
   goLeft() {
@@ -145,11 +145,13 @@ export class SlicesComponent implements OnInit {
   }
 
   itemOnMouseenter(target, product) {
-  	target.className='current'
+  	target.className='current';
+    clearInterval(this.interval);
   }
 
   itemOnMouseleave(target, product) {
-  	target.removeAttribute('class')
+  	target.removeAttribute('class');
+    this.setInterval(true);
   }
 
 }

@@ -32,10 +32,14 @@ export class AdvComponent implements OnInit {
   	this.advLength>1 && this.setInterval(this.currentIdx);
   }
 
+  setIndex(idx) {
+    this.interval && clearInterval(this.interval);
+    this.currentIdx = idx;
+    this.currentAdv = this.advList[this.currentIdx];
+  }
+
 	setInterval(idx) {
-		this.interval && clearInterval(this.interval);
-		this.currentIdx = idx;
-		this.currentAdv = this.advList[this.currentIdx];
+    this.setIndex(idx);
 
 		this.interval = setInterval(() => {
 		  let id = (this.currentIdx + 1) % this.advLength;
@@ -53,6 +57,14 @@ export class AdvComponent implements OnInit {
   	this.currentIdx++;
   	(this.currentIdx>=this.advLength)? (this.currentIdx=0):'';
   	this.setInterval(this.currentIdx);
+  }
+
+  itemOnMouseenter(idx:number) {
+    this.setIndex(idx);
+  }
+
+  itemOnMouseleave(idx:number) {
+    this.setInterval(idx);
   }
 
 }

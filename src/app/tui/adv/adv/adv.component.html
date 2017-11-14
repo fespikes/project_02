@@ -31,7 +31,11 @@
     <li
     	*ngFor="let adv of advList; let idx=index"
     	[class.big]="currentIdx==idx">
-			<span (click)="setInterval(idx)">{{idx}}</span>
+			<span 
+        (click)="setInterval(idx)"
+        (mouseenter)="itemOnMouseenter(idx, $event.target)"
+        (mouseleave)="itemOnMouseleave(idx, $event.target)"
+        >{{idx}}</span>
 		</li>
   </ul>
 </div>
