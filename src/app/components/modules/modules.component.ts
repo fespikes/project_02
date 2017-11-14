@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 import { ProductUtilService } from './services/product-util.service';
 
@@ -9,23 +10,32 @@ import { ProductUtilService } from './services/product-util.service';
 })
 export class ModulesComponent implements OnInit {
 
-  moduleTypes = [];
-  moduleItems = [];
+  moduleTree = [];
 
   constructor(
-    private productUtilService: ProductUtilService
+    private productUtilService: ProductUtilService,
+    private router: Router
   ) { }
 
   ngOnInit() {
+    this.initTreeState();//for the first stepped into
 
-    let moduleTree = this.productUtilService.getModuleTree();
-    this.moduleTypes = moduleTree.types;
-    this.moduleItems = moduleTree.items;
-
-    let moduleType = this.productUtilService.getModuleType(window.location.hash);
-    this.moduleItems = this.productUtilService.refreshListState(this.moduleItems, moduleType);
+    this.listenRouteChange();
   }
 
-  onModuleChange(module) {
+  listenRouteChange() {
+    this.router.events
+      .filter(event => event instanceof NavigationEnd)
+      .subscribe((event) => {
+        if((event as any).url && (event as any).url.indexOf('/modules') > -1) {
+          this.initTreeState();
+        }
+      });
+  }
+
+  initTreeState() {
+    this.moduleTree = this.productUtilService.getModuleTree();
+    const moduleType = this.productUtilService.getModuleType(window.location.hash);
+    this.moduleTree = this.productUtilService.refreshTreeState(this.moduleTree, moduleType);
   }
 }

@@ -27,6 +27,8 @@ export class ProductComponent implements OnInit {
       url: './advantage'
     }
   ];
+  MODULE_INTRODUCE_ID = 'module-introduce-id';
+  MODULE_ADVANTAGE_ID = 'module-advantage-id';
 
   constructor(
     private productContentService: ProductContentService,
@@ -40,7 +42,15 @@ export class ProductComponent implements OnInit {
     this.bannerInfo = this.productBannerService.getModuleBannerInfo(moduleType);
   }
 
-  onTabChange() {
+  onTabChange(tabName) {
+    this.anchorContent(tabName);
+  }
 
+  anchorContent(tabName) {
+    let anchorID = this.MODULE_INTRODUCE_ID;
+    if(tabName === 'advantage') {
+      anchorID = this.MODULE_ADVANTAGE_ID;
+    }
+    this.productUtilService.anchorTabContent(anchorID);
   }
 }

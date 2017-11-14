@@ -18,6 +18,8 @@ import { ProductContentService } from './services/product-content.service';
 import { ProductBannerService } from './services/product-banner.service';
 import { ProductUtilService } from './services/product-util.service';
 
+import { DocumentSearchService } from '../documents-support/documents-search/documents-search.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -35,6 +37,7 @@ import { ProductUtilService } from './services/product-util.service';
     ProductAdvantageComponent,
   ],
   providers: [
+    DocumentSearchService,
     ProductContentService,
     ProductBannerService,
     ProductUtilService,

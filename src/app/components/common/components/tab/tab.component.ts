@@ -26,7 +26,7 @@ export class TabComponent implements OnInit {
 
   }
 
-  tabChange(type) {
-    this.onTabChange.emit(type);
+  tabChange(name) {
+    this.onTabChange.emit(name);
   }
 }

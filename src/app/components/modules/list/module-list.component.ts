@@ -13,8 +13,7 @@ import {
 })
 
 export class ModuleListComponent implements OnInit {
-  @Input() moduleItems: any[];
-  @Input() moduleTypes: any[];
+  @Input() moduleTree: any[];
   @Output() onModuleChange = new EventEmitter();
 
   backUrl = '../home';
@@ -26,25 +25,24 @@ export class ModuleListComponent implements OnInit {
   toggleModules(moduleType) {
     moduleType.expanded = !moduleType.expanded;
     if (moduleType.expanded) {
-      this.moduleTypes.map((type) => {
-        if (moduleType.value !== type.value) {
+      this.moduleTree.map((type) => {
+        if (moduleType.id !== type.id) {
           type.expanded = false;
         }
       });
     }
   }
 
-  selectModule(module, moduleType) {
-    if (!module.selected) {
+  selectModule(module) {
+    if(!module.selected) {
       module.selected = true;
-      this.moduleTypes.map((type) => {
-        this.moduleItems[type.value].map((item) => {
-          if (module.name !== item.name) {
+      this.moduleTree.map((type) => {
+        type.children.map(item => {
+          if(module.id !== item.id) {
             item.selected = false;
           }
-        });
+        })
       });
-      this.onModuleChange.emit(module);
     }
   }
 }

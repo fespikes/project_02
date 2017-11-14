@@ -167,19 +167,19 @@ export class DocumentResService {
   getTabItems() {
     return [ //for unify i18n in version 1
       {
-        name: 'productDocument',
+        name: 'products',
         type: 'products',
         alias: '产品文档',
         url: './products'
       },
       {
-        name: 'normalIssue',
+        name: 'issues',
         type: 'issues',
         alias: '常见问题',
         url: './issues'
       },
       {
-        name: 'freshGuide',
+        name: 'guides',
         type: 'guides',
         alias: '新手入门',
         url: './guides'

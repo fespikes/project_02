@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
 
+import { DocumentSearchService } from '../../documents-support/documents-search/documents-search.service';
+
 @Injectable()
 export class ProductUtilService {
-  constructor() {
+  constructor(
+    private documentSearchService: DocumentSearchService
+  ) {
 
   }
 
@@ -12,151 +16,171 @@ export class ProductUtilService {
     return type;
   }
 
-  refreshListState(list, module): any {
-    let attrList = Object.keys(list);
-    attrList.map(attr => {
-      list[attr].map(item => {
-        if(item.name === module) {
-          item.selected = true;
-        }else {
-          item.selected = false;
-        }
-      });
-    });
-    return list;
+  refreshTreeState(moduleTree, moduleId): any[] {
+    const node = this.documentSearchService.findTreeNode(
+      moduleId, moduleTree) as any;
+    const parentNode = this.documentSearchService.findTreeNode(
+      node.parent, moduleTree) as any;
+    parentNode.expanded = true;
+    node.selected = true;
+    return moduleTree;
   }
 
-  getModuleTree(): any {
+  anchorTabContent(anchorId): void {
+    const ele = document.getElementById(anchorId);
+    const offsetLeft = ele.offsetLeft;
+    const offsetTop = ele.offsetTop;
+    scrollTo(offsetLeft, offsetTop);
+  }
 
-    let moduleTypes = [{
-      'alias': 'MODULES.TDH_PLATFORM_PRODUCT',
-      'value': 'cloudProductComponent',
-      'expanded': true
+  getModuleTree(): any[] {
+
+    const moduleTree = [{
+      id: 'cloudProductComponent',
+      name: 'MODULES.TDH_PLATFORM_PRODUCT',
+      children: [
+        {
+          id: 'inceptor',
+          name: 'Inceptor',
+          parent: 'cloudProductComponent',
+          url: 'product/inceptor/introduce',
+          icon: 'component-inceptor'
+        }, {
+          id: 'slipstream',
+          name: 'Slipstream',
+          parent: 'cloudProductComponent',
+          url: 'product/slipstream/introduce',
+          icon: 'component-slipstream'
+        }, {
+          id: 'discover',
+          name: 'Discover',
+          parent: 'cloudProductComponent',
+          url: 'product/discover/introduce',
+          icon: 'component-discover'
+        }, {
+          id: 'hyperbase',
+          name: 'Hyperbase',
+          parent: 'cloudProductComponent',
+          url: 'product/hyperbase/introduce',
+          icon: 'component-hyperbase'
+        }, {
+          id: 'search',
+          name: 'Search',
+          parent: 'cloudProductComponent',
+          url: 'product/search/introduce',
+          icon: 'component-search'
+        }, {
+          id: 'sophon',
+          name: 'Sophon',
+          parent: 'cloudProductComponent',
+          url: 'product/sophon/introduce',
+          icon: 'component-sophon'
+        }, {
+          id: 'guardian',
+          name: 'Guardian',
+          parent: 'cloudProductComponent',
+          url: 'product/guardian/introduce',
+          icon: 'component-guardian'
+        }, {
+          id: 'hadoop',
+          name: 'Hadoop',
+          parent: 'cloudProductComponent',
+          url: 'product/hadoop/introduce',
+          icon: 'component-hadoop'
+        },
+      ]
     }, {
-      'alias': 'MODULES.TDH_DEVELOP_SUITE',
-      'value': 'TDHDevelopSuite',
+      id: 'TDHDevelopSuite',
+      name: 'MODULES.TDH_DEVELOP_SUITE',
+      children: [
+        {
+          id: 'pilot',
+          name: 'Pilot',
+          parent: 'TDHDevelopSuite',
+          url: 'suite/pilot/introduce',
+          icon: 'component-pilot'
+        }, {
+          id: 'workflow',
+          name: 'Workflow',
+          parent: 'TDHDevelopSuite',
+          url: 'suite/workflow/introduce',
+          icon: 'component-workflow'
+        }, {
+          id: 'transporter',
+          name: 'Transporter',
+          parent: 'TDHDevelopSuite',
+          url: 'suite/transporter/introduce',
+          icon: 'component-transporter'
+        }, {
+          id: 'governor',
+          name: 'Governor',
+          parent: 'TDHDevelopSuite',
+          url: 'suite/governor/introduce',
+          icon: 'component-governor'
+        }, {
+          id: 'rubik',
+          name: 'Rubik',
+          parent: 'TDHDevelopSuite',
+          url: 'suite/rubik/introduce',
+          icon: 'component-rubik'
+        },
+      ],
     }, {
-      'alias': 'MODULES.OPERATION_ADD_DEVELOP_TOOL',
-      'value': 'operationDevelopTool',
+      id: 'operationDevelopTool',
+      name: 'MODULES.OPERATION_ADD_DEVELOP_TOOL',
+      children: [
+        {
+          id: 'waterdrop',
+          name: 'Waterdrop',
+          parent: 'operationDevelopTool',
+          url: 'tool/waterdrop/introduce',
+          icon: 'component-waterdrop'
+        }, {
+          id: 'txsql',
+          name: 'TxSQL',
+          parent: 'operationDevelopTool',
+          url: 'tool/txsql/introduce',
+          icon: 'component-txsql'
+        }, {
+          id: 'prometheus',
+          name: 'Prometheus',
+          parent: 'operationDevelopTool',
+          url: 'tool/prometheus/introduce',
+          icon: 'component-prometheus'
+        }, {
+          id: 'kafka',
+          name: 'Kafka',
+          parent: 'operationDevelopTool',
+          url: 'tool/kafka/introduce',
+          icon: 'component-kafka'
+        }, {
+          id: 'zeppelin',
+          name: 'Zeppelin',
+          parent: 'operationDevelopTool',
+          url: 'tool/zeppelin/introduce',
+          icon: 'component-zeppelin'
+        }, {
+          id: 'midas',
+          name: 'Midas',
+          parent: 'operationDevelopTool',
+          url: 'tool/midas/introduce',
+          icon: 'component-midas'
+        }, {
+          id: 'terminal',
+          name: 'Terminal',
+          parent: 'operationDevelopTool',
+          url: 'tool/terminal/introduce',
+          icon: 'component-terminal'
+        }, {
+          id: 'redis',
+          name: 'Redis',
+          parent: 'operationDevelopTool',
+          url: 'tool/redis/introduce',
+          icon: 'component-redis'
+        },
+      ]
     }];
 
-    let moduleItems = {
-      'cloudProductComponent': [{
-        'name': 'inceptor',
-        'actionAlias': 'Inceptor',
-        'url': 'product/inceptor/introduce',
-        'icon': 'component-inceptor'
-      }, {
-        'name': 'slipstream',
-        'actionAlias': 'Slipstream',
-        'url': 'product/slipstream/introduce',
-        'icon': 'component-slipstream'
-      }, {
-        'name': 'discover',
-        'actionAlias': 'Discover',
-        'url': 'product/discover/introduce',
-        'icon': 'component-discover'
-      }, {
-        'name': 'hyperbase',
-        'actionAlias': 'Hyperbase',
-        'url': 'product/hyperbase/introduce',
-        'icon': 'component-hyperbase'
-      }, {
-        'name': 'search',
-        'actionAlias': 'Search',
-        'url': 'product/search/introduce',
-        'icon': 'component-search'
-      }, {
-        'name': 'sophon',
-        'actionAlias': 'Sophon',
-        'url': 'product/sophon/introduce',
-        'icon': 'component-sophon'
-      }, {
-        'name': 'guardian',
-        'actionAlias': 'Guardian',
-        'url': 'product/guardian/introduce',
-        'icon': 'component-guardian'
-      }, {
-        'name': 'hadoop',
-        'actionAlias': 'Hadoop',
-        'url': 'product/hadoop/introduce',
-        'icon': 'component-hadoop'
-      },
-      ],
-      'TDHDevelopSuite': [{
-        'name': 'pilot',
-        'actionAlias': 'Pilot',
-        'url': 'suite/pilot/introduce',
-        'icon': 'component-pilot'
-      }, {
-        'name': 'workflow',
-        'actionAlias': 'Workflow',
-        'url': 'suite/workflow/introduce',
-        'icon': 'component-workflow'
-      }, {
-        'name': 'transporter',
-        'actionAlias': 'Transporter',
-        'url': 'suite/transporter/introduce',
-        'icon': 'component-transporter'
-      }, {
-        'name': 'governor',
-        'actionAlias': 'Governor',
-        'url': 'suite/governor/introduce',
-        'icon': 'component-governor'
-      }, {
-        'name': 'rubik',
-        'actionAlias': 'Rubik',
-        'url': 'suite/rubik/introduce',
-        'icon': 'component-rubik'
-      },
-      ],
-      'operationDevelopTool': [{
-        'name': 'waterdrop',
-        'actionAlias': 'Waterdrop',
-        'url': 'tool/waterdrop/introduce',
-        'icon': 'component-waterdrop'
-      }, {
-        'name': 'txsql',
-        'actionAlias': 'TxSQL',
-        'url': 'tool/txsql/introduce',
-        'icon': 'component-txsql'
-      }, {
-        'name': 'prometheus',
-        'actionAlias': 'Prometheus',
-        'url': 'tool/prometheus/introduce',
-        'icon': 'component-prometheus'
-      }, {
-        'name': 'kafka',
-        'actionAlias': 'Kafka',
-        'url': 'tool/kafka/introduce',
-        'icon': 'component-kafka'
-      }, {
-        'name': 'zeppelin',
-        'actionAlias': 'Zeppelin',
-        'url': 'tool/zeppelin/introduce',
-        'icon': 'component-zeppelin'
-      }, {
-        'name': 'midas',
-        'actionAlias': 'Midas',
-        'url': 'tool/midas/introduce',
-        'icon': 'component-midas'
-      }, {
-        'name': 'terminal',
-        'actionAlias': 'Terminal',
-        'url': 'tool/terminal/introduce',
-        'icon': 'component-terminal'
-      }, {
-        'name': 'redis',
-        'actionAlias': 'Redis',
-        'url': 'tool/redis/introduce',
-        'icon': 'component-redis'
-      },
-      ],
-    };
-
-    return {
-      types: moduleTypes,
-      items: moduleItems
-    }
+    return moduleTree;
   }
 }

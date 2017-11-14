@@ -1,7 +1,7 @@
 <ul>
   <li
     *ngFor="let item of tabItems"
-    (click)="tabChange(item.type)"
+    (click)="tabChange(item.name)"
   >
     <a
       [routerLink]="item.url"
