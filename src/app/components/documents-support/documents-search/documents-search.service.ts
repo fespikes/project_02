@@ -6,6 +6,7 @@ import { DocumentResService } from '../services/document.res.service';
 @Injectable()
 export class DocumentSearchService {
 
+  MAX_LOOP = 10;
   constructor(
     private documentResService: DocumentResService
   ) {
@@ -21,6 +22,25 @@ export class DocumentSearchService {
     while (stack.length) {
       item = stack.shift();
       item[type] = state;
+      if (item.children && item.children.length) {
+        stack = stack.concat(item.children);
+      }
+    }
+
+    return treeModel;
+  }
+
+  removeSelectedState(treeModel) {
+    let stack = [], item;
+    for (let i = 0; i < treeModel.length; i++) {
+      stack.push(treeModel[i]);
+    }
+    while (stack.length) {
+      item = stack.shift();
+      if(item.selected) {
+        item.selected = false;
+        break;
+      }
       if (item.children && item.children.length) {
         stack = stack.concat(item.children);
       }
@@ -61,9 +81,11 @@ export class DocumentSearchService {
     }
     let selectedNode = this.findTreeNode(nodeId, treeModel) as any;
     selectedNode.selected = true;
-    while (selectedNode.parent !== 'index') {
+    let loop = 0;
+    while (selectedNode.parent !== 'index' && loop < this.MAX_LOOP) {
       selectedNode = this.findTreeNode(selectedNode.parent, treeModel) as any;
       selectedNode.expanded =true;
+      loop++;
     }
     return treeModel;
   }
@@ -231,8 +253,10 @@ export class DocumentSearchService {
 
   findSecondLevelNode(treeModel, node): Object {
     let parentNode = this.findTreeNode(node.parent, treeModel) as any;
-    while(parentNode.level > 2) {
-      parentNode = this.findTreeNode(parentNode.id, treeModel);
+    let loop = 0;
+    while(parentNode.level > 2 && loop < this.MAX_LOOP ) {
+      parentNode = this.findTreeNode(parentNode.parent, treeModel);
+      loop++;
     }
     return parentNode;
   }
