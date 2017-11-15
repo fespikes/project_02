@@ -15,403 +15,95 @@ const routes: Routes = [
       children: [
         {
           path: 'product/inceptor',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'product/slipstream',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'product/discover',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'product/hyperbase',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'product/search',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'product/sophon',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'product/guardian',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'product/hadoop',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'suite/pilot',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'suite/workflow',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'suite/transporter',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'suite/governor',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'suite/rubik',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/waterdrop',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/txsql',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/prometheus',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/kafka',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/zeppelin',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/midas',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/milano',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/terminal',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: 'tool/redis',
-          component: ProductComponent,
-          children: [
-            {
-              path: 'introduce',
-              component: ProductIntroduceComponent
-            },
-            {
-              path: 'advantage',
-              component: ProductAdvantageComponent
-            },
-            {
-              path: '**',
-              component: ProductIntroduceComponent
-            }
-          ]
+          component: ProductComponent
         },
         {
           path: '**',
-          redirectTo: 'product/inceptor/introduce'
+          redirectTo: 'product/inceptor'
         }
       ]
     },

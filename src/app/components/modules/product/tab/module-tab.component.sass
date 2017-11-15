@@ -1,0 +1,25 @@
+@import '../../../../styles/util'
+
+\:host
+  display: block
+
+  ul
+    margin: 0 20px
+    height: 56px
+    border-bottom: 1px $common-grey solid
+
+  li
+    font-size: 1.4rem
+    display: inline-block
+
+  a
+    display: inline-block
+    padding: 30px 20px 10px
+
+    &:hover, &.active
+      color: $common-blue
+      font-weight: 600
+      margin-bottom: -2px
+      border-bottom: 2px $common-blue solid
+      cursor: pointer
+

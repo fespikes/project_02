@@ -6,6 +6,7 @@ import { ModulesRoutingModule } from './modules-routing.module';
 
 import { ProductComponent } from './product/product.component';
 import { ModuleListComponent } from './list/module-list.component';
+import { ModuleTabComponent } from './product/tab/module-tab.component';
 import { ProductIntroduceComponent } from './product/introduce/product-introduce.component';
 import { ProductAdvantageComponent } from './product/advantage/product-advantage.component';
 
@@ -17,6 +18,7 @@ import { SharedModule } from '../../shared';
 import { ProductContentService } from './services/product-content.service';
 import { ProductBannerService } from './services/product-banner.service';
 import { ProductUtilService } from './services/product-util.service';
+import { ProductResService } from "./services/product-res.service";
 
 import { DocumentSearchService } from '../documents-support/documents-search/documents-search.service';
 
@@ -32,6 +34,7 @@ import { DocumentSearchService } from '../documents-support/documents-search/doc
   declarations: [
     ModulesComponent,
     ModuleListComponent,
+    ModuleTabComponent,
     ProductComponent,
     ProductIntroduceComponent,
     ProductAdvantageComponent,
@@ -41,6 +44,7 @@ import { DocumentSearchService } from '../documents-support/documents-search/doc
     ProductContentService,
     ProductBannerService,
     ProductUtilService,
+    ProductResService,
     TdcApiService
   ],
 })
