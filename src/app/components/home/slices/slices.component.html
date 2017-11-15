@@ -1,0 +1,130 @@
+<!--TODO: class="{{data.sliceClass}}" -->
+<div class="items-wrapper">
+	<ul
+		class="ul-items"
+		[ngStyle]="{width: itemsWidth + 'px', left: 0}"
+	>
+		<li 
+			*ngFor="let item of data.items" 
+			class="{{item.liClass}}" 
+	  	(mouseenter)="itemOnMouseenter($event.target)"
+	  	(mouseleave)="itemOnMouseleave($event.target)"
+		>
+			<div
+				*ngIf="item.divClass"
+				class="{{item.divClass}}"
+			>
+				<div
+	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
+	      	class="thumbnail"
+	      ></div>
+			  <h4 class="{{item.h4Class}}">{{item.title}}</h4>
+			  <p class="{{item.pClass}}">{{item.summary}}</p>
+
+			  <ng-container *ngIf="item.details">
+			  	<h5>{{item.details.title}}</h5>
+		      <ul class="details">
+		      	<li *ngFor="let detailsItem of item.details.list">{{detailsItem}}</li>
+		      </ul>
+			  </ng-container>
+
+				<button
+			  	class="{{item.button.class}}"
+			  	routerLink="{{item.button.routerLink}}"
+			  >{{item.button.text}}</button>
+			</div>
+
+			<ng-container *ngIf="!item.divClass">
+			<!--TODO: 
+			1.adapt the thumbnail between:
+				cloud products;
+				hot modules;
+			2.thumbnail style in hotmodules
+			-->
+				<div
+	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
+	      	class="thumbnail"
+	      ></div>
+			  <h4 class="{{item.h4Class}}">
+			  {{item.title}}</h4>
+			  <p class="{{item.pClass}}">{{item.summary}}</p>
+
+				<button
+			  	class="{{item.button.class}}"
+			  	routerLink="{{item.button.routerLink}}"
+			  >{{item.button.text}}</button>
+			</ng-container>
+
+		</li>
+	</ul>
+
+	<ul 
+		class="ul-swap"
+		[ngStyle]="{width: itemsWidth + 'px'}"
+		>
+		<li
+			*ngFor="let item of data.items"
+			class="{{item.liClass}}" 
+	  	(mouseenter)="itemOnMouseenter($event.target)"
+	  	(mouseleave)="itemOnMouseleave($event.target)"
+		>
+			<div
+				*ngIf="item.divClass"
+				class="{{item.divClass}}"
+			>
+				<div
+	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
+	      	class="thumbnail"
+	      ></div>
+			  <h4 class="{{item.h4Class}}">
+			  {{item.title}}</h4>
+			  <p class="{{item.pClass}}">{{item.summary}}</p>
+
+			  <ng-container *ngIf="item.details">
+			  	<h5>{{item.details.title}}</h5>
+		      <ul class="details">
+		      	<li *ngFor="let detailsItem of item.details.list">{{detailsItem}}</li>
+		      </ul>
+			  </ng-container>
+
+				<button
+			  	class="{{item.button.class}}"
+			  	routerLink="{{item.button.routerLink}}"
+			  >{{item.button.text}}</button>
+			</div>
+
+			<ng-container *ngIf="!item.divClass">
+			<!--TODO: 
+			1.adapt the thumbnail between:
+				cloud products;
+				hot modules;
+			2.thumbnail style in hotmodules
+			-->
+				<div
+	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
+	      	class="thumbnail"
+	      ></div>
+			  <h4 class="{{item.h4Class}}">
+			  {{item.title}}</h4>
+			  <p class="{{item.pClass}}">{{item.summary}}</p>
+				<button
+			  	class="{{item.button.class}}"
+			  	routerLink="{{item.button.routerLink}}"
+			  >{{item.button.text}}</button>
+			</ng-container>
+
+		</li>
+	</ul>
+</div>
+
+<a 
+  *ngIf="needArrow"
+  (click)="turnLeft()"
+  class="arrow left"
+></a>
+<a
+  *ngIf="needArrow"
+  (click)="turnRight()"
+  class="arrow right"
+></a>
+

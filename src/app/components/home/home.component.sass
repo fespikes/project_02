@@ -29,66 +29,13 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
     left: 50%
     margin-left: -35px
 
-.arrow
-  width: 60px
-  height: 60px
-  display: inline-block
-  margin-top: -30px
-  cursor: pointer
-  position: absolute
-  top: 50%
-  &:before
-    margin-top: -13px
-
-.arrow.left
-  left: 50%
-  margin-left: -680px
-
-  &:before
-    content: ""
-    display: inline-block
-    width: 24px
-    height: 24px
-    border-bottom: 2px #009aff solid
-    border-left: 2px #009aff solid
-    transform: rotate(45deg)
-    position: absolute
-    left: 15px
-    top: 50%
-.arrow.right
-  right: 50%
-  margin-right: -680px
-
-  &:before
-    content: ""
-    display: inline-block
-    width: 24px
-    height: 24px
-    border-right: 2px #009aff solid
-    border-top: 2px #009aff solid
-    transform: rotate(45deg)
-    position: absolute
-    right: 15px
-    top: 50%
-.blue-button, a.blue-button
-  display: inline-block
-  width: 130px
-  height: 40px
-  line-height: 40px
-  background: #176eda
-  font-size: 1.4rem
-  color: #fff
-  text-align: center
-
 
 .home-box
   
 
 .cloud-products
-  @extend .center-box
   height: 750px
   background: #fff
-  position: relative
 
   h3
     color: #000
@@ -132,7 +79,7 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
         //TODO: reduce the text when too much
         color: #ababab
 
-      .details, h5, a
+      .details, h5, button
         display: none
         color: #ababab
 
@@ -148,7 +95,7 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
       h4
         padding-bottom: 40px
 
-      h5, .details, a
+      h5, .details, button
         display: block
       .desc
         display: none
@@ -326,53 +273,64 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
     @extend .center-box
     height: 700px
 
-  .scenarios
-    width: 1164px
-    padding-top: 60px
-    margin: 0 auto
+.scenarios
+  width: 1164px
+  padding-top: 60px
+  margin: 0 auto
 
-    li
-      float: left
-      display: inline-block
-      width: 364px
-      padding-top: 208px
-      padding-bottom: 38px
-      margin-right: 36px
-      text-align: center
+  li
+    float: left
+    display: inline-block
+    width: 364px
+    //padding-top: 208px
+    padding-bottom: 38px
+    margin-right: 36px
+    text-align: center
+    background-color: #274363
 
-      &:last-child
-        margin-right: 0
-      &.scenario-0
-        @include background(scenario-0, jpg, #274363)
-      &.scenario-1
-        @include background(scenario-1, jpg, #274363)
-      &.scenario-2
-        @include background(scenario-2, jpg, #274363)
+    &:last-child
+      margin-right: 0
 
-    h4
-      padding-top: 50px
-      padding-bottom: 24px
-      font-size: 1.8rem
-      color: #fff
-      font-weight: 400
-    p
-      height: 70px
-      margin: 0
-      padding-left: 30px
-      padding-right: 30px
-      padding-bottom: 40px
-      font-size: 1.2rem
-      line-height: 1.5
-      color: #fff
-      text-overflow: ellipsis
-      overflow: hidden
+    .thumbnail
+      width: 100%
+      height: 208px
+      
+    &.scenario-0
+      @include background(scenario-0, jpg, #274363)
+    &.scenario-1
+      @include background(scenario-1, jpg, #274363)
+    &.scenario-2
+      @include background(scenario-2, jpg, #274363)
 
-    button
-      width: 130px
-      height: 40px
-      border: 0
-      background: #1878c9
-      color: #fff
+  h4
+    padding-top: 50px
+    padding-bottom: 24px
+    font-size: 1.8rem
+    color: #fff
+    font-weight: 400
+  p
+    height: 70px
+    margin: 0
+    padding-left: 30px
+    padding-right: 30px
+    padding-bottom: 40px
+    font-size: 1.2rem
+    line-height: 1.5
+    color: #fff
+    text-overflow: ellipsis
+    overflow: hidden
+
+  button
+    width: 130px
+    height: 40px
+    border: 0
+    background: #1878c9
+    color: #fff
+
+
+.ul-swap
+  position: absolute
+  left: -3000px
 
 //E:.business-scenario
 

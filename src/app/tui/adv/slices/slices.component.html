@@ -21,14 +21,15 @@
       <ul class="details">
       	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
       </ul>
-      <a
+      <button
       	routerLink="{{p.button.routerLink}}"
-      	class="blue-button">{{p.button.text}}</a>
+      	class="blue-button"
+      >{{p.button.text}}</button>
     </div>
   </li>
 </ul>
 <ul 
-	class="ul-swap"
+	class="ul-swap ul-products"
 	[ngStyle]="{width: itemsWidth + 'px'}"
 	>
   
@@ -47,9 +48,10 @@
       <ul class="details">
       	<li *ngFor="let detailsItem of p.details.list">{{detailsItem}}</li>
       </ul>
-      <a
-      	routerLink="{{p.button.routerLink}}"
-      	class="blue-button">{{p.button.text}}</a>
+      <button
+        routerLink="{{p.button.routerLink}}"
+        class="blue-button"
+      >{{p.button.text}}</button>
     </div>
   </li>
 </ul>

@@ -1,27 +1,29 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'tui-slices',
+  selector: 'tui-slices-modules',
   templateUrl: './slices.component.html',
   styleUrls: ['./slices.component.sass'],
+  inputs: ['data'/*, 'style'*/],
+  //TODO:
   host: {
-  	class: 'tui-slices'
+  	class: 'tui-slices-modules'
   },
-  inputs: ['items', 'style']
 })
 export class SlicesComponent implements OnInit {
 
 	static config = {
 		itemWidth: 400,
-		gap: 0,
-
-    defaultLength: 3,
-    direction: true, //go right
+		defaultLength: 3,
+    gap: 0,
+		direction: true, //go right
 	};
+
+	data: any;//TODO:
 
 	interval: any;
 	items: any;
-	style: any;
+	// style: any;
 	itemsLength: number;    //how many items of the products list
 	itemsWidth: number;    //
   windowWidth: number;
@@ -30,13 +32,22 @@ export class SlicesComponent implements OnInit {
   ulSwap: any;
   needArrow: boolean;
 
+  //for hover status related
+  targetClassName: string;
+  hoverClassName: string;
+
   constructor(
-    private el:ElementRef
-  	) {  	// console.log( 'in constructor:', template, viewContainer );
-  }
+  	private el:ElementRef
+  ) { }
 
   ngOnInit() {
-  	const config = SlicesComponent.config;
+  	//TODO:
+  	this.items = this.data.items;
+  	const ulItemsClass = this.data.sliceClass;
+  	const config = {...this.data.config,...SlicesComponent.config};
+  	this.hoverClassName = this.data.config.hoverClassName;
+  	
+  	// const config = SlicesComponent.config;
     const items = this.items;
 
   	this.itemsLength = items.length;
@@ -44,7 +55,7 @@ export class SlicesComponent implements OnInit {
     this.windowWidth = config.defaultLength * config.itemWidth;
 
     const nativeElement = this.el.nativeElement;
-    this.ulItems = nativeElement.querySelector('.ul-products');
+    this.ulItems = nativeElement.querySelector('.ul-items');
     this.ulSwap = nativeElement.querySelector('.ul-swap');
 
     if (config.direction) { 
@@ -56,14 +67,18 @@ export class SlicesComponent implements OnInit {
     }
     this.needArrow = this.itemsLength>SlicesComponent.config.defaultLength;
 
+    this.ulItems.className = this.ulItems.className + ' ' + ulItemsClass;
+    this.ulSwap.className = this.ulSwap.className + ' ' + ulItemsClass;
+
     this.setInterval();
   }
 
-  setInterval (direction?) {//TODO: emit it in both 
-    // this.interval = setInterval(_=>{
-    //   (direction || SlicesComponent.config.direction) ? this.goRight(): this.goLeft();
-    // }, 3000);
+  setInterval (direction?) {
+    this.interval = setInterval(_=>{
+      (direction || SlicesComponent.config.direction) ? this.goRight(): this.goLeft();
+    }, 3000);
   }
+
 
   turnLeft() {
     clearInterval(this.interval);
@@ -144,13 +159,17 @@ export class SlicesComponent implements OnInit {
     }
   }
 
+  // targetClassName: string;
+  // hoverClassName: string;
+
   itemOnMouseenter(target, product) {
-  	target.className='current';
+  	this.targetClassName = target.className;
+  	target.className = this.hoverClassName + ' ' + this.targetClassName;
     clearInterval(this.interval);
   }
 
   itemOnMouseleave(target, product) {
-  	target.removeAttribute('class');
+  	target.className = this.targetClassName;
     this.setInterval(true);
   }
 

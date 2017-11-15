@@ -7,6 +7,7 @@ import { SharedModule } from '../../shared';
 
 import { HomeService } from './home.service';
 import { HomeComponent } from './home.component';
+import { SlicesComponent } from './slices/slices.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { HomeComponent } from './home.component';
   ],
   declarations: [
   	HomeComponent,
+  	SlicesComponent,
 
   ],
   providers:[
