@@ -142,6 +142,12 @@ export class ProductUtilService {
           url: 'tool/txsql/introduce',
           icon: 'component-txsql'
         }, {
+          id: 'milano',
+          name: 'Milano',
+          parent: 'operationDevelopTool',
+          url: 'tool/milano/introduce',
+          icon: 'component-milano'
+        }, {
           id: 'prometheus',
           name: 'Prometheus',
           parent: 'operationDevelopTool',

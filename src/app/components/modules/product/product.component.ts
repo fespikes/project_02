@@ -18,12 +18,12 @@ export class ProductComponent implements OnInit {
   tabItems = [
     {
       name: 'introduce',
-      alias: '产品介绍',
+      alias: '组件介绍',
       url: './introduce'
     },
     {
       name: 'advantage',
-      alias: '产品优势',
+      alias: '功能优势',
       url: './advantage'
     }
   ];
