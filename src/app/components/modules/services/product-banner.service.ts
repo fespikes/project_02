@@ -22,7 +22,7 @@ export class ProductBannerService {
           'title': 'MODULES.SLIPSTREAM.TITLE',
           'alias': 'Slipstream',
           'subTitle': 'MODULES.SLIPSTREAM.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/slipstream-logo.png'
         };
         break;
       case 'discover':
@@ -30,7 +30,7 @@ export class ProductBannerService {
           'title': 'MODULES.DISCOVER.TITLE',
           'alias': 'Discover',
           'subTitle': 'MODULES.DISCOVER.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/discover-logo.png'
         };
         break;
       case 'hyperbase':
@@ -38,7 +38,7 @@ export class ProductBannerService {
           'title': 'MODULES.HYPERBASE.TITLE',
           'alias': 'Hyperbase',
           'subTitle': 'MODULES.HYPERBASE.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/hyperbase-logo.png'
         };
         break;
       case 'search':
@@ -46,7 +46,7 @@ export class ProductBannerService {
           'title': 'MODULES.SEARCH.TITLE',
           'alias': 'Search',
           'subTitle': 'MODULES.SEARCH.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/search-logo.png'
         };
         break;
       case 'sophon':
@@ -54,7 +54,7 @@ export class ProductBannerService {
           'title': 'MODULES.SOPHON.TITLE',
           'alias': 'Sophon',
           'subTitle': 'MODULES.SOPHON.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/sophon-logo.png'
         };
         break;
       case 'guardian':
@@ -62,7 +62,7 @@ export class ProductBannerService {
           'title': 'MODULES.GUARDIAN.TITLE',
           'alias': 'Guardian',
           'subTitle': 'MODULES.GUARDIAN.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/guardian-logo.png'
         };
         break;
       case 'hadoop':
@@ -70,7 +70,7 @@ export class ProductBannerService {
           'title': 'MODULES.HADOOP.TITLE',
           'alias': 'Hadoop',
           'subTitle': 'MODULES.HADOOP.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/hadoop-logo.png'
         };
         break;
       case 'pilot':
@@ -78,7 +78,7 @@ export class ProductBannerService {
           'title': 'MODULES.PILOT.TITLE',
           'alias': 'Pilot',
           'subTitle': 'MODULES.PILOT.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/pilot-logo.png'
         };
         break;
       case 'workflow':
@@ -86,7 +86,7 @@ export class ProductBannerService {
           'title': 'MODULES.WORKFLOW.TITLE',
           'alias': 'Workflow',
           'subTitle': 'MODULES.WORKFLOW.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/workflow-logo.png'
         };
         break;
       case 'transporter':
@@ -94,7 +94,7 @@ export class ProductBannerService {
           'title': 'MODULES.TRANSPORTER.TITLE',
           'alias': 'Transporter',
           'subTitle': 'MODULES.TRANSPORTER.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/transporter-logo.png'
         };
         break;
       case 'governor':
@@ -102,7 +102,7 @@ export class ProductBannerService {
           'title': 'MODULES.GOVERNOR.TITLE',
           'alias': 'Governor',
           'subTitle': 'MODULES.GOVERNOR.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/governor-logo.png'
         };
         break;
       case 'rubik':
@@ -110,7 +110,7 @@ export class ProductBannerService {
           'title': 'MODULES.RUBIK.TITLE',
           'alias': 'Rubik',
           'subTitle': 'MODULES.RUBIK.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/rubik-logo.png'
         };
         break;
       case 'waterdrop':
@@ -118,7 +118,7 @@ export class ProductBannerService {
           'title': 'MODULES.WATERDROP.TITLE',
           'alias': 'Waterdrop',
           'subTitle': 'MODULES.WATERDROP.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/waterdrop-logo.png'
         };
         break;
       case 'txsql':
@@ -126,7 +126,7 @@ export class ProductBannerService {
           'title': 'MODULES.TXSQL.TITLE',
           'alias': 'TxSQL',
           'subTitle': 'MODULES.TXSQL.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/txsql-logo.png'
         };
         break;
       case 'prometheus':
@@ -134,7 +134,7 @@ export class ProductBannerService {
           'title': 'MODULES.PROMETHEUS.TITLE',
           'alias': 'Prometheus',
           'subTitle': 'MODULES.PROMETHEUS.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/prometheus-logo.png'
         };
         break;
       case 'kafka':
@@ -142,7 +142,7 @@ export class ProductBannerService {
           'title': 'MODULES.KAFKA.TITLE',
           'alias': 'Kafka',
           'subTitle': 'MODULES.KAFKA.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/kafka-logo.png'
         };
         break;
       case 'zeppelin':
@@ -150,7 +150,7 @@ export class ProductBannerService {
           'title': 'MODULES.ZEPPELIN.TITLE',
           'alias': 'Zeppelin',
           'subTitle': 'MODULES.ZEPPELIN.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/zeppelin-logo.png'
         };
         break;
       case 'midas':
@@ -158,7 +158,15 @@ export class ProductBannerService {
           'title': 'MODULES.MIDAS.TITLE',
           'alias': 'Midas',
           'subTitle': 'MODULES.MIDAS.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/midas-logo.png'
+        };
+        break;
+      case 'milano':
+        bannerInfo = {
+          'title': 'MODULES.MILANO.TITLE',
+          'alias': 'Milano',
+          'subTitle': 'MODULES.MILANO.SUB_TITLE',
+          'logoUrl': 'assets/images/modules/milano-logo.png'
         };
         break;
       case 'terminal':
@@ -166,7 +174,7 @@ export class ProductBannerService {
           'title': 'MODULES.TERMINAL.TITLE',
           'alias': 'Terminal',
           'subTitle': 'MODULES.TERMINAL.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/terminal-logo.png'
         };
         break;
       case 'redis':
@@ -174,7 +182,7 @@ export class ProductBannerService {
           'title': 'MODULES.REDIS.TITLE',
           'alias': 'Redis',
           'subTitle': 'MODULES.REDIS.SUB_TITLE',
-          'logoUrl': 'assets/images/modules/inceptor-logo.png'
+          'logoUrl': 'assets/images/modules/redis-logo.png'
         };
         break;
       default:

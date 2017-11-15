@@ -158,7 +158,7 @@ const routes: Routes = [
           ]
         },
         {
-          path: 'suite/:name',
+          path: 'suite/pilot',
           component: ProductComponent,
           children: [
             {
@@ -248,7 +248,7 @@ const routes: Routes = [
           ]
         },
         {
-          path: 'tool/:name',
+          path: 'tool/waterdrop',
           component: ProductComponent,
           children: [
             {
@@ -339,6 +339,24 @@ const routes: Routes = [
         },
         {
           path: 'tool/midas',
+          component: ProductComponent,
+          children: [
+            {
+              path: 'introduce',
+              component: ProductIntroduceComponent
+            },
+            {
+              path: 'advantage',
+              component: ProductAdvantageComponent
+            },
+            {
+              path: '**',
+              component: ProductIntroduceComponent
+            }
+          ]
+        },
+        {
+          path: 'tool/milano',
           component: ProductComponent,
           children: [
             {
