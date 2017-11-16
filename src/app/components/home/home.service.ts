@@ -522,7 +522,7 @@ export class HomeService {
 						button: {
 							class: '',//?
 							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+							routerLink: '/business-scenario/data-warehouse'
 						}
 					},
 					
@@ -543,7 +543,7 @@ export class HomeService {
 						button: {
 							class: '',//?
 							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+							routerLink: '/business-scenario/realtime-computation'
 						}
 					},
 					{
@@ -566,7 +566,7 @@ export class HomeService {
 						button: {
 							class: '',//?
 							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+							routerLink: '/business-scenario/info-retrieval'
 						}
 					},
 					{
@@ -589,8 +589,7 @@ export class HomeService {
 						button: {
 							class: '',//?
 							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
-						}
+							routerLink: '/business-scenario/data-mart'
 					},
 					{
 						title: '数据分析与挖掘',
@@ -612,7 +611,7 @@ export class HomeService {
 						button: {
 							class: '',//?
 							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+							routerLink: '/business-scenario/analysis-mining'
 						}
 					},
 					{//TODO: change the thumbnails
@@ -635,7 +634,7 @@ export class HomeService {
 						button: {
 							class: '',//?
 							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+							routerLink: '/business-scenario/deep-learning'
 						}
 					},
 					{
@@ -659,7 +658,7 @@ export class HomeService {
 						button: {
 							class: '',//?
 							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+							routerLink: '/business-scenario/relational-database'
 						},
 /*						details: {
 							title: '产品功能',
@@ -691,7 +690,7 @@ export class HomeService {
 						button: {
 							class: '',//?
 							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+							routerLink: '/ffffff/nnnn'//
 						}
 					}*/
 				]
