@@ -22,13 +22,13 @@ export class HomeService {
 			  },
 			  {
 			    bgUrl: '/assets/images/home/banners/banner3.jpg',
-			    bgColor: '#051a37',
+			    bgColor: '#051a36',
 			    h2: '优质的数据服务',
 			    p: '服务安全、稳定、可扩展，打造权限管控系统，租户网络隔离精细化，历经500+企业的数据平台实践打磨，随开随用，20分钟内即可开始大数据开发'
 			  },
 			  {
 			    bgUrl: '/assets/images/home/banners/banner4.jpg',
-			    bgColor: '#0d1d41',
+			    bgColor: '#0b1b3f',
 			    h2: '专业的技术支持',
 			    p: '提供架构师对接、大数据培训、远程支持、运维辅助等多种类型服务，保证高品质的售后支持'
 			  }/*,
