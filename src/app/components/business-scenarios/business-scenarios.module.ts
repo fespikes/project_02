@@ -8,9 +8,12 @@ import { BusinessScenariosRoutingModule } from './business-scenarios-routing.mod
 import { BusinessScenariosService } from './business-scenarios.service';
 import { BreadCrumbsComponent } from './bread-crumbs/bread-crumbs.component';
 
+import { TuiModule } from '../../tui/tui.module';
+
 @NgModule({
   imports: [
     CommonModule,
+    TuiModule,
     BusinessScenariosRoutingModule
   ],
   declarations: [
