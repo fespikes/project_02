@@ -14,10 +14,12 @@ import { Component, OnInit, ElementRef, EventEmitter } from '@angular/core';
 export class SlicesComponent implements OnInit {
 
 	static config = {
-		itemWidth: 400,
-		defaultLength: 3,
+		itemWidth: 400,//*
+		defaultLength: 3,//*
     gap: 0,
 		direction: true, //go right
+    hoverClassName: 'current',//*
+    wrapperClassName: 'h600'//*
 	};
 
 	data: any;//TODO:
@@ -172,6 +174,7 @@ export class SlicesComponent implements OnInit {
   itemOnMouseenter(target, product) {
   	this.targetClassName = target.className;
   	target.className = this.hoverClassName + ' ' + this.targetClassName;
+    product && this.onItemSelected.emit(product);
     clearInterval(this.interval);
   }
 
@@ -180,9 +183,9 @@ export class SlicesComponent implements OnInit {
     this.setInterval(true);
   }
 
-  itemSelected(item) {
-    this.currentItem = item;
-    this.onItemSelected.emit(item);
-  }
+  // itemSelected(item) {
+  //   this.currentItem = item;
+  //   this.onItemSelected.emit(item);
+  // }
 
 }

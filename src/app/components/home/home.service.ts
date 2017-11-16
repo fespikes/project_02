@@ -499,7 +499,7 @@ export class HomeService {
 					itemWidth: 400,
 					gap: 0,
 					wrapperClassName: 'h600',
-					defaultLength: 6
+					defaultLength: 3
 				},
 				items: [
 					{
