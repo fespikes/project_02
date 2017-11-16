@@ -8,6 +8,7 @@ import { SharedModule } from '../../shared';
 import { HomeService } from './home.service';
 import { HomeComponent } from './home.component';
 import { SlicesComponent } from './slices/slices.component';
+import { HotModulesComponent } from './hot-modules/hot-modules.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { SlicesComponent } from './slices/slices.component';
   declarations: [
   	HomeComponent,
   	SlicesComponent,
+  	HotModulesComponent,
 
   ],
   providers:[

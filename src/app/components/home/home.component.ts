@@ -12,8 +12,7 @@ export class HomeComponent implements OnInit {
 
   advs: any;
   cloudProducts: any;
-
-  cloudProducts_: any;//TODO: remove it
+  hotModules: any;
 
   businessScenarios: any;
 
@@ -30,9 +29,8 @@ export class HomeComponent implements OnInit {
     const data = this.homeService.getData('');
     this.advs = data.advList;
     this.cloudProducts = data.cloudProducts;
+    this.hotModules = data.hotModules;
     
-    this.cloudProducts_ = data.cloudProducts_;
-
     this.businessScenarios = data.businessScenarios;
 
     this.latestNews = data.latestNews;

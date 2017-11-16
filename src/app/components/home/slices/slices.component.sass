@@ -15,8 +15,13 @@
   overflow: hidden
   position: relative
 
-  height: 600px
   //TODO:
+.h600
+  height: 600px
+  
+.h220
+  height: 220px
+
 
 .ul-items, .ul-swap
   position: absolute
@@ -117,6 +122,58 @@
       left: 50%
       margin-left: -65px
       color: #fff
-
-
 //E: .cloud-products
+
+//S: hot modules
+ul.bar-modules-ul
+  @extend .center-box
+  height: 220px
+
+  li
+    float: left
+    display: inline-block
+    width: 200px
+    height: 220px
+    padding: 20px
+
+    &:first-child
+    
+    a
+      display: inline-block
+      width: 160px
+      height: 100%
+      margin-left: auto
+      margin-right: auto
+      background: #fff
+      text-align: center
+
+      .thumbnail
+        display: inline-block
+        width: 100%
+        height: 110px
+        position: relative
+
+        svg
+          width: 60%
+          height: 60%
+          fill: #176eda
+          margin-top: 22px
+
+      &:hover
+        box-shadow: 0 0 20px #ead6d6
+
+      .title
+        font-size: 1.6rem
+      p
+        line-height: 20px
+        font-size: 1.4rem
+        color: #afb4b8
+
+  li.current, li.active
+    a
+      box-shadow: 0 0 20px #ead6d6
+
+      .thumbnail
+
+//E: .hot-modules
+

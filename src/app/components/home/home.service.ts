@@ -40,8 +40,7 @@ export class HomeService {
 			  }*/
 			],
 
-
-			cloudProducts_: [
+/*			cloudProducts_: [
 				{
 					thumbnail: '/assets/images/svg/home/products/' + 'relational-database' + '.svg',
 					title: '关系数据库',
@@ -175,8 +174,7 @@ export class HomeService {
 						]
 					}
 				}
-			],
-
+			],*/
 
 			cloudProducts: {
 				sliceClass: 'ul-products',
@@ -185,6 +183,7 @@ export class HomeService {
 					defaultLength: 3,
 					gap: 0,
 					hoverClassName: 'current',
+					wrapperClassName: 'h600'
 				},
 				items: [
 					{
@@ -370,12 +369,137 @@ export class HomeService {
 				]
 			},
 
+			hotModules: {
+				sliceClass: 'bar-modules-ul',
+				config: {
+					itemWidth: 200,
+					defaultLength: 6,
+					gap: 0,
+					hoverClassName: 'current',
+					wrapperClassName: 'h220'
+				},
+				items: [
+					{
+						anchor: '',
+						thumbnail: {
+							// src: '/assets/images/home/hot-modules/',
+							name: 'component-inceptor'
+						},
+						name: 'Inceptor',
+						title: '分析型数据库',
+						summary: 'Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和 数据集市的构建。',
+						adv: '/assets/images/home/hot-modules/inceptor.png', //image url
+						
+						liClass: 'direct-child',	//?
+						h4Class: '',	//?
+						pClass: 'desc',	//?
+						divClass: 'shadow-box',	//has a div for wrap
+
+						scenarios: [
+							'逻辑型数据仓库;',
+							'交互型BI分析;',
+							'离线批处理;',
+							'数据质量管理。'
+						]
+					},
+					{
+						anchor: '',
+						thumbnail: {
+							name: 'component-hyperbase'
+						},
+						name: 'Hyperbase',
+						title: '快速检索和非结构化数据处理',
+						summary: 'Hyperbase是以Apache HBase为基础，融合了多项创新技术的NoSQL数据库。',
+						adv: '/assets/images/home/hot-modules/hyperbase.png', //image url
+						scenarios: [
+							'高并发的查询业务;',
+							'非结构化数据的存储和检索;',
+							'高速数据入库。'
+						]
+					},
+					{
+						anchor: '',
+						thumbnail: {
+							name: 'component-slipstream'
+						},
+						name: 'Slipstream',
+						title: '实时计算引擎',
+						summary: 'Slipstream是提供实时计算的产品，被广泛用于交通运输和物联网行业。',
+						adv: '/assets/images/home/hot-modules/slipstream.png', //image url
+						scenarios: [
+							'在线风险预测;',
+							'loT实时监控、告警、预测;',
+							'交通流量实时采集与分析。'
+						]
+					},
+					{
+						anchor: '',
+						thumbnail: {
+							name: 'component-search'
+						},
+						name: 'Search',
+						title: '全文检索',
+						summary: 'Search用于在企业内部构建大数据搜索引擎。',
+						adv: '/assets/images/home/hot-modules/search.png', //image url
+						scenarios: [
+							'大规模搜索引擎;',
+							'海量数据的聚合分析。'
+						]
+					},
+					{
+						anchor: '',
+						thumbnail: {
+							name: 'component-discover'
+						},
+						name: 'Discover',
+						title: '数据挖掘',
+						summary: 'Discover是分布式机器学习平台，它包含了丰富的分布式算法库，内置了多个行业应用模块，提供多类接口，以帮助数据工程师和科学家开发自己的数据挖掘算法。',
+						adv: '/assets/images/home/hot-modules/discover.png', //image url
+						scenarios: [
+							'刻画用户画像，进行智能推荐，实现精准营销;',
+							'用户流失预警;',
+							'金融风险控制和欺诈检测。'
+						]
+					},
+					{
+						anchor: '',
+						thumbnail: {
+							name: 'component-sophon'
+						},
+						name: 'Sophon',
+						title: '深度学习和交互式数据挖掘',
+						summary: 'Sophon是整合了Tensorflow和MxNet的深度学习框架，并且与Hadoop实现了很好的融合。',
+						adv: '/assets/images/home/hot-modules/sophon.png', //image url
+						scenarios: [
+							'大规模搜索引擎;',
+							'海量数据的聚合分析。'
+						]
+					}/*,
+					{
+						anchor: '',
+						thumbnail: {
+							name: 'component-sophon'
+						},
+						name: 'test',
+						title: 'testTitle',
+						summary: 'testSummary',
+						adv: '', //image url
+						scenarios: [
+							'大规模搜索引擎;',
+							'海量数据的聚合分析。'
+						]
+					}*/
+
+				]
+			},
 
 			businessScenarios: {
 				sliceClass: 'scenarios',
 				config: {
 					itemWidth: 400,
-					gap: 0
+					gap: 0,
+					wrapperClassName: 'h600',
+					defaultLength: 6
 				},
 				items: [
 					{
