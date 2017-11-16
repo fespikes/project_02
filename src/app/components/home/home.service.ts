@@ -556,7 +556,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: 'text placeholdertext placeholdertext placeholdertext placeholdertext placeholder',
+						summary: '用信息检索产品打造企业级搜索引擎，以毫秒级的响应速度完成PB级别的高速全文检索。构建一站式内部搜索平台和信息检索服务，打造便捷高效的集中式金融监管中心。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 						
@@ -590,6 +590,7 @@ export class HomeService {
 							class: '',//?
 							text: '查看详情',
 							routerLink: '/business-scenario/data-mart'
+						}
 					},
 					{
 						title: '数据分析与挖掘',
@@ -624,7 +625,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: 'text placeholdertext placeholdertext placeholdertext placeholdertext placeholder',
+						summary: '开发深度学习和人工智能平台，将图像识别技术投入交通监控应用，帮助交通部门实现高度智能化的交通监控与信息处理，把投入车辆识别的人力解放出来，提高交通监管的精准度与效率。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 						
@@ -648,7 +649,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: 'text placeholdertext placeholdertext placeholdertext placeholdertext placeholder',
+						summary: '构建企业内部关系数据库服务，处理OLTP业务。支持复杂的SQL查询，提供高稳定、可扩展、强一致的数据处理。可以应用于创建跨越省市、跨多层下级机关的联网警务OA系统。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 						
