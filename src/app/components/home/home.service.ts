@@ -503,17 +503,16 @@ export class HomeService {
 				},
 				items: [
 					{
-						title: '关系数据库',
-						//thumbnail.width?li has bg
+						title: '数据仓库',
 						thumbnail: {
-							src: '/assets/images/home/scenario-0.jpg',
+							src: '/assets/images/home/scenario-1.jpg',
 							style: {
 								// width: '',
 								// height: '',
 								bgColor: ''
 							}
 						},
-						summary: 'text placeholdertext placeholdertext placeholdertext placeholdertext placeholder',
+						summary: '一站式数据仓库服务解决方案，实现数据采集、数据整合、模型加工、数据管理等完备的一体化数仓功能，支持对于查询速度、并发度、扩展性的保障。可广泛应用于电信、金融、互联网等行业。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 						
@@ -524,17 +523,9 @@ export class HomeService {
 							class: '',//?
 							text: '查看详情',
 							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
-						},
-/*						details: {
-							title: '产品功能',
-							list: [
-								'多种语言接口',
-								'60余种算法',
-								'全行业模型库',
-								'高效的开发工具'
-							]
-						}*/
+						}
 					},
+					
 					{
 						title: '实时计算',
 						thumbnail: {
@@ -545,7 +536,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: 'text placeholdertext placeholdertext placeholdertext placeholdertext placeholder',						
+						summary: '云上的流处理分析平台，可对流数据进行实时采集和实时处理。为企业构建实时数据仓库，开发多种在线实时应用，实现对流式信息的充分利用。可以被广泛用于交通运输和物联网行业。',						
 						liClass: '',	//?
 						h4Class: '',	//?
 						pClass: '',	//?
@@ -566,6 +557,52 @@ export class HomeService {
 							}
 						},
 						summary: 'text placeholdertext placeholdertext placeholdertext placeholdertext placeholder',
+						//for cloud products dom boxShadow
+						// divClass: '',	//has a div for wrap
+						
+						liClass: '',	//?
+						h4Class: '',	//?
+						pClass: '',	//?
+						button: {
+							class: '',//?
+							text: '查看详情',
+							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+						}
+					},
+					{
+						title: '数据集市',
+						thumbnail: {
+							src: '/assets/images/home/scenario-0.jpg',
+							style: {
+								// width: '',
+								// height: '',
+								bgColor: ''
+							}
+						},
+						summary: '实现数据集市构建，对接数据分析业务，提供包括交互式分析、数据立方体、任务调度在内的工具以及功能，实现自动化的报表应用构建和自助式的多维度探索。可应用于客户分析、营销分析等维度分析场景。',
+						//for cloud products dom boxShadow
+						// divClass: '',	//has a div for wrap
+						
+						liClass: '',	//?
+						h4Class: '',	//?
+						pClass: '',	//?
+						button: {
+							class: '',//?
+							text: '查看详情',
+							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
+						}
+					},
+					{
+						title: '数据分析与挖掘',
+						thumbnail: {
+							src: '/assets/images/home/scenario-2.jpg',
+							style: {
+								// width: '',
+								// height: '',
+								bgColor: ''
+							}
+						},
+						summary: '提供数据清洗、特征工程、建模平台和工具集，丰富的机器学习算法和多种行业模型，方便探索对象属性和行为之间的关系，从数据中发现蕴含价值。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 						
@@ -602,53 +639,8 @@ export class HomeService {
 						}
 					},
 					{
-						title: '数据仓库',
-						thumbnail: {
-							src: '/assets/images/home/scenario-1.jpg',
-							style: {
-								// width: '',
-								// height: '',
-								bgColor: ''
-							}
-						},
-						summary: 'text placeholdertext placeholdertext placeholdertext placeholdertext placeholder',
-						//for cloud products dom boxShadow
-						// divClass: '',	//has a div for wrap
-						
-						liClass: '',	//?
-						h4Class: '',	//?
-						pClass: '',	//?
-						button: {
-							class: '',//?
-							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
-						}
-					},
-					{
-						title: '数据分析与挖掘',
-						thumbnail: {
-							src: '/assets/images/home/scenario-2.jpg',
-							style: {
-								// width: '',
-								// height: '',
-								bgColor: ''
-							}
-						},
-						summary: 'text placeholdertext placeholdertext placeholdertext placeholdertext placeholder',
-						//for cloud products dom boxShadow
-						// divClass: '',	//has a div for wrap
-						
-						liClass: '',	//?
-						h4Class: '',	//?
-						pClass: '',	//?
-						button: {
-							class: '',//?
-							text: '查看详情',
-							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
-						}
-					},
-					{
-						title: '数据集市',
+						title: '关系数据库',
+						//thumbnail.width?li has bg
 						thumbnail: {
 							src: '/assets/images/home/scenario-0.jpg',
 							style: {
@@ -668,9 +660,18 @@ export class HomeService {
 							class: '',//?
 							text: '查看详情',
 							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
-						}
+						},
+/*						details: {
+							title: '产品功能',
+							list: [
+								'多种语言接口',
+								'60余种算法',
+								'全行业模型库',
+								'高效的开发工具'
+							]
+						}*/
 					},
-					{
+/*					{
 						title: '其他案例',
 						thumbnail: {
 							src: '/assets/images/home/scenario-1.jpg',
@@ -692,7 +693,7 @@ export class HomeService {
 							text: '查看详情',
 							routerLink: '/ffffff/nnnn'//TODO: set the routerLinks
 						}
-					}
+					}*/
 				]
 			},
 
