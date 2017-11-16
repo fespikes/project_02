@@ -6,7 +6,7 @@ import { Component, OnInit, ElementRef, EventEmitter } from '@angular/core';
   styleUrls: ['./slices.component.sass'],
   inputs: ['data'/*, 'style'*/],
   outputs: ['onItemSelected'],
-  //TODO:
+
   host: {
   	class: 'tui-slices-modules'
   },
