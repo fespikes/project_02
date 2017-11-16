@@ -1,0 +1,13 @@
+<ul>
+  <li
+    *ngFor="let item of tabItems"
+    (click)="tabChange(item.name)"
+  >
+    <a
+      [routerLink]="item.url"
+      [class.active]="item.selected"
+    >
+      {{item.alias | translate}}
+    </a>
+  </li>
+</ul>

@@ -12,12 +12,13 @@
 </div>
 
 <div class="tab-box">
-  <tdc-tab
+  <module-tab
     [tabItems]="tabItems"
     (onTabChange)="onTabChange($event)"
-  ></tdc-tab>
+  ></module-tab>
   <div class="tab-sub">
-    <router-outlet></router-outlet>
+    <product-introduce></product-introduce>
+    <product-advantage></product-advantage>
   </div>
 </div>
 

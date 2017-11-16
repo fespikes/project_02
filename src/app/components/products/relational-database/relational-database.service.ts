@@ -42,7 +42,7 @@ export class RelationalDatabaseService {
         //TODO: image style abstraction
         content: [
           {
-            title: '高效处理复杂数据查询', 
+            title: '高效处理复杂数据查询',
             text: '支持用SQL做多表之间的复杂查询，提供优秀的业务处理速度。'
           },
           {
@@ -104,7 +104,7 @@ export class RelationalDatabaseService {
             ctn: [{
               title: 'Pilot',
               text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
-              link: ''  //TODO: the link goto incepter introduction
+              link: '../../modules/suite/pilot'
             }],
           },
           {
@@ -112,16 +112,16 @@ export class RelationalDatabaseService {
             ctn: [{
               title: 'TxSQL',
               text: 'TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群。 其底层通过 Paxos Group 保证数据的一致性和高可用，在业务层通过分布式的事 务管理器来提供高并发的事务支持',
-              link: ''  //TODO: the link goto incepter introduction
+              link: '../../modules/tool/txsql'
             },{
               title: 'Terminal',
               text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
-              link: ''  //TODO: the link goto incepter introduction
+              link: '../../modules/tool/terminal'
             }]
           }
         ]
       },
-      
+
   	}
   }
 }

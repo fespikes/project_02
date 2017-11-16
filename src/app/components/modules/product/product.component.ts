@@ -4,9 +4,9 @@ import { ProductIntroduceComponent } from './introduce/product-introduce.compone
 import { ProductAdvantageComponent } from './advantage/product-advantage.component';
 import { TabComponent } from '../../common/components/tab/tab.component';
 
-import { ProductContentService } from '../services/product-content.service';
 import { ProductBannerService } from '../services/product-banner.service';
 import { ProductUtilService } from '../services/product-util.service';
+import { ProductResService } from '../services/product-res.service';
 
 @Component({
   templateUrl: './product.component.html',
@@ -15,32 +15,33 @@ import { ProductUtilService } from '../services/product-util.service';
 export class ProductComponent implements OnInit {
 
   bannerInfo = {};
-  tabItems = [
-    {
-      name: 'introduce',
-      alias: '产品介绍',
-      url: './introduce'
-    },
-    {
-      name: 'advantage',
-      alias: '产品优势',
-      url: './advantage'
-    }
-  ];
+  tabItems = [];
+  MODULE_INTRODUCE_ID = 'module-introduce-id';
+  MODULE_ADVANTAGE_ID = 'module-advantage-id';
 
   constructor(
-    private productContentService: ProductContentService,
     private productBannerService: ProductBannerService,
-    private productUtilService: ProductUtilService) {
+    private productUtilService: ProductUtilService,
+    private productResService: ProductResService
+  ) {
 
   }
 
   ngOnInit() {
     let moduleType = this.productUtilService.getModuleType(window.location.hash);
     this.bannerInfo = this.productBannerService.getModuleBannerInfo(moduleType);
+    this.tabItems = this.productResService.getModuleTabItems();
   }
 
-  onTabChange() {
+  onTabChange(tabName) {
+    this.anchorContent(tabName);
+  }
 
+  anchorContent(tabName) {
+    let anchorID = this.MODULE_INTRODUCE_ID;
+    if(tabName === 'advantage') {
+      anchorID = this.MODULE_ADVANTAGE_ID;
+    }
+    this.productUtilService.anchorTabContent(anchorID);
   }
 }

@@ -1,20 +1,43 @@
-<h3 class="sub-title">{{'MODULES.PRODUCT_FUNCTION' | translate}}</h3>
+<h3 class="sub-title" id="module-introduce-id">
+  {{'MODULES.MODULE_INTRODUCE' | translate}}
+</h3>
 <div class="details-box clearfix">
-  <div class="img-box fl">
+  <div
+    class="img-box fl"
+    [ngStyle]="{'display': productIntroduce.img.url?'block':'none'}"
+  >
     <img
       tccImgSrc="{{productIntroduce.img.url | translate}}"
-      [ngStyle]="{'width': productIntroduce.img.width, 'height':productIntroduce.img.height}"
+      [ngStyle]="{'width': productIntroduce.img.width,
+        'height':productIntroduce.img.height}"
     />
   </div>
   <ul
     class="text-list"
-    [ngStyle]="{'margin-left': productIntroduce.img.width}">
-    <li
-      *ngFor="let item of productIntroduce.items"
-      [ngClass]="{'indent':item.indent}"
-    >
-      <h5 *ngIf="item.type === 'title'">{{item.content | translate}}</h5>
-      <p *ngIf="item.type === 'text'">{{item.content | translate}}</p>
+    [ngStyle]="{'margin-left': productIntroduce.img.url
+      ?productIntroduce.img.width:'-70px'}"
+  >
+    <li *ngFor="let item of productIntroduce.items">
+      <h5 *ngIf="item.type === 'title'">
+        {{item.content | translate}}
+      </h5>
+      <span
+        class="sub-title"
+        *ngIf="item.type === 'sub-title'"
+      >
+        {{item.content | translate}}
+      </span>
+      <p *ngIf="item.type === 'text'">
+        {{item.content | translate}}
+      </p>
+      <ul
+        class="group-text"
+        *ngIf="item.type === 'group-text'"
+      >
+        <li *ngFor="let cell of item.group">
+          {{cell.content | translate}}
+        </li>
+      </ul>
     </li>
   </ul>
 </div>
