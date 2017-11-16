@@ -100,42 +100,42 @@ const navigationData = {
 						{
 						  title: 'Inceptor',
 						  summary: '分析型数据库',
-						  routerLink: './modules/product/inceptor/introduce'
+						  routerLink: './modules/product/inceptor'
 						},
 						{
 						  title: 'Slipstream',
 						  summary: '实时计算引擎',
-						  routerLink: './modules/product/slipstream/introduce'
+						  routerLink: './modules/product/slipstream'
 						},
 						{
 						  title: 'Discover',
 						  summary: '数据挖掘',
-						  routerLink: './modules/product/discover/introduce'
+						  routerLink: './modules/product/discover'
 						},
 						{
 						  title: 'Hyperbase',
 						  summary: '快速检索和非结构化数据处理',
-						  routerLink: './modules/product/hyperbase/introduce'
+						  routerLink: './modules/product/hyperbase'
 						},
 						{
 						  title: 'Search',
 						  summary: '全文检索',
-						  routerLink: './modules/product/search/introduce'
+						  routerLink: './modules/product/search'
 						},
 						{
 						  title: 'Sophon',
 						  summary: '深度学习和交互式数据挖掘',
-						  routerLink: './modules/product/sophon/introduce'
+						  routerLink: './modules/product/sophon'
 						},
 						{
 						  title: 'Guardian',
 						  summary: '安全、权限和资源管控',
-						  routerLink: './modules/product/guardian/introduce'
+						  routerLink: './modules/product/guardian'
 						},
 						{
 						  title: 'Apache Hadoop',
 						  summary: '分布式系统基础架构',
-						  routerLink: './modules/product/hadoop/introduce'
+						  routerLink: './modules/product/hadoop'
 						}
 					]
 				},
@@ -146,27 +146,27 @@ const navigationData = {
 						{
 						  title: 'Pilot',
 						  summary: '报表工具',
-						  routerLink: './modules/suite/pilot/introduce'
+						  routerLink: './modules/suite/pilot'
 						},
 						{
 						  title: 'Workflow',
 						  summary: '调度流',
-						  routerLink: './modules/suite/workflow/introduce'
+						  routerLink: './modules/suite/workflow'
 						},
 						{
 						  title: 'Transporter',
 						  summary: '数据流',
-						  routerLink: './modules/suite/transporter/introduce'
+						  routerLink: './modules/suite/transporter'
 						},
 						{
 						  title: 'Governor',
 						  summary: '元数据管理工具',
-						  routerLink: './modules/suite/governor/introduce'
+						  routerLink: './modules/suite/governor'
 						},
 						{
 						  title: 'Rubik',
 						  summary: 'OLAP Cube设计工具',
-						  routerLink: './modules/suite/rubik/introduce'
+						  routerLink: './modules/suite/rubik'
 						}
 					]
 				},
@@ -177,47 +177,47 @@ const navigationData = {
 						{
 						  title: 'TxSQL',
 						  summary: '关系数据库',
-						  routerLink: './modules/tool/txsql/introduce'
+						  routerLink: './modules/tool/txsql'
 						},
 						{
 						  title: 'Midas',
 						  summary: '机器学习分析工具',
-						  routerLink: './modules/tool/midas/introduce'
+						  routerLink: './modules/tool/midas'
 						},
 						{
 						  title: 'Waterdrop',
 						  summary: 'SQL开发工具',
-						  routerLink: './modules/tool/waterdrop/introduce'
+						  routerLink: './modules/tool/waterdrop'
 						},
 						{
 						  title: 'Milano',
 						  summary: '日志服务',
-						  routerLink: ''
+						  routerLink: './modules/tool/milano'
 						},
 						{
 						  title: 'Prometheus',
 						  summary: 'Metrics监控',
-						  routerLink: './modules/tool/prometheus/introduce'
+						  routerLink: './modules/tool/prometheus'
 						},
 						{
 						  title: 'Kafka',
 						  summary: '消息中间件',
-						  routerLink: './modules/tool/kafka/introduce'
+						  routerLink: './modules/tool/kafka'
 						},
 						{
 						  title: 'Zeppelin',
 						  summary: 'Notebook IDE',
-						  routerLink: './modules/tool/zeppelin/introduce'
+						  routerLink: './modules/tool/zeppelin'
 						},
 						{
 						  title: 'Terminal',
 						  summary: 'Docker命令行工具',
-						  routerLink: './modules/tool/terminal/introduce'
+						  routerLink: './modules/tool/terminal'
 						},
 						{
 						  title: 'Redis',
 						  summary: '内存K-V数据库',
-						  routerLink: './modules/tool/redis/introduce'
+						  routerLink: './modules/tool/redis'
 						}
 					]
 				}
