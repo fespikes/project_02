@@ -1,11 +1,12 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'tui-slices-modules',
   templateUrl: './slices.component.html',
   styleUrls: ['./slices.component.sass'],
   inputs: ['data'/*, 'style'*/],
-  //TODO:
+  outputs: ['onItemSelected'],
+
   host: {
   	class: 'tui-slices-modules'
   },
@@ -13,13 +14,16 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 export class SlicesComponent implements OnInit {
 
 	static config = {
-		itemWidth: 400,
-		defaultLength: 3,
+		itemWidth: 400,//*
+		defaultLength: 3,//*
     gap: 0,
 		direction: true, //go right
+    hoverClassName: 'current',//*
+    wrapperClassName: 'h600'//*
 	};
 
 	data: any;//TODO:
+  currentItem: any;
 
 	interval: any;
 	items: any;
@@ -36,25 +40,29 @@ export class SlicesComponent implements OnInit {
   targetClassName: string;
   hoverClassName: string;
 
+  onItemSelected?: EventEmitter<any>;
+
   constructor(
   	private el:ElementRef
-  ) { }
+  ) {
+    this.onItemSelected = new EventEmitter();
+  }
 
   ngOnInit() {
   	//TODO:
-  	this.items = this.data.items;
+  	let items = this.items = this.data.items;
   	const ulItemsClass = this.data.sliceClass;
-  	const config = {...this.data.config,...SlicesComponent.config};
+  	const config = {...SlicesComponent.config, ...this.data.config};
   	this.hoverClassName = this.data.config.hoverClassName;
+    this.currentItem = items[0];
   	
-  	// const config = SlicesComponent.config;
-    const items = this.items;
-
   	this.itemsLength = items.length;
   	this.itemsWidth = this.itemsLength * config.itemWidth ;
     this.windowWidth = config.defaultLength * config.itemWidth;
 
     const nativeElement = this.el.nativeElement;
+
+    let itemsWrapper =  nativeElement.querySelector('.items-wrapper');
     this.ulItems = nativeElement.querySelector('.ul-items');
     this.ulSwap = nativeElement.querySelector('.ul-swap');
 
@@ -65,10 +73,11 @@ export class SlicesComponent implements OnInit {
       this.ulItems.style.left = '0px';
       this.ulSwap.style.left = this.itemsWidth*-1 + 'px';
     }
-    this.needArrow = this.itemsLength>SlicesComponent.config.defaultLength;
+    this.needArrow = this.itemsLength>config.defaultLength;
 
     this.ulItems.className = this.ulItems.className + ' ' + ulItemsClass;
     this.ulSwap.className = this.ulSwap.className + ' ' + ulItemsClass;
+    itemsWrapper.className = itemsWrapper.className + ' ' + config.wrapperClassName;
 
     this.setInterval();
   }
@@ -165,6 +174,7 @@ export class SlicesComponent implements OnInit {
   itemOnMouseenter(target, product) {
   	this.targetClassName = target.className;
   	target.className = this.hoverClassName + ' ' + this.targetClassName;
+    product && this.onItemSelected.emit(product);
     clearInterval(this.interval);
   }
 
@@ -172,5 +182,10 @@ export class SlicesComponent implements OnInit {
   	target.className = this.targetClassName;
     this.setInterval(true);
   }
+
+  // itemSelected(item) {
+  //   this.currentItem = item;
+  //   this.onItemSelected.emit(item);
+  // }
 
 }

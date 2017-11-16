@@ -1,0 +1,63 @@
+@import '../home.component'
+
+
+.bar-module-details
+  @extend .center-box
+  padding: 0 20px
+
+  height: 470px
+
+  >div
+    float: left
+    display: inline-block
+  .left
+    width: 550px
+    padding: 60px 85px 30px 20px
+    color: #666
+
+    h3
+      font-size: 2.4rem
+      border-left: 2px #305ab5 solid
+      margin: 12px 0 15px -20px
+      text-indent: 18px
+
+    p
+      line-height: 30px
+
+    h4
+      font-size: 1.8rem
+      padding: 30px 0 20px 0
+
+    .cases
+
+      li
+        line-height: 26px
+        text-indent: 1.5rem
+
+        &:before 
+          content: ""
+          display: inline-block
+          width: 6px 
+          height: 6px
+          background: #666
+          border-radius: 6px 
+          position: relative
+          left: -1rem
+
+
+
+  .right
+    width: 608px
+    margin: 60px 0 30px
+    img
+      width: 100%
+
+
+.bar-modules
+  clear: both
+  height: 220px
+  //margin-left: -100px
+  //margin-right: -100px
+  overflow: hidden
+  position: relative
+  background: #fff

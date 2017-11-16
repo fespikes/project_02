@@ -64,71 +64,7 @@
   <div class="hot-modules">
     <h3 class="middle-title">热门组件</h3>
     <!--S: details-->
-    <div class="details">
-      <div class="left">
-        <h3>Discover数据挖掘</h3>
-        <p>Discover是分布式机器学习平台，它包含了丰富的分布式算法库，内置了多个行业应用模块，提供多类接口，以帮助数据工程师和科学家开发自己的数据挖掘算法。</p>
-
-        <h4 class="bold">应用场景</h4>
-        <ul class="cases">
-          <li>刻画用户画像，进行智能推荐，实现精准营销；</li>
-          <li>用户流失预警；</li>
-          <li>金融风险控制和欺诈检测。</li>
-        </ul>
-      </div>
-
-      <div class="right"></div>
-    </div><!--E: details-->
-    <div class="bar-modules">
-      <ul>
-        <!-- <li class="current"> -->
-        <li>
-          <a>
-            <span class="thumbnail-small"></span>
-            <h4 class="title">Inceptor</h4>
-            <p class="desc">分析型数据库</p>
-          </a>
-        </li>
-        <li class="">
-          <a>
-            <span class="thumbnail-small"></span>
-            <h4 class="title">Hyperbase</h4>
-            <p class="desc">快速检索和非结构化数据处理</p>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="thumbnail-small"></span>
-            <h4 class="title">Slipstream</h4>
-            <p class="desc">实时计算引擎</p>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="thumbnail-small"></span>
-            <h4 class="title">Search</h4>
-            <p class="desc">全文检索</p>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="thumbnail-small"></span>
-            <h4 class="title">Discover</h4>
-            <p class="desc">数据挖掘</p>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="thumbnail-small"></span>
-            <h4 class="title">Sophon</h4>
-            <p class="desc">深度学习和交互式数据挖掘</p>
-          </a>
-        </li>
-      </ul>
-      <a class="arrow left"></a>
-      <a class="arrow right"></a>
-    </div>
-    <!--E: bar-modules-->
+    <hot-modules [data]="hotModules"></hot-modules>
   </div>
   <!--E: hot-modules-->
 

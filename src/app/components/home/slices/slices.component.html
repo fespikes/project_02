@@ -7,11 +7,12 @@
 		<li 
 			*ngFor="let item of data.items" 
 			class="{{item.liClass}}" 
-	  	(mouseenter)="itemOnMouseenter($event.target)"
-	  	(mouseleave)="itemOnMouseleave($event.target)"
+	  	(mouseenter)="itemOnMouseenter($event.target, item)"
+	  	(mouseleave)="itemOnMouseleave($event.target, item)"
 		>
+	  	<!-- [ngClass]="{'active': currentItem ===item }" -->
 			<div
-				*ngIf="item.divClass"
+				*ngIf="data.sliceClass==='ul-products'"
 				class="{{item.divClass}}"
 			>
 				<div
@@ -34,13 +35,7 @@
 			  >{{item.button.text}}</button>
 			</div>
 
-			<ng-container *ngIf="!item.divClass">
-			<!--TODO: 
-			1.adapt the thumbnail between:
-				cloud products;
-				hot modules;
-			2.thumbnail style in hotmodules
-			-->
+			<ng-container *ngIf="data.sliceClass==='scenarios'">
 				<div
 	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
 	      	class="thumbnail"
@@ -55,29 +50,39 @@
 			  >{{item.button.text}}</button>
 			</ng-container>
 
+			<a 
+				*ngIf="data.sliceClass==='bar-modules-ul'" 
+			>
+<!-- 				(click)="itemSelected(item)" 
+ -->				<div class="thumbnail" >
+	      	<svg tccIcon="{{item.thumbnail.name}}"></svg>
+	      </div>
+			  <h4 class="{{item.h4Class}}">{{item.name}}</h4>
+			  <p class="{{item.pClass}}">{{item.title}}</p>
+			</a>
+
 		</li>
 	</ul>
 
 	<ul 
 		class="ul-swap"
 		[ngStyle]="{width: itemsWidth + 'px'}"
-		>
+	>
 		<li
 			*ngFor="let item of data.items"
 			class="{{item.liClass}}" 
 	  	(mouseenter)="itemOnMouseenter($event.target)"
 	  	(mouseleave)="itemOnMouseleave($event.target)"
-		>
+		><!-- [ngClass]="{'current': currentItem ===item }" -->
 			<div
-				*ngIf="item.divClass"
+				*ngIf="data.sliceClass==='ul-products'"
 				class="{{item.divClass}}"
 			>
 				<div
 	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
 	      	class="thumbnail"
 	      ></div>
-			  <h4 class="{{item.h4Class}}">
-			  {{item.title}}</h4>
+			  <h4 class="{{item.h4Class}}">{{item.title}}</h4>
 			  <p class="{{item.pClass}}">{{item.summary}}</p>
 
 			  <ng-container *ngIf="item.details">
@@ -93,13 +98,7 @@
 			  >{{item.button.text}}</button>
 			</div>
 
-			<ng-container *ngIf="!item.divClass">
-			<!--TODO: 
-			1.adapt the thumbnail between:
-				cloud products;
-				hot modules;
-			2.thumbnail style in hotmodules
-			-->
+			<ng-container *ngIf="data.sliceClass==='scenarios'">
 				<div
 	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
 	      	class="thumbnail"
@@ -107,11 +106,24 @@
 			  <h4 class="{{item.h4Class}}">
 			  {{item.title}}</h4>
 			  <p class="{{item.pClass}}">{{item.summary}}</p>
+
 				<button
 			  	class="{{item.button.class}}"
 			  	routerLink="{{item.button.routerLink}}"
 			  >{{item.button.text}}</button>
 			</ng-container>
+
+			<a 
+				*ngIf="data.sliceClass==='bar-modules-ul'" 
+				(click)="itemSelected(item)" 
+			>
+				<div class="thumbnail" >
+	      	<svg tccIcon="{{item.thumbnail.name}}"></svg>
+	      </div>
+			  <h4 class="{{item.h4Class}}">{{item.name}}</h4>
+			  <p class="{{item.pClass}}">{{item.title}}</p>
+			</a>
+
 
 		</li>
 	</ul>
