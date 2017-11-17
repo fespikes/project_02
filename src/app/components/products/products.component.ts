@@ -20,9 +20,9 @@ export class ProductsComponent implements OnInit {
 		  icon: 'products-data-warehouse'
 		},
 		{
-		  name: '数据集市',
-		  url: `/products/data-mart`,
-		  icon: 'products-data-mart'
+		  name: '实时计算',
+		  url: `/products/realtime-computation`,
+		  icon: 'products-realtime-computation'
 		},
 		{
 		  name: '信息检索',
@@ -30,9 +30,14 @@ export class ProductsComponent implements OnInit {
 		  icon: 'products-info-retrieval'
 		},
 		{
-		  name: '关系数据库',
-		  url: `/products/relational-database`,
-		  icon: 'products-relational-database'
+		  name: '数据集市',
+		  url: `/products/data-mart`,
+		  icon: 'products-data-mart'
+		},
+		{
+		  name: '数据分析与挖掘',
+		  url: `/products/analysis-mining`,
+		  icon: 'products-analysis-mining'
 		},
 		{
 		  name: '深度学习',
@@ -40,14 +45,9 @@ export class ProductsComponent implements OnInit {
 		  icon: 'products-deep-learning'
 		},
 		{
-		  name: '实时计算',
-		  url: `/products/realtime-computation`,
-		  icon: 'products-realtime-computation'
-		},
-		{
-		  name: '数据分析与挖掘',
-		  url: `/products/analysis-mining`,
-		  icon: 'products-analysis-mining'
+		  name: '关系数据库',
+		  url: `/products/relational-database`,
+		  icon: 'products-relational-database'
 		}
 	];
   backUrl = '../';
