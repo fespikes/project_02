@@ -51,23 +51,23 @@ export const routeAnimation: AnimationEntryMetadata =
   ]),
   transition('* => *', [
     query(':leave', 
-      style({ transform: 'translateY(0)', position: 'absolute'}),
+      style({opacity:0, transform: 'translateY(0)', position: 'absolute'}),
       { optional: true }
     ),
     query(':enter', 
-      style({ transform: 'translateY(100%)', position: 'absolute'}),
+      style({opacity:1, transform: 'translateY(100%)', position: 'absolute'}),
       { optional: true }
     ),
     group([
       query(':leave',
         animate('.5s ease-in-out', 
-          style({transform: 'translateY(-100%)'})
+          style({opacity:1, transform: 'translateY(-100%)'})
         ),
         { optional: true }
       ),
       query(':enter',
         animate('.5s ease-in-out',
-          style({transform: 'translateY(0)'})
+          style({opacity:0, transform: 'translateY(0)'})
         ),
         { optional: true }
       )
