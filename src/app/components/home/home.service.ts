@@ -505,7 +505,7 @@ export class HomeService {
 					{
 						title: '数据仓库',
 						thumbnail: {
-							src: '/assets/images/home/scenario-1.jpg',
+							src: '/assets/images/scenarios/data-warehouse.jpg',
 							style: {
 								// width: '',
 								// height: '',
@@ -529,7 +529,7 @@ export class HomeService {
 					{
 						title: '实时计算',
 						thumbnail: {
-							src: '/assets/images/home/scenario-1.jpg',
+							src: '/assets/images/scenarios/realtime-computation.jpg',
 							style: {
 								// width: '',
 								// height: '',
@@ -549,7 +549,7 @@ export class HomeService {
 					{
 						title: '信息检索',
 						thumbnail: {
-							src: '/assets/images/home/scenario-2.jpg',
+							src: '/assets/images/scenarios/info-retrieval.jpg',
 							style: {
 								// width: '',
 								// height: '',
@@ -572,7 +572,7 @@ export class HomeService {
 					{
 						title: '数据集市',
 						thumbnail: {
-							src: '/assets/images/home/scenario-0.jpg',
+							src: '/assets/images/scenarios/data-mart.jpg',
 							style: {
 								// width: '',
 								// height: '',
@@ -595,7 +595,7 @@ export class HomeService {
 					{
 						title: '数据分析与挖掘',
 						thumbnail: {
-							src: '/assets/images/home/scenario-2.jpg',
+							src: '/assets/images/scenarios/analysis-mining.jpg',
 							style: {
 								// width: '',
 								// height: '',
@@ -618,7 +618,7 @@ export class HomeService {
 					{//TODO: change the thumbnails
 						title: '深度学习',
 						thumbnail: {
-							src: '/assets/images/home/scenario-0.jpg',
+							src: '/assets/images/scenarios/deep-learning.jpg',
 							style: {
 								// width: '',
 								// height: '',
@@ -642,7 +642,7 @@ export class HomeService {
 						title: '关系数据库',
 						//thumbnail.width?li has bg
 						thumbnail: {
-							src: '/assets/images/home/scenario-0.jpg',
+							src: '/assets/images/scenarios/relational-database.jpg',
 							style: {
 								// width: '',
 								// height: '',
