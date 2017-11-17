@@ -40,9 +40,10 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'documents-support/docs-detail/:category/:version/:document',
+    path: 'documents-support/docs-detail/:tag/:category/:version/:document',
     component: DocumentsDetailComponent
-  }
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

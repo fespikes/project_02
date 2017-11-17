@@ -11,9 +11,10 @@
 	  	(mouseleave)="itemOnMouseleave($event.target, item)"
 		>
 	  	<!-- [ngClass]="{'active': currentItem ===item }" -->
-			<div
+			<a
 				*ngIf="data.sliceClass==='ul-products'"
 				class="{{item.divClass}}"
+			  routerLink="{{item.button.routerLink}}"
 			>
 				<div
 	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
@@ -31,11 +32,13 @@
 
 				<button
 			  	class="{{item.button.class}}"
-			  	routerLink="{{item.button.routerLink}}"
 			  >{{item.button.text}}</button>
-			</div>
+			</a>
 
-			<ng-container *ngIf="data.sliceClass==='scenarios'">
+			<a
+				routerLink="{{item.button.routerLink}}"
+				*ngIf="data.sliceClass==='scenarios'"
+			>
 				<div
 	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
 	      	class="thumbnail"
@@ -46,9 +49,8 @@
 
 				<button
 			  	class="{{item.button.class}}"
-			  	routerLink="{{item.button.routerLink}}"
 			  >{{item.button.text}}</button>
-			</ng-container>
+			</a>
 
 			<a 
 				*ngIf="data.sliceClass==='bar-modules-ul'" 
@@ -68,15 +70,17 @@
 		class="ul-swap"
 		[ngStyle]="{width: itemsWidth + 'px'}"
 	>
-		<li
-			*ngFor="let item of data.items"
+		<li 
+			*ngFor="let item of data.items" 
 			class="{{item.liClass}}" 
 	  	(mouseenter)="itemOnMouseenter($event.target, item)"
 	  	(mouseleave)="itemOnMouseleave($event.target, item)"
-		><!-- [ngClass]="{'current': currentItem ===item }" -->
-			<div
+		>
+	  	<!-- [ngClass]="{'active': currentItem ===item }" -->
+			<a
 				*ngIf="data.sliceClass==='ul-products'"
 				class="{{item.divClass}}"
+			  routerLink="{{item.button.routerLink}}"
 			>
 				<div
 	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
@@ -94,11 +98,13 @@
 
 				<button
 			  	class="{{item.button.class}}"
-			  	routerLink="{{item.button.routerLink}}"
 			  >{{item.button.text}}</button>
-			</div>
+			</a>
 
-			<ng-container *ngIf="data.sliceClass==='scenarios'">
+			<a
+				routerLink="{{item.button.routerLink}}"
+				*ngIf="data.sliceClass==='scenarios'"
+			>
 				<div
 	      	[ngStyle]="{'background-image':'url(' + item.thumbnail.src + ')'}"
 	      	class="thumbnail"
@@ -109,21 +115,19 @@
 
 				<button
 			  	class="{{item.button.class}}"
-			  	routerLink="{{item.button.routerLink}}"
 			  >{{item.button.text}}</button>
-			</ng-container>
+			</a>
 
 			<a 
 				*ngIf="data.sliceClass==='bar-modules-ul'" 
-				(click)="itemSelected(item)" 
 			>
-				<div class="thumbnail" >
+<!-- 				(click)="itemSelected(item)" 
+ -->				<div class="thumbnail" >
 	      	<svg tccIcon="{{item.thumbnail.name}}"></svg>
 	      </div>
 			  <h4 class="{{item.h4Class}}">{{item.name}}</h4>
 			  <p class="{{item.pClass}}">{{item.title}}</p>
 			</a>
-
 
 		</li>
 	</ul>

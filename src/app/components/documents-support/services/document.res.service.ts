@@ -143,12 +143,12 @@ export class DocumentResService {
           {
             name: 'documentSupport',
             alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
-            url: '../../../../../documents-support'
+            url: '../../../../../../documents-support'
           },
           {
             name: 'productDocument',
             alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
-            url: '../../../../../documents-support/docs/products'
+            url: '../../../../../../documents-support/docs/products'
           },
           {
             name: 'documentDetail',
@@ -185,32 +185,5 @@ export class DocumentResService {
         url: './guides'
       }
     ];
-  }
-
-  getSearchObject(): Object {
-    return {
-      "name": "搜索对象",
-      "alias": "searchObj",
-      "children": [
-        {
-          "name": "产品文档",
-          "alias": "productDocument",
-          "type": "category",
-          "children": []
-        },
-        {
-          "name": "常见问题",
-          "alias": "commonIssue",
-          "type": "category",
-          "children": []
-        },
-        {
-          "name": "新手入门",
-          "alias": "freshGuide",
-          "type": "category",
-          "children": []
-        }
-      ]
-    };
   }
 }

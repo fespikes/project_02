@@ -8,10 +8,12 @@
         <span>{{'DOCUMENTS.SEARCH_FILTER' | translate}}</span>
       </div>
       <div class="tree">
-        <tdc-search-tree
+        <tdc-menu-tree
           [treeModel]="treeModel"
+          [treeLevel]="treeLevel"
+          [treeType]="treeType"
           (onSelectChange)="onSelectChange($event)"
-        ></tdc-search-tree>
+        ></tdc-menu-tree>
       </div>
       <div class="operation">
         <button (click)="expandAll()">

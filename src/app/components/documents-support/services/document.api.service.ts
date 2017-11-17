@@ -23,15 +23,15 @@ export class DocumentAPIService {
     });
   }
 
-  getTileDocs(): Observable<any> {
+  getSearchTreeModel(): Observable<any> {
     return this.http.get(
-      `${this.version}/document/_ls?r=true`
+      `${this.version}/document/_ls?r=true&reverse=true`
     ).map((res) => res.json());
   }
 
-  getTreeDocs(): Observable<any> {
+  getDocuments(tag, reverse): Observable<any> {
     return this.http.get(
-      `${this.version}/document/_ls?r=true&reverse=true`
+      `${this.version}/document/_ls?r=true&tag=${tag}&reverse=${reverse}`
     ).map((res) => res.json());
   }
 

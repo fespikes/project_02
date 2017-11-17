@@ -109,7 +109,7 @@
     },
     "SEARCH":{
       "TITLE":"大数据搜索引擎",
-      "SUB_TITLE":"Search用于构建企业内部搜索引擎，支持PB级别的高速全文检索。同时它利用各种创新性的存储与内存管理技术，极大的提高了系统的可用性。",
+      "SUB_TITLE":"用于构建企业内部搜索引擎，支持PB级别的高速全文检索。同时利用各种创新性的存储与内存管理技术，极大的提高了系统的可用性。",
       "INTRODUCE_IMG_URL":"modules/search-introduce.png",
       "INTRODUCE_1":"Transwarp Search是基于开源Elasticsearch开发出的可扩展的分布式全文搜索和分析引擎。Search以Elasticsearch基础架构为基础优化了多种功能，并实现了基于SQL的全文检索。",
       "INTRODUCE_2":"Transwarp Search通常扮演两种角色：",
@@ -187,7 +187,7 @@
     },
     "HADOOP":{
       "TITLE":"分布式系统基础架构",
-      "SUB_TITLE":"Hadoop是适用于大型数据集的计算与存储框架。处理海量数据时在可扩展性、数据安全和部署成本方面同关系型数据库相比具有显著的优势。同时可以很好的适用于非结构化数据的持续增长。",
+      "SUB_TITLE":"针对海量数据的计算与存储框架，在可扩展性、数据安全和部署成本方面具有显著优势。",
       "INTRODUCE_IMG_URL":"modules/hadoop-introduce.png",
       "INTRODUCE_1":"Transwarp基于Apache Hadoop开发，并对各组件性能进行了优化。Transwarp云产品以HDFS为文件系统，以YARN为资源管理平台，提升了安全性、稳定性，从而可以提供7×24小时的不间断服务。",
       "INTRODUCE_2":"Hadoop Distributed File System (HDFS)",
@@ -206,7 +206,7 @@
     },
     "PILOT":{
       "TITLE":"报表分析",
-      "SUB_TITLE":"Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。支持多维度的分析和自助分析，提供数十种报表样式，对时序数据也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。",
+      "SUB_TITLE":"基于Web的报表展现工具，轻量、灵活，可以快速部署。支持多维度分析和自助分析，支持团队协作和共享，支持报表导入和导出。",
       "INTRODUCE_IMG_URL":"modules/pilot-introduce.png",
       "INTRODUCE_1":"Transwarp Pilot是轻量的自助式分析BI工具，它克服了传统BI工具的多方面缺陷，功能全面且智能，不论是对于可视化报表展现的丰富度，还是对于处理性能，都有极致的表现。",
       "INTRODUCE_2":"以下是Pilot实现的几个主要功能和特性：",
@@ -321,7 +321,7 @@
     },
     "RUBIK":{
       "TITLE":"OLAP Cube设计",
-      "SUB_TITLE":"Rubik是用于设计OLAP Cube的可视化工具，支持雪花模型和星形模型两种Cube设计模型，并支持多种格式的数据源与物化格式。在数据立方体的加速下，查询分析的速度可以实现10倍的提升。",
+      "SUB_TITLE":"用于设计OLAP Cube的可视化工具，支持雪花模型和星形模型，支持多种格式的数据源与物化格式。在数据立方体的加速下，查询分析速度可以实现10倍的提升。",
       "INTRODUCE_IMG_URL":"modules/rubik-introduce.png",
       "INTRODUCE_1":"Transwarp Rubik除了可以实现Cube设计以及实例化，还提供对Cube的管理功能，以及方便的团队协作。其主要功能列举如下。",
       "INTRODUCE_2":"Cube设计",
@@ -347,7 +347,7 @@
     },
     "WATERDROP":{
       "TITLE":"SQL开发工具",
-      "SUB_TITLE":"Waterdrop包含四个子模块：SQL编辑器、元数据管理器、SQL执行器、以及数据导入/导出。提供语法检测、SQL格式化和开发助手等功能，帮助开发者提高开发效率。",
+      "SUB_TITLE":"Waterdrop是高效的SQL开发工具，支持SQL编辑、元数据管理、SQL执行、以及数据导入/导出，同时提供提高开发效率的多种高级功能。",
       "INTRODUCE_IMG_URL":"modules/waterdrop-introduce.png",
       "INTRODUCE_1":"Waterdrop是为开发人员和数据库管理人员提供的数据库管理工具，它可进行跨平台管理，可作为Inceptor SQL客户端，除了Inceptor还支持并兼容其余多种数据库。",
       "INTRODUCE_2":"四个功能模块",
@@ -451,7 +451,7 @@
     },
     "KAFKA":{
       "TITLE":"消息中间件",
-      "SUB_TITLE":"Kafka是一种分布式的基于发布/订阅的消息系统。在廉价的商用机器上也能做到单机支持每秒100K条以上消息的传输。支持消息分区以及在线水平扩展。",
+      "SUB_TITLE":"一种分布式的基于发布/订阅的消息系统，在廉价的机器上也能做到单机每秒100K条以上消息的传输。",
       "INTRODUCE_IMG_URL":"modules/kafka-introduce.png",
       "INTRODUCE_1":"Kafka中的核心概念包括：Topic、Broker、Consumer、Producer。",
       "INTRODUCE_2":"Topic：Kafka通过 Topic对消息（message）进行归类。Producer可以向Topic发布消息，Consumer可以从Topic消费消息。",
@@ -521,7 +521,7 @@
     "TERMINAL":{
       "LOGO_URL":"modules/terminal-logo.png",
       "TITLE":"网页版命令行工具",
-      "SUB_TITLE":"Transwarp Docker是集成的组件命令行交互界面。用户可以通过它以命令行的方式对云平台的各个组件进行维护管理。",
+      "SUB_TITLE":"集成的组件命令交互界面，可以通过它以命令行形式对平台组件进行维护管理。",
       "INTRODUCE_IMG_URL":"modules/terminal-introduce.png",
       "INTRODUCE_1":"Terminal是集群上用命令行指令操作服务的入口。它集成了基本的常用Linux操作命令，以及各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免需要登录各个容器才可以操作服务的烦恼。",
       "INTRODUCE_2":"涵盖的服务与工具包括HDFS、YARN、ZooKeeper、HBase、Inceptor、Kafka、Sqoop、Transporter、dstools、Elasticsearch、Kerberos。",

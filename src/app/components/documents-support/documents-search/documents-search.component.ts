@@ -20,6 +20,8 @@ export class DocumentsSearchComponent implements OnInit {
   docsList = [];
   docsCount = 0;
   keyword = '';
+  treeLevel = 1;
+  treeType = 'search-tree';
   selectedDocs = [];
   pagination = new Pagination();
 
@@ -36,11 +38,11 @@ export class DocumentsSearchComponent implements OnInit {
   ngOnInit() {
     let docsType = this.documentUtilService.getDocsType(window.location.hash);
     this.crumbItems = this.documentResService.getDocsCrumb(docsType, '');
-    this.getTreeDocs();
+    this.getTreeModel();
 
     this.keyword = this.documentResService.getKeyword();
     this.onDocumentSearch(this.keyword);
-    scrollTo(0, 0);
+    this.documentUtilService.scrollScreenTop();
   }
 
   onDocumentSearch(keyword) {
@@ -52,8 +54,8 @@ export class DocumentsSearchComponent implements OnInit {
     this.documentSearch(searchParams);
   }
 
-  getTreeDocs() {
-    this.documentAPIService.getTreeDocs().subscribe(
+  getTreeModel() {
+    this.documentAPIService.getSearchTreeModel().subscribe(
       result => {
         this.treeModel = this.documentSearchService.initSearchTree(result);
       }
@@ -88,14 +90,14 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   onSelectChange(entity) {
-    const searchState: any = this.documentSearchService.makeSelectedDocs(
-      entity, this.selectedDocs, this.treeModel);
+    const searchState = this.documentSearchService.makeSelectedDocs(
+      entity, this.selectedDocs, this.treeModel) as any;
     this.selectedDocs = searchState.selectedDocs;
     this.treeModel = searchState.treeModel;
     const searchParams = this.documentSearchService.makeSearchParams(
       this.keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
-    scrollTo(0, 0);
+    this.documentUtilService.scrollScreenTop();
   }
 
   listItemClick(doc) {

@@ -1,5 +1,4 @@
-@import "../../../../../styles/util"
-@include clearfix
+@import "../../../common/style/document-list.layout"
 
 .doc-type
   width: 25%
@@ -21,34 +20,3 @@
     float: right
     width: 90px
     height: 100%
-
-.doc-list
-  margin-top: 15px
-
-  .doc-item
-    margin: 0 0 10px 0
-    padding: 0 10px
-    height: 35px
-    line-height: 35px
-    border-radius: 4px
-    border: solid 1px $common-grey
-
-    &:hover
-      cursor: pointer
-      color: $common-blue
-      svg
-        visibility: visible
-
-    @include text-ellipsis
-    span
-      float: left
-      display: inline-block
-      width: 190px
-
-    svg
-      float: right
-      margin-top: 10px
-      visibility: hidden
-
-
-
