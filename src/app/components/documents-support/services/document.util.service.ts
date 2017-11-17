@@ -85,4 +85,8 @@ export class DocumentUtilService {
     const bodyEl = document.getElementsByTagName("body")[0];
     bodyEl.style.width = attribute;
   }
+
+  scrollScreenTop(): void {
+    scrollTo(0, 0);
+  }
 }

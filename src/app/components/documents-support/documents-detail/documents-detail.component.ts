@@ -51,14 +51,14 @@ export class DocumentsDetailComponent implements OnInit {
     this.getDocTree();
     this.getDocDetail();
     this.documentUtilService.setBodyWidthAttribute('100%');
-    scrollTo(0, 0);
+    this.documentUtilService.scrollScreenTop();
   }
 
   getDocTree() {
     const url = this.getPath(this.DOC_TREE);
     const anchorId = this.documentResService.getAnchorId();
     this.documentAPIService.getDocTree(url).subscribe(
-      result =>{
+      result => {
         this.treeModel = result.nav.children;
         this.treeModel = this.documentSearchService.initTreeSelectedState(
           this.treeModel, anchorId

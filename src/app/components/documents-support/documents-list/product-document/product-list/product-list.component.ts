@@ -33,6 +33,6 @@ export class ProductListComponent implements OnInit {
   viewDocDetail(category, doc) {
     this.documentResService.setSectionId('index');
     this.documentResService.setAnchorId('index');
-    this.router.navigate([`/documents-support/docs-detail/${category.id}/${category.currentVersion.id}/${doc.id}`]);
+    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${category.id}/${category.currentVersion.id}/${doc.id}`]);
   }
 }
