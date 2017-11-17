@@ -30,7 +30,6 @@ export class DocTreeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('ngOnInit-doc-tree=', this.treeType);
   }
 
   toggle(node) {
@@ -48,8 +47,6 @@ export class DocTreeComponent implements OnInit {
   }
 
   checkboxChange(node) {
-    console.log(node);
-    console.log(this.treeType);
     this.onSelectChange.emit(node);
   }
 

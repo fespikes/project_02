@@ -5,6 +5,7 @@
   <div
     id="doc-tree-{{node.id}}"
     class="node-type"
+    [class.selected]="node.selected && !node.tag"
     (dblclick)="dbClick(node)"
     [ngStyle]="{'margin-left': (treeLevel * 20) + 'px'}"
   >

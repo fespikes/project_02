@@ -1,0 +1,12 @@
+<div
+  class="doc-list"
+  *ngFor="let doc of issueDocList"
+>
+  <div
+    class="doc-item clearfix"
+    (click)="viewDocDetail(doc)"
+  >
+    <span>{{doc.name}}</span>
+    <svg tccIcon="enter" size='md'></svg>
+  </div>
+</div>
