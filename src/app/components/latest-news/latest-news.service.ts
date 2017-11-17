@@ -79,11 +79,9 @@ export class LatestNewsService {
       .catch(this.handleError);*/
   }
 
-  getTheNews(id: number | string) {
-    console.log('in latest news service: id got ->', id);
+  getTheNews(id: number | string) { console.log('in get the news of service, id is:', id);
   	return Promise.resolve(this.list).then(
   		newsList => newsList.find(
-  			//TODO: get api of get the correct news
   			News => News.id === +id
   		)
   	);
