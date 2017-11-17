@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProductListComponent } from './product-list/product-list.component';
-
 import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentUtilService } from '../../services/document.util.service';
 
@@ -22,12 +20,11 @@ export class ProductDocumentComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getDocsFolder();
-
+    this.getProductDocs('document');
   }
 
-  getDocsFolder() {
-    this.documentAPIService.getTileDocs().subscribe(
+  getProductDocs(tag) {
+    this.documentAPIService.getDocuments(tag, false).subscribe(
       result => {
         this.docsFolderList = this.documentUtilService.addDocsVersions(result);
       }

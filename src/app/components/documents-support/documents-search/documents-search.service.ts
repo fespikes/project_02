@@ -66,12 +66,63 @@ export class DocumentSearchService {
   }
 
   initSearchTree(docsTree): any[] {
-    return [
-      this.documentResService.getSearchObject(),
+    const productDoc = this.makeProductDocList([
+      docsTree[3],
       docsTree[0],
-      docsTree[1],
-      docsTree[2]
+      docsTree[2],
+    ]);
+    const faqDoc = this.setFAQDocState(docsTree[1]);
+    return [
+      productDoc,
+      faqDoc
     ];
+  }
+
+  makeProductDocList(docList): Object {
+
+    const docObj = this.setProductDocState(docList);
+    return {
+      id: 'DOCUMENT',
+      name: '产品文档',
+      level: 1,
+      tag: 'document',
+      checkbox: false,
+      children: docObj
+    };
+  }
+
+  setProductDocState(docList): any[] {//add level、checkbox
+    docList.map(category => {
+        category.level = 2;
+        category.checkbox = false;
+        category.parent = 'DOCUMENT';
+        category.children.map(doc => {
+          doc.level = 3;
+          doc.checkbox = true;
+          doc.parent = category.id;
+          doc.children.map(version => {
+            version.level = 4;
+            version.checkbox = true;
+            version.parent = doc.id;
+            version.tag = doc.tag;
+          });
+        });
+    });
+    return docList;
+  }
+
+  setFAQDocState(faq): Object {
+    faq.level = 1;
+    faq.checkbox = false;
+    faq.tag = 'faq';
+    faq.children.map(issue => {
+      issue.level = 2;
+      issue.checkbox = true;
+      issue.children = [];
+      issue.parent = faq.id;
+    });
+
+    return faq;
   }
 
   initTreeSelectedState(treeModel, nodeId): any[] {
@@ -101,14 +152,10 @@ export class DocumentSearchService {
   }
 
   makeSelectedDocs(doc, collection, treeModel): Object {
-    if(doc.version) {//version change
+    if(doc.level === 4) {//version change
       collection = this.searchVersionChange(doc, collection, treeModel);
-    }else {
-      if(doc.module.type) {//category change
-        collection = this.searchCategoryChange(doc, collection);
-      }else {//manual change
-        collection = this.searchManualChange(doc, collection, treeModel);
-      }
+    }else {//manual change
+      collection = this.searchManualChange(doc, collection, treeModel);
     }
     return {
       selectedDocs: collection,
@@ -116,20 +163,16 @@ export class DocumentSearchService {
     };
   }
 
-  searchCategoryChange(doc, collection): any[] {
-    //TODO api not include fresh guides and normal issue
-    return collection;
-  }
-
   searchVersionChange(doc, collection, treeModel): any[] {
-    this.updateTreeModelStateByVersion(doc.module, treeModel, doc.version);
-    const param = `${doc.category.id}/${doc.version.id}/${doc.module.id}`;
+    const manual = this.findTreeNode(doc.parent, treeModel) as any;
+    this.updateTreeModelStateByVersion(manual, treeModel, doc);
+    const param = `${doc.tag}/${manual.parent}/${doc.id}/${manual.id}`;
     collection.map((item, index) => {
       if(item === param) {
         collection.splice(index, 1);
       }
     });
-    if(doc.version.selected) {
+    if(doc.selected) {
       collection.push(param);
     }
     return collection;
@@ -137,13 +180,23 @@ export class DocumentSearchService {
 
   searchManualChange(doc, collection, treeModel): any[] {
 
-    this.updateTreeModelStateByManual(doc.module.id, treeModel, doc.module.selected);
+    this.updateTreeModelStateByManual(doc.id, treeModel, doc.selected);
     collection = this.clearManualParams(collection, doc);
-    if(doc.module.selected) {//select all version
-      doc.module.children.map(item => {
-        const param = `${doc.category.id}/${item.id}/${doc.module.id}`;
+    if(doc.selected) {//select all version
+      collection = this.addSearchParam(doc, collection);
+    }
+    return collection;
+  }
+
+  addSearchParam(doc, collection): any[] {
+    if(doc.tag === 'document') {
+      doc.children.map(item => {
+        const param = `${doc.tag}/${doc.parent}/${item.id}/${doc.id}`;
         collection.push(param);
       });
+    }else {
+      const param = `${doc.tag}/${doc.parent}/none/${doc.id}`;
+      collection.push(param);
     }
     return collection;
   }
@@ -182,7 +235,7 @@ export class DocumentSearchService {
   clearManualParams(collection, doc): any[] {
     let selectedDocs = [];
     collection.map((item, index) => {//delete original version
-      if(!(item.indexOf(doc.category.id) >= 0 && item.indexOf(doc.module.id) >= 0)) {
+      if(!(item.indexOf(doc.parent) >= 0 && item.indexOf(doc.id) >= 0)) {
         selectedDocs.push(item);
       }
     });

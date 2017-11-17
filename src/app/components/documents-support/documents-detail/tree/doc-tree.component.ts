@@ -18,6 +18,7 @@ import { DocumentResService } from '../../services/document.res.service';
 export class DocTreeComponent implements OnInit {
   @Input() treeModel: any[];
   @Input() treeLevel: number;
+  @Input() treeType: string;
   @Output() onSelectChange = new EventEmitter();
 
   DOC_MENU_TREE_ID = 'doc-menu-tree';
@@ -29,7 +30,7 @@ export class DocTreeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    console.log('ngOnInit-doc-tree=', this.treeType);
   }
 
   toggle(node) {
@@ -46,8 +47,14 @@ export class DocTreeComponent implements OnInit {
     this.onSelectChange.emit(node);
   }
 
+  checkboxChange(node) {
+    console.log(node);
+    console.log(this.treeType);
+    this.onSelectChange.emit(node);
+  }
+
   ngAfterViewInit() {
-    if (this.treeModel && this.treeModel.length > 0) {
+    if (this.treeModel && this.treeModel.length > 0 && this.treeType === 'doc-tree') {
       const anchorId = this.documentResService.getAnchorId();
       this.documentSearchService.anchorTreeNode(
         this.TREE_NODE_PREFIX + anchorId, this.DOC_MENU_TREE_ID

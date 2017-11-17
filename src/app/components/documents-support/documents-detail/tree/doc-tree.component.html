@@ -1,10 +1,12 @@
-<div *ngFor="let node of treeModel">
+<div
+  class="node-item"
+  [class.selected]="node.selected && !node.tag"
+  *ngFor="let node of treeModel">
   <div
     id="doc-tree-{{node.id}}"
     class="node-type"
-    [class.selected]="node.selected"
     (dblclick)="dbClick(node)"
-    [ngStyle]="{'padding-left': (treeLevel * 20) + 'px'}"
+    [ngStyle]="{'margin-left': (treeLevel * 20) + 'px'}"
   >
     <svg
       [ngClass]="{'hide': !node.children || node.children.length === 0}"
@@ -12,10 +14,14 @@
       [class.expanded]="node.expanded"
       (click)="toggle(node)"
     ></svg>
+    <tcc-checkbox
+      *ngIf="node.checkbox"
+      [(ngModel)]="node.selected"
+      (ngModelChange)="checkboxChange(node)"
+    ></tcc-checkbox>
     <a
       title="{{node.name}}"
-      class="node-name node-name-level-{{treeLevel}} text-ellipsis"
-      [class.selected]="node.selected"
+      class="node-name {{treeType}}-node-name-level-{{treeLevel}} text-ellipsis"
       (click)="selectChange(node);"
     >
       {{node.name}}
@@ -25,6 +31,7 @@
     *ngIf="node.expanded && node.children.length > 0"
     [treeModel]="node.children"
     [treeLevel]="treeLevel + 1"
+    [treeType]="treeType"
     (onSelectChange)="selectChange($event);"
   ></tdc-menu-tree>
 </div>
