@@ -1,7 +1,7 @@
 @import './latest-news.common'
 
 .latest-news-wrapper
-  @extend .center-box
+
 
 .anchor
 	width: 100%
@@ -25,19 +25,22 @@
 .latest-news-banner
 	height: 400px
 	width: 100%
-	background: url(/assets/images/latest-news/banner.jpg) no-repeat center center
-	color: #fff
+	background: #021740 url(/assets/images/latest-news/banner.jpg) no-repeat center center
+	background-size: 1200px 400px
 
 	h2
+		display: block
+		@extend .center-box
 		padding: 132px 165px 30px 165px
-		margin: 0
 		font-size: 4.8rem
 		color: #fff
 
 	p
+		@extend .center-box
 		line-height: 20px
 		font-size: 1.2rem
 		margin: 0
+		color: #fff
 		padding: 0 165px
 
 
@@ -45,6 +48,9 @@
 	background: #f1f3f6
 	padding: 20px
 	overflow: auto
+
+.news-position
+	@extend .center-box
 
 .news-items
 	float: right
