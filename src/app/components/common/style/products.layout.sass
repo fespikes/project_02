@@ -1,4 +1,5 @@
 @import '../../../styles/util'
+@import './layout'
 
 p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
   padding: 0
@@ -6,17 +7,27 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
 
 .products-menu
   width: 190px
-  float: left
+  height: 100%
+  box-shadow: 0 0 20px $shadow-color
+  background: #fff
+  position: absolute
+  top: 52px
+  left: 50%
+  margin-left: -600px
+  z-index: 20
 
 .products-details
-  margin-left: 190px
-  background-color: #F3F4F8
+  
 
 .details-banner
   height: 350px
   width: 100%
   font-size: 0
   background: url("/assets/images/products/banner-bg.png")
+
+.position-center
+  @extend .center-box
+  height: 100%
   position: relative
 
   .slogans
@@ -26,13 +37,13 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
     vertical-align: top
     position: relative
     top: 50%
-    transform: translateY(-50%)
+    transform: translate(190px, -50%)
 
     h3, h4
       color: #fff
 
     h3.title
-      font-size: 4.8rem
+      font-size: 3.6rem
       margin: 0
 
     h3.alias, h3.title-cmpt
@@ -44,11 +55,12 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
       margin-bottom: 10px
 
     h4.title
-      font-size: 2.4rem
+      font-size: 3rem
       font-weight: 300
       margin: 25px 0 0
 
     p
+      padding-top: 20px
       font-size: 1.4rem
       color: #fff
       line-height: 1.6
@@ -64,6 +76,15 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
     right: 40px
     img
       width: 100%
+
+.tab-box
+  display: block
+  width: 1010px
+  min-width: 1010px
+  margin: 0 auto
+  overflow: hidden
+  position: relative
+  left: 95px
 
 .tabsUl-box
   width: 100%
@@ -142,7 +163,7 @@ h3.sub-title
     li
       padding-left: 70px
       position: relative
-      line-height: 2rem
+      line-height: 2.4rem
       font-size: 1.2rem
       margin-bottom: 2rem
 
@@ -262,6 +283,8 @@ $row-height: 124px
 
 
 .scenarios-content
+  clear: both
+  border: 1px #e6eaee solid
   background: #fff
 
   .scenario-details
@@ -296,32 +319,33 @@ $row-height: 124px
         border-radius: 3px
         background: $common-blue
 
-.component-intro-tab-box
+.component-intro-tab-box, .scenarios-tab-box
 
   ul
     display: block
-    width: 504px
     height: 42px
-    border: 1px #e6eaee solid
+    margin-bottom: -1px
+    z-index: 2
 
     li
       float: left
       display: inline-block
 
       a
-        margin-top: -1px
-        margin-left: -1px
-        margin-right: -1px
-
-        border-bottom: 0
         display: inline-block
-        font-size: 1.4rem
+        border: 1px #e6eaee solid
+        border-bottom: 0
         padding: 12px 40px
+        margin-top: -1px
+        margin-right: -1px
+        font-size: 1.4rem
+        background: #f6f8fa
 
         &:hover, &.active
+          border: 1px #e6eaee solid
           border-top: 2px #2481e3 solid
           border-bottom: 1px #fff solid
-          margin-top: -2px
+          margin-top: -1px
           margin-bottom: -1px
           color: #2481e3
           background: #fff
@@ -330,5 +354,7 @@ $row-height: 124px
 .component-intro-content
   padding-bottom: 120px
 
-
+  .intro-table
+    border: 1px #e6eaee solid
+    border-bottom: 0
 

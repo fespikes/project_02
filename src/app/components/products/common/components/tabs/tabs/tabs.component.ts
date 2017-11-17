@@ -43,7 +43,7 @@ export class TabsComponent implements OnInit, OnDestroy {
     console.log(id);
 
     let node = document.querySelector(id);
-    scrollTo(0, node.offsetTop-TabsComponent.tabHeight);
+    scrollTo(0, node.offsetTop-TabsComponent.tabHeight+ TabsComponent.bannerPlusNav);
 
     let _active = this.el.nativeElement.querySelector('.active');
 

@@ -71,8 +71,8 @@
 		<li
 			*ngFor="let item of data.items"
 			class="{{item.liClass}}" 
-	  	(mouseenter)="itemOnMouseenter($event.target)"
-	  	(mouseleave)="itemOnMouseleave($event.target)"
+	  	(mouseenter)="itemOnMouseenter($event.target, item)"
+	  	(mouseleave)="itemOnMouseleave($event.target, item)"
 		><!-- [ngClass]="{'current': currentItem ===item }" -->
 			<div
 				*ngIf="data.sliceClass==='ul-products'"

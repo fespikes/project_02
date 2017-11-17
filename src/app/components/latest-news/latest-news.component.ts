@@ -41,11 +41,9 @@ export class LatestNewsComponent implements OnInit {
     this.newsList = this.route.paramMap
       .switchMap((params: ParamMap) => {
         // (+) before `params.get()` turns the string into a number
-        this.selectedId = +params.get('id');
-
+        this.selectedId = +this.router.url.replace( '/latest-news/', '');
 
         return this.service.getNewsList();
-        // return list;
       }
     );
   }
@@ -56,6 +54,8 @@ export class LatestNewsComponent implements OnInit {
 
   onSelect(news: News) {
     // this.router.navigate(['/latest-news', {id: news.id}, {relativeTo: this.route} ]);
+    this.selectedId = news.id;
+
     this.router.navigate(['/latest-news', news.id ]);
   }
 
