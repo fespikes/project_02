@@ -42,7 +42,7 @@ scenarios = [
   {
     id: 1,
     type: 'data-warehouse',
-    screenshot: base+ 'data-mart'+ '.jpg',
+    screenshot: base+ 'data-warehouse'+ '.jpg',
     short: '数据仓库',
 
     title: '数据仓库 业务方案',
@@ -218,7 +218,7 @@ scenarios = [
   {
     id: 3,
     type: 'info-retrieval',
-    screenshot: base+ 'data-mart'+ '.jpg',
+    screenshot: base+ 'info-retrieval'+ '.jpg',
     short: '信息检索',
 
     title: '信息检索  业务方案',
