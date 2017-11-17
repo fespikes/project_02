@@ -61,25 +61,23 @@ export class LatestNewsService {
 
   getNewsList(): Promise<News[]>{
     this.list = newsList;
-    let newsListPromise = Promise.resolve(this.list);
-  	return newsListPromise;
+   //  let newsListPromise = Promise.resolve(this.list);
+  	// return newsListPromise;
 
-/*    let list: News[] = [];
+    let list: News[] = [];
     return this.http.get(this.apiUrl)
       .toPromise()
       .then(response => {
-        console.log(response);
         response.json().list.forEach(item=>list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item))
-        console.log(list);
 
         this.list = list;
 
-        return this.list;
+        return Promise.resolve(this.list);;
       })
-      .catch(this.handleError);*/
+      .catch(this.handleError);
   }
 
-  getTheNews(id: number | string) { console.log('in get the news of service, id is:', id);
+  getTheNews(id: number | string) {
   	return Promise.resolve(this.list).then(
   		newsList => newsList.find(
   			News => News.id === +id
