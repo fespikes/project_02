@@ -25,10 +25,10 @@ export class ProductUtilService {
     return moduleTree;
   }
 
-  anchorTabContent(anchorId): void {
-    const ele = document.getElementById(anchorId);
+  anchorTabContent(anchorTag, scrollTop): void {
+    const ele = document.getElementsByTagName(anchorTag)[0];
     const offsetLeft = ele.offsetLeft;
-    const offsetTop = ele.offsetTop;
+    let offsetTop = ele.offsetTop + scrollTop;
     scrollTo(offsetLeft, offsetTop);
   }
 

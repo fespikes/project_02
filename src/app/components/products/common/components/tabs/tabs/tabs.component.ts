@@ -24,8 +24,8 @@ export class TabsComponent implements OnInit, OnDestroy {
 
   manipulateTabPosition(e) {
   	const tabsUl = this.el.nativeElement.querySelector('.tabsUl');
-
-  	if (document.documentElement.scrollTop<TabsComponent.bannerPlusNav) {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  	if (scrollTop<TabsComponent.bannerPlusNav) {
   		tabsUl.className = this.tabUlClassName;
   		return ;
 

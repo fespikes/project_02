@@ -17,18 +17,35 @@ export class ModuleTabComponent implements OnInit {
   @HostBinding('class.module-tab') hostClass = true;
 
   @Input() tabItems: any[];
+  @Input() anchorTop: any;
   @Output() onTabChange = new EventEmitter();
+
+  tabEl = null;
+
   constructor() {
 
   }
 
   ngOnInit() {
+    this.tabEl = document.getElementById('module-tab-ul');
+    document.onscroll = this.manipulateTabPosition.bind(this);
+  }
 
+  manipulateTabPosition() {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if(scrollTop < this.anchorTop) {
+      this.tabEl.className = 'tab-ul';
+    }else {
+      this.tabEl.className = 'fixed';
+    }
   }
 
   tabChange(name) {
     this.updateTabState(name);
-    this.onTabChange.emit(name);
+    this.onTabChange.emit({
+      tabName: name,
+      className: this.tabEl.className
+    });
   }
 
   updateTabState(tabName) {
@@ -39,5 +56,9 @@ export class ModuleTabComponent implements OnInit {
         tab.selected = false;
       }
     });
+  }
+
+  ngOnDestroy() {
+    document.onscroll = null;
   }
 }
