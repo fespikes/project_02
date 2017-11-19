@@ -17,7 +17,11 @@
     [ngStyle]="{'margin-left': productIntroduce.img.url
       ?productIntroduce.img.width:'-70px'}"
   >
-    <li *ngFor="let item of productIntroduce.items">
+    <li
+      *ngFor="let item of productIntroduce.items"
+      [ngClass]="{'h5-title': item.type === 'title',
+        'inline-group': item.inline_group}"
+    >
       <h5 *ngIf="item.type === 'title'">
         {{item.content | translate}}
       </h5>
