@@ -5,7 +5,7 @@
 		[ngStyle]="{width: itemsWidth + 'px', left: 0}"
 	>
 		<li 
-			*ngFor="let item of data.items" 
+			*ngFor="let item of data.items; let idx=index;" 
 			class="{{item.liClass}}" 
 	  	(mouseenter)="itemOnMouseenter($event.target, item)"
 	  	(mouseleave)="itemOnMouseleave($event.target, item)"
@@ -54,9 +54,10 @@
 
 			<a 
 				*ngIf="data.sliceClass==='bar-modules-ul'" 
+				[class.current]="idx===0"
 			>
-<!-- 				(click)="itemSelected(item)" 
- -->				<div class="thumbnail" >
+<!-- (click)="itemSelected(item)" -->
+ 				<div class="thumbnail">
 	      	<svg tccIcon="{{item.thumbnail.name}}"></svg>
 	      </div>
 			  <h4 class="{{item.h4Class}}">{{item.name}}</h4>

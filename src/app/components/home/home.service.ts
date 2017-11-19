@@ -31,150 +31,8 @@ export class HomeService {
 			    bgColor: '#0b1b3f',
 			    h2: '专业的技术支持',
 			    p: '提供架构师对接、大数据培训、远程支持、运维辅助等多种类型服务，保证高品质的售后支持'
-			  }/*,
-			  {
-			    bgUrl: '/assets/images/home/mock/4.jpg',
-			    bgColor: '#fbfde8',
-			    h2: 'h2-04',
-			    p: 'p-04'
-			  }*/
+			  }
 			],
-
-/*			cloudProducts_: [
-				{
-					thumbnail: '/assets/images/svg/home/products/' + 'relational-database' + '.svg',
-					title: '关系数据库',
-					summary: '构建企业内部的关系数据库服务，可用于处理数据量在500GB以内的OLTP业务。支持复杂的SQL查询，提供高稳定、可扩展、强一致的数据处理服务。',
-					button: {
-						text: '查看详情',
-						routerLink: '/products/relational-database'//TODO: set the routerLinks
-					},
-					details: {
-						title: '产品功能',
-						list: [
-							'高效处理复杂数据查询',
-							'高可靠性保障',
-							'高并发支持',
-							'内置报表工具'
-						]
-					}
-				},
-				{
-					thumbnail: '/assets/images/svg/home/products/' + 'data-mart' + '.svg',
-					title: '数据集市',
-					summary: '用于为企业构建数据集市，面向特定的应用主题，对接数据分析业务，提供包括Cube设计、交互式分析、可视化分析、调度在内的多种工具，实现自动化的报表应用构建。',
-					button: {
-						text: '查看详情',
-						routerLink: '/products/data-mart'//TODO: set the routerLinks
-					},
-					details: {
-						title: '产品功能',
-						list: [
-							'面向业务的数据整合',
-							'强大的SQL支持',
-							'交互式OLAP分析',
-							'高效的开发和运维工具'
-						]
-					}
-				},
-				{
-					thumbnail: '/assets/images/svg/home/products/' + 'info-retrieval' + '.svg',
-					title: '信息检索',
-					summary: '为企业构建一站式内部搜索平台和信息检索服务，提供PB级别的高速全文检索服务，实现毫秒级的响应速度，高并发支持，字段精确和模糊检索以及快速统计功能。',
-					button: {
-						text: '查看详情',
-						routerLink: '/products/info-retrieval'//TODO: set the routerLinks
-					},
-					details: {
-						title: '产品功能',
-						list: [
-							'全文搜索',
-							'利用SQL做检索与分析',
-							'混合存储',
-							'标准化的服务接口'
-						]
-					}
-				},
-				{
-					thumbnail: '/assets/images/svg/home/products/' + 'deep-learning' + '.svg',
-					title: '深度学习',
-					summary: '用于深度学习和人工智能开发的数据处理平台，帮助企业开发深度学习和AI应用，实现高度智能化的信息处理，协助与增进企业运作管理。',
-					button: {
-						text: '查看详情',
-						routerLink: '/products/deep-learning'//TODO: set the routerLinks
-					},
-					details: {
-						title: '产品功能',
-						list: [
-							'可视化的模型创建',
-							'多种语言接口',
-							'整合多种深度学习框架',
-							'丰富的操作和算法支持',
-							'文本挖掘',
-							'定制行业模板'
-						]
-					}
-				},
-
-				{
-					thumbnail: '/assets/images/svg/home/products/' + 'data-warehouse' + '.svg',
-					title: '数据仓库',
-					summary: '用于构建一站式数据仓库服务，提供包括分析数据库、数据整合、模型加工等重要功能，同时提供对于查询速度、并发度、扩展性的保障，是高效的数据掘金利器。',
-					button: {
-						text: '查看详情',
-						routerLink: '/products/data-warehouse'//TODO: set the routerLinks
-					},
-					details: {
-						title: '产品功能',
-						list: [
-							'强大的SQL支持',
-							'异构数据互通',
-							'混合负载支持',
-							'分布式事务保障',
-							'非结构化数据处理'
-						]
-					}
-				},
-
-				{
-					thumbnail: '/assets/images/svg/home/products/' + 'realtime-computation' + '.svg',
-					title: '实时计算',
-					summary: '云上的流处理分析平台，可对流数据进行实时采集和实时处理。为企业构建实时数据仓库，开发多种在线实时应用，实现对流式信息的充分利用。',
-					button: {
-						text: '查看详情',
-						routerLink: '/products/realtime-computation'//TODO: set the routerLinks
-					},
-					details: {
-						title: '产品功能',
-						list: [
-							'将SQL用于流式应用开发',
-							'微批处理+事件驱动',
-							'Exactly Once 语义支持',
-							'复杂事件处理（CEP）',
-							'数据持久化',
-							'流上数据挖掘'
-						]
-					}
-				},
-				{
-					thumbnail: '/assets/images/svg/home/products/' + 'analysis-mining' + '.svg',
-					title: '数据分析与挖掘',
-					summary: '提供数据清洗、特征工程、建模平台和工具集，以及60余种分布式机器学习算法和多种行业模型，方便探索对象属性和行为之间的关系，从数据中发现蕴含价值。',
-					button: {
-						text: '查看详情',
-						routerLink: '/products/analysis-mining'//TODO: set the routerLinks
-					},
-					details: {
-						title: '产品功能',
-						list: [
-							'多种语言接口',
-							'60余种算法',
-							'全行业模型库',
-							'高效的开发工具'
-						]
-					}
-				}
-			],*/
 
 			cloudProducts: {
 				sliceClass: 'ul-products',
@@ -182,6 +40,7 @@ export class HomeService {
 					itemWidth: 400,
 					defaultLength: 3,
 					gap: 0,
+					targetClassName: 'direct-child',
 					hoverClassName: 'current',
 					wrapperClassName: 'h600'
 				},
@@ -375,6 +234,7 @@ export class HomeService {
 					itemWidth: 200,
 					defaultLength: 6,
 					gap: 0,
+					targetClassName: 'shadow-box',
 					hoverClassName: 'current',
 					wrapperClassName: 'h220'
 				},
@@ -498,6 +358,7 @@ export class HomeService {
 				config: {
 					itemWidth: 400,
 					gap: 0,
+					targetClassName: '',
 					wrapperClassName: 'h600',
 					defaultLength: 3
 				},

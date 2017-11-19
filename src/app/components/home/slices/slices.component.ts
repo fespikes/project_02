@@ -54,6 +54,7 @@ export class SlicesComponent implements OnInit {
   	const ulItemsClass = this.data.sliceClass;
   	const config = {...SlicesComponent.config, ...this.data.config};
   	this.hoverClassName = this.data.config.hoverClassName;
+    this.targetClassName = this.data.config.targetClassName;
     this.currentItem = items[0];
   	
   	this.itemsLength = items.length;
@@ -172,14 +173,17 @@ export class SlicesComponent implements OnInit {
   // hoverClassName: string;
 
   itemOnMouseenter(target, product) {
-  	this.targetClassName = target.className;
+    const nativeElement = this.el.nativeElement;
+    let previousTarget = nativeElement.querySelector('.'+this.hoverClassName);
+    previousTarget && (previousTarget.className = this.targetClassName);
+
   	target.className = this.hoverClassName + ' ' + this.targetClassName;
     product && this.onItemSelected.emit(product);
     clearInterval(this.interval);
   }
 
   itemOnMouseleave(target, product) {
-  	target.className = this.targetClassName;
+  	// target.className = this.targetClassName;
     this.setInterval(true);
   }
 
