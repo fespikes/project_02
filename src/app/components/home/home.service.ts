@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+import { News, utils } from '../latest-news/latest-news.service';
 
 @Injectable()
 export class HomeService {
+  private apiUrl = 'api/v1/news?page_num=1';  //TODO: get the URL of web api
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   getData(params) {
 		return {
@@ -558,7 +562,7 @@ export class HomeService {
 				]
 			},
 
-			latestNews: [
+/*			latestNews: [
 				{
 					id: 4,
 					routerLink: '',
@@ -587,8 +591,20 @@ export class HomeService {
 					tag: '【巨能聊】',
 					date: '2017-09-23'
 				}
-			]
+			]*/
 		}
+  }
+
+  getLatestNews(): Promise<News[]> {
+    let list: News[] = [];
+    return this.http.get(this.apiUrl)
+      .toPromise()
+      .then(response => {
+        response.json().list.forEach(item=>list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item))
+        
+        return Promise.resolve(list);
+      })
+
   }
 
 }

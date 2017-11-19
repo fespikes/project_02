@@ -33,7 +33,12 @@ export class HomeComponent implements OnInit {
     
     this.businessScenarios = data.businessScenarios;
 
-    this.latestNews = data.latestNews;
+    let latestNewsPromise = this.homeService.getLatestNews();
+
+    latestNewsPromise.then(data=>{
+      this.latestNews = data;
+    });
+
   }
 
   ngOnInit() {
