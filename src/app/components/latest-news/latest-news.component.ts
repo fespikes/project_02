@@ -42,8 +42,17 @@ export class LatestNewsComponent implements OnInit {
       .switchMap((params: ParamMap) => {
         // (+) before `params.get()` turns the string into a number
         this.selectedId = +this.router.url.replace( '/latest-news/', '');
-
-        return this.service.getNewsList();
+        
+        if (this.selectedId)
+          return this.service.getNewsList();
+        else{
+          this.service.getNewsList().then(list=>{
+            this.selectedId = list[0].id;
+            console.log(this.selectedId);
+            // TODO: get the default news
+            // this.router.navigate(['/latest-news', {id: this.selectedId} ]);
+          })
+        }
       }
     );
   }
@@ -52,11 +61,11 @@ export class LatestNewsComponent implements OnInit {
   	return news.id === this.selectedId;
 	}
 
-  onSelect(news: News) {
+  onSelect(id) {
     // this.router.navigate(['/latest-news', {id: news.id}, {relativeTo: this.route} ]);
-    this.selectedId = news.id;
+    this.selectedId = id;
 
-    this.router.navigate(['/latest-news', news.id ]);
+    this.router.navigate(['/latest-news', id ]);
   }
 
 }

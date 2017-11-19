@@ -17,7 +17,7 @@ export class News {
 	) { }
 }
 
-let utils = {
+export let utils = {
   formatDate: (d) => {
     d = d?new Date(d): new Date();
     return d.getFullYear() + '-' + d.getDate() + '-' + d.getMonth();
@@ -60,7 +60,7 @@ export class LatestNewsService {
   constructor(private http: Http) { }
 
   getNewsList(): Promise<News[]>{
-    this.list = newsList;
+    // this.list = newsList;
    //  let newsListPromise = Promise.resolve(this.list);
   	// return newsListPromise;
 
@@ -72,14 +72,14 @@ export class LatestNewsService {
 
         this.list = list;
 
-        return Promise.resolve(this.list);;
+        return Promise.resolve(this.list);
       })
       .catch(this.handleError);
   }
 
   getTheNews(id: number | string) {
   	return Promise.resolve(this.list).then(
-  		newsList => newsList.find(
+  		newsList => newsList && newsList.find(
   			News => News.id === +id
   		)
   	);
