@@ -42,7 +42,9 @@
     >
 			<ng-container *ngFor="let desc of item.desc">
 				<p *ngIf="desc.p">{{desc.p}}</p>
-				<h4 *ngIf="desc.h4">{{desc.h4}}</h4>
+				<h4 *ngIf="desc.h4" class="sub-title">
+                  {{desc.h4}}
+                </h4>
 				<p *ngIf="desc.summary"
 					class="summary">{{desc.summary}}</p>
 				<ul *ngIf="desc.aspects">
