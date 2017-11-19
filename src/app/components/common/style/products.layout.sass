@@ -5,6 +5,8 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
   padding: 0
   margin: 0
 
+$ctnColor: #354052
+
 .products-menu
   width: 190px
   height: 100%
@@ -52,7 +54,7 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
       margin: 0
 
     h3.title-cmpt
-      margin-bottom: 10px
+      padding-top: 10px
       font-size: 3rem
 
     h4.title
@@ -64,7 +66,7 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
       padding-top: 20px
       font-size: 1.4rem
       color: #fff
-      line-height: 1.6
+      line-height: 24px
       text-align: justify
 
   .adv-image
@@ -166,18 +168,18 @@ h3.sub-title
       position: relative
       line-height: 2.4rem
       font-size: 1.2rem
-      margin-bottom: 2rem
 
       p
-        margin-top: 0
-        margin-bottom: 1rem
+        padding: 0 0 20px
+        margin: 0
         font-size: 1.2rem
-        font-weight: 300
+        line-height: 24px
         text-align: justify
+        color: $ctnColor
 
       h5
         margin-top: 0
-        margin-bottom: 1rem
+        margin-bottom: 16px
         font-size: 1.4rem
 
       h5:before
@@ -204,13 +206,12 @@ h3.sub-title
   //paragraphs if for scenario-children and component-intro, to support flexable image children
   .paragraphs
     li
-      margin-bottom: 2rem
       position: relative
       p
         padding-right: 45px
         margin-bottom: 1rem
         font-size: 1.2rem
-        line-height: 2rem
+        line-height: 24rem
         text-align: justify
 
         &:before
@@ -223,7 +224,6 @@ h3.sub-title
           top: 0.7rem
           border-radius: 0.25rem
           background: $common-blue
-
 
 .details-box.text, .details-box.d
   .text-list
@@ -255,7 +255,7 @@ $row-height: 124px
       font-weight: 600
       font-size: 1.4rem
       text-indent: 40px
-      color: #354052
+      color: $ctnColor
 
     .ctn
       width: 680px
@@ -265,6 +265,7 @@ $row-height: 124px
       align-items: center
       align-content: center
       line-height: 1.5
+      color: $ctnColor
 
     .anchor
       width: 110px
@@ -305,9 +306,10 @@ $row-height: 124px
       right: -16px
 
     p
-      line-height: 2rem
+      line-height: 24px
       font-size: 1.2rem
       position: relative
+      color: $ctnColor
 
       &:before
         content: ''
