@@ -6,10 +6,14 @@
     <li
       *ngFor="let item of productAdvantage.items"
       [ngStyle]="{'padding-left': 0}"
-      [ngClass]="{'indent':item.indent}"
+      [ngClass]="{'h5-title': item.type === 'title'}"
     >
-      <h5 *ngIf="item.type === 'title'">{{item.content | translate}}</h5>
-      <p *ngIf="item.type === 'text'">{{item.content | translate}}</p>
+      <h5 *ngIf="item.type === 'title'">
+        {{item.content | translate}}
+      </h5>
+      <p *ngIf="item.type === 'text'">
+        {{item.content | translate}}
+      </p>
     </li>
   </ul>
 </div>

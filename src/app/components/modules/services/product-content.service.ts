@@ -197,14 +197,17 @@ export class ProductContentService {
             },
             {
               type: 'text',
+              inline_group: true,
               content: 'MODULES.SEARCH.INTRODUCE_2'
             },
             {
               type: 'text',
+              inline_group: true,
               content: 'MODULES.SEARCH.INTRODUCE_3'
             },
             {
               type: 'text',
+              inline_group: true,
               content: 'MODULES.SEARCH.INTRODUCE_4'
             },
             {
@@ -432,6 +435,7 @@ export class ProductContentService {
             },
             {
               type: 'text',
+              margin_bottom: '10px',
               content: 'MODULES.PILOT.INTRODUCE_11'
             },
             {
@@ -712,10 +716,12 @@ export class ProductContentService {
             },
             {
               type: 'sub-title',
+              inline_group: true,
               content: 'MODULES.WATERDROP.INTRODUCE_4'
             },
             {
               type: 'text',
+              inline_group: true,
               content: 'MODULES.WATERDROP.INTRODUCE_5'
             },
             {
@@ -724,6 +730,7 @@ export class ProductContentService {
             },
             {
               type: 'sub-title',
+              inline_group: true,
               content: 'MODULES.WATERDROP.INTRODUCE_7'
             },
             {
@@ -732,6 +739,7 @@ export class ProductContentService {
             },
             {
               type: 'sub-title',
+              inline_group: true,
               content: 'MODULES.WATERDROP.INTRODUCE_9'
             },
             {
@@ -744,6 +752,7 @@ export class ProductContentService {
             },
             {
               type: 'sub-title',
+              inline_group: true,
               content: 'MODULES.WATERDROP.INTRODUCE_12'
             },
             {
@@ -760,6 +769,7 @@ export class ProductContentService {
             },
             {
               type: 'title',
+              inline_group: true,
               content: 'MODULES.WATERDROP.INTRODUCE_16'
             },
             {
@@ -768,6 +778,7 @@ export class ProductContentService {
             },
             {
               type: 'sub-title',
+              inline_group: true,
               content: 'MODULES.WATERDROP.INTRODUCE_18'
             },
             {
@@ -776,6 +787,7 @@ export class ProductContentService {
             },
             {
               type: 'sub-title',
+              inline_group: true,
               content: 'MODULES.WATERDROP.INTRODUCE_20'
             },
             {
@@ -784,6 +796,7 @@ export class ProductContentService {
             },
             {
               type: 'sub-title',
+              margin_bottom: '10px',
               content: 'MODULES.WATERDROP.INTRODUCE_22'
             },
             {

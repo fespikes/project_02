@@ -16,8 +16,12 @@ export class ProductComponent implements OnInit {
 
   bannerInfo = {};
   tabItems = [];
-  MODULE_INTRODUCE_ID = 'module-introduce-id';
-  MODULE_ADVANTAGE_ID = 'module-advantage-id';
+  MODULE_INTRODUCE_TAG = 'product-introduce';
+  MODULE_ADVANTAGE_TAG = 'product-advantage';
+
+  ANCHOR_TOP = 402;//topNav height plus banner height
+  TAB_HEIGHT = 56;
+
 
   constructor(
     private productBannerService: ProductBannerService,
@@ -33,15 +37,21 @@ export class ProductComponent implements OnInit {
     this.tabItems = this.productResService.getModuleTabItems();
   }
 
-  onTabChange(tabName) {
-    this.anchorContent(tabName);
+  onTabChange(tab) {
+    this.anchorContent(tab);
   }
 
-  anchorContent(tabName) {
-    let anchorID = this.MODULE_INTRODUCE_ID;
-    if(tabName === 'advantage') {
-      anchorID = this.MODULE_ADVANTAGE_ID;
+  anchorContent(tab) {
+    let anchorTag = this.MODULE_INTRODUCE_TAG;
+    let scrollTop = this.ANCHOR_TOP - this.TAB_HEIGHT;
+    if(tab.tabName === 'advantage') {
+      anchorTag = this.MODULE_ADVANTAGE_TAG;
+      if(tab.className === 'tab-ul') {
+        scrollTop = this.ANCHOR_TOP - 2 * this.TAB_HEIGHT;
+      }
+    }else if(tab.tabName === 'introduce' && tab.className === 'fixed') {
+      scrollTop = this.ANCHOR_TOP;
     }
-    this.productUtilService.anchorTabContent(anchorID);
+    this.productUtilService.anchorTabContent(anchorTag, scrollTop);
   }
 }

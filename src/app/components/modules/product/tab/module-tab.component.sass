@@ -3,7 +3,7 @@
 \:host
   display: block
 
-  ul
+  ul.tab-ul
     margin: 0 20px
     height: 56px
     border-bottom: 1px $common-grey solid
@@ -14,12 +14,26 @@
 
   a
     display: inline-block
-    padding: 30px 20px 10px
 
     &:hover, &.active
       color: $common-blue
       font-weight: 600
-      margin-bottom: -2px
       border-bottom: 2px $common-blue solid
       cursor: pointer
+
+  ul.tab-ul a
+    padding: 30px 20px 10px
+
+  ul.fixed
+    width: 1010px
+    margin-left: 0
+    position: fixed
+    top: 0
+    z-index: 99
+    box-shadow: rgba(0,0,0,.22) 0 5px 10px -5px
+    background: #fff
+
+    a
+      padding: 30px 50px 10px
+
 
