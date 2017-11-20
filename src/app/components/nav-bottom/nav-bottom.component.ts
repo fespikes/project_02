@@ -25,7 +25,7 @@ export class NavBottomComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked() {
   	let csButtonId = '#__ewei__box__webchat__button__';
   	this.csButton = document.querySelector(csButtonId);
-    this.firstNewsInput = document.querySelector('#firstNewsId');
+    this.firstNewsInput = (this.firstNewsInput || document.querySelector('#firstNewsId'));
   }
 
   toLatestNews() {
