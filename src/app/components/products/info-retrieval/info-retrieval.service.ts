@@ -10,7 +10,7 @@ export class InfoRetrievalService {
   		banner: {
   			h3: '信息检索',
         h4: '',
-  			description: '提供PB级别的高速全文检索服务，实现毫秒级的响应速度，支持用SQL做内容检索，提供多种接口，高并发支持，字段精确和模糊检索以及快速统计功能。采用异地数据共享分布式存储，存储海量数据，为企业构建一站式内部搜索平台和信息检索服务。',
+  			description: 'PB级别的高速全文检索服务，提供高并发支持，以及字段精确、模糊检索和快速统计功能，支持用SQL做内容检索。',
   			advImage: '/assets/images/products/info-retrieval.png'
   		},
       tabs: [
