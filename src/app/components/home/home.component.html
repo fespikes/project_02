@@ -136,8 +136,7 @@
   <div class="status-update">
     <h3 class="middle-title">最新动态</h3>
     <ul class="news-list">
-      <li *ngFor="let news of latestNews; let idx=index;">
-        <input *ngIf="idx===0" id="firstNewsId" value="{{news.id}}" type="hidden" />
+      <li *ngFor="let news of latestNews;">
         <a [ngStyle]="{'background-image': 'url('+ news.icon + ')'}"
           [routerLink]="['/latest-news', news.id]"
           class="news-a">

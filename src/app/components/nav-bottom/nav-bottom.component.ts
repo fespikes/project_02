@@ -13,7 +13,6 @@ export class NavBottomComponent implements OnInit, AfterViewChecked {
   constructor(private router:Router) { }
 
   private csButton: any;
-  private firstNewsInput: any;
 
   ngOnInit() {
   }
@@ -25,11 +24,11 @@ export class NavBottomComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked() {
   	let csButtonId = '#__ewei__box__webchat__button__';
   	this.csButton = document.querySelector(csButtonId);
-    this.firstNewsInput = (this.firstNewsInput || document.querySelector('#firstNewsId'));
   }
 
   toLatestNews() {
-    this.firstNewsInput && this.router.navigate(['/latest-news', this.firstNewsInput.value]);
+    let id = window.sessionStorage.getItem('tdc-web:latest-news:first-news-id');
+    this.router.navigate(['/latest-news', id]);
   }
 
 }
