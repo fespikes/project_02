@@ -1,3 +1,7 @@
-<tdc-issue-list
-  [issueDocList]="issueDocList"
-></tdc-issue-list>
+<div class="faq-box">
+  <tdc-horizontal-list
+    [docList]="issueDocList"
+    (onDocClick)="viewDetail($event)"
+  ></tdc-horizontal-list>
+</div>
+

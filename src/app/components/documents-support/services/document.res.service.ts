@@ -164,7 +164,7 @@ export class DocumentResService {
     return crumbItems;
   }
 
-  getTabItems() {
+  getTabItems(): any[] {
     return [ //for unify i18n in version 1
       {
         name: 'products',
@@ -185,5 +185,37 @@ export class DocumentResService {
         url: './guides'
       }
     ];
+  }
+
+  getOtherCourse(): any[] {
+    const otherCourse = [
+      {
+        name: 'TDH社区版中进行服务升级',
+        url: 'https://mp.weixin.qq.com/s?__biz=MzIzNzU0ODEwOA==&mid=2247484410&idx=1&sn=41a48d474842be358499132cfd44977d&pass_ticket=UNH1mk9gYBs8tf5jxbYWBQoAzw0PGkFTncCRC3gcpA3knY91Fe%2BhpUorBL1XlATP',
+        tag: 'course'
+      },
+      {
+        name: 'Discover实现客户流失预警分析',
+        url: 'https://mp.weixin.qq.com/s?__biz=MzIzNzU0ODEwOA==&mid=2247484364&idx=1&sn=3eb32e2588f10273a377f4705fa72d6d&pass_ticket=UNH1mk9gYBs8tf5jxbYWBQoAzw0PGkFTncCRC3gcpA3knY91Fe%2BhpUorBL1XlATP',
+        tag: 'course'
+      },
+      {
+        name: 'Waterdrop的许可证申请',
+        url: 'https://mp.weixin.qq.com/s?__biz=MzIzNzU0ODEwOA==&mid=2247484375&idx=1&sn=71cb29c7cfdeb628d31848cc0bc4cbd2&pass_ticket=UNH1mk9gYBs8tf5jxbYWBQoAzw0PGkFTncCRC3gcpA3knY91Fe%2BhpUorBL1XlATP',
+        tag: 'course'
+      },
+      {
+        name: 'Discover实现客户流失预警分析',
+        url: 'https://mp.weixin.qq.com/s?__biz=MzIzNzU0ODEwOA==&mid=2247484364&idx=1&sn=3eb32e2588f10273a377f4705fa72d6d&pass_ticket=UNH1mk9gYBs8tf5jxbYWBQoAzw0PGkFTncCRC3gcpA3knY91Fe%2BhpUorBL1XlATP',
+        tag: 'course'
+      },
+      {
+        name: 'Waterdrop的许可证申请',
+        url: 'https://mp.weixin.qq.com/s?__biz=MzIzNzU0ODEwOA==&mid=2247484375&idx=1&sn=71cb29c7cfdeb628d31848cc0bc4cbd2&pass_ticket=UNH1mk9gYBs8tf5jxbYWBQoAzw0PGkFTncCRC3gcpA3knY91Fe%2BhpUorBL1XlATP',
+        tag: 'course'
+      }
+    ];
+
+    return otherCourse;
   }
 }
