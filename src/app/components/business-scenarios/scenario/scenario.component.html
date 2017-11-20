@@ -1,5 +1,4 @@
 
-<bread-crumbs [data]="breadCrumbs"></bread-crumbs>
 <div *ngIf="!scenario.details">
 	have no data!
 </div>
@@ -14,6 +13,8 @@
 		<p *ngIf="scenario.slogan">{{scenario.slogan}}</p>
 	</div>
 </div>
+
+<bread-crumbs [data]="breadCrumbs"></bread-crumbs>
 
 <div
 	*ngFor="let item of scenario.details"
