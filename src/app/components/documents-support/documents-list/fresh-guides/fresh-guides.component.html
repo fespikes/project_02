@@ -1,1 +1,18 @@
-<div>fresh guides</div>
+<div class="course-box">
+  <h5>{{'DOCUMENTS.GUIDE.FRESH_COURSE' | translate}}</h5>
+  <tdc-horizontal-list
+    [docList]="freshCourse"
+    (onDocClick)="viewDetail($event)"
+  ></tdc-horizontal-list>
+</div>
+
+<hr class="split-line" style="clear: both;"/>
+
+<div class="course-box">
+  <h5>{{'DOCUMENTS.GUIDE.OTHER_COURSE' | translate}}</h5>
+  <tdc-horizontal-list
+    [docList]="otherCourse"
+    (onDocClick)="viewDetail($event)"
+  ></tdc-horizontal-list>
+</div>
+

@@ -576,7 +576,8 @@
 
     },
     "GUIDE":{
-
+      "FRESH_COURSE":"新手教程",
+      "OTHER_COURSE":"其他教程"
     }
   }
 }

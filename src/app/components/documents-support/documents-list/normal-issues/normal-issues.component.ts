@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DocumentAPIService } from '../../services/document.api.service';
+import { Router } from '@angular/router';
+
+import { DocumentAPIService } from '../../services/document.api.service'
+import { DocumentResService } from '../../services/document.res.service';
 
 @Component({
   selector: 'tdc-normal-issues',
@@ -11,8 +14,13 @@ import { DocumentAPIService } from '../../services/document.api.service';
 export class NormalIssuesComponent implements OnInit {
   issueDocList = [];
 
+  CATEGORY = 'FAQ';
+  VERSION = 'none';
+
   constructor(
-    private documentAPIService: DocumentAPIService
+    private documentAPIService: DocumentAPIService,
+    private documentResService: DocumentResService,
+    private router: Router
   ) {
 
   }
@@ -27,5 +35,11 @@ export class NormalIssuesComponent implements OnInit {
         this.issueDocList = result[0].children;
       }
     );
+  }
+
+  viewDetail(doc) {
+    this.documentResService.setAnchorId('index');
+    this.documentResService.setSectionId('index');
+    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`]);
   }
 }
