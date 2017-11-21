@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentUtilService } from '../services/document.util.service';
@@ -44,6 +44,11 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.initPage();
+    this.onClickListener();
+  }
+
+  initPage() {
     this.docName = this.documentUtilService.getModuleName(window.location.hash);
     this.crumbItems = this.documentResService.getDocsCrumb(
       this.DOC_DETAIL, this.docName
@@ -164,7 +169,30 @@ export class DocumentsDetailComponent implements OnInit {
     }
   }
 
+  onClickListener() {
+    const self = this;
+    document.onclick = function(event){
+      const target = event.target as any;
+      if(target.attributes['class']
+        && target.attributes['class'].value === 'document-link') {
+
+        const domId = target.attributes['id'].value;
+        const anchorId = domId.substring(5, domId.length);
+        self.documentResService.setAnchorId(anchorId);
+        const domNode = self.documentSearchService.findTreeNode(
+          anchorId, self.treeModel) as any;
+        if(domNode.level && domNode.level > 2) {
+          self.anchorDocContent();
+        }else {
+          self.documentResService.setSectionId(anchorId);
+          self.initPage();
+        }
+      }
+    }
+  }
+
   ngOnDestroy() {
     this.documentUtilService.setBodyWidthAttribute('100vw');
+    document.onclick = null;
   }
 }
