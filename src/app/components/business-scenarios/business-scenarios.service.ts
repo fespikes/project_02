@@ -145,8 +145,8 @@ scenarios = [
     title: '实时计算  业务方案',
     slogan: '云上的流处理分析平台，可对流数据进行实时采集和实时处理。为企业构建实时数据仓库，开发多种在线实时应用，实现对流式信息的充分利用。可以被广泛用于交通运输和物联网行业。',
 
-    adv: bannerBase + 'data-warehouse.jpg',
-    advBgColor: '#001740',
+    adv: bannerBase + 'realtime-computation.jpg',
+    advBgColor: '#0a162d',
 
     details: [
       {
@@ -224,8 +224,8 @@ scenarios = [
     title: '信息检索  业务方案',
     slogan: '用信息检索产品打造企业级搜索引擎，以毫秒级的响应速度完成PB级别的高速全文检索。构建一站式内部搜索平台和信息检索服务，打造便捷高效的集中式金融监管中心。',
 
-    adv: bannerBase + 'data-warehouse.jpg',
-    advBgColor: '#001740',
+    adv: bannerBase + 'info-retrieval.jpg',
+    advBgColor: '#022754',
 
     details: [
       {
@@ -297,8 +297,8 @@ scenarios = [
     title: '数据集市  业务方案',
     slogan: '实现数据集市构建，对接数据分析业务，提供包括交互式分析、数据立方体、任务调度在内的工具以及功能，实现自动化的报表应用构建和自助式的多维度探索。可应用于客户分析、营销分析等维度分析场景。',
 
-    adv: bannerBase + 'data-warehouse.jpg',
-    advBgColor: '#001740',
+    adv: bannerBase + 'data-mart.jpg',
+    advBgColor: '#082236',
 
     details: [
       {
@@ -376,8 +376,8 @@ scenarios = [
     title: '数据分析与挖掘  业务方案',
     slogan: '提供数据清洗、特征工程、建模平台和工具集，丰富的机器学习算法和多种行业模型，方便探索对象属性和行为之间的关系，从数据中发现蕴含价值。',
 
-    adv: bannerBase + 'data-warehouse.jpg',
-    advBgColor: '#001740',
+    adv: bannerBase + 'analysis-mining.jpg',
+    advBgColor: '#012d52',
 
     details: [
       {
@@ -460,8 +460,8 @@ scenarios = [
     title: '深度学习  业务方案',
     slogan: '开发深度学习和人工智能平台，将图像识别技术投入交通监控应用，帮助交通部门实现高度智能化的交通监控与信息处理，把投入车辆识别的人力解放出来，提高交通监管的精准度与效率。',
 
-    adv: bannerBase + 'data-warehouse.jpg',
-    advBgColor: '#001740',
+    adv: bannerBase + 'deep-learning.jpg',
+    advBgColor: '#001436',
 
     details: [
       {
@@ -535,8 +535,8 @@ scenarios = [
     title: '关系数据库  业务方案',
     slogan: '构建企业内部关系数据库服务，处理OLTP业务。支持复杂的SQL查询，提供高稳定、可扩展、强一致的数据处理。可以应用于创建跨越省市、跨多层下级机关的联网警务OA系统。',
 
-    adv: bannerBase + 'data-warehouse.jpg',
-    advBgColor: '#001740',
+    adv: bannerBase + 'relational-database.jpg',
+    advBgColor: '#001945',
 
     details: [
       {
