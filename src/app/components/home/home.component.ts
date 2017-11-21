@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit {
 
     latestNewsPromise.then(data=>{
       this.latestNews = data;
+      window.sessionStorage.setItem('tdc-web:latest-news:first-news-id', data[0].id+'' );
     });
 
   }

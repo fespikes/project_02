@@ -10,7 +10,7 @@ export class RelationalDatabaseService {
   		banner: {
   			h3: '关系数据库',
         h4: '',
-  			description: '构建企业内部的关系数据库服务，可用于处理数据量在500GB以内的OLTP业务。支持复杂的SQL查询，提供高稳定、可扩展、强一致的数据处理服务。',
+  			description: '构建企业关系型数据库，处理数据量在500GB以内的OLTP业务。支持复杂SQL查询，提供高稳定、可扩展、强一致保证。',
   			advImage: '/assets/images/products/relational-database.png'
   		},
   		tabs: [
