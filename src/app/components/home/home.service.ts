@@ -592,6 +592,63 @@ export class HomeService {
 					date: '2017-09-23'
 				}
 			]*/
+
+			videoTutorial: {
+				sliceClass: 'videos',
+				config: {
+					itemWidth: 400,
+					targetClassName: 'shadow-box',
+					hoverClassName: 'current',
+					wrapperClassName: 'h600',
+					defaultLength: 3
+				},
+				items: [
+					{
+						thumbnail: {
+							src: '/assets/images/home/tutorial-videos/Inceptor1.jpg',
+						},
+						name: 'Inceptor',
+						title: '分析型数据库',
+						summary: 'Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和 数据集市的构建。',
+						h5Class: '',	//?
+						pClass: 'desc',	//?
+						divClass: 'shadow-box'	//has a div for wrap
+					},
+					{
+						thumbnail: {
+							src: '/assets/images/home/tutorial-videos/workflow.jpg',
+						},
+						name: 'Inceptor',
+						title: 'workflowTitle',
+						summary: 'workflow是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和 数据集市的构建。',
+						h5Class: '',	//?
+						pClass: 'desc',	//?
+						divClass: 'shadow-box'	//has a div for wrap
+					},
+					{
+						thumbnail: {
+							src: '/assets/images/home/tutorial-videos/Inceptor2.jpg',
+						},
+						name: 'Inceptor',
+						title: '分析型数据库',
+						summary: 'Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和 数据集市的构建。',
+						h5Class: '',	//?
+						pClass: 'desc',	//?
+						divClass: 'shadow-box'	//has a div for wrap
+					},
+					{
+						thumbnail: {
+							src: '/assets/images/home/tutorial-videos/workflow.jpg',
+						},
+						name: 'Inceptor',
+						title: '分析型数据库',
+						summary: 'Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和 数据集市的构建。',
+						h5Class: '',	//?
+						pClass: 'desc',	//?
+						divClass: 'shadow-box'	//has a div for wrap
+					},
+				]
+			}
 		}
   }
 

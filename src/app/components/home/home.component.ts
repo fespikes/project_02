@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
   businessScenarios: any;
 
   latestNews: any;
+
+  videoTutorial: any;
   
   @HostBinding('class.tdc-home-body') hostClass = true;
 
@@ -39,6 +41,8 @@ export class HomeComponent implements OnInit {
       this.latestNews = data;
       window.sessionStorage.setItem('tdc-web:latest-news:first-news-id', data[0].id+'' );
     });
+
+    this.videoTutorial = data.videoTutorial;
 
   }
 

@@ -245,50 +245,53 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
 
   .arrow
     top: 440px
-  ul.videos
-    @extend .center-box
-    padding-top: 64px
-    width: 1170px
-    margin: 0 auto
 
-    li, a
+
+.videos
+  @extend .center-box
+  padding-top: 64px
+  margin: 0 auto
+
+  li
+    display: inline-block
+    float: left
+    width: 370px
+    height: 495px
+    margin-left: 30px
+    &:first-child
+      margin-left: 0
+
+  a
+    display: inline-block
+    width: 100%
+    height: 100%
+    background: #fff
+
+    .thumbnail
       display: inline-block
-      width: 370px
-      height: 495px
+      height: 320px
+      width: 100%
+      //TODO: remove below background placeholder
+    .video-data
+      @include background(video-data, png, transparent, center, center)
+    .video-db
+      @include background(video-db, png, transparent, center, center)
+    .video-code
+      @include background(video-code, png, transparent, center, center)
 
-    li
-      margin-left: 26px
-      &:first-child
-        margin-left: 0
+    h5
+      padding-bottom: 32px
+      margin: 0
+      font-size: 2.2rem
+      text-align: center
 
-    a
-      background: #fff
+    p
+      margin: 0 60px
+      line-height: 20px
+      color: #b0b0b0
 
-      .thumbnail
-        display: inline-block
-        height: 320px
-        width: 100%
-        //TODO: remove below background placeholder
-      .video-data
-        @include background(video-data, png, transparent, center, center)
-      .video-db
-        @include background(video-db, png, transparent, center, center)
-      .video-code
-        @include background(video-code, png, transparent, center, center)
-
-      h5
-        padding-bottom: 32px
-        margin: 0
-        font-size: 2.2rem
-        text-align: center
-
-      p
-        margin: 0 60px
-        line-height: 20px
-        color: #b0b0b0
-
-    a:hover
-      //box-shadow: 
+  a:hover
+    //box-shadow: 
 
 
 

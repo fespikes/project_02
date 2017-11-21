@@ -52,6 +52,17 @@
 			  >{{item.button.text}}</button>
 			</a>
 
+			<!-- routerLink="{{item.button.routerLink}}" -->
+			<a
+				*ngIf="data.sliceClass==='videos'"
+			>
+				<div class="thumbnail">
+	      	<img src="{{item.thumbnail.src}}" alt="" />
+	      </div>
+			  <h5 class="{{item.h5Class}}">{{item.title}}</h5>
+			  <p class="{{item.pClass}}">{{item.summary}}</p>
+			</a>
+
 			<a 
 				*ngIf="data.sliceClass==='bar-modules-ul'" 
 				[class.current]="idx===0"
@@ -119,6 +130,16 @@
 			  >{{item.button.text}}</button>
 			</a>
 
+			<a
+				*ngIf="data.sliceClass==='videos'"
+			>
+				<div class="thumbnail">
+	      	<img src="{{item.thumbnail.src}}" alt="" />
+	      </div>
+			  <h5 class="{{item.h5Class}}">{{item.title}}</h5>
+			  <p class="{{item.pClass}}">{{item.summary}}</p>
+			</a>
+			
 			<a 
 				*ngIf="data.sliceClass==='bar-modules-ul'" 
 			>
