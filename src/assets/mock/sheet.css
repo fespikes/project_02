@@ -2,33 +2,79 @@ ul, ol, li, p, h1,h2,h3,h4,h5{
   padding: 0;
   margin: 0;
 }
+
+h1,h2,h3,h4,h5{
+  color: #333E4F;
+}
+
 #doc-detail-content{
   color: #354052;
   font-family:  'Microsoft YaHei', 'SimSun';
 }
+
+/* paragraph css style start */
 #content .paragraph{
   font-size: 1.4rem;
-  line-height: 22px;
+  line-height: 24px;
   margin-bottom: 12px;
 }
 #content p{
-  line-height: 22px;
+  line-height: 24px;
 }
+/* paragraph css style end */
+
+/* em css style start */
+#content p em{
+  background: yellow;
+  line-height: inherit;
+}
+/* en css style end */
+
 #content code{
   white-space: normal;
   word-break: break-all;
 }
+
+/* img css style start */
 #content .imageblock img{
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
 }
+#content .image img{
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+/* img css style end */
+
+/* link css style start */
+#content a{
+  color: #2156a5;
+  text-decoration: underline;
+  line-height: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+/* link css style end */
+
+/* list css style start */
 #content .olist ol{
   margin: 15px 0 15px 20px;
+}
+#content .olist ol li{
+  line-height: 24px;
 }
 #content .ulist ul{
   margin: 15px 0 15px 20px;
 }
+#content .ulist ul li{
+  list-style: disc;
+  line-height: 24px;
+}
+/* list css style end */
 
 /* table css style start */
 #content .sectionbody table{
