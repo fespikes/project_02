@@ -33,7 +33,7 @@ export class ModuleTabComponent implements OnInit {
 
   manipulateTabPosition() {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if(scrollTop < this.anchorTop) {
+    if(scrollTop <= this.anchorTop) {
       this.tabEl.className = 'tab-ul';
     }else {
       this.tabEl.className = 'fixed';

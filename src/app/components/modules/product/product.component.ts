@@ -42,16 +42,27 @@ export class ProductComponent implements OnInit {
   }
 
   anchorContent(tab) {
-    let anchorTag = this.MODULE_INTRODUCE_TAG;
-    let scrollTop = this.ANCHOR_TOP - this.TAB_HEIGHT;
-    if(tab.tabName === 'advantage') {
-      anchorTag = this.MODULE_ADVANTAGE_TAG;
-      if(tab.className === 'tab-ul') {
+    const anchorTag = tab.tabName === 'advantage' ? this.MODULE_ADVANTAGE_TAG
+      : this.MODULE_INTRODUCE_TAG;
+    const scrollTop = this.getScrollTop(tab.tabName, tab.className);
+    this.productUtilService.anchorTabContent(anchorTag, scrollTop);
+  }
+
+  getScrollTop(tabName, className) {
+    let scrollTop = this.ANCHOR_TOP;
+    if(className === 'tab-ul') {
+      if (tabName === 'introduce') {
+        scrollTop = this.ANCHOR_TOP - this.TAB_HEIGHT;
+      } else if (tabName === 'advantage') {
         scrollTop = this.ANCHOR_TOP - 2 * this.TAB_HEIGHT;
       }
-    }else if(tab.tabName === 'introduce' && tab.className === 'fixed') {
-      scrollTop = this.ANCHOR_TOP;
+    }else if(className === 'fixed') {
+      if(tabName === 'introduce') {
+        scrollTop = this.ANCHOR_TOP;
+      }else if(tabName === 'advantage') {
+        scrollTop = this.ANCHOR_TOP - this.TAB_HEIGHT;
+      }
     }
-    this.productUtilService.anchorTabContent(anchorTag, scrollTop);
+    return scrollTop;
   }
 }

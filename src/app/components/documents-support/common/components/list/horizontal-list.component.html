@@ -1,0 +1,14 @@
+<div
+  class="doc-list doc-list-horizontal"
+  *ngFor="let doc of docList"
+>
+  <div
+    class="doc-item"
+    (click)="viewDocDetail(doc)"
+  >
+    <span class="text-ellipsis">
+      {{doc.name}}
+    </span>
+    <svg tccIcon="enter" size='md'></svg>
+  </div>
+</div>
