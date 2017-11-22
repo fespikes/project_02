@@ -5,18 +5,20 @@ import {Http, Headers} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
 import { TdcApiService } from '../../../shared/services/api.service';
+import { DocumentStorageService } from './document.storage.service';
 
 @Injectable()
 export class DocumentResService {
   anchor = 'index';//for anchor content
   sectionId = 'index';//for common api request
 
-  keyword = '';
   docLoaded = false;
   searchCompleted = false;
   keyNeedRender = false;
 
-  constructor() {
+  constructor(
+    private documentStorageService: DocumentStorageService
+  ) {
 
   }
 
@@ -44,11 +46,11 @@ export class DocumentResService {
   }
 
   getKeyword(): string {
-    return this.keyword;
+    return this.documentStorageService.getStorageItem('keyword');
   }
 
   setKeyword(keyword): void {
-    this.keyword = keyword;
+    this.documentStorageService.setStorageItem('keyword', keyword);
   }
 
   getDocLoaded(): boolean {

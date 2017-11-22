@@ -21,7 +21,7 @@ export class DocumentsSupportComponent implements OnInit {
   }
 
   documentSearch(keyword) {
-    this.documentResService.setKeyword(keyword);
+    this.documentResService.setKeyword(keyword || '');
     this.router.navigate([`/documents-support/docs-search`]);
   }
 }

@@ -23,6 +23,7 @@ import { DocumentUtilService } from './services/document.util.service';
 import { DocumentAPIService } from './services/document.api.service';
 import { DocumentResService } from './services/document.res.service';
 import { DocumentSearchService } from './documents-search/documents-search.service';
+import { DocumentStorageService } from './services/document.storage.service';
 import { TdcApiService } from '../../shared/services/api.service';
 
 import { TuiModule } from '../../tui/tui.module';
@@ -59,6 +60,7 @@ import { SharedModule } from '../../shared';
   providers: [
     TdcApiService,
     DocumentSearchService,
+    DocumentStorageService,
     DocumentResService,
     DocumentUtilService,
     DocumentAPIService
