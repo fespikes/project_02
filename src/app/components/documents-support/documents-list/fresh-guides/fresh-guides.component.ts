@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DocumentAPIService } from '../../services/document.api.service';
-import { DocumentUtilService } from '../../services/document.util.service';
+import { DocumentResService } from '../../services/document.res.service';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tdc-fresh-guides',
@@ -10,22 +12,49 @@ import { DocumentUtilService } from '../../services/document.util.service';
 })
 
 export class FreshGuidesComponent implements OnInit {
+  otherCourse = [];
+  freshCourse = [];
+
+  CATEGORY = 'INTRO';
+  VERSION = 'none';
+
   constructor(
     private documentAPIService: DocumentAPIService,
-    private documentUtilService: DocumentUtilService
+    private documentResService: DocumentResService,
+    private router: Router
   ) {
 
   }
 
   ngOnInit() {
-    this.getFreshGuides('intro')
+    this.getFreshGuides('intro');
+    this.otherCourse = this.documentResService.getOtherCourse();
   }
 
   getFreshGuides(tag) {
     this.documentAPIService.getDocuments(tag, true).subscribe(
       result => {
-
+        this.freshCourse = result[0].children;
+        this.freshCourse = this.freshCourse.concat(this.freshCourse);
       }
     );
+  }
+
+  viewDetail(doc) {
+    if(doc.tag === 'course') {
+      this.openOtherCoursePage(doc.url);
+    }else if(doc.tag === 'intro') {
+      this.viewFreshDocDetail(doc);
+    }
+  }
+
+  openOtherCoursePage(url) {
+    window.open(url);
+  }
+
+  viewFreshDocDetail(doc) {
+    this.documentResService.setAnchorId('index');
+    this.documentResService.setSectionId('index');
+    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`]);
   }
 }

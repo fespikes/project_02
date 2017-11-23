@@ -12,7 +12,7 @@ import { ProductDocumentComponent } from './documents-list/product-document/prod
 import { NormalIssuesComponent } from './documents-list/normal-issues/normal-issues.component';
 import { FreshGuidesComponent } from './documents-list/fresh-guides/fresh-guides.component';
 import { ProductListComponent } from './documents-list/product-document/product-list/product-list.component';
-import { IssueListComponent } from './documents-list/normal-issues/issue-list/issue-list.component';
+import { HorizontalListComponent } from './common/components/list/horizontal-list.component';
 
 import { BreadcrumbComponent } from './common/components/breadcrumb/breadcrumb.component';
 import { SearchComponent } from './common/components/search/search.component';
@@ -50,10 +50,10 @@ import { SharedModule } from '../../shared';
     NormalIssuesComponent,
     FreshGuidesComponent,
     ProductListComponent,
-    IssueListComponent,
     SearchComponent,
     DocTreeComponent,
     DocsListComponent,
+    HorizontalListComponent,
     BreadcrumbComponent
   ],
   providers: [
