@@ -14,7 +14,7 @@ export class DocumentAPIService {
   ) {
 
   }
-  private version = '/v2';
+  private version = '/docs/v2';
 
   private get headers(): Headers {
     return new Headers({
@@ -37,14 +37,16 @@ export class DocumentAPIService {
 
   getDocDetail(url): Observable<any> {
     return this.http.get(
-      url, { headers: this.headers })
-      .map((res) => res.json());
+      `${this.version}/${url}`,
+      { headers: this.headers }
+    ).map((res) => res.json());
   }
 
   getDocTree(url): Observable<any> {
     return this.http.get(
-      url, { headers: this.headers })
-      .map((res) => res.json());
+      `${this.version}/${url}`,
+      { headers: this.headers }
+    ).map((res) => res.json());
   }
 
   docsSearch(data): Observable<any> {
@@ -57,7 +59,7 @@ export class DocumentAPIService {
 
   getDocSheet(): Observable<any> {
     return this.http.get(
-      '/assets/mock/sheet.css',
+      '/assets/styles/css/sheet.css',
       { headers: this.headers }
     ).map((res) => res);
   }
