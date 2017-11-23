@@ -4,7 +4,7 @@ import 'rxjs/add/operator/toPromise';
 
 export class News {
   constructor(
-  	public id: number, 
+  	public id: number,
   	public title: string,
   	public date: string,
   	public content: string,
@@ -53,7 +53,9 @@ let newsList = [
 export class LatestNewsService {
   // private apiUrl = 'news/api/v1/news?page_num=1';  //TODO: get the URL of web api
 
-  private apiUrl = 'api/v1/news?page_num=1';  //TODO: get the URL of web api
+  private version = '/news';
+
+  private apiUrl = `${this.version}/api/v1/news?page_num=1`;  //TODO: get the URL of web api
 
   private list: News[];
 
