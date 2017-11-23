@@ -63,6 +63,9 @@ export class IconDirective implements OnInit, OnChanges {
     case 'sm':
       unit = '12px';
       break;
+    case 'xs':
+      unit = '10px';
+      break;
     default:
       unit = size;
     }

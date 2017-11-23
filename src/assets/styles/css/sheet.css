@@ -30,11 +30,6 @@ h1,h2,h3,h4,h5{
 }
 /* en css style end */
 
-#content code{
-  white-space: normal;
-  word-break: break-all;
-}
-
 /* img css style start */
 #content .imageblock img{
   max-width: 100%;
@@ -121,14 +116,31 @@ h1,h2,h3,h4,h5{
 /* title css style end */
 
 /* sql highlight css style start*/
-#doc-detail-content pre.highlight code span.tok-k{
+#content pre{
+  padding: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+#content pre.highlight code span.tok-k{
   color: #2481e3;
 }
-#doc-detail-content pre.highlight code span.tok-n{
+#content pre.highlight code span.tok-n{
   color: #354052
 }
-#doc-detail-content pre.highlight code span.tok-o{
+#content pre.highlight code span.tok-o{
   color: rgba(0,0,0,.9);
+}
+#content pre.highlight code span.tok-m{
+  color: #009999;
+}
+#content pre.highlight code span.tok-s2{
+  color: #aa5500;
+}
+#content pre.highlight code span.tok-c1{
+  color: #aaaaaa;
+}
+#content .literalblock pre{
+  background: #f7f7f8;
 }
 /* sql highlight css style end*/
 

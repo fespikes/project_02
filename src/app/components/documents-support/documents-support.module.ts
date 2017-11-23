@@ -16,7 +16,7 @@ import { HorizontalListComponent } from './common/components/list/horizontal-lis
 
 import { BreadcrumbComponent } from './common/components/breadcrumb/breadcrumb.component';
 import { SearchComponent } from './common/components/search/search.component';
-import { DocTreeComponent } from './documents-detail/tree/doc-tree.component';
+import { DocTreeComponent } from './common/components/tree/doc-tree.component';
 import { DocsListComponent } from './documents-search/list/docs-list.component';
 
 import { DocumentUtilService } from './services/document.util.service';
