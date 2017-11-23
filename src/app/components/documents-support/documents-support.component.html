@@ -2,37 +2,29 @@
   <docs-search
     (onDocumentSearch)="documentSearch($event)"
   ></docs-search>
-	<div class="documents-options">
-		<span>
-      <a
+	<div class="documents-options clearfix">
+		<div class="products-docs">
+      <svg
+        tccIcon="product-doc"
         routerLink="/documents-support/docs/products"
-        routerLinkActive="active"
-        routerLinkActiveOptions="{exact: true}"
-        class="products-docs"
-      >
-        {{'DOCUMENTS.PRODUCT_DOCUMENT' | translate}}
-      </a>
-		</span>
-		<span>
-      <a
+      ></svg>
+      <span>{{'DOCUMENTS.PRODUCT_DOCUMENT' | translate}}</span>
+
+		</div>
+		<div class="normal-issues">
+      <svg
+        tccIcon="normal-issue"
         routerLink="/documents-support/docs/issues"
-        routerLinkActive="active"
-        routerLinkActiveOptions="{exact: true}"
-        class="normal-issues"
-      >
-        {{'DOCUMENTS.NORMAL_ISSUE' | translate}}
-      </a>
-		</span>
-		<span>
-      <a
+      ></svg>
+      <span>{{'DOCUMENTS.NORMAL_ISSUE' | translate}}</span>
+		</div>
+		<div class="fresh-guides">
+      <svg
+        tccIcon="normal-issue"
         routerLink="/documents-support/docs/guides"
-        routerLinkActive="active"
-        routerLinkActiveOptions="{exact: true}"
-        class="fresh-guides"
-      >
-        {{'DOCUMENTS.FRESH_GUIDE' | translate}}
-      </a>
-		</span>
+      ></svg>
+      <span>{{'DOCUMENTS.FRESH_GUIDE' | translate}}</span>
+		</div>
 	</div>
 </div>
 <router-outlet></router-outlet>

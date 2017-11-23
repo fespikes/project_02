@@ -1,11 +1,9 @@
 @import '../common/style/layout'
 @import '../../styles/util'
+@include clearfix
 
 \:host
   @extend .center-box
-
-.cursor：hover
-	cursor: pointer
 
 .search-box
 	min-height: calc(100vh - #{$nav-height})
@@ -20,36 +18,28 @@
 		margin-left: auto
 		margin-right: auto
 
-		span
-			display: inline-block
+		div
 			float: left
 			width: 270px
 			height: 95px
-			font-size: 1.6rem
-			font-weight: 400
 			text-align: center
-			color: #fff
-			position: relative
-			a
-				display: inline-block
-				width: 60px
-				background: url(/assets/images/search/icon-docs-supports.png) no-repeat
-				position: absolute
-				left: 50%
-				top: 0
-				margin-left: -30px
-				text-indent: -.4rem
-				padding-top: 72px
-				&:hover
-					cursor: pointer
-					top: -5px
-		.products-docs
-			background-position: left top
 
-		.normal-issues
-			background-position: -63px top
+  svg
+    width: 60px
+    height: 60px
+    &:hover
+      position: relative
+      top: -5px
+      cursor: pointer
+    &:active
+      outline: none
 
-		.fresh-guides
-			background-position: -63px top
+  span
+    display: block
+    width: 100%
+    color: #fff
+    margin-top: 10px
+
+
 
 
