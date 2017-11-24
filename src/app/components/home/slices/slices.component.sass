@@ -2,6 +2,7 @@
 
 @import '../home.component'
 
+$shadow-color: #f2f2f2
 
 \:host
 	@extend .center-box
@@ -73,7 +74,7 @@
     //position: relative
     //left: 30px
     .shadow-box
-      box-shadow: 0 0 30px #f2f2f2
+      box-shadow: 0 0 30px $shadow-color
       padding: 30px
     .thumbnail
       width: 100%
@@ -161,7 +162,7 @@ ul.bar-modules-ul
           margin-top: 22px
 
       &:hover
-        box-shadow: 0 0 20px #ead6d6
+        box-shadow: 0 0 20px $shadow-color
 
       .title
         font-size: 1.6rem
@@ -172,12 +173,12 @@ ul.bar-modules-ul
 
   li.current, li.active
     a
-      box-shadow: 0 0 20px #ead6d6
+      box-shadow: 0 0 20px $shadow-color
 
       .thumbnail
 
   a.current
-    box-shadow: 0 0 20px #ead6d6
+    box-shadow: 0 0 20px $shadow-color
 //E: .hot-modules
 
 
