@@ -7,6 +7,36 @@ p, div, span, h1,h2,h3,h4,h5, ul, li, dl, dd, dt
 
 $ctnColor: #354052
 
+
+
+@keyframes slogan-fade-up
+  0%
+    transform: translate3d(190px, 30%, 0)
+    display: none
+    opacity: 0
+  90%
+    transform: translate3d(190px, -55%, 0)
+    opacity: 90
+  95%
+    transform: translate3d(190px, -45%, 0)
+    opacity: 95
+  100%
+    transform: translate3d(190px, -50%, 0)
+    display: block
+    opacity: 1
+
+@keyframes adv-fade-up
+  0%
+    transform: translate3d(0, 30%, 0)
+    display: none
+    opacity: 0
+
+  100%
+    transform: translate3d(0, 0, 0)
+    display: block
+    opacity: 1
+
+
 .products-menu
   width: 190px
   height: 100%
@@ -37,6 +67,7 @@ $ctnColor: #354052
     position: relative
     top: 50%
     transform: translate(190px, -50%)
+    animation: slogan-fade-up 1s
 
     h3, h4
       color: #fff
@@ -75,6 +106,7 @@ $ctnColor: #354052
     right: 40px
     img
       width: 100%
+      animation: adv-fade-up 1s
 
 .tab-box
   display: block

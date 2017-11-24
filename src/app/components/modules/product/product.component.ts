@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 import { ProductIntroduceComponent } from './introduce/product-introduce.component';
 import { ProductAdvantageComponent } from './advantage/product-advantage.component';
@@ -21,12 +21,14 @@ export class ProductComponent implements OnInit {
 
   ANCHOR_TOP = 402;//topNav height plus banner height
   TAB_HEIGHT = 56;
-
+  private offsetX = 0;
+  private offsetY = 0;
 
   constructor(
     private productBannerService: ProductBannerService,
     private productUtilService: ProductUtilService,
-    private productResService: ProductResService
+    private productResService: ProductResService,
+    private element: ElementRef
   ) {
 
   }
@@ -64,5 +66,29 @@ export class ProductComponent implements OnInit {
       }
     }
     return scrollTop;
+  }
+
+  onMousemove(event: MouseEvent) {
+    const factor = 30;
+    const { movementX, movementY } = event;
+    const img: HTMLImageElement = this.element.nativeElement.querySelector('.image');
+    if (!img) {
+      return;
+    }
+
+    this.offsetX += movementX / factor;
+    this.offsetY += movementY / factor;
+    const translateX = `${- this.offsetX}px`;
+    const translateY = `${- this.offsetY}px`;
+    img.style.transition = '';
+    img.style.transform = `translate(${translateX}, ${translateY})`;
+  }
+
+  onMouseleave() {
+    this.offsetX = 0;
+    this.offsetY = 0;
+    const img: HTMLImageElement = this.element.nativeElement.querySelector('.banner-image');
+    img.style.transition = 'all 0.5s';
+    img.style.transform = `translate(0, 0)`;
   }
 }

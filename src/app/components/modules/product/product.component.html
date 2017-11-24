@@ -8,8 +8,11 @@
     </div>
     <div
       class="adv-image"
-      [ngStyle]="{'background': 'url(' + bannerInfo.logoUrl + ') no-repeat'}"
-    ></div>
+      (mousemove)="onMousemove($event)"
+      (mouseleave)="onMousemove($event)"
+    >
+      <img class="image" alt="" src="{{bannerInfo.logoUrl}}" />
+    </div>
   </div>
 </div>
 
