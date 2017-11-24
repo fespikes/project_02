@@ -14,3 +14,13 @@ npm start
 ```bash
 npm run i18n
 ```
+
+### CI
+
+制作image. 
+
+```
+docker build . -f ci/Dockerfile -t tdc/tdcweb-ci
+docker tag tdc/tdcweb-ci 172.16.1.99/transwarp/tdcweb/build/tdcweb-ci:latest
+docker push 172.16.1.99/transwarp/tdcweb/build/tdcweb-ci:latest
+```

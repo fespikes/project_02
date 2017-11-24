@@ -1,0 +1,18 @@
+image: 172.16.1.99/transwarp/tdcweb/build/tdcweb-ci:latest
+before_script:
+  - echo "Namespace" $CI_PROJECT_NAMESPACE
+  - echo "Project" $CI_PROJECT_NAME
+
+postcommit:
+  stage: build
+  script:
+    - echo "build artifacts"
+    - cd /$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME
+    - cp -r /usr/src/app/node_modules /$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/node_modules
+    - npm run prod
+  artifacts:
+    expire_in: 6 mos
+    paths:
+      - dist
+  only:
+    - master
