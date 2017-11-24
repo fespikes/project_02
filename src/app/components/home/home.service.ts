@@ -5,7 +5,7 @@ import { News, utils } from '../latest-news/latest-news.service';
 
 @Injectable()
 export class HomeService {
-  private version = '/news';
+  private version = localStorage.getItem('tdc-redirect')?'':'/news';
   private apiUrl = `${this.version}/api/v1/news?page_num=1`;  //TODO: get the URL of web api
 
   constructor(private http: Http) { }
