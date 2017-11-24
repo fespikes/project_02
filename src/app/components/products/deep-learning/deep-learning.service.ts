@@ -10,7 +10,7 @@ export class DeepLearningService {
   		banner: {
   			h3: '深度学习',
         h4: '',
-  			description: '深度学习和人工智能开发平台，实现高度智能化的信息处理，协助与增进企业的运作管理。',
+  			description: '深度学习和人工智能开发平台，可以用于机器学习和AI应用的开发，实现高度智能化的信息处理。',
   			advImage: '/assets/images/products/deep-learning.png'
   		},
   		tabs: [
