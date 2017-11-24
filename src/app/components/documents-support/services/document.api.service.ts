@@ -14,7 +14,7 @@ export class DocumentAPIService {
   ) {
 
   }
-  private version = '/docs/v2';
+  private version = '/v2';
 
   private get headers(): Headers {
     return new Headers({

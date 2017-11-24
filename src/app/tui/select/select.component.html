@@ -1,7 +1,7 @@
 <div class="tcc-select-head" (click)="onHeadClick()">
   <div class="tcc-select-label" *ngIf="label">{{label | translate}}</div>
   <div class="tcc-select-placeholder" *ngIf="!label">{{placeholder | translate}}</div>
-  <svg tccIcon="angle-down" color="default" size="sm"></svg>
+  <svg tccIcon="angle-down" color="default" size="xs"></svg>
 </div>
 <div class="tcc-select-options" *ngIf="optionsOpen && count">
   <ng-content></ng-content>

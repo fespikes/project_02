@@ -6,8 +6,8 @@ import {
   EventEmitter,
 } from '@angular/core';
 
-import { DocumentSearchService } from '../../documents-search/documents-search.service';
-import { DocumentResService } from '../../services/document.res.service';
+import { DocumentSearchService } from '../../../documents-search/documents-search.service';
+import { DocumentResService } from '../../../services/document.res.service';
 
 @Component({
   selector: 'tdc-menu-tree',
