@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   templateUrl: './banner.component.html',
@@ -6,11 +6,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-	data: any;
-	
-  constructor() { }
+  data: any;
+  private offsetX = 0;
+  private offsetY = 0;
+
+  constructor(
+    private element: ElementRef
+  ) { }
 
   ngOnInit() {
   }
 
+  onMousemove(event: MouseEvent) {
+    const factor = 30;
+    const { movementX, movementY } = event;
+    const img: HTMLImageElement = this.element.nativeElement.querySelector('.image');
+    if (!img) {
+      return;
+    }
+
+    this.offsetX += movementX / factor;
+    this.offsetY += movementY / factor;
+    const translateX = `${- this.offsetX}px`;
+    const translateY = `${- this.offsetY}px`;
+    img.style.transition = '';
+    img.style.transform = `translate(${translateX}, ${translateY})`;
+  }
+
+  onMouseleave() {
+    this.offsetX = 0;
+    this.offsetY = 0;
+    const img: HTMLImageElement = this.element.nativeElement.querySelector('.banner-image');
+    img.style.transition = 'all 0.5s';
+    img.style.transform = `translate(0, 0)`;
+  }
 }

@@ -1,8 +1,23 @@
 @import '../../../products.layout'
 
-.details-banner
+@keyframes slogan-fade-up
+  0%
+    transform: translate3d(190px, 30%, 0)
+    display: none
+    opacity: 0
+  90%
+    transform: translate3d(190px, -55%, 0)
+    opacity: 90
+  95%
+    transform: translate3d(190px, -45%, 0)
+    opacity: 95
+  100%
+    transform: translate3d(190px, -50%, 0)
+    display: block
+    opacity: 1
 
-  .adv-image
+.slogans, adv-image
+  animation: slogan-fade-up 1s
 
 
 

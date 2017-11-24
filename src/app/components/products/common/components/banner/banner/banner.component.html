@@ -5,8 +5,13 @@
 			<h4 *ngIf="data.h4" class="title">{{data.h4}}</h4>
 			<p>{{data.description}}</p>
 		</div>
-		<div class="adv-image">
-			<img alt="" src="{{data.advImage}}" />
+
+		<div
+			class="adv-image"
+			(mousemove)="onMousemove($event)"
+			(mouseleave)="onMousemove($event)"
+		>
+			<img class="image" alt="" src="{{data.advImage}}" />
 		</div>
 	</div>
 </div>
