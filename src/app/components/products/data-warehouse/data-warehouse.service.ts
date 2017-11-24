@@ -10,7 +10,7 @@ export class DataWarehouseService {
   		banner: {
   			h3: '数据仓库',
         h4: '',
-  			description: '数据仓库是数据中心库，全 面整合各类数据，按照主题组织信息，是打造商业智能的核心。',
+  			description: '数据仓库是数据中心库，全面整合各类数据，按照主题组织信息，是打造商业智能的核心。',
   			advImage: '/assets/images/products/data-warehouse.png'
   		},
   		tabs: [
