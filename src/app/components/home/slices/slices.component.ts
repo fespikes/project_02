@@ -84,9 +84,9 @@ export class SlicesComponent implements OnInit {
   }
 
   setInterval (direction?) {
-    // this.interval = setInterval(_=>{
-    //   (direction || SlicesComponent.config.direction) ? this.goRight(): this.goLeft();
-    // }, 4000);
+    this.interval = setInterval(_=>{
+      (direction || SlicesComponent.config.direction) ? this.goRight(): this.goLeft();
+    }, 4000);
   }
 
 

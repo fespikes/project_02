@@ -268,13 +268,14 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
       display: inline-block
       height: 320px
       width: 100%
-      //TODO: remove below background placeholder
-    .video-data
-      @include background(video-data, png, transparent, center, center)
-    .video-db
-      @include background(video-db, png, transparent, center, center)
-    .video-code
-      @include background(video-code, png, transparent, center, center)
+      background: transparent url(/assets/images/home/tutorial-videos/bg.png) no-repeat center center
+
+      img
+        position: relative
+        left: 50%
+        top: 50%
+        margin-left: -80px
+        margin-top: -45px
 
     h5
       padding-bottom: 32px
@@ -289,11 +290,6 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
 
   a:hover
     //box-shadow: 
-
-
-
-//370 493   30
-
 
 
 //E: .video-tutorial
