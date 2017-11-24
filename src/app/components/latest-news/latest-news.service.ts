@@ -53,7 +53,7 @@ let newsList = [
 export class LatestNewsService {
   // private apiUrl = 'news/api/v1/news?page_num=1';  //TODO: get the URL of web api
 
-  private version = '';
+  private version = '/news';
 
   private apiUrl = `${this.version}/api/v1/news?page_num=1`;  //TODO: get the URL of web api
 
