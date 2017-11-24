@@ -16,8 +16,20 @@
     display: block
     opacity: 1
 
-.slogans, adv-image
+@keyframes adv-fade-up
+  0%
+    transform: translate3d(0, 30%, 0)
+    display: none
+    opacity: 0
+
+  100%
+    transform: translate3d(0, 0, 0)
+    display: block
+    opacity: 1
+
+.slogans
   animation: slogan-fade-up 1s
 
-
+.image
+  animation: adv-fade-up 1s
 
