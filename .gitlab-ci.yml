@@ -16,3 +16,4 @@ postcommit:
       - dist
   only:
     - master
+    - feature/FE
