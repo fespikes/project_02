@@ -179,7 +179,7 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
     float: left
     display: inline-block
     width: 364px
-    //padding-top: 208px
+    overflow: hidden
     padding-bottom: 38px
     margin-right: 36px
     text-align: center
@@ -191,7 +191,9 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
     .thumbnail
       width: 100%
       height: 208px
-      
+      transition-duration: 0.3s
+      transition-property: transform
+
     &.scenario-0
       @include background(scenario-0, jpg, #274363)
     &.scenario-1
@@ -224,6 +226,11 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
     background: #1878c9
     color: #fff
     cursor: pointer
+
+  a
+    &:hover, &:focus, &:active
+      .thumbnail
+        transform: scale(1.05)
 
 
 .ul-swap
