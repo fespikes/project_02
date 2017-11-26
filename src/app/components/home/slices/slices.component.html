@@ -52,11 +52,11 @@
 			  >{{item.button.text}}</button>
 			</a>
 
-			<!-- routerLink="{{item.button.routerLink}}" -->
+				<!-- href="{{item.thumbnail.href}}"
+				target="_blank" -->
 			<a
 				*ngIf="data.sliceClass==='videos'"
-				href="{{item.thumbnail.href}}"
-				target="_blank"
+				routerLink="{{item.routerLink}}"
 			>
 				<div class="thumbnail">
 	      	<img src="{{item.thumbnail.src}}" alt="" />
@@ -134,8 +134,7 @@
 
 			<a
 				*ngIf="data.sliceClass==='videos'"
-				href="{{item.thumbnail.href}}" 
-				target="_blank"
+				routerLink="{{item.routerLink}}"
 			>
 				<div class="thumbnail">
 	      	<img src="{{item.thumbnail.src}}" alt="" />

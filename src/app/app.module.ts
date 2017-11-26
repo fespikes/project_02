@@ -41,6 +41,7 @@ import {
   TranslateToken,
   I18nLangService,
 } from './i18n';
+// import { VideoTutorialModule } from './components/video-tutorial/video-tutorial.module';
 
 @NgModule({
   declarations: [
@@ -50,8 +51,7 @@ import {
     NavBottomComponent,
     TheBreadCrumbsComponent,
     PageNotFoundComponent,
-    ManagementCenterComponent,
-    // AfterSaleServiceComponent
+    ManagementCenterComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -66,6 +66,7 @@ import {
 
     LatestNewsModule,
     DocumentsSupportModule,
+    // VideoTutorialModule,
     AppRoutingModule,
   ],
   providers: [
