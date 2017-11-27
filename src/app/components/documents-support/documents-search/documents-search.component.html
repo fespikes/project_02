@@ -1,47 +1,49 @@
-<div class="doc-support-panel">
-  <document-breadcrumb
-    [crumbItems]="crumbItems"
-  ></document-breadcrumb>
-  <div class="content-panel">
-    <div class="panel-left filter-tree">
-      <div class="panel-left-header filter">
-        <span>{{'DOCUMENTS.SEARCH_FILTER' | translate}}</span>
+<div class="doc-support-wrapper">
+  <div class="doc-support-panel">
+    <document-breadcrumb
+      [crumbItems]="crumbItems"
+    ></document-breadcrumb>
+    <div class="content-panel">
+      <div class="panel-left filter-tree">
+        <div class="panel-left-header filter">
+          <span>{{'DOCUMENTS.SEARCH_FILTER' | translate}}</span>
+        </div>
+        <div class="tree">
+          <tdc-menu-tree
+            [treeModel]="treeModel"
+            [treeLevel]="treeLevel"
+            [treeType]="treeType"
+            (onSelectChange)="onSelectChange($event)"
+          ></tdc-menu-tree>
+        </div>
+        <div class="operation">
+          <button (click)="expandAll()">
+            {{'DOCUMENTS.EXPAND_ALL' | translate}}
+          </button>
+          <button (click)="collapseAll()">
+            {{'DOCUMENTS.COLLAPSE_ALL' | translate}}
+          </button>
+        </div>
       </div>
-      <div class="tree">
-        <tdc-menu-tree
-          [treeModel]="treeModel"
-          [treeLevel]="treeLevel"
-          [treeType]="treeType"
-          (onSelectChange)="onSelectChange($event)"
-        ></tdc-menu-tree>
+      <div class="panel-right filter-result">
+        <div class="search-docs">
+          <docs-search
+            [keyword]="keyword"
+            [filterSearch]=true
+            (onDocumentSearch)="onDocumentSearch($event)"
+          ></docs-search>
+        </div>
+        <tdc-docs-list
+          [docsList]="docsList"
+          [docsCount]="docsCount"
+          (onListItemClick)="listItemClick($event)"
+        ></tdc-docs-list>
+        <tcc-pagination
+          [(pagination)]="pagination"
+          (paginationChange)="paginationChange()"
+        >
+        </tcc-pagination>
       </div>
-      <div class="operation">
-        <button (click)="expandAll()">
-          {{'DOCUMENTS.EXPAND_ALL' | translate}}
-        </button>
-        <button (click)="collapseAll()">
-          {{'DOCUMENTS.COLLAPSE_ALL' | translate}}
-        </button>
-      </div>
-    </div>
-    <div class="panel-right filter-result">
-      <div class="search-docs">
-        <docs-search
-          [keyword]="keyword"
-          [filterSearch]=true
-          (onDocumentSearch)="onDocumentSearch($event)"
-        ></docs-search>
-      </div>
-      <tdc-docs-list
-        [docsList]="docsList"
-        [docsCount]="docsCount"
-        (onListItemClick)="listItemClick($event)"
-      ></tdc-docs-list>
-      <tcc-pagination
-        [(pagination)]="pagination"
-        (paginationChange)="paginationChange()"
-      >
-      </tcc-pagination>
     </div>
   </div>
 </div>

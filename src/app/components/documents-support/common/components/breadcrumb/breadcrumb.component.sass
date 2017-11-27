@@ -2,24 +2,29 @@
 
 \:host
 
-  @include clearfix
-  height: 50px
-  line-height: 50px
-  width: 1200px
-  padding: 0 20px
+  width: 100vw
+  background-color: #F3F4F8
+  left: 0
   top: $top-nav-height
   z-index: 99
-  margin: 0 auto
-  display: block
-  background-color: $common-bg-color
 
-  li
-    float: left
-    font-size: 1.2rem
-  a.link, span
-    color: $common-blue
-  span
-    margin: 0 5px
+  ul
+    @include clearfix
+    height: 50px
+    line-height: 50px
+    width: 1200px
+    padding: 0 20px
+    margin: 0 auto
+    display: block
+    background-color: $common-bg-color
+
+    li
+      float: left
+      font-size: 1.2rem
+    a.link, span
+      color: $common-blue
+    span
+      margin: 0 5px
 
 
 

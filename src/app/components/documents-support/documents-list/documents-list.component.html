@@ -1,13 +1,15 @@
-<div class="docs-list">
-  <document-breadcrumb
-    [crumbItems]="crumbItems"
-  ></document-breadcrumb>
-  <tdc-tab
-    [tabItems]="tabItems"
-    (onTabChange)="onTabChange($event)"
-  ></tdc-tab>
-  <div class="docs-content">
-    <router-outlet></router-outlet>
+<div class="doc-support-wrapper">
+  <div class="docs-list">
+    <document-breadcrumb
+      [crumbItems]="crumbItems"
+    ></document-breadcrumb>
+    <tdc-tab
+      [tabItems]="tabItems"
+      (onTabChange)="onTabChange($event)"
+    ></tdc-tab>
+    <div class="docs-content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
 
