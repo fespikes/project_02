@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   latestNews: any;
 
   videoTutorial: any;
-  
+
   @HostBinding('class.tdc-home-body') hostClass = true;
 
   constructor(
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     this.advs = data.advList;
     this.cloudProducts = data.cloudProducts;
     this.hotModules = data.hotModules;
-    
+
     this.businessScenarios = data.businessScenarios;
 
     let latestNewsPromise = this.homeService.getLatestNews();
@@ -55,6 +55,10 @@ export class HomeComponent implements OnInit {
 
   toLatestNewsDetails(target, news) {
     this.router.navigate(['/latest-news', news.id]);
+  }
+
+  goToAdmin() {
+
   }
 
 }

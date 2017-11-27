@@ -11,7 +11,7 @@ import { Scenario } from './scenario/scenario';
 })
 export class BusinessScenariosComponent implements OnInit {
 
-	private scenarios: Scenario[];
+	scenarios: Scenario[];
 
   constructor(
 	  private route: ActivatedRoute,

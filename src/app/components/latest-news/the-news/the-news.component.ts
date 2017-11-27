@@ -11,9 +11,9 @@ var style = require('./the-news.css');
 })
 export class TheNewsComponent implements OnInit, AfterViewChecked {
 
-	private news: News;
+	news: News;
 
-  private style;
+  style;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,7 +29,6 @@ export class TheNewsComponent implements OnInit, AfterViewChecked {
       .switchMap((params: ParamMap) =>
         this.service.getTheNews(params.get('id')))
           .subscribe((news: News) => {
-            console.log(news);
             this.news = news
           } );
   }

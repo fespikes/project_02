@@ -6,7 +6,7 @@ export class ProductBannerService {
 
   }
 
-  getModuleBannerInfo(moduleType): Object {
+  getModuleBannerInfo(moduleType): any {
     let bannerInfo = {};
     switch (moduleType) {
       case 'inceptor':
