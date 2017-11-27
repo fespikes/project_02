@@ -20,9 +20,9 @@ export class NavTopComponent implements OnInit{
 
   @HostBinding('class.nav-wrapper') hostClass = true;
 
-  private navigationData: any;
-  private subMenuItems: any;
-  private showSubmenu = false;
+  navigationData: any;
+  subMenuItems: any;
+  showSubmenu = false;
   submenuType = CONSTANT.submenuTypes;
 
   constructor(
