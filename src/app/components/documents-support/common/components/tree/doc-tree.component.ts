@@ -34,7 +34,9 @@ export class DocTreeComponent implements OnInit {
 
   toggle(node) {
     node.expanded = !node.expanded;
+    node['clickToggle'] = true;
     this.onSelectChange.emit(node);
+    delete node['clickToggle'];
   }
 
   dbClick(node) {
@@ -42,12 +44,11 @@ export class DocTreeComponent implements OnInit {
   }
 
   selectChange(node) {
-    node.expanded = true;
     this.onSelectChange.emit(node);
   }
 
   checkboxChange(node) {
-    this.onSelectChange.emit(node);
+    this.selectChange(node);
   }
 
   ngAfterViewInit() {
