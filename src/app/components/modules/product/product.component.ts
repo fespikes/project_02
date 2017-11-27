@@ -14,7 +14,12 @@ import { ProductResService } from '../services/product-res.service';
 })
 export class ProductComponent implements OnInit {
 
-  bannerInfo = {};
+  bannerInfo = {
+    alias: '',
+    title: '',
+    subTitle: '',
+    logoUrl: ''
+  };
   tabItems = [];
   MODULE_INTRODUCE_TAG = 'product-introduce';
   MODULE_ADVANTAGE_TAG = 'product-advantage';

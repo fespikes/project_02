@@ -8,18 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HotModulesComponent implements OnInit {
 
 	@Input()
-	private data: any;
-	
-	private current: any;
+	data: any;
+
+	current: any;
 
   constructor() { }
 
   ngOnInit() {
-    console.log( 'ngOnInit:' , this.data);
 
     let items = this.data.items;
     this.current = items[0];
-    
+
   }
 
   onSelected(item) {

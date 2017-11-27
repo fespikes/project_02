@@ -21,9 +21,13 @@ import { ComponentIntroChildDirective } from './common/components/component-intr
 import { ScenariosChildDirective } from './common/components/scenarios-child/scenarios-child.directive';
 
 import { FunctionalitiesComponent as TheFunctionalitiesComponent } from './common/components/functionalities/functionalities/functionalities.component';
+import { FunctionalitiesComponent } from './common/components/functionalities/functionalities.component';
 import { AdvantagesComponent as TheAdvantagesComponent } from './common/components/advantages/advantages/advantages.component';
+import { AdvantagesComponent } from './common/components/advantages/advantages.component'
 import { ScenariosComponent as TheScenariosComponent } from './common/components/scenarios/scenarios/scenarios.component';
+import { ScenariosComponent } from './common/components/scenarios/scenarios.component';
 import { ComponentIntroComponent as TheComponentIntroComponent } from './common/components/component-intro/component-intro/component-intro.component';
+import { ComponentIntroComponent } from './common/components/component-intro/component-intro.component';
 import { BannerComponent as TheBannerComponent } from './common/components/banner/banner/banner.component';
 import { TabsComponent as TheTabsComponent } from './common/components/tabs/tabs/tabs.component';
 import { ComponentIntroChildComponent as TheComponentIntroChildComponent } from './common/components/component-intro-child/component-intro-child/component-intro-child.component';
@@ -142,11 +146,15 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     TabsComponent,
     ScenariosChildComponent,
     ComponentIntroChildComponent,
-    
+
     TheFunctionalitiesComponent,
+    FunctionalitiesComponent,
     TheAdvantagesComponent,
+    AdvantagesComponent,
     TheScenariosComponent,
+    ScenariosComponent,
     TheComponentIntroComponent,
+    ComponentIntroComponent,
     TheBannerComponent,
     TheTabsComponent,
     TheScenariosChildComponent,
@@ -184,14 +192,14 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     AnalysisMiningFunctionalitiesComponent,
     AnalysisMiningScenariosComponent,
     AnalysisMiningTabsComponent,
-    
+
     DeepLearningAdvantagesComponent,
     DeepLearningBannerComponent,
     DeepLearningComponentIntroComponent,
     DeepLearningFunctionalitiesComponent,
     DeepLearningScenariosComponent,
     DeepLearningTabsComponent,
-    
+
     RealtimeComputationAdvantagesComponent,
     RealtimeComputationBannerComponent,
     RealtimeComputationComponentIntroComponent,

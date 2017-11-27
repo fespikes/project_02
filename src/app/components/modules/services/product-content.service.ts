@@ -8,7 +8,7 @@ export class ProductContentService {
 
   IMG_WIDTH = '400px';
 
-  getProductIntroduce(moduleName): Object {
+  getProductIntroduce(moduleName): any {
     let productIntroduce = {};
     switch (moduleName) {
       case 'inceptor':
@@ -1185,7 +1185,7 @@ export class ProductContentService {
     return productIntroduce;
   }
 
-  getProductAdvantage(moduleName): Object {
+  getProductAdvantage(moduleName): any {
     let productAdvantage = {};
     switch (moduleName) {
       case 'inceptor':

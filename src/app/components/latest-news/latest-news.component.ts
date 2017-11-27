@@ -13,9 +13,9 @@ export class LatestNewsComponent implements OnInit {
 
   newsList: Observable<News[]>;
 
-  private breadCrumbs: any;
+  breadCrumbs: any;
 
-  private selectedId: number;
+  selectedId: number;
 
   constructor(
     private service: LatestNewsService,
@@ -42,7 +42,7 @@ export class LatestNewsComponent implements OnInit {
       .switchMap((params: ParamMap) => {
         // (+) before `params.get()` turns the string into a number
         this.selectedId = +this.router.url.replace( '/latest-news/', '');
-        
+
         if (this.selectedId)
           return this.service.getNewsList();
         else{

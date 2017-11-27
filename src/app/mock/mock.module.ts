@@ -15,6 +15,8 @@ import {
 } from './form';
 import { TabPaneDirective } from './tab-pane.directive';
 
+import { SearchComponent } from './search/search.component';
+
 @NgModule({
   declarations: [
     DefaultPipeStub,
@@ -30,6 +32,7 @@ import { TabPaneDirective } from './tab-pane.directive';
     SelectOptionComponent,
     TabPaneDirective,
     TranslatePipeStub,
+    SearchComponent,
   ],
   exports: [
     DefaultPipeStub,
