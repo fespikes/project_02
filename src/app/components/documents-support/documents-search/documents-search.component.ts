@@ -89,9 +89,11 @@ export class DocumentsSearchComponent implements OnInit {
       this.treeModel, 'expanded', false);
   }
 
-  onSelectChange(entity) {
+  onSelectChange(node) {
+    if(!node.clickToggle)
+      node.expanded = true;
     const searchState = this.documentSearchService.makeSelectedDocs(
-      entity, this.selectedDocs, this.treeModel) as any;
+      node, this.selectedDocs, this.treeModel) as any;
     this.selectedDocs = searchState.selectedDocs;
     this.treeModel = searchState.treeModel;
     const searchParams = this.documentSearchService.makeSearchParams(

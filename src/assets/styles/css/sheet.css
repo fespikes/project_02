@@ -3,7 +3,7 @@ ul, ol, li, p, h1,h2,h3,h4,h5{
   margin: 0;
 }
 
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5, .title{
   color: #333E4F;
 }
 
@@ -31,6 +31,9 @@ h1,h2,h3,h4,h5{
 /* en css style end */
 
 /* img css style start */
+#content .imageblock{
+  margin-bottom: 15px;
+}
 #content .imageblock img{
   max-width: 100%;
   height: auto;
@@ -121,11 +124,17 @@ h1,h2,h3,h4,h5{
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+#content .literalblock pre{
+  background: #f7f7f8;
+}
+#content pre.highlight code span{
+  line-height: 1.45;
+}
 #content pre.highlight code span.tok-k{
   color: #2481e3;
 }
 #content pre.highlight code span.tok-n{
-  color: #354052
+  color: #354052;
 }
 #content pre.highlight code span.tok-o{
   color: rgba(0,0,0,.9);
@@ -133,14 +142,30 @@ h1,h2,h3,h4,h5{
 #content pre.highlight code span.tok-m{
   color: #009999;
 }
+#content pre.highlight code span.tok-s1{
+  color: #aa5500;
+}
 #content pre.highlight code span.tok-s2{
   color: #aa5500;
 }
 #content pre.highlight code span.tok-c1{
   color: #aaaaaa;
 }
-#content .literalblock pre{
-  background: #f7f7f8;
+#content pre.highlight code span.tok-mi{
+  color: #009999;
+}
+#content pre.highlight code span.tok-no{
+  color: #aa0000;
+}
+#content pre.highlight code span.tok-ss{
+  color: #0000aa;
 }
 /* sql highlight css style end*/
+
+#content .exampleblock .content{
+  background-color: #fffef7;
+  border: 1px solid #e0e0dc;
+  padding: 10px;
+  border-radius: 4px;
+}
 

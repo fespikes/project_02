@@ -34,11 +34,11 @@ export class DocumentUtilService {
   }
 
   makeDocTreeUrl(params): string {
-    return '/document/' + params.category + '/' + params.version + '/' + params.component;
+    return 'document/' + params.category + '/' + params.version + '/' + params.component;
   }
 
   makeDocDetailUrl(params): string {
-    return '/document/' + params.category + '/' + params.version + '/' + params.component + '/' + params.section;
+    return 'document/' + params.category + '/' + params.version + '/' + params.component + '/' + params.section;
   }
 
   addDocsVersions(data): any[] {

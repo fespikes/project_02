@@ -148,6 +148,8 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   updateTreeState(node) {
+    if(!node.clickToggle)
+      node.expanded = true;
     this.treeModel = this.documentSearchService.removeSelectedState(this.treeModel);
     node.selected = true;
   }
