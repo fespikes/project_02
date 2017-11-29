@@ -1,4 +1,5 @@
 @import "../../../../../styles/util"
+@include clearfix
 
 .search
   width: 840px
@@ -6,28 +7,34 @@
   margin-right: auto
   font-size: 1.6rem
 
-  input.search-field
-    display: inline-block
+  .search-field
+    float: left
     width: 712px
-    height: 49px
-    border: solid 1px #fff
+    height: 50px
+    border-width: 0
+    border-image-width: 0
+    padding-top: 0
+    padding-bottom: 0
     border-top-left-radius: 5px
     border-bottom-left-radius: 5px
     text-indent: 10px
     font-size: 1.4rem
-    letter-space: 2px
 
     &:focus
       outline: none
 
-  button.search-btn
-    display: inline-block
+  .search-btn
+    float: left
     width: 116px
     height: 50px
-    margin-left: -4px
-    border: 1px solid #0066ce
+    line-height: 50px
+    border-width: 0
     background: #0066ce
     color: #fff
+    text-align: center
+    border-image-width: 0
+    padding-top: 0
+    padding-bottom: 0
     border-top-right-radius: 5px
     border-bottom-right-radius: 5px
     &:hover
@@ -38,7 +45,7 @@
 .filter-search
   margin-left: 0
 
-  input.search-field
+  .search-field
     height: 32px
     width: 695px
     border: solid 1px $common-grey
@@ -46,7 +53,7 @@
     &:focus
       outline: none
 
-  button.search-btn
+  .search-btn
     height: 32px
     font-size: 1.4rem
 
