@@ -49,7 +49,7 @@ export class DocumentSearchService {
     return treeModel;
   }
 
-  findTreeNode(nodeId, treeModel): any {
+  findTreeNode(nodeId, treeModel): Object {
     let stack = [], item;
     for (let i = 0; i < treeModel.length; i++) {
       stack.push(treeModel[i]);
@@ -130,11 +130,11 @@ export class DocumentSearchService {
       treeModel[0].selected = true;
       return treeModel;
     }
-    let selectedNode = this.findTreeNode(nodeId, treeModel);
+    let selectedNode = this.findTreeNode(nodeId, treeModel) as any;
     selectedNode.selected = true;
     let loop = 0;
     while (selectedNode.parent !== 'index' && loop < this.MAX_LOOP) {
-      selectedNode = this.findTreeNode(selectedNode.parent, treeModel);
+      selectedNode = this.findTreeNode(selectedNode.parent, treeModel) as any;
       selectedNode.expanded =true;
       loop++;
     }
@@ -164,7 +164,7 @@ export class DocumentSearchService {
   }
 
   searchVersionChange(doc, collection, treeModel): any[] {
-    const manual = this.findTreeNode(doc.parent, treeModel);
+    const manual = this.findTreeNode(doc.parent, treeModel) as any;
     this.updateTreeModelStateByVersion(manual, treeModel, doc);
     const param = `${doc.tag}/${manual.parent}/${doc.id}/${manual.id}`;
     collection.map((item, index) => {
@@ -202,7 +202,7 @@ export class DocumentSearchService {
   }
 
   updateTreeModelStateByManual(manualId, treeModel, selected) {
-    let versions = this.findTreeNode(manualId, treeModel);
+    let versions: any = this.findTreeNode(manualId, treeModel);
     versions.children.map(version => {
       version.selected = selected;
     });
@@ -210,7 +210,7 @@ export class DocumentSearchService {
 
   updateTreeModelStateByVersion(manual, treeModel, version) {
     const consistent = this.stateConsistent(manual.children, version.selected);
-    let manualNode = this.findTreeNode(manual.id, treeModel);
+    let manualNode: any = this.findTreeNode(manual.id, treeModel);
     if(consistent) {
       manualNode.selected = version.selected;
     }else {
@@ -296,7 +296,7 @@ export class DocumentSearchService {
   }
 
   hasSameSecondAncestor(node, treeModel, sectionId) {
-    const sectionNode = this.findTreeNode(sectionId, treeModel);
+    const sectionNode = this.findTreeNode(sectionId, treeModel) as any;
     if(sectionNode.level !== 2) {
       return false;
     }
@@ -305,7 +305,7 @@ export class DocumentSearchService {
   }
 
   findSecondLevelNode(treeModel, node): Object {
-    let parentNode = this.findTreeNode(node.parent, treeModel);
+    let parentNode = this.findTreeNode(node.parent, treeModel) as any;
     let loop = 0;
     while(parentNode.level > 2 && loop < this.MAX_LOOP ) {
       parentNode = this.findTreeNode(parentNode.parent, treeModel);

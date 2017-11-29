@@ -28,8 +28,8 @@ export class DocumentsDetailComponent implements OnInit {
   treeLevel = 1;
   docName = '';
 
-  RELA_DIS_MAIN_TITLE = 10;
-  RELA_DIS_SUB_TITLE = -40;
+  RELA_DIS_MAIN_TITLE = 140;
+  RELA_DIS_SUB_TITLE = 10;
   DOC_DETAIL = 'doc-detail';
   DOC_TREE = 'doc-tree';
 
@@ -80,6 +80,7 @@ export class DocumentsDetailComponent implements OnInit {
         this.documentUtilService.hideDocElement('header');
         this.anchorDocContent();
         this.highLightKey('add');
+        this.loadDocSheet();
       }
     );
   }
@@ -93,14 +94,29 @@ export class DocumentsDetailComponent implements OnInit {
     }
   }
 
+  loadDocSheet() {
+    if(!this.documentResService.getDocLoaded()) {
+      this.getDocSheet();
+    }
+    this.documentResService.setDocLoaded(true);
+  }
+
   anchorDocContent() {
     const anchorId = this.documentResService.getAnchorId();
     const anchorNode = this.documentSearchService.findTreeNode(
       anchorId, this.treeModel
     );
-    const distance = anchorNode.level<3 ? this.RELA_DIS_MAIN_TITLE
+    const distance = anchorNode<3 ? this.RELA_DIS_MAIN_TITLE
       :this.RELA_DIS_SUB_TITLE;
     this.documentSearchService.anchorDocContent(anchorId, distance);
+  }
+
+  getDocSheet() {
+    this.documentAPIService.getDocSheet().subscribe(
+      result => {
+        this.documentUtilService.appendDocCssSheet(result._body);
+      }
+    );
   }
 
   getPath(type) {
@@ -166,7 +182,7 @@ export class DocumentsDetailComponent implements OnInit {
         const anchorId = domId.substring(5, domId.length);
         self.documentResService.setAnchorId(anchorId);
         const domNode = self.documentSearchService.findTreeNode(
-          anchorId, self.treeModel);
+          anchorId, self.treeModel) as any;
         if(domNode.level && domNode.level > 2) {
           self.anchorDocContent();
         }else {
