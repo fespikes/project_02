@@ -17,9 +17,9 @@ export class ProductUtilService {
 
   refreshTreeState(moduleTree, moduleId): any[] {
     const node = this.documentSearchService.findTreeNode(
-      moduleId, moduleTree);
+      moduleId, moduleTree) as any;
     const parentNode = this.documentSearchService.findTreeNode(
-      node.parent, moduleTree);
+      node.parent, moduleTree) as any;
     parentNode.expanded = true;
     node.selected = true;
     return moduleTree;
