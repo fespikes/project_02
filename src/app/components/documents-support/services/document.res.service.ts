@@ -11,8 +11,8 @@ import { DocumentStorageService } from './document.storage.service';
 export class DocumentResService {
   anchor = 'index';//for anchor content
   sectionId = 'index';//for common api request
+  docName = '';
 
-  docLoaded = false;
   searchCompleted = false;
   keyNeedRender = false;
 
@@ -45,20 +45,20 @@ export class DocumentResService {
     }
   }
 
+  getDocName(): string {
+    return this.documentStorageService.getStorageItem('docName');
+  }
+
+  setDocName(name): void {
+    this.documentStorageService.setStorageItem('docName', name);
+  }
+
   getKeyword(): string {
     return this.documentStorageService.getStorageItem('keyword');
   }
 
   setKeyword(keyword): void {
     this.documentStorageService.setStorageItem('keyword', keyword);
-  }
-
-  getDocLoaded(): boolean {
-    return this.docLoaded;
-  }
-
-  setDocLoaded(loaded): void {
-    this.docLoaded = loaded;
   }
 
   getSearchCompleted(): boolean {

@@ -28,10 +28,12 @@ export class DocumentsDetailComponent implements OnInit {
   treeLevel = 1;
   docName = '';
 
-  RELA_DIS_MAIN_TITLE = 140;
-  RELA_DIS_SUB_TITLE = 10;
+  RELA_DIS_MAIN_TITLE = 10;
+  RELA_DIS_SUB_TITLE = -40;
   DOC_DETAIL = 'doc-detail';
   DOC_TREE = 'doc-tree';
+  CLICK_MENU = 'click-menu';
+  CLICK_ANCHOR = 'click-anchor';
 
   constructor(
     private documentAPIService: DocumentAPIService,
@@ -49,7 +51,7 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   initPage() {
-    this.docName = this.documentUtilService.getModuleName(window.location.hash);
+    this.docName = this.documentResService.getDocName();
     this.crumbItems = this.documentResService.getDocsCrumb(
       this.DOC_DETAIL, this.docName
     );
@@ -80,7 +82,6 @@ export class DocumentsDetailComponent implements OnInit {
         this.documentUtilService.hideDocElement('header');
         this.anchorDocContent();
         this.highLightKey('add');
-        this.loadDocSheet();
       }
     );
   }
@@ -94,29 +95,14 @@ export class DocumentsDetailComponent implements OnInit {
     }
   }
 
-  loadDocSheet() {
-    if(!this.documentResService.getDocLoaded()) {
-      this.getDocSheet();
-    }
-    this.documentResService.setDocLoaded(true);
-  }
-
   anchorDocContent() {
     const anchorId = this.documentResService.getAnchorId();
     const anchorNode = this.documentSearchService.findTreeNode(
       anchorId, this.treeModel
     );
-    const distance = anchorNode<3 ? this.RELA_DIS_MAIN_TITLE
+    const distance = anchorNode.level<3 ? this.RELA_DIS_MAIN_TITLE
       :this.RELA_DIS_SUB_TITLE;
     this.documentSearchService.anchorDocContent(anchorId, distance);
-  }
-
-  getDocSheet() {
-    this.documentAPIService.getDocSheet().subscribe(
-      result => {
-        this.documentUtilService.appendDocCssSheet(result._body);
-      }
-    );
   }
 
   getPath(type) {
@@ -144,7 +130,7 @@ export class DocumentsDetailComponent implements OnInit {
       this.highLightKey('remove');
       this.documentResService.setKeyNeedRender(false);
     }
-    this.showDocContentByLevel(node);
+    this.showDocContentByLevel(node, this.CLICK_MENU, this);
   }
 
   updateTreeState(node) {
@@ -154,19 +140,19 @@ export class DocumentsDetailComponent implements OnInit {
     node.selected = true;
   }
 
-  showDocContentByLevel(node) {
+  showDocContentByLevel(node, clickType, _this) {
     if(node.level <= 2) {//first、second folder request api
-      this.getDocDetail();
+      clickType === this.CLICK_MENU ? _this.getDocDetail() : _this.initPage();
     }else if(node.level >= 3) {//third、fourth ... folder anchor content
-      if(this.documentSearchService.hasSameSecondAncestor(
-          node, this.treeModel, this.documentResService.getSectionId())) {
-        this.anchorDocContent();
+      if(_this.documentSearchService.hasSameSecondAncestor(
+          node, _this.treeModel, _this.documentResService.getSectionId())) {
+        _this.anchorDocContent();
       }else {
-        const secondNodeId = this.documentSearchService.getSecondLevelNodeId(
-          this.treeModel, node
+        const secondNodeId = _this.documentSearchService.getSecondLevelNodeId(
+          _this.treeModel, node
         );
-        this.documentResService.setSectionId(secondNodeId);
-        this.getDocDetail();
+        _this.documentResService.setSectionId(secondNodeId);
+        clickType === this.CLICK_MENU ? _this.getDocDetail() : _this.initPage();
       }
     }
   }
@@ -182,12 +168,10 @@ export class DocumentsDetailComponent implements OnInit {
         const anchorId = domId.substring(5, domId.length);
         self.documentResService.setAnchorId(anchorId);
         const domNode = self.documentSearchService.findTreeNode(
-          anchorId, self.treeModel) as any;
-        if(domNode.level && domNode.level > 2) {
-          self.anchorDocContent();
-        }else {
-          self.documentResService.setSectionId(anchorId);
-          self.initPage();
+          anchorId, self.treeModel);
+        if(domNode && domNode.id) {
+          self.documentResService.setLevelId(domNode.id, domNode.level);
+          self.showDocContentByLevel(domNode, self.CLICK_ANCHOR, self);
         }
       }
     }

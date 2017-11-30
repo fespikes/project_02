@@ -67,6 +67,7 @@ export class DocsListComponent implements OnInit {
   }
 
   listItemClick(doc) {
+    this.documentResService.setDocName(doc.name);
     this.onListItemClick.emit(doc);
   }
 }
