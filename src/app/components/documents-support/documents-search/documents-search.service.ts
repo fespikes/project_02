@@ -49,7 +49,7 @@ export class DocumentSearchService {
     return treeModel;
   }
 
-  findTreeNode(nodeId, treeModel): Object {
+  findTreeNode(nodeId, treeModel): any {
     let stack = [], item;
     for (let i = 0; i < treeModel.length; i++) {
       stack.push(treeModel[i]);
