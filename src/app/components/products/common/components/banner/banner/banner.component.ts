@@ -18,7 +18,7 @@ export class BannerComponent implements OnInit {
   }
 
   onMousemove(event: MouseEvent) {
-    const factor = 30;
+    const factor = 50;
     const { movementX, movementY } = event;
     const img: HTMLImageElement = this.element.nativeElement.querySelector('.image');
     if (!img) {

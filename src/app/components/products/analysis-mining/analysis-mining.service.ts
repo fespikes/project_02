@@ -38,7 +38,7 @@ export class AnalysisMiningService {
       functionalities: {
         title: '产品功能',
         id: 'analysis-mining-functionalities',
-        diagram: '/assets/images/diagram/analysis-mining.png',
+        diagram: '/assets/images/diagram/analysis-mining.jpg',
         //TODO: image style abstraction
         content: [
           {

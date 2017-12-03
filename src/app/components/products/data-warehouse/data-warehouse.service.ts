@@ -38,7 +38,7 @@ export class DataWarehouseService {
       functionalities: {
         title: '产品功能',
         id: 'data-warehouse-functionalities',
-        diagram: '/assets/images/diagram/data-warehouse.png',
+        diagram: '/assets/images/diagram/data-warehouse.jpg',
         //TODO: image style abstraction
         content: [
           {

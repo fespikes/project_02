@@ -38,7 +38,7 @@ export class RelationalDatabaseService {
       functionalities: {
         title: '产品功能',
         id: 'relational-database-functionalities',
-        diagram: '/assets/images/diagram/relational-database.png',
+        diagram: '/assets/images/diagram/relational-database.jpg',
         //TODO: image style abstraction
         content: [
           {

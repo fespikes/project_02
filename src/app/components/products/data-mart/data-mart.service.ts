@@ -38,7 +38,7 @@ export class DataMartService {
       functionalities: {
         title: '产品功能',
         id: 'data-mart-functionalities',
-        diagram: '/assets/images/diagram/data-mart.png',
+        diagram: '/assets/images/diagram/data-mart.jpg',
         //TODO: image style abstraction
         content: [
           {

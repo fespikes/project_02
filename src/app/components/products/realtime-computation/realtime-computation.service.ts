@@ -38,7 +38,7 @@ export class RealtimeComputationService {
       functionalities: {
         title: '产品功能',
         id: 'realtime-computation-functionalities',
-        diagram: '/assets/images/diagram/realtime-computation.png',
+        diagram: '/assets/images/diagram/realtime-computation.jpg',
         //TODO: image style abstraction
         content: [
           {
