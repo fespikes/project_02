@@ -315,14 +315,6 @@ export class ProductContentService {
             },
             {
               type: 'title',
-              content: 'MODULES.GUARDIAN.INTRODUCE_3'
-            },
-            {
-              type: 'text',
-              content: 'MODULES.GUARDIAN.INTRODUCE_4'
-            },
-            {
-              type: 'title',
               content: 'MODULES.GUARDIAN.INTRODUCE_5'
             },
             {
