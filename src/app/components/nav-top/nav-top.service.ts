@@ -83,7 +83,7 @@ const navigationData = {
 				},
 				{
 				  title: '深度学习',
-				  summary: '深度学习和人工智能开发平台，实现高度智能化的信息处理，协助与增进企业的运作管理。',
+				  summary: '深度学习和人工智能开发平台，可以用于机器学习和AI应用的开发，实现高度智能化的信息处理。',
 				  routerLink: './products/deep-learning'
 				},
 				{
