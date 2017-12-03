@@ -36,7 +36,7 @@ export class BannerComponent implements OnInit {
   onMouseleave() {
     this.offsetX = 0;
     this.offsetY = 0;
-    const img: HTMLImageElement = this.element.nativeElement.querySelector('.banner-image');
+    const img: HTMLImageElement = this.element.nativeElement.querySelector('.image');
     img.style.transition = 'all 0.5s';
     img.style.transform = `translate(0, 0)`;
   }
