@@ -3,15 +3,14 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
-body{margin:0}
 #content a{background:transparent}
 #content a:focus{outline:thin dotted}
 #content a:active,#content a:hover{outline:0}
-h1{font-size:2em;margin:.67em 0}
+#content h1{font-size:2em;margin:.67em 0}
 abbr[title]{border-bottom:1px dotted}
 b,strong{font-weight:bold}
 dfn{font-style:italic}
-hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+#content hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
 mark{background:#ff0;color:#000}
 code,kbd,pre,samp{font-size:1em}
 pre{white-space:pre-wrap}
@@ -28,8 +27,8 @@ legend{border:0;padding:0}
 #content button,#content input,#content select,#content textarea{font-size:100%;margin:0}
 #content button,#content input{line-height:normal}
 #content button,select{text-transform:none}
-#content button,#content html input[type="button"],#content input[type="reset"],#content input[type="submit"]{-webkit-appearance:button;cursor:pointer}
-#content button[disabled],#content html input[disabled]{cursor:default}
+#content button,#content input[type="button"],#content input[type="reset"],#content input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+#content button[disabled],#content input[disabled]{cursor:default}
 #content input[type="checkbox"],#content input[type="radio"]{box-sizing:border-box;padding:0}
 #content input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
 #content input[type="search"]::-webkit-search-cancel-button,#content input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
@@ -37,8 +36,6 @@ legend{border:0;padding:0}
 #content textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
 #content a:hover{cursor:pointer}
 #content img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -50,28 +47,27 @@ object,embed{height:100%}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 #content img,object,#content svg{display:inline-block;vertical-align:middle}
 #content {height:auto;min-height:50px}
 select{width:100%}
 .center{margin-left:auto;margin-right:auto}
 .spread{width:100%}
-p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+#content p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
 div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
 #content a{color:#2156a5;text-decoration:underline;line-height:inherit}
 #content a:hover,#content a:focus{color:#1d4b8f}
 #content a img{border:none}
-p{font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
-p aside{font-size:.875em;line-height:1.35;font-style:italic}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
-h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
-h1{font-size:2.125em}
-h2{font-size:1.6875em}
-h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
-h4,h5{font-size:1.125em}
-h6{font-size:1em}
-hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+#content p{font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+#content p aside{font-size:.875em;line-height:1.35;font-style:italic}
+#content h1,#content h2,#content h3,#toctitle,.sidebarblock>.content>.title,#content h4,#content h5,#content h6{font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+#content h1 small,#content h2 small,#content h3 small,#toctitle small,.sidebarblock>.content>.title small,#content h4 small,#content h5 small,#content h6 small{font-size:60%;color:#e99b8f;line-height:0}
+#content h1{font-size:2.125em}
+#content h2{font-size:1.6875em}
+#content h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+#content h4,#content h5{font-size:1.125em}
+#content h6{font-size:1em}
+#content hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
 em,i{font-style:italic;line-height:inherit}
 strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
@@ -94,20 +90,14 @@ blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
 blockquote cite:before{content:"\2014 \0020"}
 blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
-@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
-  h1{font-size:2.75em}
-  h2{font-size:2.3125em}
-  h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
-  h4{font-size:1.4375em}}
 table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
 table thead,table tfoot{background:#f7f8f7;font-weight:bold}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
-h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+#content h1,#content h2,#content h3,#toctitle,.sidebarblock>.content>.title,#content h4,#content h5,#content h6{line-height:1.2;word-spacing:-.05em}
+#content h1 strong,#content h2 strong,#content h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,#content h4 strong,#content h5 strong,#content h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
 *:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
@@ -348,7 +338,7 @@ div.unbreakable{page-break-inside:avoid}
 .white-background{background-color:#fafafa}
 .yellow{color:#bfbf00}
 .yellow-background{background-color:#fafa00}
-span.icon>.fa{cursor:default}
+#content .icon>.fa{cursor:default}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
 .admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
 .admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
@@ -363,10 +353,10 @@ pre .conum[data-value]{position:relative;top:-.125em}
 b.conum *{color:inherit!important}
 .conum:not([data-value]):empty{display:none}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
-h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
-p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
-p{margin-bottom:1.25rem}
+#content h1,#content h2,#content p,td.content,#content span.alt{letter-spacing:-.01em}
+#content p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+#content p,blockquote,dt,td.content,#content span.alt{font-size:1.0625rem}
+#content p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
 .print-only{display:none!important}
@@ -377,8 +367,8 @@ p{margin-bottom:1.25rem}
   pre,blockquote,tr,#content img,object,#content svg{page-break-inside:avoid}
   thead{display:table-header-group}
   #content svg{max-width:100%}
-  p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
-  h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+  #content p,blockquote,#content dt,td.content{font-size:1em;orphans:3;widows:3}
+  #content h2,#content h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
   #toc,.sidebarblock,.exampleblock>.content{background:none!important}
   #toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
   .sect1{padding-bottom:0!important}

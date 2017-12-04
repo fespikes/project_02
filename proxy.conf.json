@@ -7,7 +7,10 @@
     "target": "http://172.16.1.161:31177",
     "secure": false
   },
-
+  "/docs/images/*": {
+    "target": "http://172.16.1.161:31177",
+    "secure": false
+  },
   "/api/v1/*": {
     "target": "http://172.16.1.193:23333",
     "secure": false
