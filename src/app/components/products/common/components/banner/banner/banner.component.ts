@@ -33,7 +33,7 @@ export class BannerComponent implements OnInit {
     img.style.transform = `translate(${translateX}, ${translateY})`;
   }
 
-  onMouseleave() {
+  onMouseleave(event: MouseEvent) {
     this.offsetX = 0;
     this.offsetY = 0;
     const img: HTMLImageElement = this.element.nativeElement.querySelector('.image');
