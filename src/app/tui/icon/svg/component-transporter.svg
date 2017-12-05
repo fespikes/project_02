@@ -1,20 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-<g>
-	<g>
-		<path fill="#616B77" d="M2.286,7.432l2.205-2.577H3.197C3.208,3.402,4.342,2.228,5.74,2.228h0.6V0.456h-0.6
-			c-2.324,0-4.207,1.961-4.207,4.379c0,0.007,0,0.014,0,0.02H0.081L2.286,7.432L2.286,7.432z"/>
-		<path fill="#616B77" d="M15.919,11.161l-2.205-2.577l-2.205,2.577h1.293c-0.011,1.453-1.145,2.627-2.543,2.627h-0.6v1.772h0.6
-			c2.324,0,4.207-1.961,4.207-4.379c0-0.007,0-0.014,0-0.02L15.919,11.161L15.919,11.161z"/>
-		<g>
-			<path fill="#616B77" d="M7.81,0.444v6.662h7.268V1.252V0.44L7.81,0.444z M13.466,5.795H9.422V1.751h4.044V5.795z"/>
-		</g>
-		<g>
-			<path fill="#616B77" d="M0.922,8.898v6.662H8.19V9.706V8.894L0.922,8.898z M6.578,14.249H2.534v-4.044h4.044V14.249z"/>
-		</g>
-	</g>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Transporter </title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Transporter-" fill="#B9C1CF">
+            <g id="Group-13">
+                <path d="M8,0 L16,0 L16,7 L8,7 L8,0 Z M9,1 L9,6 L15,6 L15,1 L9,1 Z" id="Combined-Shape"></path>
+                <path d="M1,9 L9,9 L9,16 L1,16 L1,9 Z M2,10 L2,15 L8,15 L8,10 L2,10 Z" id="Combined-Shape"></path>
+                <path d="M14.5,9 L17,12 L12,12 L14.5,9 Z M14,12 L15,12 C14.0073975,14.9778076 12.9823862,15.5 12,15.5 L10,15.5 L10,14.5 L12,14.5 C12.3509471,14.5 13.2257385,14.3227844 14,12 Z" id="Combined-Shape"></path>
+                <path d="M4.5,0 L7,3 L2,3 L4.5,0 Z M4,3 L5,3 C4.00739746,5.97780762 2.98238624,6.5 2,6.5 L0,6.5 L0,5.5 L2,5.5 C2.35094709,5.5 3.22573853,5.32278442 4,3 Z" id="Combined-Shape" transform="translate(3.500000, 3.250000) rotate(-180.000000) translate(-3.500000, -3.250000) "></path>
+            </g>
+        </g>
+    </g>
 </svg>
