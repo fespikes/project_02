@@ -14,7 +14,21 @@
   width: 830px
   height: 646px
   margin: 0 auto
+  position: relative
+
+  &::after
+    content: 'loading...'
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-left: -30px
+    margin-top: -10px
+    opacity: .5
+
 
 iframe
   width: 830px
   height: 646px
+  border: 0
+  background: transparent
+  box-shadow: 0 0 10px #f8fafc
