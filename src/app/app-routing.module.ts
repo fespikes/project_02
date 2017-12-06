@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ModulesComponent } from './components/modules/modules.component';
@@ -38,7 +38,14 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {useHash: true}),
+    RouterModule.forRoot(
+      routes, 
+      {
+        useHash: true,
+        // enableTracing: true, // <-- debugging purposes only
+        preloadingStrategy: PreloadAllModules
+      }
+    ),
   ],
   exports: [
     RouterModule,

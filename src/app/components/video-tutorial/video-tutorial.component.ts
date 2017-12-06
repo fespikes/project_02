@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../common/services/common.service';
 
 @Component({
   selector: 'tdc-video-tutorial',
@@ -7,10 +8,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoTutorialComponent implements OnInit {
 
-  constructor() { }
+  private data: any;
+
+  private current: any;
+  
+  constructor(
+	  private commonService: CommonService
+  ) {
+
+  }
 
   ngOnInit() {
-  	console.log('video-tutorial');
+    //TODO: match the videos with url 
+	  let videoTutorial = this.commonService.getVideoTutorial();
+	  this.data = this.adjustVideoData(videoTutorial);
+
+  }
+
+  onSelectVideo() {
+    
+  }
+
+  adjustVideoData(data:any) {
+
+  	let config = {
+			itemWidth: 300,
+			targetClassName: 'shadow-box',
+			hoverClassName: 'current',
+			wrapperClassName: 'h600',
+			defaultLength: 4
+  	};
+
+  	data.config = {
+  		...data.config,
+  		...config
+  	};
+
+    data.sliceClass = 'video-list';
+  	return data;
   }
 
 }

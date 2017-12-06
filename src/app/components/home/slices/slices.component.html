@@ -1,5 +1,7 @@
 <!--TODO: class="{{data.sliceClass}}" -->
-<div class="items-wrapper">
+<div class="items-wrapper"
+	[ngClass]="{'video-list': data.sliceClass==='video-list'}"
+>
 	<ul
 		class="ul-items"
 		[ngStyle]="{width: itemsWidth + 'px', left: 0}"
@@ -75,6 +77,17 @@
 	      </div>
 			  <h4 class="{{item.h4Class}}">{{item.name}}</h4>
 			  <p class="{{item.pClass}}">{{item.title}}</p>
+			</a>
+
+			<a
+				*ngIf="data.sliceClass==='video-list'"
+				routerLink="{{item.routerLink}}"
+			>
+				<div class="thumbnail">
+	      	<img src="{{item.thumbnail.src}}" alt="" />
+	      </div>
+			  <h5 class="{{item.h5Class}}">{{item.title}}</h5>
+			  <p class="{{item.pClass}}">{{item.summary}}</p>
 			</a>
 
 		</li>
