@@ -1,0 +1,39 @@
+@import '../../styles/common'
+
+@import '../home/slices/slices.component'
+
+$bg: #f8fafc
+\:host
+  min-width: 100%
+  overflow: visible
+  position: relative
+
+.video-show
+  @extend .center-box
+  padding: 32px 0
+
+.left
+  width: 830px
+  height: 646px
+
+.right
+  height: 646px
+  width: 320px
+  padding: 0 20px
+  background: $bg
+
+  h3
+  	line-height: 76px
+  	height: 76px
+  	font-size: 1.6rem
+  	border-bottom: 1px #eee solid
+
+  p
+  	line-height: 1.5
+  	font-size: 1.4rem
+
+.bottom
+  height: 300px
+  background: $bg
+
+

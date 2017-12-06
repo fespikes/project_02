@@ -11,24 +11,24 @@
   height: 50px
 
 .frame
-  width: 640px
-  height: 498px
+  width: 830px
+  height: 646px
   margin: 0 auto
+  position: relative
+
+  &::after
+    content: 'loading...'
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-left: -30px
+    margin-top: -10px
+    opacity: .5
+
 
 iframe
-  width: 640px
-  height: 498px
-
-h3.sub-title
-  @extend .center-box
-  font-size: 1.6rem
-  padding: 32px 0 14px 1rem
-  &:before
-    content: ""
-    display: inline-block
-    width: 0.4rem
-    height: 1.6rem
-    position: relative
-    top: 0.3rem
-    right: 0.8rem
-    background: $common-blue
+  width: 830px
+  height: 646px
+  border: 0
+  background: transparent
+  box-shadow: 0 0 10px #f8fafc

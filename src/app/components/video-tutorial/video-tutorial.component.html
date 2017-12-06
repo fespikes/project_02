@@ -1,2 +1,42 @@
-<router-outlet></router-outlet>
-<!-- <div>test video tutorial.</div> -->
+
+<div class="video-show">
+	<div class="left">
+		<router-outlet></router-outlet>
+	</div>
+	<div class="right">
+		<h3>1.分析型数据库</h3>
+		<p>
+			<!-- {{current.summary}} -->
+			Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和数据集市的构建。
+		</p>
+	</div>
+</div>
+
+<div class="bottom">
+	<tui-slices-modules [data]="data"></tui-slices-modules>
+	
+ 	<!-- <div class="items-wrapper"
+		[ngClass]="{'video-list': data.sliceClass==='video-list'}"
+	>
+		<ul
+			class="ul-items "
+			style="width: 2100px; left:0"
+		>
+			<li 
+				*ngFor="let item of data.items; let idx=index;" 
+				class="{{item.liClass}}" 
+			>
+				<a
+					*ngIf="data.sliceClass==='video-list'"
+					routerLink="{{item.routerLink}}"
+				>
+					<div class="thumbnail">
+		      	<img src="{{item.thumbnail.src}}" alt="" />
+		      </div>
+				  <h5 class="{{item.h5Class}}">{{item.title}}</h5>
+				  <p class="{{item.pClass}}">{{item.summary}}</p>
+				</a>
+			</li>
+		</ul>
+	</div> -->
+</div>

@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
       window.sessionStorage.setItem('tdc-web:latest-news:first-news-id', data[0].id+'' );
     });
 
-    this.videoTutorial = data.videoTutorial;
+    this.videoTutorial = commonService.getVideoTutorial();
 
   }
 

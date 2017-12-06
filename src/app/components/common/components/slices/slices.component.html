@@ -167,6 +167,17 @@
 			  <p class="{{item.pClass}}">{{item.title}}</p>
 			</a>
 
+			<a
+				*ngIf="data.sliceClass==='video-list'"
+				routerLink="{{item.routerLink}}"
+			>
+				<div class="thumbnail">
+	      	<img src="{{item.thumbnail.src}}" alt="" />
+	      </div>
+			  <h5 class="{{item.h5Class}}">{{item.title}}</h5>
+			  <p class="{{item.pClass}}">{{item.summary}}</p>
+			</a>
+			
 		</li>
 	</ul>
 </div>
