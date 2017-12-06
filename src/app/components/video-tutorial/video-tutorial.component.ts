@@ -33,9 +33,8 @@ export class VideoTutorialComponent implements OnInit {
 
   	let config = {
 			itemWidth: 300,
-			targetClassName: 'shadow-box',
 			hoverClassName: 'current',
-			wrapperClassName: 'h600',
+			wrapperClassName: 'h300',
 			defaultLength: 4
   	};
 

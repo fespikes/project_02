@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SliceComponent } from './slice.component';
+import { SlicesComponent } from './slices.component';
 
-describe('SliceComponent', () => {
-  let component: SliceComponent;
+describe('SlicesComponent', () => {
+  let component: SlicesComponent;
   let fixture: ComponentFixture<SliceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SliceComponent ]
+      declarations: [ SlicesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SliceComponent);
+    fixture = TestBed.createComponent(SlicesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

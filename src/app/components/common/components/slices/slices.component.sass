@@ -1,0 +1,230 @@
+@import '../../../../styles/common'
+
+@import '../../../home/home.component'
+
+$shadow-color: #f2f2f2
+
+\:host
+	@extend .center-box
+	overflow: visible
+	position: relative
+
+
+//S: class Slices
+.items-wrapper
+  @extend .center-box
+  overflow: hidden
+  position: relative
+
+  //TODO:
+.h600
+  height: 600px
+  
+.h220
+  height: 220px
+
+.h300
+  height: 300px
+  padding: 40px 0
+
+.ul-items, .ul-swap
+  position: absolute
+//E: class Slices
+
+
+.ul-products, .ul-swap.ul-products
+  padding: 40px 0
+  margin: 0 auto
+  position: absolute
+  //top: 147px			//it's different from original
+  left: 0
+
+  li.direct-child
+    float: left
+    display: inline-block
+    width: 400px
+    height: 520px
+    padding: 0 30px
+    margin-right: 0
+
+    .thumbnail
+      width: 100%
+      height: 220px
+      background: transparent no-repeat center center
+      background-size: 135px 135px
+      
+    h4
+      padding-bottom: 16px
+      font-size: 2rem
+      text-align: center
+
+    .desc
+      width: 220px
+      height: 125px
+      line-height: 2.4
+      margin: 0 auto
+      font-size: 1.2rem
+      overflow: hidden
+      //TODO: reduce the text when too much
+      color: #ababab
+
+    .details, h5, button
+      display: none
+      color: #ababab
+
+  >li.current
+    //width: 340px
+    //position: relative
+    //left: 30px
+    .shadow-box
+      box-shadow: 0 0 30px $shadow-color
+      padding: 30px
+    .thumbnail
+      width: 100%
+      height: 170px
+      background-size: 125px 125px
+    h4
+      padding-bottom: 25px
+
+    h5, .details, a
+      display: block
+    .desc
+      display: none
+
+    h5
+      padding-bottom: 20px
+      font-size: 1.4rem
+      font-weight: 600
+
+    .details
+      height: 160px
+      padding-bottom: 40px
+      overflow: hidden
+
+      li
+        line-height: 1.4
+        padding-bottom: 10px
+        position: relative
+        text-indent: 1.5rem
+        font-size: 1.2rem
+
+        &:before
+          content: ""
+          display: inline-block
+          width: 6px
+          height: 6px
+          border-radius: 6px
+          background: #176eda
+          position: absolute
+          left: 0
+          top: 7px
+
+    .blue-button
+      display: inline-block
+      border: 0
+      position: relative
+      left: 50%
+      margin-left: -65px
+      color: #fff
+      cursor: pointer
+//E: .cloud-products
+
+//S: hot modules
+ul.bar-modules-ul
+  @extend .center-box
+  height: 220px
+
+  li
+    float: left
+    display: inline-block
+    width: 200px
+    height: 220px
+    padding: 20px
+
+    &:first-child
+    
+    a
+      display: inline-block
+      width: 160px
+      height: 100%
+      margin-left: auto
+      margin-right: auto
+      background: #fff
+      text-align: center
+
+      .thumbnail
+        display: inline-block
+        width: 100%
+        height: 110px
+        position: relative
+
+        svg
+          width: 60%
+          height: 60%
+          fill: #176eda
+          margin-top: 22px
+
+      &:hover
+        box-shadow: 0 0 20px $shadow-color
+
+      .title
+        font-size: 1.6rem
+      p
+        line-height: 20px
+        font-size: 1.4rem
+        color: #afb4b8
+
+  li.current, li.active
+    a
+      box-shadow: 0 0 20px $shadow-color
+
+      .thumbnail
+
+  a.current
+    box-shadow: 0 0 20px $shadow-color
+//E: .hot-modules
+
+//S: video list module slice
+.video-list
+
+  li
+    float: left
+    display: inline-block
+    width: 300px
+    height: 220px
+    padding: 0 14px
+
+  a
+    display: inline-block
+    width: 100%
+    height: 100%
+    background: #fff
+
+  .thumbnail
+    width: 100%
+    height: 155px
+
+    img
+      width: 100%
+      height: 155px
+
+  h5
+    height: 35px
+    padding: 0 10px
+    overflow: hidden
+    text-overflow: ellipsis
+    font-size: 1.4rem
+    line-height: 35px
+    white-space: nowrap
+
+  p
+    height: 30px
+    width: 100%
+    padding: 0 10px
+    overflow: hidden
+    font-size: 1.4rem
+    text-overflow: ellipsis
+    line-height: 30px
+    white-space: nowrap
+
+//E: video list module slice

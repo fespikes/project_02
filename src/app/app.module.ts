@@ -33,7 +33,7 @@ import { NavBottomComponent } from './components/nav-bottom/nav-bottom.component
 // import { AfterSaleServiceModule } from './components/after-sale-service/after-sale-service.module';
 // import { AfterSaleServiceComponent } from './components/after-sale-service/after-sale-service.component';
 import { BreadCrumbsComponent as TheBreadCrumbsComponent } from './components/common/components/bread-crumbs/bread-crumbs.component';
-// import { SlicesComponent as TheSlicesComponent } from './components/home/slices/slices.component';
+import { SlicesComponent as TheSlicesComponent } from './components/common/components/slices/slices.component';
 
 import {
   I18nModule,
@@ -51,7 +51,7 @@ import {
     NavTopComponent,
     NavBottomComponent,
     TheBreadCrumbsComponent,
-    // TheSlicesComponent,
+    TheSlicesComponent,
     PageNotFoundComponent,
     ManagementCenterComponent
   ],
