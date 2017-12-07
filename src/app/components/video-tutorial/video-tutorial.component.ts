@@ -8,7 +8,7 @@ import { CommonService } from '../common/services/common.service';
 })
 export class VideoTutorialComponent implements OnInit {
 
-  private data: any;
+  data: any;
 
   private current: any;
   
