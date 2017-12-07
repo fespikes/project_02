@@ -278,19 +278,6 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
       background: transparent url(/assets/images/home/tutorial-videos/bg.png) no-repeat center center
       position: relative
 
-      &:after
-        content: ''
-        display: inline-block
-        width: 80px
-        height: 80px
-        background: url(/assets/images/video-tutorial/arrow.png)
-        margin: auto
-        z-index: 3
-        position: absolute
-        left: 145px
-        top: 134px
-        transform: scale(.6)
-
       img
         position: relative
         left: 50%
@@ -312,6 +299,20 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
   a:hover
     //box-shadow: 
 
+  li.current
+    .thumbnail
+      &:after
+        content: ''
+        display: inline-block
+        width: 80px
+        height: 80px
+        background: url(/assets/images/video-tutorial/arrow.png)
+        margin: auto
+        z-index: 3
+        position: absolute
+        left: 145px
+        top: 134px
+        transform: scale(.6)
 
 //E: .video-tutorial
 
