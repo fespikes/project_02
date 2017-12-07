@@ -66,18 +66,27 @@ export class DocumentSearchService {
   }
 
   initSearchTree(docsTree): any[] {
-    const productDoc = this.makeProductDocList([
-      docsTree[4],
-      docsTree[0],
-      docsTree[3],
-    ]);
-    const faqDoc = this.setFAQIntroDocState(docsTree[1], 'faq');
-    const introDoc = this.setFAQIntroDocState(docsTree[2], 'intro');
+    const productDoc = this.getTreeModelByCategory(
+      ['TDH', 'DEV_SUITE', 'OPS'], docsTree
+    );
+    const faqDoc = this.getTreeModelByCategory(['FAQ'], docsTree);
+    const introDoc = this.getTreeModelByCategory(['INTRO'], docsTree);
+
     return [
-      productDoc,
-      faqDoc,
-      introDoc
+      this.makeProductDocList(productDoc),
+      this.setFAQIntroDocState(faqDoc[0], 'faq'),
+      this.setFAQIntroDocState(introDoc[0], 'intro')
     ];
+  }
+
+  getTreeModelByCategory(categories, docsTree): any[] {
+    let model = [];
+    docsTree.map(node => {
+      if(categories.indexOf(node.id) > -1) {
+        model.push(node);
+      }
+    });
+    return model;
   }
 
   makeProductDocList(docList): Object {
