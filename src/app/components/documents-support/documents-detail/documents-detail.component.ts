@@ -39,8 +39,7 @@ export class DocumentsDetailComponent implements OnInit {
     private documentAPIService: DocumentAPIService,
     private documentUtilService: DocumentUtilService,
     private documentResService: DocumentResService,
-    private documentSearchService: DocumentSearchService,
-    private router: Router
+    private documentSearchService: DocumentSearchService
   ) {
 
   }
@@ -64,11 +63,12 @@ export class DocumentsDetailComponent implements OnInit {
   getDocTree() {
     const url = this.getPath(this.DOC_TREE);
     const anchorId = this.documentResService.getAnchorId();
+    const sectionId = this.documentResService.getSectionId();
     this.documentAPIService.getDocTree(url).subscribe(
       result => {
         this.treeModel = result.nav.children;
         this.treeModel = this.documentSearchService.initTreeSelectedState(
-          this.treeModel, anchorId
+          this.treeModel, anchorId, sectionId
         );
       }
     );
