@@ -40,6 +40,7 @@ export class NormalIssuesComponent implements OnInit {
   viewDetail(doc) {
     this.documentResService.setAnchorId('index');
     this.documentResService.setSectionId('index');
+    this.documentResService.setDocName(doc.name);
     this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`]);
   }
 }
