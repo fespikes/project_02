@@ -38,11 +38,12 @@ export class NavTopComponent implements OnInit{
     let topNav = this.el.nativeElement.querySelector('.top-nav');
 
     this.router.events.subscribe((e: NavigationEnd)=>{
-      if ((e && e.url && e.url.indexOf('/docs-detail'))>-1 ||
-        (e && e.url && e.url.indexOf('/docs-search'))>-1 ) {
-        topNav.className = 'top-nav fixed';
-      } else {
-        topNav.className = 'top-nav';
+      if(e && e.url) {
+        if(e.url.indexOf('/docs-detail')>-1 || e.url.indexOf('/docs-search')>-1 ) {
+          topNav.className = 'top-nav fixed';
+        }else {
+          topNav.className = 'top-nav';
+        }
       }
     });
   }
