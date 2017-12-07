@@ -67,14 +67,16 @@ export class DocumentSearchService {
 
   initSearchTree(docsTree): any[] {
     const productDoc = this.makeProductDocList([
-      docsTree[3],
+      docsTree[4],
       docsTree[0],
-      docsTree[2],
+      docsTree[3],
     ]);
-    const faqDoc = this.setFAQDocState(docsTree[1]);
+    const faqDoc = this.setFAQIntroDocState(docsTree[1], 'faq');
+    const introDoc = this.setFAQIntroDocState(docsTree[2], 'intro');
     return [
       productDoc,
-      faqDoc
+      faqDoc,
+      introDoc
     ];
   }
 
@@ -111,30 +113,33 @@ export class DocumentSearchService {
     return docList;
   }
 
-  setFAQDocState(faq): Object {
-    faq.level = 1;
-    faq.checkbox = false;
-    faq.tag = 'faq';
-    faq.children.map(issue => {
-      issue.level = 2;
-      issue.checkbox = true;
-      issue.children = [];
-      issue.parent = faq.id;
+  setFAQIntroDocState(category, tag): Object {
+    category.level = 1;
+    category.checkbox = false;
+    category.tag = tag;
+    category.children.map(doc => {
+      doc.level = 2;
+      doc.checkbox = true;
+      doc.children = [];
+      doc.parent = category.id;
     });
 
-    return faq;
+    return category;
   }
 
-  initTreeSelectedState(treeModel, nodeId): any[] {
-    if(nodeId === 'index') {
+  initTreeSelectedState(treeModel, anchorId, sectionId): any[] {
+    if(anchorId === 'index') {
       treeModel[0].selected = true;
       return treeModel;
     }
-    let selectedNode = this.findTreeNode(nodeId, treeModel) as any;
+    let selectedNode = this.findTreeNode(anchorId, treeModel);
+    if(JSON.stringify(selectedNode) === '{}') {//in some case anchorId not in treeModel
+      selectedNode = this.findTreeNode(sectionId, treeModel);
+    }
     selectedNode.selected = true;
     let loop = 0;
     while (selectedNode.parent !== 'index' && loop < this.MAX_LOOP) {
-      selectedNode = this.findTreeNode(selectedNode.parent, treeModel) as any;
+      selectedNode = this.findTreeNode(selectedNode.parent, treeModel);
       selectedNode.expanded =true;
       loop++;
     }

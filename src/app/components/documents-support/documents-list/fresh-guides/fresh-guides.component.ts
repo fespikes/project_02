@@ -35,7 +35,6 @@ export class FreshGuidesComponent implements OnInit {
     this.documentAPIService.getDocuments(tag, true).subscribe(
       result => {
         this.freshCourse = result[0].children;
-        this.freshCourse = this.freshCourse.concat(this.freshCourse);
       }
     );
   }
@@ -55,6 +54,7 @@ export class FreshGuidesComponent implements OnInit {
   viewFreshDocDetail(doc) {
     this.documentResService.setAnchorId('index');
     this.documentResService.setSectionId('index');
+    this.documentResService.setDocName(doc.name);
     this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`]);
   }
 }
