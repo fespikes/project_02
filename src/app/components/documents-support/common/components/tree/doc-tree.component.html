@@ -14,13 +14,13 @@
       tccIcon="angle-up" size="sm"
       [class.expanded]="node.expanded"
       (click)="toggle(node)"
-    ></svg>
-    <tcc-checkbox
+    ></svg><!--
+    --><tcc-checkbox
       *ngIf="node.checkbox"
       [(ngModel)]="node.selected"
       (ngModelChange)="checkboxChange(node)"
-    ></tcc-checkbox>
-    <a
+    ></tcc-checkbox><!--
+    --><a
       title="{{node.name}}"
       class="node-name {{treeType}}-node-name-level-{{treeLevel}} text-ellipsis"
       (click)="selectChange(node);"
