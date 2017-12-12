@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, ElementRef, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'tui-slices-modules',
@@ -40,7 +40,7 @@ export class SlicesComponent implements OnInit {
   targetClassName: string;
   hoverClassName: string;
 
-  onItemSelected?: EventEmitter<any>;
+  @Output() onItemSelected?: EventEmitter<any>;
 
   constructor(
   	private el:ElementRef
@@ -60,7 +60,7 @@ export class SlicesComponent implements OnInit {
   	this.hoverClassName = this.data.config.hoverClassName;
     this.targetClassName = this.data.config.targetClassName;
     this.currentItem = items[0];
-  	
+
   	this.itemsLength = items.length;
   	this.itemsWidth = this.itemsLength * config.itemWidth ;
     this.windowWidth = config.defaultLength * config.itemWidth;
@@ -71,7 +71,7 @@ export class SlicesComponent implements OnInit {
     this.ulItems = nativeElement.querySelector('.ul-items');
     this.ulSwap = nativeElement.querySelector('.ul-swap');
 
-    if (config.direction) { 
+    if (config.direction) {
       this.ulItems.style.left = '0px';
       this.ulSwap.style.left = this.itemsWidth + 'px';
     } else {
