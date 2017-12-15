@@ -1,37 +1,49 @@
 <h3 class="sub-title" id="module-introduce-id">
   {{'MODULES.MODULE_INTRODUCE' | translate}}
 </h3>
-<div class="details-box clearfix">
+<div
+  class="details-box clearfix"
+  [ngStyle]="{'padding': '50px 20px 50px 20px'}"
+>
   <div
     class="img-box fl"
     [ngStyle]="{'display': productIntroduce.img.url?'block':'none'}"
   >
     <img
       tccImgSrc="{{productIntroduce.img.url | translate}}"
-      [ngStyle]="{'width': productIntroduce.img.width,
-        'height':productIntroduce.img.height}"
+      [ngStyle]="{
+        'width': productIntroduce.img.width,
+        'height':productIntroduce.img.height,
+        'margin': '0 40px 10px 0'
+      }"
     />
   </div>
   <ul
     class="text-list"
-    [ngStyle]="{'margin-left': productIntroduce.img.url
-      ?productIntroduce.img.width:'-70px'}"
+    [ngStyle]="{'margin-left': 0}"
   >
     <li
       *ngFor="let item of productIntroduce.items"
       [ngClass]="{'h5-title': item.type === 'title',
         'inline-group': item.inline_group}"
+      [ngStyle]="{'padding-left': 0}"
     >
-      <h5 *ngIf="item.type === 'title'">
+      <h6
+        class="module-title"
+        *ngIf="item.type === 'title'"
+      >
         {{item.content | translate}}
-      </h5>
+      </h6>
       <span
         class="sub-title"
         *ngIf="item.type === 'sub-title'"
       >
         {{item.content | translate}}
       </span>
-      <p *ngIf="item.type === 'text'">
+      <p
+        *ngIf="item.type === 'text'"
+        [ngStyle]="{'padding': 0}"
+      >
         {{item.content | translate}}
       </p>
       <ul
