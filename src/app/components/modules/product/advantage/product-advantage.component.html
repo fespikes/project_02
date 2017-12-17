@@ -1,7 +1,10 @@
 <h3 class="sub-title" id="module-advantage-id">
   {{'MODULES.FUNCTION_ADVANTAGE' | translate}}
 </h3>
-<div class="details-box text">
+<div
+  class="details-box text"
+  [ngStyle]="{'padding': '50px 20px 50px 20px'}"
+>
   <ul class="text-list">
     <li
       *ngFor="let item of productAdvantage.items"
@@ -11,7 +14,10 @@
       <h5 *ngIf="item.type === 'title'">
         {{item.content | translate}}
       </h5>
-      <p *ngIf="item.type === 'text'">
+      <p
+        *ngIf="item.type === 'text'"
+        [ngClass]="{'padding': 0}"
+      >
         {{item.content | translate}}
       </p>
     </li>

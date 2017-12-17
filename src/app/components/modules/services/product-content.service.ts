@@ -6,7 +6,8 @@ export class ProductContentService {
 
   }
 
-  IMG_WIDTH = '400px';
+  IMG_WIDTH_LARGE = '560px';
+  IMG_WIDTH_SMALL = '420px';
 
   getProductIntroduce(moduleName): any {
     let productIntroduce = {};
@@ -15,8 +16,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.INCEPTOR.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '265px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '400px'
           },
           items: [
             {
@@ -70,8 +71,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.SLIPSTREAM.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '142px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '212px'
           },
           items:[
             {
@@ -125,8 +126,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.DISCOVER.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '181px'
+            width: this.IMG_WIDTH_SMALL,
+            height: '250px'
           },
           items: [
             {
@@ -160,8 +161,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.HYPERBASE.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '207px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '285px'
           },
           items: [
             {
@@ -187,8 +188,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.SEARCH.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '398px'
+            width: this.IMG_WIDTH_SMALL,
+            height: '364px'
           },
           items: [
             {
@@ -238,8 +239,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.SOPHON.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '202px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '277px'
           },
           items: [
             {
@@ -293,8 +294,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.GUARDIAN.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '506px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '378px'
           },
           items: [
             {
@@ -381,8 +382,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.PILOT.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '219px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '313px'
           },
           items: [
             {
@@ -427,7 +428,7 @@ export class ProductContentService {
             },
             {
               type: 'text',
-              margin_bottom: '10px',
+              inline_group: '10px',
               content: 'MODULES.PILOT.INTRODUCE_11'
             },
             {
@@ -466,8 +467,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.WORKFLOW.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '247px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '344px'
           },
           items: [
             {
@@ -533,8 +534,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.TRANSPORTER.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '204px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '384px'
           },
           items: [
             {
@@ -584,8 +585,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.GOVERNOR.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '231px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '322px'
           },
           items: [
             {
@@ -635,8 +636,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.RUBIK.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '188px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '261px'
           },
           items: [
             {
@@ -690,8 +691,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.WATERDROP.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '188px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '364px'
           },
           items: [
             {
@@ -802,8 +803,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.TXSQL.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '216px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '333px'
           },
           items: [
             {
@@ -846,8 +847,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.MILANO.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '280px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '282px'
           },
           items: [
             {
@@ -905,8 +906,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.PROMETHEUS.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '204px'
+            width: this.IMG_WIDTH_SMALL,
+            height: '215px'
           },
           items: [
             {
@@ -945,8 +946,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.KAFKA.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '282px'
+            width: this.IMG_WIDTH_SMALL,
+            height: '266px'
           },
           items: [
             {
@@ -984,8 +985,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.ZEPPELIN.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '182px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '386px'
           },
           items: [
             {
@@ -1052,8 +1053,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.MIDAS.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '222px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '311px'
           },
           items: [
             {
@@ -1111,8 +1112,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.TERMINAL.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH,
-            height: '116px'
+            width: this.IMG_WIDTH_LARGE,
+            height: '386px'
           },
           items: [
             {

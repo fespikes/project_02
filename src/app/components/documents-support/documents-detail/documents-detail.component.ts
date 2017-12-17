@@ -167,11 +167,16 @@ export class DocumentsDetailComponent implements OnInit {
         const domId = target.attributes['id'].value;
         const anchorId = domId.substring(5, domId.length);
         self.documentResService.setAnchorId(anchorId);
-        const domNode = self.documentSearchService.findTreeNode(
-          anchorId, self.treeModel);
-        if(domNode && domNode.id) {
-          self.documentResService.setLevelId(domNode.id, domNode.level);
-          self.showDocContentByLevel(domNode, self.CLICK_ANCHOR, self);
+        const domEle = document.getElementById(domId);
+        if(!domEle) {//first search dom in current page
+          const domNode = self.documentSearchService.findTreeNode(
+            anchorId, self.treeModel);
+          if (domNode && domNode.id) {
+            self.documentResService.setLevelId(domNode.id, domNode.level);
+            self.showDocContentByLevel(domNode, self.CLICK_ANCHOR, self);
+          }
+        }else {//then search dom in menu tree
+          self.documentSearchService.anchorDocContent(anchorId, self.RELA_DIS_SUB_TITLE);
         }
       }
     }
