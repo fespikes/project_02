@@ -12,7 +12,6 @@ export class ProductsComponent implements OnInit {
 
   private routePrefix = '';
   menuTitle = '云产品';
-  // menuItems: SubmenuItem[] = [
   menuItems = [
 		{
 		  name: '数据仓库',
@@ -20,22 +19,22 @@ export class ProductsComponent implements OnInit {
 		  icon: 'products-data-warehouse'
 		},
 		{
-		  name: '实时计算',
-		  url: `/products/realtime-computation`,
-		  icon: 'products-realtime-computation'
-		},
-		{
-		  name: '信息检索',
-		  url: `/products/info-retrieval`,
-		  icon: 'products-info-retrieval'
-		},
-		{
 		  name: '数据集市',
 		  url: `/products/data-mart`,
 		  icon: 'products-data-mart'
 		},
 		{
-		  name: '数据分析与挖掘',
+		  name: '实时计算',
+		  url: `/products/realtime-computation`,
+		  icon: 'products-realtime-computation'
+		},
+		{
+		  name: '搜索引擎',
+		  url: `/products/info-retrieval`,
+		  icon: 'products-info-retrieval'
+		},
+		{
+		  name: '数据分析平台',
 		  url: `/products/analysis-mining`,
 		  icon: 'products-analysis-mining'
 		},
