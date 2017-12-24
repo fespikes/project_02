@@ -6,10 +6,10 @@
 	class="details-box"
 	[ngClass]="{'d': (data.diagram?false:true)}">
 
-	<div class="diagram" >
+	<div class="diagram" [ngStyle]="{'width': data.imageWidth + 'px' }">
 		<img src="{{data.diagram}}" alt="{{data.title}}" />
 	</div>
-	<ul class="text-list">
+	<ul class="text-list" [ngStyle]="{'margin-left': data.imageWidth + 'px' }">
 		<li *ngFor="let item of data.content; let idx = index">
 			<h5>{{item.title}}</h5>
 			<p>{{item.text}}</p>

@@ -39,7 +39,7 @@ export class RelationalDatabaseService {
         title: '产品功能',
         id: 'relational-database-functionalities',
         diagram: '/assets/images/diagram/relational-database.jpg',
-        //TODO: image style abstraction
+        imageWidth: 260,
         content: [
           {
             title: '高效处理复杂数据查询',
@@ -98,25 +98,35 @@ export class RelationalDatabaseService {
       componentIntro: {
         title: '组件介绍',
         id: 'relational-database-component-intro',
-        tabs: [
-          {
-            class: 'TDH开发套件',
+        tabs: [{
+            class: '开发工具',
+            // link: './tdh-platform-products'
             ctn: [{
-              title: 'Pilot',
+              title: '报表工具',
               text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
               link: '../../modules/suite/pilot'
-            }],
-          },
-          {
-            class: '运维和开发工具',
-            ctn: [{
-              title: 'TxSQL',
-              text: 'TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群。 其底层通过 Paxos Group 保证数据的一致性和高可用，在业务层通过分布式的事 务管理器来提供高并发的事务支持',
-              link: '../../modules/tool/txsql'
             },{
-              title: 'Terminal',
+              title: '容器命令行',
               text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
               link: '../../modules/tool/terminal'
+            }]
+          },
+          {
+            class: '平台服务',
+            // link: './tdh-dev-kits'
+            ctn: [{
+              title: '高可用数据库',
+              text: 'TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群。 其底层通过 Paxos Group 保证数据的一致性和高可用，在业务层通过分布式的事 务管理器来提供高并发的事务支持',
+              link: '../../modules/tool/txsql'
+            }]
+          },
+          {
+            class: '系统服务',
+            // link: './operation-dev-tools',
+            ctn: [{
+              title: '容器操作系统',
+              text: 'TOS基于Docker和Kubernetes开发，是为大数据应用量身订做的云操作系统，作为运行TDC云产品与组件的底层平台，让大数据应用轻松拥抱云服务。',
+              link: '../../modules/tool/TOS'
             }]
           }
         ]

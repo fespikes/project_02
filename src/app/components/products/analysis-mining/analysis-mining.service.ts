@@ -39,7 +39,7 @@ export class AnalysisMiningService {
         title: '产品功能',
         id: 'analysis-mining-functionalities',
         diagram: '/assets/images/diagram/analysis-mining.jpg',
-        //TODO: image style abstraction
+        imageWidth: 500,
         content: [
           {
             title: '多种语言接口',
@@ -113,51 +113,62 @@ export class AnalysisMiningService {
         id: 'analysis-mining-component-intro',
         tabs: [
           {
-            class: 'TDH平台产品',
+            class: '开发工具',
+            // link: './tdh-platform-products'
             ctn: [{
-              title: 'Inceptor',
-              text: 'Inceptor是一款用于批量处理及分析的数据库。它支持SQL 2003标准、Oracle PL/SQL以及DB2 SQL PL，对Oracle、DB2以及Teradata 都有很好的方言支持，是Hadoop领域对SQL标准支持最完善的产品。',
-              link: '../../modules/product/inceptor'
-            },{
-              title: 'Guardian',
-              text: 'Guardian为TDH提供集中的安全和资源管理服务。它支持LDAP和Kerberos，保护Hadoop集群免受恶意攻击和安全威胁，而且还可以对资源做细粒度的ACL控制。多租户资源管理模块可以按照租户的方式管理资源，并通过一个图形化工具为用户提供权限配置以及资源配置接口。',
-              link: '../../modules/product/guardian'
-            },{
-              title: 'Discover',
-              text: 'Discover是分布式机器学习平台，它包含了丰富的分布式算法库，还内置了多个行业应用模块，例如金融反欺诈、文本挖掘算法库等。 Discover提供了R语言、Python和SQL接口，以帮助数据科学家开发自己的数据挖掘算法。通过内置Notebook工具Zeppelin，Discover 可以非常灵活的支持数据工程师和科学家之间的团队协作。',
-              link: '../../modules/product/discover'
-            },{
-              title: 'Hadoop',
-              text: 'Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。',
-              link: '../../modules/product/hadoop'
-            }],
-          },
-          {
-            class: 'TDH开发套件',
-            ctn: [{
-              title: 'Pilot',
-              text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
-              link: '../../modules/suite/pilot'
-            }],
-          },
-          {
-            class: '运维和开发工具',
-            ctn: [{
-              title: 'Zeppelin',
-              text: 'Zeppelin是一个基于web的图形化Notebook，用于交互式的数据分析。它提供多种编程接口如SQL、R、Scala和Python等，开发者可以通过这些接口来做数据开发，可视化等工作，并支持团队共享和协作。',
-              link: '../../modules/suite/zeppelin'
-            },{
-              title: 'Milano',
+              title: '日志服务',
               text: 'Milano是一个日志收集分析和展示平台，为运维人员提供基于日志问题的定位和分析工具。它具有五个功能组件：logstash、kafka、elasticsearch、kibana、flink，分别用来帮助用户实现日志收集、传输、存储、展示和分析这五项功能。',
               link: '../../modules/suite/milano'
             },{
-              title: 'Terminal',
-              text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
-              link: '../../modules/suite/terminal'
+              title: '报表工具',
+              text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
+              link: '../../modules/suite/pilot'
             },{
-              title: 'Prometheus',
+              title: '数据分析Notebook',
+              text: 'Zeppelin是一个基于web的图形化Notebook，用于交互式的数据分析。它提供多种编程接口如SQL、R、Scala和Python等，开发者可以通过这些接口来做数据开发，可视化等工作，并支持团队共享和协作。',
+              link: '../../modules/suite/zeppelin'
+            },{
+              title: '容器命令行',
+              text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
+              link: '../../modules/tool/terminal'
+            }]
+          },
+          {
+            class: '平台服务',
+            // link: './tdh-dev-kits'
+            ctn: [{
+              title: '数据挖掘平台',
+              text: 'Discover是分布式机器学习平台，它包含了丰富的分布式算法库，还内置了多个行业应用模块，例如金融反欺诈、文本挖掘算法库等。 Discover提供了R语言、Python和SQL接口，以帮助数据科学家开发自己的数据挖掘算法。通过内置Notebook工具Zeppelin，Discover 可以非常灵活的支持数据工程师和科学家之间的团队协作。',
+              link: '../../modules/product/discover'
+            },{
+              title: '分析型数据库',
+              text: 'Inceptor是一款用于批量处理及分析的数据库。它支持SQL 2003标准、Oracle PL/SQL以及DB2 SQL PL，对Oracle、DB2以及Teradata 都有很好的方言支持，是Hadoop领域对SQL标准支持最完善的产品。',
+              link: '../../modules/product/inceptor'
+            },{
+              title: '安全管控',
+              text: 'Guardian为TDH提供集中的安全和资源管理服务。它支持LDAP和Kerberos，保护Hadoop集群免受恶意攻击和安全威胁，而且还可以对资源做细粒度的ACL控制。多租户资源管理模块可以按照租户的方式管理资源，并通过一个图形化工具为用户提供权限配置以及资源配置接口。',
+              link: '../../modules/product/guardian'
+            }, {
+              title: '分布式系统基础架构',
+              text: 'Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。',
+              link: '../../modules/product/hadoop'
+            }]
+          },
+          {
+            class: '系统服务',
+            // link: './operation-dev-tools',
+            ctn: [{
+              title: '指标监控',
               text: 'Prometheus是开源的监控和告警系统，以Metrics监控为主，通过pull mode完成时间序列数据的收集。主要包括的组件有：负责时间序列数据存储和抓取的Prometheus Server，Alertmanager，Push gateway，以及各类exporter。',
               link: '../../modules/suite/prometheus'
+            },{
+              title: '高可用数据库',
+              text: 'TxSQL 是一个分布式可扩展、服务高可用、数据强一致的关系型数据库集群。 其底层通过 Paxos Group 保证数据的一致性和高可用，在业务层通过分布式的事 务管理器来提供高并发的事务支持',
+              link: '../../modules/tool/txsql'
+            },{
+              title: '容器操作系统',
+              text: 'TOS基于Docker和Kubernetes开发，是为大数据应用量身订做的云操作系统，作为运行TDC云产品与组件的底层平台，让大数据应用轻松拥抱云服务。',
+              link: '../../modules/tool/TOS'
             }]
           }
         ]
