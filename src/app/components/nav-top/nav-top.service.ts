@@ -62,22 +62,22 @@ const navigationData = {
 				  routerLink: './products/data-warehouse'
 				},
 				{
-				  title: '实时计算',
-				  summary: '云上的流处理分析平台，对流数据进行实时采集和实时处理，帮助企业构建在线实时应用，充分利用流式信息。',
-				  routerLink: './products/realtime-computation'
-				},
-				{
-				  title: '信息检索',
-				  summary: 'PB级别的高速全文检索服务，提供高并发支持，以及字段精确、模糊检索和快速统计功能，支持用SQL做内容检索。',
-				  routerLink: './products/info-retrieval'
-				},
-				{
 				  title: '数据集市',
 				  summary: '数据集市面向部门级业务，提供各种模型用以组织数据，实现交互式分析以及自动化的报表应用构建。',
 				  routerLink: './products/data-mart'
 				},
 				{
-				  title: '数据分析与挖掘',
+				  title: '实时计算',
+				  summary: '云上的流处理分析平台，对流数据进行实时采集和实时处理，帮助企业构建在线实时应用，充分利用流式信息。',
+				  routerLink: './products/realtime-computation'
+				},
+				{
+				  title: '搜索引擎',
+				  summary: 'PB级别的高速全文检索服务，提供高并发支持，以及字段精确、模糊检索和快速统计功能，支持用SQL做内容检索。',
+				  routerLink: './products/info-retrieval'
+				},
+				{
+				  title: '数据分析平台',
 				  summary: '数据分析平台为数据科学家提供了丰富的数据挖掘功能，内置60余种分布式机器学习算法和行业模型，实现数据到价值信息的转换。',
 				  routerLink: './products/analysis-mining'
 				},
