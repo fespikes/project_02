@@ -52,14 +52,14 @@ export class HomeService {
 				items: [
 					{
 						thumbnail: {
-							src: '/assets/images/svg/home/products/' + 'relational-database' + '.svg',
+							src: '/assets/images/svg/home/products/' + 'data-warehouse' + '.svg'
 						},
-						title: '关系数据库',
-						summary: '构建企业关系型数据库，处理数据量在500GB以内的OLTP业务。支持复杂SQL查询，提供高稳定、可扩展、强一致保证。',
+						title: '数据仓库',
+						summary: '数据仓库是数据中心库，全面整合各类数据，按照主题组织信息，是打造商业智能的核心。',
 						button: {
 							text: '查看详情',
 							class: 'blue-button',
-							routerLink: '/products/relational-database'//TODO: set the routerLinks
+							routerLink: '/products/data-warehouse'//TODO: set the routerLinks
 						},
 						liClass: 'direct-child',	//?
 						h4Class: '',	//?
@@ -68,10 +68,11 @@ export class HomeService {
 						details: {
 							title: '产品功能',
 							list: [
-								'高效处理复杂数据查询',
-								'高可靠性保障',
-								'高并发支持',
-								'内置报表工具'
+								'强大的SQL支持',
+								'异构数据互通',
+								'混合负载支持',
+								'分布式事务保障',
+								'非结构化数据处理'
 							]
 						}
 					},
@@ -102,9 +103,36 @@ export class HomeService {
 					},
 					{
 						thumbnail: {
+							src: '/assets/images/svg/home/products/' + 'realtime-computation' + '.svg'
+						},
+						title: '实时计算',
+						summary: '云上的流处理分析平台，对流数据进行实时采集和实时处理，帮助企业构建在线实时应用，充分利用流式信息。',
+						liClass: 'direct-child',	//?
+						h4Class: '',	//?
+						pClass: 'desc',	//?
+						divClass: 'shadow-box',	//has a div for wrap
+						button: {
+							text: '查看详情',
+							class: 'blue-button',
+							routerLink: '/products/realtime-computation'//TODO: set the routerLinks
+						},
+						details: {
+							title: '产品功能',
+							list: [
+								'将SQL用于流式应用开发',
+								'微批处理+事件驱动',
+								'Exactly Once语义支持',
+								'复杂事件处理（CEP）',
+								'数据持久化',
+								'流上数据挖掘'
+							]
+						}
+					},					
+					{
+						thumbnail: {
 							src: '/assets/images/svg/home/products/' + 'info-retrieval' + '.svg',
 						},
-						title: '信息检索',
+						title: '搜索引擎',
 						summary: 'PB级别的高速全文检索服务，提供高并发支持，以及字段精确、模糊检索和快速统计功能，支持用SQL做内容检索。',
 						button: {
 							text: '查看详情',
@@ -127,27 +155,26 @@ export class HomeService {
 					},
 					{
 						thumbnail: {
-							src: '/assets/images/svg/home/products/' + 'data-warehouse' + '.svg'
+							src: '/assets/images/svg/home/products/' + 'analysis-mining' + '.svg'
 						},
-						title: '数据仓库',
-						summary: '数据仓库是数据中心库，全面整合各类数据，按照主题组织信息，是打造商业智能的核心。',
-						button: {
-							text: '查看详情',
-							class: 'blue-button',
-							routerLink: '/products/data-warehouse'//TODO: set the routerLinks
-						},
+						title: '数据分析平台',
+						summary: '数据分析平台为数据科学家提供了丰富的数据挖掘功能，内置60余种分布式机器学习算法和行业模型，实现数据到价值信息的转换。',
 						liClass: 'direct-child',	//?
 						h4Class: '',	//?
 						pClass: 'desc',	//?
 						divClass: 'shadow-box',	//has a div for wrap
+						button: {
+							text: '查看详情',
+							class: 'blue-button',
+							routerLink: '/products/analysis-mining'//TODO: set the routerLinks
+						},
 						details: {
 							title: '产品功能',
 							list: [
-								'强大的SQL支持',
-								'异构数据互通',
-								'混合负载支持',
-								'分布式事务保障',
-								'非结构化数据处理'
+								'多种语言接口',
+								'60余种算法',
+								'全行业模型库',
+								'高效的开发工具'
 							]
 						}
 					},
@@ -180,53 +207,26 @@ export class HomeService {
 					},
 					{
 						thumbnail: {
-							src: '/assets/images/svg/home/products/' + 'realtime-computation' + '.svg'
+							src: '/assets/images/svg/home/products/' + 'relational-database' + '.svg',
 						},
-						title: '实时计算',
-						summary: '云上的流处理分析平台，对流数据进行实时采集和实时处理，帮助企业构建在线实时应用，充分利用流式信息。',
+						title: '关系数据库',
+						summary: '构建企业关系型数据库，处理数据量在500GB以内的OLTP业务。支持复杂SQL查询，提供高稳定、可扩展、强一致保证。',
+						button: {
+							text: '查看详情',
+							class: 'blue-button',
+							routerLink: '/products/relational-database'//TODO: set the routerLinks
+						},
 						liClass: 'direct-child',	//?
 						h4Class: '',	//?
 						pClass: 'desc',	//?
 						divClass: 'shadow-box',	//has a div for wrap
-						button: {
-							text: '查看详情',
-							class: 'blue-button',
-							routerLink: '/products/realtime-computation'//TODO: set the routerLinks
-						},
 						details: {
 							title: '产品功能',
 							list: [
-								'将SQL用于流式应用开发',
-								'微批处理+事件驱动',
-								'Exactly Once语义支持',
-								'复杂事件处理（CEP）',
-								'数据持久化',
-								'流上数据挖掘'
-							]
-						}
-					},
-					{
-						thumbnail: {
-							src: '/assets/images/svg/home/products/' + 'analysis-mining' + '.svg'
-						},
-						title: '数据分析与挖掘',
-						summary: '数据分析平台为数据科学家提供了丰富的数据挖掘功能，内置60余种分布式机器学习算法和行业模型，实现数据到价值信息的转换。',
-						liClass: 'direct-child',	//?
-						h4Class: '',	//?
-						pClass: 'desc',	//?
-						divClass: 'shadow-box',	//has a div for wrap
-						button: {
-							text: '查看详情',
-							class: 'blue-button',
-							routerLink: '/products/analysis-mining'//TODO: set the routerLinks
-						},
-						details: {
-							title: '产品功能',
-							list: [
-								'多种语言接口',
-								'60余种算法',
-								'全行业模型库',
-								'高效的开发工具'
+								'高效处理复杂数据查询',
+								'高可靠性保障',
+								'高并发支持',
+								'内置报表工具'
 							]
 						}
 					}

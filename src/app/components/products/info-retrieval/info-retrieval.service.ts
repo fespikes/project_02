@@ -8,7 +8,7 @@ export class InfoRetrievalService {
 	getProductDetails() {
   	return {
   		banner: {
-  			h3: '信息检索',
+  			h3: '搜索引擎',
         h4: '',
   			description: 'PB级别的高速全文检索服务，提供高并发支持，以及字段精确、模糊检索和快速统计功能，支持用SQL做内容检索。',
   			advImage: '/assets/images/products/info-retrieval.png'

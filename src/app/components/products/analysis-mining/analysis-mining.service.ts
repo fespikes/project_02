@@ -8,7 +8,7 @@ export class AnalysisMiningService {
   getProductDetails() {
   	return {
   		banner: {
-  			h3: '数据分析与挖掘',
+  			h3: '数据分析平台',
         h4: '',
   			description: '数据分析平台为数据科学家提供了丰富的数据挖掘功能，内置60余种分布式机器学习算法和行业模型，实现数据到价值信息的转换。',
   			advImage: '/assets/images/products/analysis-mining.png'
