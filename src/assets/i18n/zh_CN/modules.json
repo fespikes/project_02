@@ -1,25 +1,14 @@
 {
-  "TUI":{
-    "SELECT":{
-      "NO_OPTIONS":"没有可选择的选项"
-    },
-    "PAGINATION":{
-      "SHOW_ROW_COUNT":"显示行数",
-      "GO_TO":"跳转至第",
-      "GO_TO_PAGE":"页",
-      "CONFIRM":"确定"
-    }
-  },
   "MODULES":{
     "CLOUD_PRODUCT_COMPONENT":"云产品组件",
-    "TDH_PLATFORM_PRODUCT":"TDH平台产品",
-    "TDH_DEVELOP_SUITE":"TDH开发套件",
-    "OPERATION_ADD_DEVELOP_TOOL":"运维和开发工具",
+    "PLATFORM_SERVICE":"平台服务",
+    "DEVELOP_TOOL":"开发工具",
+    "SYSTEM_SERVICE":"系统服务",
     "MODULE_INTRODUCE":"组件介绍",
     "FUNCTION_ADVANTAGE":"功能优势",
     "INCEPTOR":{
       "TITLE":"分析型数据库",
-      "SUB_TITLE":"Inceptor是用于批量处理及分析的数据库，被广泛应用于数据仓库和数据集市的构建。",
+      "SUB_TITLE":"用于批量处理及分析的数据库，提供完整的SQL 2003标准支持以及Oracle、DB2、Teradata方言，被广泛应用于数据仓库和数据集市的构建。",
       "INTRODUCE_IMG_URL":"modules/inceptor-introduce.png",
       "INTRODUCE_1":"Inceptor基于Hadoop和Spark技术平台打造，加上自主开发的创新功能组件，有效解决了企业级大数据数据处理和分析的各种技术难题，帮助企业快速构建和推广数据业务。",
       "INTRODUCE_2":"服务层",
@@ -45,7 +34,7 @@
     },
     "SLIPSTREAM":{
       "TITLE":"实时计算引擎",
-      "SUB_TITLE":"Slipstream是提供实时计算的产品，被广泛用于交通运输和物联网行业。",
+      "SUB_TITLE":"提供实时计算的产品，支持用SQL实现流式应用的开发，以及复杂事件处理和高可用等高级功能，可以广泛用于交通运输和物联网行业。",
       "INTRODUCE_IMG_URL":"modules/slipstream-introduce.png",
       "INTRODUCE_1":"Transwarp Slipstream提供完整的SQL支持，简化了实时业务开发过程。它支持复杂事件处理能力（CEP），高可用性（HA）和Exactly-Once语义，为实现实时应用提供稳定、可靠的保障。此外，它是统一支持微批处理和事件驱动的混合流计算引擎，可以同时支持低延时和高吞吐的实时计算场景。",
       "INTRODUCE_2":"事件驱动模式",
@@ -89,8 +78,8 @@
       "ADVANTAGE_8":"Zeppelin Notebook平台具有多样化的功能：例如支持Shell脚本，方便自动化任务；支持markdown语法，让用户轻松完成一篇高质量的论文报告；支持多人协作开发，让工程文件的改动和更新实时地广播给团队成员；还支持报表发布，将报表的展示效果及动态通过链接发布至代码或报告中。"
     },
     "HYPERBASE":{
-      "TITLE":"NoSQL数据库",
-      "SUB_TITLE":"以Apache HBase为基础，融合了多项创新技术的NoSQL数据库，允许开发者直接利用SQL构建复杂应用。",
+      "TITLE":"NewSQL数据库",
+      "SUB_TITLE":"以Apache HBase为基础，融合了多项创新技术的NewSQL数据库，允许开发者直接利用SQL构建复杂应用，实现极速的信息检索与数据入库。",
       "INTRODUCE_IMG_URL":"modules/hyperbase-introduce.png",
       "INTRODUCE_1":"Transwarp Hyperbase实时数据库是建立在Apache HBase和Elasticsearch基础之上，融合了多种索引技术、分布式事务处理、全文实时搜索、图形数据库在内的实时NoSQL数据库。",
       "INTRODUCE_2":"Hyperbase可以高效地支持企业的在线OLTP应用、高并发OLAP应用、批处理应用、全文搜索或高并发图形数据库检索应用。结合Inceptor高速SQL引擎，是企业创建可扩展在线运营数据库（Operational Database）或者实时分析型数据库（ODS - Operational Data Store）的最佳选择。",
@@ -133,7 +122,7 @@
     },
     "SOPHON":{
       "TITLE":"深度学习",
-      "SUB_TITLE":"Sophon是整合了Tensorflow和MxNet的深度学习通用开发平台，帮助企业用户加速落地人工智能应用。",
+      "SUB_TITLE":"整合了Tensorflow和MXNet的深度学习通用开发平台，帮助企业用户加速落地人工智能应用。",
       "INTRODUCE_IMG_URL":"modules/sophon-introduce.png",
       "INTRODUCE_1":"Sophon打通了大数据平台和人工智能平台，使业务分析师和数据分析师可以通过其内置的行业模版轻松构建对应AI模型。大多数企业用户不再需要通过技术实力强大的大数据团队和AI团队的支持，就可以以较低的成本从无到有打造AI人工智能平台，轻松提升业务价值。",
       "INTRODUCE_2":"一站式图形化人工智能开发",
@@ -162,8 +151,8 @@
       "ADVANTAGE_14":"对于大多数用户而言，平台提供的预制模板至关重要。有效丰富的模板定制可以实现无需长时间的培训和学习，就能快速开展业务。"
     },
     "GUARDIAN":{
-      "TITLE":"安全、权限和资源管控",
-      "SUB_TITLE":"Guardian为TDH提供集中的安全和资源管理服务，保护集群免受恶意攻击和安全威胁，同时对资源做细粒度的ACL控制。",
+      "TITLE":"安全管控",
+      "SUB_TITLE":"统一的安全和资源管理服务平台，支持Kerberos和LDAP认证，实现租户级别的资源管理，可以做细粒度的权限控制，为整个集群系统加强安全防护。",
       "INTRODUCE_IMG_URL":"modules/guardian-introduce.png",
       "INTRODUCE_1":"为了保障云上大数据的安全，更好且可靠的认证和授权服务成为刚需。因此，需要统一的安全和资源管理服务Guardian来保护云产品和各组件安全，同时提供安全高效可控的资源分配。",
       "INTRODUCE_2":"Guardian 5.0的框架共分为四层：",
@@ -187,7 +176,7 @@
     },
     "HADOOP":{
       "TITLE":"分布式系统基础架构",
-      "SUB_TITLE":"针对海量数据的计算与存储框架，在可扩展性、数据安全和部署成本方面具有显著优势。",
+      "SUB_TITLE":"适用于大型数据集的计算与存储框架。处理海量数据时在可扩展性、数据安全和部署成本方面同关系型数据库相比具有显著的优势。同时可以很好的适用于非结构化数据的持续增长。",
       "INTRODUCE_IMG_URL":"modules/hadoop-introduce.png",
       "INTRODUCE_1":"Transwarp基于Apache Hadoop开发，并对各组件性能进行了优化。Transwarp云产品以HDFS为文件系统，以YARN为资源管理平台，提升了安全性、稳定性，从而可以提供7×24小时的不间断服务。",
       "INTRODUCE_2":"Hadoop Distributed File System (HDFS)",
@@ -205,8 +194,8 @@
       "ADVANTAGE_8":"容错能力是Hadoop的关键优势。由于HDFS采用冗余备份机制，在一个节点存储数据的同时也会备份在其他节点。因此当机器发生故障宕机时，可以及时切换至其他健康节点，对副本进行访问。所以当架构的硬件故障导致失效时，Hadoop可以从容处理此场景。"
     },
     "PILOT":{
-      "TITLE":"报表分析",
-      "SUB_TITLE":"基于Web的报表展现工具，轻量、灵活，可以快速部署。支持多维度分析和自助分析，支持团队协作和共享，支持报表导入和导出。",
+      "TITLE":"报表工具",
+      "SUB_TITLE":"基于Web的报表展现工具。轻量且灵活，支持多维度的分析和自助分析，提供二十余种报表样式，对时序数据有很好的展现。",
       "INTRODUCE_IMG_URL":"modules/pilot-introduce.png",
       "INTRODUCE_1":"Transwarp Pilot是轻量的自助式分析BI工具，它克服了传统BI工具的多方面缺陷，功能全面且智能，不论是对于可视化报表展现的丰富度，还是对于处理性能，都有极致的表现。",
       "INTRODUCE_2":"以下是Pilot实现的几个主要功能和特性：",
@@ -239,8 +228,8 @@
       "ADVANTAGE_12":"可服务于多租户场景，实现报表的共享与隔离，方便团队协作和互助。同时保障信息安全。"
     },
     "WORKFLOW":{
-      "TITLE":"工作流设计",
-      "SUB_TITLE":"Workflow是用于实现工作流调度DAG设计与管理的图形化工具，同开源的Oozie相比，Workflow的功能更强大，操作更方便，可用性更高。",
+      "TITLE":"工作流引擎",
+      "SUB_TITLE":"图形化的工作流设计、调试、调度和分析的服务平台。支持Shell、SQL、JDBC、HTTP等任务类型，支持自定义Java任务。提供丰富的分析展现形式协助诊断工作流的执行状况。",
       "INTRODUCE_IMG_URL":"modules/workflow-introduce.png",
       "INTRODUCE_1":"Transwarp Workflow很大程度上简化了工作流调度设计与管理工作，图形化的设计方式让作业任务之间的逻辑关系更清晰，调试和分析功能可以反馈任务执行期间存在的问题，任务定时触发使工作执行被自动化，把原来工程师负责的工作简化到业务人员也可以很快上手操作的程度。",
       "INTRODUCE_2":"Workflow主要具有以下几个功能：仪表盘、工作流管理、工作流设计、调试工作流、监控、分析。",
@@ -268,8 +257,8 @@
       "ADVANTAGE_10":"Workflow服务本身通过Master-Standby机制保证高可用性，而且还在持久层通过TxSQL保证高可用。此外，Workflow本身不做复杂的数据计算，而是通过多个实例部署的方式执行任务，从而有很高的可扩展性。"
     },
     "TRANSPORTER":{
-      "TITLE":"ETL任务设计",
-      "SUB_TITLE":"Transporter是轻便易操作的ETL工具，提供完整的数据整合功能，以及多种常用的数据转换操作，具有近实时，高吞吐，支持多源库，和事务保障的特性。",
+      "TITLE":"数据整合",
+      "SUB_TITLE":"设计和创建ETL任务的可视化工具，支持从RDBMS到TDH的近实时数据同步，提供完整的数据整合功能，支持丰富的数据源以及多种数据转换操作。",
       "INTRODUCE_IMG_URL":"modules/transporter-introduce.png",
       "INTRODUCE_1":"Transporter是用于设计和创建ETL任务的可视化工具。Transporter左侧连接数据源，如关系型数据库，右侧连接目标系统，如Inceptor。支持用户将数据从RDBMS迁移到Hadoop，再进行数据分析和挖掘工作。Transporter支持多种数据源，包括CSV、JDBC、XML、JSON以及关系数据库；提供多种常用的数据转换操作，例如，连接、聚合、清洗等。由于Transporter数据迁移过程中的数据处理任务都在Inceptor中完成，且受完整的ACID支持，因此用户不必为了ELT任务建立单独集群，也不用担心数据一致性问题。",
       "INTRODUCE_2":"Transporter的功能分为三部分：数据流、仪表盘、参数。",
@@ -297,8 +286,8 @@
       "ADVANTAGE_14":"提供事务级别的数据同步，确保目标表与原表拥有相同的数据一致性。另外还提供了完整的权限控制机制，用于保证数据的安全。"
     },
     "GOVERNOR":{
-      "TITLE":"元数据管理",
-      "SUB_TITLE":"Governor是用于数据仓库元数据管理的工具，通过管理数据的位置、数据的结构、数据的操作以及表的血缘与影响关系，来保障数据质量。",
+      "TITLE":"数据治理",
+      "SUB_TITLE":"元数据管理工具，可用于收集、展现和管理元数据，监控数据和程序的更改历史，进行数据血缘分析和影响分析，调试数据问题，追踪问题来源。",
       "INTRODUCE_IMG_URL":"modules/governor-introduce.png",
       "INTRODUCE_1":"Governor可以帮助用户调试数据问题，追踪问题来源，有助于监控元数据关系，使数据的发展过程有迹可循，从而在减少资源成本投入的基础上，提供更准确的预测分析，有利于商业智能的发展。",
       "INTRODUCE_2":"Governor的以下四个特征，使让它可以方便的为用户提供源数据管理：",
@@ -320,8 +309,8 @@
       "ADVANTAGE_8":"为了将Governor庇护在强大的安全保障下，Governor 实现了与Guardian的集合。Guardian提供了安全认证以及访问权限控制，防止恶意访问者窃取数据集和关键元数据信息，降低信息共享的安全风险。从而避免暴露任何数据安全问题。"
     },
     "RUBIK":{
-      "TITLE":"OLAP Cube设计",
-      "SUB_TITLE":"用于设计OLAP Cube的可视化工具，支持雪花模型和星形模型，支持多种格式的数据源与物化格式。在数据立方体的加速下，查询分析速度可以实现10倍的提升。",
+      "TITLE":"Cube设计",
+      "SUB_TITLE":"OLAP Cube的可视化设计工具，用于设计OLAP模型并支持实例化，提供雪花模型和星形模型两种模型，并支持多种格式的数据源，可用于加速多维度数据分析。",
       "INTRODUCE_IMG_URL":"modules/rubik-introduce.png",
       "INTRODUCE_1":"Transwarp Rubik除了可以实现Cube设计以及实例化，还提供对Cube的管理功能，以及方便的团队协作。其主要功能列举如下。",
       "INTRODUCE_2":"Cube设计",
@@ -345,45 +334,9 @@
       "ADVANTAGE_9":"全面的安全保护",
       "ADVANTAGE_10":"为了将Rubik庇护在强大的安全保护下，Rubik实现了与Guardian的集合。Guardian提供安全认证以及访问权限控制，防止恶意访问者窃取关键信息，降低信息共享的安全风险。从而避免暴露任何数据安全问题。"
     },
-    "WATERDROP":{
-      "TITLE":"SQL开发工具",
-      "SUB_TITLE":"Waterdrop是高效的SQL开发工具，支持SQL编辑、元数据管理、SQL执行、以及数据导入/导出，同时提供提高开发效率的多种高级功能。",
-      "INTRODUCE_IMG_URL":"modules/waterdrop-introduce.png",
-      "INTRODUCE_1":"Waterdrop是为开发人员和数据库管理人员提供的数据库管理工具，它可进行跨平台管理，可作为Inceptor SQL客户端，除了Inceptor还支持并兼容其余多种数据库。",
-      "INTRODUCE_2":"四个功能模块",
-      "INTRODUCE_3":"Waterdrop具有有四个主要的功能模块：Database Navigator、SQL Editor、SQL Executor、Data Viewer/Editor，分别用来帮助用户实现数据库管理、SQL编辑、SQL执行、数据操作这四项功能。",
-      "INTRODUCE_4":"数据库浏览器：",
-      "INTRODUCE_5":"数据库导浏览器支持查看已经建立的连接，以及各连接下的元数据。",
-      "INTRODUCE_6":"用户可以直接在数据浏览页上新建元数据，编辑DDL等信息，并保存完成创建。",
-      "INTRODUCE_7":"SQL编辑器：",
-      "INTRODUCE_8":"编辑器具有强大的辅助SQL构造的功能，包括错误高亮，SQL语句格式化，SQL内容自动补全等功能，以及标准SQL同其他编程语言之间的自动转化。",
-      "INTRODUCE_9":"SQL执行器：",
-      "INTRODUCE_10":"用户不仅可以通过SQL执行器界面的按钮去执行调试SQL语句，而且可以通过Waterdrop提供的快捷键快速的实现各种SQL执行功能。",
-      "INTRODUCE_11":"SQL的查询结果可导出于文件中。目前支持的导出格式有XML、JSON、HTML、CSV、数据库表、XLSX。",
-      "INTRODUCE_12":"数据操作：",
-      "INTRODUCE_13":"Waterdrop支持用户在数据视图直接对数据进行修改删除粘贴复制，同时能够防止某些取值不可变的字段被篡改。",
-      "INTRODUCE_14":"此外还支持高级复制功能，用于将选中的数据按照自定义的格式复制到系统剪切板。",
-      "INTRODUCE_15":"除了复制功能，Waterdrop还允许将外部文件的数据粘贴在数据视图，例如将excel文件中的部分数据复制到Inceptor表。",
-      "INTRODUCE_16":"三个工具",
-      "INTRODUCE_17":"除了以上主要模块，Waterdrop 还内置了如下三个工具，分别用于实现数据的传输以及存储过程的测试。",
-      "INTRODUCE_18":"数据导入工具：",
-      "INTRODUCE_19":"将任意连接中的表内数据根据设定的字段对应关系导入至指定目标表。",
-      "INTRODUCE_20":"数据导出工具：",
-      "INTRODUCE_21":"将表内数据或者任意查询结果的数据导出至外部文件。",
-      "INTRODUCE_22":"存储过程测试工具：",
-      "INTRODUCE_23":"用于测试存储过程的结果。测试存储过程时，用户可以根据存储过程的结构，向其传递参数，Waterdrop利用传递的参数值运行存储过程的内容，最终打印测试结果。",
-      "ADVANTAGE_1":"良好的兼容性",
-      "ADVANTAGE_2":"Waterdrop支持包括Windows、Linux在内的六种操作系统，同时兼容多种Inceptor版本。另外，Waterdrop还可以对接除Inceptor之外的30种数据库，保障操作平台的支持度，以及使用的灵活性。",
-      "ADVANTAGE_3":"丰富多样的功能",
-      "ADVANTAGE_4":"Waterdrop不仅支持SQL语句编写，而且提供多项SQL提示功能与操作，非编程式的元数据创建与复制，以及SQL定制模板，以帮助降低SQL开发的复杂度。",
-      "ADVANTAGE_5":"大幅简化数据操作",
-      "ADVANTAGE_6":"为了提升对用户的友好性，Waterdrop提供了许多数据管理接口和功能强大的数据迁移工具，方便用户对数据进行查看和编辑。",
-      "ADVANTAGE_7":"定制化服务",
-      "ADVANTAGE_8":"Waterdrop提供了多种自定义设置，包括数据库驱动自助设置，便利的SQL方言设置，SQL模板定制，以满足不同用户的编程和使用习惯。"
-    },
     "TXSQL":{
-      "TITLE":"分布式关系型数据库",
-      "SUB_TITLE":"TxSQL是分布式可扩展、服务高可用、数据强一致且完全兼容MySQL的关系型数据库集群。",
+      "TITLE":"高可用数据库",
+      "SUB_TITLE":"分布式可扩展、服务高可用、数据强一致且完全兼容MySQL的关系型数据库集群。",
       "INTRODUCE_IMG_URL":"modules/txsql-introduce.png",
       "INTRODUCE_1":"TxSQL底层通过Paxos Group保证数据的一致性和高可用，在业务层通过分布式的事务管理器来提供高并发的事务支持。",
       "INTRODUCE_2":"Paxos Group中的节点分为Master和Slave两种角色，Master节点负责写入，Slave从Master同步数据，所以可实现读写分离，减缓单机负荷。",
@@ -433,8 +386,8 @@
       "ADVANTAGE_10":"Milano使各个租户日志之间相互隔离，同时在日志数据传输的过程中提供身份认证安全保护，从而确保租户信息的隐私，谨防泄漏系统漏洞。"
     },
     "PROMETHEUS":{
-      "TITLE":"Metrics监控",
-      "SUB_TITLE":"Prometheus是一套用于系统监控、生成报警的工具组合。基于时间序列在多个维度上对数据进行收集和抓取，提供动态的系统状态信息，支持多种方式的图表可视化。",
+      "TITLE":"指标监控",
+      "SUB_TITLE":"指标监控系统。负责收集硬件、OS、TDH系统服务以及应用服务层的各种性能指标，提供性能查询功能，帮助展现系统各层级的运行情况。",
       "INTRODUCE_IMG_URL":"modules/prometheus-introduce.png",
       "INTRODUCE_1":"Prometheus的主要功能包括：Metrics监控、多维度的时间序列模型、灵活的查询语言检索、拉取方式收集时间序列数据的收集、支持多种图表和仪表盘。",
       "INTRODUCE_2":"Prometheus中有几个重要的组件进行了参与：Prometheus Server、Alertmanager、Pushgateway、可视化组件。",
@@ -451,7 +404,7 @@
     },
     "KAFKA":{
       "TITLE":"消息中间件",
-      "SUB_TITLE":"一种分布式的基于发布/订阅的消息系统，在廉价的机器上也能做到单机每秒100K条以上消息的传输。",
+      "SUB_TITLE":"一种分布式的基于发布/订阅的消息系统。在廉价的商用机器上也能做到单机支持每秒100K条以上消息的传输。支持消息分区以及在线水平扩展。",
       "INTRODUCE_IMG_URL":"modules/kafka-introduce.png",
       "INTRODUCE_1":"Kafka中的核心概念包括：Topic、Broker、Consumer、Producer。",
       "INTRODUCE_2":"Topic：Kafka通过 Topic对消息（message）进行归类。Producer可以向Topic发布消息，Consumer可以从Topic消费消息。",
@@ -470,8 +423,8 @@
       "ADVANTAGE_8":"在缺乏安全认证的情况下，黑客可以很容易伪装为一个Consumer，去消费任何一个不受安全认证的Kafka集群中的数据，从而造成数据泄露。为消除此隐患，Transwarp Kafka提供了全局和Topic级别的READ、WRITE、CREATE、DELETE权限控制，保障实时消息安全可靠。"
     },
     "ZEPPELIN":{
-      "TITLE":"数据分析可视化开发",
-      "SUB_TITLE":"Zeppelin是基于web的图形化数据分析开发工具，用于实现交互式的数据分析。它提供多种编程接口，并支持团队共享和协作。",
+      "TITLE":"数据分析Notebook",
+      "SUB_TITLE":"轻量的科学计算开发工具。支持使用R、Scala和SQL做数据分析，提供方便的交互界面，可实现数据清洗、机器学习等任务并可以团队协作处理。",
       "INTRODUCE_IMG_URL":"modules/zeppelin-introduce.png",
       "INTRODUCE_1":"Zeppelin整合于Discover，作为交互式数据分析平台，用于进行可视化的以及受协同合作支持的数据挖掘开发。",
       "INTRODUCE_2":"Transwarp Zeppelin提供了以下基本功能。",
@@ -494,8 +447,8 @@
       "ADVANTAGE_6":"Zeppelin Notebook是基于Web的服务开发，用户可以在不同的操作平台上实现数据挖掘和数据分析的应用开发。用简单的操作就可以实现多种数据分析语言的分析处理与报表制作。"
     },
     "MIDAS":{
-      "TITLE":"深度学习开发工具",
-      "SUB_TITLE":"Midas是可视化的深度学习开发工具。提供可拖拽的页面生成深度学习和机器学习模型，支持便捷的参数调优工作。",
+      "TITLE":"数据挖掘工具",
+      "SUB_TITLE":"可视化的深度学习开发工具。提供可拖拽的页面生成深度学习和机器学习模型，支持便捷的参数调优工作。",
       "INTRODUCE_IMG_URL":"modules/midas-introduce.png",
       "INTRODUCE_1":"Midas是一种拖拽式图形界面工具。使用Midas可以很快且简单地创建被称为流程的分析工作流，来进行数据挖掘工作，用户只需将数据连接到构建模型的算子，就能够实现分析和预测功能。在Midas的帮助下，企业可以快速的根据所获得的预测结果提高商业和企业运营洞察力，从而实施对应措施。",
       "INTRODUCE_2":"Midas主要实现了以下功能：",
@@ -520,8 +473,8 @@
     },
     "TERMINAL":{
       "LOGO_URL":"modules/terminal-logo.png",
-      "TITLE":"网页版命令行工具",
-      "SUB_TITLE":"集成的组件命令交互界面，可以通过它以命令行形式对平台组件进行维护管理。",
+      "TITLE":"容器命令行",
+      "SUB_TITLE":"网页版的操作命令行工具，集成了Transwarp所有服务的命令以及环境设置，可以方便的做各种运维操作以及大数据开发工作。",
       "INTRODUCE_IMG_URL":"modules/terminal-introduce.png",
       "INTRODUCE_1":"Terminal是集群上用命令行指令操作服务的入口。它集成了基本的常用Linux操作命令，以及各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免需要登录各个容器才可以操作服务的烦恼。",
       "INTRODUCE_2":"涵盖的服务与工具包括HDFS、YARN、ZooKeeper、HBase、Inceptor、Kafka、Sqoop、Transporter、dstools、Elasticsearch、Kerberos。",
@@ -534,7 +487,7 @@
       "LOGO_URL":"modules/redis-logo.png",
       "TITLE":"内存K-V数据库",
       "INTRODUCE_IMG_URL":"modules/redis-introduce.png",
-      "SUB_TITLE":"Redis是基于内存的Key-Value数据库，提供多种语言的API，适用于会话缓存、全页缓存、队列、技术、发布订阅等应用场景。",
+      "SUB_TITLE":"基于内存的Key-Value数据库，提供多种语言的API，适用于会话缓存、全页缓存、队列、发布订阅等应用场景。",
       "INTRODUCE_1":"Redis是一种日志型、Key-Value数据库，使用C语言编写，遵守BSD协议，可基于内存，也支持可持久化，支持网络，并提供多种语言的API。",
       "INTRODUCE_2":"内存数据库",
       "INTRODUCE_3":"作为内存数据库，Redis处理数据时将数据存储在内存，所以可以实现内部复杂性很强的任务，并提供令人满意的运行效率。因此通常作为内存数据库、缓存或消息代理中间件。",
@@ -554,30 +507,27 @@
       "ADVANTAGE_8":"由于Redis可以将数据持久化于磁盘，因此当节点发生故障时，可以很快的还原数据。此外主从节点之间的数据复制，使得当节点宕机后，能够及时的进行切换，从而保证服务的连续性。",
       "ADVANTAGE_9":"丰富的特性",
       "ADVANTAGE_10":"Redis实现了各种丰富特性，例如支持订阅/发布模型，订阅某通道的客户端可以通过它消费和发布数据，用于解耦消息与订阅者之间的耦合；提供对Key的时效性维护，过期后会将其自动删除等。"
-    }
-  },
-  "DOCUMENTS":{
-    "SEARCH":"搜索",
-    "SEARCH_PLACEHOLDER":"请输入您要的关键词",
-    "DOCUMENT_SUPPORT":"文档与支持",
-    "PRODUCT_DOCUMENT":"产品文档",
-    "NORMAL_ISSUE":"常见问题",
-    "FRESH_GUIDE":"新手入门",
-    "SEARCH_RESULTS":"搜索结果",
-    "SEARCH_FILTER":"搜索条件",
-    "EXPAND_ALL":"全部展开",
-    "COLLAPSE_ALL":"全部收起",
-    "SEARCH_RELATED_RESULT":"搜索相关结果",
-    "ITEM":"条",
-    "PRODUCT":{
-
     },
-    "ISSUE":{
-
-    },
-    "GUIDE":{
-      "FRESH_COURSE":"新手教程",
-      "OTHER_COURSE":"其他教程"
+    "TOS":{
+      "LOGO_URL":"modules/tos-logo.png",
+      "TITLE":"容器操作系统",
+      "SUB_TITLE":"TOS基于Docker和Kubernetes开发，是为大数据应用量身订做的云操作系统，作为运行TDC云产品与组件的底层平台，让大数据应用轻松拥抱云服务。",
+      "INTRODUCE_IMG_URL":"modules/tos-introduce.jpg",
+      "INTRODUCE_1":"未来企业对于构建统一的企业大数据平台来驱动各种业务具有强烈需求，统一的企业大数据平台需要提供以下功能：",
+      "INTRODUCE_2":"资源弹性共享",
+      "INTRODUCE_3":"弹性共享资源可以有效提高资源利用率，主要提供以下三点重要功能：首先是大数据服务与应用的方便灵活部署；其次实现自动化的资源调度，包括自动扩容与自动修复；最后提供集中的仓库，方便服务发现。",
+      "INTRODUCE_4":"隔离性",
+      "INTRODUCE_5":"实现隔离性的目的是保障服务的质量和安全性，包括数据隔离，计算隔离，以及应用隔离。",
+      "INTRODUCE_6":"TOS可以基本满足企业大数据平台的以上需要，支持对大数据应用在云上的一键式部署、扩容、缩容，允许其他服务和大数据服务共享集群，从而提高资源的使用率。TOS采用创新的抢占式资源调度模型，可以在保障实时业务的同时，提高集群空闲时的资源占用，让批量作业和实时业务在互不干扰的情况下分时共享计算资源。",
+      "INTRODUCE_7":"运行于TOS上的应用采用微服务的架构，显著地降低了环境部署对服务稳定性的影响，提高了部署的可用性，并且能在不停机的前提下，实现版本升级与问题修复。",
+      "ADVANTAGE_1":"自动部署",
+      "ADVANTAGE_2":"支持通过Web、REST API 或者CLI一键安装和部署集群，自动根据服务的依赖性安装所需的其他服务组件。",
+      "ADVANTAGE_3":"完善的多租户支持",
+      "ADVANTAGE_4":"Transwarp Operating System通过重写资源管理框架实现了更好的资源隔离，包括CPU、内存、网络、硬盘。",
+      "ADVANTAGE_5":"自动调整容量",
+      "ADVANTAGE_6":"Transwarp Operating System支持云产品一键式部署、扩容、缩容，通过创新的抢占式资源调度模型，提高集群空闲时的资源占用，让批量作业和实时业务在互不干扰的情况下分时共享计算资源。",
+      "ADVANTAGE_7":"自动修复",
+      "ADVANTAGE_8":"TOS内置集群规模检测模块，当集群中的服务发生问题时将自动另起一个服务实例实现集群的自我修复。"
     }
   }
 }

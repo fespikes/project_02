@@ -6,7 +6,7 @@ import { DocumentUtilService } from '../../services/document.util.service';
 @Component({
   selector: 'tdc-product-document',
   templateUrl: './product-document.component.html',
-  styleUrls: ['./product-document.component.sass']
+  styleUrls: ['./product-document.component.sass'],
 })
 
 export class ProductDocumentComponent implements OnInit {
@@ -14,7 +14,7 @@ export class ProductDocumentComponent implements OnInit {
 
   constructor(
     private documentAPIService: DocumentAPIService,
-    private documentUtilService: DocumentUtilService
+    private documentUtilService: DocumentUtilService,
   ) {
 
   }
@@ -27,7 +27,7 @@ export class ProductDocumentComponent implements OnInit {
     this.documentAPIService.getDocuments(tag, false).subscribe(
       result => {
         this.docsFolderList = this.documentUtilService.addDocsVersions(result);
-      }
+      },
     );
   }
 }

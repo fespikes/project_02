@@ -1,8 +1,8 @@
 <div class="doc-support-wrapper">
   <div class="doc-support-panel">
-    <document-breadcrumb
+    <tdc-document-breadcrumb
       [crumbItems]="crumbItems"
-    ></document-breadcrumb>
+    ></tdc-document-breadcrumb>
     <div class="content-panel">
       <div class="panel-left filter-tree">
         <div class="panel-left-header filter">
@@ -27,11 +27,11 @@
       </div>
       <div class="panel-right filter-result">
         <div class="search-docs">
-          <docs-search
+          <tdc-docs-search
             [keyword]="keyword"
             [filterSearch]=true
             (onDocumentSearch)="onDocumentSearch($event)"
-          ></docs-search>
+          ></tdc-docs-search>
         </div>
         <tdc-docs-list
           [docsList]="docsList"

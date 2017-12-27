@@ -8,28 +8,31 @@ import { DocumentResService } from './document.res.service';
 export class DocumentUtilService {
 
   constructor(
-    private documentResService: DocumentResService
+    private documentResService: DocumentResService,
   ) {
 
   }
 
   getDocsType(path): string {
-    let array = path.split('/');
-    return array[array.length - 1];
+    return this.getPathLastParam(path);
   }
 
   getModuleName(path): string {
-    let array = path.split('/');
+    return this.getPathLastParam(path);
+  }
+
+  getPathLastParam(path): string {
+    const array = path.split('/');
     return array[array.length - 1];
   }
 
   getDocDetailUrlParams(path, sectionName): any {
-    let array = path.split('/');
+    const array = path.split('/');
     return {
       section: sectionName,
       component: array[array.length - 1],
       version: array[array.length - 2],
-      category: array[array.length - 3]
+      category: array[array.length - 3],
     };
   }
 
@@ -43,12 +46,12 @@ export class DocumentUtilService {
 
   addDocsVersions(data): any[] {
     data.map(category => {
-      let versionList = [];
-      let docsCollection = {};
+      const versionList = [];
+      const docsCollection = {};
       category.children.map(version => {
         versionList.push({
           id: version.id,
-          name: version.name
+          name: version.name,
         });
         docsCollection[version.name] = this.addDocsCollection(version.children);
       });
@@ -60,7 +63,7 @@ export class DocumentUtilService {
   }
 
   addDocsCollection(data): any[] {
-    let docList = [];
+    const docList = [];
     data.map(doc => {
       docList.push(doc);
     });
@@ -72,7 +75,7 @@ export class DocumentUtilService {
   }
 
   appendDocCssSheet(sheet): void {
-    let style = document.createElement("style");
+    const style = document.createElement('style');
     style.innerHTML = sheet;
     document.head.appendChild(style);
   }
@@ -82,7 +85,7 @@ export class DocumentUtilService {
   }
 
   setBodyWidthAttribute(attribute): void {
-    const bodyEl = document.getElementsByTagName("body")[0];
+    const bodyEl = document.getElementsByTagName('body')[0];
     bodyEl.style.width = attribute;
   }
 

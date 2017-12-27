@@ -11,7 +11,7 @@ import { Pagination } from '../../../tui/pagination/pagination.component';
 
 @Component({
   templateUrl: './documents-search.component.html',
-  styleUrls: ['./documents-search.component.sass']
+  styleUrls: ['./documents-search.component.sass'],
 })
 
 export class DocumentsSearchComponent implements OnInit {
@@ -30,13 +30,13 @@ export class DocumentsSearchComponent implements OnInit {
     private documentAPIService: DocumentAPIService,
     private documentResService: DocumentResService,
     private documentSearchService: DocumentSearchService,
-    private router: Router
+    private router: Router,
   ) {
 
   }
 
   ngOnInit() {
-    let docsType = this.documentUtilService.getDocsType(window.location.hash);
+    const docsType = this.documentUtilService.getDocsType(window.location.hash);
     this.crumbItems = this.documentResService.getDocsCrumb(docsType, '');
     this.getTreeModel();
 
@@ -49,7 +49,7 @@ export class DocumentsSearchComponent implements OnInit {
     this.keyword = keyword;
     this.documentResService.setKeyword(keyword);
     this.router.navigate([`/documents-support/docs-search`]);
-    let searchParams = this.documentSearchService.makeSearchParams(
+    const searchParams = this.documentSearchService.makeSearchParams(
       keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
   }
@@ -58,7 +58,7 @@ export class DocumentsSearchComponent implements OnInit {
     this.documentAPIService.getSearchTreeModel().subscribe(
       result => {
         this.treeModel = this.documentSearchService.initSearchTree(result);
-      }
+      },
     );
   }
 
@@ -69,7 +69,7 @@ export class DocumentsSearchComponent implements OnInit {
         this.docsCount = result.total;
         this.pagination = this.documentSearchService.makePaginationParams(
           this.docsCount, this.pagination);
-      }
+      },
     );
   }
 
@@ -90,8 +90,9 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   onSelectChange(node) {
-    if(!node.clickToggle)
+    if (!node.clickToggle) {
       node.expanded = true;
+    }
     const searchState = this.documentSearchService.makeSelectedDocs(
       node, this.selectedDocs, this.treeModel) as any;
     this.selectedDocs = searchState.selectedDocs;

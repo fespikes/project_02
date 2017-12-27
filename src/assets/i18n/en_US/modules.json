@@ -1,3 +1,98 @@
 {
-
+  "MODULES":{
+    "CLOUD_PRODUCT_COMPONENT":"Cloud Product Component",
+    "PLATFORM_SERVICE":"Platform Service",
+    "DEVELOP_TOOL":"Develop Tool",
+    "SYSTEM_SERVICE":"System Service",
+    "MODULE_INTRODUCE":"Component Introduction",
+    "FUNCTION_ADVANTAGE":"Function Advantage",
+    "INCEPTOR":{
+      "TITLE":"Analytical Database",
+      "SUB_TITLE":"Inceptor is a database for batch processing and analysis, provides full SQL 2003 compatibility and support Oracle, DB2, Teradata dialects, which are widely used in the construction of data warehouses and data marts."
+    },
+    "SLIPSTREAM":{
+      "TITLE":"Real-time Computing",
+      "SUB_TITLE":"Slipstream is a real-time computing product and supports developing streaming applications in SQL. Some advanced functions such as complex event processing and high availability are also implemented. It is usually extensively applied in the industry of transportation and Internet of things."
+    },
+    "DISCOVER":{
+      "TITLE":"Data Mining",
+      "SUB_TITLE":"As a distributed machine learning platform, Discover is enriched with a generic algorithm library and multiple industry models to help data scientists make algorithms work in specific scenarios in a short period of time."
+    },
+    "HYPERBASE":{
+      "TITLE":"NewSQL Database",
+      "SUB_TITLE":"Hyperbase is developed based on Apache HBase, and furthermore fully integrated with multiple innovative technologies. It allows developers to directly build complex applications with SQL so as to quickly achieve information retrieval and achieving data warehousing."
+    },
+    "SEARCH":{
+      "TITLE":"Big Data Search Engine",
+      "SUB_TITLE":"Search is used to build internal search service, and provide high-speed search for PB-level data. At the same time, it adopts a variety of innovative technology for managing storage and memory, significantly enhancing the usability of the system."
+    },
+    "SOPHON":{
+      "TITLE":"Deep Learning",
+      "SUB_TITLE":"Sophon is a common platform for deep learning development which is integrated with Tensorflow and MXNet. Sophon enables enterprise users to construct artificial intelligence application from scratch in a short period of time."
+    },
+    "GUARDIAN":{
+      "TITLE":"System Security",
+      "SUB_TITLE":"Guardian is a centralized security and resource management service. It supports both LDAP and Kerberos to meet security protection requirements in different aspects. Besides, it achieves multi-tenant management to execute fine granular control over user permission and resource allocation across the platform with graphical managing interface."
+    },
+    "HADOOP":{
+      "TITLE":"Distributed System Architecture",
+      "SUB_TITLE":"Hadoop is a computation and storage framework for big data sets. Compared with relational database, it possesses prominent advantages in terms of scalability, security, and deployment costs when processing massive volume of data that keeps continuous growing."
+    },
+    "PILOT":{
+      "TITLE":"Business Reporting",
+      "SUB_TITLE":"Pilot is a web-based data visualization service focusing on business intelligence reporting. It contains a drag and drop environment for data analysis and features over 20 kinds of graphical charts. Different from other BI tools, it provides extremely interactive visualization on big data through a distributed analysis engine and supports a wide range of data sources."
+    },
+    "WORKFLOW":{
+      "TITLE":"Workflow Design",
+      "SUB_TITLE":"A web-based tool to design, debug, schedule jobs and tasks flow. Tasks written in shell, SQL, JDBC and HTTP are supported, and user-defined Java tasks also works well on the platform. It provides good analysis capabilities for all scheduled jobs, where it is easy and quick to tune tasks. Moreover, reliable security control is applied so to protect the system throughout from illegal operations and vicious attackers."
+    },
+    "TRANSPORTER":{
+      "TITLE":"ETL Tool",
+      "SUB_TITLE":"Transporter is a web-based tool for designing and building ETL jobs. It features near real-time data synchronization between RDBMS and TDH, due to which users can easily migrate data analysis work from RDBMS to Hadoop. A wide variety of data sources are supported including CSV, JDBC, XML, JSON, RDBMS, and Transporter is equipped with common transformers like joining, aggregation, data cleansing and etc. All the data processing jobs generated on Transporter are implemented by Inceptor with full ACID support."
+    },
+    "GOVERNOR":{
+      "TITLE":"Data Governance",
+      "SUB_TITLE":"Governor is a web-based metadata management and data governance tool. It ships with approaches to manage metadata (like tables and SQL procedures), tracks changing history for data and programs, retraces data lineage, and performs impact analysis. This tool is for developers to debug data problems and explore root causes, and also to predict what will be impacted before any meta change occurs. Governor aims to aid users with data quality improvement at scale."
+    },
+    "RUBIK":{
+      "TITLE":"OLAP Cube Design",
+      "SUB_TITLE":"Rubik is a visualized tool to design OLAP Cubes for accelerating big data interactive analysis. Both snowflake and star model are supported, and data from various sources including HDFS and RDBMS is welcomed. With the acceleration capability of instantiated Cubes, analytical query can speed up by 10x and therefore create better interactive experiences."
+    },
+    "TXSQL":{
+      "TITLE":"Distributed Relational Database",
+      "SUB_TITLE":"TxSQL is a distributed relational database characterized by distributed scalability, high performance, high availability, strong consistency in data and full compatibility with MySQL."
+    },
+    "MILANO":{
+      "TITLE":"Deep Learning Development",
+      "SUB_TITLE":"Midas is developed as a graphical deep learning development tool to work out deep learning model as well as machine learning model in a drag and drop environment, which also provides convenient ways to tune parameters."
+    },
+    "PROMETHEUS":{
+      "TITLE":"Metrics Monitoring",
+      "SUB_TITLE":"Prometheus is a metrics monitoring system, which is responsible for collecting various performance metrics from hardware, OS, TDH system and application services. Prometheus can process performance search request and display the operating status of services in every layer of the system."
+    },
+    "KAFKA":{
+      "TITLE":"Message Queuing System",
+      "SUB_TITLE":"Kafka is a distributed message queuing system based on publish/subscribe model. It makes it possible to establish a high performance queuing service using cheap commercial machines and transmit over 100k messages per second through each host. Message partitioning and online horizontal expansion are supported as well."
+    },
+    "ZEPPELIN":{
+      "TITLE":"Data Mining Tool",
+      "SUB_TITLE":"A web-based notebook that enables data-driven interactive analysis and allows collaborative documents written in SQL, Scala, Python, etc. Various charts are included in notebook for data visualization. It contains interpreters for Transwarp Discover and Spark so that data scientists can study and explore big data easily."
+    },
+    "MIDAS":{
+      "TITLE":"Deep Learning Development",
+      "SUB_TITLE":"Midas is developed as a graphical deep learning development tool to work out deep learning model as well as machine learning model in a drag and drop environment, which also provides convenient ways to tune parameters."
+    },
+    "TERMINAL":{
+      "TITLE":"Web-based Console",
+      "SUB_TITLE":"Terminal is a web based console with all utilities for Transwarp big data development and operation assembled, so it acts as a console with full capabilities on a remote machine which has all developing environment set up."
+    },
+    "REDIS":{
+      "TITLE":"In-Mem Key-Value DB",
+      "SUB_TITLE":"Redis is a in-memory key-value database that provides APIs in multiple languages. It works perfectly in scenarios like session caching, full-page caching, queuing, publish/subscribe, etc."
+    },
+    "TOS":{
+      "TITLE":"Docker Operation System",
+      "SUB_TITLE":"With Docker and Kurbernetes as foundation, TOS (stands for Transwarp Operating System) is developed to be an underlying infrastructure for TDC services to run on in the cloud. Being shaped particularly for big data applications, TOS provides significant convenience for big data services to operate in the cloud as well as on premises."
+    }
+  }
 }

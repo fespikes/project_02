@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, OnDestroy } from '@angular/core';
 
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
@@ -6,22 +6,21 @@ import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentResService } from '../services/document.res.service';
 import { DocumentSearchService } from '../documents-search/documents-search.service';
-import {timeout} from "rxjs/operator/timeout";
 
 @Component({
   selector: 'tdc-documents-detail',
   templateUrl: './documents-detail.component.html',
-  styleUrls: ['./documents-detail.component.sass']
+  styleUrls: ['./documents-detail.component.sass'],
 })
 
-export class DocumentsDetailComponent implements OnInit {
+export class DocumentsDetailComponent implements OnInit, OnDestroy {
   @HostBinding('class.tdc-documents-detail') layout = true;
 
   pathParams = {
     category: '',
     version: '',
     component: '',
-    section: ''
+    section: '',
   };
   crumbItems = [];
   treeModel = [];
@@ -39,7 +38,7 @@ export class DocumentsDetailComponent implements OnInit {
     private documentAPIService: DocumentAPIService,
     private documentUtilService: DocumentUtilService,
     private documentResService: DocumentResService,
-    private documentSearchService: DocumentSearchService
+    private documentSearchService: DocumentSearchService,
   ) {
 
   }
@@ -52,7 +51,7 @@ export class DocumentsDetailComponent implements OnInit {
   initPage() {
     this.docName = this.documentResService.getDocName();
     this.crumbItems = this.documentResService.getDocsCrumb(
-      this.DOC_DETAIL, this.docName
+      this.DOC_DETAIL, this.docName,
     );
     this.getDocTree();
     this.getDocDetail();
@@ -68,29 +67,29 @@ export class DocumentsDetailComponent implements OnInit {
       result => {
         this.treeModel = result.nav.children;
         this.treeModel = this.documentSearchService.initTreeSelectedState(
-          this.treeModel, anchorId, sectionId
+          this.treeModel, anchorId, sectionId,
         );
-      }
+      },
     );
   }
 
   getDocDetail() {
-    let url = this.getPath(this.DOC_DETAIL);
+    const url = this.getPath(this.DOC_DETAIL);
     this.documentAPIService.getDocDetail(url).subscribe(
-      result =>{
+      result => {
         this.documentUtilService.appendDocContent(result.content);
         this.documentUtilService.hideDocElement('header');
         this.anchorDocContent();
         this.highLightKey('add');
-      }
+      },
     );
   }
 
   highLightKey(operation) {
     const keyNeedRender = this.documentResService.getKeyNeedRender();
-    if(keyNeedRender) {
+    if (keyNeedRender) {
       this.documentSearchService.keyHighLight(
-        'content', this.documentResService.getKeyword(), '#ffff00', operation
+        'content', this.documentResService.getKeyword(), '#ffff00', operation,
       );
     }
   }
@@ -98,15 +97,15 @@ export class DocumentsDetailComponent implements OnInit {
   anchorDocContent() {
     const anchorId = this.documentResService.getAnchorId();
     const anchorNode = this.documentSearchService.findTreeNode(
-      anchorId, this.treeModel
+      anchorId, this.treeModel,
     );
-    const distance = anchorNode.level<3 ? this.RELA_DIS_MAIN_TITLE
-      :this.RELA_DIS_SUB_TITLE;
+    const distance = anchorNode.level < 3 ? this.RELA_DIS_MAIN_TITLE
+      : this.RELA_DIS_SUB_TITLE;
     this.documentSearchService.anchorDocContent(anchorId, distance);
   }
 
   getPath(type) {
-    let sectionId = this.documentResService.getSectionId();
+    const sectionId = this.documentResService.getSectionId();
     this.pathParams = this.documentUtilService.getDocDetailUrlParams(
       window.location.hash, sectionId);
     let path;
@@ -126,7 +125,7 @@ export class DocumentsDetailComponent implements OnInit {
   onSelectChange(node) {
     this.updateTreeState(node);
     this.documentResService.setLevelId(node.id, node.level);
-    if(this.documentResService.getKeyNeedRender()) {
+    if (this.documentResService.getKeyNeedRender()) {
       this.highLightKey('remove');
       this.documentResService.setKeyNeedRender(false);
     }
@@ -134,22 +133,23 @@ export class DocumentsDetailComponent implements OnInit {
   }
 
   updateTreeState(node) {
-    if(!node.clickToggle)
+    if (!node.clickToggle) {
       node.expanded = true;
+    }
     this.treeModel = this.documentSearchService.removeSelectedState(this.treeModel);
     node.selected = true;
   }
 
   showDocContentByLevel(node, clickType, _this) {
-    if(node.level <= 2) {//first、second folder request api
+    if (node.level <= 2) { // first、second folder request api
       clickType === this.CLICK_MENU ? _this.getDocDetail() : _this.initPage();
-    }else if(node.level >= 3) {//third、fourth ... folder anchor content
-      if(_this.documentSearchService.hasSameSecondAncestor(
+    }else if (node.level >= 3) { // third、fourth ... folder anchor content
+      if (_this.documentSearchService.hasSameSecondAncestor(
           node, _this.treeModel, _this.documentResService.getSectionId())) {
         _this.anchorDocContent();
       }else {
         const secondNodeId = _this.documentSearchService.getSecondLevelNodeId(
-          _this.treeModel, node
+          _this.treeModel, node,
         );
         _this.documentResService.setSectionId(secondNodeId);
         clickType === this.CLICK_MENU ? _this.getDocDetail() : _this.initPage();
@@ -161,25 +161,25 @@ export class DocumentsDetailComponent implements OnInit {
     const self = this;
     document.onclick = function(event){
       const target = event.target as any;
-      if(target.attributes['class']
+      if (target.attributes['class']
         && target.attributes['class'].value === 'document-link') {
 
         const domId = target.attributes['id'].value;
         const anchorId = domId.substring(5, domId.length);
         self.documentResService.setAnchorId(anchorId);
         const domEle = document.getElementById(domId);
-        if(!domEle) {//first search dom in current page
+        if (!domEle) { // first search dom in current page
           const domNode = self.documentSearchService.findTreeNode(
             anchorId, self.treeModel);
           if (domNode && domNode.id) {
             self.documentResService.setLevelId(domNode.id, domNode.level);
             self.showDocContentByLevel(domNode, self.CLICK_ANCHOR, self);
           }
-        }else {//then search dom in menu tree
+        }else { // then search dom in menu tree
           self.documentSearchService.anchorDocContent(anchorId, self.RELA_DIS_SUB_TITLE);
         }
       }
-    }
+    };
   }
 
   ngOnDestroy() {

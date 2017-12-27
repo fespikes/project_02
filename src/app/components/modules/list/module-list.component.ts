@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'module-list',
+  selector: 'tdc-module-list',
   templateUrl: './module-list.component.html',
   styleUrls: ['./module-list.component.sass'],
 })
@@ -34,14 +34,14 @@ export class ModuleListComponent implements OnInit {
   }
 
   selectModule(module) {
-    if(!module.selected) {
+    if (!module.selected) {
       module.selected = true;
       this.moduleTree.map((type) => {
         type.children.map(item => {
-          if(module.id !== item.id) {
+          if (module.id !== item.id) {
             item.selected = false;
           }
-        })
+        });
       });
     }
   }

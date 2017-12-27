@@ -14,98 +14,76 @@ const routes: Routes = [
       component: ModulesComponent,
       children: [
         {
-          path: 'product/inceptor',
-          component: ProductComponent
-        },
-        {
-          path: 'product/slipstream',
-          component: ProductComponent
-        },
-        {
-          path: 'product/discover',
-          component: ProductComponent
-        },
-        {
-          path: 'product/hyperbase',
-          component: ProductComponent
-        },
-        {
-          path: 'product/search',
-          component: ProductComponent
-        },
-        {
-          path: 'product/sophon',
-          component: ProductComponent
-        },
-        {
-          path: 'product/guardian',
-          component: ProductComponent
-        },
-        {
-          path: 'product/hadoop',
-          component: ProductComponent
-        },
-        {
-          path: 'suite/pilot',
-          component: ProductComponent
-        },
-        {
-          path: 'suite/workflow',
-          component: ProductComponent
-        },
-        {
-          path: 'suite/transporter',
-          component: ProductComponent
-        },
-        {
-          path: 'suite/governor',
-          component: ProductComponent
-        },
-        {
-          path: 'suite/rubik',
-          component: ProductComponent
-        },
-        {
-          path: 'tool/waterdrop',
-          component: ProductComponent
-        },
-        {
-          path: 'tool/txsql',
-          component: ProductComponent
-        },
-        {
-          path: 'tool/prometheus',
-          component: ProductComponent
-        },
-        {
-          path: 'tool/kafka',
-          component: ProductComponent
-        },
-        {
+          path: 'platform/inceptor',
+          component: ProductComponent,
+        }, {
+          path: 'platform/slipstream',
+          component: ProductComponent,
+        }, {
+          path: 'platform/discover',
+          component: ProductComponent,
+        }, {
+          path: 'platform/hyperbase',
+          component: ProductComponent,
+        }, {
+          path: 'platform/search',
+          component: ProductComponent,
+        }, {
+          path: 'platform/sophon',
+          component: ProductComponent,
+        }, {
+          path: 'platform/kafka',
+          component: ProductComponent,
+        }, {
+          path: 'platform/redis',
+          component: ProductComponent,
+        }, {
+          path: 'platform/guardian',
+          component: ProductComponent,
+        }, {
+          path: 'platform/hadoop',
+          component: ProductComponent,
+        }, {
+          path: 'tool/pilot',
+          component: ProductComponent,
+        }, {
+          path: 'tool/workflow',
+          component: ProductComponent,
+        }, {
+          path: 'tool/transporter',
+          component: ProductComponent,
+        }, {
+          path: 'tool/governor',
+          component: ProductComponent,
+        }, {
+          path: 'tool/rubik',
+          component: ProductComponent,
+        }, {
           path: 'tool/zeppelin',
-          component: ProductComponent
-        },
-        {
+          component: ProductComponent,
+        }, {
           path: 'tool/midas',
-          component: ProductComponent
-        },
-        {
+          component: ProductComponent,
+        }, {
           path: 'tool/milano',
-          component: ProductComponent
-        },
-        {
+          component: ProductComponent,
+        }, {
           path: 'tool/terminal',
-          component: ProductComponent
-        },
-        {
-          path: 'tool/redis',
-          component: ProductComponent
-        },
-        {
+          component: ProductComponent,
+        }, {
+          path: 'system/txsql',
+          component: ProductComponent,
+        }, {
+          path: 'system/prometheus',
+          component: ProductComponent,
+        }, {
+          path: 'system/tos',
+          component: ProductComponent,
+        }, {
           path: '**',
-          redirectTo: 'product/inceptor'
-        }
-      ]
+          redirectTo: 'platform/inceptor',
+        },
+      ],
     },
   ];
 

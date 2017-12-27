@@ -1,9 +1,9 @@
 import { Component, OnInit, HostBinding, Input } from '@angular/core';
 
 @Component({
-  selector: 'document-breadcrumb',
+  selector: 'tdc-document-breadcrumb',
   templateUrl: './breadcrumb.component.html',
-  styleUrls: ['./breadcrumb.component.sass']
+  styleUrls: ['./breadcrumb.component.sass'],
 })
 
 export class BreadcrumbComponent implements OnInit {

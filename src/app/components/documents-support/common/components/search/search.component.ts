@@ -4,13 +4,13 @@ import {
   HostBinding,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
 } from '@angular/core';
 
 @Component({
-  selector: 'docs-search',
+  selector: 'tdc-docs-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.sass']
+  styleUrls: ['./search.component.sass'],
 })
 
 export class SearchComponent implements OnInit {
@@ -27,7 +27,7 @@ export class SearchComponent implements OnInit {
   }
 
   onKey(event) {
-    if(event.keyCode === 13) {
+    if (event.keyCode === 13) {
       this.documentSearch();
     }
   }

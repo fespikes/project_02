@@ -15,11 +15,11 @@ import { TranslateDeactivator, TranslateResolver, TranslateToken } from '../../i
 const routes: Routes = [
   {
     path: 'documents-support',
-    component: DocumentsSupportComponent
+    component: DocumentsSupportComponent,
   },
   {
     path: 'documents-support/docs-search',
-    component: DocumentsSearchComponent
+    component: DocumentsSearchComponent,
   },
   {
     path: 'documents-support/docs',
@@ -27,23 +27,23 @@ const routes: Routes = [
     children: [
       {
         path: 'products',
-        component: ProductDocumentComponent
+        component: ProductDocumentComponent,
       },
       {
         path: 'issues',
-        component: NormalIssuesComponent
+        component: NormalIssuesComponent,
       },
       {
         path: 'guides',
-        component: FreshGuidesComponent
-      }
-    ]
+        component: FreshGuidesComponent,
+      },
+    ],
   },
   {
     path: 'documents-support/docs-detail/:tag/:category/:version/:document',
-    component: DocumentsDetailComponent
+    component: DocumentsDetailComponent,
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -65,7 +65,7 @@ const routes: Routes = [
     TranslateDeactivator,
     {
       provide: TranslateToken,
-      useValue: 'modules',
+      useValue: 'documents',
     },
   ],
 })

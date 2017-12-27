@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { ProductUtilService } from './services/product-util.service';
@@ -16,12 +16,11 @@ export class ModulesComponent implements OnInit {
   constructor(
     private productUtilService: ProductUtilService,
     private productResService: ProductResService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit() {
-    this.initTreeState();//for the first stepped into
-
+    this.initTreeState(); // for the first stepped into
     this.listenRouteChange();
   }
 
@@ -29,7 +28,7 @@ export class ModulesComponent implements OnInit {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
       .subscribe((event) => {
-        if((event as any).url && (event as any).url.indexOf('/modules') > -1) {
+        if ((event as any).url && (event as any).url.indexOf('/modules') > -1) {
           this.initTreeState();
           this.productUtilService.anchorScreenTop();
         }
