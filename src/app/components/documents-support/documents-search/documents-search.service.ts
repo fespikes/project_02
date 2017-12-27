@@ -8,7 +8,7 @@ export class DocumentSearchService {
 
   MAX_LOOP = 10;
   constructor(
-    private documentResService: DocumentResService
+    private documentResService: DocumentResService,
   ) {
 
   }
@@ -37,7 +37,7 @@ export class DocumentSearchService {
     }
     while (stack.length) {
       item = stack.shift();
-      if(item.selected) {
+      if (item.selected) {
         item.selected = false;
         break;
       }
@@ -67,7 +67,7 @@ export class DocumentSearchService {
 
   initSearchTree(docsTree): any[] {
     const productDoc = this.getTreeModelByCategory(
-      ['TDH', 'DEV_SUITE', 'OPS'], docsTree
+      ['TDH', 'DEV_SUITE', 'OPS'], docsTree,
     );
     const faqDoc = this.getTreeModelByCategory(['FAQ'], docsTree);
     const introDoc = this.getTreeModelByCategory(['INTRO'], docsTree);
@@ -75,14 +75,14 @@ export class DocumentSearchService {
     return [
       this.makeProductDocList(productDoc),
       this.setFAQIntroDocState(faqDoc[0], 'faq'),
-      this.setFAQIntroDocState(introDoc[0], 'intro')
+      this.setFAQIntroDocState(introDoc[0], 'intro'),
     ];
   }
 
   getTreeModelByCategory(categories, docsTree): any[] {
-    let model = [];
+    const model = [];
     docsTree.map(node => {
-      if(categories.indexOf(node.id) > -1) {
+      if (categories.indexOf(node.id) > -1) {
         model.push(node);
       }
     });
@@ -98,11 +98,11 @@ export class DocumentSearchService {
       level: 1,
       tag: 'document',
       checkbox: false,
-      children: docObj
+      children: docObj,
     };
   }
 
-  setProductDocState(docList): any[] {//add level、checkbox
+  setProductDocState(docList): any[] { // add level、checkbox
     docList.map(category => {
         category.level = 2;
         category.checkbox = false;
@@ -137,43 +137,43 @@ export class DocumentSearchService {
   }
 
   initTreeSelectedState(treeModel, anchorId, sectionId): any[] {
-    if(anchorId === 'index') {
+    if (anchorId === 'index') {
       treeModel[0].selected = true;
       return treeModel;
     }
     let selectedNode = this.findTreeNode(anchorId, treeModel);
-    if(JSON.stringify(selectedNode) === '{}') {//in some case anchorId not in treeModel
+    if (JSON.stringify(selectedNode) === '{}') { // in some case anchorId not in treeModel
       selectedNode = this.findTreeNode(sectionId, treeModel);
     }
     selectedNode.selected = true;
     let loop = 0;
     while (selectedNode.parent !== 'index' && loop < this.MAX_LOOP) {
       selectedNode = this.findTreeNode(selectedNode.parent, treeModel);
-      selectedNode.expanded =true;
+      selectedNode.expanded = true;
       loop++;
     }
     return treeModel;
   }
 
   makeSearchParams(keyword, pagination, docs): Object {
-    let from = (pagination.page - 1) * pagination.size;
+    const from = (pagination.page - 1) * pagination.size;
     return {
       keywords: [keyword],
       documents: docs,
       from: from,
-      size: pagination.size
+      size: pagination.size,
     };
   }
 
   makeSelectedDocs(doc, collection, treeModel): Object {
-    if(doc.level === 4) {//version change
+    if (doc.level === 4) { // version change
       collection = this.searchVersionChange(doc, collection, treeModel);
-    }else {//manual change
+    }else { // manual change
       collection = this.searchManualChange(doc, collection, treeModel);
     }
     return {
       selectedDocs: collection,
-      treeModel: treeModel
+      treeModel: treeModel,
     };
   }
 
@@ -182,11 +182,11 @@ export class DocumentSearchService {
     this.updateTreeModelStateByVersion(manual, treeModel, doc);
     const param = `${doc.tag}/${manual.parent}/${doc.id}/${manual.id}`;
     collection.map((item, index) => {
-      if(item === param) {
+      if (item === param) {
         collection.splice(index, 1);
       }
     });
-    if(doc.selected) {
+    if (doc.selected) {
       collection.push(param);
     }
     return collection;
@@ -196,14 +196,14 @@ export class DocumentSearchService {
 
     this.updateTreeModelStateByManual(doc.id, treeModel, doc.selected);
     collection = this.clearManualParams(collection, doc);
-    if(doc.selected) {//select all version
+    if (doc.selected) { // select all version
       collection = this.addSearchParam(doc, collection);
     }
     return collection;
   }
 
   addSearchParam(doc, collection): any[] {
-    if(doc.tag === 'document') {
+    if (doc.tag === 'document') {
       doc.children.map(item => {
         const param = `${doc.tag}/${doc.parent}/${item.id}/${doc.id}`;
         collection.push(param);
@@ -216,7 +216,7 @@ export class DocumentSearchService {
   }
 
   updateTreeModelStateByManual(manualId, treeModel, selected) {
-    let versions: any = this.findTreeNode(manualId, treeModel);
+    const versions = this.findTreeNode(manualId, treeModel);
     versions.children.map(version => {
       version.selected = selected;
     });
@@ -224,8 +224,8 @@ export class DocumentSearchService {
 
   updateTreeModelStateByVersion(manual, treeModel, version) {
     const consistent = this.stateConsistent(manual.children, version.selected);
-    let manualNode: any = this.findTreeNode(manual.id, treeModel);
-    if(consistent) {
+    const manualNode = this.findTreeNode(manual.id, treeModel);
+    if (consistent) {
       manualNode.selected = version.selected;
     }else {
       manualNode.selected = false;
@@ -235,11 +235,11 @@ export class DocumentSearchService {
   stateConsistent(versions, selected): boolean {
     let count = 0;
     versions.map(item => {
-      if(!selected === !item.selected) {
+      if (!selected === !item.selected) {
         count++;
       }
     });
-    if(count === versions.length) {
+    if (count === versions.length) {
       return true;
     }else {
       return false;
@@ -247,9 +247,9 @@ export class DocumentSearchService {
   }
 
   clearManualParams(collection, doc): any[] {
-    let selectedDocs = [];
-    collection.map((item, index) => {//delete original version
-      if(!(item.indexOf(doc.parent) >= 0 && item.indexOf(doc.id) >= 0)) {
+    const selectedDocs = [];
+    collection.map((item, index) => { // delete original version
+      if (!(item.indexOf(doc.parent) >= 0 && item.indexOf(doc.id) >= 0)) {
         selectedDocs.push(item);
       }
     });
@@ -260,35 +260,35 @@ export class DocumentSearchService {
     return {
       page: pagination.page,
       size: pagination.size,
-      total: docsCount
+      total: docsCount,
     };
   }
 
-  keyHighLight(id, key, bgColor, operation): void{
-    if(!key || key === '') {
+  keyHighLight(id, key, bgColor, operation): void {
+    if (!key || key === '') {
       return;
     }
     const dom = document.getElementById(id);
     const nodes  = dom.childNodes as any;
     let originalStr = key;
-    let replacedStr = "<span style='background-color: "+bgColor+";'>"+key+"</span>";
-    if(operation === 'remove') {//default add key high light
-      originalStr = "<span style='background-color: "+bgColor+";'>"+key+"</span>";
+    let replacedStr = `<span style='background-color:${bgColor};'>${key}</span>`;
+    if (operation === 'remove') { // default add key high light
+      originalStr = `<span style='background-color:${bgColor};'>${key}</span>`;
       replacedStr = key;
     }
-    const rStr = new RegExp(originalStr, "g");
-    for(let i =0; i<nodes.length - 1; i++){
-      if(nodes[i].nodeType == 3 && /\s/.test(nodes[i].nodeValue)){
+    const rStr = new RegExp(originalStr, 'g"');
+    for (let i = 0; i < nodes.length - 1; i++) {
+      if (nodes[i].nodeType === 3 && /\s/.test(nodes[i].nodeValue)) {
         nodes[i].parentNode.removeChild(nodes[i]);
       }
-      nodes[i].innerHTML = nodes[i].innerHTML.replace(rStr,replacedStr);
+      nodes[i].innerHTML = nodes[i].innerHTML.replace(rStr, replacedStr);
     }
   }
 
   anchorTreeNode(nodeId, treeId): void {
     const node = document.getElementById(nodeId);
     const menuTree = document.getElementById(treeId);
-    if(!node || !menuTree) {
+    if (!node || !menuTree) {
       return;
     }
     menuTree.scrollTop = node.offsetTop - 60;
@@ -296,7 +296,7 @@ export class DocumentSearchService {
 
   anchorDocContent(nodeId, reDis): void {
     const ele = document.getElementById(nodeId);
-    if(nodeId === 'index' || !ele) {
+    if (nodeId === 'index' || !ele) {
       return;
     }
     const offsetLeft = ele.offsetLeft;
@@ -305,23 +305,23 @@ export class DocumentSearchService {
   }
 
   getSecondLevelNodeId(treeModel, node) {
-    const secondLevelNode = this.findSecondLevelNode(treeModel, node) as any;
+    const secondLevelNode = this.findSecondLevelNode(treeModel, node);
     return secondLevelNode.id;
   }
 
   hasSameSecondAncestor(node, treeModel, sectionId) {
-    const sectionNode = this.findTreeNode(sectionId, treeModel) as any;
-    if(sectionNode.level !== 2) {
+    const sectionNode = this.findTreeNode(sectionId, treeModel);
+    if (sectionNode.level !== 2) {
       return false;
     }
-    const secondLevelNode = this.findSecondLevelNode(treeModel, node) as any;
+    const secondLevelNode = this.findSecondLevelNode(treeModel, node);
     return secondLevelNode.id === sectionId;
   }
 
-  findSecondLevelNode(treeModel, node): Object {
-    let parentNode = this.findTreeNode(node.parent, treeModel) as any;
+  findSecondLevelNode(treeModel, node): any {
+    let parentNode = this.findTreeNode(node.parent, treeModel);
     let loop = 0;
-    while(parentNode.level > 2 && loop < this.MAX_LOOP ) {
+    while (parentNode.level > 2 && loop < this.MAX_LOOP ) {
       parentNode = this.findTreeNode(parentNode.parent, treeModel);
       loop++;
     }

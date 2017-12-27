@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'tdc-fresh-guides',
   templateUrl: './fresh-guides.component.html',
-  styleUrls: ['./fresh-guides.component.sass']
+  styleUrls: ['./fresh-guides.component.sass'],
 })
 
 export class FreshGuidesComponent implements OnInit {
@@ -21,7 +21,7 @@ export class FreshGuidesComponent implements OnInit {
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentResService: DocumentResService,
-    private router: Router
+    private router: Router,
   ) {
 
   }
@@ -35,14 +35,14 @@ export class FreshGuidesComponent implements OnInit {
     this.documentAPIService.getDocuments(tag, true).subscribe(
       result => {
         this.freshCourse = result[0].children;
-      }
+      },
     );
   }
 
   viewDetail(doc) {
-    if(doc.tag === 'course') {
+    if (doc.tag === 'course') {
       this.openOtherCoursePage(doc.url);
-    }else if(doc.tag === 'intro') {
+    }else if (doc.tag === 'intro') {
       this.viewFreshDocDetail(doc);
     }
   }

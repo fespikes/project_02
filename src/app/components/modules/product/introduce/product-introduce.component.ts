@@ -4,7 +4,7 @@ import { ProductContentService } from '../../services/product-content.service';
 import { ProductUtilService } from '../../services/product-util.service';
 
 @Component({
-  selector: 'product-introduce',
+  selector: 'tdc-product-introduce',
   templateUrl: './product-introduce.component.html',
   styleUrls: ['./product-introduce.component.sass'],
 })
@@ -13,19 +13,19 @@ export class ProductIntroduceComponent implements OnInit {
     img: {
       width: '',
       height: '',
-      url: ''
+      url: '',
     },
-    items: []
+    items: [],
   };
 
   constructor(
     private productContentService: ProductContentService,
-    private productUtilService: ProductUtilService
+    private productUtilService: ProductUtilService,
   ) { }
 
   ngOnInit() {
 
-    let moduleType = this.productUtilService.getModuleType(window.location.hash);
+    const moduleType = this.productUtilService.getModuleType(window.location.hash);
     this.productIntroduce = this.productContentService.getProductIntroduce(moduleType);
   }
 }

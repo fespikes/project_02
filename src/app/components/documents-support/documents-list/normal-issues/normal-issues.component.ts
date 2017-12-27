@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 
-import { DocumentAPIService } from '../../services/document.api.service'
+import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentResService } from '../../services/document.res.service';
 
 @Component({
   selector: 'tdc-normal-issues',
   templateUrl: './normal-issues.component.html',
-  styleUrls: ['./normal-issues.component.sass']
+  styleUrls: ['./normal-issues.component.sass'],
 })
 
 export class NormalIssuesComponent implements OnInit {
@@ -20,7 +20,7 @@ export class NormalIssuesComponent implements OnInit {
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentResService: DocumentResService,
-    private router: Router
+    private router: Router,
   ) {
 
   }
@@ -33,7 +33,7 @@ export class NormalIssuesComponent implements OnInit {
     this.documentAPIService.getDocuments(tag, true).subscribe(
       result => {
         this.issueDocList = result[0].children;
-      }
+      },
     );
   }
 

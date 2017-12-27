@@ -4,13 +4,13 @@ import {
   HostBinding,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
 } from '@angular/core';
 
 @Component({
   selector: 'tdc-horizontal-list',
   templateUrl: './horizontal-list.component.html',
-  styleUrls: ['./horizontal-list.component.sass']
+  styleUrls: ['./horizontal-list.component.sass'],
 })
 
 export class HorizontalListComponent implements OnInit {

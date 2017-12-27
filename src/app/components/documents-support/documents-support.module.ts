@@ -40,7 +40,7 @@ import { SharedModule } from '../../shared';
     TuiModule,
     TdcModule,
     I18nModule,
-    SharedModule
+    SharedModule,
   ],
   declarations: [
     DocumentsSupportComponent,
@@ -55,7 +55,7 @@ import { SharedModule } from '../../shared';
     DocTreeComponent,
     DocsListComponent,
     HorizontalListComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
   ],
   providers: [
     TdcApiService,
@@ -63,7 +63,7 @@ import { SharedModule } from '../../shared';
     DocumentStorageService,
     DocumentResService,
     DocumentUtilService,
-    DocumentAPIService
-  ]
+    DocumentAPIService,
+  ],
 })
 export class DocumentsSupportModule { }

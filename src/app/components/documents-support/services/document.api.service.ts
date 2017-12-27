@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import {Http, Headers} from '@angular/http';//for mock data
+import {Http, Headers} from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 
@@ -8,13 +8,14 @@ import { TdcApiService } from '../../../shared/services/api.service';
 
 @Injectable()
 export class DocumentAPIService {
+  private version = '/docs/v2';
+
   constructor(
     private api: TdcApiService,
-    private http: Http
+    private http: Http,
   ) {
 
   }
-  private version = '/docs/v2';
 
   private get headers(): Headers {
     return new Headers({
@@ -25,27 +26,27 @@ export class DocumentAPIService {
 
   getSearchTreeModel(): Observable<any> {
     return this.http.get(
-      `${this.version}/document/_ls?r=true&reverse=true`
+      `${this.version}/document/_ls?r=true&reverse=true`,
     ).map((res) => res.json());
   }
 
   getDocuments(tag, reverse): Observable<any> {
     return this.http.get(
-      `${this.version}/document/_ls?r=true&tag=${tag}&reverse=${reverse}`
+      `${this.version}/document/_ls?r=true&tag=${tag}&reverse=${reverse}`,
     ).map((res) => res.json());
   }
 
   getDocDetail(url): Observable<any> {
     return this.http.get(
       `${this.version}/${url}`,
-      { headers: this.headers }
+      { headers: this.headers },
     ).map((res) => res.json());
   }
 
   getDocTree(url): Observable<any> {
     return this.http.get(
       `${this.version}/${url}`,
-      { headers: this.headers }
+      { headers: this.headers },
     ).map((res) => res.json());
   }
 
@@ -53,14 +54,14 @@ export class DocumentAPIService {
     return this.http.post(
       `${this.version}/search`,
       JSON.stringify(data),
-      { headers: this.headers }
-    ).map((res) => res.json())
+      { headers: this.headers },
+    ).map((res) => res.json());
   }
 
   getDocSheet(): Observable<any> {
     return this.http.get(
       '/assets/styles/css/sheet.css',
-      { headers: this.headers }
+      { headers: this.headers },
     ).map((res) => res);
   }
 }

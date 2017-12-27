@@ -1,3 +1,36 @@
 {
-
+  "TUI":{
+    "SELECT":{
+    "NO_OPTIONS":"No Select Option"
+    },
+    "PAGINATION":{
+    "SHOW_ROW_COUNT":"Show Row Count",
+    "GO_TO":"Jump To",
+    "GO_TO_PAGE":"Page",
+    "CONFIRM":"Confirm"
+    }
+  },
+  "DOCUMENTS":{
+    "SEARCH":"Search",
+    "SEARCH_PLACEHOLDER":"Please Enter Your Keyword",
+    "DOCUMENT_SUPPORT":"Document & Support",
+    "PRODUCT_DOCUMENT":"Product Document",
+    "NORMAL_ISSUE":"Normal Issue",
+    "FRESH_GUIDE":"Fresh Guide",
+    "SEARCH_RESULTS":"Search Results",
+    "SEARCH_FILTER":"Search Filter",
+    "EXPAND_ALL":"Expand All",
+    "COLLAPSE_ALL":"Collapse All",
+    "SEARCH_RELATED_RESULT":"Search Related Result",
+    "ITEM":"Item",
+    "PRODUCT":{
+    },
+    "ISSUE":{
+    },
+    "GUIDE":{
+    "FRESH_COURSE":"Fresh Course",
+    "OTHER_COURSE":"Other Course"
+    }
+  }
 }
+  

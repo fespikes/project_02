@@ -1,3 +1,35 @@
 {
-
+  "TUI":{
+    "SELECT":{
+      "NO_OPTIONS":"没有可选择的选项"
+    },
+    "PAGINATION":{
+      "SHOW_ROW_COUNT":"显示行数",
+      "GO_TO":"跳转至第",
+      "GO_TO_PAGE":"页",
+      "CONFIRM":"确定"
+    }
+  },
+  "DOCUMENTS":{
+    "SEARCH":"搜索",
+    "SEARCH_PLACEHOLDER":"请输入您要的关键词",
+    "DOCUMENT_SUPPORT":"文档与支持",
+    "PRODUCT_DOCUMENT":"产品文档",
+    "NORMAL_ISSUE":"常见问题",
+    "FRESH_GUIDE":"新手入门",
+    "SEARCH_RESULTS":"搜索结果",
+    "SEARCH_FILTER":"搜索条件",
+    "EXPAND_ALL":"全部展开",
+    "COLLAPSE_ALL":"全部收起",
+    "SEARCH_RELATED_RESULT":"搜索相关结果",
+    "ITEM":"条",
+    "PRODUCT":{
+    },
+    "ISSUE":{
+    },
+    "GUIDE":{
+      "FRESH_COURSE":"新手教程",
+      "OTHER_COURSE":"其他教程"
+    }
+  }
 }

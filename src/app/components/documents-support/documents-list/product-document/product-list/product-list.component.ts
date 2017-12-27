@@ -4,7 +4,7 @@ import {
   HostBinding,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
 } from '@angular/core';
 
 import { Router } from '@angular/router';
@@ -14,7 +14,7 @@ import { DocumentResService } from '../../../services/document.res.service';
 @Component({
   selector: 'tdc-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.sass']
+  styleUrls: ['./product-list.component.sass'],
 })
 
 export class ProductListComponent implements OnInit {
@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private documentResService: DocumentResService,
-    private router: Router
+    private router: Router,
   ) {
 
   }

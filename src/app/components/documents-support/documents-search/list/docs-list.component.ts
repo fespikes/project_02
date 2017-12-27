@@ -4,7 +4,8 @@ import {
   Input,
   Output,
   EventEmitter,
-  HostBinding
+  HostBinding,
+  AfterViewChecked,
 } from '@angular/core';
 
 import { DocumentUtilService } from '../../services/document.util.service';
@@ -16,7 +17,7 @@ import { DocumentResService } from '../../services/document.res.service';
   styleUrls: ['./docs-list.component.sass'],
 })
 
-export class DocsListComponent implements OnInit {
+export class DocsListComponent implements OnInit, AfterViewChecked {
   @HostBinding('class.docs-list') hostClass = true;
 
   @Input() docsList: any[];
@@ -27,7 +28,7 @@ export class DocsListComponent implements OnInit {
 
   constructor(
     private documentUtilService: DocumentUtilService,
-    private documentResService: DocumentResService
+    private documentResService: DocumentResService,
   ) {
 
   }
@@ -36,9 +37,9 @@ export class DocsListComponent implements OnInit {
   }
 
   ngAfterViewChecked() {
-    if(this.docsList && this.docsList.length > 0) {
+    if (this.docsList && this.docsList.length > 0) {
       this.renderDocSummary(this.docsList);
-      if(!this.documentResService.getSearchCompleted()) {
+      if (!this.documentResService.getSearchCompleted()) {
         this.documentUtilService.appendDocCssSheet(
           '.docs-list em{background-color:#ffff00}');
       }
@@ -50,17 +51,17 @@ export class DocsListComponent implements OnInit {
     docsList.some((doc) => {
       const mountId = this.getMountId(doc);
       const mountEl = document.getElementById(mountId);
-      if(mountEl) {
+      if (mountEl) {
         mountEl.innerHTML = doc.summary;
       }else {
         return false;
       }
-    })
+    });
   }
 
-  getMountId(doc) {//for backend response data lack of id=0 case
+  getMountId(doc) { // for backend response data lack of id=0 case
     let mountId = this.DOC_LIST_ITEM_PREFIX;
-    if(doc.id) {
+    if (doc.id) {
       mountId += doc.id;
     }
     return mountId;

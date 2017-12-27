@@ -18,7 +18,7 @@ import { SharedModule } from '../../shared';
 import { ProductContentService } from './services/product-content.service';
 import { ProductBannerService } from './services/product-banner.service';
 import { ProductUtilService } from './services/product-util.service';
-import { ProductResService } from "./services/product-res.service";
+import { ProductResService } from './services/product-res.service';
 
 import { DocumentSearchService } from '../documents-support/documents-search/documents-search.service';
 
@@ -45,7 +45,7 @@ import { DocumentSearchService } from '../documents-support/documents-search/doc
     ProductBannerService,
     ProductUtilService,
     ProductResService,
-    TdcApiService
+    TdcApiService,
   ],
 })
 export class ModulesModule { }

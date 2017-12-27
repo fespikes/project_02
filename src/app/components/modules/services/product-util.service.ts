@@ -5,7 +5,7 @@ import { DocumentSearchService } from '../../documents-support/documents-search/
 @Injectable()
 export class ProductUtilService {
   constructor(
-    private documentSearchService: DocumentSearchService
+    private documentSearchService: DocumentSearchService,
   ) {
 
   }
@@ -28,7 +28,7 @@ export class ProductUtilService {
   anchorTabContent(anchorTag, scrollTop): void {
     const ele = document.getElementsByTagName(anchorTag)[0];
     const offsetLeft = ele.offsetLeft;
-    let offsetTop = ele.offsetTop + scrollTop;
+    const offsetTop = ele.offsetTop + scrollTop;
     scrollTo(offsetLeft, offsetTop);
   }
 
