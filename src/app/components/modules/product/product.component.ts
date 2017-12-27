@@ -18,13 +18,13 @@ export class ProductComponent implements OnInit {
     alias: '',
     title: '',
     subTitle: '',
-    logoUrl: ''
+    logoUrl: '',
   };
   tabItems = [];
-  MODULE_INTRODUCE_TAG = 'product-introduce';
-  MODULE_ADVANTAGE_TAG = 'product-advantage';
+  MODULE_INTRODUCE_TAG = 'tdc-product-introduce';
+  MODULE_ADVANTAGE_TAG = 'tdc-product-advantage';
 
-  ANCHOR_TOP = 402;//topNav height plus banner height
+  ANCHOR_TOP = 402; // topNav height plus banner height
   TAB_HEIGHT = 56;
   private offsetX = 0;
   private offsetY = 0;
@@ -33,13 +33,13 @@ export class ProductComponent implements OnInit {
     private productBannerService: ProductBannerService,
     private productUtilService: ProductUtilService,
     private productResService: ProductResService,
-    private element: ElementRef
+    private element: ElementRef,
   ) {
 
   }
 
   ngOnInit() {
-    let moduleType = this.productUtilService.getModuleType(window.location.hash);
+    const moduleType = this.productUtilService.getModuleType(window.location.hash);
     this.bannerInfo = this.productBannerService.getModuleBannerInfo(moduleType);
     this.tabItems = this.productResService.getModuleTabItems();
   }
@@ -57,16 +57,16 @@ export class ProductComponent implements OnInit {
 
   getScrollTop(tabName, className) {
     let scrollTop = this.ANCHOR_TOP;
-    if(className === 'tab-ul') {
+    if (className === 'tab-ul') {
       if (tabName === 'introduce') {
         scrollTop = this.ANCHOR_TOP - this.TAB_HEIGHT;
       } else if (tabName === 'advantage') {
         scrollTop = this.ANCHOR_TOP - 2 * this.TAB_HEIGHT;
       }
-    }else if(className === 'fixed') {
-      if(tabName === 'introduce') {
+    }else if (className === 'fixed') {
+      if (tabName === 'introduce') {
         scrollTop = this.ANCHOR_TOP;
-      }else if(tabName === 'advantage') {
+      }else if (tabName === 'advantage') {
         scrollTop = this.ANCHOR_TOP - this.TAB_HEIGHT;
       }
     }
