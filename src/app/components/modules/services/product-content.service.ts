@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductContentService {
+  IMG_WIDTH_LARGER = '600px';
   IMG_WIDTH_LARGE = '560px';
   IMG_WIDTH_SMALL = '420px';
+  IMG_WIDTH_SMALLER = '380px';
 
   constructor() {
 
@@ -72,7 +74,7 @@ export class ProductContentService {
           img: {
             url: 'MODULES.SLIPSTREAM.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
-            height: '212px',
+            height: '200px',
           },
           items: [
             {
@@ -161,8 +163,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.HYPERBASE.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH_LARGE,
-            height: '285px',
+            width: this.IMG_WIDTH_LARGER,
+            height: '300px',
           },
           items: [
             {
@@ -188,8 +190,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.SEARCH.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH_SMALL,
-            height: '364px',
+            width: this.IMG_WIDTH_SMALLER,
+            height: '340px',
           },
           items: [
             {
@@ -239,8 +241,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.SOPHON.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH_LARGE,
-            height: '277px',
+            width: this.IMG_WIDTH_LARGER,
+            height: '290px',
           },
           items: [
             {
@@ -295,7 +297,7 @@ export class ProductContentService {
           img: {
             url: 'MODULES.GUARDIAN.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
-            height: '378px',
+            height: '380px',
           },
           items: [
             {
@@ -691,8 +693,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.TXSQL.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH_LARGE,
-            height: '333px',
+            width: this.IMG_WIDTH_LARGER,
+            height: '350px',
           },
           items: [
             {
@@ -736,7 +738,7 @@ export class ProductContentService {
           img: {
             url: 'MODULES.MILANO.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
-            height: '282px',
+            height: '280px',
           },
           items: [
             {
@@ -835,7 +837,7 @@ export class ProductContentService {
           img: {
             url: 'MODULES.KAFKA.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
-            height: '266px',
+            height: '270px',
           },
           items: [
             {
