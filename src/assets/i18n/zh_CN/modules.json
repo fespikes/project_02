@@ -83,7 +83,7 @@
       "INTRODUCE_IMG_URL":"modules/hyperbase-introduce.jpg",
       "INTRODUCE_1":"Transwarp Hyperbase实时数据库是建立在Apache HBase和Elasticsearch基础之上，融合了多种索引技术、分布式事务处理、全文实时搜索、图形数据库在内的实时NoSQL数据库。",
       "INTRODUCE_2":"Hyperbase可以高效地支持企业的在线OLTP应用、高并发OLAP应用、批处理应用、全文搜索或高并发图形数据库检索应用。结合Inceptor高速SQL引擎，是企业创建可扩展在线运营数据库（Operational Database）或者实时分析型数据库（ODS - Operational Data Store）的最佳选择。",
-      "INTRODUCE_3":"Hyperbase可以服务于高并发的查询业务，满足上百万用户的高并发查询需求，从百亿历史数据中找到精确结果，并在毫秒级内返回查询结果，同时可以提供高速的数据入库。",
+      "INTRODUCE_3":"Hyperbase可以服务于高并发查询业务，满足上百万用户的高并发查询需求，从百亿历史数据中找到精确结果，并在毫秒级内返回查询结果，同时可提供高速的数据入库。",
       "INTRODUCE_4":"Hyperbase提供对于非结构化数据的存储和检索能力。同时可以优化小文件存储，采用LOB形式存储小文件特殊技术防止HBase Region频繁Compaction与Split，防止I/O过高引起集群不稳定，因此能很好的适用于大量小文件视频云、图片云、音频云，共享文件存储的场景。",
       "ADVANTAGE_1":"完整的SQL支持",
       "ADVANTAGE_2":"支持业内标准ANSI SQL2003语法，方便业务开发。通过Inceptor的支持采用SQL进行批处理和高并发查询，批处理比Map/Reduce快10倍，实现秒级的高效分析。可从Hyperbase的行存储转换成Holodesk的列存储，同时支持在线查询和高速OLAP分析。",

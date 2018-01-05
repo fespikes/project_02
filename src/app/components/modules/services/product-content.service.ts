@@ -20,6 +20,7 @@ export class ProductContentService {
             url: 'MODULES.INCEPTOR.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '400px',
+            margin_bottom: '20px',
           },
           items: [
             {
@@ -75,6 +76,7 @@ export class ProductContentService {
             url: 'MODULES.SLIPSTREAM.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '200px',
+            margin_bottom: '25px',
           },
           items: [
             {
@@ -130,6 +132,7 @@ export class ProductContentService {
             url: 'MODULES.DISCOVER.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
             height: '250px',
+            margin_bottom: '20px',
           },
           items: [
             {
@@ -165,6 +168,7 @@ export class ProductContentService {
             url: 'MODULES.HYPERBASE.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGER,
             height: '300px',
+            margin_bottom: '25px',
           },
           items: [
             {
@@ -192,6 +196,7 @@ export class ProductContentService {
             url: 'MODULES.SEARCH.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALLER,
             height: '340px',
+            margin_bottom: '20px',
           },
           items: [
             {
@@ -243,6 +248,7 @@ export class ProductContentService {
             url: 'MODULES.SOPHON.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGER,
             height: '290px',
+            margin_bottom: '30px',
           },
           items: [
             {
@@ -298,6 +304,7 @@ export class ProductContentService {
             url: 'MODULES.GUARDIAN.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
             height: '380px',
+            margin_bottom: '20px',
           },
           items: [
             {
@@ -490,6 +497,9 @@ export class ProductContentService {
               content: 'MODULES.WORKFLOW.INTRODUCE_4',
             },
             {
+              type: 'blank',
+            },
+            {
               type: 'title',
               content: 'MODULES.WORKFLOW.INTRODUCE_5',
             },
@@ -538,6 +548,7 @@ export class ProductContentService {
             url: 'MODULES.TRANSPORTER.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '384px',
+            margin_bottom: '20px',
           },
           items: [
             {
@@ -589,6 +600,7 @@ export class ProductContentService {
             url: 'MODULES.GOVERNOR.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '322px',
+            margin_bottom: '10px',
           },
           items: [
             {
@@ -606,6 +618,9 @@ export class ProductContentService {
             {
               type: 'text',
               content: 'MODULES.GOVERNOR.INTRODUCE_4',
+            },
+            {
+              type: 'blank',
             },
             {
               type: 'title',
@@ -640,6 +655,7 @@ export class ProductContentService {
             url: 'MODULES.RUBIK.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '261px',
+            margin_bottom: '20px',
           },
           items: [
             {
@@ -695,6 +711,7 @@ export class ProductContentService {
             url: 'MODULES.TXSQL.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGER,
             height: '350px',
+            margin_bottom: '20px',
           },
           items: [
             {
@@ -750,6 +767,12 @@ export class ProductContentService {
               content: 'MODULES.MILANO.INTRODUCE_2',
             },
             {
+              type: 'blank',
+            },
+            {
+              type: 'blank',
+            },
+            {
               type: 'title',
               content: 'MODULES.MILANO.INTRODUCE_3',
             },
@@ -798,6 +821,7 @@ export class ProductContentService {
             url: 'MODULES.PROMETHEUS.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
             height: '215px',
+            margin_bottom: '15px',
           },
           items: [
             {
@@ -838,6 +862,7 @@ export class ProductContentService {
             url: 'MODULES.KAFKA.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
             height: '270px',
+            margin_bottom: '10px',
           },
           items: [
             {
@@ -877,6 +902,7 @@ export class ProductContentService {
             url: 'MODULES.ZEPPELIN.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '386px',
+            margin_bottom: '60px',
           },
           items: [
             {
@@ -962,6 +988,9 @@ export class ProductContentService {
             {
               type: 'text',
               content: 'MODULES.MIDAS.INTRODUCE_4',
+            },
+            {
+              type: 'blank',
             },
             {
               type: 'title',
@@ -1081,6 +1110,9 @@ export class ProductContentService {
             {
               type: 'text',
               content: 'MODULES.TOS.INTRODUCE_3',
+            },
+            {
+              type: 'blank',
             },
             {
               type: 'title',
