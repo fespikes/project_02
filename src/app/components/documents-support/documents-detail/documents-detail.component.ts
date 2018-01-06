@@ -80,7 +80,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
         this.documentUtilService.appendDocContent(result.content);
         this.documentUtilService.hideDocElement('header');
         this.anchorDocContent();
-        this.highLightKey('add');
+        // this.highLightKey('add'); // exist issue in some case
       },
     );
   }
