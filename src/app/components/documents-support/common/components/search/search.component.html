@@ -7,10 +7,10 @@
     [(ngModel)]="keyword"
     (keyup)="onKey($event)"
     placeholder="{{'DOCUMENTS.SEARCH_PLACEHOLDER' | translate}}" />
-  <button
+  <input
+    type="submit"
     (click)="documentSearch()"
     class="search-btn"
-  >
-    {{'DOCUMENTS.SEARCH' | translate}}
-  </button>
+    value="{{'DOCUMENTS.SEARCH' | translate}}"
+  />    
 </div>
