@@ -11,9 +11,7 @@
   >
     <img
       tccImgSrc="{{productIntroduce.img.url | translate}}"
-      [ngStyle]="{
-        'margin': '0 50px 20px 0', 
-        'margin-bottom': productIntroduce.img.margin_bottom}"
+      [ngStyle]="{'margin': '0 50px 20px 0'}"
     />
   </div>
   <ul
@@ -44,10 +42,6 @@
       >
         {{item.content | translate}}
       </p>
-      <p
-        *ngIf="item.type === 'blank'"
-        [ngStyle]="{'height': '24px'}"
-      ></p>
       <ul
         class="group-text"
         *ngIf="item.type === 'group-text'"
