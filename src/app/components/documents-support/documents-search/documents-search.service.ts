@@ -67,7 +67,7 @@ export class DocumentSearchService {
 
   initSearchTree(docsTree): any[] {
     const productDoc = this.getTreeModelByCategory(
-      ['PLATFORM', 'DEV_SUITE', 'OPS', 'SYSTEM'], docsTree,
+      ['TDH', 'DEV_SUITE', 'OPS'], docsTree,
     );
     const faqDoc = this.getTreeModelByCategory(['FAQ'], docsTree);
     const introDoc = this.getTreeModelByCategory(['INTRO'], docsTree);
@@ -276,7 +276,7 @@ export class DocumentSearchService {
       originalStr = `<span style='background-color:${bgColor};'>${key}</span>`;
       replacedStr = key;
     }
-    const rStr = new RegExp(originalStr, 'gi');
+    const rStr = new RegExp(originalStr, 'g"');
     for (let i = 0; i < nodes.length - 1; i++) {
       if (nodes[i].nodeType === 3 && /\s/.test(nodes[i].nodeValue)) {
         nodes[i].parentNode.removeChild(nodes[i]);

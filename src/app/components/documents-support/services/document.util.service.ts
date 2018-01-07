@@ -45,25 +45,21 @@ export class DocumentUtilService {
   }
 
   addDocsVersions(data): any[] {
-    const docList = [];
     data.map(category => {
-      if (category.children && category.children.length > 0) {
-        const versionList = [], docsCollection = {};
-        category.children.map(version => {
-          versionList.push({
-            id: version.id,
-            name: version.name,
-          });
-          docsCollection[version.name] = this.addDocsCollection(version.children);
+      const versionList = [];
+      const docsCollection = {};
+      category.children.map(version => {
+        versionList.push({
+          id: version.id,
+          name: version.name,
         });
-        category.versionList = versionList;
-        category.docsCollection = docsCollection;
-        category.currentVersion = category.children[category.children.length - 1];
-
-        docList.push(category);
-      }
+        docsCollection[version.name] = this.addDocsCollection(version.children);
+      });
+      category.versionList = versionList;
+      category.docsCollection = docsCollection;
+      category.currentVersion = category.children[category.children.length - 1];
     });
-    return docList;
+    return data;
   }
 
   addDocsCollection(data): any[] {

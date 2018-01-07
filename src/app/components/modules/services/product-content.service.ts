@@ -2,10 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductContentService {
-  IMG_WIDTH_LARGER = '600px';
   IMG_WIDTH_LARGE = '560px';
   IMG_WIDTH_SMALL = '420px';
-  IMG_WIDTH_SMALLER = '380px';
 
   constructor() {
 
@@ -20,7 +18,6 @@ export class ProductContentService {
             url: 'MODULES.INCEPTOR.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '400px',
-            margin_bottom: '20px',
           },
           items: [
             {
@@ -75,8 +72,7 @@ export class ProductContentService {
           img: {
             url: 'MODULES.SLIPSTREAM.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
-            height: '200px',
-            margin_bottom: '25px',
+            height: '212px',
           },
           items: [
             {
@@ -132,7 +128,6 @@ export class ProductContentService {
             url: 'MODULES.DISCOVER.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
             height: '250px',
-            margin_bottom: '20px',
           },
           items: [
             {
@@ -166,9 +161,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.HYPERBASE.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH_LARGER,
-            height: '300px',
-            margin_bottom: '25px',
+            width: this.IMG_WIDTH_LARGE,
+            height: '285px',
           },
           items: [
             {
@@ -194,9 +188,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.SEARCH.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH_SMALLER,
-            height: '340px',
-            margin_bottom: '20px',
+            width: this.IMG_WIDTH_SMALL,
+            height: '364px',
           },
           items: [
             {
@@ -246,9 +239,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.SOPHON.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH_LARGER,
-            height: '290px',
-            margin_bottom: '30px',
+            width: this.IMG_WIDTH_LARGE,
+            height: '277px',
           },
           items: [
             {
@@ -303,8 +295,7 @@ export class ProductContentService {
           img: {
             url: 'MODULES.GUARDIAN.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
-            height: '380px',
-            margin_bottom: '20px',
+            height: '378px',
           },
           items: [
             {
@@ -497,9 +488,6 @@ export class ProductContentService {
               content: 'MODULES.WORKFLOW.INTRODUCE_4',
             },
             {
-              type: 'blank',
-            },
-            {
               type: 'title',
               content: 'MODULES.WORKFLOW.INTRODUCE_5',
             },
@@ -548,7 +536,6 @@ export class ProductContentService {
             url: 'MODULES.TRANSPORTER.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '384px',
-            margin_bottom: '20px',
           },
           items: [
             {
@@ -600,7 +587,6 @@ export class ProductContentService {
             url: 'MODULES.GOVERNOR.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '322px',
-            margin_bottom: '10px',
           },
           items: [
             {
@@ -618,9 +604,6 @@ export class ProductContentService {
             {
               type: 'text',
               content: 'MODULES.GOVERNOR.INTRODUCE_4',
-            },
-            {
-              type: 'blank',
             },
             {
               type: 'title',
@@ -655,7 +638,6 @@ export class ProductContentService {
             url: 'MODULES.RUBIK.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '261px',
-            margin_bottom: '20px',
           },
           items: [
             {
@@ -709,9 +691,8 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.TXSQL.INTRODUCE_IMG_URL',
-            width: this.IMG_WIDTH_LARGER,
-            height: '350px',
-            margin_bottom: '20px',
+            width: this.IMG_WIDTH_LARGE,
+            height: '333px',
           },
           items: [
             {
@@ -755,7 +736,7 @@ export class ProductContentService {
           img: {
             url: 'MODULES.MILANO.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
-            height: '280px',
+            height: '282px',
           },
           items: [
             {
@@ -765,12 +746,6 @@ export class ProductContentService {
             {
               type: 'text',
               content: 'MODULES.MILANO.INTRODUCE_2',
-            },
-            {
-              type: 'blank',
-            },
-            {
-              type: 'blank',
             },
             {
               type: 'title',
@@ -821,7 +796,6 @@ export class ProductContentService {
             url: 'MODULES.PROMETHEUS.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
             height: '215px',
-            margin_bottom: '15px',
           },
           items: [
             {
@@ -861,8 +835,7 @@ export class ProductContentService {
           img: {
             url: 'MODULES.KAFKA.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_SMALL,
-            height: '270px',
-            margin_bottom: '10px',
+            height: '266px',
           },
           items: [
             {
@@ -902,7 +875,6 @@ export class ProductContentService {
             url: 'MODULES.ZEPPELIN.INTRODUCE_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '386px',
-            margin_bottom: '60px',
           },
           items: [
             {
@@ -988,9 +960,6 @@ export class ProductContentService {
             {
               type: 'text',
               content: 'MODULES.MIDAS.INTRODUCE_4',
-            },
-            {
-              type: 'blank',
             },
             {
               type: 'title',
@@ -1110,9 +1079,6 @@ export class ProductContentService {
             {
               type: 'text',
               content: 'MODULES.TOS.INTRODUCE_3',
-            },
-            {
-              type: 'blank',
             },
             {
               type: 'title',
