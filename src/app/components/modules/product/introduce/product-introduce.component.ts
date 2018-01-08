@@ -14,6 +14,7 @@ export class ProductIntroduceComponent implements OnInit {
       width: '',
       height: '',
       url: '',
+      margin_bottom: 0,
     },
     items: [],
   };
