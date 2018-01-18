@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentResService } from '../../services/document.res.service';
+import { DocumentUtilService } from '../../services/document.util.service';
+import { CommonService } from '../../../common/services/common.service';
 
 import { Router } from '@angular/router';
 
@@ -14,6 +16,7 @@ import { Router } from '@angular/router';
 export class FreshGuidesComponent implements OnInit {
   otherCourse = [];
   freshCourse = [];
+  videoCourse = [];
 
   CATEGORY = 'INTRO';
   VERSION = 'none';
@@ -21,14 +24,17 @@ export class FreshGuidesComponent implements OnInit {
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentResService: DocumentResService,
+    private documentUtilService: DocumentUtilService,
+    private commonService: CommonService,
     private router: Router,
   ) {
-
   }
 
   ngOnInit() {
     this.getFreshGuides('intro');
     this.otherCourse = this.documentResService.getOtherCourse();
+    const videoTutorial = this.commonService.getVideoTutorial();
+    this.videoCourse = this.documentUtilService.makeVideoCourse(videoTutorial);
   }
 
   getFreshGuides(tag) {
@@ -41,14 +47,12 @@ export class FreshGuidesComponent implements OnInit {
 
   viewDetail(doc) {
     if (doc.tag === 'course') {
-      this.openOtherCoursePage(doc.url);
+      window.open(doc.url);
     }else if (doc.tag === 'intro') {
       this.viewFreshDocDetail(doc);
+    }else if (doc.tag === 'video') {
+      this.router.navigate([doc.routerLink]);
     }
-  }
-
-  openOtherCoursePage(url) {
-    window.open(url);
   }
 
   viewFreshDocDetail(doc) {

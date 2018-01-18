@@ -25,6 +25,7 @@ import { DocumentResService } from './services/document.res.service';
 import { DocumentSearchService } from './documents-search/documents-search.service';
 import { DocumentStorageService } from './services/document.storage.service';
 import { TdcApiService } from '../../shared/services/api.service';
+import { CommonService } from '../common/services/common.service';
 
 import { TuiModule } from '../../tui/tui.module';
 import { TdcModule } from '../common/components/tdc.module';
@@ -64,6 +65,7 @@ import { SharedModule } from '../../shared';
     DocumentResService,
     DocumentUtilService,
     DocumentAPIService,
+    CommonService,
   ],
 })
 export class DocumentsSupportModule { }
