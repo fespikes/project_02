@@ -24,8 +24,8 @@ import { DocumentAPIService } from './services/document.api.service';
 import { DocumentResService } from './services/document.res.service';
 import { DocumentSearchService } from './documents-search/documents-search.service';
 import { DocumentStorageService } from './services/document.storage.service';
-import { TdcApiService } from '../../shared/services/api.service';
 import { CommonService } from '../common/services/common.service';
+import { MessageService } from '../../tui';
 
 import { TuiModule } from '../../tui/tui.module';
 import { TdcModule } from '../common/components/tdc.module';
@@ -59,12 +59,12 @@ import { SharedModule } from '../../shared';
     BreadcrumbComponent,
   ],
   providers: [
-    TdcApiService,
     DocumentSearchService,
     DocumentStorageService,
     DocumentResService,
     DocumentUtilService,
     DocumentAPIService,
+    MessageService,
     CommonService,
   ],
 })

@@ -4,14 +4,11 @@ import {Http, Headers} from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 
-import { TdcApiService } from '../../../shared/services/api.service';
-
 @Injectable()
 export class DocumentAPIService {
   private version = '/docs/v2';
 
   constructor(
-    private api: TdcApiService,
     private http: Http,
   ) {
 
@@ -24,30 +21,48 @@ export class DocumentAPIService {
     });
   }
 
+  private formatErrors(error: any) {
+    let data;
+    try {
+      data = error.json();
+    } catch (err) {
+      data = {error: 'fail to parse'};
+    }
+    return Observable.throw(data);
+  }
+
   getSearchTreeModel(): Observable<any> {
     return this.http.get(
       `${this.version}/document/_ls?r=true&reverse=true`,
-    ).map((res) => res.json());
+    )
+    .catch(this.formatErrors)
+    .map((res) => res.json());
   }
 
   getDocuments(tag, reverse): Observable<any> {
     return this.http.get(
       `${this.version}/document/_ls?r=true&tag=${tag}&reverse=${reverse}`,
-    ).map((res) => res.json());
+    )
+    .catch(this.formatErrors)
+    .map((res) => res.json());
   }
 
   getDocDetail(url): Observable<any> {
     return this.http.get(
       `${this.version}/${url}`,
       { headers: this.headers },
-    ).map((res) => res.json());
+    )
+    .catch(this.formatErrors)
+    .map((res) => res.json());
   }
 
   getDocTree(url): Observable<any> {
     return this.http.get(
       `${this.version}/${url}`,
       { headers: this.headers },
-    ).map((res) => res.json());
+    )
+    .catch(this.formatErrors)
+    .map((res) => res.json());
   }
 
   docsSearch(data): Observable<any> {
@@ -55,13 +70,17 @@ export class DocumentAPIService {
       `${this.version}/search`,
       JSON.stringify(data),
       { headers: this.headers },
-    ).map((res) => res.json());
+    )
+    .catch(this.formatErrors)
+    .map((res) => res.json());
   }
 
   getDocSheet(): Observable<any> {
     return this.http.get(
       '/assets/styles/css/sheet.css',
       { headers: this.headers },
-    ).map((res) => res);
+    )
+    .catch(this.formatErrors)
+    .map((res) => res);
   }
 }

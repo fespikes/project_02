@@ -4,6 +4,7 @@ import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentResService } from '../../services/document.res.service';
 import { DocumentUtilService } from '../../services/document.util.service';
 import { CommonService } from '../../../common/services/common.service';
+import { MessageService } from '../../../../tui';
 
 import { Router } from '@angular/router';
 
@@ -26,6 +27,7 @@ export class FreshGuidesComponent implements OnInit {
     private documentResService: DocumentResService,
     private documentUtilService: DocumentUtilService,
     private commonService: CommonService,
+    private messageService: MessageService,
     private router: Router,
   ) {
   }
@@ -41,6 +43,9 @@ export class FreshGuidesComponent implements OnInit {
     this.documentAPIService.getDocuments(tag, true).subscribe(
       result => {
         this.freshCourse = result[0].children;
+      },
+      error => {
+        this.messageService.error(error.message);
       },
     );
   }

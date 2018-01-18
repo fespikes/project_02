@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentUtilService } from '../../services/document.util.service';
+import { MessageService } from '../../../../tui';
 
 @Component({
   selector: 'tdc-product-document',
@@ -15,6 +16,7 @@ export class ProductDocumentComponent implements OnInit {
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentUtilService: DocumentUtilService,
+    private messageService: MessageService,
   ) {
 
   }
@@ -27,6 +29,9 @@ export class ProductDocumentComponent implements OnInit {
     this.documentAPIService.getDocuments(tag, false).subscribe(
       result => {
         this.docsFolderList = this.documentUtilService.addDocsVersions(result);
+      },
+      error => {
+        this.messageService.error(error.message);
       },
     );
   }
