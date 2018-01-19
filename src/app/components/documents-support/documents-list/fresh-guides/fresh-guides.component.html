@@ -1,5 +1,5 @@
 <div class="course-box">
-  <h5>{{'DOCUMENTS.GUIDE.FRESH_COURSE' | translate}}</h5>
+  <h5>{{'DOCUMENTS.FRESH_COURSE' | translate}}</h5>
   <tdc-horizontal-list
     [docList]="freshCourse"
     (onDocClick)="viewDetail($event)"
@@ -9,9 +9,19 @@
 <hr class="split-line" style="clear: both;"/>
 
 <div class="course-box">
-  <h5>{{'DOCUMENTS.GUIDE.OTHER_COURSE' | translate}}</h5>
+  <h5>{{'DOCUMENTS.OTHER_COURSE' | translate}}</h5>
   <tdc-horizontal-list
     [docList]="otherCourse"
+    (onDocClick)="viewDetail($event)"
+  ></tdc-horizontal-list>
+</div>
+
+<hr class="split-line" style="clear: both;"/>
+
+<div class="course-box">
+  <h5>{{'DOCUMENTS.VIDEO_COURSE' | translate}}</h5>
+  <tdc-horizontal-list
+    [docList]="videoCourse"
     (onDocClick)="viewDetail($event)"
   ></tdc-horizontal-list>
 </div>

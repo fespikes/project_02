@@ -1,13 +1,13 @@
 {
   "TUI":{
     "SELECT":{
-    "NO_OPTIONS":"No Select Option"
+      "NO_OPTIONS":"No Select Option"
     },
     "PAGINATION":{
-    "SHOW_ROW_COUNT":"Show Row Count",
-    "GO_TO":"Jump To",
-    "GO_TO_PAGE":"Page",
-    "CONFIRM":"Confirm"
+      "SHOW_ROW_COUNT":"Show Row Count",
+      "GO_TO":"Jump To",
+      "GO_TO_PAGE":"Page",
+      "CONFIRM":"Confirm"
     }
   },
   "DOCUMENTS":{
@@ -23,14 +23,9 @@
     "COLLAPSE_ALL":"Collapse All",
     "SEARCH_RELATED_RESULT":"Search Related Result",
     "ITEM":"Item",
-    "PRODUCT":{
-    },
-    "ISSUE":{
-    },
-    "GUIDE":{
     "FRESH_COURSE":"Fresh Course",
-    "OTHER_COURSE":"Other Course"
-    }
+    "OTHER_COURSE":"Other Course",
+    "VIDEO_COURSE":"Video Course"
   }
 }
   

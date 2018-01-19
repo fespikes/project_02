@@ -6,6 +6,7 @@ import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentResService } from '../services/document.res.service';
 import { DocumentSearchService } from '../documents-search/documents-search.service';
+import { MessageService } from '../../../tui';
 
 @Component({
   selector: 'tdc-documents-detail',
@@ -39,6 +40,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
     private documentUtilService: DocumentUtilService,
     private documentResService: DocumentResService,
     private documentSearchService: DocumentSearchService,
+    private messageService: MessageService,
   ) {
 
   }
@@ -70,6 +72,9 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
           this.treeModel, anchorId, sectionId,
         );
       },
+      error => {
+        this.messageService.error(error.message);
+      },
     );
   }
 
@@ -81,6 +86,9 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
         this.documentUtilService.hideDocElement('header');
         this.anchorDocContent();
         // this.highLightKey('add'); // exist issue in some case
+      },
+      error => {
+        this.messageService.error(error.message);
       },
     );
   }

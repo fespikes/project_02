@@ -165,7 +165,7 @@ export class DocumentSearchService {
     };
   }
 
-  makeSelectedDocs(doc, collection, treeModel): Object {
+  makeSelectedDocs(doc, collection, treeModel): any {
     if (doc.level === 4) { // version change
       collection = this.searchVersionChange(doc, collection, treeModel);
     }else { // manual change

@@ -7,7 +7,7 @@
     (click)="viewDocDetail(doc)"
   >
     <span class="text-ellipsis">
-      {{doc.name}}
+      {{doc.tag === 'video' ? doc.title : doc.name}}
     </span>
     <svg tccIcon="enter" size='md'></svg>
   </div>

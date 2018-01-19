@@ -6,6 +6,7 @@ import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentResService } from '../services/document.res.service';
 import { DocumentSearchService } from './documents-search.service';
+import { MessageService } from '../../../tui';
 
 import { Pagination } from '../../../tui/pagination/pagination.component';
 
@@ -30,6 +31,7 @@ export class DocumentsSearchComponent implements OnInit {
     private documentAPIService: DocumentAPIService,
     private documentResService: DocumentResService,
     private documentSearchService: DocumentSearchService,
+    private messageService: MessageService,
     private router: Router,
   ) {
 
@@ -59,6 +61,9 @@ export class DocumentsSearchComponent implements OnInit {
       result => {
         this.treeModel = this.documentSearchService.initSearchTree(result);
       },
+      error => {
+        this.messageService.error(error.message);
+      },
     );
   }
 
@@ -69,6 +74,9 @@ export class DocumentsSearchComponent implements OnInit {
         this.docsCount = result.total;
         this.pagination = this.documentSearchService.makePaginationParams(
           this.docsCount, this.pagination);
+      },
+      error => {
+        this.messageService.error(error.message);
       },
     );
   }
@@ -94,7 +102,7 @@ export class DocumentsSearchComponent implements OnInit {
       node.expanded = true;
     }
     const searchState = this.documentSearchService.makeSelectedDocs(
-      node, this.selectedDocs, this.treeModel) as any;
+      node, this.selectedDocs, this.treeModel);
     this.selectedDocs = searchState.selectedDocs;
     this.treeModel = searchState.treeModel;
     const searchParams = this.documentSearchService.makeSearchParams(

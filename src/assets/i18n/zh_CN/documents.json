@@ -23,13 +23,8 @@
     "COLLAPSE_ALL":"全部收起",
     "SEARCH_RELATED_RESULT":"搜索相关结果",
     "ITEM":"条",
-    "PRODUCT":{
-    },
-    "ISSUE":{
-    },
-    "GUIDE":{
-      "FRESH_COURSE":"新手教程",
-      "OTHER_COURSE":"其他教程"
-    }
+    "FRESH_COURSE":"新手教程",
+    "OTHER_COURSE":"其他教程",
+    "VIDEO_COURSE":"视频教程"
   }
 }

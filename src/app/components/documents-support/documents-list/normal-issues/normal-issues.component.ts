@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentResService } from '../../services/document.res.service';
+import { MessageService } from '../../../../tui';
 
 @Component({
   selector: 'tdc-normal-issues',
@@ -20,6 +21,7 @@ export class NormalIssuesComponent implements OnInit {
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentResService: DocumentResService,
+    private messageService: MessageService,
     private router: Router,
   ) {
 
@@ -33,6 +35,9 @@ export class NormalIssuesComponent implements OnInit {
     this.documentAPIService.getDocuments(tag, true).subscribe(
       result => {
         this.issueDocList = result[0].children;
+      },
+      error => {
+        this.messageService.error(error.message);
       },
     );
   }

@@ -44,6 +44,15 @@ export class DocumentUtilService {
     return 'document/' + params.category + '/' + params.version + '/' + params.component + '/' + params.section;
   }
 
+  makeVideoCourse(videoTutorial): any[] {
+    const videoCourse = [];
+    videoTutorial.items.map(video => {
+      const course = Object.assign(video, {tag: 'video'});
+      videoCourse.push(course);
+    });
+    return videoCourse;
+  }
+
   addDocsVersions(data): any[] {
     const docList = [];
     data.map(category => {
