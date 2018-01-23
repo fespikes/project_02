@@ -58,7 +58,7 @@
 			*ngIf="subMenuItems.type===submenuType.modules">
 			<li
 				*ngFor="let item of subMenuItems.products"
-				[ngClass]="item.category==='tdh-dev-tools'?'column-one':'column-two'">
+				[ngClass]="item.category==='tdh-system-service'?'column-one':'column-two'">
 				<h3>{{item.title}}</h3>
 				<dl>
 					<dd *ngFor="let product of item.products; let i = index">

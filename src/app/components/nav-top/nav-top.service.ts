@@ -98,99 +98,88 @@ const navigationData = {
 			products: [
 				{
 					category: 'tdh-platform-products',
-					title: 'TDH平台产品',
+					title: '平台服务',
 					products: [
 						{
 						  title: 'Inceptor',
 						  summary: '分析型数据库',
-						  routerLink: './modules/product/inceptor'
+						  routerLink: './modules/platform/inceptor'
 						},
 						{
 						  title: 'Slipstream',
 						  summary: '实时计算引擎',
-						  routerLink: './modules/product/slipstream'
+						  routerLink: './modules/platform/slipstream'
 						},
 						{
 						  title: 'Discover',
 						  summary: '数据挖掘',
-						  routerLink: './modules/product/discover'
+						  routerLink: './modules/platform/discover'
 						},
 						{
 						  title: 'Hyperbase',
-						  summary: '快速检索和非结构化数据处理',
-						  routerLink: './modules/product/hyperbase'
+						  summary: 'NewSQL数据库',
+						  routerLink: './modules/platform/hyperbase'
 						},
 						{
 						  title: 'Search',
-						  summary: '全文检索',
-						  routerLink: './modules/product/search'
+						  summary: '大数据搜索引擎',
+						  routerLink: './modules/platform/search'
 						},
 						{
 						  title: 'Sophon',
-						  summary: '深度学习和交互式数据挖掘',
-						  routerLink: './modules/product/sophon'
+						  summary: '深度学习',
+						  routerLink: './modules/platform/sophon'
+						},
+						{
+						  title: 'Redis',
+						  summary: '内存K-V数据库',
+						  routerLink: './modules/platform/redis'
+						},
+						{
+						  title: 'Kafka',
+						  summary: '消息中间件',
+						  routerLink: './modules/platform/kafka'
 						},
 						{
 						  title: 'Guardian',
-						  summary: '安全、权限和资源管控',
-						  routerLink: './modules/product/guardian'
+						  summary: '安全管控',
+						  routerLink: './modules/platform/guardian'
 						},
 						{
 						  title: 'Apache Hadoop',
 						  summary: '分布式系统基础架构',
-						  routerLink: './modules/product/hadoop'
-						}
+						  routerLink: './modules/platform/hadoop'
+						},
 					]
 				},
 				{
 					category: 'tdh-dev-tools',
-					title: 'TDH开发套件',
+					title: '开发工具',
 					products: [
 						{
 						  title: 'Pilot',
 						  summary: '报表工具',
-						  routerLink: './modules/suite/pilot'
+						  routerLink: './modules/tool/pilot'
 						},
 						{
 						  title: 'Workflow',
-						  summary: '调度流',
-						  routerLink: './modules/suite/workflow'
+						  summary: '工作引擎流',
+						  routerLink: './modules/tool/workflow'
 						},
 						{
 						  title: 'Transporter',
-						  summary: '数据流',
-						  routerLink: './modules/suite/transporter'
+						  summary: '数据整合',
+						  routerLink: './modules/tool/transporter'
 						},
 						{
 						  title: 'Governor',
-						  summary: '元数据管理工具',
-						  routerLink: './modules/suite/governor'
+						  summary: '数据治理',
+						  routerLink: './modules/tool/governor'
 						},
 						{
 						  title: 'Rubik',
-						  summary: 'OLAP Cube设计工具',
-						  routerLink: './modules/suite/rubik'
-						}
-					]
-				},
-				{
-					category: '',
-					title: '运维和开发工具',
-					products: [
-						{
-						  title: 'TxSQL',
-						  summary: '关系数据库',
-						  routerLink: './modules/tool/txsql'
-						},
-						{
-						  title: 'Midas',
-						  summary: '机器学习分析工具',
-						  routerLink: './modules/tool/midas'
-						},
-						{
-						  title: 'Waterdrop',
-						  summary: 'SQL开发工具',
-						  routerLink: './modules/tool/waterdrop'
+						  summary: 'Cube设计',
+						  routerLink: './modules/tool/rubik'
 						},
 						{
 						  title: 'Milano',
@@ -198,29 +187,40 @@ const navigationData = {
 						  routerLink: './modules/tool/milano'
 						},
 						{
-						  title: 'Prometheus',
-						  summary: 'Metrics监控',
-						  routerLink: './modules/tool/prometheus'
-						},
-						{
-						  title: 'Kafka',
-						  summary: '消息中间件',
-						  routerLink: './modules/tool/kafka'
-						},
-						{
 						  title: 'Zeppelin',
-						  summary: 'Notebook IDE',
+						  summary: '数据分析Notebook',
 						  routerLink: './modules/tool/zeppelin'
 						},
 						{
-						  title: 'Terminal',
-						  summary: 'Docker命令行工具',
-						  routerLink: './modules/tool/terminal'
+						  title: 'Midas',
+						  summary: '数据挖掘工具',
+						  routerLink: './modules/tool/midas'
 						},
 						{
-						  title: 'Redis',
-						  summary: '内存K-V数据库',
-						  routerLink: './modules/tool/redis'
+						  title: 'Terminal',
+						  summary: '容器命令行',
+						  routerLink: './modules/tool/terminal'
+						},
+					]
+				},
+				{
+					category: 'tdh-system-service',
+					title: '系统服务',
+					products: [
+						{
+						  title: 'TxSQL',
+						  summary: '指标监控',
+						  routerLink: './modules/system/txsql'
+						},
+						{
+						  title: 'Prometheus',
+						  summary: '高可用数据库',
+						  routerLink: './modules/system/prometheus'
+						},
+						{
+							title: 'TOS',
+							summary: '容器操作系统',
+							routerLink: './modules/system/tos'
 						}
 					]
 				}

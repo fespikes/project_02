@@ -177,12 +177,18 @@ $hoverBg: #0063cb
       margin-left: 10px
 
   &>li.column-one
-    margin: 0 60px
     width: 188px
 
     dd
       &:nth-child(2n)
         margin-left: 0
+
+  &>li.column-two
+    margin: 0 60px
+
+  &>li.column-two:first-child
+    margin: 0
+
   a
     display: inline-block
     width: 100%
