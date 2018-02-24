@@ -85,7 +85,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
         this.documentUtilService.appendDocContent(result.content);
         this.documentUtilService.hideDocElement('header');
         this.anchorDocContent();
-        // this.highLightKey('add'); // exist issue in some case
+        this.highLightKey('add');
       },
       error => {
         this.messageService.error(error.message);
@@ -97,7 +97,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
     const keyNeedRender = this.documentResService.getKeyNeedRender();
     if (keyNeedRender) {
       this.documentSearchService.keyHighLight(
-        'content', this.documentResService.getKeyword(), '#ffff00', operation,
+        '.doc-detail', this.documentResService.getKeyword(), operation,
       );
     }
   }
