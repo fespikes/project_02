@@ -62,7 +62,7 @@ export class DocumentsSearchComponent implements OnInit {
         this.treeModel = this.documentSearchService.initSearchTree(result);
       },
       error => {
-        this.messageService.error(error.message);
+        this.messageService.error(error.message || error.reason || error.error);
       },
     );
   }
@@ -76,7 +76,7 @@ export class DocumentsSearchComponent implements OnInit {
           this.docsCount, this.pagination);
       },
       error => {
-        this.messageService.error(error.message);
+        this.messageService.error(error.message || error.reason || error.error);
       },
     );
   }
@@ -98,17 +98,19 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   onSelectChange(node) {
-    if (!node.clickToggle) {
+    if (!node.clickToggle) { // click toggle icon and node name
       node.expanded = true;
     }
-    const searchState = this.documentSearchService.makeSelectedDocs(
-      node, this.selectedDocs, this.treeModel);
-    this.selectedDocs = searchState.selectedDocs;
-    this.treeModel = searchState.treeModel;
-    const searchParams = this.documentSearchService.makeSearchParams(
-      this.keyword, this.pagination, this.selectedDocs);
-    this.documentSearch(searchParams);
-    this.documentUtilService.scrollScreenTop();
+    if (node.checkboxChanged) { // click checkbox
+      const searchState = this.documentSearchService.makeSelectedDocs(
+        node, this.selectedDocs, this.treeModel);
+      this.selectedDocs = searchState.selectedDocs;
+      this.treeModel = searchState.treeModel;
+      const searchParams = this.documentSearchService.makeSearchParams(
+        this.keyword, this.pagination, this.selectedDocs);
+      this.documentSearch(searchParams);
+      this.documentUtilService.scrollScreenTop();
+    }
   }
 
   listItemClick(doc) {

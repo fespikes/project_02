@@ -40,7 +40,7 @@ export class DocumentResService {
 
   setLevelId(id, level) {
     this.setAnchorId(id);
-    if(level <= 2) {
+    if (level <= 2) {
       this.setSectionId(id);
     }
   }

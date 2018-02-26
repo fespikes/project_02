@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 import { DocumentResService } from '../services/document.res.service';
+import * as Mark from 'mark.js';
 
 @Injectable()
 export class DocumentSearchService {
@@ -264,24 +265,15 @@ export class DocumentSearchService {
     };
   }
 
-  keyHighLight(id, key, bgColor, operation): void {
-    if (!key || key === '') {
+  keyHighLight(className, key, operation): void {
+    if (!key) {
       return;
     }
-    const dom = document.getElementById(id);
-    const nodes  = dom.childNodes as any;
-    let originalStr = key;
-    let replacedStr = `<span style='background-color:${bgColor};'>${key}</span>`;
-    if (operation === 'remove') { // default add key high light
-      originalStr = `<span style='background-color:${bgColor};'>${key}</span>`;
-      replacedStr = key;
-    }
-    const rStr = new RegExp(originalStr, 'gi');
-    for (let i = 0; i < nodes.length - 1; i++) {
-      if (nodes[i].nodeType === 3 && /\s/.test(nodes[i].nodeValue)) {
-        nodes[i].parentNode.removeChild(nodes[i]);
-      }
-      nodes[i].innerHTML = nodes[i].innerHTML.replace(rStr, replacedStr);
+    const instance = new Mark(document.querySelector(className));
+    if (operation === 'add') {
+      instance.mark(key, {});
+    } else if (operation === 'remove') {
+      instance.unmark({});
     }
   }
 
