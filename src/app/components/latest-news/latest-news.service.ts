@@ -57,45 +57,17 @@ export class LatestNewsService {
 
   private apiUrl = `${this.version}/api/v1/news?page_num=1`;  //TODO: get the URL of web api
 
-  private list: News[];
-
   constructor(private http: Http) { }
 
-  getNewsList(callback?): Promise<News[]>{
-    // this.list = newsList;
-   //  let newsListPromise = Promise.resolve(this.list);
-  	// return newsListPromise;
-
-    let list: News[] = [];
+  getNewsList(): Promise<News[]>{
+    let list: any[] = [];
     return this.http.get(this.apiUrl)
       .toPromise()
       .then(response => {
         response.json().list.forEach(item=>list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item))
-
-        this.list = list;
-
-        return callback?callback(list):Promise.resolve(this.list);
+        return Promise.resolve(list);
       })
       .catch(this.handleError);
-  }
-
-  getTheNews(id: number | string) {
-    if (this.list) {
-    	return Promise.resolve(this.list).then(
-    		newsList => newsList && newsList.find(
-    			News => News.id === +id
-    		)
-    	);
-    } else {
-      let callback = function(list: News[]) {
-        return Promise.resolve(this.list);
-      }
-      return this.getNewsList(callback).then(
-        newsList => newsList && newsList.find(
-          News => News.id === +id
-        )
-      );;
-    }
   }
 
   private handleError(error: any): Promise<any> {

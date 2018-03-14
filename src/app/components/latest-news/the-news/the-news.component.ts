@@ -15,22 +15,26 @@ export class TheNewsComponent implements OnInit, AfterViewChecked {
 
   style;
 
+  id: any;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private service: LatestNewsService,
     private el:ElementRef
-  ) { }
+  ) {
+
+    route.params.subscribe(params => { this.id = params['id']; });
+
+  }
 
   ngOnInit() {
     this.style = style;
 
-    this.route.paramMap
-      .switchMap((params: ParamMap) =>
-        this.service.getTheNews(params.get('id')))
-          .subscribe((news: News) => {
-            this.news = news
-          } );
+    this.service.getTheNews(this.id)
+      .then((news: News) => {
+        this.news = news;
+      });
   }
 
   ngAfterViewChecked() {

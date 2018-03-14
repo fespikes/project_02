@@ -92,7 +92,22 @@
 				</ul> -->
 			</div>
 			
-			<router-outlet></router-outlet>
+			<!-- <router-outlet></router-outlet> -->
+			<div *ngIf="news" class="news-details">
+				<h3>{{news.title}}</h3>
+				<div class="time">{{news.date}}</div>
+				<div class="content" [innerHTML]="news.content">
+					<!-- <ng-container *ngFor="let item of news.content">
+						<p *ngIf="item.p">{{item.p}}</p>
+						<img *ngIf="item.img" src="{{item.img}}" />
+						<h4 *ngIf="item.title" >{{item.title}}</h4>
+						<div *ngIf="item.mailTo" class="mail-to">
+							{{item.mailTo}}
+							<a href="mailto:{{item.email}}">{{item.email}}</a>
+						</div>
+					</ng-container> -->
+				</div>
+			</div>
 		</div>
 
 	</div>

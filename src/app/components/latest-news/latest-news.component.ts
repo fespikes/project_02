@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 import { News, LatestNewsService } from './latest-news.service';
@@ -9,13 +9,15 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './latest-news.component.html',
   styleUrls: ['./latest-news.component.sass']
 })
-export class LatestNewsComponent implements OnInit {
+export class LatestNewsComponent implements OnInit, DoCheck {
 
-  newsList: Observable<News[]>;
+  newsList: Promise<News[]>;
 
   breadCrumbs: any;
 
   selectedId: number;
+
+  news: News;
 
   constructor(
     private service: LatestNewsService,
@@ -23,6 +25,9 @@ export class LatestNewsComponent implements OnInit {
     private router: Router
   ) {
     let crumbRoot = this.service.getRoute();
+
+    route.params.subscribe(params => { this.selectedId = params['id']; });
+
     this.breadCrumbs = [
       {
         text: crumbRoot.short,
@@ -38,27 +43,19 @@ export class LatestNewsComponent implements OnInit {
   ngOnInit() {
     let list: Observable<News[]> = null;
 
-    this.newsList = this.route.paramMap
-      .switchMap((params: ParamMap) => {
-        // (+) before `params.get()` turns the string into a number
-        this.selectedId = +this.router.url.replace( '/latest-news/', '');
+    this.newsList = this.service.getNewsList();
 
-        if (this.selectedId)
-          return this.service.getNewsList();
-        else{
-          this.service.getNewsList().then(list=>{
-            this.selectedId = list[0].id;
-            console.log(this.selectedId);
-            // TODO: get the default news
-            // this.router.navigate(['/latest-news', {id: this.selectedId} ]);
-          })
-        }
-      }
-    );
+    this.newsList.then(list=>{
+      this.news = list.find(news => news.id === +this.selectedId);
+    });
+    
+  }
+
+  ngDoCheck() {
   }
 
   isSelected(news: News) {
-  	return news.id === this.selectedId;
+  	return news.id == this.selectedId;
 	}
 
   onSelect(id) {
