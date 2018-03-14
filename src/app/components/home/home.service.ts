@@ -601,8 +601,11 @@ export class HomeService {
     return this.http.get(this.apiUrl)
       .toPromise()
       .then(response => {
-        response.json().list.forEach(item=>list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item))
-
+        response.json().list.forEach(item=>{
+        	if (list.length<3){
+        		list.push((item.date = utils.formatDate(item.lastUpdateTime)) && item);
+        	}
+        })
         return Promise.resolve(list);
       })
 

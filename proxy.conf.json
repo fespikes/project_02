@@ -11,10 +11,9 @@
     "target": "http://172.16.1.161:31177",
     "secure": false
   },
-  "/api/v1/*": {
-    "target": "http://172.16.1.193:23333",
+  "/news/api/v1/*": {
+    "target": "http://172.16.111.69:8200",
     "secure": false
   }
-
 
 }

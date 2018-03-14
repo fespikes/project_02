@@ -330,7 +330,7 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
 
   ul
     padding-top: 50px
-    width: 1160px
+    width: 1200px
     margin-left: auto
     margin-right: auto
 
@@ -354,15 +354,12 @@ div, h1, h2, h3, h4, h5, h6, ul, li, span, p
         background: transparent no-repeat left top
         background-size: 100% 150px
         
-        &.news-0
-          @include background(news-0)
-        &.news-1
-          @include background(news-1)
-        &.news-2
-          @include background(news-2)
-
         h3
           height: 88px
+          width: 100%
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
           line-height: 88px
           border-bottom: 2px #f7f7f7 solid
           font-size: 1.8rem
