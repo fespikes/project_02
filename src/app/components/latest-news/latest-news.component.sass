@@ -73,18 +73,24 @@
 			color: #c9d1d9
 
 		h4
+			width: 99%
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
 			font-size: 1.6rem
 			color: #354052
 
 		p.item-summary
+			width: 98%
+			height: 64px
 			padding: 14px 0
 			color: #979da6
 			line-height: 22px
 			font-size: 1.2rem
-			overflow: hidden
-			text-overflow: ellipsis
-
-
+			display: -webkit-box
+			-webkit-box-orient: vertical
+			-webkit-line-clamp: 2
+			overflow : hidden
 
 		&:hover, &.current
 			background: #2b83e0
