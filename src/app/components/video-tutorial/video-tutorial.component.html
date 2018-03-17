@@ -1,13 +1,17 @@
 
 <div class="video-show">
 	<div class="left">
-		<router-outlet></router-outlet>
+		<!-- <router-outlet></router-outlet> -->
+		<div class="frame">
+		  <iframe [src]="iframeSrc">
+		  </iframe>
+		</div>
 	</div>
 	<div class="right">
-		<h3>1.分析型数据库</h3>
+		<h3>{{title}}</h3>
 		<p>
 			<!-- {{current.summary}} -->
-			Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和数据集市的构建。
+			{{summary}}
 		</p>
 	</div>
 </div>

@@ -42,7 +42,7 @@ import {
   TranslateToken,
   I18nLangService,
 } from './i18n';
-// import { VideoTutorialModule } from './components/video-tutorial/video-tutorial.module';
+import { VideoTutorialModule } from './components/video-tutorial/video-tutorial.module';
 
 @NgModule({
   declarations: [
@@ -68,7 +68,7 @@ import {
 
     LatestNewsModule,
     DocumentsSupportModule,
-    // VideoTutorialModule,
+    VideoTutorialModule,
     AppRoutingModule,
   ],
   providers: [

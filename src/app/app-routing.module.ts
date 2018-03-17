@@ -28,10 +28,10 @@ const routes: Routes = [
     path: 'after-sale-service',
     loadChildren: 'app/components/after-sale-service/after-sale-service.module#AfterSaleServiceModule'
   },
-  {
+/*  {
     path: 'video-tutorial',
     loadChildren: 'app/components/video-tutorial/video-tutorial.module#VideoTutorialModule'
-  },
+  },*/
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

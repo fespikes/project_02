@@ -6,6 +6,14 @@ import { Observable }            from 'rxjs/Observable';
 let srcs = {
   inceptor01: 'https://v.qq.com/iframe/player.html?vid=e0507nmt9qg&tiny=0&auto=0',
   inceptor02: 'https://v.qq.com/iframe/player.html?vid=y0507qw8cg9&tiny=0&auto=0',
+
+  workflow: 'https://v.qq.com/iframe/player.html?vid=w0606h6wq07&tiny=0&auto=0',
+  transporter: 'https://v.qq.com/iframe/player.html?vid=a0606eyaq2w&tiny=0&auto=0',
+  governor: 'https://v.qq.com/iframe/player.html?vid=u0606ayy2k9&tiny=0&auto=0',
+  rubik: 'https://v.qq.com/iframe/player.html?vid=p0606mfmg2t&tiny=0&auto=0',
+  pilot: 'https://v.qq.com/iframe/player.html?vid=k0606994neo&tiny=0&auto=0',
+  admin: 'https://v.qq.com/iframe/player.html?vid=i0606tkkcgk&tiny=0&auto=0',
+  products: 'https://v.qq.com/iframe/player.html?vid=x0606gqz2ds&tiny=0&auto=0'
 };
 
 @Component({
