@@ -26,9 +26,9 @@ export class VideoTutorialComponent implements OnInit {
 
   iframeSrc: any;
 
-  private current: any;
-  private title: string;
-  private summary: string;
+  // private current: any;
+  title: string;
+  summary: string;
 
   constructor(
 	  private commonService: CommonService,
