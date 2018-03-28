@@ -149,6 +149,10 @@ export class DeepLearningService {
               title: '分布式系统基础架构',
               text: 'Hadoop Distributed File System (HDFS) — Apache Hadoop 项目的一个子项目 — 是一个高度容错的分布式文件系统，设计用于在低成本硬件上运行。HDFS 提供高吞吐量应用程序数据访问功能，适合带有大型数据集的应用程序。',
               link: '../../modules/product/hadoop'
+            },{
+              title: '分析型数据库',
+              text: 'Inceptor是一款用于批量处理及分析的数据库。它支持SQL 2003标准、Oracle PL/SQL以及DB2 SQL PL，对Oracle、DB2以及Teradata 都有很好的方言支持，是Hadoop领域对SQL标准支持最完善的产品。',
+              link: '../../modules/platform/inceptor'
             }]
           },
           {
