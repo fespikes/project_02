@@ -10,7 +10,7 @@ export class RealtimeComputationService {
   		banner: {
   			h3: '实时计算',
         h4: '',
-  			description: '云上的流处理分析平台，对流数据进行实时采集和实时处理，帮助企业构建在线实时应用，充分利用流式信息。',
+  			description: '云上的流处理平台，对流式数据进行实时采集和实时处理，帮助企业构建在线实时应用，充分挖掘流数据价值。',
   			advImage: '/assets/images/products/realtime-computation.png'
   		},
       tabs: [
