@@ -16,8 +16,8 @@ export class HomeService {
 			  {
 			    bgUrl: '/assets/images/home/banners/banner1.jpg',
 			    bgColor: '#090e14',
-			    h2: '云上大数据服务',
-			    p: '我们专注于为企业提供以客户为中心的全流程产品，帮助企业获得成功'
+			    h2: '云上智能数据服务',
+			    p: '我们专注于为企业提供以客户为中心的全流程智能大数据云产品，帮助企业实现智能化商业模式的转变'
 			  },
 			  {
 			    bgUrl: '/assets/images/home/banners/banner2.jpg',
@@ -29,7 +29,7 @@ export class HomeService {
 			    bgUrl: '/assets/images/home/banners/banner3.jpg',
 			    bgColor: '#051a36',
 			    h2: '优质的数据服务',
-			    p: '服务安全、稳定、可扩展，打造权限管控系统，租户网络隔离精细化，历经500+企业的数据平台实践打磨，随开随用，20分钟内即可开始大数据开发'
+			    p: '服务安全、稳定、可扩展，提供权限管控系统，实现租户网络隔离精细化，历经500+企业的数据平台实践打磨，随开随用，20分钟内即可开始大数据开发'
 			  },
 			  {
 			    bgUrl: '/assets/images/home/banners/banner4.jpg',
@@ -55,7 +55,7 @@ export class HomeService {
 							src: '/assets/images/svg/home/products/' + 'data-warehouse' + '.svg'
 						},
 						title: '数据仓库',
-						summary: '数据仓库是数据中心库，全面整合各类数据，按照主题组织信息，是打造商业智能的核心。',
+						summary: '全面整合各类数据，按照主题组织信息，构建商业智能核心。',
 						button: {
 							text: '查看详情',
 							class: 'blue-button',
@@ -81,7 +81,7 @@ export class HomeService {
 							src: '/assets/images/svg/home/products/' + 'data-mart' + '.svg',
 						},
 						title: '数据集市',
-						summary: '数据集市面向部门级业务，提供各种模型用以组织数据，实现交互式分析以及自动化的报表应用构建。',
+						summary: '面向部门级业务，提供星型和雪花模型构建OLAP Cube，实现交互式分析以及自动化的报表应用构建。',
 						button: {
 							text: '查看详情',
 							class: 'blue-button',
@@ -106,7 +106,7 @@ export class HomeService {
 							src: '/assets/images/svg/home/products/' + 'realtime-computation' + '.svg'
 						},
 						title: '实时计算',
-						summary: '云上的流处理分析平台，对流数据进行实时采集和实时处理，帮助企业构建在线实时应用，充分利用流式信息。',
+						summary: '云上的流处理平台，对流式数据进行实时采集和实时处理，帮助企业构建在线实时应用，充分挖掘流数据价值。',
 						liClass: 'direct-child',	//?
 						h4Class: '',	//?
 						pClass: 'desc',	//?
@@ -252,7 +252,7 @@ export class HomeService {
 						},
 						name: 'Inceptor',
 						title: '分析型数据库',
-						summary: 'Inceptor是一款用于批量处理及分析的数据库，Inceptor被广泛地应用于数据仓库和 数据集市的构建。',
+						summary: 'Inceptor是一款用于离线批处理的分析型数据库，被广泛地应用于数据仓库和数据集市的构建。',
 						adv: '/assets/images/home/hot-modules/inceptor.png', //image url
 
 						liClass: 'direct-child',	//?
@@ -264,7 +264,7 @@ export class HomeService {
 							'逻辑型数据仓库;',
 							'交互型BI分析;',
 							'离线批处理;',
-							'数据质量管理。'
+							'数据湖的建设。'
 						]
 					},
 					{
@@ -273,8 +273,8 @@ export class HomeService {
 							name: 'component-hyperbase'
 						},
 						name: 'Hyperbase',
-						title: '快速检索和非结构化数据处理',
-						summary: 'Hyperbase是以Apache HBase为基础，融合了多项创新技术的NoSQL数据库。',
+						title: '高性能NewSQL数据库',
+						summary: 'Hyperbase是以Apache HBase为基础，融合了多项创新技术的NewSQL数据库。',
 						adv: '/assets/images/home/hot-modules/hyperbase.png', //image url
 						scenarios: [
 							'高并发的查询业务;',
@@ -318,7 +318,7 @@ export class HomeService {
 						},
 						name: 'Discover',
 						title: '数据挖掘',
-						summary: 'Discover是分布式机器学习平台，它包含了丰富的分布式算法库，内置了多个行业应用模块，提供多类接口，以帮助数据工程师和科学家开发自己的数据挖掘算法。',
+						summary: 'Discover是分布式机器学习平台，包含丰富的算法，内置多个行业应用模块，提供多类接口，帮助数据工程师和科学家开发自己的数据挖掘算法。',
 						adv: '/assets/images/home/hot-modules/discover.png', //image url
 						scenarios: [
 							'刻画用户画像，进行智能推荐，实现精准营销;',
@@ -332,12 +332,16 @@ export class HomeService {
 							name: 'component-sophon'
 						},
 						name: 'Sophon',
-						title: '深度学习和交互式数据挖掘',
+						title: '人工智能平台',
 						summary: 'Sophon是整合了Tensorflow和MxNet的深度学习框架，并且与Hadoop实现了很好的融合。',
 						adv: '/assets/images/home/hot-modules/sophon.png', //image url
 						scenarios: [
-							'大规模搜索引擎;',
-							'海量数据的聚合分析。'
+							'信用风险',
+							'量化投资',
+							'垃圾短信检测',
+							'生产设备故障检测',
+							'车牌识别',
+							'文本挖掘'
 						]
 					}/*,
 					{
@@ -378,7 +382,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: '一站式数据仓库服务解决方案，实现数据采集、数据整合、模型加工、数据管理等完备的一体化数仓功能，支持对于查询速度、并发度、扩展性的保障。可广泛应用于电信、金融、互联网等行业。',
+						summary: '一站式数据仓库服务解决方案，实现数据采集、数据整合、模型加工、数据管理等完备的数仓功能。可广泛应用于电信、金融、互联网等行业。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 
@@ -402,7 +406,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: '云上的流处理分析平台，可对流数据进行实时采集和实时处理。为企业构建实时数据仓库，开发多种在线实时应用，实现对流式信息的充分利用。可以被广泛用于交通运输和物联网行业。',
+						summary: '在云上构建流处理分析平台，对流数据进行实时采集和实时处理，开发多种在线应用。可以被广泛用于交通运输和物联网行业。',
 						liClass: '',	//?
 						h4Class: '',	//?
 						pClass: '',	//?
@@ -422,7 +426,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: '用信息检索产品打造企业级搜索引擎，以毫秒级的响应速度完成PB级别的高速全文检索。构建一站式内部搜索平台和信息检索服务，打造便捷高效的集中式金融监管中心。',
+						summary: '打造企业级搜索引擎，毫秒内实现PB级数据的全文检索。构建便捷高效的一站式信息检索和分析平台。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 
@@ -445,7 +449,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: '实现数据集市构建，对接数据分析业务，提供包括交互式分析、数据立方体、任务调度在内的工具以及功能，实现自动化的报表应用构建和自助式的多维度探索。可应用于客户分析、营销分析等维度分析场景。',
+						summary: '实现数据集市构建，对接数据分析业务，实现自动化的报表应用构建和自助式的多维探索。应用于客户分析、营销分析等维度分析场景。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 
@@ -468,7 +472,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: '提供数据清洗、特征工程、建模平台和工具集，丰富的机器学习算法和多种行业模型，方便探索对象属性和行为之间的关系，从数据中发现蕴含价值。',
+						summary: '通过数据清洗、特征工程、建模平台和工具集，探索对象属性和行为之间的关系，从数据中发现蕴藏价值。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 
@@ -491,7 +495,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: '开发深度学习和人工智能平台，将图像识别技术投入交通监控应用，帮助交通部门实现高度智能化的交通监控与信息处理，把投入车辆识别的人力解放出来，提高交通监管的精准度与效率。',
+						summary: '深度学习和人工智能开发平台，例如可以将图像识别技术投入交通监控应用，帮助交通部门实现高度智能化的交通监控与信息处理。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 
@@ -515,7 +519,7 @@ export class HomeService {
 								bgColor: ''
 							}
 						},
-						summary: '构建企业内部关系数据库服务，处理OLTP业务。支持复杂的SQL查询，提供高稳定、可扩展、强一致的数据处理。可以应用于创建跨越省市、跨多层下级机关的联网警务OA系统。',
+						summary: '构建企业内部关系数据库服务，可以应用于创建跨省市、跨多层下级机关的联网警务OA系统。',
 						//for cloud products dom boxShadow
 						// divClass: '',	//has a div for wrap
 
