@@ -10,7 +10,7 @@ export class DataWarehouseService {
   		banner: {
   			h3: '数据仓库',
         h4: '',
-  			description: '数据仓库是数据中心库，全面整合各类数据，按照主题组织信息，是打造商业智能的核心。',
+  			description: '全面整合各类数据，按照主题组织信息，构建商业智能核心。',
   			advImage: '/assets/images/products/data-warehouse.png'
   		},
   		tabs: [
@@ -59,7 +59,7 @@ export class DataWarehouseService {
           },
           {
           	title: '非结构化数据处理',
-          	text: '提供对非结构化或者半结构化数据的存储、检索、分析能力，具有影像分析、文本数据挖掘分析等功能，利用种类更广泛的数据资源实现信息的发现与挖掘。'
+          	text: '提供对非结构化或者半结构化数据的存储、检索、分析能力，具有影像分析、文本数据挖掘分析等功能，利用广泛的数据资源实现信息的发现与挖掘。'
           }
         ]
       },
@@ -69,7 +69,7 @@ export class DataWarehouseService {
         content: [
           {
             title: '轻松打造云上大数据',
-            text: 'TDH-DW底层使用Transwarp Operating System，实现集群资源管理、容器化部署，可以同IaaS层完美整合。同时TDH-DW通过采用容器技术，构建出资源组织与调度完善的多租户体系，从而更好的为企业提供云上的大数据服务。'
+            text: 'TDH-DW底层使用大数据定制云操作系统Transwarp Operating System，实现集群资源管理、容器化部署，同IaaS层完美整合。同时TDH-DW通过容器技术，构建出资源组织与调度完善的多租户体系，从而更好的为企业提供云上的大数据服务。'
           },
           {
             title: '卓越的数据处理能力',
@@ -93,7 +93,7 @@ export class DataWarehouseService {
           },
           {
           	title: '稳健的安全保护',
-          	text: '受到Guardian的全面保护，为租户提供可靠地认证机制，防范安全漏洞和攻击，实现资源管理和行级列级的权限控制，在云环境下保护用户隐私和信息安全。'
+          	text: '到安全组件Guardian的全面保护，为租户提供可靠地认证机制，防范安全漏洞和攻击，实现资源管理和行级列级的权限控制，在云环境下保护用户隐私和信息安全。'
           }
         ]
       },
@@ -111,7 +111,7 @@ export class DataWarehouseService {
           },
           {
             class: '企业级数据仓库建设',
-            text: '可以用于实现高效的企业数仓建设。在实现数据仓库的完整流程中，您可以利用TDH-DW中整合的高效工具支持，加速企业数仓的落地实现。确保数据迁移的效率，轻松攻克迁移过程中的技术难题。',
+            text: '可以用于实现高效的企业数仓建设。在构建数据仓库的完整流程中，您可以利用TDH-DW中的高效工具，加速企业数仓落地。确保数据迁移的效率，轻松攻克迁移过程中的技术难题。',
             // link: '/products/data-warehouse/build-data-warehouse',
             image: {
               src: '/assets/images/products/scenarios/data-warehouse/build-data-warehouse.png',
@@ -124,11 +124,6 @@ export class DataWarehouseService {
             image: {
               src: '/assets/images/products/scenarios/data-warehouse/data-lake.png',
             }
-          },
-          {
-            class: '企业级数据治理平台',
-            text: '搭建可靠的数据治理平台，管理与追踪数据关系，提供方便可用的操作界面，管理并搜索目标数据元信息。将帮助您严格控制企业内部数据质量，提高数据分析准确性，提高商业决策的价值与可信度。',
-            // link: '/products/data-warehouse/data-governance-platform'
           }
         ]
       },
