@@ -50,6 +50,15 @@
           {{cell.content | translate}}
         </li>
       </ul>
+      <ul
+        class="group-text-special"
+        *ngIf="item.type === 'group-text-special'"
+      >
+        <li *ngFor="let cell of item.group">
+          <span *ngIf="!!cell.title">{{cell.title | translate}}</span>
+          {{cell.content | translate}}
+        </li>
+      </ul>
     </li>
   </ul>
 </div>

@@ -807,22 +807,22 @@ export class ProductContentService {
               content: 'MODULES.PROMETHEUS.INTRODUCE_2',
             },
             {
-              type: 'group-text',
+              type: 'group-text-special',
               group: [
                 {
-                  type: 'text',
+                  title: 'MODULES.PROMETHEUS.INTRODUCE_3_title',
                   content: 'MODULES.PROMETHEUS.INTRODUCE_3',
                 },
                 {
-                  type: 'text',
+                  title: 'MODULES.PROMETHEUS.INTRODUCE_4_title',
                   content: 'MODULES.PROMETHEUS.INTRODUCE_4',
                 },
                 {
-                  type: 'text',
+                  title: 'MODULES.PROMETHEUS.INTRODUCE_5_title',
                   content: 'MODULES.PROMETHEUS.INTRODUCE_5',
                 },
                 {
-                  type: 'text',
+                  title: 'MODULES.PROMETHEUS.INTRODUCE_6_title',
                   content: 'MODULES.PROMETHEUS.INTRODUCE_6',
                 },
               ],
