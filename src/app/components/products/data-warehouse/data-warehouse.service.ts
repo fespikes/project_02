@@ -102,7 +102,7 @@ export class DataWarehouseService {
         id: 'data-warehouse-scenarios',
         tabs: [
           {
-            class: '企业级多租户大数据平台台',
+            class: '企业级多租户大数据平台',
             text: '打造一体化的大数据平台，满足多租户场景下的应用需求，实现租户权限和资源管理，进行表和资源的访问权限控制，保障资源之间的共享与隔离，提供合理高效的作业调度。使得从数据导入到报表生成的整个批处理分析过程，融会贯通，成为一体。',
             // link: '/products/data-warehouse/multi-tenancy-platform',
             image: {
