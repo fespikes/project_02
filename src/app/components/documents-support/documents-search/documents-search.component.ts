@@ -38,6 +38,7 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.pagination.size = 10; // change default pageSize value 10
     const docsType = this.documentUtilService.getDocsType(window.location.hash);
     this.crumbItems = this.documentResService.getDocsCrumb(docsType, '');
     this.getTreeModel();
@@ -85,6 +86,7 @@ export class DocumentsSearchComponent implements OnInit {
     const searchParams = this.documentSearchService.makeSearchParams(
       this.keyword, this.pagination, this.selectedDocs);
     this.documentSearch(searchParams);
+    this.documentUtilService.scrollScreenTop();
   }
 
   expandAll() {
