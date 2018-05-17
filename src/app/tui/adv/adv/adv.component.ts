@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import * as Hammer from 'hammerjs';
+import { Manager, Swipe } from 'hammerjs';
 
 @Component({
   selector: 'tui-adv',
@@ -30,6 +32,8 @@ export class AdvComponent implements OnInit {
 
     this.currentAdv = this.advList[this.currentIdx];    
   	this.advLength>1 && this.setInterval(this.currentIdx);
+
+    this.bindForResponsive();
   }
 
   setIndex(idx) {
@@ -38,7 +42,7 @@ export class AdvComponent implements OnInit {
     this.currentAdv = this.advList[this.currentIdx];
   }
 
-	setInterval(idx) {
+  setInterval(idx) {
     this.setIndex(idx);
 
 		this.interval = setInterval(() => {
@@ -65,6 +69,23 @@ export class AdvComponent implements OnInit {
 
   itemOnMouseleave(idx:number) {
     this.setInterval(idx);
+  }
+
+  bindForResponsive() {
+    let advs = document.querySelector('.advs');
+    const manager = new Manager(advs);
+    const swipe = new Hammer.Swipe({ threshold: 6 });
+    manager.add(swipe);
+
+    advs.addEventListener('touchstart', (eve) => {
+      this.interval && clearInterval(this.interval);
+    });
+    manager.on('swiperight', (eve) => {
+      this.goAfter(eve);
+    });
+    manager.on('swipeleft', (eve) => {
+      this.goPrevious(eve);
+    });
   }
 
 }

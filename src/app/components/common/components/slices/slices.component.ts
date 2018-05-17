@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, ElementRef, EventEmitter } from '@angular/core';
+import * as Hammer from 'hammerjs';
+import { Manager, Swipe } from 'hammerjs';
 
 @Component({
   selector: 'tui-slices-modules',
@@ -30,6 +32,7 @@ export class SlicesComponent implements OnInit {
 	// style: any;
 	itemsLength: number;    //how many items of the products list
 	itemsWidth: number;    //
+  itemWidth: number;
   windowWidth: number;
 
 	ulItems: any;
@@ -54,18 +57,23 @@ export class SlicesComponent implements OnInit {
   }
 
   default() {
-  	let items = this.items = this.data.items;
-  	const ulItemsClass = this.data.sliceClass;
-  	const config = {...SlicesComponent.config, ...this.data.config};
-  	this.hoverClassName = this.data.config.hoverClassName;
+    const nativeElement = this.el.nativeElement;
+    const isMobile = (<any> window).isMobile;
+    const config = {...SlicesComponent.config, ...this.data.config};
+    if ( isMobile.any ) {
+      this.itemWidth = config.itemWidth = isMobile.screen.width;
+    }
+    
+    let items = this.items = this.data.items;
+    const ulItemsClass = this.data.sliceClass;
+    this.hoverClassName = this.data.config.hoverClassName;
     this.targetClassName = this.data.config.targetClassName;
     this.currentItem = items[0];
 
-  	this.itemsLength = items.length;
-  	this.itemsWidth = this.itemsLength * config.itemWidth ;
+    this.itemsLength = items.length;
+    this.itemsWidth = this.itemsLength * config.itemWidth ;
     this.windowWidth = config.defaultLength * config.itemWidth;
 
-    const nativeElement = this.el.nativeElement;
 
     let itemsWrapper =  nativeElement.querySelector('.items-wrapper');
     this.ulItems = nativeElement.querySelector('.ul-items');
@@ -85,15 +93,16 @@ export class SlicesComponent implements OnInit {
     itemsWrapper.className = itemsWrapper.className + ' ' + config.wrapperClassName;
 
     this.setInterval();
-
+    // to avoid the event duplicated.
+    this.bindForResponsive(this.ulItems);
+    this.bindForResponsive(this.ulSwap);
   }
 
   setInterval (direction?) {
     this.interval = setInterval(_=>{
       (direction || SlicesComponent.config.direction) ? this.goRight(): this.goLeft();
-    }, 4000);
+    }, 4000);  // TODO: change back
   }
-
 
   turnLeft() {
     clearInterval(this.interval);
@@ -196,5 +205,23 @@ export class SlicesComponent implements OnInit {
   //   this.currentItem = item;
   //   this.onItemSelected.emit(item);
   // }
+
+  bindForResponsive(box) {
+    const manager = new Manager(box);
+    const swipe = new Hammer.Swipe({ threshold: 6 });
+    manager.add(swipe);
+
+    box.addEventListener('touchstart', (eve) => {
+      this.interval && clearInterval(this.interval);
+    });
+    manager.on('swipeleft', (eve) => {
+      console.log('swipeleft');
+      this.turnLeft();
+    });
+    manager.on('swiperight', (eve) => {
+      console.log('swiperight');
+      this.turnRight();
+    });
+  }
 
 }

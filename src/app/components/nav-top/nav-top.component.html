@@ -1,5 +1,5 @@
 <header class="top-nav">
-
+	<div *ngIf="responsive.showMask" class="mask"></div>
 	<nav>
 		<ul class="top-nav-ul">
 			<li *ngFor="let item of navigationData.navTop; let idx = index" >
@@ -19,26 +19,67 @@
 					href="/ignitor/url"
 				>{{item.text}}</a>
 			</li>
-	<!-- 		<li><a routerLink="./home" class="top-nav-a logo">Logo</a></li>
-			<li>
+		</ul>
+		<div
+			class="r-drop-menu" 
+			[style.display]="none">
+		</div>
+	</nav>
+	<nav *ngIf="responsive.showMenu" class="r-nav">
+		<ul class="r-nav-ul">
+		<!--below conditions all related to the configuration in service-->
+		<!-- 			
+		<li *ngFor="let item of navigationData.navTop; let idx = index" >
 				<a
-					routerLink="./products/data-warehouse/functionalities" 
-					routerLinkActive="active" 
-					class="top-nav-a"
-					(mouseenter)="onMouseEnter()" >云产品</a>
+					*ngIf="item.routerLink"
+					routerLink="{{item.routerLink}}"
+					class="{{item.style.class}}"
+					routerLinkActive="{{item.style.routerLinkActive}}"
+				>{{item.text}}</a>
+			</li> -->
+			<li class="special">
+				<a class="logo"></a>
+				<div class="r-cross"></div>
 			</li>
-			<li><a routerLink="./modules" routerLinkActive="active" class="top-nav-a">产品组件</a></li>
-			<li><a routerLink="./business-scenario" routerLinkActive="active" class="top-nav-a">业务方案</a></li>
-			<li><a routerLink="./documents-support" routerLinkActive="active" class="top-nav-a">文档与支持</a></li>
-			<li><a class="manage-center" href="http://www.baidu.com/">管理中心</a></li> -->
+			<li>
+				<a class="r-products">云产品 ></a>
+			</li>
+			<li>
+				<a class="r-modules">产品组件 ></a>
+			</li>
+			<li>
+				<a >业务方案</a>
+			</li>
+			<li>
+				<a >文档与支持</a>
+			</li>
+			<li>
+				<a >常见问题 ></a>
+			</li>
+			<li>
+				<a >关注我们</a>
+			</li>
+			<li>
+				<a >售后服务</a>
+			</li>
+			<li>
+				<a >新闻动态</a>
+			</li>
 		</ul>
 	</nav>
-
 	<!--S: sub menu-->
 	<div
-		*ngIf="showSubmenu"
+		*ngIf="showSubmenu || responsive.showSubmenu"
 		(mouseleave)="onMouseleave()"
 		class="top-nav-sub-items">
+		<div 
+			*ngIf="responsive.showSubmenu"
+			class="r-submenu-top"
+		>
+			<span class="r-back">back</span>
+			<h3>{{responsive.submenuType==='products'?'云产品':'产品组件'}}</h3>
+			<div class="r-cross"></div>
+		</div>
 
 		<ul
 			*ngIf="subMenuItems.type===submenuType.products"
@@ -46,10 +87,11 @@
 			<li
 				*ngFor="let item of subMenuItems.products">
 				<a
+					class="r-anchor"
 					(click)="onClick()"
 					routerLink="{{item.routerLink}}">
-					<h3>{{item.title}}</h3>
-					<p>{{item.summary}}</p>
+					<h3 class="r-anchor-h">{{item.title}}</h3>
+					<p class="r-anchor-p">{{item.summary}}</p>
 				</a>
 			</li>
 		</ul>
@@ -63,10 +105,11 @@
 				<dl>
 					<dd *ngFor="let product of item.products; let i = index">
 						<a
+							class="r-anchor"
 							(click)="onClick()"
 							routerLink="{{product.routerLink}}">
-							<h4>{{product.title}}</h4>
-							<p>{{product.summary}}</p>
+							<h4 class="r-anchor-h">{{product.title}}</h4>
+							<p class="r-anchor-p">{{product.summary}}</p>
 						</a>
 					</dd>
 				</dl>
@@ -75,5 +118,4 @@
 		
 	</div>
 	<!--E: sub menu-->
-
 </header>

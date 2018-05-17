@@ -218,9 +218,187 @@ $hoverBg: #0063cb
 
     &:hover
       background: $hoverBg
+      
+.r-cross
+  display: inline-block
+  width: 24px
+  height: 24px
+  background: #ddd
+  position: absolute
+  top: 14px
+  right: 14px
+
+  &:before, &:after
+    content: ''
+    width: 100%
+    height: 100%
+    border-bottom: 2px #333 solid
+
+@media (min-width: 320px) and (max-width: 720px) 
+  .mask
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, .5)
+    z-index: 1
+
+  .top-nav
+    .top-nav-ul
+      width: 100%
+      min-width: 100%
+      max-width: 100%
+      position: relative
+
+      li
+        display: none
+        &:first-child
+          display: flex
+          width: 100%
+          float: none
+          justify-content: center
+
+  .r-drop-menu
+    width: 20px
+    height: 16px
+    border-top: 2px #848788 solid
+    border-bottom: 2px #848788 solid
+    position: absolute
+    right: 15px
+    top: 17px
+    display: inline-block
+    &:after
+      content: ''
+      display: inline-block
+      width: 100%
+      height: 2px
+      border: 0
+      background: #848788
+      position: relative
+      top: -8px
+
+  .r-nav
+    width: 100%
+    padding-bottom: 100px
+    visibility: visibility
+    position: absolute
+    top: 0
+    z-index: 3
+    background: rgba(1, 1, 1, .8)
+
+  .r-nav-ul
+    display: block
+    visibility: visible
+    z-index: 4
+
+    li
+      height: 40px
+      line-height: 40px
+      background: #000101
+      
+      a
+        display: inline-block
+        width: 100%
+        height: 100%
+        color: #ccc
+        font-size: 14px
+        border-bottom: 1px #343435 solid
+        // TODO: the arrow. the cross . 
+    li.special
+      height: $h52
+      position: relative
+      text-align: center
+
+      .logo // duplicated with normal logo code
+        width: 200px
+        height: $h52
+        border: 0
+        overflow: hidden
+        text-indent: 200px
+        background: transparent url(/assets/images/icons.png) no-repeat 43px 10px
 
 
+  .r-submenu-top
+    height: $h52
+    background: green
 
 
+  .top-nav-sub-items
+    width: 100%
+    min-width: 100%
+    max-width: 100%
+    margin: 0 auto
+    overflow: hidden
+    position: absolute
+    left: 0
+    top: 0
+    padding-top: 0
+    height: auto
+    background: #051722
+    z-index: 5
+    .r-submenu-top
+      .r-back
+        display: inline-block
+        width: 38px
+        height: 38px
+        overflow: hidden
+        text-indent: 300px
+        position: absolute
+        margin-left: 15px
+        margin-top: 8px
+        &:after
+          content: ''
+          display: inline-block
+          width: 24px
+          height: 24px
+          border: 2px #ddd solid
+          border-right: 0
+          border-top: 0
+          transform: rotate(45deg)
+          position: absolute
+          left: 10px
+          top: 6px
+      h3
+        height: $h52
+        line-height: $h52
+        text-align: center
 
 
+  .products-sub-menu
+    padding-right: 20px
+    overflow: auto
+    li
+      float: left
+      display: inline-block
+      width: 50%
+      height: 154px
+      padding: 0 0 20px 20px
+      &:nth-child(2n)
+        padding-right: 0
+        color: red
+
+      a
+        border-radius: 3px
+        padding: 0 20px
+        overflow: hidden
+        display: inline-block
+        background: $bgColor
+        &:hover
+          background: $hoverBg
+
+      h3
+        padding: 22px 0 15px
+        margin: 0
+        font-size: 1.4rem
+        color: $fontColor
+
+      p
+        padding: 0
+        height: 84px
+        margin: 0
+
+        font-size: 1.2rem
+        line-height: 20px
+        color: $fontColor
+        overflow: hidden
