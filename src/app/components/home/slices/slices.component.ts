@@ -17,8 +17,4 @@ export class SlicesComponent extends TheSlicesComponent {
     super(el);
   }
 
-  ngOnInit() {
-    this.default();
-  }
-
 }

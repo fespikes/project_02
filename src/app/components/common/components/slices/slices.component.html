@@ -11,7 +11,7 @@
 			class="{{item.liClass}}" 
 	  	(mouseenter)="itemOnMouseenter($event.target, item)"
 	  	(mouseleave)="itemOnMouseleave($event.target, item)"
-	  		[ngStyle]="{width: itemWidth + 'px'}"
+	  		[style.width]="itemWidth? (itemWidth + 'px'): ''"
 		>
 	  	<!-- [ngClass]="{'active': currentItem ===item }" -->
 			<a
@@ -103,7 +103,7 @@
 			class="{{item.liClass}}" 
 	  	(mouseenter)="itemOnMouseenter($event.target, item)"
 	  	(mouseleave)="itemOnMouseleave($event.target, item)"
-	  		[ngStyle]="{width: itemWidth + 'px'}"
+	  		[style.width]="itemWidth ? (itemWidth + 'px'): ''"
 		>
 	  	<!-- [ngClass]="{'active': currentItem ===item }" -->
 			<a

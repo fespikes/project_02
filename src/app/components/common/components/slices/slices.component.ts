@@ -13,6 +13,12 @@ import { Manager, Swipe } from 'hammerjs';
   },
 })
 export class SlicesComponent implements OnInit {
+/**
+* 如果是移动端：
+  this.bindForResponsive(this.ulItems);
+  this.bindForResponsive(this.ulSwap);
+
+*/
 
   static config = {
     itemWidth: 400,//*
@@ -20,7 +26,8 @@ export class SlicesComponent implements OnInit {
     gap: 0,
     direction: true, //go right
     hoverClassName: 'current',//*
-    wrapperClassName: 'h600'//*
+    wrapperClassName: 'h600',//*
+    time: 4000
   };
 
   @Input()
@@ -34,6 +41,7 @@ export class SlicesComponent implements OnInit {
 	itemsWidth: number;    //
   itemWidth: number;
   windowWidth: number;
+  swipWidth: number;
 
 	ulItems: any;
   ulSwap: any;
@@ -51,31 +59,34 @@ export class SlicesComponent implements OnInit {
     this.onItemSelected = new EventEmitter();
   }
 
+  // when is phone, need to add item width to make the item device width.
   ngOnInit() {
-  	//TODO:
+    const config = {...SlicesComponent.config, ...this.data.config};
+    const isMobile = (<any> window).isMobile;
+    if ( isMobile.screen.isPhone ) {
+      this.itemWidth = isMobile.screen.width;      // here is item width
+    } else {
+      this.itemWidth = config.itemWidth;
+    }
+
+    let items = this.items = this.data.items;
+    this.itemsLength = items.length;
+    this.itemsWidth = this.itemsLength * this.itemWidth ;  // here is items width 
+    this.windowWidth = config.defaultLength * config.itemWidth;
+    this.currentItem = items[0];
+
     this.default();
   }
 
   default() {
     const nativeElement = this.el.nativeElement;
-    const isMobile = (<any> window).isMobile;
     const config = {...SlicesComponent.config, ...this.data.config};
-    if ( isMobile.any ) {
-      this.itemWidth = config.itemWidth = isMobile.screen.width;
-    }
     
-    let items = this.items = this.data.items;
     const ulItemsClass = this.data.sliceClass;
     this.hoverClassName = this.data.config.hoverClassName;
     this.targetClassName = this.data.config.targetClassName;
-    this.currentItem = items[0];
 
-    this.itemsLength = items.length;
-    this.itemsWidth = this.itemsLength * config.itemWidth ;
-    this.windowWidth = config.defaultLength * config.itemWidth;
-
-
-    let itemsWrapper =  nativeElement.querySelector('.items-wrapper');
+    const  itemsWrapper =  nativeElement.querySelector('.items-wrapper');
     this.ulItems = nativeElement.querySelector('.ul-items');
     this.ulSwap = nativeElement.querySelector('.ul-swap');
 
@@ -86,7 +97,7 @@ export class SlicesComponent implements OnInit {
       this.ulItems.style.left = '0px';
       this.ulSwap.style.left = this.itemsWidth*-1 + 'px';
     }
-    this.needArrow = this.itemsLength>config.defaultLength;
+    this.needArrow = this.itemsLength > config.defaultLength;
 
     this.ulItems.className = this.ulItems.className + ' ' + ulItemsClass;
     this.ulSwap.className = this.ulSwap.className + ' ' + ulItemsClass;
@@ -96,12 +107,13 @@ export class SlicesComponent implements OnInit {
     // to avoid the event duplicated.
     this.bindForResponsive(this.ulItems);
     this.bindForResponsive(this.ulSwap);
+    this.getSwipWidth();
   }
 
   setInterval (direction?) {
-    this.interval = setInterval(_=>{
+    this.interval = setInterval(_ => {
       (direction || SlicesComponent.config.direction) ? this.goRight(): this.goLeft();
-    }, 4000);  // TODO: change back
+    }, SlicesComponent.config.time);  // TODO: change back
   }
 
   turnLeft() {
@@ -116,10 +128,24 @@ export class SlicesComponent implements OnInit {
     this.setInterval(true);
   }
 
+  // deal with smart phone only
+  getSwipWidth() {
+    const isMobile = (<any> window).isMobile;
+    const config = {...SlicesComponent.config, ...this.data.config};
+
+    if ( isMobile.screen.isPhone ) {
+      this.swipWidth = isMobile.screen.width;
+    } else {
+      this.swipWidth = this.windowWidth;
+    }
+  }
+
   goLeft() {
     let mLeft, sLeft, mTempLeft, sTempLeft, tail;
     const ulItems = this.ulItems;
     const ulSwap = this.ulSwap;
+
+    // to help understand: on pc the itemsWidth is 400*7 and the window width is 1200px
     const itemsWidth = this.itemsWidth;
     const windowWidth = this.windowWidth;
 
@@ -127,8 +153,9 @@ export class SlicesComponent implements OnInit {
     sLeft = parseInt(ulSwap.style.left);       //swap ul left
 
     if (mLeft>=windowWidth-itemsWidth && mLeft<windowWidth) {
+      // console.log('向右滑动，左边swipeul 出来');
 
-      ulItems.style.left = (mTempLeft = (mLeft + this.windowWidth) ) + 'px';//TODO: animation of fade to left sLeftowly
+      ulItems.style.left = (mTempLeft = (mLeft + this.swipWidth) ) + 'px';
       ulSwap.style.left = (sTempLeft = (mTempLeft - itemsWidth) ) + 'px';
       tail = mTempLeft;
 
@@ -138,8 +165,9 @@ export class SlicesComponent implements OnInit {
       }
 
     } else if (sLeft>=windowWidth-itemsWidth && sLeft<windowWidth) {
+      console.log('left side out of screen, in right');
 
-      ulSwap.style.left = (sTempLeft = (sLeft + this.windowWidth) ) + 'px';
+      ulSwap.style.left = (sTempLeft = (sLeft + this.swipWidth) ) + 'px';
       ulItems.style.left = (mTempLeft = (sTempLeft - itemsWidth) ) + 'px';//TODO: animation of fade to left sLeftowly
       tail = sTempLeft;
 
@@ -161,7 +189,7 @@ export class SlicesComponent implements OnInit {
 
     if (mLeft>itemsWidth*-1 && mLeft<=0) {
 
-      ulItems.style.left = (mTempLeft = (mLeft - this.windowWidth) ) + 'px';//TODO: animation of fade to left sLeftowly
+      ulItems.style.left = (mTempLeft = (mLeft - this.swipWidth) ) + 'px';//TODO: animation of fade to left sLeftowly
       ulSwap.style.left = (sTempLeft = (mTempLeft + itemsWidth) ) + 'px';
       tail = mTempLeft+itemsWidth;
 
@@ -172,7 +200,7 @@ export class SlicesComponent implements OnInit {
 
     } else if(sLeft>itemsWidth*-1 && sLeft<=0) {
 
-      ulSwap.style.left = (sTempLeft = (sLeft - this.windowWidth) ) + 'px';
+      ulSwap.style.left = (sTempLeft = (sLeft - this.swipWidth) ) + 'px';
       ulItems.style.left = (mTempLeft = (sTempLeft + itemsWidth) ) + 'px';//TODO: animation of fade to left sLeftowly
       tail = sTempLeft+itemsWidth;
 
@@ -215,12 +243,10 @@ export class SlicesComponent implements OnInit {
       this.interval && clearInterval(this.interval);
     });
     manager.on('swipeleft', (eve) => {
-      console.log('swipeleft');
-      this.turnLeft();
+      this.turnRight();
     });
     manager.on('swiperight', (eve) => {
-      console.log('swiperight');
-      this.turnRight();
+      this.turnLeft();
     });
   }
 

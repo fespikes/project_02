@@ -121,10 +121,13 @@
             return this;
         }
 
+        // own added, not the isMobile lib
         this.screen = {
             width: document.documentElement.clientWidth,
             height: document.documentElement.clientHeight,
-            ratio: window.devicePixelRatio
+            ratio: window.devicePixelRatio,
+            isPhone: this.any && !this.tablet,
+            isTablet: !!this.tablet
             // ,PPI: function() {
             //     var arrDPI = new Array;
             //     var tmpNode = document.createElement("DIV");
