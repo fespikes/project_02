@@ -100,9 +100,6 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   onSelectChange(node) {
-    if (!node.clickToggle) { // click toggle icon and node name
-      node.expanded = true;
-    }
     if (node.checkboxChanged) { // click checkbox
       this.selectedDocsParams = this.documentSearchService.makeSelectedDocsParams(node, this.selectedDocsParams, this.treeModel);
       const searchParams = this.documentSearchService.makeSearchAPIParams(this.keyword, this.pagination, this.selectedDocsParams);

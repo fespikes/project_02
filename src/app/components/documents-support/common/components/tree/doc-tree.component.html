@@ -6,7 +6,6 @@
     id="doc-tree-{{node.id}}"
     class="node-type"
     [class.selected]="node.selected && !node.tag"
-    (dblclick)="dbClick(node)"
     [ngStyle]="{'margin-left': (treeLevel * 10) + 'px'}"
   >
     <svg
@@ -23,7 +22,7 @@
     --><a
       title="{{node.name}}"
       class="node-name {{treeType}}-node-name-level-{{treeLevel}} text-ellipsis"
-      (click)="selectChange(node);"
+      (click)="selectChange(node)"
     >
       {{node.name}}
     </a>
@@ -33,6 +32,6 @@
     [treeModel]="node.children"
     [treeLevel]="treeLevel + 1"
     [treeType]="treeType"
-    (onSelectChange)="selectChange($event);"
+    (onSelectChange)="onSelectChange.emit($event)"
   ></tdc-menu-tree>
 </div>
