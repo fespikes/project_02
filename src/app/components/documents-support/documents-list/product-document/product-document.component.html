@@ -1,3 +1,28 @@
-<tdc-product-list
-  [docsFolderList]="docsFolderList"
-></tdc-product-list>
+<div class="product-list-container">
+  <div class="product-list-container-title">
+    <span *ngIf="selectedProduct === productCategory.TDH">Transwarp Data Hub</span>
+    <span *ngIf="selectedProduct === productCategory.SOPHON">Sophon</span>
+    {{'DOCUMENTS.PRODUCT_DOCUMENT' | translate}}
+  </div>
+  <tdc-product-list
+    [docsFolderList]="selectedDocsList"
+  ></tdc-product-list>
+</div>
+
+<div class="product-select-container">
+  <div class="product-select-container-title">{{'DOCUMENTS.SELECT_PRODUCT' | translate}}</div>
+  <div
+    class="product-select-container-item"
+    [ngClass]="{'product-select-container-item-selected': selectedProduct === productCategory.TDH}"
+    (click)="selectProduct(productCategory.TDH)"
+  >
+    Transwarp Data Hub
+  </div>
+  <div
+    class="product-select-container-item"
+    [ngClass]="{'product-select-container-item-selected': selectedProduct === productCategory.SOPHON}"
+    (click)="selectProduct(productCategory.SOPHON)"
+  >
+    Sophon
+  </div>
+</div>

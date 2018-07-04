@@ -23,7 +23,7 @@ export class DocumentsSearchComponent implements OnInit {
   keyword = '';
   treeLevel = 1;
   treeType = 'search-tree';
-  selectedDocs = [];
+  selectedDocsParams = [];
   pagination = new Pagination();
 
   constructor(
@@ -52,8 +52,8 @@ export class DocumentsSearchComponent implements OnInit {
     this.keyword = keyword;
     this.documentResService.setKeyword(keyword);
     this.router.navigate([`/documents-support/docs-search`]);
-    const searchParams = this.documentSearchService.makeSearchParams(
-      keyword, this.pagination, this.selectedDocs);
+    const searchParams = this.documentSearchService.makeSearchAPIParams(
+      keyword, this.pagination, this.selectedDocsParams);
     this.documentSearch(searchParams);
   }
 
@@ -83,8 +83,8 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   paginationChange() {
-    const searchParams = this.documentSearchService.makeSearchParams(
-      this.keyword, this.pagination, this.selectedDocs);
+    const searchParams = this.documentSearchService.makeSearchAPIParams(
+      this.keyword, this.pagination, this.selectedDocsParams);
     this.documentSearch(searchParams);
     this.documentUtilService.scrollScreenTop();
   }
@@ -104,12 +104,8 @@ export class DocumentsSearchComponent implements OnInit {
       node.expanded = true;
     }
     if (node.checkboxChanged) { // click checkbox
-      const searchState = this.documentSearchService.makeSelectedDocs(
-        node, this.selectedDocs, this.treeModel);
-      this.selectedDocs = searchState.selectedDocs;
-      this.treeModel = searchState.treeModel;
-      const searchParams = this.documentSearchService.makeSearchParams(
-        this.keyword, this.pagination, this.selectedDocs);
+      this.selectedDocsParams = this.documentSearchService.makeSelectedDocsParams(node, this.selectedDocsParams, this.treeModel);
+      const searchParams = this.documentSearchService.makeSearchAPIParams(this.keyword, this.pagination, this.selectedDocsParams);
       this.documentSearch(searchParams);
       this.documentUtilService.scrollScreenTop();
     }

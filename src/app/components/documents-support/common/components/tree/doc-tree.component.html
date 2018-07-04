@@ -7,7 +7,7 @@
     class="node-type"
     [class.selected]="node.selected && !node.tag"
     (dblclick)="dbClick(node)"
-    [ngStyle]="{'margin-left': (treeLevel * 20) + 'px'}"
+    [ngStyle]="{'margin-left': (treeLevel * 10) + 'px'}"
   >
     <svg
       [ngClass]="{'hide-icon': !node.children || node.children.length === 0}"

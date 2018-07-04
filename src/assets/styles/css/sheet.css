@@ -111,7 +111,7 @@ kbd{display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;b
 #content b.button:before{content:"[";padding:0 3px 0 2px}
 #content b.button:after{content:"]";padding:0 2px 0 3px}
 #content p a>code:hover{color:rgba(0,0,0,.9)}
-#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:0;padding-right:0;}
 #header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
 #header:after,#content:after,#footnotes:after,#footer:after{clear:both}
 #content{margin-top:1.25em}
@@ -471,7 +471,7 @@ dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 #content h4, #content h5{font-size: 14px; margin: 10px auto;}
 #content h6{font-size: 12px; margin: 10px auto;}
 #content .paragraph, #content p{font-size: 12px; line-height: 24px;}
-#content pre{font-size: 12px;}
+#content pre{font-size: 12px; overflow: auto; max-height: 200px;}
 #content ul li{list-style-type: disc;}
 #content ul ul li{list-style-type: circle;}
 #content ol ul li{list-style-type: circle;}

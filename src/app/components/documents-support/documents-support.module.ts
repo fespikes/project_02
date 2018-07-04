@@ -17,6 +17,7 @@ import { HorizontalListComponent } from './common/components/list/horizontal-lis
 import { BreadcrumbComponent } from './common/components/breadcrumb/breadcrumb.component';
 import { SearchComponent } from './common/components/search/search.component';
 import { DocTreeComponent } from './common/components/tree/doc-tree.component';
+import { TabComponent } from './common/components/tab/tab.component';
 import { DocsListComponent } from './documents-search/list/docs-list.component';
 
 import { DocumentUtilService } from './services/document.util.service';
@@ -53,6 +54,7 @@ import { SharedModule } from '../../shared';
     FreshGuidesComponent,
     ProductListComponent,
     SearchComponent,
+    TabComponent,
     DocTreeComponent,
     DocsListComponent,
     HorizontalListComponent,

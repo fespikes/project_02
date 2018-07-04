@@ -3,7 +3,7 @@
 
 $tab-height: 40px
 $margin-top: 30px
-$margin-left-right: 20px
+$margin-left-right: 0
 $docs-list-min-height: calc(100vh - #{$nav-height})
 $docs-content-min-height: calc(100vh - #{$nav-height + $crumb-height + $tab-height + $margin-left-right})
 
@@ -11,10 +11,13 @@ $docs-content-min-height: calc(100vh - #{$nav-height + $crumb-height + $tab-heig
   min-height: $docs-list-min-height
   background-color: $common-bg-color
   width: 1200px
-  margin: 0 auto
+  margin: 46px auto 0 auto
 
   .tdc-tab
     height: $tab-height
+
+  .breadcrumb
+    background-color: #fff
 
 .docs-content
   margin: $margin-top $margin-left-right 0 $margin-left-right
