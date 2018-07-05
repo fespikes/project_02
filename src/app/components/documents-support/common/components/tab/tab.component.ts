@@ -4,7 +4,7 @@ import {
   HostBinding,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
 } from '@angular/core';
 
 @Component({

@@ -2,7 +2,6 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 
 import { ProductIntroduceComponent } from './introduce/product-introduce.component';
 import { ProductAdvantageComponent } from './advantage/product-advantage.component';
-import { TabComponent } from '../../common/components/tab/tab.component';
 
 import { ProductBannerService } from '../services/product-banner.service';
 import { ProductUtilService } from '../services/product-util.service';
