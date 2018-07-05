@@ -52,8 +52,9 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
 
   initPage() {
     this.docName = this.documentResService.getDocName();
+    const docType = this.documentResService.getDocSubType();
     this.crumbItems = this.documentResService.getDocsCrumb(
-      this.DOC_DETAIL, this.docName,
+      this.DOC_DETAIL, this.docName, docType,
     );
     this.getDocTree();
     this.getDocDetail();
