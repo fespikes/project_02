@@ -75,7 +75,11 @@ export class DocumentSearchService {
 
   // 初始化搜索树treeModel
   initSearchTree(docsTree): any[] {
-    const tdhDoc = this.getTreeModelByCategory(['TDH-PLATFORM', 'TDH-DEV_SUITE', 'TDH-OPS'], docsTree);
+    const tdhDoc = [
+      this.getTreeModelByCategory(['TDH-PLATFORM'], docsTree)[0],
+      this.getTreeModelByCategory(['TDH-DEV_SUITE'], docsTree)[0],
+      this.getTreeModelByCategory(['TDH-OPS'], docsTree)[0],
+    ];
     const sophonDoc = this.getTreeModelByCategory(['SOPHON-PLATFORM', 'SOPHON-DEV_SUITE', 'SOPHON-OPS'], docsTree);
     const faqDoc = this.getTreeModelByCategory(['FAQ'], docsTree);
     const introDoc = this.getTreeModelByCategory(['INTRO'], docsTree);
