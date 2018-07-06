@@ -35,7 +35,12 @@ export class ProductDocumentComponent implements OnInit {
   getProductDocs(tag) {
     this.documentAPIService.getDocuments(tag, false).subscribe(
       docs => {
-        const tdhFolderList = docs.filter(doc => doc.id.indexOf(this.productCategory.TDH) === 0);
+        const TdhDocType = ['TDH-PLATFORM', 'TDH-DEV_SUITE', 'TDH-OPS'];
+        const tdhFolderList = [
+          docs.filter(doc => doc.id.indexOf(TdhDocType[0]) === 0)[0],
+          docs.filter(doc => doc.id.indexOf(TdhDocType[1]) === 0)[0],
+          docs.filter(doc => doc.id.indexOf(TdhDocType[2]) === 0)[0],
+        ];
         const sophonFolderList = docs.filter(doc => doc.id.indexOf(this.productCategory.SOPHON) === 0);
         this.docsFolderList = [
           this.documentUtilService.addDocsVersions(tdhFolderList),
