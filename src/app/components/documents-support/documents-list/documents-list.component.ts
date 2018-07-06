@@ -2,6 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentResService } from '../services/document.res.service';
+import { DocumentStorageService } from '../services/document.storage.service';
 
 @Component({
   selector: 'tdc-documents-list',
@@ -15,6 +16,7 @@ export class DocumentsListComponent implements OnInit {
 
   constructor(
     private documentUtilService: DocumentUtilService,
+    private documentStorageService: DocumentStorageService,
     private documentResService: DocumentResService,
   ) {
 
@@ -23,7 +25,7 @@ export class DocumentsListComponent implements OnInit {
   ngOnInit() {
 
     const docsType = this.documentUtilService.getDocsType(window.location.hash);
-    this.documentResService.setDocSubType(docsType);
+    this.documentStorageService.setDocSubType(docsType);
     this.crumbItems = this.documentResService.getDocsCrumb(docsType, '');
 
     this.tabItems = this.documentResService.getTabItems();
@@ -33,6 +35,6 @@ export class DocumentsListComponent implements OnInit {
 
   onTabChange(type) {
     this.crumbItems = this.documentResService.getDocsCrumb(type, '');
-    this.documentResService.setDocSubType(type);
+    this.documentStorageService.setDocSubType(type);
   }
 }

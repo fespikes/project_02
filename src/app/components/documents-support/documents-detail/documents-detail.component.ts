@@ -5,6 +5,7 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentResService } from '../services/document.res.service';
+import { DocumentStorageService } from '../services/document.storage.service';
 import { DocumentSearchService } from '../documents-search/documents-search.service';
 import { MessageService } from '../../../tui';
 
@@ -39,6 +40,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
     private documentAPIService: DocumentAPIService,
     private documentUtilService: DocumentUtilService,
     private documentResService: DocumentResService,
+    private documentStorageService: DocumentStorageService,
     private documentSearchService: DocumentSearchService,
     private messageService: MessageService,
   ) {
@@ -52,7 +54,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
 
   initPage() {
     this.docName = this.documentResService.getDocName();
-    const docType = this.documentResService.getDocSubType();
+    const docType = this.documentStorageService.getDocSubType();
     this.crumbItems = this.documentResService.getDocsCrumb(
       this.DOC_DETAIL, this.docName, docType,
     );

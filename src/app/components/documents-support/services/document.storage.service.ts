@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DocumentStorageService {
 
+  docSubType = '';
 
   constructor() {
 
@@ -18,5 +19,13 @@ export class DocumentStorageService {
 
   clearStorage(): void {
     sessionStorage.clear();
+  }
+
+  getDocSubType(): string {
+    return sessionStorage.getItem('tdcweb:docType');
+  }
+
+  setDocSubType(docType: string) {
+    sessionStorage.setItem('tdcweb:docType', docType);
   }
 }
