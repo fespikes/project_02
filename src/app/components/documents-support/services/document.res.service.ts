@@ -12,7 +12,6 @@ export class DocumentResService {
   anchor = 'index'; // for anchor content
   sectionId = 'index'; // for common api request
   docName = '';
-  docSubType = '';
 
   searchCompleted = false;
   keyNeedRender = false;
@@ -21,14 +20,6 @@ export class DocumentResService {
     private documentStorageService: DocumentStorageService,
   ) {
 
-  }
-
-  getDocSubType(): string {
-    return this.docSubType;
-  }
-
-  setDocSubType(subType: string) {
-    this.docSubType = subType;
   }
 
   getSectionId(): string {
@@ -177,7 +168,7 @@ export class DocumentResService {
       case 'products':
         item = {
           name: 'productDocument',
-          alias: 'DOCUMENTS.PROCUCT_DOCUMENT',
+          alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
           url: '../../../../../../documents-support/docs/products',
         };
         break;
