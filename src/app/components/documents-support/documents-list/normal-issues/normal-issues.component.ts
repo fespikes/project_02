@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentResService } from '../../services/document.res.service';
+import { DocumentUtilService } from '../../services/document.util.service';
 import { MessageService } from '../../../../tui';
 
 @Component({
@@ -17,10 +18,12 @@ export class NormalIssuesComponent implements OnInit {
 
   CATEGORY = 'FAQ';
   VERSION = 'none';
+  docType = 'documents';
 
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentResService: DocumentResService,
+    private documentUtilService: DocumentUtilService,
     private messageService: MessageService,
     private router: Router,
   ) {
@@ -29,6 +32,7 @@ export class NormalIssuesComponent implements OnInit {
 
   ngOnInit() {
     this.getNormalIssues('faq');
+    this.docType = this.documentUtilService.getDocsType(window.location.hash);
   }
 
   getNormalIssues(tag) {
@@ -45,7 +49,7 @@ export class NormalIssuesComponent implements OnInit {
   viewDetail(doc) {
     this.documentResService.setAnchorId('index');
     this.documentResService.setSectionId('index');
-    this.documentResService.setDocName(doc.name);
-    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`]);
+    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`],
+      {queryParams: {docType: this.docType, docName: doc.name}});
   }
 }

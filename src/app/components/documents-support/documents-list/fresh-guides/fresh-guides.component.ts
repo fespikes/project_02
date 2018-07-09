@@ -21,6 +21,7 @@ export class FreshGuidesComponent implements OnInit {
 
   CATEGORY = 'INTRO';
   VERSION = 'none';
+  docType = 'documents';
 
   constructor(
     private documentAPIService: DocumentAPIService,
@@ -34,6 +35,7 @@ export class FreshGuidesComponent implements OnInit {
 
   ngOnInit() {
     this.getFreshGuides('intro');
+    this.docType = this.documentUtilService.getDocsType(window.location.hash);
     this.otherCourse = this.documentResService.getOtherCourse();
     const videoTutorial = this.commonService.getVideoTutorial();
     this.videoCourse = this.documentUtilService.makeVideoCourse(videoTutorial);
@@ -63,7 +65,7 @@ export class FreshGuidesComponent implements OnInit {
   viewFreshDocDetail(doc) {
     this.documentResService.setAnchorId('index');
     this.documentResService.setSectionId('index');
-    this.documentResService.setDocName(doc.name);
-    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`]);
+    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`],
+      {queryParams: {docType: this.docType, docName: doc.name}});
   }
 }

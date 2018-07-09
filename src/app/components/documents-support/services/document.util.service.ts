@@ -27,7 +27,7 @@ export class DocumentUtilService {
   }
 
   getDocDetailUrlParams(path, sectionName): any {
-    const array = path.split('/');
+    const array = (path.split('?')[0]).split('/');
     return {
       section: sectionName,
       component: array[array.length - 1],
