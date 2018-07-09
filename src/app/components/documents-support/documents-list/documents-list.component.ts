@@ -25,7 +25,6 @@ export class DocumentsListComponent implements OnInit {
   ngOnInit() {
 
     const docsType = this.documentUtilService.getDocsType(window.location.hash);
-    this.documentStorageService.setDocSubType(docsType);
     this.crumbItems = this.documentResService.getDocsCrumb(docsType, '');
 
     this.tabItems = this.documentResService.getTabItems();
@@ -35,6 +34,5 @@ export class DocumentsListComponent implements OnInit {
 
   onTabChange(type) {
     this.crumbItems = this.documentResService.getDocsCrumb(type, '');
-    this.documentStorageService.setDocSubType(type);
   }
 }

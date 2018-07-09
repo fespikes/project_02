@@ -45,14 +45,6 @@ export class DocumentResService {
     }
   }
 
-  getDocName(): string {
-    return this.documentStorageService.getStorageItem('docName');
-  }
-
-  setDocName(name): void {
-    this.documentStorageService.setStorageItem('docName', name);
-  }
-
   getKeyword(): string {
     return this.documentStorageService.getStorageItem('keyword');
   }

@@ -109,9 +109,11 @@ export class DocumentsSearchComponent implements OnInit {
   }
 
   listItemClick(doc) {
+    const docType = this.documentSearchService.getDocType(doc.document.id);
     this.documentResService.setKeyNeedRender(true);
     this.documentResService.setAnchorId(doc.anchor);
     this.documentResService.setSectionId(doc.document.filename);
-    this.router.navigate([`/documents-support/docs-detail/${doc.document.id}`]);
+    this.router.navigate([`/documents-support/docs-detail/${doc.document.id}`],
+      {queryParams: {docType: docType, docName: doc.name}});
   }
 }

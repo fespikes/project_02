@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding, OnDestroy } from '@angular/core';
 
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentUtilService } from '../services/document.util.service';
@@ -43,6 +43,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
     private documentStorageService: DocumentStorageService,
     private documentSearchService: DocumentSearchService,
     private messageService: MessageService,
+    private route: ActivatedRoute,
   ) {
 
   }
@@ -50,18 +51,23 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.initPage();
     this.onClickListener();
+    this.route.queryParams
+    .subscribe((params) => {
+      const docType = params && params.docType;
+      this.docName = params && params.docName;
+      this.getCrumbItems(docType, this.docName);
+    });
   }
 
   initPage() {
-    this.docName = this.documentResService.getDocName();
-    const docType = this.documentStorageService.getDocSubType();
-    this.crumbItems = this.documentResService.getDocsCrumb(
-      this.DOC_DETAIL, this.docName, docType,
-    );
     this.getDocTree();
     this.getDocDetail();
     this.documentUtilService.setBodyWidthAttribute('100%');
     this.documentUtilService.scrollScreenTop();
+  }
+
+  getCrumbItems(docType, docName) {
+    this.crumbItems = this.documentResService.getDocsCrumb(this.DOC_DETAIL, docName, docType);
   }
 
   getDocTree() {

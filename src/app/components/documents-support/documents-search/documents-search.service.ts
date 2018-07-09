@@ -361,4 +361,15 @@ export class DocumentSearchService {
     }
     return parentNode;
   }
+
+  getDocType(docId: string): string {
+    let docType = 'products';
+    if (docId.indexOf('faq/FAQ/') === 0) {
+      docType = 'issues';
+    } else if (docId.indexOf('intro/INTRO/') === 0) {
+      docType = 'guides';
+    }
+
+    return docType;
+  }
 }
