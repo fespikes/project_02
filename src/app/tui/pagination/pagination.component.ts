@@ -121,6 +121,7 @@ export class PaginationComponent implements OnInit, OnDestroy {
 
   renderPages() {
     if (!this.pageSize || !this.totalPage || !this.currentPage) {
+      this.pages = [];
       return;
     }
 

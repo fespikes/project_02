@@ -1,10 +1,11 @@
 import { Component, OnInit, HostBinding, OnDestroy } from '@angular/core';
 
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { DocumentAPIService } from '../services/document.api.service';
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentResService } from '../services/document.res.service';
+import { DocumentStorageService } from '../services/document.storage.service';
 import { DocumentSearchService } from '../documents-search/documents-search.service';
 import { MessageService } from '../../../tui';
 
@@ -39,8 +40,10 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
     private documentAPIService: DocumentAPIService,
     private documentUtilService: DocumentUtilService,
     private documentResService: DocumentResService,
+    private documentStorageService: DocumentStorageService,
     private documentSearchService: DocumentSearchService,
     private messageService: MessageService,
+    private route: ActivatedRoute,
   ) {
 
   }
@@ -48,17 +51,23 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.initPage();
     this.onClickListener();
+    this.route.queryParams
+    .subscribe((params) => {
+      const docType = params && params.docType;
+      this.docName = params && params.docName;
+      this.getCrumbItems(docType, this.docName);
+    });
   }
 
   initPage() {
-    this.docName = this.documentResService.getDocName();
-    this.crumbItems = this.documentResService.getDocsCrumb(
-      this.DOC_DETAIL, this.docName,
-    );
     this.getDocTree();
     this.getDocDetail();
     this.documentUtilService.setBodyWidthAttribute('100%');
     this.documentUtilService.scrollScreenTop();
+  }
+
+  getCrumbItems(docType, docName) {
+    this.crumbItems = this.documentResService.getDocsCrumb(this.DOC_DETAIL, docName, docType);
   }
 
   getDocTree() {
@@ -141,9 +150,6 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
   }
 
   updateTreeState(node) {
-    if (!node.clickToggle) {
-      node.expanded = true;
-    }
     this.treeModel = this.documentSearchService.removeSelectedState(this.treeModel);
     node.selected = true;
   }

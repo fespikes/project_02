@@ -45,14 +45,6 @@ export class DocumentResService {
     }
   }
 
-  getDocName(): string {
-    return this.documentStorageService.getStorageItem('docName');
-  }
-
-  setDocName(name): void {
-    this.documentStorageService.setStorageItem('docName', name);
-  }
-
   getKeyword(): string {
     return this.documentStorageService.getStorageItem('keyword');
   }
@@ -77,7 +69,7 @@ export class DocumentResService {
     this.keyNeedRender = needRender;
   }
 
-  getDocsCrumb(type, alias): any[] {
+  getDocsCrumb(type, alias, subType = ''): any[] {
     let crumbItems = [];
     switch (type) {
       case 'products':
@@ -141,16 +133,11 @@ export class DocumentResService {
         ];
         break;
       case 'doc-detail':
-        crumbItems = [
+        const crumbCollection = [
           {
             name: 'documentSupport',
             alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
             url: '../../../../../../documents-support',
-          },
-          {
-            name: 'productDocument',
-            alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
-            url: '../../../../../../documents-support/docs/products',
           },
           {
             name: 'documentDetail',
@@ -159,10 +146,40 @@ export class DocumentResService {
             last: true,
           },
         ];
+        crumbItems = this.makeSubTypeCrumbs(subType, crumbCollection);
         break;
       default:
         break;
     }
+    return crumbItems;
+  }
+
+  makeSubTypeCrumbs(subType: string, crumbItems): any[] {
+    let item = {};
+    switch (subType) {
+      case 'products':
+        item = {
+          name: 'productDocument',
+          alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
+          url: '../../../../../../documents-support/docs/products',
+        };
+        break;
+      case 'issues':
+        item = {
+          name: 'normalIssue',
+          alias: 'DOCUMENTS.NORMAL_ISSUE',
+          url: '../../../../../../documents-support/docs/issues',
+        };
+        break;
+      case 'guides':
+        item = {
+          name: 'freshGuide',
+          alias: 'DOCUMENTS.FRESH_GUIDE',
+          url: '../../../../../../documents-support/docs/guides',
+        };
+        break;
+    }
+    crumbItems.splice(1, 0, item);
     return crumbItems;
   }
 
@@ -195,18 +212,6 @@ export class DocumentResService {
         name: 'TDH社区版中进行服务升级',
         url: 'https://mp.weixin.qq.com/s?__biz=MzIzNzU0ODEwOA==&mid=2247484410&idx=1'
             + '&sn=41a48d474842be358499132cfd44977d&pass_ticket=UNH1mk9gYBs8tf5jxbYWBQoAzw0PGkFTncCRC3gcpA3knY91Fe%2BhpUorBL1XlATP',
-        tag: 'course',
-      },
-      {
-        name: 'Discover实现客户流失预警分析',
-        url: 'https://mp.weixin.qq.com/s?__biz=MzIzNzU0ODEwOA==&mid=2247484364&idx=1&sn=3eb32e2588f10273a377f4705fa72d6d'
-            + '&pass_ticket=UNH1mk9gYBs8tf5jxbYWBQoAzw0PGkFTncCRC3gcpA3knY91Fe%2BhpUorBL1XlATP',
-        tag: 'course',
-      },
-      {
-        name: 'Waterdrop的许可证申请',
-        url: 'https://mp.weixin.qq.com/s?__biz=MzIzNzU0ODEwOA==&mid=2247484375&idx=1&sn=71cb29c7cfdeb628d31848cc0bc4cbd2'
-            + '&pass_ticket=UNH1mk9gYBs8tf5jxbYWBQoAzw0PGkFTncCRC3gcpA3knY91Fe%2BhpUorBL1XlATP',
         tag: 'course',
       },
       {

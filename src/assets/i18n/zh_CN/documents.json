@@ -25,6 +25,7 @@
     "ITEM":"条",
     "FRESH_COURSE":"新手教程",
     "OTHER_COURSE":"其他教程",
-    "VIDEO_COURSE":"视频教程"
+    "VIDEO_COURSE":"视频教程",
+    "SELECT_PRODUCT": "选择产品线"
   }
 }

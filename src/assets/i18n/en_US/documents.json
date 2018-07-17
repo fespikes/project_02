@@ -25,7 +25,7 @@
     "ITEM":"Item",
     "FRESH_COURSE":"Fresh Course",
     "OTHER_COURSE":"Other Course",
-    "VIDEO_COURSE":"Video Course"
+    "VIDEO_COURSE":"Video Course",
+    "SELECT_PRODUCT": "Select Product"
   }
 }
-  

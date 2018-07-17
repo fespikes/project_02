@@ -6,10 +6,9 @@
   </h3>
   <div
     *ngFor="let doc of docsList"
-    (click)="listItemClick(doc)"
     class="docs-item"
   >
-    <h5>{{doc.document.title}}</h5>
+    <h5 (click)="listItemClick(doc)">{{doc.document.title}}</h5>
     <p id="doc-list-item-{{doc.id}}">
       {{doc.summary}}
     </p>

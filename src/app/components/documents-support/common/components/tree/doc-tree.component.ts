@@ -34,24 +34,19 @@ export class DocTreeComponent implements OnInit, AfterViewInit {
   }
 
   toggle(node) {
-    node.expanded = !node.expanded;
-    node['clickToggle'] = true;
-    this.onSelectChange.emit(node);
-    delete node['clickToggle'];
-  }
-
-  dbClick(node) {
-    this.toggle(node);
-  }
-
-  selectChange(node) {
-    this.onSelectChange.emit(node);
+    this.selectChange(node);
   }
 
   checkboxChange(node) {
     node['checkboxChanged'] = true;
+    node.expanded = !node.expanded ? true : node.expanded;
     this.onSelectChange.emit(node);
     node['checkboxChanged'] = false;
+  }
+
+  selectChange(node) {
+    node.expanded = !node.expanded;
+    this.onSelectChange.emit(node);
   }
 
   ngAfterViewInit() {

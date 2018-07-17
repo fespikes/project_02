@@ -2,6 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 
 import { DocumentUtilService } from '../services/document.util.service';
 import { DocumentResService } from '../services/document.res.service';
+import { DocumentStorageService } from '../services/document.storage.service';
 
 @Component({
   selector: 'tdc-documents-list',
@@ -15,6 +16,7 @@ export class DocumentsListComponent implements OnInit {
 
   constructor(
     private documentUtilService: DocumentUtilService,
+    private documentStorageService: DocumentStorageService,
     private documentResService: DocumentResService,
   ) {
 
