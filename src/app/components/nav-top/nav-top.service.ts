@@ -209,12 +209,12 @@ const navigationData = {
 					products: [
 						{
 						  title: 'TxSQL',
-						  summary: '指标监控',
+						  summary: '高可用数据库',
 						  routerLink: './modules/system/txsql'
 						},
 						{
 						  title: 'Prometheus',
-						  summary: '高可用数据库',
+						  summary: '指标监控',
 						  routerLink: './modules/system/prometheus'
 						},
 						{
