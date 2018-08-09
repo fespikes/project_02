@@ -8,7 +8,7 @@ let srcs = {
   workflow: 'https://v.qq.com/iframe/player.html?vid=w0606h6wq07&tiny=0&auto=0',
   transporter: 'https://v.qq.com/iframe/player.html?vid=a0606eyaq2w&tiny=0&auto=0',
   governor: 'https://v.qq.com/iframe/player.html?vid=u0606ayy2k9&tiny=0&auto=0',
-  rubik: 'https://v.qq.com/iframe/player.html?vid=n0749gea75x&tiny=0&auto=0',
+  rubik: 'https://v.qq.com/iframe/player.html?vid=q0751ajh83s&tiny=0&auto=0',
   pilot: 'https://v.qq.com/iframe/player.html?vid=k0606994neo&tiny=0&auto=0',
   admin: 'https://v.qq.com/iframe/player.html?vid=i0606tkkcgk&tiny=0&auto=0',
   products: 'https://v.qq.com/iframe/player.html?vid=x0606gqz2ds&tiny=0&auto=0'
