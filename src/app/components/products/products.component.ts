@@ -33,11 +33,11 @@ export class ProductsComponent implements OnInit {
 		  url: `/products/info-retrieval`,
 		  icon: 'products-info-retrieval'
 		},
-		{
-		  name: '数据分析平台',
-		  url: `/products/analysis-mining`,
-		  icon: 'products-analysis-mining'
-		},
+		// {
+		//   name: '数据分析平台',
+		//   url: `/products/analysis-mining`,
+		//   icon: 'products-analysis-mining'
+		// },
 		{
 		  name: '深度学习',
 		  url: `/products/deep-learning`,

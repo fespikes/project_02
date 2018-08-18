@@ -38,7 +38,7 @@ export class DeepLearningService {
       functionalities: {
         title: '产品功能',
         id: 'deep-learning-functionalities',
-        diagram: '/assets/images/diagram/deep-learning.jpg',
+        diagram: '/assets/images/diagram/deep-learning.png',
         imageWidth: 500,
         content: [
           {

@@ -38,7 +38,7 @@ export class InfoRetrievalService {
       functionalities: {
         title: '产品功能',
         id: 'info-retrieval-functionalities',
-        diagram: '/assets/images/diagram/info-retrieval.jpg',
+        diagram: '/assets/images/diagram/info-retrieval.png',
         imageWidth: 400,
         content: [
           {

@@ -76,11 +76,11 @@ const navigationData = {
 				  summary: 'PB级别的高速全文检索服务，提供高并发支持，以及字段精确、模糊检索和快速统计功能，支持用SQL做内容检索。',
 				  routerLink: './products/info-retrieval'
 				},
-				{
-				  title: '数据分析平台',
-				  summary: '数据分析平台为数据科学家提供了丰富的数据挖掘功能，内置60余种分布式机器学习算法和行业模型，实现数据到价值信息的转换。',
-				  routerLink: './products/analysis-mining'
-				},
+				// {
+				//   title: '数据分析平台',
+				//   summary: '数据分析平台为数据科学家提供了丰富的数据挖掘功能，内置60余种分布式机器学习算法和行业模型，实现数据到价值信息的转换。',
+				//   routerLink: './products/analysis-mining'
+				// },
 				{
 				  title: '深度学习',
 				  summary: '深度学习和人工智能开发平台，可以用于机器学习和AI应用的开发，实现高度智能化的信息处理。',
