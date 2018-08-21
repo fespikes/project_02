@@ -153,7 +153,7 @@ export class HomeService {
 							]
 						}
 					},
-					{
+/*					{
 						thumbnail: {
 							src: '/assets/images/svg/home/products/' + 'analysis-mining' + '.svg'
 						},
@@ -177,7 +177,7 @@ export class HomeService {
 								'高效的开发工具'
 							]
 						}
-					},
+					},*/
 					{
 						thumbnail: {
 							src: '/assets/images/svg/home/products/' + 'deep-learning' + '.svg'
