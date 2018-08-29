@@ -39,7 +39,7 @@ export class ProductsComponent implements OnInit {
 		//   icon: 'products-analysis-mining'
 		// },
 		{
-		  name: '深度学习',
+		  name: '人工智能',
 		  url: `/products/deep-learning`,
 		  icon: 'products-deep-learning'
 		},

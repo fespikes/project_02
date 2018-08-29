@@ -94,7 +94,6 @@ import { DeepLearningComponent } from './deep-learning/deep-learning.component';
 import { DeepLearningService } from './deep-learning/deep-learning.service';
 import { DeepLearningAdvantagesComponent } from './deep-learning/deep-learning-advantages/deep-learning-advantages.component';
 import { DeepLearningBannerComponent } from './deep-learning/deep-learning-banner/deep-learning-banner.component';
-import { DeepLearningComponentIntroComponent } from './deep-learning/deep-learning-component-intro/deep-learning-component-intro.component';
 import { DeepLearningFunctionalitiesComponent } from './deep-learning/deep-learning-functionalities/deep-learning-functionalities.component';
 import { DeepLearningScenariosComponent } from './deep-learning/deep-learning-scenarios/deep-learning-scenarios.component';
 import { DeepLearningTabsComponent } from './deep-learning/deep-learning-tabs/deep-learning-tabs.component';
@@ -195,7 +194,6 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
 
     DeepLearningAdvantagesComponent,
     DeepLearningBannerComponent,
-    DeepLearningComponentIntroComponent,
     DeepLearningFunctionalitiesComponent,
     DeepLearningScenariosComponent,
     DeepLearningTabsComponent,

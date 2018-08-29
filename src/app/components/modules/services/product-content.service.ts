@@ -264,29 +264,41 @@ export class ProductContentService {
               content: 'MODULES.SOPHON.INTRODUCE_5',
             },
             {
-              type: 'title',
+              type: 'text',
               content: 'MODULES.SOPHON.INTRODUCE_6',
             },
             {
-              type: 'text',
+              type: 'title',
               content: 'MODULES.SOPHON.INTRODUCE_7',
             },
             {
-              type: 'title',
+              type: 'text',
               content: 'MODULES.SOPHON.INTRODUCE_8',
             },
             {
-              type: 'text',
+              type: 'title',
               content: 'MODULES.SOPHON.INTRODUCE_9',
             },
             {
-              type: 'titile',
+              type: 'text',
               content: 'MODULES.SOPHON.INTRODUCE_10',
             },
             {
-              type: 'text',
+              type: 'title',
               content: 'MODULES.SOPHON.INTRODUCE_11',
             },
+            {
+              type: 'text',
+              content: 'MODULES.SOPHON.INTRODUCE_12',
+            },
+            {
+              type: 'title',
+              content: 'MODULES.SOPHON.INTRODUCE_13',
+            },
+            {
+              type: 'text',
+              content: 'MODULES.SOPHON.INTRODUCE_14',
+            }
           ],
         };
         break;
