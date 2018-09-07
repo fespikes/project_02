@@ -20,7 +20,7 @@ export class FreshGuidesComponent implements OnInit {
   freshCourse = new DocsListModuel();
   videoCourse = [];
 
-  CATEGORY = 'INTRO';
+  CATEGORY = 'TDC-INTRO';
   VERSION = 'none';
   docType = 'documents';
 
@@ -53,20 +53,20 @@ export class FreshGuidesComponent implements OnInit {
     );
   }
 
-  viewDetail(doc) {
+  viewDetail(doc, version = null) {
     if (doc.tag === 'course') {
       window.open(doc.url);
     }else if (doc.tag === 'intro') {
-      this.viewFreshDocDetail(doc);
+      this.viewFreshDocDetail(doc, version);
     }else if (doc.tag === 'video') {
       this.router.navigate([doc.routerLink]);
     }
   }
 
-  viewFreshDocDetail(doc) {
+  viewFreshDocDetail(doc, version) {
     this.documentResService.setAnchorId('index');
     this.documentResService.setSectionId('index');
-    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${this.VERSION}/${doc.id}`],
+    this.router.navigate([`/documents-support/docs-detail/${doc.tag}/${this.CATEGORY}/${version}/${doc.id}`],
       {queryParams: {docType: this.docType, docName: doc.name}});
   }
 }

@@ -82,7 +82,7 @@ export class DocumentSearchService {
     ];
     const sophonDoc = this.getTreeModelByCategory(['SOPHON-PLATFORM', 'SOPHON-DEV_SUITE', 'SOPHON-OPS'], docsTree);
     const faqDoc = this.getTreeModelByCategory(['FAQ'], docsTree);
-    const introDoc = this.getTreeModelByCategory(['INTRO'], docsTree);
+    const introDoc = this.getTreeModelByCategory(['TDC-INTRO'], docsTree);
 
     return [
       this.makeProductDocList(tdhDoc, sophonDoc),
@@ -366,7 +366,7 @@ export class DocumentSearchService {
     let docType = 'products';
     if (docId.indexOf('faq/FAQ/') === 0) {
       docType = 'issues';
-    } else if (docId.indexOf('intro/INTRO/') === 0) {
+    } else if (docId.indexOf('intro/TDC-INTRO/') === 0) {
       docType = 'guides';
     }
 
