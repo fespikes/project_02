@@ -1,15 +1,29 @@
 <div class="course-box">
-  <h5>{{'DOCUMENTS.FRESH_COURSE' | translate}}</h5>
-  <tdc-horizontal-list
-    [docList]="freshCourse"
-    (onDocClick)="viewDetail($event)"
-  ></tdc-horizontal-list>
+  <div class="course-box-fresh">
+    <h5 class="course-box-title">{{'DOCUMENTS.FRESH_COURSE' | translate}}</h5>
+    <tcc-select name="tccSelect" key="alias" [(ngModel)]="freshCourse.currentVersion">
+      <tcc-select-option *ngFor="let option of freshCourse.versionList" [value]="option">
+        {{option.name}}
+      </tcc-select-option>
+    </tcc-select>
+  </div>
+  <div>
+    <div
+      class="course-box-list"
+      *ngFor="let doc of freshCourse?.docsCollection[freshCourse?.currentVersion?.name]"
+    >
+      <div class="doc-item clearfix" (click)="viewDocDetail(doc)">
+        <span class="title-tag text-ellipsis">{{doc.name}}</span>
+        <svg tccIcon="enter" size='md'></svg>
+      </div>
+    </div>
+  </div>
 </div>
 
 <hr class="split-line" style="clear: both;"/>
 
 <div class="course-box">
-  <h5>{{'DOCUMENTS.OTHER_COURSE' | translate}}</h5>
+  <h5 class="course-box-title">{{'DOCUMENTS.OTHER_COURSE' | translate}}</h5>
   <tdc-horizontal-list
     [docList]="otherCourse"
     (onDocClick)="viewDetail($event)"
@@ -19,7 +33,7 @@
 <hr class="split-line" style="clear: both;"/>
 
 <div class="course-box">
-  <h5>{{'DOCUMENTS.VIDEO_COURSE' | translate}}</h5>
+  <h5 class="course-box-title">{{'DOCUMENTS.VIDEO_COURSE' | translate}}</h5>
   <tdc-horizontal-list
     [docList]="videoCourse"
     (onDocClick)="viewDetail($event)"

@@ -62,7 +62,9 @@ export class DocumentUtilService {
           versionList.push({
             id: version.id,
             name: version.name,
+            alias: `${category.id.split('-')[0]} ${version.name}`,
           });
+          version.alias = `${category.id.split('-')[0]} ${version.name}`,
           docsCollection[version.name] = this.addDocsCollection(version.children);
         });
         category.versionList = versionList;
