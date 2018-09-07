@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
+import { MessageService } from 'app/tui';
 import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentResService } from '../../services/document.res.service';
 import { DocumentUtilService } from '../../services/document.util.service';
 import { CommonService } from '../../../common/services/common.service';
-import { MessageService } from '../../../../tui';
 
-import { Router } from '@angular/router';
+import { DocsListModuel } from '../../documents-support.model';
 
 @Component({
   selector: 'tdc-fresh-guides',
@@ -16,7 +17,7 @@ import { Router } from '@angular/router';
 
 export class FreshGuidesComponent implements OnInit {
   otherCourse = [];
-  freshCourse = [];
+  freshCourse = new DocsListModuel();
   videoCourse = [];
 
   CATEGORY = 'INTRO';
@@ -42,9 +43,9 @@ export class FreshGuidesComponent implements OnInit {
   }
 
   getFreshGuides(tag) {
-    this.documentAPIService.getDocuments(tag, true).subscribe(
+    this.documentAPIService.getDocuments(tag, false).subscribe(
       result => {
-        this.freshCourse = result[0].children;
+        this.freshCourse = this.documentUtilService.addDocsVersions(result)[0];
       },
       error => {
         this.messageService.error(error.message);
