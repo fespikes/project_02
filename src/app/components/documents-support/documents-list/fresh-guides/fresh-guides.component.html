@@ -12,7 +12,7 @@
       class="course-box-list"
       *ngFor="let doc of freshCourse?.docsCollection[freshCourse?.currentVersion?.name]"
     >
-      <div class="doc-item clearfix" (click)="viewDocDetail(doc)">
+      <div class="doc-item clearfix" (click)="viewDetail(doc, freshCourse.currentVersion.name)">
         <span class="title-tag text-ellipsis">{{doc.name}}</span>
         <svg tccIcon="enter" size='md'></svg>
       </div>
