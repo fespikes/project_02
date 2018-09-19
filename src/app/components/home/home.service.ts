@@ -183,7 +183,7 @@ export class HomeService {
 							src: '/assets/images/svg/home/products/' + 'deep-learning' + '.svg'
 						},
 						title: '人工智能',
-						summary: 'Sophon提供核心人工智能平台，具备完整的数据分析、机器学习、深度学习以及智能建模等功能，也可以用于业务层面的AI应用的开发与落地。',
+						summary: 'Sophon打造统一的企业级AI应用平台。提供数据清洗、数据分析挖掘、机器学习、深度学习、模型管理，API部署，工作流调度等功能，助力企业AI时代业务创新与变革。',
 						button: {
 							text: '查看详情',
 							class: 'blue-button',
@@ -332,7 +332,7 @@ export class HomeService {
 						},
 						name: 'Sophon',
 						title: '人工智能平台',
-						summary: 'Sophon致力于打造统一的企业级AI平台，算法丰富、功能完善，帮助企业用户加速落地人工智能应用。',
+						summary: 'Sophon打造统一的企业级AI应用平台。提供数据清洗、数据分析挖掘、机器学习、深度学习、模型部署等功能，助力企业AI时代业务创新与变革。',
 						adv: '/assets/images/home/hot-modules/sophon.png', //image url
 						scenarios: [
 							'信用风险',

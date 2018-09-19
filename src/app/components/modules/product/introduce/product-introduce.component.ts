@@ -9,7 +9,7 @@ import { ProductUtilService } from '../../services/product-util.service';
   styleUrls: ['./product-introduce.component.sass'],
 })
 export class ProductIntroduceComponent implements OnInit {
-  productIntroduce = {
+  productIntroduce: any = {
     img: {
       width: '',
       height: '',

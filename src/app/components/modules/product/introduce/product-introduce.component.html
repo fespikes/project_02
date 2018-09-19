@@ -6,6 +6,16 @@
   [ngStyle]="{'padding': '30px 0 30px 20px'}"
 >
   <div
+    *ngIf="!!productIntroduce.architectualImg"
+    class="img-box fl"
+    [ngStyle]="{'display': productIntroduce.architectualImg.url?'block':'none'}"
+  >
+    <img
+      tccImgSrc="{{productIntroduce.architectualImg.url | translate}}"
+      [ngStyle]="{'margin': '0 50px 20px 0'}"
+    />
+  </div>
+  <div
     class="img-box fl"
     [ngStyle]="{'display': productIntroduce.img.url?'block':'none'}"
   >
@@ -13,7 +23,9 @@
       tccImgSrc="{{productIntroduce.img.url | translate}}"
       [ngStyle]="{'margin': '0 50px 20px 0'}"
     />
+
   </div>
+
   <ul
     class="text-list"
     [ngStyle]="{'margin-left': 0}"

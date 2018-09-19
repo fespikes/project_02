@@ -83,7 +83,7 @@ const navigationData = {
 				// },
 				{
 				  title: '人工智能',
-				  summary: 'Sophon提供核心人工智能平台，具备完整的数据分析、机器学习、深度学习以及智能建模等功能，也可以用于业务层面的AI应用的开发与落地。',
+				  summary: 'Sophon打造统一的企业级AI应用平台。提供数据清洗、数据分析挖掘、机器学习、深度学习、模型管理，API部署，工作流调度等功能，助力企业AI时代业务创新与变革。',
 				  routerLink: './products/deep-learning'
 				},
 				{

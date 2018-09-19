@@ -10,7 +10,7 @@ export class ProductContentService {
   }
 
   getProductIntroduce(moduleName): any {
-    let productIntroduce = {};
+    let productIntroduce: any = {};
     switch (moduleName) {
       case 'inceptor':
         productIntroduce = {
@@ -239,6 +239,11 @@ export class ProductContentService {
         productIntroduce = {
           img: {
             url: 'MODULES.SOPHON.INTRODUCE_IMG_URL',
+            width: this.IMG_WIDTH_LARGE,
+            height: '277px',
+          },
+          architectualImg: {
+            url: 'MODULES.SOPHON.ARCHITECT_IMG_URL',
             width: this.IMG_WIDTH_LARGE,
             height: '277px',
           },
