@@ -17,3 +17,4 @@ postcommit:
   only:
     - master
     - feature/FE
+    - oem/WARP-27606
