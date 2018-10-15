@@ -30,6 +30,7 @@ export class TreeNode {
 
 export const PRODUCT_CATEGORIES = {
   TDH: 'TDH',
+  TDC: 'TDC',
   SOPHON: 'SOPHON',
   ARGODB: 'ARGODB',
 };

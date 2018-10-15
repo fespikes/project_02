@@ -90,6 +90,9 @@ export class DocumentUtilService {
       case PRODUCT_CATEGORIES.ARGODB:
         alias = `ArgoDB ${versionName}`;
         break;
+      case PRODUCT_CATEGORIES.TDC:
+        alias = `TDC ${versionName}`;
+        break;
       default:
         alias = `TDH ${versionName}`;
     }
