@@ -14,3 +14,22 @@ export class DocVersion {
   alias = '';
   children? = [];
 }
+
+export class TreeNode {
+  id: string;
+  name: string;
+  level: number;
+  tag: string;
+  parent: number;
+  selected?: boolean;
+  expanded?: boolean;
+  checkbox?: boolean;
+  searchParam?: string;
+  children: TreeNode[];
+}
+
+export const PRODUCT_CATEGORIES = {
+  TDH: 'TDH',
+  SOPHON: 'SOPHON',
+  ARGODB: 'ARGODB',
+};

@@ -1,7 +1,8 @@
 <div class="product-list-container">
   <div class="product-list-container-title">
     <span *ngIf="selectedProduct === productCategory.TDH">Transwarp Data Hub</span>
-    <span *ngIf="selectedProduct === productCategory.SOPHON">Sophon</span>
+    <span *ngIf="selectedProduct === productCategory.SOPHON">Transwarp Sophon</span>
+    <span *ngIf="selectedProduct === productCategory.ARGODB">Transwarp ArgoDB</span>
     {{'DOCUMENTS.PRODUCT_DOCUMENT' | translate}}
   </div>
   <tdc-product-list
@@ -23,6 +24,13 @@
     [ngClass]="{'product-select-container-item-selected': selectedProduct === productCategory.SOPHON}"
     (click)="selectProduct(productCategory.SOPHON)"
   >
-    Sophon
+    Transwarp Sophon
   </div>
+  <div
+    class="product-select-container-item"
+    [ngClass]="{'product-select-container-item-selected': selectedProduct === productCategory.ARGODB}"
+    (click)="selectProduct(productCategory.ARGODB)"
+  >
+    Transwarp ArgoDB
+</div>
 </div>

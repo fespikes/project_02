@@ -1,16 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
-import { DocumentResService } from '../services/document.res.service';
 import { TranslateService } from 'app/i18n';
 import * as Mark from 'mark.js';
 
-import { TreeNode } from './documents-search.model';
+import { DocumentResService } from '../services/document.res.service';
+import { TreeNode } from '../documents-support.model';
 
 @Injectable()
 export class DocumentSearchService {
 
   MAX_LOOP = 10;
+  DOC_CATEGORIES = [{
+    id: 'TDH',
+    name: 'Transwarp Data Hub',
+  }, {
+    id: 'SOPHON',
+    name: 'Transwarp Sophon',
+  }, {
+    id: 'ARGODB',
+    name: 'Transwarp ArgoDB',
+  }];
+
   constructor(
     private translate: TranslateService,
     private documentResService: DocumentResService,
@@ -81,11 +92,12 @@ export class DocumentSearchService {
       this.getTreeModelByCategory(['TDH-OPS'], docsTree)[0],
     ];
     const sophonDoc = this.getTreeModelByCategory(['SOPHON-PLATFORM', 'SOPHON-DEV_SUITE', 'SOPHON-OPS'], docsTree);
+    const argodbDoc = this.getTreeModelByCategory(['ARGODB-PLATFORM', 'ARGODB-DEV_SUITE', 'ARGODB-OPS'], docsTree);
     const faqDoc = this.getTreeModelByCategory(['FAQ'], docsTree);
     const introDoc = this.getTreeModelByCategory(['TDC-INTRO'], docsTree);
 
     return [
-      this.makeProductDocList(tdhDoc, sophonDoc),
+      this.makeProductDocList(tdhDoc, sophonDoc, argodbDoc),
       this.setFAQIntroDocState(faqDoc[0], 'faq'),
       this.setFAQIntroDocState(introDoc[0], 'intro'),
     ];
@@ -104,42 +116,43 @@ export class DocumentSearchService {
   }
 
   // 构造产品子树
-  makeProductDocList(tdhDocs, sophonDocs): Object {
-    const tdhObj = this.setProductDocState(tdhDocs, 'TDH');
-    const sophonObj = this.setProductDocState(sophonDocs, 'SOPHON');
+  makeProductDocList(tdhDocs, sophonDocs, argodbDocs): Object {
+    const tdhObj = this.setProductDocState(tdhDocs, this.DOC_CATEGORIES[0]);
+    const sophonObj = this.setProductDocState(sophonDocs, this.DOC_CATEGORIES[1]);
+    const argodbObj = this.setProductDocState(argodbDocs, this.DOC_CATEGORIES[2]);
     return {
       id: 'DOCUMENT',
       name: this.translate.translateKey('DOCUMENTS.PRODUCT_DOCUMENT'),
       level: 1,
       tag: 'document',
       checkbox: false,
-      children: [tdhObj, sophonObj],
+      children: [tdhObj, sophonObj, argodbObj],
     };
   }
 
   // 初始设置产品子树的状态
-  setProductDocState(docList, categoryId: string): Object {
-    const productName = categoryId === 'TDH' ? 'Transwarp Data Hub' : 'Sophon';
-    docList.map(category => {
-        category.level = 3;
-        category.checkbox = true;
-        category.parent = categoryId;
-        category.tag = 'document',
-        category.children.map(doc => {
+  setProductDocState(docList, category): Object {
+    const productName = category.name;
+    docList.map(item => {
+        item.level = 3;
+        item.checkbox = true;
+        item.parent = category.id;
+        item.tag = 'document',
+        item.children.map(doc => {
           doc.level = 4;
           doc.checkbox = true;
-          doc.parent = category.id;
+          doc.parent = item.id;
           doc.children.map(version => {
             version.level = 5;
             version.checkbox = true;
             version.parent = doc.id;
             version.tag = doc.tag;
-            version.searchParam = `${category.tag}/${category.id}/${version.id}/${doc.id}`;
+            version.searchParam = `${item.tag}/${item.id}/${version.id}/${doc.id}`;
           });
         });
     });
     return {
-      id: categoryId,
+      id: category.id,
       name: productName,
       level: 2,
       tag: 'document',

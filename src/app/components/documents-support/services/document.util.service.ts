@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 import { DocumentResService } from './document.res.service';
+import { PRODUCT_CATEGORIES } from '../documents-support.model';
 
 @Injectable()
 export class DocumentUtilService {
@@ -62,9 +63,9 @@ export class DocumentUtilService {
           versionList.push({
             id: version.id,
             name: version.name,
-            alias: `${category.id.split('-')[0]} ${version.name}`,
+            alias: this.getVersionAlias(category.id.split('-')[0], version.name),
           });
-          version.alias = `${category.id.split('-')[0]} ${version.name}`,
+          version.alias = this.getVersionAlias(category.id.split('-')[0], version.name);
           docsCollection[version.name] = this.addDocsCollection(version.children);
         });
         category.versionList = versionList;
@@ -75,6 +76,25 @@ export class DocumentUtilService {
       }
     });
     return docList;
+  }
+
+  getVersionAlias(categoryId, versionName) {
+    let alias = '';
+    switch (categoryId) {
+      case PRODUCT_CATEGORIES.TDH:
+        alias = `TDH ${versionName}`;
+        break;
+      case PRODUCT_CATEGORIES.SOPHON:
+        alias = `Sophon ${versionName}`;
+        break;
+      case PRODUCT_CATEGORIES.ARGODB:
+        alias = `ArgoDB ${versionName}`;
+        break;
+      default:
+        alias = `TDH ${versionName}`;
+    }
+
+    return alias;
   }
 
   addDocsCollection(data): any[] {
