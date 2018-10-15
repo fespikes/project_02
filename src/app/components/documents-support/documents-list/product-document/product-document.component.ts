@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { DocumentAPIService } from '../../services/document.api.service';
 import { DocumentUtilService } from '../../services/document.util.service';
-import { MessageService } from '../../../../tui';
+import { MessageService } from 'app/tui';
+import { PRODUCT_CATEGORIES } from '../../documents-support.model';
 
 @Component({
   selector: 'tdc-product-document',
@@ -11,13 +12,11 @@ import { MessageService } from '../../../../tui';
 })
 
 export class ProductDocumentComponent implements OnInit {
-  productCategory = {
-    TDH: 'TDH',
-    SOPHON: 'SOPHON',
-  };
+
   docsFolderList = [];
   selectedDocsList = [];
   selectedProduct = '';
+  productCategory = PRODUCT_CATEGORIES;
 
   constructor(
     private documentAPIService: DocumentAPIService,
@@ -42,9 +41,11 @@ export class ProductDocumentComponent implements OnInit {
           docs.filter(doc => doc.id.indexOf(TdhDocType[2]) === 0)[0],
         ];
         const sophonFolderList = docs.filter(doc => doc.id.indexOf(this.productCategory.SOPHON) === 0);
+        const argodbFolderList = docs.filter(doc => doc.id.indexOf(this.productCategory.ARGODB) === 0);
         this.docsFolderList = [
           this.documentUtilService.addDocsVersions(tdhFolderList),
           this.documentUtilService.addDocsVersions(sophonFolderList),
+          this.documentUtilService.addDocsVersions(argodbFolderList),
         ];
         this.selectedDocsList = this.docsFolderList[0];
       },
@@ -56,6 +57,7 @@ export class ProductDocumentComponent implements OnInit {
 
   selectProduct(category) {
     this.selectedProduct = category;
-    this.selectedDocsList = category === this.productCategory.TDH ? this.docsFolderList[0] : this.docsFolderList[1];
+    const categoryIndex = this.docsFolderList.findIndex(docs => docs.some(doc => doc.id.indexOf(category) === 0));
+    this.selectedDocsList = this.docsFolderList[categoryIndex];
   }
 }
