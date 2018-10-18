@@ -23,6 +23,15 @@ export class TdcApiService {
     return path.join('v2/', url);
   }
 
+  private makeUrlByVersion(url, version?) {
+    return path.join(
+      'backend/api/',
+      (version ? version : 'v1'),
+      '/',
+      url
+    );
+  }
+
   private formatErrors(error: any) {
     let data;
     try {
@@ -35,6 +44,12 @@ export class TdcApiService {
 
   get(path: string, params: Object = {}): Observable<any> {
     return this.http.get(this.makeUrl(path), { headers: this.headers, search: params })
+      .catch(this.formatErrors)
+      .map((res: Response) => res.json());
+  }
+
+  fetch(path: string, params: Object = {}): Observable<any> {
+    return this.http.get(this.makeUrlByVersion(path), { headers: this.headers, search: params })
       .catch(this.formatErrors)
       .map((res: Response) => res.json());
   }
@@ -64,6 +79,16 @@ export class TdcApiService {
   post(path: string, body: Object = {}): Observable<any> {
     return this.http.post(
       this.makeUrl(path),
+      JSON.stringify(body),
+      { headers: this.headers },
+    )
+    .catch(this.formatErrors)
+    .map((res: Response) => res.json());
+  }
+
+  push(path: string, body: Object = {}): Observable<any> {
+    return this.http.post(
+      this.makeUrlByVersion(path),
       JSON.stringify(body),
       { headers: this.headers },
     )

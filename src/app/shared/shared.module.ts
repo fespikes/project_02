@@ -26,6 +26,7 @@ import {
     IconStatusDirective,
     LogListComponent,
     PermControlDirective,
+    I18nModule
   ],
   providers: [
     LogListService,

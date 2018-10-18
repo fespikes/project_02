@@ -1,0 +1,321 @@
+<div class="process">
+	<span class="current">基本信息</span>
+	<span>参数配置</span>
+</div>
+
+<form
+  [formGroup]="myForm"
+  (ngSubmit)="onSubmit(myForm.value)"
+  class="form-specific"
+  [tccLoading]="loading"
+>
+  <hr style="visibility: hidden; margin-top: 35px" />
+
+  <div
+    [class.error]="!myForm.get('adminId').valid && myForm.get('adminId').touched"
+  >
+    <div class="field-box">
+      <label for="adminIdId"><span>*</span>{{'用户名' | translate}}</label>
+      <input
+        class="field"
+        id="adminIdId"
+        autocomplete="off"
+        [formControl]="myForm.controls['adminId']"
+       />
+        <!-- [(ngModel)]="params.adminId" -->
+    </div>
+    <div
+      *ngIf="myForm.controls['adminId'].hasError('required') && myForm.controls['adminId'].touched"
+      class="message"
+    >{{'用户名不能为空' | translate}}</div>
+  </div>
+
+  <div
+    [class.error]="!myForm.get('adminName').valid && myForm.get('adminName').touched"
+  >
+    <div class="field-box">
+      <label for="adminNameId"><span>*</span>{{'姓名' | translate}}</label>
+      <input
+        class="field"
+        id="adminNameId"
+        autocomplete="off"
+        [formControl]="myForm.controls['adminName']"
+       />
+    </div>
+    <div
+      *ngIf="myForm.controls['adminName'].hasError('required') && myForm.controls['adminName'].touched"
+      class="message"
+    >{{'姓名不能为空' | translate}}</div>
+  </div>
+
+  <div
+    [class.error]="!myForm.get('adminCellphone').valid && myForm.get('adminCellphone').touched"
+  >
+    <div class="field-box">
+      <label for="adminCellphoneId"><span>*</span>{{'手机' | translate}}</label>
+      <input
+        class="field"
+        id="adminCellphoneId"
+        autocomplete="off"
+        [formControl]="myForm.controls['adminCellphone']"
+       />
+    </div>
+    <div
+      *ngIf="myForm.controls['adminCellphone'].hasError('required') && myForm.controls['adminCellphone'].touched"
+      class="message"
+    >{{'手机不能为空' | translate}}</div>
+    <div
+      *ngIf="myForm.controls['adminCellphone'].hasError('pattern') && myForm.controls['adminCellphone'].touched"
+      class="message"
+    >{{'手机号格式错误' | translate}}</div>
+  </div>
+
+  <hr />
+
+  <div
+    [class.error]="!myForm.get('tenantName').valid && myForm.get('tenantName').touched"
+  >
+    <div class="field-box">
+      <label for="tenantNameId"><span>*</span>{{'租户名称' | translate}}</label>
+      <input
+        class="field"
+        id="projectNameId"
+        autocomplete="off"
+        [formControl]="myForm.controls['tenantName']"
+       />
+    </div>
+    <div
+      *ngIf="myForm.controls['tenantName'].hasError('required') && myForm.controls['tenantName'].touched"
+      class="message"
+    >{{'租户名称不能为空' | translate}}</div>
+  </div>
+
+  <div
+    [class.error]="!myForm.get('projectName').valid && myForm.get('projectName').touched"
+  >
+    <div class="field-box">
+      <label for="projectNameId"><span>*</span>{{'项目名称' | translate}}</label>
+      <input
+        class="field"
+        id="projectNameId"
+        autocomplete="off"
+        [formControl]="myForm.controls['projectName']"
+       />
+    </div>
+    <div
+      *ngIf="myForm.controls['projectName'].hasError('required') && myForm.controls['projectName'].touched"
+      class="message"
+    >{{'项目名称不能为空' | translate}}</div>
+  </div>
+
+  <div>
+    <div class="field-box">
+      <label for="projectDescriptionId">{{'项目描述' | translate}}</label>
+      <textarea
+      	rows="3" cols="20"
+        type="text"
+        id="projectDescriptionId"
+        autocomplete="off"
+        [formControl]="myForm.controls['projectDescription']"
+      >
+      </textarea>
+    </div>
+  </div>
+
+  <hr />
+
+  <div
+    [class.error]="!myForm.get('product').valid && myForm.get('product').touched"
+  >
+    <div class="field-box">
+      <label for="productId"><span>*</span>{{'应用版本' | translate}}</label>
+      <!-- <input
+        class="field"
+        placeholder="{{'ssss' | translate}}"
+        id="projectNameId"
+        autocomplete="off"
+        [formControl]="myForm.controls['projectName']"
+        [(ngModel)]="params.projectName"
+       /> -->
+
+       	<!-- [(ngModel)]="params['应用版本']" -->
+      <tcc-select
+        placeholder="{{'请选择应用版本' | translate}}"
+        #theSelect
+        class="field"
+        [formControl]="myForm.controls['product']"
+      >
+       	<tcc-select-option
+       		*ngFor="let item of options"
+       		[value]="item"
+       		[label]="item.edition"
+       	>{{item.edition}}</tcc-select-option>
+       </tcc-select>
+    </div>
+    <div
+      *ngIf="myForm.controls['product'].hasError('required') && myForm.controls['product'].touched"
+      class="message"
+    >{{'应用版本不能为空' | translate}}</div>
+  </div>
+
+  <hr />
+
+  <div
+    [class.error]="!myForm.get('networkType').valid && myForm.get('networkType').touched"
+    class="radio-wrapper"
+  >
+    <div class="field-box">
+      <label  ><span>*</span>{{'网络类型' | translate}}</label>
+      <div class="field-wrapper">
+      	<input
+          class="radio true"
+	        type="radio" id="networkTypeYes"
+	        name="networkType"
+          value="SHARED"
+          [formControl]="myForm.controls['networkType']"
+        />
+        <label
+          for="networkTypeYes"
+          style="text-align: left; flex-basis: auto"
+        >{{'租户共享网络' | translate}}</label>
+        <input class="radio false"
+          name="networkType"
+	        type="radio"
+	        id="networkTypeNo"
+	        value="PRIVATE"
+          [formControl]="myForm.controls['networkType']"
+        />
+	      <label
+	      	for="networkTypeNo"
+	      	style="text-align: left; flex-basis: auto"
+	      >{{'用户私有网络' | translate}}</label>
+      </div>
+    </div>
+
+    <div
+      *ngIf="myForm.controls['networkType'].hasError('required') && myForm.controls['networkType'].touched"
+      class="message"
+    >{{'网络类型不能为空' | translate}}</div>
+  </div>
+
+  <hr />
+
+  <div
+    [class.error]="!myForm.get('instanceName').valid && myForm.get('instanceName').touched"
+  >
+    <div class="field-box">
+      <label for="instanceNameId"><span>*</span>{{'实例名称' | translate}}</label>
+      <input
+        class="field"
+        id="instanceNameId"
+        autocomplete="off"
+        [formControl]="myForm.controls['instanceName']"
+       />
+    </div>
+    <div
+      *ngIf="myForm.controls['instanceName'].hasError('required') && myForm.controls['instanceName'].touched"
+      class="message"
+    >{{'实例名称不能为空' | translate}}</div>
+  </div>
+
+  <div>
+    <div class="field-box">
+      <label for="instanceDescriptionId">{{'实例描述' | translate}}</label>
+      <textarea
+      	rows="3" cols="20"
+        type="text"
+        id="instanceDescriptionId"
+        autocomplete="off"
+        [formControl]="myForm.controls['instanceDescription']"
+      >
+      </textarea>
+    </div>
+  </div>
+
+  <div
+    [class.error]="!myForm.get('haOn').valid && myForm.get('haOn').touched"
+    class="radio-wrapper"
+  >
+    <div class="field-box">
+      <label  ><span>*</span>{{'组件高可用' | translate}}</label>
+      <div class="field-wrapper">
+      	<input class="radio true"
+	        name="haOn"
+	        type="radio" id="haOnYes"
+	        value=true
+	        [formControl]="myForm.controls['haOn']"
+	      />
+	      <label
+	      	for="haOnYes"
+	      	style="text-align: left; flex-basis: auto"
+	      >{{'开启' | translate}}</label>
+	      <input class="radio false"
+	        name="haOn"
+	        type="radio"
+	        id="haOnNo"
+	        value=false
+	        [formControl]="myForm.controls['haOn']"
+	      />
+	      <label
+	      	for="haOnNo"
+	      	style="text-align: left; flex-basis: auto"
+	      >{{'暂不开启' | translate}}</label>
+      </div>
+    </div>
+
+    <div
+      *ngIf="myForm.controls['haOn'].hasError('required') && myForm.controls['haOn'].touched"
+      class="message"
+    >{{'组件高可用为必选' | translate}}</div>
+  </div>
+
+  <div
+    [class.error]="!myForm.get('visibility').valid && myForm.get('visibility').touched"
+    class="radio-wrapper"
+  >
+    <div class="field-box">
+      <label  ><span>*</span>{{'可见性' | translate}}</label>
+      <div class="field-wrapper">
+      	<input class="radio true"
+	        name="visibility"
+	        type="radio" id="visibilityYes"
+          value="TENANT"
+          [formControl]="myForm.controls['visibility']"
+        />
+        <label
+          for="visibilityYes"
+          style="text-align: left; flex-basis: auto"
+        >{{'租户可见' | translate}}</label>
+        <input class="radio false"
+          name="visibility"
+          type="radio"
+          value="PROJECT"
+          id="visibilityNo"
+          [formControl]="myForm.controls['visibility']"
+        />
+        <label
+          for="visibilityNo"
+          style="text-align: left; flex-basis: auto"
+	      >{{'仅项目用户可见' | translate}}</label>
+      </div>
+    </div>
+
+    <div
+      *ngIf="myForm.controls['visibility'].hasError('required') && myForm.controls['visibility'].touched"
+      class="message"
+    >{{'可见性为必选' | translate}}</div>
+  </div>
+
+  <div class="buttons">
+    <button
+      class="btn"
+      type="reset"
+      [disabled]="!myForm.touched ? 'disabled' : null"
+    >{{'取消' | translate}}</button>
+    <button
+      class="btn"
+      type="submit"
+      [disabled]="!myForm.valid ? 'disabled' : null"
+    >{{'下一步' | translate}}</button>
+  </div>
+</form>

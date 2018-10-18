@@ -53,7 +53,8 @@ import { VideoTutorialModule } from './components/video-tutorial/video-tutorial.
     TheBreadCrumbsComponent,
     TheSlicesComponent,
     PageNotFoundComponent,
-    ManagementCenterComponent
+    ManagementCenterComponent,
+
   ],
   imports: [
     BrowserAnimationsModule,

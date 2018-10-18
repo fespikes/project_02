@@ -2,7 +2,9 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { HomeService } from './home.service';
 import { CommonService } from '../common/services/common.service';
+import { toggles } from 'toggles';
 
+const oem = toggles.oem;
 @Component({
   selector: 'tdc-home',
   templateUrl: './home.component.html',
@@ -19,6 +21,7 @@ export class HomeComponent implements OnInit {
   latestNews: any;
 
   videoTutorial: any;
+  oem: any;
 
   @HostBinding('class.tdc-home-body') hostClass = true;
 
@@ -47,6 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.oem = oem;
   }
 
   product() {

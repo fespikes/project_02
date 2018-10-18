@@ -1,5 +1,6 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { SubmenuItem } from '../../tui';
+import { toggles } from 'toggles';
 
 @Component({
   selector: 'tdc-products',
@@ -54,6 +55,9 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  	if( toggles.oem.name === 'gzgdj' ) {
+  		this.menuTitle = '应用与解决方案'
+  	}
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { Router, NavigationStart, RoutesRecognized } from '@angular/router';
+import { toggles } from 'toggles';
 
 @Component({
   templateUrl: './banner.component.html',
@@ -9,12 +11,23 @@ export class BannerComponent implements OnInit {
   data: any;
   private offsetX = 0;
   private offsetY = 0;
+  oem: any;
+  isDataMart: boolean;
+  path: string;
 
   constructor(
-    private element: ElementRef
-  ) { }
+    private element: ElementRef,
+    private router: Router,
+  ) {
+  }
 
   ngOnInit() {
+    this.oem = toggles.oem;
+
+    // in case of have apply button only on data-mart
+    this.isDataMart = true;
+    this.path = this.router.url.split('/').pop();
+    // this.isDataMart = (this.router.url.indexOf('data-mart')>-1) && !!this.oem;
   }
 
   onMousemove(event: MouseEvent) {

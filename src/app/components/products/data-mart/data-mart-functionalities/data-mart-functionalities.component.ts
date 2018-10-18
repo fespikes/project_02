@@ -23,7 +23,7 @@ export class DataMartFunctionalitiesComponent extends FunctionalitiesComponent /
   	const productDetails = this.dataMartService.getProductDetails();
   	this.data = productDetails.functionalities;
 
-  	console.log( 'this.functionalities.viewContainerRef:', this.functionalities.viewContainerRef );
+  	// console.log( 'this.functionalities.viewContainerRef:', this.functionalities.viewContainerRef );
   }
 
   // ngAfterViewInit() {

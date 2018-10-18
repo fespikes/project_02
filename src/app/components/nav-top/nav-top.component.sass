@@ -24,22 +24,63 @@ $h52: 52px
     z-index: 100
     box-shadow: rgba(0,0,0,.22) 0 5px 10px -5px
     border-bottom: 0
+  nav div.gzgdj
+    width: 400px
+    height: 52px
+    display: inline-block
+    position: absolute
+    left: 0
+    top: 0
+    .logo, span
+      display: inline-block
+      height: $h52
+      float: left
+    .logo
+      width: 160px
+      overflow: hidden
+      text-indent: 200px
+      background: transparent url(/assets/images/icons.png) no-repeat 10px -50px
+      &:hover
+        border: 0
+    span
+      line-height: 52px
+      font-size: 20px
+      font-weight: 500
+      color: #fff
+  .manage-center
+    display: inline-block
+    width: 90px
+    height: $h30
+    line-height: $h30
+    border-radius: 5px
+    text-align: center
+    color: #fff
+    background: #2481e3
+    position: absolute
+    right: 88px
+    top: 14px
+    &:hover, &.active
+      height: $h30
+      color: #fff
 
   .top-nav-ul
     @extend .center-box
     position: relative
+    &.oem
+      width: 650px
+      min-width: 650px
 
     li
       float: left
       height: $h52
       width: 140px
       display: inline-block
-      &:first-child
+      &.logo-li
         width: 245px
 
       a
         display: inline-block
-        width: 80px
+        width: 112px
         text-align: center
         color: #fff
         line-height: $h52
@@ -57,19 +98,8 @@ $h52: 52px
         background: transparent url(/assets/images/icons.png) no-repeat 43px 10px
         &:hover
           border: 0
-
       .manage-center
-        display: inline-block
-        width: 90px
-        height: $h30
         line-height: $h30
-        border-radius: 5px
-        text-align: center
-        color: #fff
-        background: #2481e3
-        position: absolute
-        right: 88px
-        top: 14px
         &:hover, &.active
           height: $h30
           color: #fff

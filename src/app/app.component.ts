@@ -8,6 +8,8 @@ import {
 } from "@angular/router";
 
 import { routeAnimation } from './components/common/animations/animations';
+import { toggles } from '../toggles';
+(window as any).toggles = toggles;
 
 @Component({
   selector: 'tdc-root',

@@ -21,6 +21,8 @@ export class NavTopComponent implements OnInit{
   @HostBinding('class.nav-wrapper') hostClass = true;
 
   navigationData: any;
+  oem: any;
+  admin: any;
   subMenuItems: any;
   showSubmenu = false;
   submenuType = CONSTANT.submenuTypes;
@@ -32,6 +34,8 @@ export class NavTopComponent implements OnInit{
     ) {
     //if using the api, use Rxjs
     this.navigationData = this.navTopService.getNavigation();
+    this.oem = this.navigationData.oem;
+    this.admin = this.navigationData.admin;
   }
 
   ngOnInit() {
@@ -60,11 +64,6 @@ export class NavTopComponent implements OnInit{
 
   onClick() {
     this.showSubmenu = false;
-  }
-
-  toAdminCenter() {
-    console.log('TODO: to the admin center.')
-    //TODO:
   }
 
 }

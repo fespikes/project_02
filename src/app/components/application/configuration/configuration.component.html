@@ -1,0 +1,110 @@
+<div class="process">
+	<span>基本信息</span>
+	<span class="current">参数配置</span>
+</div>
+
+<form
+  [formGroup]="myForm"
+  (ngSubmit)="onSubmit(myForm.value)"
+  class="form-specific"
+  [tccLoading]="loading"
+>
+  <hr style="visibility: hidden; margin-top: 35px" />
+
+	<h3 class="config-title">资源配置</h3>
+
+  <div class="radio-wrapper">
+    <div class="field-box">
+      <label><span>*</span>部署模板</label>
+      <div class="field-wrapper">
+      	<ul class="templates">
+          <li
+            *ngFor="let item of templates; let idx = index;"
+            [class.current]="idx===0"
+            (click)="selectTemplate($event, item.id)"
+          >
+            <h4>{{item.name}}</h4>
+            <p>{{item.description}}</p>
+          </li>
+<!-- 		      <li
+		      	class="current"
+		      	(click)="selectTemplate($event)"
+		      >
+		      	<h4>入门级</h4>
+		      	<p>最佳性价比模式</p>
+		      </li>
+		      <li
+		      	(click)="selectTemplate($event)"
+		      >
+						<h4>高性价比</h4>
+		      	<p>性能和性价比最佳配比模式</p>
+		      </li>
+		      <li
+		      	(click)="selectTemplate($event)"
+		      >
+						<h4>高性能</h4>
+		      	<p>最佳性能模式</p>
+		      </li> -->
+      	</ul>
+      </div>
+    </div>
+  </div>
+
+  <div
+    [class.error]="!myForm.get('nodeNum').valid && myForm.get('nodeNum').touched"
+  >
+    <div class="field-box">
+      <label for="nodeNumId"><span>*</span>{{'计算执行单元数量' | translate}}</label>
+      <input
+        class="field"
+        id="nodeNumId"
+        autocomplete="off"
+        [formControl]="myForm.controls['nodeNum']"
+        (input)="setNodeNum($event)"
+      />
+      <span class="node-num-tips">
+        <!-- tccTooltip="分布式组件（例如HDFS、YARN等）的节点数量" -->
+        <svg
+          tccIcon="info-circle"
+          class="tips-svg"
+        ></svg>
+        <span class="tips-span">分布式组件（例如HDFS、YARN等）的节点数量</span>
+      </span>
+    </div><!-- [(ngModel)]="params.nodeNum" -->
+
+    <div
+      *ngIf="myForm.controls['nodeNum'].hasError('required') && myForm.controls['nodeNum'].touched"
+      class="message"
+    >{{'计算执行单元数量不能为空' | translate}}</div>
+  </div>
+
+  <div *ngIf="!!resources">
+  	<table class="resource-table">
+			<caption>预览部署实例所需的资源</caption>
+			<thead>
+				<tr>
+					<th *ngFor="let item of resources">{{item.name}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td *ngFor="let item of resources">{{item.value.value + ' ' + item.value.unit}}</td>
+				</tr>
+			</tbody>
+  	</table>
+  </div>
+
+  <div class="buttons">
+    <button
+      class="btn"
+      type="button"
+      (click)="goBack()"
+    >{{'上一步' | translate}}</button>
+    <!-- [disabled]="(!myForm.touched || !myForm.valid) ? 'disabled' : null" -->
+    <button
+      class="btn"
+      type="submit"
+      [disabled]="!valid ? 'disabled' : null"
+    >{{'提交申请' | translate}}</button>
+  </div>
+</form>

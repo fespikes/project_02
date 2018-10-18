@@ -1,6 +1,8 @@
 import { Component, HostBinding, OnInit, AfterViewChecked } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
+import { toggles } from 'toggles';
 
+const oem = toggles.oem;
 @Component({
   selector: 'tdc-nav-bottom',
   templateUrl: './nav-bottom.component.html',
@@ -13,8 +15,10 @@ export class NavBottomComponent implements OnInit, AfterViewChecked {
   constructor(private router:Router) { }
 
   private csButton: any;
+  oem = oem;
 
   ngOnInit() {
+    this.oem = oem;
   }
 
   toCustomerService($event) {

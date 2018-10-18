@@ -1,0 +1,35 @@
+<div class="center">
+	<div class="cr">
+		<!-- <a routerLink="./">返回</a> -->
+		<a (click)="goBack()">返回</a>
+	</div>
+
+	<div class="wrapper">
+		<div class="top">
+			<div class="left">
+				<span class="">获取应用</span>
+				<span class="font-bold">{{type}}</span>
+			</div>
+			<div class="right">
+				<div [tccDropdownTrigger]="drops">选择其他应用</div>
+				<tcc-dropdown #drops>
+					<tcc-dropdown-item 
+						class=""
+						*ngFor="let item of options"
+					>
+						<!-- (click)="selectApplicationType(item)" -->
+						<a
+							[routerLink]="['/application/apply-options']" [queryParams]="{path: item.path, type: item.label}"
+						>{{item.label}}</a>
+					</tcc-dropdown-item>
+				</tcc-dropdown>
+			</div>
+
+		</div>
+		
+		<router-outlet>
+		</router-outlet>
+		
+	</div>
+	
+</div>

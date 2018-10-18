@@ -20,7 +20,15 @@
   </div> -->
   <!--E: home-banner-->
   <div class="cloud-products">
-    <h3 class="middle-title">星环云产品</h3>
+    <h3
+      class="middle-title"
+      *ngIf="oem.name!='gzgdj'"
+    >星环云产品</h3>
+    <!--oem-->
+    <h3
+      class="middle-title"
+      *ngIf="oem.name==='gzgdj'"
+    >应用与解决方案</h3>
 
     <!-- <tui-slices [items]="cloudProducts_"></tui-slices> -->
     <tui-slices-modules [data]="cloudProducts"></tui-slices-modules>
@@ -69,7 +77,8 @@
   <!--E: hot-modules-->
 
   <div class="business-scenario">
-    <h3 class="middle-title">星环业务方案</h3>
+    <h3 class="middle-title" *ngIf="oem.name!=='gzgdj'">星环业务方案</h3>
+    <h3 class="middle-title" *ngIf="oem.name==='gzgdj'">业务方案</h3>
     <tui-slices-modules [data]="businessScenarios"></tui-slices-modules>
     <!-- <div>
       <ul class="scenarios">
@@ -127,7 +136,7 @@
   </div>
   <!--E: video-tutorial-->
 
-  <div class="status-update">
+  <div class="status-update" *ngIf="oem.name!=='gzgdj'">
     <h3 class="middle-title">最新动态</h3>
     <ul class="news-list">
       <li *ngFor="let news of latestNews;">
@@ -150,7 +159,7 @@
   </div>
   <!--E: status-update-->
 
-  <div class="start-trip">
+  <div class="start-trip" *ngIf="oem.name!=='gzgdj'">
     <h3 class="middle-title">开始你的云上大数据之旅</h3>
     <a href="/ignitor/url">进入管理中心</a>
   </div>

@@ -14,6 +14,10 @@
   "/news/api/v1/*": {
     "target": "http://172.16.111.69:8200",
     "secure": false
+  },
+  "/backend/api/v1/*": {
+    "target": "http://172.16.3.232:30815",
+    "secure": false
   }
 
 }

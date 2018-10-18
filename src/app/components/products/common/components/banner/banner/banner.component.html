@@ -4,6 +4,13 @@
 			<h3 class="title">{{data.h3}}</h3>
 			<h4 *ngIf="data.h4" class="title">{{data.h4}}</h4>
 			<p>{{data.description}}</p>
+			<!--oem-->
+			<a
+				class="go"
+				*ngIf="isDataMart"
+				routerLink="/application/apply-options"
+				[queryParams]="{path: path, type: data.h3}"
+			>获取应用</a>
 		</div>
 
 		<div

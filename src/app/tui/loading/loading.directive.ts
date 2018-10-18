@@ -46,7 +46,17 @@ export class LoadingDirective implements OnChanges {
     // 创建icon的外部容器用于布局
     const container = document.createElement('div');
     container.classList.add('tcc-loading-container');
+    container.classList.add('fuck');
     container.appendChild(loadingIcon);
+
+    container.style.position = 'absolute';
+    container.style.top = '50%';
+    container.style.left = '50%';
+    container.style.marginLeft = '-50px';
+    container.style.marginTop = '-50px';
+    loadingIcon.style.width = '32px';
+    loadingIcon.style.height = '32px';
+
     if (this.tccLoadingHeight) {
       container.style.height = this.tccLoadingHeight;
     }

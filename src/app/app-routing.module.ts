@@ -6,6 +6,7 @@ import { ModulesComponent } from './components/modules/modules.component';
 import { BusinessScenariosComponent } from './components/business-scenarios/business-scenarios.component';
 import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
 import { ManagementCenterComponent } from './components/management-center/management-center.component';
+import { ApplicationComponent } from './components/application/application.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'modules',
     loadChildren: './components/modules/modules.module#ModulesModule'
+  },
+  {
+    path: 'application',
+    loadChildren: './components/application/application.module#ApplicationModule'
   },
   {
     path: 'after-sale-service',

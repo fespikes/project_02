@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
+import { toggles } from 'toggles';
 
-const navigationData = {
+const oem = toggles.oem;
+// const oem = false;
+const navigationData: any = {
 	navTop: [
 		{
 			text: 'LOGO',
@@ -235,6 +238,31 @@ export class NavTopService {
 	navigationData: any;
 
   constructor() {
+    // oem
+    if (oem && oem.name==='gzgdj') {
+      navigationData.oem = {
+        text: '多用户数据服务平台',
+        routerLink: './home',
+        style: {
+          class: oem.name,
+          routerLinkActive: ''
+        },
+        name: oem.name
+      };
+      navigationData.navTop.shift();
+      navigationData.admin = navigationData.navTop.pop();
+      /*
+        {
+          text: '管理中心',
+          style: {
+            class: 'manage-center',
+          }
+        }
+      */
+      navigationData.admin.text = '控制台';
+      navigationData.navTop[0].text = '应用与解决方案';
+    };
+
   	this.navigationData = navigationData;
   }
 

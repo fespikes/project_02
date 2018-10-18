@@ -1,0 +1,178 @@
+hr
+  border: 0
+  border-top: 1px #edf1f7 solid
+  margin: 0 0 15px
+
+.btn-radius
+  border-radius: 4px
+.btn-blue
+  @extends: .btn-radius
+  background: #336fd3
+  color: #fff
+.btn-gray
+  @extends: .btn-radius
+  background: #e0e4ea
+  color: #fff
+
+
+.process
+  width: 420px
+  height: 140px
+  padding-top: 58px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+
+  &:before
+    content: ''
+    display: inline-block
+    width: 90%
+    height: 0
+    border-top: 2px #ebeef5 solid
+    position: absolute
+    top: 83px
+    left: 5px
+
+  span
+    display: inline-block
+    width: 60px
+    height: 80px
+    line-height: 130px
+    text-align: center
+    position: relative
+    color: #a9b0c0
+
+    &:before
+      display: inline-block
+      content: '1'
+      width: 48px
+      height: 48px
+      line-height: 48px
+      position: absolute
+      left: 50%
+      margin-left: -24px
+      text-align: center
+      border-radius: 24px
+      background: #ebeef5
+      color: #fff
+      font-size: 24px
+    &.current
+      color: #336fd3
+    &.current:before
+      background: #336fd3
+    &:last-child
+      float: right
+      &:before
+        content: '2'
+
+
+// S: form-specific
+form.form-specific
+  width: 800px 
+  margin-left: auto
+  margin-right: auto
+
+  &>div
+    position: relative
+
+  .field-box
+    padding-bottom: 25px
+    display: flex
+    flex-direction: row
+
+  .error
+    .field
+      border-color: red
+    span
+      color: red
+
+  label
+    height: 32px
+    line-height: 32px
+    padding-right: 20px
+    flex-basis: 199px
+    text-align: right
+
+    span
+      position: relative
+      top: 4px
+      right: 5px
+      color: red
+
+  .field
+    height: 32px
+    line-height: 32px
+    padding: 0 10px
+    flex-basis: 480px
+    font-size: 14px
+    border: 1px #d3dceb solid
+    border-radius: 4px
+  textarea
+    height: 96px
+    flex-basis: 480px
+    font-size: 14px
+    border: 1px #d3dceb solid
+    border-radius: 4px
+  .message
+    width: 600px
+    color: red
+    padding-left: 199px
+    font-size: 12px
+    position: absolute
+    top: 38px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+.radio-wrapper
+  .field-box
+  .field-wrapper
+    display: flex
+    flex-direction: row
+    label
+      height: 32px
+      line-height: 32px
+      padding-right: 20px
+    &>span
+      justify-content: center
+      .radio
+        top: 3px
+
+  .radio
+    position: relative
+    top: 9px
+    outline: none
+    width: 16px
+    height: 16px
+    border-radius: 8px
+    padding: 6px
+    border: 2px #ddd solid
+
+    &:checked
+      padding: 3px
+      border: 5px #305ab5 solid
+  label
+    flex-basis: auto
+    padding-left: 10px
+
+.buttons
+  display: flex
+  padding: 30px 0
+  justify-content: center
+
+  .btn
+    @extends .btn-blue
+    width: 130px
+    height: 34px
+    line-height: 32px
+    border: 0
+    border-radius: 4px
+    margin: 0 15px
+    outline: none
+    background: #336fd3
+    color: #fff
+    cursor: pointer
+
+    &:disabled
+      background: #e0e4ea
+
+// E: form-specific
