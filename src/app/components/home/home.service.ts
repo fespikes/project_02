@@ -29,7 +29,7 @@ export class HomeService {
 			    bgUrl: '/assets/images/home/banners/banner3.jpg',
 			    bgColor: '#051a36',
 			    h2: '优质的数据服务',
-			    p: '服务安全、稳定、可扩展，提供权限管控系统，实现租户网络隔离精细化，历经500+企业的数据平台实践打磨，随开随用，20分钟内即可开始大数据开发'
+			    p: '服务安全、稳定、可扩展，提供权限管控系统，实现租户网络隔离精细化，历经1000+企业的数据平台实践打磨，随开随用，20分钟内即可开始大数据开发'
 			  },
 			  {
 			    bgUrl: '/assets/images/home/banners/banner4.jpg',
@@ -127,7 +127,7 @@ export class HomeService {
 								'流上数据挖掘'
 							]
 						}
-					},					
+					},
 					{
 						thumbnail: {
 							src: '/assets/images/svg/home/products/' + 'info-retrieval' + '.svg',
