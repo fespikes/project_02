@@ -26,6 +26,7 @@ export class ConfigurationComponent implements OnInit {
   resources: any[];
   application: Application = new Application();
   valid = false;
+  disableLast = false;
 
   constructor(
   	private fb: FormBuilder,
@@ -102,9 +103,11 @@ export class ConfigurationComponent implements OnInit {
       .subscribe(res => {
         Object.getOwnPropertyNames(res)
           .forEach(item => {
+            const current = res[item];
             this.resources.push({
-              name: item,
-              value: res[item]
+              alias: current['alias'],
+              value: current['value'],
+              unit: current['unit']
             });
           });
         this.valid = true;
@@ -122,6 +125,7 @@ export class ConfigurationComponent implements OnInit {
         this.message.success(res.message);
         this.valid = false;
         this.loading = false;
+        this.disableLast = true;
         setTimeout(_ => {
           this.router.navigate([`/products/${this.path}`]).then(_ => _ );
         }, 2000);

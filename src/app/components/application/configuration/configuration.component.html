@@ -83,12 +83,12 @@
 			<caption>预览部署实例所需的资源</caption>
 			<thead>
 				<tr>
-					<th *ngFor="let item of resources">{{item.name}}</th>
+					<th *ngFor="let item of resources">{{item.alias}}</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td *ngFor="let item of resources">{{item.value.value + ' ' + item.value.unit}}</td>
+					<td *ngFor="let item of resources">{{item.value + ' ' + item.unit}}</td>
 				</tr>
 			</tbody>
   	</table>
@@ -99,6 +99,7 @@
       class="btn"
       type="button"
       (click)="goBack()"
+      [disabled]="disableLast ? 'disabled' : null"
     >{{'上一步' | translate}}</button>
     <!-- [disabled]="(!myForm.touched || !myForm.valid) ? 'disabled' : null" -->
     <button
