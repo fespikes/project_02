@@ -21,6 +21,7 @@
         id="adminIdId"
         autocomplete="off"
         [formControl]="myForm.controls['adminId']"
+        (blur)="verifyName($event)"
        />
         <!-- [(ngModel)]="params.adminId" -->
     </div>

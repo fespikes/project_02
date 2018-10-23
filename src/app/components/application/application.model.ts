@@ -6,7 +6,7 @@ export class Application {
   'instanceDescription'?: string;  // 实例描述
   'instanceName'?: string;  // 实例名称
   'networkType'?: string;  // 网络类型 ['PRIVATE', 'SHARED'],
-  'nodeNum'?: number = 0;  // 计算执行单元数量 
+  'nodeNum'?: number = 3;  // 计算执行单元数量 
   'product'?: TBProduct;  // 应用版本
   'projectDescription'?: string;  // 项目描述
   'projectName'?: string;  // 项目名称

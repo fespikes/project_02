@@ -39,6 +39,10 @@ export class ApplicationService {
     window.localStorage.removeItem(key);
   }
 
+  checkIfExist(name): Observable<any> {
+    return this.api.fetch(`projects/admins/${name}/existence`);
+  }
+
   getRouterParams(cb?) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),

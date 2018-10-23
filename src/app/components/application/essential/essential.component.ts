@@ -6,6 +6,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { MessageService } from 'app/tui';
 
 import { SelectComponent } from '../../../tui';
 import { TranslateService } from 'app/i18n/translate.service';
@@ -32,7 +33,8 @@ export class EssentialComponent implements OnInit {
   constructor(
   	private fb: FormBuilder,
   	private service: ApplicationService,
-    private router: Router
+    private router: Router,
+    private message: MessageService
 	) {
     // S: mock
     // const application = {...appl};
@@ -84,6 +86,23 @@ export class EssentialComponent implements OnInit {
       'haOn': ['true', Validators.required],  // 组件高可用 boolean
       'visibility': ['TENANT', Validators.required],  // 可见性['TENANT', 'PROJECT']
     });
+  }
+
+  verifyName($event) {
+    const name = $event.target.value;
+    if (name === '') {
+      return ;
+    }
+    this.loading = true;
+    this.service.checkIfExist(name)
+      .subscribe(res => {
+        if (!!res.existed) {
+          $event.target.value = '';
+          this.message.error('用户名重名,请重新输入');
+        }
+        this.loading = false;
+      }, err => {
+      });
   }
 
   onSubmit(val) {

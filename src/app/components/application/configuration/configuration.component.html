@@ -50,8 +50,10 @@
     </div>
   </div>
 
+    <!-- [class.error]="!myForm.get('nodeNum').valid && myForm.get('nodeNum').touched" -->
   <div
-    [class.error]="!myForm.get('nodeNum').valid && myForm.get('nodeNum').touched"
+    [class.error]="myForm.controls['nodeNum'].hasError('invalidNum') && myForm.get('nodeNum').touched"
+    *ngIf="application.product['hasNodeNum']"
   >
     <div class="field-box">
       <label for="nodeNumId"><span>*</span>{{'计算执行单元数量' | translate}}</label>
@@ -68,14 +70,18 @@
           tccIcon="info-circle"
           class="tips-svg"
         ></svg>
-        <span class="tips-span">分布式组件（例如HDFS、YARN等）的节点数量</span>
+        <span class="tips-span">分布式组件（例如HDFS、YARN等）的节点数量，必须 >= 3</span>
       </span>
     </div><!-- [(ngModel)]="params.nodeNum" -->
 
-    <div
+<!--     <div
       *ngIf="myForm.controls['nodeNum'].hasError('required') && myForm.controls['nodeNum'].touched"
       class="message"
-    >{{'计算执行单元数量不能为空' | translate}}</div>
+    >{{'计算执行单元数量不能为空' | translate}}</div> -->
+    <div
+      *ngIf="myForm.controls['nodeNum'].hasError('invalidNum') && myForm.controls['nodeNum'].touched"
+      class="message"
+    >{{'计算执行单元数量不能为空, 且节点数量必须要 >= 3' | translate}}</div>
   </div>
 
   <div *ngIf="!!resources">

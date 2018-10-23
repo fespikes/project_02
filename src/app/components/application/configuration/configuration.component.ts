@@ -36,6 +36,7 @@ export class ConfigurationComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    const me = this;
     this.application = this.service.applicationMixin();
     // this.application = {...application};
     const queryParams = this.service.getRouterParams(queryParams => {
@@ -45,10 +46,24 @@ export class ConfigurationComponent implements OnInit {
     this.path = queryParams.path;
     this.type = queryParams.type;
 
-    this.myForm = this.fb.group({
+    const group = {
       'templateId': [this.application.templateId, Validators.required], // 部署模板
-      'nodeNum': [this.application.nodeNum, Validators.required], // 计算执行单元数量
-    });
+      'nodeNum':  // 计算执行单元数量
+        [
+          this.application.nodeNum,
+          Validators.compose([
+            Validators.required,
+            function(control: FormControl) {
+              return me.validNodeNum.bind(me)(control);
+            }
+          ])
+        ]
+    };
+    if (!this.application.product['hasNodeNum']) {
+      delete group['nodeNum'];
+    }
+
+    this.myForm = this.fb.group(group);
     this.loading = true;
     this.service.getTemplatesByUUID(this.application.product.uuid)
       .subscribe(res => {
@@ -56,6 +71,16 @@ export class ConfigurationComponent implements OnInit {
         this.application.templateId = this.templates[0].id;
         this.getResourceConfiguration();
       });
+  }
+
+  validNodeNum(control: FormControl): { [s: string]: boolean } {
+    if (+control.value >=3 ) {
+      this.valid = true;
+      return {invalidNum: false};
+    } else {
+      this.valid = false;
+      return {invalidNum: true};
+    }
   }
 
   goBack() {
@@ -71,10 +96,12 @@ export class ConfigurationComponent implements OnInit {
 
   setNodeNum($event) {
     this.application.nodeNum = +$event.currentTarget.value;
-    if ($event.currentTarget.value === '') {
+    if ($event.currentTarget.value === '' || +$event.currentTarget.value <3) {
       return ;
     }
-    this.getResourceConfiguration();
+    if ($event.currentTarget.value>=3) {
+      this.getResourceConfiguration();
+    }
   }
 
   getResourceConfiguration() {
