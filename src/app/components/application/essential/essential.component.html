@@ -109,9 +109,9 @@
     >{{'项目名称不能为空' | translate}}</div>
   </div>
 
-  <div>
+  <div [class.error]="!myForm.get('projectDescription').valid && myForm.get('projectDescription').touched">
     <div class="field-box">
-      <label for="projectDescriptionId">{{'项目描述' | translate}}</label>
+      <label for="projectDescriptionId"><span>*</span>{{'项目说明' | translate}}</label>
       <textarea
       	rows="3" cols="20"
         type="text"
@@ -121,6 +121,10 @@
       >
       </textarea>
     </div>
+    <div
+      *ngIf="myForm.controls['projectDescription'].hasError('required') && myForm.controls['projectDescription'].touched"
+      class="message"
+    >{{'项目说明不能为空' | translate}}</div>
   </div>
 
   <hr />
