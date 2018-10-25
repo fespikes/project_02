@@ -123,7 +123,8 @@ export class ConfigurationComponent implements OnInit {
 
     const param = {
       haOn: (this.application.haOn + '') === 'true' ? true : false,
-      nodeNum: this.application.nodeNum
+      nodeNum: this.application.nodeNum,
+      networkType: this.application.networkType
     };
     this.resources = [];
     this.service.getResourceConfig(this.application.templateId, param)
