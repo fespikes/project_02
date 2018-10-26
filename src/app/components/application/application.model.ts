@@ -9,6 +9,7 @@ export class Application {
   'nodeNum'?: number = 3;  // 计算执行单元数量 
   'product'?: TBProduct;  // 应用版本
   'projectDescription'?: string;  // 项目描述
+  'applyDescription'?: string; // 申请说明
   'projectName'?: string;  // 项目名称
   'templateId'?: string;  // 模板id 
   'tenantName'?: string;  // 租户名称

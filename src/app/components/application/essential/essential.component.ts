@@ -75,6 +75,7 @@ export class EssentialComponent implements OnInit {
       'tenantName': [application.tenantName, Validators.required],  // 租户名称
       'projectName': [application.projectName, Validators.required],  // 项目名称
       'projectDescription': [application.projectDescription, Validators.required],  // 项目描述
+      'applyDescription': [application.applyDescription, Validators.required],  // 申请描述
 
       'product': [application.product, Validators.required],  // 应用版本
 

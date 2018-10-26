@@ -111,9 +111,9 @@
 
   <div [class.error]="!myForm.get('projectDescription').valid && myForm.get('projectDescription').touched">
     <div class="field-box">
-      <label for="projectDescriptionId"><span>*</span>{{'项目说明' | translate}}</label>
+      <label for="projectDescriptionId"><span>*</span>{{'项目描述' | translate}}</label>
       <textarea
-      	rows="3" cols="20"
+        rows="3" cols="20"
         type="text"
         id="projectDescriptionId"
         autocomplete="off"
@@ -125,6 +125,24 @@
       *ngIf="myForm.controls['projectDescription'].hasError('required') && myForm.controls['projectDescription'].touched"
       class="message"
     >{{'项目说明不能为空' | translate}}</div>
+  </div>
+
+  <div [class.error]="!myForm.get('applyDescription').valid && myForm.get('applyDescription').touched">
+    <div class="field-box">
+      <label for="applyDescriptionId"><span>*</span>{{'申请说明' | translate}}</label>
+      <textarea
+      	rows="3" cols="20"
+        type="text"
+        id="applyDescriptionId"
+        autocomplete="off"
+        [formControl]="myForm.controls['applyDescription']"
+      >
+      </textarea>
+    </div>
+    <div
+      *ngIf="myForm.controls['applyDescription'].hasError('required') && myForm.controls['applyDescription'].touched"
+      class="message"
+    >{{'申请描述不能为空' | translate}}</div>
   </div>
 
   <hr />
