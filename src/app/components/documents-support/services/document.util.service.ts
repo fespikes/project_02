@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 import { DocumentResService } from './document.res.service';
-import { PRODUCT_CATEGORIES } from '../documents-support.model';
+import { PRODUCT_CATEGORIES, FOOTER_HEIGHT, HEADER_HEIGHT, CRUMBS_HEIGHT } from '../documents-support.model';
 
 @Injectable()
 export class DocumentUtilService {
@@ -129,5 +129,20 @@ export class DocumentUtilService {
 
   scrollScreenTop(): void {
     scrollTo(0, 0);
+  }
+
+  computeScrollPosition(treeId: string, treeSpace: number) {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    const height = document.documentElement.clientHeight || document.body.clientHeight;
+
+    const treeHeight = Number(height - HEADER_HEIGHT - CRUMBS_HEIGHT - treeSpace);
+    const deviation = Number(scrollHeight - height - scrollTop - FOOTER_HEIGHT);
+
+    if (deviation < 0 ) {
+      document.getElementById(treeId).style.height = treeHeight - Math.abs(deviation) + 'px';
+    } else {
+      document.getElementById(treeId).style.height = treeHeight + 'px';
+    }
   }
 }

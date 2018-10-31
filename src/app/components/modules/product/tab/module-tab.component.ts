@@ -1,19 +1,20 @@
 import {
   Component,
   OnInit,
+  OnDestroy,
   HostBinding,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
 } from '@angular/core';
 
 @Component({
-  selector: 'module-tab',
+  selector: 'tdc-module-tab',
   templateUrl: './module-tab.component.html',
-  styleUrls: ['./module-tab.component.sass']
+  styleUrls: ['./module-tab.component.sass'],
 })
 
-export class ModuleTabComponent implements OnInit {
+export class ModuleTabComponent implements OnInit, OnDestroy {
   @HostBinding('class.module-tab') hostClass = true;
 
   @Input() tabItems: any[];
@@ -33,7 +34,7 @@ export class ModuleTabComponent implements OnInit {
 
   manipulateTabPosition() {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if(scrollTop <= this.anchorTop) {
+    if (scrollTop <= this.anchorTop) {
       this.tabEl.className = 'tab-ul';
     }else {
       this.tabEl.className = 'fixed';
@@ -44,15 +45,15 @@ export class ModuleTabComponent implements OnInit {
     this.updateTabState(name);
     this.onTabChange.emit({
       tabName: name,
-      className: this.tabEl.className
+      className: this.tabEl.className,
     });
   }
 
   updateTabState(tabName) {
     this.tabItems.map(tab => {
-      if(tab.name === tabName) {
+      if (tab.name === tabName) {
         tab.selected = true;
-      }else {
+      } else {
         tab.selected = false;
       }
     });

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Router } from '@angular/router';
 
@@ -15,7 +15,7 @@ import { Pagination } from '../../../tui/pagination/pagination.component';
   styleUrls: ['./documents-search.component.sass'],
 })
 
-export class DocumentsSearchComponent implements OnInit {
+export class DocumentsSearchComponent implements OnInit, OnDestroy {
   crumbItems = [];
   treeModel = [];
   docsList = [];
@@ -25,6 +25,8 @@ export class DocumentsSearchComponent implements OnInit {
   treeType = 'search-tree';
   selectedDocsParams = [];
   pagination = new Pagination();
+  TREE_HEADER = 50;
+  TREE_OPERATION = 80;
 
   constructor(
     private documentUtilService: DocumentUtilService,
@@ -46,6 +48,7 @@ export class DocumentsSearchComponent implements OnInit {
     this.keyword = this.documentResService.getKeyword();
     this.onDocumentSearch(this.keyword);
     this.documentUtilService.scrollScreenTop();
+    document.onscroll = this.scrollPositionChange.bind(this);
   }
 
   onDocumentSearch(keyword) {
@@ -115,5 +118,14 @@ export class DocumentsSearchComponent implements OnInit {
     this.documentResService.setSectionId(doc.document.filename);
     this.router.navigate([`/documents-support/docs-detail/${doc.document.id}`],
       {queryParams: {docType: docType, docName: doc.name}});
+  }
+
+  scrollPositionChange() {
+    const treeSpace = Number(this.TREE_HEADER + this.TREE_OPERATION);
+    this.documentUtilService.computeScrollPosition('search-menu-tree', treeSpace);
+  }
+
+  ngOnDestroy() {
+    document.onscroll = null;
   }
 }
