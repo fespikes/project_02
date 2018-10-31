@@ -188,19 +188,19 @@ export class DocumentResService {
       {
         name: 'products',
         type: 'products',
-        alias: '产品文档',
+        alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
         url: './products',
       },
       {
         name: 'issues',
         type: 'issues',
-        alias: '常见问题',
+        alias: 'DOCUMENTS.NORMAL_ISSUE',
         url: './issues',
       },
       {
         name: 'guides',
         type: 'guides',
-        alias: '新手入门',
+        alias: 'DOCUMENTS.FRESH_GUIDE',
         url: './guides',
       },
     ];

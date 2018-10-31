@@ -35,12 +35,12 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
   DOC_TREE = 'doc-tree';
   CLICK_MENU = 'click-menu';
   CLICK_ANCHOR = 'click-anchor';
+  TREE_HEADER = 50;
 
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentUtilService: DocumentUtilService,
     private documentResService: DocumentResService,
-    private documentStorageService: DocumentStorageService,
     private documentSearchService: DocumentSearchService,
     private messageService: MessageService,
     private route: ActivatedRoute,
@@ -57,6 +57,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
       this.docName = params && params.docName;
       this.getCrumbItems(docType, this.docName);
     });
+    document.onscroll = this.scrollPositionChange.bind(this);
   }
 
   initPage() {
@@ -196,8 +197,14 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
     };
   }
 
+  scrollPositionChange() {
+    this.documentUtilService.computeScrollPosition('doc-menu-tree', Number(this.TREE_HEADER));
+  }
+
+
   ngOnDestroy() {
     this.documentUtilService.setBodyWidthAttribute('100vw');
     document.onclick = null;
+    document.onscroll = null;
   }
 }

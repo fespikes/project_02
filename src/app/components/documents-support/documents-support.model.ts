@@ -34,3 +34,7 @@ export const PRODUCT_CATEGORIES = {
   SOPHON: 'SOPHON',
   ARGODB: 'ARGODB',
 };
+
+export const HEADER_HEIGHT = 52;
+export const CRUMBS_HEIGHT = 46;
+export const FOOTER_HEIGHT = 246;

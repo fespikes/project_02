@@ -11,7 +11,7 @@
         {{item.alias | translate}}
       </a>
       <a *ngIf="item.last">{{item.alias | translate}}</a>
-      <span *ngIf="!item.last">></span>
+      <span class="split" *ngIf="!item.last">></span>
     </li>
   </ul>
 </div>
