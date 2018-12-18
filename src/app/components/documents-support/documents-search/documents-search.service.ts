@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 
 import { TranslateService } from 'app/i18n';
 import * as Mark from 'mark.js';
@@ -247,7 +247,7 @@ export class DocumentSearchService {
     });
     if (count === children.length) {
       return true;
-    }else {
+    } else {
       return false;
     }
   }
@@ -284,7 +284,7 @@ export class DocumentSearchService {
   addSearchParam(node: TreeNode, searchParams: string[]): string[] {
     if (node.tag === 'document') {
       searchParams = searchParams.concat(this.getLeafSearchParams(node));
-    }else {
+    } else {
       const param = `${node.tag}/${node.parent}/none/${node.id}`;
       searchParams.push(param);
     }

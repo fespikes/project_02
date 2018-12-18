@@ -1,3 +1,5 @@
+
+import {filter} from 'rxjs/operators';
 import {
   OnInit,
   Optional,
@@ -43,8 +45,8 @@ export class MessageContainerComponent implements OnInit {
 
   ngOnInit() {
     // Remove all messages on route changing
-    this.router.events
-    .filter(event => event instanceof NavigationStart)
+    this.router.events.pipe(
+    filter(event => event instanceof NavigationStart))
     .subscribe((event) => {
       this.removeMessageAll();
     });

@@ -4,20 +4,22 @@ import * as path from 'path';
 import { IMAGE_PREFIX } from './image-prefix';
 
 @Directive({
-  selector: '[tccImgSrc]',
+  selector: '[tdcImgSrc]',
 })
 export class ImgSrcDirective implements OnChanges {
-  @Input() tccImgSrc: string;
-  @Input() tccImgPrefix: string;
+  @Input() tdcImgSrc: string;
+  @Input() tdcImgPrefix: string;
 
   constructor(private el: ElementRef) {}
 
   makeImgSrc() {
-    return path.join(this.tccImgPrefix || IMAGE_PREFIX, this.tccImgSrc);
+    const separator = '/';
+    const replace   = new RegExp(separator + '{1,}', 'g');
+    return [this.tdcImgPrefix || IMAGE_PREFIX, this.tdcImgSrc].join(separator).replace(replace, separator);
   }
 
   ngOnChanges() {
-    if (this.tccImgSrc) {
+    if (this.tdcImgSrc) {
       this.el.nativeElement.src = this.makeImgSrc();
     }
   }

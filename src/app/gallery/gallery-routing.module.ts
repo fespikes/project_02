@@ -26,7 +26,6 @@ import { GaInputComponent } from './ga-input/ga-input.component';
 import { GaFilteringComponent } from './ga-filtering/ga-filtering.component';
 import { GaLoadingComponent } from './ga-loading/ga-loading.component';
 import { GaMessageComponent } from './ga-message/ga-message.component';
-import { GaDatepickerComponent } from './ga-datepicker/ga-datepicker.component';
 
 const routes: Routes = [
   {
@@ -128,10 +127,6 @@ const routes: Routes = [
       {
         path: 'loading',
         component: GaLoadingComponent,
-      },
-      {
-        path: 'datepicker',
-        component: GaDatepickerComponent,
       },
     ],
   },

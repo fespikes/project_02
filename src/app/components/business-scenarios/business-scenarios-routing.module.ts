@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ScenarioComponent } from './scenario/scenario.component';
 import { BusinessScenariosComponent } from './business-scenarios.component';
 
-const scenarioRoutes:Routes = [
+const scenarioRoutes: Routes = [
   {
     path: 'business-scenarios',
     component: BusinessScenariosComponent,
@@ -23,7 +23,7 @@ const scenarioRoutes:Routes = [
     RouterModule.forChild(scenarioRoutes)
   ],
   exports: [
-  	RouterModule
+    RouterModule
   ]
 })
 export class BusinessScenariosRoutingModule { }

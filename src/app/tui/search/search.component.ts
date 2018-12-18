@@ -1,6 +1,8 @@
+
+import {takeUntil, distinctUntilChanged, debounceTime} from 'rxjs/operators';
 import { Component, OnInit, HostBinding, OnDestroy } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 import { ElementBase } from '../form/element-base';
 
@@ -24,10 +26,10 @@ export class SearchComponent implements OnInit, OnDestroy, ControlValueAccessor 
   constructor() { }
 
   ngOnInit() {
-    this.searchSubject
-      .debounceTime(500)
-      .distinctUntilChanged()
-      .takeUntil(this.ngUnsubscribe)
+    this.searchSubject.pipe(
+      debounceTime(500),
+      distinctUntilChanged(),
+      takeUntil(this.ngUnsubscribe), )
       .subscribe(() => {
         this.controlValueAccessorChangeFn(this.model);
       });

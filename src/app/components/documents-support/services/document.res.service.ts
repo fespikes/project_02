@@ -1,9 +1,4 @@
 import { Injectable } from '@angular/core';
-
-import {Http, Headers} from '@angular/http';
-
-import { Observable } from 'rxjs/Rx';
-
 import { TdcApiService } from '../../../shared/services/api.service';
 import { DocumentStorageService } from './document.storage.service';
 

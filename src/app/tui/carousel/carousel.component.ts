@@ -3,6 +3,8 @@
  *
  */
 
+
+import {takeUntil, debounceTime} from 'rxjs/operators';
 import {
   Component,
   OnInit,
@@ -16,8 +18,7 @@ import {
   Input,
   QueryList,
 } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
-import { Subscription } from 'rxjs/Subscription';
+import { Subject ,  Subscription } from 'rxjs';
 
 import { SubmenuService } from '../submenu';
 
@@ -66,9 +67,9 @@ export class CarouselComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.sizeSubject
-    .debounceTime(100)
-    .takeUntil(this.ngUnsubscribe)
+    this.sizeSubject.pipe(
+    debounceTime(100),
+    takeUntil(this.ngUnsubscribe), )
     .subscribe(() => {
       this.renderContent();
     });

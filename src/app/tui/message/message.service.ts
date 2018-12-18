@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   Overlay,
   OverlayRef,
-  OverlayState,
+  OverlayConfig,
 } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 
@@ -28,8 +28,8 @@ export class MessageService {
 
   private createConatiner() {
     if (!this._popupRef) {
-      const overlayState = new OverlayState();
-      this._popupRef = this.overlay.create(overlayState);
+      const overlayConfig = new OverlayConfig();
+      this._popupRef = this.overlay.create(overlayConfig);
     }
 
     const messageContainerPortal = new ComponentPortal(MessageContainerComponent);

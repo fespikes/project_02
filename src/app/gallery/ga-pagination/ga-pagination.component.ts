@@ -1,5 +1,6 @@
+
+import {of as observableOf,  Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
 
 import { Pagination } from '../../tui';
 
@@ -17,7 +18,7 @@ export class GaPaginationComponent implements OnInit {
   }
 
   fetchDataApi(pagination?) {
-    return Observable.of({
+    return observableOf({
       data: [],
       pagination: {
         page: 1,

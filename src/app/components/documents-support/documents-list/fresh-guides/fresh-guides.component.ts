@@ -56,9 +56,9 @@ export class FreshGuidesComponent implements OnInit {
   viewDetail(doc, version = null) {
     if (doc.tag === 'course') {
       window.open(doc.url);
-    }else if (doc.tag === 'intro') {
+    } else if (doc.tag === 'intro') {
       this.viewFreshDocDetail(doc, version);
-    }else if (doc.tag === 'video') {
+    } else if (doc.tag === 'video') {
       this.router.navigate([doc.routerLink]);
     }
   }

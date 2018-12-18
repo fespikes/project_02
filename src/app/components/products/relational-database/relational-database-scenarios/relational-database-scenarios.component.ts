@@ -8,16 +8,16 @@ import { RelationalDatabaseService } from '../relational-database.service';
 })
 export class RelationalDatabaseScenariosComponent extends ScenariosComponent {
 
-	constructor(
-		componentFactoryResolver: ComponentFactoryResolver,
-		private service: RelationalDatabaseService
-	) {
-		super(componentFactoryResolver);
-	}
+  constructor(
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: RelationalDatabaseService
+  ) {
+    super(componentFactoryResolver);
+  }
 
-	ngOnInit() {
-		const productDetails = this.service.getProductDetails();
-		this.data = productDetails.scenarios;
-	}
+  ngOnInit() {
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.scenarios;
+  }
 
 }

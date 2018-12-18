@@ -31,7 +31,7 @@
 							class="item-anchor"
 							[class.current]="isSelected(news)">
 
-							<p class="item-date">{{news.date}}</p>
+							<p class="item-date">{{formater(news.date)}}</p>
 							<h4>{{news.title}}</h4>
 							<p class="item-summary">{{news.summary}}</p>
 						</a>

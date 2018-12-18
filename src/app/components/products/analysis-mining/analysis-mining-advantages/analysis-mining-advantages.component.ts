@@ -9,16 +9,16 @@ import { AnalysisMiningService } from '../analysis-mining.service';
 export class AnalysisMiningAdvantagesComponent extends AdvantagesComponent {
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: AnalysisMiningService,
-  	private el: ElementRef 
-	) {
-  	super(componentFactoryResolver);
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: AnalysisMiningService,
+    private el: ElementRef
+  ) {
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.advantages;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.advantages;
 
   }
 }

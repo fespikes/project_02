@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute } from '@angular/router';
 import { HomeService } from './home.service';
 import { CommonService } from '../common/services/common.service';
 
@@ -35,11 +35,11 @@ export class HomeComponent implements OnInit {
 
     this.businessScenarios = data.businessScenarios;
 
-    let latestNewsPromise = this.homeService.getLatestNews();
+    const latestNewsPromise = this.homeService.getLatestNews();
 
-    latestNewsPromise.then(data=>{
-      this.latestNews = data;
-      window.sessionStorage.setItem('tdc-web:latest-news:first-news-id', data[0].id+'' );
+    latestNewsPromise.then(res => {
+      this.latestNews = res;
+      window.sessionStorage.setItem('tdc-web:latest-news:first-news-id', data[0].id + '' );
     });
 
     this.videoTutorial = commonService.getVideoTutorial();

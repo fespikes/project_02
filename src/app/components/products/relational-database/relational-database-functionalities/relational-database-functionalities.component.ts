@@ -8,17 +8,17 @@ import { RelationalDatabaseService } from '../relational-database.service';
 })
 export class RelationalDatabaseFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */ {
 
-	constructor(
-		componentFactoryResolver: ComponentFactoryResolver,
-		private service: RelationalDatabaseService,
-		private el: ElementRef
-	) {
-		super(componentFactoryResolver);
-	}
+  constructor(
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: RelationalDatabaseService,
+    private el: ElementRef
+  ) {
+    super(componentFactoryResolver);
+  }
 
-	ngOnInit() {
-		const productDetails = this.service.getProductDetails();
-		this.data = productDetails.functionalities;
-	}
+  ngOnInit() {
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.functionalities;
+  }
 
 }

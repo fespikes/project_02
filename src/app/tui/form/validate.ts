@@ -1,3 +1,5 @@
+
+import {of as observableOf, Observable} from 'rxjs';
 /**
  * reference: https://github.com/clbond/form-example
  */
@@ -8,8 +10,6 @@ import {
   Validators,
   ValidatorFn,
 } from '@angular/forms';
-
-import {Observable} from 'rxjs/Rx';
 
 export class ValidationResult {
   [validator: string]: string | boolean;
@@ -54,9 +54,9 @@ export const validate =
     }
 
     if (validators) {
-      return Observable.of(synchronousValid());
+      return observableOf(synchronousValid());
     }
 
-    return Observable.of(null);
+    return observableOf(null);
   };
 };

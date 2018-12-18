@@ -4,10 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { LatestNewsComponent } from './latest-news.component';
 
 const latestNewsRoutes: Routes = [
-	{
-		path: 'latest-news/:id',
+  {
+    path: 'latest-news/:id',
     component: LatestNewsComponent
-	},
+  },
 ];
 
 

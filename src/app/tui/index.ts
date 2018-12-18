@@ -14,4 +14,3 @@ export * from './table';
 export * from './tooltip';
 export * from './dropdown';
 export * from './chart';
-export * from './datepicker';

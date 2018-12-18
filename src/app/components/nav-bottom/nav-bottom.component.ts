@@ -1,5 +1,5 @@
 import { Component, HostBinding, OnInit, AfterViewChecked } from '@angular/core';
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tdc-nav-bottom',
@@ -8,26 +8,28 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 export class NavBottomComponent implements OnInit, AfterViewChecked {
 
+  private csButton: any;
+
   @HostBinding('class.nav-bottom-box') nav = true;
 
-  constructor(private router:Router) { }
-
-  private csButton: any;
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   toCustomerService($event) {
-  	this.csButton && this.csButton.click();
+    if (this.csButton) {
+      this.csButton.click();
+    }
   }
 
   ngAfterViewChecked() {
-  	let csButtonId = '#__ewei__box__webchat__button__';
-  	this.csButton = document.querySelector(csButtonId);
+    const csButtonId = '#__ewei__box__webchat__button__';
+    this.csButton = document.querySelector(csButtonId);
   }
 
   toLatestNews() {
-    let id = window.sessionStorage.getItem('tdc-web:latest-news:first-news-id');
+    const id = window.sessionStorage.getItem('tdc-web:latest-news:first-news-id');
     this.router.navigate(['/latest-news', id]);
   }
 

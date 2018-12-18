@@ -1,3 +1,3 @@
-import { OpaqueToken } from '@angular/core';
+import { InjectionToken } from '@angular/core';
 
-export const TranslateToken = new OpaqueToken('TranslateToken');
+export const TranslateToken = new InjectionToken('TranslateToken');

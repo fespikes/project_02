@@ -9,15 +9,15 @@ import { InfoRetrievalService } from '../info-retrieval.service';
 export class InfoRetrievalScenariosComponent extends ScenariosComponent{
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: InfoRetrievalService
-	) {
-  	super(componentFactoryResolver);
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: InfoRetrievalService
+  ) {
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.scenarios;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.scenarios;
   }
 
 }

@@ -1,10 +1,12 @@
+
+import {switchMap} from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../common/services/common.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'
-import { Observable }            from 'rxjs/Observable';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
 
-let srcs = {
+const srcs = {
   workflow: 'https://v.qq.com/iframe/player.html?vid=w0606h6wq07&tiny=0&auto=0',
   transporter: 'https://v.qq.com/iframe/player.html?vid=a0606eyaq2w&tiny=0&auto=0',
   governor: 'https://v.qq.com/iframe/player.html?vid=u0606ayy2k9&tiny=0&auto=0',
@@ -31,7 +33,7 @@ export class VideoTutorialComponent implements OnInit {
   summary: string;
 
   constructor(
-	  private commonService: CommonService,
+    private commonService: CommonService,
     private route: ActivatedRoute,
     private router: Router,
     private sanitizer: DomSanitizer
@@ -40,40 +42,39 @@ export class VideoTutorialComponent implements OnInit {
   }
 
   ngOnInit() {
-    //TODO: match the videos with url 
-	  let videoTutorial = this.commonService.getVideoTutorial();
+    // TODO: match the videos with url
+    const videoTutorial = this.commonService.getVideoTutorial();
     let src;
     this.data = this.adjustVideoData(videoTutorial);
-    this.route.paramMap
-      .switchMap((params: ParamMap) => {
+    this.route.paramMap.pipe(
+      switchMap((params: ParamMap) => {
         src = srcs[params.get('id')];
         this.title = params.get('t');
         this.summary = params.get('s');
-        return Promise.resolve(this.sanitizer.bypassSecurityTrustResourceUrl(src))
-      })
-      .subscribe(iframeSrc => this.iframeSrc=iframeSrc);
+        return Promise.resolve(this.sanitizer.bypassSecurityTrustResourceUrl(src));
+      }))
+      .subscribe(iframeSrc => this.iframeSrc = iframeSrc);
   }
 
   onSelectVideo() {
-    
   }
 
-  adjustVideoData(data:any) {
+  adjustVideoData(data: any) {
 
-  	let config = {
-			itemWidth: 300,
-			hoverClassName: 'current',
-			wrapperClassName: 'h300',
-			defaultLength: 4
-  	};
+    const config = {
+      itemWidth: 300,
+      hoverClassName: 'current',
+      wrapperClassName: 'h300',
+      defaultLength: 4
+    };
 
-  	data.config = {
-  		...data.config,
-  		...config
-  	};
+    data.config = {
+      ...data.config,
+      ...config
+    };
 
     data.sliceClass = 'video-list';
-  	return data;
+    return data;
   }
 
 }

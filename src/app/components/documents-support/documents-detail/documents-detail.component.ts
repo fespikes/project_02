@@ -158,11 +158,11 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
   showDocContentByLevel(node, clickType, _this) {
     if (node.level <= 2) { // first、second folder request api
       clickType === this.CLICK_MENU ? _this.getDocDetail() : _this.initPage();
-    }else if (node.level >= 3) { // third、fourth ... folder anchor content
+    } else if (node.level >= 3) { // third、fourth ... folder anchor content
       if (_this.documentSearchService.hasSameSecondAncestor(
           node, _this.treeModel, _this.documentResService.getSectionId())) {
         _this.anchorDocContent();
-      }else {
+      } else {
         const secondNodeId = _this.documentSearchService.getSecondLevelNodeId(
           _this.treeModel, node,
         );
@@ -174,7 +174,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
 
   onClickListener() {
     const self = this;
-    document.onclick = function(event){
+    document.onclick = function(event) {
       const target = event.target as any;
       if (target.attributes['class']
         && target.attributes['class'].value === 'document-link') {
@@ -190,7 +190,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
             self.documentResService.setLevelId(domNode.id, domNode.level);
             self.showDocContentByLevel(domNode, self.CLICK_ANCHOR, self);
           }
-        }else { // then search dom in menu tree
+        } else { // then search dom in menu tree
           self.documentSearchService.anchorDocContent(anchorId, self.RELA_DIS_SUB_TITLE);
         }
       }

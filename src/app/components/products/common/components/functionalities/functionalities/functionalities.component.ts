@@ -7,7 +7,7 @@ import { Functionalities } from '../../../interfaces/functionalities';
 })
 export class FunctionalitiesComponent implements Functionalities {
 
-	@Input()
-	data: any;
+  @Input()
+  data: any;
 
 }

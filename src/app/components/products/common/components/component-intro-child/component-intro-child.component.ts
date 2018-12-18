@@ -8,26 +8,26 @@ import { ComponentIntroChildComponent as TheComponent } from './component-intro-
 })
 export class ComponentIntroChildComponent implements AfterViewInit {
 
-	data: any;
+  data: any;
 
   @ViewChild(ComponentIntroChildDirective)
   componentIntroChild: ComponentIntroChildDirective;
 
   constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
 
-	ngAfterViewInit() {
-		setTimeout( _ => this.loadComponent(), 1);
+  ngAfterViewInit() {
+    setTimeout( _ => this.loadComponent(), 1);
   }
 
   loadComponent() {
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
 
-    let viewContainerRef = this.componentIntroChild.viewContainerRef;
+    const viewContainerRef = this.componentIntroChild.viewContainerRef;
     viewContainerRef.clear();
 
-    let componentRef = viewContainerRef.createComponent(componentFactory);
+    const componentRef = viewContainerRef.createComponent(componentFactory);
     (<TheComponent>componentRef.instance).data = this.data;
-    
+
   }
-  
+
 }

@@ -9,8 +9,8 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
 import { ProductsService } from './products.service';
 
-//S: products common
-//common directives
+// S: products common
+// common directives
 import { FunctionalitiesDirective } from './common/components/functionalities/functionalities.directive';
 import { AdvantagesDirective } from './common/components/advantages/advantages.directive';
 import { ScenariosDirective } from './common/components/scenarios/scenarios.directive';
@@ -23,7 +23,7 @@ import { ScenariosChildDirective } from './common/components/scenarios-child/sce
 import { FunctionalitiesComponent as TheFunctionalitiesComponent } from './common/components/functionalities/functionalities/functionalities.component';
 import { FunctionalitiesComponent } from './common/components/functionalities/functionalities.component';
 import { AdvantagesComponent as TheAdvantagesComponent } from './common/components/advantages/advantages/advantages.component';
-import { AdvantagesComponent } from './common/components/advantages/advantages.component'
+import { AdvantagesComponent } from './common/components/advantages/advantages.component';
 import { ScenariosComponent as TheScenariosComponent } from './common/components/scenarios/scenarios/scenarios.component';
 import { ScenariosComponent } from './common/components/scenarios/scenarios.component';
 import { ComponentIntroComponent as TheComponentIntroComponent } from './common/components/component-intro/component-intro/component-intro.component';
@@ -36,9 +36,9 @@ import { ComponentIntroChildComponent } from './common/components/component-intr
 import { BannerComponent } from './common/components/banner/banner.component';
 import { TabsComponent } from './common/components/tabs/tabs.component';
 import { ScenariosChildComponent } from './common/components/scenarios-child/scenarios-child.component';
-//E: products common
+// E: products common
 
-//data-warehouse
+// data-warehouse
 import { DataWarehouseComponent } from './data-warehouse/data-warehouse.component';
 import { DataWarehouseService } from './data-warehouse/data-warehouse.service';
 import { DataWarehouseBannerComponent } from './data-warehouse/data-warehouse-banner/data-warehouse-banner.component';
@@ -48,7 +48,7 @@ import { DataWarehouseAdvantagesComponent } from './data-warehouse/data-warehous
 import { DataWarehouseScenariosComponent } from './data-warehouse/data-warehouse-scenarios/data-warehouse-scenarios.component';
 import { DataWarehouseComponentIntroComponent } from './data-warehouse/data-warehouse-component-intro/data-warehouse-component-intro.component';
 
-//data mart
+// data mart
 // import { DataMartModule } from './data-mart/data-mart.module';
 import { DataMartService } from './data-mart/data-mart.service';
 import { DataMartComponent } from './data-mart/data-mart.component';
@@ -60,7 +60,7 @@ import { DataMartAdvantagesComponent } from './data-mart/data-mart-advantages/da
 import { DataMartComponentIntroComponent } from './data-mart/data-mart-component-intro/data-mart-component-intro.component';
 import { DataMartScenariosComponent } from './data-mart/data-mart-scenarios/data-mart-scenarios.component';
 
-//S: info-retrieval
+// S: info-retrieval
 // import { InfoRetrievalModule } from './info-retrieval/info-retrieval.module';
 import { InfoRetrievalComponent } from './info-retrieval/info-retrieval.component';
 import { InfoRetrievalService } from './info-retrieval/info-retrieval.service';
@@ -117,7 +117,7 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     ProductsRoutingModule
   ],
   declarations: [
-  	ProductsComponent,
+    ProductsComponent,
 
     TabsDirective,
     BannerDirective,
@@ -129,7 +129,7 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     FunctionalitiesDirective,
 
 
-  	DataWarehouseComponent,
+    DataWarehouseComponent,
     DataWarehouseBannerComponent,
     RelationalDatabaseComponent,
     DeepLearningComponent,
@@ -159,7 +159,7 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     TheScenariosChildComponent,
     TheComponentIntroChildComponent,
 
-//data-mart
+// data-mart
     DataMartComponent,
     DataMartFunctionalitiesComponent,
     DataMartAdvantagesComponent,
@@ -168,7 +168,7 @@ import { RealtimeComputationTabsComponent } from './realtime-computation/realtim
     DataMartBannerComponent,
     DataMartTabsComponent,
 
-//info-retrieval
+// dinfo-retrieval
 
     InfoRetrievalComponent,
     InfoRetrievalBannerComponent,

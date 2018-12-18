@@ -17,12 +17,12 @@ import { TuiModule } from '../../tui/tui.module';
     BusinessScenariosRoutingModule
   ],
   declarations: [
-  	ScenarioComponent,
-  	BusinessScenariosComponent,
+    ScenarioComponent,
+    BusinessScenariosComponent,
     BreadCrumbsComponent
   ],
   providers: [
-  	BusinessScenariosService,
+    BusinessScenariosService,
     TdcApiService
   ]
 })

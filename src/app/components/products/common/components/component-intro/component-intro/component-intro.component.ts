@@ -9,16 +9,18 @@ export class ComponentIntroComponent implements OnInit {
   data: any;
 
   private current: any;
-	
+
   constructor() { }
 
   ngOnInit() {
-  	this.current = this.data.tabs[0];
+    this.current = this.data.tabs[0];
   }
 
   onMouseOver(tab) {
-  	if (!tab) return;
-  	this.current = tab;
+    if (!tab) {
+      return;
+    }
+    this.current = tab;
   }
-  
+
 }

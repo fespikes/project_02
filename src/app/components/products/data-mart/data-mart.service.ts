@@ -6,13 +6,13 @@ export class DataMartService {
   constructor() { }
 
   getProductDetails() {
-  	return {
-  		banner: {
-  			h3: '数据集市',
+    return {
+      banner: {
+        h3: '数据集市',
         h4: '',
-  			description: '面向部门级业务，提供星型和雪花模型构建OLAP Cube，实现交互式分析以及自动化的报表应用构建。',
-  			advImage: '/assets/images/products/data-mart.png'
-  		},
+        description: '面向部门级业务，提供星型和雪花模型构建OLAP Cube，实现交互式分析以及自动化的报表应用构建。',
+        advImage: '/assets/images/products/data-mart.png'
+      },
       tabs: [
         {
           text: '产品功能',
@@ -183,7 +183,7 @@ export class DataMartService {
         ]
       },
 
-  	}
+    }
   }
 
 }

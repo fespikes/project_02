@@ -15,40 +15,42 @@ export class TabsComponent implements OnInit, OnDestroy {
   private tabUlClassName = 'tabsUl';
 
   constructor(
-  	private el:ElementRef
-	) { }
+    private el: ElementRef
+  ) { }
 
   ngOnInit() {
-  	document.onscroll = this.manipulateTabPosition.bind(this);
+    document.onscroll = this.manipulateTabPosition.bind(this);
   }
 
   manipulateTabPosition(e) {
-  	const tabsUl = this.el.nativeElement.querySelector('.tabsUl');
+    const tabsUl = this.el.nativeElement.querySelector('.tabsUl');
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  	if (scrollTop<TabsComponent.bannerPlusNav) {
-  		tabsUl.className = this.tabUlClassName;
-  		return ;
+    if (scrollTop < TabsComponent.bannerPlusNav) {
+      tabsUl.className = this.tabUlClassName;
+      return ;
 
-  	} else {
-  		tabsUl.className = 'fixed ' + this.tabUlClassName;
-      //TODO: change the current tab when scroll up
-  	}
+    } else {
+      tabsUl.className = 'fixed ' + this.tabUlClassName;
+      // TODO: change the current tab when scroll up
+    }
   }
 
   ngOnDestroy() {
-  	document.onscroll = null;
+    document.onscroll = null;
   }
 
   scrollUp(id, $event) {
     console.log(id);
 
-    let node = document.querySelector(id);
-    scrollTo(0, node.offsetTop-TabsComponent.tabHeight+ TabsComponent.bannerPlusNav);
+    const node = document.querySelector(id);
+    scrollTo(0, node.offsetTop - TabsComponent.tabHeight + TabsComponent.bannerPlusNav);
 
-    let _active = this.el.nativeElement.querySelector('.active');
+    const _active = this.el.nativeElement.querySelector('.active');
 
-    _active && _active.className && (_active.className='');
-    $event.target.className = 'active'
+    if (_active && _active.className) {
+      _active.className = '';
+    }
+    $event.target.className = 'active';
 
   }
 

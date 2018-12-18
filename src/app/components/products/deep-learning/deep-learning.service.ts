@@ -6,14 +6,14 @@ export class DeepLearningService {
   constructor() { }
 
   getProductDetails() {
-  	return {
-  		banner: {
-  			h3: '人工智能',
+    return {
+      banner: {
+        h3: '人工智能',
         h4: '',
-  			description: 'Sophon打造统一的企业级AI应用平台。提供数据清洗、数据分析挖掘、机器学习、深度学习、模型管理，API部署，工作流调度等功能，助力企业AI时代业务创新与变革。',
-  			advImage: '/assets/images/products/deep-learning.png'
-  		},
-  		tabs: [
+        description: 'Sophon打造统一的企业级AI应用平台。提供数据清洗、数据分析挖掘、机器学习、深度学习、模型管理，API部署，工作流调度等功能，助力企业AI时代业务创新与变革。',
+        advImage: '/assets/images/products/deep-learning.png'
+      },
+      tabs: [
         {
           text: '产品功能',
           href: 'deep-learning-functionalities'
@@ -142,6 +142,6 @@ export class DeepLearningService {
       componentIntro: {
       },
 
-  	}
+    };
   }
 }

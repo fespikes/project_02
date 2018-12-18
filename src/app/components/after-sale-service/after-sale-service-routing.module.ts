@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AfterSaleServiceComponent } from './after-sale-service.component';
 
-const afterSaleServiceRoutes:Routes = [
+const afterSaleServiceRoutes: Routes = [
   {
     path: '',
     // path: 'after-sale-service',
@@ -17,7 +17,7 @@ const afterSaleServiceRoutes:Routes = [
     RouterModule.forChild(afterSaleServiceRoutes)
   ],
   exports: [
-  	RouterModule
+    RouterModule
   ],
   declarations: []
 })

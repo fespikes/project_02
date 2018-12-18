@@ -8,7 +8,7 @@ import {
   ContentChild,
 } from '@angular/core';
 
-import { Subscription } from 'rxjs/Rx';
+import { Subscription } from 'rxjs';
 import * as debounce from 'lodash/debounce';
 
 import { TranslateService } from '../../i18n';

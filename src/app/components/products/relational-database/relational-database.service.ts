@@ -6,14 +6,14 @@ export class RelationalDatabaseService {
   constructor() { }
 
   getProductDetails() {
-  	return {
-  		banner: {
-  			h3: '关系数据库',
+    return {
+      banner: {
+        h3: '关系数据库',
         h4: '',
-  			description: '构建企业关系型数据库，处理数据量在500GB以内的OLTP业务。支持复杂SQL查询，提供高稳定、可扩展、强一致保证。',
-  			advImage: '/assets/images/products/relational-database.png'
-  		},
-  		tabs: [
+        description: '构建企业关系型数据库，处理数据量在500GB以内的OLTP业务。支持复杂SQL查询，提供高稳定、可扩展、强一致保证。',
+        advImage: '/assets/images/products/relational-database.png'
+      },
+      tabs: [
         {
           text: '产品功能',
           href: 'relational-database-functionalities'
@@ -105,7 +105,7 @@ export class RelationalDatabaseService {
               title: '报表工具',
               text: 'Pilot是基于Web的报表展现工具，轻量、灵活，可以快速部署。它支持多维度的分析和自助分析，提供数十种报表样式，对时序数据 也有很好的展现。此外，Pilot还支持团队协作和共享，支持导入和导出报表。',
               link: '../../modules/suite/pilot'
-            },{
+            }, {
               title: '容器命令行',
               text: 'Terminal 容器命令行是集群上服务用命令行指令操作的入口，它集成了各个服务的客户端，可以在网页上连接并操作集群内的各个服务，避免了需要登录各个容器才可以操作服务的烦恼。',
               link: '../../modules/tool/terminal'
@@ -132,6 +132,6 @@ export class RelationalDatabaseService {
         ]
       },
 
-  	}
+    };
   }
 }

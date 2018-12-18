@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TuiModule, TccModalService } from '../../tui';
 
 import { SharedModule } from '../../shared';
@@ -15,16 +16,16 @@ import { HotModulesComponent } from './hot-modules/hot-modules.component';
     CommonModule,
     SharedModule,
     RouterModule,
+    BrowserAnimationsModule,
     TuiModule
   ],
   declarations: [
-  	HomeComponent,
-  	SlicesComponent,
-  	HotModulesComponent,
-
+    HomeComponent,
+    SlicesComponent,
+    HotModulesComponent,
   ],
-  providers:[
-  	TccModalService,
+  providers: [
+    TccModalService,
     HomeService
   ]
 })

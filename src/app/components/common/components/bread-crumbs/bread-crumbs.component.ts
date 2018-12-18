@@ -10,7 +10,7 @@ when using bread-crumbs super class in two modules,the issues as below:
 so here I use the inheritances
 */
 @Component({
-  selector: 'tui-bread-crumbs',
+  selector: 'tdc-bread-crumbs',
   templateUrl: './bread-crumbs.component.html',
   // styleUrls: ['./bread-crumbs.component.sass']
 })
@@ -20,7 +20,7 @@ export class BreadCrumbsComponent implements OnInit {
   data: any;
 
   constructor() {
-  	// this.data = breadCrumbs;
+    // this.data = breadCrumbs;
   }
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class BreadCrumbsComponent implements OnInit {
 breadCrumbs = [
   {
     text: '写道行1',
-    href: 'http://www.baidu.com/'	//TODO: the link href 
+    href: 'http://www.baidu.com/'  // TODO: the link href
   },
   {
   text: '写道行2',

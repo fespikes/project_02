@@ -14,12 +14,12 @@ import { BreadCrumbsComponent } from './bread-crumbs/bread-crumbs.component';
     LatestNewsRoutingModule
   ],
   declarations: [
-  	LatestNewsComponent,
-  	BreadCrumbsComponent,
+    LatestNewsComponent,
+    BreadCrumbsComponent,
     // BreadCrumbsComponent
   ],
   providers: [
-  	LatestNewsService
+    LatestNewsService
   ]
 })
 export class LatestNewsModule { }

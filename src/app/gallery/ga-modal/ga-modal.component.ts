@@ -93,7 +93,7 @@ export class GaModalMultipleComponent {
 }
 
 @Component({
-  selector: 'tcc-ga-modal',
+  selector: 'tdc-ga-modal',
   templateUrl: './ga-modal.component.html',
   styleUrls: ['./ga-modal.component.sass'],
   providers: [

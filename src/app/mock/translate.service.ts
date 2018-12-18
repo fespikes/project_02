@@ -1,8 +1,8 @@
 import { EventEmitter } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 
 export class TranslateServiceMock {
-  onLangChange= new EventEmitter();
+  onLangChange = new EventEmitter();
   use() {}
   translateKey() {}
 }

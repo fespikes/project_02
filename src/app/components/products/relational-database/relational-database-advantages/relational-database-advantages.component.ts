@@ -9,16 +9,16 @@ import { RelationalDatabaseService } from '../relational-database.service';
 export class RelationalDatabaseAdvantagesComponent extends AdvantagesComponent {
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: RelationalDatabaseService,
-  	private el: ElementRef 
-	) {
-  	super(componentFactoryResolver);
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: RelationalDatabaseService,
+    private el: ElementRef 
+  ) {
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.advantages;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.advantages;
 
   }
 }

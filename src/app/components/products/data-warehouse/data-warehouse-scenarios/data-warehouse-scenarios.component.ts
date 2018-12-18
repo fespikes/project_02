@@ -9,15 +9,15 @@ import { DataWarehouseService } from '../data-warehouse.service';
 export class DataWarehouseScenariosComponent extends ScenariosComponent{
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: DataWarehouseService
-	) {
-  	super(componentFactoryResolver);
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: DataWarehouseService
+  ) {
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.scenarios;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.scenarios;
   }
 
 }

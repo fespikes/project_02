@@ -8,16 +8,16 @@ import { DeepLearningService } from '../deep-learning.service';
 })
 export class DeepLearningScenariosComponent extends ScenariosComponent {
 
-	constructor(
-		componentFactoryResolver: ComponentFactoryResolver,
-		private service: DeepLearningService
-	) {
-		super(componentFactoryResolver);
-	}
+  constructor(
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: DeepLearningService
+  ) {
+    super(componentFactoryResolver);
+  }
 
-	ngOnInit() {
-		const productDetails = this.service.getProductDetails();
-		this.data = productDetails.scenarios;
-	}
+  ngOnInit() {
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.scenarios;
+  }
 
 }

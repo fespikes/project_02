@@ -5,7 +5,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ImgSrcDirective } from './img-src.directive';
 
 @Component({
-  template: '<img tccImgSrc="nav/service.png">',
+  template: '<img tdcBgImgUrl="nav/service.png">',
 })
 class TestComponent { }
 

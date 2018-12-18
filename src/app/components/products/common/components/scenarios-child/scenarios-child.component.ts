@@ -8,8 +8,8 @@ import { ScenariosChildComponent as TheComponent } from './scenarios-child/scena
   // styleUrls: ['./scenarios-child.component.sass']
 })
 export class ScenariosChildComponent implements AfterViewInit {
-	
-	data: any;
+
+  data: any;
 
   @ViewChild(ScenariosChildDirective)
   scenariosChild: ScenariosChildDirective;
@@ -17,20 +17,19 @@ export class ScenariosChildComponent implements AfterViewInit {
   constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngAfterViewInit() {
-		setTimeout( _ => this.loadComponent(), 1);
+    setTimeout( _ => this.loadComponent(), 1);
   }
 
   loadComponent() {
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
 
-    let viewContainerRef = this.scenariosChild.viewContainerRef;
+    const viewContainerRef = this.scenariosChild.viewContainerRef;
     viewContainerRef.clear();
 
-    let componentRef = viewContainerRef.createComponent(componentFactory);
-    
+    const componentRef = viewContainerRef.createComponent(componentFactory);
     const data = this.data;
 
-    if (data.image){
+    if (data.image) {
       (<TheComponent>componentRef.instance).data = {
         text: data.text,
         image: {
@@ -38,11 +37,11 @@ export class ScenariosChildComponent implements AfterViewInit {
           width: data.image.style.width,
           height: data.image.style.height
         }
-      }
+      };
     } else {
       (<TheComponent>componentRef.instance).data = {
         text: data.text,
-      }
+      };
     }
 
   }

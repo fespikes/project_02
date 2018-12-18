@@ -1,13 +1,15 @@
+
+import {map} from 'rxjs/operators';
 import {
   Inject,
   Injectable,
   EventEmitter,
 } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of, forkJoin } from 'rxjs';
 import * as _ from 'lodash';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/forkJoin';
+
+
 
 import { I18nLangService } from './i18n-lang.service';
 
@@ -23,7 +25,7 @@ export class ActiveI18n {
 
   remove(token: string) {
     const index = this.store.indexOf(token);
-    if (~index) {
+    if (index > -1 ) {
       this.store.splice(index, 1);
     }
   }
@@ -46,7 +48,7 @@ export class TranslateService {
   lang: string;
 
   constructor(
-    private http: Http,
+    private http: HttpClient,
     private i18nLang: I18nLangService,
   ) {
     // 因为TranslateService是单例运行，所以不需要对`i18nLang.current`做清理工作
@@ -70,20 +72,20 @@ export class TranslateService {
       const loaded = this.loadedI18n[this.lang][token];
       if (loaded) {
         this.activeI18n.add(token);
-        return Observable.of(this.store);
+        return of(this.store);
       }
     } catch (e) {
       // noop
     }
-    return this.http.get(`${this.prefix}${this.lang}/${token}.json`)
-    .map((res: Response) => res.json())
-    .map((json) => {
+    return this.http.get(`${this.prefix}${this.lang}/${token}.json`).pipe(
+    // .map((res: Response) => res.json())
+    map((json) => {
       this.loadedI18n[this.lang] = this.loadedI18n[this.lang] || {};
       this.loadedI18n[this.lang][token] = true;
       this.activeI18n.add(token);
       this.merge(this.lang, json);
       return this.store;
-    });
+    }));
   }
 
   /**
@@ -92,7 +94,7 @@ export class TranslateService {
    */
   use(lang) {
     this.lang = lang;
-    Observable.forkJoin(this.activeI18n.store.map((token: string) => this.load(token)))
+    forkJoin(this.activeI18n.store.map((token: string) => this.load(token)))
     .subscribe(() => {
       this.onLangChange.emit(this);
     });

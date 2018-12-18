@@ -7,7 +7,6 @@ import {
   IconStatusDirective,
   LogListComponent,
   LogListService,
-  PermControlDirective,
 } from './components';
 
 @NgModule({
@@ -19,13 +18,11 @@ import {
   declarations: [
     IconStatusDirective,
     LogListComponent,
-    PermControlDirective,
   ],
   exports: [
     TuiModule,
     IconStatusDirective,
     LogListComponent,
-    PermControlDirective,
   ],
   providers: [
     LogListService,

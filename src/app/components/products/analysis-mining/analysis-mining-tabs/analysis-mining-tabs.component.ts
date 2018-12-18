@@ -11,7 +11,7 @@ export class AnalysisMiningTabsComponent extends TabsComponent implements OnInit
   productDetails: any;
 
   ngOnInit() {
-  	this.data = this.productDetails.tabs;
+    this.data = this.productDetails.tabs;
   }
 
 }

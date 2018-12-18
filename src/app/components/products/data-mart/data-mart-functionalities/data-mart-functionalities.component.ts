@@ -12,22 +12,22 @@ import { DataMartService } from '../data-mart.service';
 export class DataMartFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */{
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private dataMartService: DataMartService,
-  	private el: ElementRef 
+    componentFactoryResolver: ComponentFactoryResolver,
+    private dataMartService: DataMartService,
+    private el: ElementRef 
   ) {
-  	super(componentFactoryResolver);
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.dataMartService.getProductDetails();
-  	this.data = productDetails.functionalities;
+    const productDetails = this.dataMartService.getProductDetails();
+    this.data = productDetails.functionalities;
 
-  	console.log( 'this.functionalities.viewContainerRef:', this.functionalities.viewContainerRef );
+    console.log( 'this.functionalities.viewContainerRef:', this.functionalities.viewContainerRef );
   }
 
   // ngAfterViewInit() {
-  // 	setTimeout( _ => this.loadComponent(), 1);
+  //   setTimeout( _ => this.loadComponent(), 1);
   // }
   // ngOnDestroy() { }
 }

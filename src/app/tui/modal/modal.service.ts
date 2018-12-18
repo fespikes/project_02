@@ -6,7 +6,7 @@ import {
   ComponentRef,
 } from '@angular/core';
 import { Router, Event, NavigationStart } from '@angular/router';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 
 import { ModalConfirmComponent } from './modal-confirm/modal-confirm.component';
 import { ModalInfoComponent } from './modal-info/modal-info.component';

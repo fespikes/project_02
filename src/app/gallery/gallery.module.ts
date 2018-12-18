@@ -38,7 +38,6 @@ import { GaCarouselComponent } from './ga-carousel/ga-carousel.component';
 import { GaAvatarComponent } from './ga-avatar/ga-avatar.component';
 import { GaLoadingComponent } from './ga-loading/ga-loading.component';
 import { GaMessageComponent } from './ga-message/ga-message.component';
-import { GaDatepickerComponent } from './ga-datepicker/ga-datepicker.component';
 import { GaLayoutVerticalComponent } from './ga-layout/ga-layout-vertical/ga-layout-vertical.component';
 import { GaLayoutSimpleComponent } from './ga-layout/ga-layout-simple/ga-layout-simple.component';
 
@@ -81,7 +80,6 @@ import { GaLayoutSimpleComponent } from './ga-layout/ga-layout-simple/ga-layout-
     GaAvatarComponent,
     GaLoadingComponent,
     GaMessageComponent,
-    GaDatepickerComponent,
     GaLayoutVerticalComponent,
     GaLayoutSimpleComponent,
   ],

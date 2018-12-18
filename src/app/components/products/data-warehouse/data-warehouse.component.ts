@@ -11,7 +11,7 @@ import { DataWarehouseService } from './data-warehouse.service';
 @Component({
   selector: 'tdc-data-warehouse',
   templateUrl: './data-warehouse.component.html',
-  styleUrls: ['./data-warehouse.common.sass','./data-warehouse.component.sass']
+  styleUrls: ['./data-warehouse.common.sass', './data-warehouse.component.sass']
 })
 export class DataWarehouseComponent implements OnInit {
 

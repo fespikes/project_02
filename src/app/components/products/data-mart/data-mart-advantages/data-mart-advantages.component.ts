@@ -9,16 +9,16 @@ import { DataMartService } from '../data-mart.service';
 export class DataMartAdvantagesComponent extends AdvantagesComponent {
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private dataMartService: DataMartService,
-  	private el: ElementRef 
-	) {
-  	super(componentFactoryResolver);
+    componentFactoryResolver: ComponentFactoryResolver,
+    private dataMartService: DataMartService,
+    private el: ElementRef 
+  ) {
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.dataMartService.getProductDetails();
-  	this.data = productDetails.advantages;
+    const productDetails = this.dataMartService.getProductDetails();
+    this.data = productDetails.advantages;
 
   }
 }

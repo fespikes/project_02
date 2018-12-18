@@ -10,7 +10,7 @@ import { AfterSaleServiceComponent } from './after-sale-service.component';
     AfterSaleServiceRoutingModule
   ],
   declarations: [
-  	AfterSaleServiceComponent
+    AfterSaleServiceComponent
   ]
 })
 export class AfterSaleServiceModule { }

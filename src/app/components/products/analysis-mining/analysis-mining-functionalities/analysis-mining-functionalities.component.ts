@@ -9,16 +9,16 @@ import { AnalysisMiningService } from '../analysis-mining.service';
 export class AnalysisMiningFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */{
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: AnalysisMiningService,
-  	private el: ElementRef 
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: AnalysisMiningService,
+    private el: ElementRef
   ) {
-  	super(componentFactoryResolver);
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.functionalities;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.functionalities;
   }
 
 }

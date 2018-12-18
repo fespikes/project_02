@@ -8,23 +8,23 @@ import { ScenariosComponent as TheComponent } from './scenarios/scenarios.compon
 })
 export class ScenariosComponent implements AfterViewInit {
 
-	@ViewChild(ScenariosDirective) scenarios: ScenariosDirective;
+  @ViewChild(ScenariosDirective) scenarios: ScenariosDirective;
 
-	protected data:any;
+  protected data: any;
 
   constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngAfterViewInit() {
-		setTimeout( _ => this.loadComponent(), 1);
+    setTimeout( _ => this.loadComponent(), 1);
   }
 
   loadComponent() {
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
 
-    let viewContainerRef = this.scenarios.viewContainerRef;
+    const viewContainerRef = this.scenarios.viewContainerRef;
     viewContainerRef.clear();
 
-    let componentRef = viewContainerRef.createComponent(componentFactory);
+    const componentRef = viewContainerRef.createComponent(componentFactory);
     (<TheComponent>componentRef.instance).data = this.data;
 
   }

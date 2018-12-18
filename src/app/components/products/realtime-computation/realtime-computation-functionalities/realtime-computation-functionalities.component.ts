@@ -9,16 +9,16 @@ import { RealtimeComputationService } from '../realtime-computation.service';
 export class RealtimeComputationFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */ {
 
   constructor(
-		componentFactoryResolver: ComponentFactoryResolver,
-		private service: RealtimeComputationService,
-		private el: ElementRef
-	) {
-		super(componentFactoryResolver);
-	}
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: RealtimeComputationService,
+    private el: ElementRef
+  ) {
+    super(componentFactoryResolver);
+  }
 
-	ngOnInit() {
-		const productDetails = this.service.getProductDetails();
-		this.data = productDetails.functionalities;
-	}
+  ngOnInit() {
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.functionalities;
+  }
 
 }

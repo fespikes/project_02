@@ -7,11 +7,11 @@ import { TabsComponent } from '../../common/components/tabs/tabs.component';
 })
 export class DeepLearningTabsComponent extends TabsComponent implements OnInit {
 
-	@Input()
-	productDetails: any;
+  @Input()
+  productDetails: any;
 
-	ngOnInit() {
-		this.data = this.productDetails.tabs;
-	}
+  ngOnInit() {
+    this.data = this.productDetails.tabs;
+  }
 
 }

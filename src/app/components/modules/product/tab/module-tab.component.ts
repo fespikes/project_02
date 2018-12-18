@@ -36,7 +36,7 @@ export class ModuleTabComponent implements OnInit, OnDestroy {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop <= this.anchorTop) {
       this.tabEl.className = 'tab-ul';
-    }else {
+    } else {
       this.tabEl.className = 'fixed';
     }
   }

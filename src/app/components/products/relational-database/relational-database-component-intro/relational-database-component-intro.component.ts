@@ -8,16 +8,16 @@ import { RelationalDatabaseService } from '../relational-database.service';
 })
 export class RelationalDatabaseComponentIntroComponent extends ComponentIntroComponent {
 
-	constructor(
-		componentFactoryResolver: ComponentFactoryResolver,
-		private service: RelationalDatabaseService
-	) {
-		super(componentFactoryResolver);
-	}
+  constructor(
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: RelationalDatabaseService
+  ) {
+    super(componentFactoryResolver);
+  }
 
-	ngOnInit() {
-		const productDetails = this.service.getProductDetails();
-		this.data = productDetails.componentIntro;
-	}
+  ngOnInit() {
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.componentIntro;
+  }
 
 }

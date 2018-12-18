@@ -7,16 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HotModulesComponent implements OnInit {
 
-	@Input()
-	data: any;
+  @Input()
+  data: any;
 
-	current: any;
+  current: any;
 
   constructor() { }
 
   ngOnInit() {
 
-    let items = this.data.items;
+    const items = this.data.items;
     this.current = items[0];
 
   }

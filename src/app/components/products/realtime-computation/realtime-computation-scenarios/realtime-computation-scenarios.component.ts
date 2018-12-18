@@ -8,16 +8,16 @@ import { RealtimeComputationService } from '../realtime-computation.service';
 })
 export class RealtimeComputationScenariosComponent extends ScenariosComponent {
 
-	constructor(
-		componentFactoryResolver: ComponentFactoryResolver,
-		private service: RealtimeComputationService
-	) {
-		super(componentFactoryResolver);
-	}
+  constructor(
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: RealtimeComputationService
+  ) {
+    super(componentFactoryResolver);
+  }
 
-	ngOnInit() {
-		const productDetails = this.service.getProductDetails();
-		this.data = productDetails.scenarios;
-	}
+  ngOnInit() {
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.scenarios;
+  }
 
 }

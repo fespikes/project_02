@@ -14,12 +14,12 @@ import { TuiModule, TccModalService } from '../../tui';
     TuiModule
   ],
   declarations: [
-  	VideoTutorialComponent,
-  	// VideoComponent,
-  	SlicesComponent
+    VideoTutorialComponent,
+    // VideoComponent,
+    SlicesComponent
   ],
   providers: [
-  	TccModalService,
+    TccModalService,
   ]
 })
 export class VideoTutorialModule { }

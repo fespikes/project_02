@@ -9,15 +9,15 @@ import { DataWarehouseService } from '../data-warehouse.service';
 export class DataWarehouseFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */{
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: DataWarehouseService,
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: DataWarehouseService,
   ) {
-  	super(componentFactoryResolver);
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.functionalities;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.functionalities;
   }
 
 }

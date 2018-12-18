@@ -8,16 +8,16 @@ import { DataWarehouseService } from '../data-warehouse.service';
 })
 export class DataWarehouseComponentIntroComponent extends ComponentIntroComponent {
 
-	constructor(
-		componentFactoryResolver: ComponentFactoryResolver,
-		private service: DataWarehouseService
-	) {
-		super(componentFactoryResolver);
-	}
+  constructor(
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: DataWarehouseService
+  ) {
+    super(componentFactoryResolver);
+  }
 
-	ngOnInit() {
-		const productDetails = this.service.getProductDetails();
-		this.data = productDetails.componentIntro;
-	}
+  ngOnInit() {
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.componentIntro;
+  }
 
 }

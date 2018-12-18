@@ -1,3 +1,3 @@
-import { OpaqueToken} from '@angular/core';
+import { InjectionToken } from '@angular/core';
 
-export const TCC_MODAL_DATA = new OpaqueToken('TCC_MODAL_TOKEN');
+export const TCC_MODAL_DATA = new InjectionToken('TCC_MODAL_TOKEN');

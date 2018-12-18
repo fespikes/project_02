@@ -9,14 +9,14 @@ const CONSTANT = {
     products: 'products',
     modules: 'modules'
   }
-}
+};
 
 @Component({
   selector: 'tdc-nav-top',
   templateUrl: './nav-top.component.html',
   styleUrls: ['./nav-top.component.sass']
 })
-export class NavTopComponent implements OnInit{
+export class NavTopComponent implements OnInit {
 
   @HostBinding('class.nav-wrapper') hostClass = true;
 
@@ -30,18 +30,18 @@ export class NavTopComponent implements OnInit{
     private router: Router,
     private el: ElementRef
     ) {
-    //if using the api, use Rxjs
+    // if using the api, use Rxjs
     this.navigationData = this.navTopService.getNavigation();
   }
 
   ngOnInit() {
-    let topNav = this.el.nativeElement.querySelector('.top-nav');
+    const topNav = this.el.nativeElement.querySelector('.top-nav');
 
-    this.router.events.subscribe((e: NavigationEnd)=>{
-      if(e && e.url) {
-        if(e.url.indexOf('/docs-detail')>-1 || e.url.indexOf('/docs-search')>-1 ) {
+    this.router.events.subscribe((e: NavigationEnd) => {
+      if (e && e.url) {
+        if (e.url.indexOf('/docs-detail') > -1 || e.url.indexOf('/docs-search') > -1 ) {
           topNav.className = 'top-nav fixed';
-        }else {
+        } else {
           topNav.className = 'top-nav';
         }
       }
@@ -63,8 +63,7 @@ export class NavTopComponent implements OnInit{
   }
 
   toAdminCenter() {
-    console.log('TODO: to the admin center.')
-    //TODO:
+    console.log('TODO: to the admin center.');
   }
 
 }

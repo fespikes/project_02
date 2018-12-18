@@ -1,3 +1,3 @@
 export interface Advantages {
-	data: any;
+  data: any;
 }

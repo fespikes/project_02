@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentIntroChildComponent implements OnInit {
 
-  data:any;
-	
+  data: any;
+
   constructor() { }
 
   ngOnInit() {

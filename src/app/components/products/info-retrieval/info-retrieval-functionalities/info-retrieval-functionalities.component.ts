@@ -9,16 +9,16 @@ import { InfoRetrievalService } from '../info-retrieval.service';
 export class InfoRetrievalFunctionalitiesComponent extends FunctionalitiesComponent /*implements OnDestroy */{
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: InfoRetrievalService,
-  	private el: ElementRef 
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: InfoRetrievalService,
+    private el: ElementRef 
   ) {
-  	super(componentFactoryResolver);
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.functionalities;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.functionalities;
   }
 
 }

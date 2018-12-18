@@ -1,5 +1,7 @@
+
+import {distinctUntilChanged} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs/Rx';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class TableFlexService {
@@ -7,8 +9,8 @@ export class TableFlexService {
   flexSubject = new BehaviorSubject<Array<number| string>>(null);
 
   constructor() {
-    this.flexSubject.asObservable()
-    .distinctUntilChanged()
+    this.flexSubject.asObservable().pipe(
+    distinctUntilChanged())
     .subscribe((flex) => {
       this.rows.forEach((row) => {
         this.setFlex(row, flex);

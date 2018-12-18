@@ -1,3 +1,5 @@
+
+import {filter} from 'rxjs/operators';
 import { Component, OnInit, HostBinding, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
@@ -25,8 +27,8 @@ export class ModulesComponent implements OnInit {
   }
 
   listenRouteChange() {
-    this.router.events
-      .filter(event => event instanceof NavigationEnd)
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd))
       .subscribe((event) => {
         if ((event as any).url && (event as any).url.indexOf('/modules') > -1) {
           this.initTreeState();

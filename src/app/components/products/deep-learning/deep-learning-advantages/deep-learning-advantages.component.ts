@@ -9,16 +9,16 @@ import { DeepLearningService } from '../deep-learning.service';
 export class DeepLearningAdvantagesComponent extends AdvantagesComponent {
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: DeepLearningService,
-  	private el: ElementRef 
-	) {
-  	super(componentFactoryResolver);
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: DeepLearningService,
+    private el: ElementRef 
+  ) {
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.advantages;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.advantages;
 
   }
 }

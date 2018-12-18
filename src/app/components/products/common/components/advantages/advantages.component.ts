@@ -8,7 +8,7 @@ import { AdvantagesComponent as TheComponent } from './advantages/advantages.com
 })
 export class AdvantagesComponent implements AfterViewInit {
 
-	data: any;
+  data: any;
 
   @ViewChild(AdvantagesDirective)
   advantages: AdvantagesDirective;
@@ -16,16 +16,16 @@ export class AdvantagesComponent implements AfterViewInit {
   constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngAfterViewInit() {
-		setTimeout( _ => this.loadComponent(), 1);
+    setTimeout( _ => this.loadComponent(), 1);
   }
 
   loadComponent() {
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
 
-    let viewContainerRef = this.advantages.viewContainerRef;
+    const viewContainerRef = this.advantages.viewContainerRef;
     viewContainerRef.clear();
 
-    let componentRef = viewContainerRef.createComponent(componentFactory);
+    const componentRef = viewContainerRef.createComponent(componentFactory);
     (<TheComponent>componentRef.instance).data = this.data;
 
   }

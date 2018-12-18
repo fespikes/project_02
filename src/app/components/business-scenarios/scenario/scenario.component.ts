@@ -1,11 +1,13 @@
+
+import {switchMap} from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { BusinessScenariosService } from '../business-scenarios.service';
 import { Scenario } from './scenario';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/switchMap';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'tdc-scenario',
@@ -14,36 +16,36 @@ import 'rxjs/add/operator/switchMap';
 })
 export class ScenarioComponent implements OnInit {
 
-	scenario: Scenario;
+  scenario: Scenario;
 
   breadCrumbs: any;
 
   constructor(
-	  private route: ActivatedRoute,
-	  private router: Router,
-	  private service: BusinessScenariosService
-	) { }
+    private route: ActivatedRoute,
+    private router: Router,
+    private service: BusinessScenariosService
+  ) { }
 
   ngOnInit() {
-  	let type: string = null;
-    let crumbRoot = this.service.getRoute();
+    let type: string  =  null;
+    const crumbRoot  =  this.service.getRoute();
 
-  	this.route.paramMap
-      .switchMap(
-        (params: ParamMap) => this.service.getScenarioByType( type=params.get('type') )
-      ).subscribe(
-        (scenario: Scenario) => {
-          this.scenario = scenario;
-          this.breadCrumbs = [
+    this.route.paramMap.pipe(
+      switchMap(
+        (params: ParamMap)  => this.service.getScenarioByType( type = params.get('type') )
+      )).subscribe(
+        (scenario: Scenario)  => {
+          this.scenario  =  scenario;
+          this.breadCrumbs  =  [
             {
               text: crumbRoot.short,
               href: crumbRoot.href
             },
             {
               text: scenario.short,
-              href: 'business-scenario/:'+ type
+              href: 'business-scenario/:' + type
             }
-          ]
+          ];
         }
       );
   }

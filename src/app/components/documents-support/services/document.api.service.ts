@@ -1,21 +1,19 @@
 import { Injectable } from '@angular/core';
-
-import {Http, Headers} from '@angular/http';
-
-import { Observable } from 'rxjs/Rx';
+import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable()
 export class DocumentAPIService {
   private version = '/docs/v2';
 
   constructor(
-    private http: Http,
-  ) {
+    private http: HttpClient,
+  ) {}
 
-  }
-
-  private get headers(): Headers {
-    return new Headers({
+  private get headers(): HttpHeaders {
+    return new HttpHeaders({
       'Accept': 'application/json, text/plain, */*',
       'Content-Type': 'application/json;charset=UTF-8',
     });
@@ -28,23 +26,25 @@ export class DocumentAPIService {
     } catch (err) {
       data = {error: 'fail to parse'};
     }
-    return Observable.throw(data);
+    return throwError(data);
   }
 
   getSearchTreeModel(): Observable<any> {
     return this.http.get(
       `${this.version}/document/_ls?r=true&reverse=true`,
     )
-    .catch(this.formatErrors)
-    .map((res) => res.json());
+    .pipe(
+      catchError(this.formatErrors),
+    );
   }
 
   getDocuments(tag, reverse): Observable<any> {
     return this.http.get(
       `${this.version}/document/_ls?r=true&tag=${tag}&reverse=${reverse}`,
     )
-    .catch(this.formatErrors)
-    .map((res) => res.json());
+    .pipe(
+      catchError(this.formatErrors),
+    );
   }
 
   getDocDetail(url): Observable<any> {
@@ -52,8 +52,9 @@ export class DocumentAPIService {
       `${this.version}/${url}`,
       { headers: this.headers },
     )
-    .catch(this.formatErrors)
-    .map((res) => res.json());
+    .pipe(
+      catchError(this.formatErrors),
+    );
   }
 
   getDocTree(url): Observable<any> {
@@ -61,8 +62,9 @@ export class DocumentAPIService {
       `${this.version}/${url}`,
       { headers: this.headers },
     )
-    .catch(this.formatErrors)
-    .map((res) => res.json());
+    .pipe(
+      catchError(this.formatErrors),
+    );
   }
 
   docsSearch(data): Observable<any> {
@@ -71,8 +73,9 @@ export class DocumentAPIService {
       JSON.stringify(data),
       { headers: this.headers },
     )
-    .catch(this.formatErrors)
-    .map((res) => res.json());
+    .pipe(
+      catchError(this.formatErrors),
+    );
   }
 
   getDocSheet(): Observable<any> {
@@ -80,7 +83,8 @@ export class DocumentAPIService {
       '/assets/styles/css/sheet.css',
       { headers: this.headers },
     )
-    .catch(this.formatErrors)
-    .map((res) => res);
+    .pipe(
+      catchError(this.formatErrors),
+    );
   }
 }

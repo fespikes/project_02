@@ -62,10 +62,10 @@ export class ProductComponent implements OnInit {
       } else if (tabName === 'advantage') {
         scrollTop = this.ANCHOR_TOP - 2 * this.TAB_HEIGHT;
       }
-    }else if (className === 'fixed') {
+    } else if (className === 'fixed') {
       if (tabName === 'introduce') {
         scrollTop = this.ANCHOR_TOP;
-      }else if (tabName === 'advantage') {
+      } else if (tabName === 'advantage') {
         scrollTop = this.ANCHOR_TOP - this.TAB_HEIGHT;
       }
     }

@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule
+} from '@angular/platform-browser/animations';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 import { TuiModule, TccModalService } from './tui';
 import { TdcApiService } from './shared/services/api.service';
@@ -57,14 +59,16 @@ import { VideoTutorialModule } from './components/video-tutorial/video-tutorial.
   ],
   imports: [
     BrowserAnimationsModule,
+    NoopAnimationsModule,
     BrowserModule,
     RouterModule,
-    HttpModule,
+    HttpClientModule,
     TuiModule,
+    OverlayModule,
     TdcModule,
     SharedModule,
     HomeModule,
-    BusinessScenariosModule,  //related to app-routing.module
+    BusinessScenariosModule,  // related to app-routing.module
 
     LatestNewsModule,
     DocumentsSupportModule,

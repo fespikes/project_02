@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 
 import { DocumentResService } from './document.res.service';
 import { PRODUCT_CATEGORIES, FOOTER_HEIGHT, HEADER_HEIGHT, CRUMBS_HEIGHT } from '../documents-support.model';

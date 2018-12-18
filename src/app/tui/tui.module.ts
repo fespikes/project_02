@@ -87,19 +87,6 @@ import {
   MessageComponent,
   MessageContainerComponent,
 } from './message';
-import {
-  MonthViewComponent,
-  YearViewComponent,
-  CalendarBodyComponent,
-  DatepickerInputComponent,
-  TCC_DATEPICKER_SCROLL_STRATEGY_PROVIDER,
-  TccNativeDateModule,
-  CalendarComponent,
-  DatepickerInputDirective,
-  DatepickerContentComponent,
-  DatepickerComponent,
-} from './datepicker';
-import {OverlayModule} from '@angular/cdk/overlay';
 
 @NgModule({
   imports: [
@@ -107,8 +94,6 @@ import {OverlayModule} from '@angular/cdk/overlay';
     FormsModule,
     RouterModule,
     I18nModule,
-    OverlayModule,
-    TccNativeDateModule,
   ],
   declarations: [
     AdvComponent,
@@ -166,14 +151,6 @@ import {OverlayModule} from '@angular/cdk/overlay';
     LoadingDirective,
     MessageComponent,
     MessageContainerComponent,
-    CalendarComponent,
-    DatepickerInputDirective,
-    DatepickerContentComponent,
-    DatepickerComponent,
-    DatepickerInputComponent,
-    MonthViewComponent,
-    YearViewComponent,
-    CalendarBodyComponent,
     SlicesComponent,
   ],
   exports: [
@@ -226,26 +203,17 @@ import {OverlayModule} from '@angular/cdk/overlay';
     SearchComponent,
     TextareaComponent,
     LoadingDirective,
-    CalendarComponent,
-    DatepickerInputDirective,
-    DatepickerComponent,
-    DatepickerInputComponent,
-    MonthViewComponent,
-    YearViewComponent,
-    CalendarBodyComponent,
-    SlicesComponent
+    SlicesComponent,
   ],
   providers: [
     ModalCountService,
-    SubmenuService,
-    TCC_DATEPICKER_SCROLL_STRATEGY_PROVIDER,
+    SubmenuService
   ],
   entryComponents: [
     ModalContainerComponent,
     ModalConfirmComponent,
     ModalInfoComponent,
-    MessageContainerComponent,
-    DatepickerContentComponent,
+    MessageContainerComponent
   ],
 })
 export class TuiModule { }

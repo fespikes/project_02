@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Scenario } from './scenario/scenario';
 
-const base = '/assets/images/scenarios/'
-const bannerBase = base+ 'scenario/banner/';
+const base = '/assets/images/scenarios/';
+const bannerBase = base  + 'scenario/banner/';
 const backgroundBase = 'scenarios/scenario/background/';
 
-let scenarios: Scenario[];
-//TODO: add back all scenario contents
+let scenarios: any[];
+//  TODO: add back all scenario contents
 
 @Injectable()
 export class BusinessScenariosService {
@@ -25,16 +25,16 @@ export class BusinessScenariosService {
   }
 
   getScenarios() {
-  	return this.scenarios;
+    return this.scenarios;
   }
 
   getScenarioByType(type: string): Scenario[] {
 
-    return this.scenarios.filter( _ => _.type===type );
+    return this.scenarios.filter( _ => _.type === type );
   }
 
   getScenarioById(id: number): Scenario[] {
-    return this.scenarios.filter( _ => _.id===id );
+    return this.scenarios.filter( _ => _.id === id );
   }
 }
 
@@ -42,17 +42,17 @@ scenarios = [
   {
     id: 1,
     type: 'data-warehouse',
-    screenshot: base+ 'data-warehouse'+ '.jpg',
+    screenshot: base  + 'data-warehouse'  + '.jpg',
     short: '数据仓库',
 
     title: '数据仓库 业务方案',
     slogan: '一站式数据仓库服务解决方案，实现数据采集、数据整合、模型加工、数据管理等完备的一体化数仓功能，支持对于查询速度、并发度、扩展性的保障。可广泛应用于电信、金融、互联网等行业。',
 
-    adv: bannerBase + 'data-warehouse.jpg',
+    adv: bannerBase  + 'data-warehouse.jpg',
     advBgColor: '#001740',
 
     details: [
-      //'business-background':
+      // 'business-background':
       {
         title: '业务背景',
         desc: [
@@ -82,7 +82,7 @@ scenarios = [
           }
         ]
       },
-      //'core-issues':
+      // 'core-issues':
       {
         title: '核心问题',
         desc: [
@@ -104,11 +104,11 @@ scenarios = [
           }
         ]
       },
-      //solutions:
+      // solutions:
       {
         title: '解决方案',
         adv: {
-          url: backgroundBase + 'data-warehouse.png',
+          url: backgroundBase  + 'data-warehouse.png',
           width: '450px',
           height: '250px'
         },
@@ -139,13 +139,13 @@ scenarios = [
   {
     id: 2,
     type: 'realtime-computation',
-    screenshot: base+ 'realtime-computation'+ '.jpg',
+    screenshot: base + 'realtime-computation' + '.jpg',
     short: '实时计算',
 
     title: '实时计算  业务方案',
     slogan: '云上的流处理分析平台，可对流数据进行实时采集和实时处理。为企业构建实时数据仓库，开发多种在线实时应用，实现对流式信息的充分利用。可以被广泛用于交通运输和物联网行业。',
 
-    adv: bannerBase + 'realtime-computation.jpg',
+    adv: bannerBase  + 'realtime-computation.jpg',
     advBgColor: '#0a162d',
 
     details: [
@@ -187,7 +187,7 @@ scenarios = [
       {
         title: '解决方案',
         adv: {
-          url: backgroundBase + 'realtime-computation.png',
+          url: backgroundBase  + 'realtime-computation.png',
           width: '450px',
           height: '228px'
         },
@@ -218,13 +218,13 @@ scenarios = [
   {
     id: 3,
     type: 'info-retrieval',
-    screenshot: base+ 'info-retrieval'+ '.jpg',
+    screenshot: base + 'info-retrieval' + '.jpg',
     short: '信息检索',
 
     title: '信息检索  业务方案',
     slogan: '用信息检索产品打造企业级搜索引擎，以毫秒级的响应速度完成PB级别的高速全文检索。构建一站式内部搜索平台和信息检索服务，打造便捷高效的集中式金融监管中心。',
 
-    adv: bannerBase + 'info-retrieval.jpg',
+    adv: bannerBase  + 'info-retrieval.jpg',
     advBgColor: '#022754',
 
     details: [
@@ -259,7 +259,7 @@ scenarios = [
       {
         title: '解决方案',
         adv: {
-          url: backgroundBase + 'info-retrieval.png',
+          url: backgroundBase  + 'info-retrieval.png',
           width: '450px',
           height: '192px'
         },
@@ -291,13 +291,13 @@ scenarios = [
   {
     id: 4,
     type: 'data-mart',
-    screenshot: base+ 'data-mart'+ '.jpg',
+    screenshot: base + 'data-mart' + '.jpg',
     short: '数据集市',
 
     title: '数据集市  业务方案',
     slogan: '实现数据集市构建，对接数据分析业务，提供包括交互式分析、数据立方体、任务调度在内的工具以及功能，实现自动化的报表应用构建和自助式的多维度探索。可应用于客户分析、营销分析等维度分析场景。',
 
-    adv: bannerBase + 'data-mart.jpg',
+    adv: bannerBase  + 'data-mart.jpg',
     advBgColor: '#082236',
 
     details: [
@@ -339,7 +339,7 @@ scenarios = [
       {
         title: '解决方案',
         adv: {
-          url: backgroundBase + 'data-mart.png',
+          url: backgroundBase  + 'data-mart.png',
           width: '450px',
           height: '232px'
         },
@@ -370,13 +370,13 @@ scenarios = [
   {
     id: 5,
     type: 'analysis-mining',
-    screenshot: base+ 'analysis-mining'+ '.jpg',
+    screenshot: base + 'analysis-mining' + '.jpg',
     short: '数据分析与挖掘',
 
     title: '数据分析与挖掘  业务方案',
     slogan: '提供数据清洗、特征工程、建模平台和工具集，丰富的机器学习算法和多种行业模型，方便探索对象属性和行为之间的关系，从数据中发现蕴含价值。',
 
-    adv: bannerBase + 'analysis-mining.jpg',
+    adv: bannerBase  + 'analysis-mining.jpg',
     advBgColor: '#012d52',
 
     details: [
@@ -423,7 +423,7 @@ scenarios = [
       {
         title: '解决方案',
         adv: {
-          url: backgroundBase + 'analysis-mining.png',
+          url: backgroundBase  + 'analysis-mining.png',
           width: '450px',
           height: '331px'
         },
@@ -454,13 +454,13 @@ scenarios = [
   {
     id: 6,
     type: 'deep-learning',
-    screenshot: base+ 'deep-learning'+ '.jpg',
+    screenshot: base + 'deep-learning' + '.jpg',
     short: '深度学习',
 
     title: '深度学习  业务方案',
     slogan: '开发深度学习和人工智能平台，将图像识别技术投入交通监控应用，帮助交通部门实现高度智能化的交通监控与信息处理，把投入车辆识别的人力解放出来，提高交通监管的精准度与效率。',
 
-    adv: bannerBase + 'deep-learning.jpg',
+    adv: bannerBase  + 'deep-learning.jpg',
     advBgColor: '#001436',
 
     details: [
@@ -502,7 +502,7 @@ scenarios = [
       {
         title: '解决方案',
         adv: {
-          url: backgroundBase + 'deep-learning.png',
+          url: backgroundBase  + 'deep-learning.png',
           width: '450px',
           height: '198px'
         },
@@ -529,13 +529,13 @@ scenarios = [
   {
     id: 7,
     type: 'relational-database',
-    screenshot: base+ 'relational-database'+ '.jpg',
+    screenshot: base + 'relational-database' + '.jpg',
     short: '关系数据库',
 
     title: '关系数据库  业务方案',
     slogan: '构建企业内部关系数据库服务，处理OLTP业务。支持复杂的SQL查询，提供高稳定、可扩展、强一致的数据处理。可以应用于创建跨越省市、跨多层下级机关的联网警务OA系统。',
 
-    adv: bannerBase + 'relational-database.jpg',
+    adv: bannerBase  + 'relational-database.jpg',
     advBgColor: '#001945',
 
     details: [
@@ -577,7 +577,7 @@ scenarios = [
       {
         title: '解决方案',
         adv: {
-          url: backgroundBase + 'relational-database.png',
+          url: backgroundBase  + 'relational-database.png',
           width: '450px',
           height: '250px'
         },

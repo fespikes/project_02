@@ -9,15 +9,15 @@ import { DataMartService } from './data-mart.service';
 })
 export class DataMartComponent implements OnInit {
 
-	productDetails: any;
+  productDetails: any;
 
-	constructor(private service: DataMartService) {
+  constructor(private service: DataMartService) {
 
-	}
+  }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.productDetails = productDetails;
+    const productDetails = this.service.getProductDetails();
+    this.productDetails = productDetails;
   }
 
   ngOnDestroy() {

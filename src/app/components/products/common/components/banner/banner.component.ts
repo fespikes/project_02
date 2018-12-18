@@ -8,22 +8,22 @@ import { BannerComponent as TheComponent } from './banner/banner.component';
 })
 export class BannerComponent implements AfterViewInit {
 
-	@ViewChild(BannerDirective) banner: BannerDirective;
-	protected data:any;
+  @ViewChild(BannerDirective) banner: BannerDirective;
+  protected data: any;
 
   constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngAfterViewInit() {
-		setTimeout( _ => this.loadComponent(), 1);
+    setTimeout( _ => this.loadComponent(), 1);
   }
 
   loadComponent() {
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
 
-    let viewContainerRef = this.banner.viewContainerRef;
+    const viewContainerRef = this.banner.viewContainerRef;
     viewContainerRef.clear();
 
-    let componentRef = viewContainerRef.createComponent(componentFactory);
+    const componentRef = viewContainerRef.createComponent(componentFactory);
     (<TheComponent>componentRef.instance).data = this.data;
 
   }

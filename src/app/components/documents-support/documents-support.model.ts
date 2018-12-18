@@ -12,7 +12,7 @@ export class DocVersion {
   id = 0;
   name = '';
   alias = '';
-  children? = [];
+  children ? = [];
 }
 
 export class TreeNode {

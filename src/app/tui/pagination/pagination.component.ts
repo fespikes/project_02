@@ -1,3 +1,5 @@
+
+import {takeUntil, distinctUntilChanged, filter, debounceTime} from 'rxjs/operators';
 import {
   Component,
   OnInit,
@@ -8,7 +10,7 @@ import {
   OnDestroy,
 } from '@angular/core';
 
-import { Subject } from 'rxjs/Rx';
+import { Subject } from 'rxjs';
 
 interface PaginationState {
   currentPage: number;
@@ -65,14 +67,14 @@ export class PaginationComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.stateSubject.asObservable()
-    .debounceTime(100)
-    .filter(state => !state.mute)
-    .distinctUntilChanged((previous, next) => {
+    this.stateSubject.asObservable().pipe(
+    debounceTime(100),
+    filter(state => !state.mute),
+    distinctUntilChanged((previous, next) => {
       return previous.currentPage === next.currentPage &&
         previous.pageSize === next.pageSize;
-    })
-    .takeUntil(this.ngUnsubscribe)
+    }),
+    takeUntil(this.ngUnsubscribe), )
     .subscribe((changes: PaginationState) => {
       this.paginationChange.emit({
         page: changes.currentPage,

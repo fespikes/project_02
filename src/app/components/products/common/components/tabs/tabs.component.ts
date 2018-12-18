@@ -9,23 +9,23 @@ import { TabsComponent as TheComponent } from './tabs/tabs.component';
 export class TabsComponent implements AfterViewInit {
 
 
-	@ViewChild(TabsDirective) tabs: TabsDirective;
-  
-	protected data:any;
+  @ViewChild(TabsDirective) tabs: TabsDirective;
+
+  protected data: any;
 
   constructor(protected componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngAfterViewInit() {
-		setTimeout( _ => this.loadComponent(), 1);
+    setTimeout( _ => this.loadComponent(), 1);
   }
 
   loadComponent() {
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(TheComponent);
 
-    let viewContainerRef = this.tabs.viewContainerRef;
+    const viewContainerRef = this.tabs.viewContainerRef;
     viewContainerRef.clear();
 
-    let componentRef = viewContainerRef.createComponent(componentFactory);
+    const componentRef = viewContainerRef.createComponent(componentFactory);
     (<TheComponent>componentRef.instance).tabs = this.data;
 
   }

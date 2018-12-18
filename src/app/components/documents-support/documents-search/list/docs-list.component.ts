@@ -53,7 +53,7 @@ export class DocsListComponent implements OnInit, AfterViewChecked {
       const mountEl = document.getElementById(mountId);
       if (mountEl) {
         mountEl.innerHTML = doc.summary;
-      }else {
+      } else {
         return false;
       }
     });

@@ -9,15 +9,15 @@ import { AnalysisMiningService } from '../analysis-mining.service';
 export class AnalysisMiningComponentIntroComponent extends ComponentIntroComponent {
 
   constructor(
-  	componentFactoryResolver: ComponentFactoryResolver,
-  	private service: AnalysisMiningService
-	) {
-  	super(componentFactoryResolver);
+    componentFactoryResolver: ComponentFactoryResolver,
+    private service: AnalysisMiningService
+  ) {
+    super(componentFactoryResolver);
   }
 
   ngOnInit() {
-  	const productDetails = this.service.getProductDetails();
-  	this.data = productDetails.componentIntro;
+    const productDetails = this.service.getProductDetails();
+    this.data = productDetails.componentIntro;
   }
 
 }
