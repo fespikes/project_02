@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ModulesComponent } from './components/modules/modules.component';
-import { BusinessScenariosComponent } from './components/business-scenarios/business-scenarios.component';
-import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
-import { ManagementCenterComponent } from './components/management-center/management-center.component';
+// import { ModulesComponent } from './components/modules/modules.component';
+// import { BusinessScenariosComponent } from './components/business-scenarios/business-scenarios.component';
+// import { DocumentsSupportComponent } from './components/documents-support/documents-support.component';
+// import { ManagementCenterComponent } from './components/management-center/management-center.component';
 
 const routes: Routes = [
   {

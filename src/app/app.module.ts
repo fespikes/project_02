@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { BrowserAnimationsModule, NoopAnimationsModule
-} from '@angular/platform-browser/animations';
 import { OverlayModule } from '@angular/cdk/overlay';
 
 import { TuiModule, TccModalService } from './tui';
@@ -58,8 +56,6 @@ import { VideoTutorialModule } from './components/video-tutorial/video-tutorial.
     ManagementCenterComponent
   ],
   imports: [
-    BrowserAnimationsModule,
-    NoopAnimationsModule,
     BrowserModule,
     RouterModule,
     HttpClientModule,
