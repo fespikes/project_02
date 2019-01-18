@@ -1,12 +1,12 @@
 import { TestBed, inject, fakeAsync, tick } from '@angular/core/testing';
-import { Observable } from 'rxjs/Rx';
+import { Observable, of } from 'rxjs';
 
 import { I18nLangService, LANG_KEY, Language } from './i18n-lang.service';
 import { TdcApiService } from '../shared';
 
 class TccApiServiceStub {
   post() {
-    return Observable.of({});
+    return of({});
   }
 }
 

@@ -11,13 +11,67 @@
 		.tipbox{
 			margin-right: -600px;
 		}
+
+    .chat-portal {
+        position: fixed;
+        right: 10px;
+        bottom: 40%;
+    }
+
+    .chat-wrap {
+        width: 70px;
+        height: 70px;
+        background-color: #1863A0;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 4px;
+        box-shadow: 2px 2px 2px grey;
+        cursor: pointer;
+        padding-top: 5px;
+        font-size: 12px;
+        opacity: 0.9;
+        color: #f5f5f5;
+
+
+    }
+
+    .wx-img {
+        display: none;
+        position: absolute;
+        left: -120px;
+        top: 104px;
+        width: 100px;
+    }
+
+    .chat-wx:hover .wx-img {
+        display: block;
+    }
   </style>
 </head>
 <body>
   <tdc-root></tdc-root>
-	
-	<script ewei-pid="8124" ewei-boxid="hkdwewJbcaahat6BBtQN" ewei-domain="//crm.transwarp.io" src="https://crm.transwarp.io/source/scripts/eweiBox.new.js"></script><!--欢迎语--><p id="__ewei__box__webchat__message" style="display:none;">欢迎光临，请问有什么可以帮到你？</p><!--电脑端按钮样式--><!--the id #__ewei__box__webchat__button__ here also been used in C:\Users\rockwang\workspace\FE\tdcweb\src\app\components\nav-bottom\nav-bottom.component.ts--><div id="__ewei__box__webchat__button__" style="position: fixed; right: 10px; bottom: 10px; z-index: 99999; font-family: &quot;Microsoft YaHei&quot;, Tahoma, Arial, SimSun; cursor: pointer; color: rgb(255, 255, 255); height: 60px; text-align: center; top: initial; left: initial; width: 60px; margin-top: 0px;"><span style="display: block; height: 60px; width: 60px; font-size: 24px; vertical-align: middle; border-radius: 6px; background-image: url(&quot;//help.ewei.com/source/images/chat.png&quot;); background-color: rgb(30, 140, 206); background-position: center center; background-repeat: no-repeat; line-height: 56px;"></span></div><!--手机端按钮样式--><div id="__ewei__box__webchat__button__Mobile__" style="display: none; position: fixed; right: 15px; bottom: 55px; z-index: 99999; font-family: 'Microsoft YaHei', Tahoma, Arial, SimSun; cursor: pointer; color: rgb(255, 255, 255); height: 60px; text-align: center; top: initial; left: initial; width: 40px; margin-top: 0px;"><span style="display: block; height: 40px; width: 40px; font-size: 24px; vertical-align: middle; border-radius: 6px; line-height: 56px; background-image: url('//help.ewei.com/source/images/chat.png'); background-color: rgb(85, 85, 85); background-position: center center; background-repeat: no-repeat;"></span></div>
-        
-        
+  <div class="chat-portal">
+      <div id="chat-portal" class="chat-wrap">
+          <a class="online_service" style="color:#fff">
+              <img src="//support.transwarp.cn/uploads/default/original/2X/1/1e6a9457a8e5d720bf6c6b01022a3b52ce08a14d.png" alt="在线客服">
+              <br>在线客服
+          </a>
+      </div>
+      <div class="chat-wrap chat-wx">
+          <img class="wx-img" src="//support.transwarp.cn/uploads/default/original/2X/b/b6616f64f709e4bbb21a469cf95af0f2dfd52033.jpg">
+          <div class="" style="color:#fff">
+              <img src="//support.transwarp.cn/uploads/default/original/2X/c/c83b179128f780388177441df2530797b8ab737f.png" alt="微信客服">
+              <br>微信客服
+          </div>
+      </div>
+  </div>
+  <script src="//crm.transwarp.io/portal/8124/924b36b42593b399c8431ca00e96e39a.js"></script>
+  <script>
+      var settings = {};
+      // 原生的dom元素
+      var portal = document.getElementById('chat-portal');
+      // 初始化sdk
+      window.ewei_web_sdk.initContainer(portal, settings);
+  </script>
 </body>
 </html>
