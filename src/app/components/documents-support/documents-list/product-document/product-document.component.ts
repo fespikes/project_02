@@ -42,10 +42,12 @@ export class ProductDocumentComponent implements OnInit {
         ];
         const sophonFolderList = docs.filter(doc => doc.id.indexOf(this.productCategory.SOPHON) === 0);
         const argodbFolderList = docs.filter(doc => doc.id.indexOf(this.productCategory.ARGODB) === 0);
+        const stellarFolderList = docs.filter(doc => doc.id.indexOf(this.productCategory.STELLARDB) === 0);
         this.docsFolderList = [
           this.documentUtilService.addDocsVersions(tdhFolderList),
           this.documentUtilService.addDocsVersions(sophonFolderList),
           this.documentUtilService.addDocsVersions(argodbFolderList),
+          this.documentUtilService.addDocsVersions(stellarFolderList),
         ];
         this.selectedDocsList = this.docsFolderList[0];
       },

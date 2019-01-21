@@ -64,7 +64,7 @@ export class DocumentResService {
     this.keyNeedRender = needRender;
   }
 
-  getDocsCrumb(type, alias, subType = ''): any[] {
+  getDocsCrumb(type, alias = '', subType = ''): any[] {
     let crumbItems = [];
     switch (type) {
       case 'products':
