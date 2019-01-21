@@ -12,13 +12,13 @@ const style = require('./the-news.css');
 })
 export class LatestNewsComponent implements OnInit, DoCheck, AfterViewChecked {
 
-  newsList: Observable<News[]>;
+  newsList: Observable<any>;
 
   breadCrumbs: any;
 
   selectedId: number;
 
-  news: News;
+  news: any;
 
   formater = utils.formatDate;
 
@@ -34,8 +34,8 @@ export class LatestNewsComponent implements OnInit, DoCheck, AfterViewChecked {
 
       this.newsList = this.service.getNewsList();
 
-      this.newsList.subscribe(list => {
-        this.news = list.find(news => news.id === +this.selectedId);
+      this.newsList.subscribe(res => {
+        this.news = res.list.find(news => news.id === +this.selectedId);
       });
 
       requestAnimationFrame(() => {

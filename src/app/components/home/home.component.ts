@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
 
     latestNewsPromise.then(res => {
       this.latestNews = res;
-      window.sessionStorage.setItem('tdc-web:latest-news:first-news-id', data[0].id + '' );
+      window.sessionStorage.setItem('tdc-web:latest-news:first-news-id', res[0].id + '' );
     });
 
     this.videoTutorial = commonService.getVideoTutorial();
