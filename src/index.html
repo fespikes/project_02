@@ -53,25 +53,24 @@
   <div class="chat-portal">
       <div id="chat-portal" class="chat-wrap">
           <a class="online_service" style="color:#fff">
-              <img src="//support.transwarp.cn/uploads/default/original/2X/1/1e6a9457a8e5d720bf6c6b01022a3b52ce08a14d.png" alt="在线客服">
+              <img src="/assets/images/service-online.png" alt="在线客服">
               <br>在线客服
           </a>
       </div>
       <div class="chat-wrap chat-wx">
-          <img class="wx-img" src="//support.transwarp.cn/uploads/default/original/2X/b/b6616f64f709e4bbb21a469cf95af0f2dfd52033.jpg">
+          <img class="wx-img" src="/assets/images/service-d2.jpg">
           <div class="" style="color:#fff">
-              <img src="//support.transwarp.cn/uploads/default/original/2X/c/c83b179128f780388177441df2530797b8ab737f.png" alt="微信客服">
+              <img src="/assets/images/service-wechat.png" alt="微信客服">
               <br>微信客服
           </div>
       </div>
   </div>
   <script src="//crm.transwarp.io/portal/8124/924b36b42593b399c8431ca00e96e39a.js"></script>
   <script>
-      var settings = {};
       // 原生的dom元素
       var portal = document.getElementById('chat-portal');
       // 初始化sdk
-      window.ewei_web_sdk.initContainer(portal, settings);
+      window.ewei_web_sdk.initContainer(portal, {});
   </script>
 </body>
 </html>
