@@ -7,7 +7,7 @@ import { DocumentResService } from '../../services/document.res.service';
 import { DocumentUtilService } from '../../services/document.util.service';
 import { CommonService } from '../../../common/services/common.service';
 
-import { DocsListModuel } from '../../documents-support.model';
+import { DocModule } from '../../documents-support.model';
 
 @Component({
   selector: 'tdc-fresh-guides',
@@ -17,7 +17,7 @@ import { DocsListModuel } from '../../documents-support.model';
 
 export class FreshGuidesComponent implements OnInit {
   otherCourse = [];
-  freshCourse = new DocsListModuel();
+  freshCourse = new DocModule();
   videoCourse = [];
 
   CATEGORY = 'TDC-INTRO';
