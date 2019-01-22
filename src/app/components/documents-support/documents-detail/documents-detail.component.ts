@@ -37,6 +37,8 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
   CLICK_ANCHOR = 'click-anchor';
   TREE_HEADER = 50;
 
+  routerSub;
+
   constructor(
     private documentAPIService: DocumentAPIService,
     private documentUtilService: DocumentUtilService,
@@ -51,7 +53,7 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.initPage();
     this.onClickListener();
-    this.route.queryParams
+    this.routerSub = this.route.queryParams
     .subscribe((params) => {
       const docType = params && params.docType;
       this.docName = params && params.docName;
@@ -206,5 +208,8 @@ export class DocumentsDetailComponent implements OnInit, OnDestroy {
     this.documentUtilService.setBodyWidthAttribute('100vw');
     document.onclick = null;
     document.onscroll = null;
+    if (this.routerSub) {
+      this.routerSub.unsubscribe();
+    }
   }
 }

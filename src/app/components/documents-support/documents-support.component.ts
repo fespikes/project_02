@@ -20,8 +20,8 @@ export class DocumentsSupportComponent implements OnInit {
   ngOnInit() {
   }
 
-  documentSearch(keyword) {
-    this.documentResService.setKeyword(keyword || '');
+  documentSearch(keyword = '') {
+    this.documentResService.setKeyword(keyword);
     this.router.navigate([`/documents-support/docs-search`]);
   }
 }
