@@ -42,7 +42,7 @@ export class DocumentsSearchComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.pagination.size = 10; // change default pageSize value 10
     const docsType = this.documentUtilService.getDocsType(window.location.hash);
-    this.crumbItems = this.documentResService.getDocsCrumb(docsType, '');
+    this.crumbItems = this.documentResService.getDocsCrumb(docsType);
     this.getTreeModel();
 
     this.keyword = this.documentResService.getKeyword();

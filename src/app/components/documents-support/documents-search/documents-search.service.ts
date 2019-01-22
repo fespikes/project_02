@@ -5,21 +5,24 @@ import { TranslateService } from 'app/i18n';
 import * as Mark from 'mark.js';
 
 import { DocumentResService } from '../services/document.res.service';
-import { TreeNode } from '../documents-support.model';
+import { TreeNode, PRODUCT_CATEGORIES } from '../documents-support.model';
 
 @Injectable()
 export class DocumentSearchService {
 
   MAX_LOOP = 10;
   DOC_CATEGORIES = [{
-    id: 'TDH',
+    id: PRODUCT_CATEGORIES.TDH,
     name: 'Transwarp Data Hub',
   }, {
-    id: 'SOPHON',
+    id: PRODUCT_CATEGORIES.SOPHON,
     name: 'Transwarp Sophon',
   }, {
-    id: 'ARGODB',
+    id: PRODUCT_CATEGORIES.ARGODB,
     name: 'Transwarp ArgoDB',
+  }, {
+    id: PRODUCT_CATEGORIES.STELLARDB,
+    name: 'Transwarp StellarDB',
   }];
 
   constructor(
@@ -87,17 +90,21 @@ export class DocumentSearchService {
   // 初始化搜索树treeModel
   initSearchTree(docsTree): any[] {
     const tdhDoc = [
-      this.getTreeModelByCategory(['TDH-PLATFORM'], docsTree)[0],
-      this.getTreeModelByCategory(['TDH-DEV_SUITE'], docsTree)[0],
-      this.getTreeModelByCategory(['TDH-OPS'], docsTree)[0],
+      this.getTreeModelByCategory([PRODUCT_CATEGORIES.TDH_PLATFORM], docsTree)[0],
+      this.getTreeModelByCategory([PRODUCT_CATEGORIES.TDH_DEV_SUITE], docsTree)[0],
+      this.getTreeModelByCategory([PRODUCT_CATEGORIES.TDH_OPS], docsTree)[0],
     ];
-    const sophonDoc = this.getTreeModelByCategory(['SOPHON-PLATFORM', 'SOPHON-DEV_SUITE', 'SOPHON-OPS'], docsTree);
-    const argodbDoc = this.getTreeModelByCategory(['ARGODB-PLATFORM', 'ARGODB-DEV_SUITE', 'ARGODB-OPS'], docsTree);
-    const faqDoc = this.getTreeModelByCategory(['FAQ'], docsTree);
-    const introDoc = this.getTreeModelByCategory(['TDC-INTRO'], docsTree);
+    const sophonDoc = this.getTreeModelByCategory(
+      [PRODUCT_CATEGORIES.SOPHON_PLATFORM, PRODUCT_CATEGORIES.SOPHON_DEV_SUITE, PRODUCT_CATEGORIES.SOPHON_OPS], docsTree);
+    const argodbDoc = this.getTreeModelByCategory(
+      [PRODUCT_CATEGORIES.ARGODB_PLATFORM, PRODUCT_CATEGORIES.ARGODB_DEV_SUITE, PRODUCT_CATEGORIES.ARGODB_OPS], docsTree);
+    const stellarDoc = this.getTreeModelByCategory(
+      [PRODUCT_CATEGORIES.STELLARDB_PLATFORM, PRODUCT_CATEGORIES.STELLARDB_DEV_SUITE, PRODUCT_CATEGORIES.STELLARDB_OPS], docsTree);
+    const faqDoc = this.getTreeModelByCategory([PRODUCT_CATEGORIES.FAQ], docsTree);
+    const introDoc = this.getTreeModelByCategory([PRODUCT_CATEGORIES.TDC_INTRO], docsTree);
 
     return [
-      this.makeProductDocList(tdhDoc, sophonDoc, argodbDoc),
+      this.makeProductDocList(tdhDoc, sophonDoc, argodbDoc, stellarDoc),
       this.setFAQIntroDocState(faqDoc[0], 'faq'),
       this.setFAQIntroDocState(introDoc[0], 'intro'),
     ];
@@ -116,17 +123,18 @@ export class DocumentSearchService {
   }
 
   // 构造产品子树
-  makeProductDocList(tdhDocs, sophonDocs, argodbDocs): Object {
+  makeProductDocList(tdhDocs, sophonDocs, argodbDocs, stellarDoc): Object {
     const tdhObj = this.setProductDocState(tdhDocs, this.DOC_CATEGORIES[0]);
     const sophonObj = this.setProductDocState(sophonDocs, this.DOC_CATEGORIES[1]);
     const argodbObj = this.setProductDocState(argodbDocs, this.DOC_CATEGORIES[2]);
+    const stellarObj = this.setProductDocState(stellarDoc, this.DOC_CATEGORIES[3]);
     return {
       id: 'DOCUMENT',
       name: this.translate.translateKey('DOCUMENTS.PRODUCT_DOCUMENT'),
       level: 1,
       tag: 'document',
       checkbox: false,
-      children: [tdhObj, sophonObj, argodbObj],
+      children: [tdhObj, sophonObj, argodbObj, stellarObj],
     };
   }
 
