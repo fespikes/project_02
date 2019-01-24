@@ -21,9 +21,13 @@ export class News {
 }
 
 export let utils = {
-  formatDate: (d)  =>  {
-    d = d ? new Date(d) : new Date();
-    return d.getFullYear() + '-' + d.getDate() + '-' + d.getMonth();
+  formatDate: (dt)  =>  {
+    if (!!dt) {
+      const d = new Date(dt);
+      return d.getFullYear() + '-' + d.getDate() + '-' + d.getMonth();
+    } else {
+      return '';
+    }
   }
 };
 

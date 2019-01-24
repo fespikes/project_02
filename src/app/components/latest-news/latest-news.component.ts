@@ -19,6 +19,7 @@ export class LatestNewsComponent implements OnInit, DoCheck, AfterViewChecked {
   selectedId: number;
 
   news: any;
+  list: any[];
 
   formater = utils.formatDate;
 
@@ -35,6 +36,7 @@ export class LatestNewsComponent implements OnInit, DoCheck, AfterViewChecked {
       this.newsList = this.service.getNewsList();
 
       this.newsList.subscribe(res => {
+        this.list = res.list;
         this.news = res.list.find(news => news.id === +this.selectedId);
       });
 
