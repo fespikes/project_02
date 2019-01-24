@@ -193,7 +193,8 @@ export class DocumentResService {
         name: 'products',
         type: 'products',
         alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
-        url: './products?category=TDH',
+        url: './products',
+        query: {category: 'TDH'},
       },
       {
         name: 'issues',

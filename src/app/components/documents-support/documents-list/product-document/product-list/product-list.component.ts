@@ -1,10 +1,7 @@
 import {
   Component,
-  OnInit,
-  HostBinding,
   Input,
-  Output,
-  EventEmitter,
+  OnInit,
 } from '@angular/core';
 
 import { Router } from '@angular/router';
