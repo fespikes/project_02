@@ -5,6 +5,7 @@
   >
     <a
       [routerLink]="item.url"
+      [queryParams]="item.query"
       routerLinkActive="active"
     >
       {{item.alias | translate}}
