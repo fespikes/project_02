@@ -1,5 +1,5 @@
-export class DocsListModuel {
-  id = 0;
+export class DocModule {
+  id = '';
   name = '';
   tag = '';
   children = [];

@@ -157,6 +157,7 @@ export class DocumentResService {
           name: 'productDocument',
           alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
           url: '../../../../../../documents-support/docs/products',
+          query: {category: 'TDH'},
         };
         break;
       case 'issues':
@@ -173,6 +174,14 @@ export class DocumentResService {
           url: '../../../../../../documents-support/docs/guides',
         };
         break;
+      default:
+        item = {
+          name: 'productDocument',
+          alias: 'DOCUMENTS.PRODUCT_DOCUMENT',
+          url: '../../../../../../documents-support/docs/products',
+          query: {category: 'TDH'},
+        };
+        break;
     }
     crumbItems.splice(1, 0, item);
     return crumbItems;
@@ -185,6 +194,7 @@ export class DocumentResService {
         type: 'products',
         alias: 'DOCUMENTS.DOCUMENT_SUPPORT',
         url: './products',
+        query: {category: 'TDH'},
       },
       {
         name: 'issues',

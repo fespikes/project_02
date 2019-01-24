@@ -5,8 +5,8 @@
   >
     <a
       [routerLink]="item.url"
+      [queryParams]="item.query"
       routerLinkActive="active"
-      [routerLinkActiveOptions]="{exact: true}"
     >
       {{item.alias | translate}}
     </a>
