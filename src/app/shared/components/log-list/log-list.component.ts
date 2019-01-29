@@ -15,7 +15,7 @@ import {
 const LOG_PAGE_SIZE = 20;
 
 @Component({
-  selector: 'tcc-log-list',
+  selector: 'tdc-log-list',
   templateUrl: './log-list.component.html',
   styleUrls: ['./log-list.component.sass'],
 })

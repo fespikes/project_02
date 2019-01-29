@@ -87,9 +87,10 @@ export class TdcApiService {
   //   .map((res: Response) => res.text());
   // }
 
-  put(path: string, body: Object = {}): Observable<any> {
+  put(path: string, body: Object = {}, isFullUrl?: boolean): Observable<any> {
+    const url = isFullUrl ? path : this.makeUrl(path);
     return this.http.put(
-      this.makeUrl(path),
+      url,
       JSON.stringify(body),
       { headers: this.headers },
     )
@@ -98,9 +99,10 @@ export class TdcApiService {
     );
   }
 
-  post(path: string, body: Object = {}): Observable<any> {
+  post(path: string, body: Object = {}, isFullUrl?): Observable<any> {
+    const url = isFullUrl ? path : this.makeUrl(path);
     return this.http.post(
-      this.makeUrl(path),
+      url,
       JSON.stringify(body),
       { headers: this.headers },
     )
@@ -118,4 +120,5 @@ export class TdcApiService {
       catchError(this.formatErrors),
     );
   }
+
 }

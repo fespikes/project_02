@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 // import { ModulesComponent } from './components/modules/modules.component';
 // import { BusinessScenariosComponent } from './components/business-scenarios/business-scenarios.component';
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'after-sale-service',
     loadChildren: 'app/components/after-sale-service/after-sale-service.module#AfterSaleServiceModule'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
 /*  {
     path: 'video-tutorial',

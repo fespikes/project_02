@@ -1,0 +1,96 @@
+
+<ul class="data">
+  <li><span>title</span><input type="text" [(ngModel)]="data.title" /></li>
+  <li><span>author</span><input type="text" [(ngModel)]="data.author" /></li>
+  <!-- <li><span>html</span></li> -->
+  <li><span>tag</span><input type="text" [(ngModel)]="data.tag" /></li>
+  <li>
+    <span>summary</span>
+    <textarea
+      [(ngModel)]="data.summary"
+      style="height: 100px; display: inline-block"
+    >
+    </textarea>
+  </li>
+  <li>
+    <span>icon</span>
+    <!-- <input type="text" [(ngModel)]="data.content" /> -->
+    <span class="file" tdcBase64 (fileChanged)="iconChanged($event)">select image</span>
+  </li>
+  <li *ngIf="data.icon">
+    <img
+      style="height: 160px; display: inline-block; margin-left: 120px"
+      src="{{data.icon}}"
+    />
+  </li>
+  <li><span>mail</span><input type="text" [(ngModel)]="data.mail" /></li>
+  <!-- <li><span>mailTo</span><input type="text" [(ngModel)]="data.mailTo" /></li> -->
+  <!-- <li><span>routerLink</span></li> -->
+  <!-- <li><span>routerLinkActive</span></li> -->
+  <li>
+    <span>即刻发布:</span>
+    <div class="field-box">
+      <label for="yes">是</label>
+      <input class="radio true"
+        name="publish"
+        type="radio"
+        id="yes"
+        [(ngModel)]="data.publish"
+        value=true
+      />
+      <label for="no">否</label>
+      <input class="radio false"
+        name="publish"
+        type="radio"
+        id="no"
+        [(ngModel)]="data.publish"
+        value=false
+      />
+    </div>
+  </li>
+  <li>
+    <span>编辑内容:</span>
+    <div>
+      <quill-editor
+        #editor
+        [style]="{height: '200px'}"
+        [(ngModel)]="data.content"
+        [sanitize]="true"
+        (onEditorCreated)="editorCreated($event)"
+        (onContentChanged)="contentChanged($event)"
+        (onSelectionChanged)="selectionChanged($event)"
+      >
+        <!-- <div quill-editor-toolbar>
+          <span class="ql-formats">
+            <button class="ql-bold" [title]="'Bold'"></button>
+          </span>
+          <span class="ql-formats">
+            <select class="ql-align" [title]="'Aligment'">
+              <option selected></option>
+              <option value="center"></option>
+              <option value="right"></option>
+              <option value="justify"></option>
+            </select>
+            <select class="ql-align" [title]="'Aligment2'">
+              <option selected></option>
+              <option value="center"></option>
+              <option value="right"></option>
+              <option value="justify"></option>
+            </select>
+          </span>
+        </div> -->
+      </quill-editor>
+    </div>
+  </li>
+  <li>
+    <button (click)="submit()">submit</button>
+    <button
+      [routerLink]="[ '/home' ]"
+    >首页</button>
+  </li>
+</ul>
+
+<p class="tip">below is the result</p>
+<div
+  [innerHTML]="data.content"
+>{{data.html}}</div>

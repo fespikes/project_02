@@ -12,7 +12,11 @@
     "secure": false
   },
   "/news/api/v1/*": {
-    "target": "http://172.16.111.69:8200",
+    "target": "http://172.16.132.47:23333",
+    "secure": false
+  },
+  "/api/v1/*": {
+    "target": "http://172.16.132.47:23333",
     "secure": false
   }
 

@@ -1,3 +1,18 @@
-<p>
-  login works!
-</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    <span>User Name:</span>
+    <input type="text" formControlName="username">
+  </label>
+
+  <label>
+    <span>Password:</span>
+    <input type="text" formControlName="password">
+  </label>
+
+  <div>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    <button type="reset">Reset</button>
+  </div>
+
+</form>

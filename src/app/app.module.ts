@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { ReactiveFormsModule } from '@angular/forms';
+import { QuillModule } from 'ngx-quill';
 
 import { TuiModule, TccModalService } from './tui';
 import { TdcApiService } from './shared/services/api.service';
@@ -57,7 +59,9 @@ import { VideoTutorialModule } from './components/video-tutorial/video-tutorial.
   ],
   imports: [
     BrowserModule,
+    QuillModule,
     RouterModule,
+    ReactiveFormsModule,
     HttpClientModule,
     TuiModule,
     OverlayModule,
